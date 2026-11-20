@@ -152,7 +152,7 @@ function yearsOf(e) { return [e.points[0][0], e.points[e.points.length - 1][0]];
 function linkStates(value, selfName) {
   return value.split(/,\s+/).map(function (part) {
     var e = empireByName(part);
-    if (e && e.name !== selfName) return '<a class="enc-link" href="/empire/' + toSlug(e.name) + '">' + esc(part) + '</a>';
+    if (e && e.name !== selfName) return '<a class="enc-link" href="' + profileUrl(e) + '">' + esc(part) + '</a>';
     return linkify(esc(part), selfName);
   }).join(', ');
 }

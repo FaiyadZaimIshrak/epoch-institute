@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Beowulf: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Beowulf is an anonymous Old English epic of 3,182 alliterative lines, set in 5th- and 6th-century Scandinavia and preserved in a single manuscript of…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Beowulf: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="Beowulf is an anonymous Old English epic of 3,182 alliterative lines, set in 5th- and 6th-century Scandinavia and preserved in a single manuscript of…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/beowulf">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/beowulf.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/beowulf.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/beowulf">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Beowulf"}]},{"@type":"Article","headline":"Beowulf","description":"Beowulf is an anonymous Old English epic of 3,182 alliterative lines, set in 5th- and 6th-century Scandinavia and preserved in a single manuscript of…","url":"https://the-epoch-institute.org/work/beowulf","mainEntityOfPage":"https://the-epoch-institute.org/work/beowulf","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Beowulf","sameAs":["https://en.wikipedia.org/wiki/Beowulf","https://www.wikidata.org/wiki/Q48328"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/beowulf.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Beowulf</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Beowulf.png" alt="Beowulf" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · Europe</p>
+        <h1 class="profile-detail-name">Beowulf</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 975 CE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val">An anonymous author known as the &quot;Beowulf poet&quot;; its date of composition is disputed, from the 8th century to near the date of the <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a>, which was copied by two scribes</span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">An Old English poem of 3,182 alliterative lines, mostly in the Late West <a class="enc-link" href="/encyclopedia/saxons">Saxon</a> dialect with many other dialect forms</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">The Nowell Codex, British Library, Cotton Vitellius A.XV, <a class="enc-link" href="/encyclopedia/london">London</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">Beowulf's fights with Grendel, Grendel's mother and the dragon; the mead hall Heorot; alliterative verse and kennings; the mix of pagan setting and Christian outlook; the fire of 1731; Tolkien's lecture of 1936</span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Beowulf survives only in the Nowell Codex, copied between about 975 and 1025; when the poem was composed, and whether it was passed down orally first, is still debated.</li><li>It tells of a Geatish hero who frees the Danish king Hrothgar's hall from Grendel and his mother and dies, fifty years later, fighting a dragon.</li><li>Damaged in the Ashburnham House fire of 1731, the <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a> was first transcribed in 1786, and the poem has since been translated hundreds of times.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a>'s shelfmark, Cotton Vitellius A.XV, means the 15th book from the left on the top shelf of the bookcase in Robert Cotton's library that had a bust of the Roman emperor Vitellius on top.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 521</span><span class="rf-text">King <a class="enc-link" href="/encyclopedia/hygelac">Hygelac</a>'s raid into <a class="enc-link" href="/encyclopedia/frisia">Frisia</a>, told in the poem, is recorded by <a class="enc-link" href="/encyclopedia/gregory-of-tours">Gregory of Tours</a></span></li><li><span class="rf-year">975–1025</span><span class="rf-text">The only surviving <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a>, the Nowell Codex, is written by two scribes</span></li><li><span class="rf-year">1563</span><span class="rf-text">Laurence Nowell, after whom the codex is named, most likely acquires it, according to Kevin Kiernan</span></li><li><span class="rf-year">1731</span><span class="rf-text">Fire at Ashburnham House chars the <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a>'s margins and destroys some readings</span></li><li><span class="rf-year">1786</span><span class="rf-text">Grímur Jónsson Thorkelin makes the first transcriptions of the <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a></span></li><li><span class="rf-year">1922</span><span class="rf-text">Frederick Klaeber publishes the edition that becomes the central source for study of the poem</span></li><li><span class="rf-year">1936</span><span class="rf-text">J. R. R. Tolkien's lecture Beowulf: The Monsters and the Critics opens modern criticism</span></li><li><span class="rf-year">1999</span><span class="rf-text">Seamus Heaney's verse translation is published</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>Beowulf is set in pagan <a class="enc-link" href="/encyclopedia/scandinavia">Scandinavia</a> in the 5th and 6th centuries and features mainly non-English characters. It blends fictional, legendary, mythic and historical elements. The hero is mentioned in no other Old English <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a>, but many of its figures, clans and events appear in Scandinavian sources, and the majority view appears to be that King Hrothgar and the Scyldings are based on historical people of 6th-century Scandinavia. The raid of King <a class="enc-link" href="/encyclopedia/hygelac">Hygelac</a> into <a class="enc-link" href="/encyclopedia/frisia">Frisia</a> is mentioned by <a class="enc-link" href="/encyclopedia/gregory-of-tours">Gregory of Tours</a> and can be dated to around 521.</p><p>Archaeology may confirm parts of the background. The western mound at <a class="enc-link" href="/encyclopedia/gamla-uppsala">Gamla Uppsala</a>, where <a class="enc-link" href="/encyclopedia/snorri-sturluson">Snorri Sturluson</a> placed the burial of Eadgils, held a powerful man buried around 575. At Lejre in <a class="enc-link" href="/encyclopedia/denmark">Denmark</a>, where tradition located Heorot, excavations found halls about 50 metres long built in the mid-6th century.</p><p>Some suggest the poem was first composed in the 7th century at <a class="enc-link" href="/encyclopedia/rendlesham">Rendlesham</a> in East Anglia, whose Wuffinga dynasty may have descended from the Geatish Wulfings; others link it to the courts of <a class="enc-link" href="/encyclopedia/alfred-the-great">Alfred the Great</a> or <a class="enc-link" href="/encyclopedia/cnut-the-great">Cnut the Great</a>. The poem's characters were Germanic pagans, but it was recorded by Christian <a class="enc-link" href="/encyclopedia/anglo-saxons">Anglo-Saxons</a>, most of whose people had converted around the 7th century.</p></div>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p>Hrothgar, king of the <a class="enc-link" href="/encyclopedia/danes">Danes</a>, has built the great hall Heorot, where he, his wife Wealhtheow and his warriors sing and feast. The monster Grendel, said to descend from the biblical Cain, attacks it and devours warriors as they sleep. Beowulf, a young warrior of the <a class="enc-link" href="/encyclopedia/geats">Geats</a>, comes to help, fights Grendel without a weapon and tears off his arm. Grendel's mother then kills Hrothgar's advisor Æschere; Beowulf follows her to a lair under a lake and kills her with a giant's sword, whose blade melts in the monster's blood.</p><p>Beowulf becomes king of the Geats. Fifty years later a dragon, robbed of a golden cup from its hoard, ravages the land. Deserted by all his men but his young kinsman Wiglaf, Beowulf kills it and is mortally wounded; he is burned on a pyre and a barrow is raised for him by the sea.</p><p>The poem begins in medias res and begins and ends with funerals. Scholars have found different patterns in its design, from E. Carrigan's symmetries to Gale Owen-Crocker's four funerals and Tolkien's division between the young and the old hero. Its many digressions, once thought to interrupt the story, are now explained as comparisons with the main action that give it historical depth.</p></div>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <div class="profile-section-body"><p>The date of composition is contested; the only certain date is that of the <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a>, between 975 and 1025. J. R. R. Tolkien held that the poem keeps too genuine a memory of <a class="enc-link" href="/encyclopedia/anglo-saxons">Anglo-Saxon</a> paganism to be much later than the Christianisation of <a class="enc-link" href="/encyclopedia/england">England</a> around 700, a view defended by Tom Shippey, Leonard Neidorf and Robert D. Fulk, who point to linguistic, metrical and naming evidence. Craig R. Davis suggests the 890s under Alfred, while others argue for an early 11th-century date. Where it was composed is also disputed: F. W. Moorman proposed <a class="enc-link" href="/encyclopedia/yorkshire">Yorkshire</a> and E. Talbot Donaldson West Mercia.</p><p>Whether it was passed down orally is debated. Albert Lord considered it proven that Beowulf was composed orally, but later scholars such as Ann Watts and Thomas Gardner argued that the text is too varied to be built wholly from set formulae, and John Miles Foley saw a continuum from tradition to text.</p><p>The verse is alliterative: each line has two halves linked by similar initial sounds. The poet drew on memorised formulae that fitted a half-line, and on kennings, such as calling the sea the "swan's riding" or a king a "ring-giver". It is written mainly in Late West <a class="enc-link" href="/encyclopedia/saxons">Saxon</a> with Mercian, Northumbrian, Anglian and Kentish forms, which suggests a long transmission.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <div class="profile-section-body"><p>Scholars have long compared the poem with other traditions: the Icelandic Grettis saga, the story of Hrolf Kraki and Bodvar Bjarki, the international Bear's Son Tale and the Irish folktale of the Hand and the Child. Attempts to link it to <a class="enc-link" href="/encyclopedia/homer">Homer</a>'s <a class="enc-link" href="/encyclopedia/odyssey">Odyssey</a> and <a class="enc-link" href="/encyclopedia/virgil">Virgil</a>'s <a class="enc-link" href="/encyclopedia/aeneid">Aeneid</a> have persisted. Its biblical parallels are more definite, with allusions to Genesis, Exodus and Daniel.</p><p>Early scholars such as Frederick Klaeber and W. P. Ker found the digressions troublesome. The history of modern criticism is often said to begin with Tolkien's 1936 lecture to the British Academy, Beowulf: The Monsters and the Critics, which argued that its literary value had been overlooked in favour of its history and that it is closer to elegy than to epic.</p><p>Its religion remains debated. Robert F. Yeager notes that its only biblical references are to the <a class="enc-link" href="/encyclopedia/old-testament">Old Testament</a>, that Christ is never mentioned and that its characters are pagans. Fred C. Robinson reads it as a message to Christian readers about their own imperfections, Richard North as Danish myth in Christian form, and Ursula Schaefer as a poem readable within both pagan and Christian horizons. Others read it as a study of feuding or as a dynastic drama.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <div class="profile-section-body"><p>The poem survives in a single <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a> in ink on parchment, the Nowell Codex, named after the 16th-century scholar Laurence Nowell; Kevin Kiernan argues that Nowell most likely acquired it through William Cecil in 1563. It was copied by two scribes, the first writing to line 1939 and regularising the spelling, the second keeping more archaic forms. The Old English poem Judith follows it in the same hand, and the transcription may have taken place at <a class="enc-link" href="/encyclopedia/malmesbury-abbey">Malmesbury Abbey</a>. The manuscript has no title.</p><p>It became part of Sir Robert Cotton's library, and is first identified by name in letters of 1700 between Humfrey Wanley and George Hickes. It passed to the Crown in 1702. In 1731 fire at Ashburnham House destroyed around a quarter of the Cotton manuscripts; Beowulf survived with charred margins and lost readings, and parts have crumbled since. Kiernan used fibre-optic and ultraviolet light to recover hidden letters for his Electronic Beowulf, first issued in 1999.</p><p>Grímur Jónsson Thorkelin made the first transcriptions in 1786; since the manuscript has crumbled further, they are prized witnesses, though their accuracy has been questioned. Klaeber's edition of 1922 became the central source for students and translators. The codex is in the British Library.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Beowulf is one of the most important and most often translated works of Old English literature. Sharon Turner translated selected verses into modern English in 1805, <a class="enc-link" href="/encyclopedia/n-f-s-grundtvig">N. F. S. Grundtvig</a> made the first complete verse translation, in Danish, in 1820, and nine complete English translations appeared in the 19th century, among them John Mitchell Kemble's and that of <a class="enc-link" href="/encyclopedia/william-morris">William Morris</a> and A. J. Wyatt. By 2020 the Beowulf's Afterlives Bibliographic Database listed some 688 translations and other versions, in at least 38 languages besides English.</p><p>Modern translations include those of Edwin Morgan, Burton Raffel, Michael J. Alexander, Roy Liuzza and Seamus Heaney, whose version of 1999 was both praised and criticised. Tolkien's prose translation, edited by his son Christopher, appeared in 2014. Maria Dahvana Headley's novel The Mere Wife retold the story from the side of Grendel's mother, and her 2020 translation won the Hugo Award for Best Related Work.</p><p>The poem's digressions, with their impression of historical depth, were imitated by Tolkien in The Lord of the Rings, which embodies many other elements of the poem. It has also been adapted for stage and screen, and Gareth Hinds based a graphic novel of 2007 on Francis Barton Gummere's translation.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Beowulf is an anonymous Old English epic of 3,182 alliterative lines about a Geatish hero who kills Grendel, Grendel's mother and a dragon. Its date of composition is disputed; it survives only in the Nowell Codex of about 975–1025, scorched in the fire of 1731, and since its first transcription in 1786 it has been edited, debated and translated hundreds of times.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="beowulf"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Seamus Heaney's verse translation is published","o":["1731","1786","1999","1563"],"a":2,"w":"1999: Seamus Heaney's verse translation is published."},{"p":"Which came first?","q":"","o":["J. R. R. Tolkien's lecture Beowulf: The Monsters and the Critics opens modern criticism","Grímur Jónsson Thorkelin makes the first transcriptions of the manuscript"],"a":1,"w":"1936: J. R. R. Tolkien's lecture Beowulf: The Monsters and the Critics opens modern criticism · 1786: Grímur Jónsson Thorkelin makes the first transcriptions of the manuscript."},{"p":"In which year?","q":"Frederick Klaeber publishes the edition that becomes the central source for study of the poem","o":["1731","1999","1922","1786"],"a":2,"w":"1922: Frederick Klaeber publishes the edition that becomes the central source for study of the poem."},{"p":"Which came first?","q":"","o":["Fire at Ashburnham House chars the manuscript's margins and destroys some readings","Grímur Jónsson Thorkelin makes the first transcriptions of the manuscript"],"a":0,"w":"1731: Fire at Ashburnham House chars the manuscript's margins and destroys some readings · 1786: Grímur Jónsson Thorkelin makes the first transcriptions of the manuscript."},{"p":"In which year?","q":"Grímur Jónsson Thorkelin makes the first transcriptions of the manuscript","o":["1922","1731","1786","1936"],"a":2,"w":"1786: Grímur Jónsson Thorkelin makes the first transcriptions of the manuscript."}]</script>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/shahnameh"><img src="/logos/thumbs/Shahnameh.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Shahnameh</span><span class="related-card-dates">c. 977 CE – present</span></a><a class="related-card" href="/work/great-zimbabwe"><img src="/logos/thumbs/Great%20Zimbabwe.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Great Zimbabwe</span><span class="related-card-dates">c. 1000 CE – present</span></a><a class="related-card" href="/work/the-tale-of-genji"><img src="/logos/thumbs/The%20Tale%20of%20Genji.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">The Tale of Genji</span><span class="related-card-dates">c. 1008 CE – present</span></a><a class="related-card" href="/work/bayeux-tapestry"><img src="/logos/thumbs/Bayeux%20Tapestry.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Bayeux Tapestry</span><span class="related-card-dates">c. 1070 CE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/borobudur"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Borobudur.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Borobudur</span><span class="related-card-dates">c. 780 CE – present</span></a><a class="related-card" href="/work/shahnameh"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Shahnameh.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Shahnameh</span><span class="related-card-dates">c. 977 CE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Beowulf",slug="beowulf",url="https://the-epoch-institute.org/work/beowulf";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Beowulf on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/beowulf #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/beowulf"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Beowulf",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Beowulf",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

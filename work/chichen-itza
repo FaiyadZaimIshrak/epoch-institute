@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Chichen Itza: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Chichen Itza is a large pre-Columbian Maya city in Yucatán, Mexico, a regional capital of the northern Maya lowlands from about 600 to 1100, known for…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Chichen Itza: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="Chichen Itza is a large pre-Columbian Maya city in Yucatán, Mexico, a regional capital of the northern Maya lowlands from about 600 to 1100, known for…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/chichen-itza">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/chichen-itza.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/chichen-itza.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/chichen-itza">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Chichen Itza"}]},{"@type":"Article","headline":"Chichen Itza","description":"Chichen Itza is a large pre-Columbian Maya city in Yucatán, Mexico, a regional capital of the northern Maya lowlands from about 600 to 1100, known for…","url":"https://the-epoch-institute.org/work/chichen-itza","mainEntityOfPage":"https://the-epoch-institute.org/work/chichen-itza","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Chichen Itza","sameAs":["https://en.wikipedia.org/wiki/Chichen_Itza","https://www.wikidata.org/wiki/Q5859"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/chichen-itza.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Chichen Itza</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Chichen%20Itza.png" alt="Chichen Itza" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · Americas</p>
+        <h1 class="profile-detail-name">Chichen Itza</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 600 CE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val">Founded by the local Maya of northern Yucatán and later shaped by the Itza, a Maya group of debated origins who arrived from about 800; its architecture mixes Maya styles with styles of central <a class="enc-link" href="/encyclopedia/mexico">Mexico</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">A city whose densely built core covers at least 5 square kilometres of levelled ground, with stone pyramids, temples, palaces, colonnades and thirteen ball courts, linked by over 80 paved causeways and once painted in red, green, blue and purple</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">Tinúm Municipality, Yucatán, <a class="enc-link" href="/encyclopedia/mexico">Mexico</a>, between <a class="enc-link" href="/encyclopedia/valladolid">Valladolid</a> and Mérida; federal property in the care of Mexico's National Institute of Anthropology and History (INAH), with many objects from the <a class="enc-link" href="/encyclopedia/sacred-cenote">Sacred Cenote</a> at Harvard's Peabody Museum</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">the <a class="enc-link" href="/encyclopedia/el-castillo-chichen-itza">Temple of Kukulcán</a> (El Castillo) and its equinox shadow serpent; the Great Ball Court; the <a class="enc-link" href="/encyclopedia/sacred-cenote">Sacred Cenote</a> and its offerings; the Caracol; the Temple of the Warriors; <a class="enc-link" href="/encyclopedia/puuc">Puuc</a>, <a class="enc-link" href="/encyclopedia/chenes">Chenes</a> and central Mexican styles; a <a class="enc-link" href="/encyclopedia/unesco-world-heritage-site">UNESCO World Heritage Site</a></span></div>
+        </div>
+        <p class="empire-meta">5 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Chichen Itza became the dominant capital of the northern Maya lowlands as the southern centres declined, controlling trade through its port of Isla Cerritos.</li><li>Its mix of Maya and central Mexican styles was once read as migration or conquest from central <a class="enc-link" href="/encyclopedia/mexico">Mexico</a>, but most scholars now see it as cultural diffusion.</li><li>The city declined as a regional centre by 1100, yet the <a class="enc-link" href="/encyclopedia/sacred-cenote">Sacred Cenote</a> remained a place of pilgrimage when the Spanish arrived.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>A handclap before the staircase of the <a class="enc-link" href="/encyclopedia/el-castillo-chichen-itza">Temple of Kukulcán</a> produces an echo that resembles the chirp of a bird, similar to that of the quetzal.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 600</span><span class="rf-text">Chichen Itza rose to regional prominence toward the end of the <a class="enc-link" href="/encyclopedia/early-classic-period">Early Classic period</a></span></li><li><span class="rf-year">832</span><span class="rf-text">The earliest hieroglyphic date found at the site was recorded</span></li><li><span class="rf-year">900–1050</span><span class="rf-text">The city expanded to become a powerful regional capital controlling north and central Yucatán</span></li><li><span class="rf-year">c. 1100</span><span class="rf-text">Chichen Itza declined as a regional centre, before the rise of Mayapan</span></li><li><span class="rf-year">1534</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/francisco-de-montejo-the-younger">Francisco de Montejo the Younger</a>, besieged by the Maya, abandoned the city he had renamed <a class="enc-link" href="/encyclopedia/ciudad-real">Ciudad Real</a></span></li><li><span class="rf-year">1843</span><span class="rf-text">John Lloyd Stephens's Incidents of Travel in Yucatan brought the site into the popular imagination</span></li><li><span class="rf-year">1904–1910</span><span class="rf-text">Edward Herbert Thompson dredged the <a class="enc-link" href="/encyclopedia/sacred-cenote">Sacred Cenote</a> and shipped most of the finds to Harvard's Peabody Museum</span></li><li><span class="rf-year">1923</span><span class="rf-text">The Mexican government gave the Carnegie Institution a permit for long-term excavation and restoration</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>Chichen Itza lies in the east of the Mexican state of Yucatán, on a karst plain where the rivers run underground. Four natural sinkholes, or cenotes, could supply water year round and made the place attractive for settlement; they belong to the Ring of Cenotes formed along the buried rim of the Chicxulub crater. The Maya name means 'At the mouth of the well of the Itzá'. The <a class="enc-link" href="/encyclopedia/books-of-chilam-balam">Chilam Balam</a> books record an earlier name of the <a class="enc-link" href="/encyclopedia/late-classic-period">Late Classic period</a>, beginning with the word for seven, whose meaning is debated: Uuc Yabnal, 'Seven Great House', is one reading.</p><p>The city was founded by the local Maya of northern Yucatán. Another Maya group of debated origins, the Itza, began arriving around 800 and gradually established themselves; their name, given by local people, is said to mean 'those who speak our language brokenly'. Chichen Itza rose to regional prominence toward the end of the Early Classic, roughly 600, and became a major capital late in the Late Classic and early in the Terminal Classic, as the great centres of the southern lowlands declined. Its rise may have contributed to the collapse of its neighbours Yaxuna and Coba in the 10th century.</p></div>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p>The site's buildings are grouped in sets once divided by low walls. The Great North Platform holds the <a class="enc-link" href="/encyclopedia/el-castillo-chichen-itza">Temple of Kukulcán</a>, named for a feathered serpent deity and called El Castillo by the Spanish: a step pyramid about 30 metres high of nine square terraces, with a stairway on each face and a temple on top. Near it stand the Great Ball Court, at 168 by 70 metres the largest and best preserved in ancient <a class="enc-link" href="/encyclopedia/mesoamerica">Mesoamerica</a>, with rings carved with feathered serpents and panels of ball players, one of them decapitated; the Temples of the Jaguar; a skull platform; the Temple of the Warriors with its rows of carved columns; and the Group of a Thousand Columns.</p><p>A causeway 270 metres long leads to the <a class="enc-link" href="/encyclopedia/sacred-cenote">Sacred Cenote</a>, 60 metres across, its water some 27 metres below sheer cliffs. The Osario Group holds a smaller pyramid over a natural cave and the Temple of Xtoloc beside the second great cenote. The Central Group includes Las Monjas, a governmental palace in the <a class="enc-link" href="/encyclopedia/puuc">Puuc</a> style whose texts often name a ruler called Kʼakʼupakal, the round Caracol, theorised to have been an observatory aligned with the path of Venus, and the Akab Dzib, 'Dark Writing', named for its carved glyphs.</p></div>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <div class="profile-section-body"><p>The core of the city was laid out between 750 and 900, and its final layout after 900. Builders levelled the broken terrain for the major groups, with the greatest effort spent on the areas of the Castillo, Las Monjas, the Osario and the Main Southwest group. The earliest hieroglyphic date found at the site is equivalent to 832, and the last, in the Osario, to 998. Many buildings were painted in colours chosen from the pigments most easily found nearby, so the city should be imagined as a colourful place.</p><p>Like other Mesoamerican builders, the Maya of Chichen Itza raised larger structures over older ones. Excavation in the mid-1930s found an earlier temple buried inside the <a class="enc-link" href="/encyclopedia/el-castillo-chichen-itza">Temple of Kukulcán</a>, with a Chac Mool and a red jaguar throne spotted with inlaid jade, and scanning in 2025 showed that this inner pyramid had itself grown through several stages. The Temple of the Warriors likewise encases an older Temple of the Chac Mool. The architecture combines the <a class="enc-link" href="/encyclopedia/puuc">Puuc</a> and <a class="enc-link" href="/encyclopedia/chenes">Chenes</a> styles of the northern lowlands, concentrated in Old Chichén and Las Monjas, with forms resembling those of central <a class="enc-link" href="/encyclopedia/mexico">Mexico</a>; the Temple of the Warriors is analogous to Temple B at the Toltec capital of Tula, built here on a larger scale.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <div class="profile-section-body"><p>Chichen Itza was among the largest Maya cities and may have had the most diverse population in the Maya world; it was likely one of the mythical great cities, or Tollans, of later Mesoamerican literature. Through its port at Isla Cerritos it took part in the sea trade around the peninsula, obtaining obsidian from central <a class="enc-link" href="/encyclopedia/mexico">Mexico</a> and gold from southern <a class="enc-link" href="/encyclopedia/central-america">Central America</a>, and it drew tribute from cities it conquered. In the late 1980s some archaeologists proposed that a council of elite lineages, a 'multepal', ruled it, a view since called into question in favour of rule by kings.</p><p>Post-Conquest Maya and Spanish sources say that objects and people were sacrificed into the <a class="enc-link" href="/encyclopedia/sacred-cenote">Sacred Cenote</a> to the rain god Chaac, especially in times of drought. Thousands of objects have been recovered from it, with skeletons of children, men and women; some show wounds consistent with sacrifice, while others may be non-violent burials, and the Spanish accounts, written long afterwards, may carry colonial biases, so the question remains debated. Colonial sources such as the Book of <a class="enc-link" href="/encyclopedia/books-of-chilam-balam">Chilam Balam</a> of Chumayel say <a class="enc-link" href="/encyclopedia/hunac-ceel">Hunac Ceel</a> of Mayapan conquered the city in the 13th century, but the archaeological dating makes that unlikely while Chichen Itza was an active centre.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <div class="profile-section-body"><p>Chichen Itza declined as a regional centre by 1100, though the area may not have been abandoned: the Spanish found a thriving local population, and the cenote was still visited by pilgrims. <a class="enc-link" href="/encyclopedia/francisco-de-montejo-the-younger">Francisco de Montejo the Younger</a> made the city his capital, <a class="enc-link" href="/encyclopedia/ciudad-real">Ciudad Real</a>, but the Maya besieged his force, and he abandoned it in 1534; by 1588 the land was a <a class="enc-link" href="/encyclopedia/cattle">cattle</a> ranch. After Stephens's book of 1843, explorers photographed and described the ruins, and in 1875 Augustus and Alice Le Plongeon excavated the reclining figure he named 'Chaacmol', the origin of the term Chac Mool.</p><p>In 1894 the US consul Edward Herbert Thompson bought the <a class="enc-link" href="/encyclopedia/hacienda">hacienda</a> that included the ruins and from 1904 to 1910 dredged the <a class="enc-link" href="/encyclopedia/sacred-cenote">Sacred Cenote</a>, shipping most of the finds to the Peabody Museum. In 1926 <a class="enc-link" href="/encyclopedia/mexico">Mexico</a> charged him with theft and seized the hacienda; in 1944 its Supreme Court ruled he had broken no laws. The Carnegie Institution restored the Temple of the Warriors and the Caracol from 1923, while the Mexican government restored El Castillo and the Great Ball Court. A 1972 law placed all pre-Columbian monuments under federal ownership, and in 2010 the state of Yucatán bought the land beneath the main monuments.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Chichen Itza is a <a class="enc-link" href="/encyclopedia/unesco-world-heritage-site">UNESCO World Heritage Site</a> and one of the most visited archaeological sites in <a class="enc-link" href="/encyclopedia/mexico">Mexico</a>. Tourism there began more than a century ago with Stephens's readers; in 1923 Governor Felipe Carrillo Puerto opened a highway to the ruins, and the Mayaland Hotel followed in 1930. In 2007 the <a class="enc-link" href="/encyclopedia/el-castillo-chichen-itza">Temple of Kukulcán</a> was named one of the New Seven Wonders of the World in a vote whose methods were criticised, and the publicity renewed debate in Mexico over who owned the site.</p><p>Each spring equinox several thousand visitors gather to watch the triangular shadows that seem to send a serpent down the northern staircase. Some scholars suggest the effect represents Kukulcán, though the idea that it was designed to record the equinox is highly unlikely, since it can be seen for weeks. The monuments can no longer be climbed: access to El Castillo closed in 2006 after a visitor fell to her death. In 2024 a museum of more than 1,000 pieces opened beside the site, reached by the Tren Maya.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Chichen Itza was a Maya city in Yucatán that dominated the northern lowlands from about 600 until it declined by 1100, building pyramids, ball courts and temples in Maya and central Mexican styles around its sacred cenotes. Conquered land under <a class="enc-link" href="/encyclopedia/spain">Spain</a> and later dredged and excavated, it is now a World Heritage Site and one of <a class="enc-link" href="/encyclopedia/mexico">Mexico</a>'s most visited ruins.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="chichen-itza"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"John Lloyd Stephens's Incidents of Travel in Yucatan brought the site into the popular imagination","o":["832","1923","1843","1534"],"a":2,"w":"1843: John Lloyd Stephens's Incidents of Travel in Yucatan brought the site into the popular imagination."},{"p":"Which came first?","q":"","o":["Francisco de Montejo the Younger, besieged by the Maya, abandoned the city he had renamed Ciudad Real","The earliest hieroglyphic date found at the site was recorded"],"a":1,"w":"1534: Francisco de Montejo the Younger, besieged by the Maya, abandoned the city he had renamed Ciudad Real · 832: The earliest hieroglyphic date found at the site was recorded."},{"p":"In which year?","q":"The Mexican government gave the Carnegie Institution a permit for long-term excavation and restoration","o":["1534","832","1923","1843"],"a":2,"w":"1923: The Mexican government gave the Carnegie Institution a permit for long-term excavation and restoration."},{"p":"Which came first?","q":"","o":["Francisco de Montejo the Younger, besieged by the Maya, abandoned the city he had renamed Ciudad Real","John Lloyd Stephens's Incidents of Travel in Yucatan brought the site into the popular imagination"],"a":0,"w":"1534: Francisco de Montejo the Younger, besieged by the Maya, abandoned the city he had renamed Ciudad Real · 1843: John Lloyd Stephens's Incidents of Travel in Yucatan brought the site into the popular imagination."},{"p":"In which year?","q":"The earliest hieroglyphic date found at the site was recorded","o":["832","1534","1843","1923"],"a":0,"w":"832: The earliest hieroglyphic date found at the site was recorded."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>William H. Holmes, Archeological Studies Among the Ancient Cities of Mexico (Field Columbian Museum, 1895)</li>
+        <li>Herbert J. Spinden, A Study of Maya Art, Its Subject Matter and Historical Development (The Museum, 1913)</li>
+        <li>John L. Stephens, Incidents of Travel in Yucatan (Harper and Brothers, 1843)</li>
+        <li>Linnea Wren et al., eds., Landscapes of the Itza: Archeology and Art History at Chichen Itza and Neighboring Sites (University of Florida Press, 2018)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/hagia-sophia"><img src="/logos/thumbs/Hagia%20Sophia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Hagia Sophia</span><span class="related-card-dates">532 CE – present</span></a><a class="related-card" href="/work/one-thousand-and-one-nights"><img src="/logos/thumbs/One%20Thousand%20and%20One%20Nights.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">One Thousand and One Nights</span><span class="related-card-dates">c. 700 CE – present</span></a><a class="related-card" href="/work/borobudur"><img src="/logos/thumbs/Borobudur.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Borobudur</span><span class="related-card-dates">c. 780 CE – present</span></a><a class="related-card" href="/work/beowulf"><img src="/logos/thumbs/Beowulf.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Beowulf</span><span class="related-card-dates">c. 975 CE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/hagia-sophia"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Hagia%20Sophia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Hagia Sophia</span><span class="related-card-dates">532 CE – present</span></a><a class="related-card" href="/work/one-thousand-and-one-nights"><span class="related-card-label">Later →</span><img src="/logos/thumbs/One%20Thousand%20and%20One%20Nights.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">One Thousand and One Nights</span><span class="related-card-dates">c. 700 CE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Chichen Itza",slug="chichen-itza",url="https://the-epoch-institute.org/work/chichen-itza";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Chichen Itza on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/chichen-itza #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/chichen-itza"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Chichen Itza",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Chichen Itza",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

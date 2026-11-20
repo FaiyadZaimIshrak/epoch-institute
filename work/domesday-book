@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Domesday Book: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Domesday Book is the manuscript record of the Great Survey of much of England and parts of Wales, ordered by William the Conqueror and traditionally…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Domesday Book: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="Domesday Book is the manuscript record of the Great Survey of much of England and parts of Wales, ordered by William the Conqueror and traditionally…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/domesday-book">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/domesday-book.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/domesday-book.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/domesday-book">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Domesday Book"}]},{"@type":"Article","headline":"Domesday Book","description":"Domesday Book is the manuscript record of the Great Survey of much of England and parts of Wales, ordered by William the Conqueror and traditionally…","url":"https://the-epoch-institute.org/work/domesday-book","mainEntityOfPage":"https://the-epoch-institute.org/work/domesday-book","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Domesday Book","sameAs":["https://en.wikipedia.org/wiki/Domesday_Book","https://www.wikidata.org/wiki/Q19867"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/domesday-book.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Domesday Book</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Domesday%20Book.png" alt="Domesday Book" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · Europe</p>
+        <h1 class="profile-detail-name">Domesday Book</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 1086 CE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val">Ordered by <a class="enc-link" href="/encyclopedia/william-the-conqueror">William the Conqueror</a> in 1085; returns gathered by royal officers (legati) from sworn juries; Great Domesday copied out by one scribe, Little Domesday by about six</span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">A survey in highly abbreviated Medieval <a class="enc-link" href="/encyclopedia/latin">Latin</a> on parchment, in two works: Little Domesday (<a class="enc-link" href="/encyclopedia/norfolk">Norfolk</a>, <a class="enc-link" href="/encyclopedia/suffolk">Suffolk</a> and Essex) and Great Domesday (most of the rest of <a class="enc-link" href="/encyclopedia/england">England</a> and parts of <a class="enc-link" href="/encyclopedia/wales">Wales</a>)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">The National Archives at Kew, <a class="enc-link" href="/encyclopedia/london">London</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">the oldest public record of <a class="enc-link" href="/encyclopedia/england">England</a>; 268,984 heads of household tallied; 13,418 places named; 5,624 mills listed; a name alluding to the Last Judgment; evidence still cited in courts</span></div>
+        </div>
+        <p class="empire-meta">5 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The survey recorded who held each piece of land after the <a class="enc-link" href="/encyclopedia/norman-conquest">Norman Conquest</a>, what it was worth and what dues the king was owed.</li><li>Its date is traditionally 1086, but some historians argue that the book itself was compiled later, under William II or as late as 1098 to 1114.</li><li>Kept first at <a class="enc-link" href="/encyclopedia/winchester">Winchester</a> and then at Westminster, it is now at the National Archives and was printed in full in 1783.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The English called it Domesday because, as Richard FitzNeal explained around 1179, there was no appeal from its record, just as there is none from the Last Judgment. The word doom then meant law or judgment, not disaster.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">1085</span><span class="rf-text">According to the <a class="enc-link" href="/encyclopedia/anglo-saxon-chronicle">Anglo-Saxon Chronicle</a>, <a class="enc-link" href="/encyclopedia/william-the-conqueror">William the Conqueror</a> sends his men into every shire to survey the land and its dues</span></li><li><span class="rf-year">1086</span><span class="rf-text">The book's colophon states that the survey was completed</span></li><li><span class="rf-year">c. 1179</span><span class="rf-text">Richard FitzNeal explains the name Domesday in the Dialogus de Scaccario</span></li><li><span class="rf-year">1221</span><span class="rf-text">The name Domesday is first found in an official document</span></li><li><span class="rf-year">1783</span><span class="rf-text">Domesday is first printed in full, in two volumes set in record type</span></li><li><span class="rf-year">1859</span><span class="rf-text">The two volumes are transferred to the new Public Record Office in <a class="enc-link" href="/encyclopedia/london">London</a></span></li><li><span class="rf-year">1939–1945</span><span class="rf-text">During the <a class="enc-link" href="/encyclopedia/second-world-war">Second World War</a> the volumes are evacuated to Shepton Mallet Prison in <a class="enc-link" href="/encyclopedia/somerset">Somerset</a></span></li><li><span class="rf-year">1986</span><span class="rf-text">The volumes are rebound for the ninth centenary, and the BBC releases the Domesday Project</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>Domesday Book came out of the years after the <a class="enc-link" href="/encyclopedia/norman-conquest">Norman Conquest</a>, when <a class="enc-link" href="/encyclopedia/william-the-conqueror">William the Conqueror</a> had confiscated landed estates across <a class="enc-link" href="/encyclopedia/england">England</a> on a large scale and given them to his followers. The <a class="enc-link" href="/encyclopedia/anglo-saxon-chronicle">Anglo-Saxon Chronicle</a> states that in 1085 the king held a large meeting and deep consultation with his council about the land, how it was occupied and by what sort of men, and then sent his men into every shire to find out how many hides each held, what land and stock the king had, and what dues he ought to receive each year.</p><p>Historians believe William needed to show that the rights of the Crown, which he claimed to have inherited, had not suffered in the confiscations, since his Norman followers tended to evade the liabilities of their English predecessors. The primary purpose of the survey was to record the king's fiscal rights: the national land tax (geld), paid on a fixed assessment, certain other dues, and the proceeds of the crown lands. The framework for the book was the geld assessment lists, which is why the northern lands that paid no geld were largely left out. The <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a> was first known as Liber de Wintonia, the Book of <a class="enc-link" href="/encyclopedia/winchester">Winchester</a>, after the royal treasury where it was kept.</p></div>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p>Domesday Book is made up of two independent works. Little Domesday, physically smaller but more detailed, covers <a class="enc-link" href="/encyclopedia/norfolk">Norfolk</a>, <a class="enc-link" href="/encyclopedia/suffolk">Suffolk</a> and Essex and records the livestock on lords' home farms. Great Domesday covers most of the rest of <a class="enc-link" href="/encyclopedia/england">England</a> and parts of <a class="enc-link" href="/encyclopedia/wales">Wales</a>, but not the northern lands that later became Westmorland, <a class="enc-link" href="/encyclopedia/cumberland">Cumberland</a>, <a class="enc-link" href="/encyclopedia/northumberland">Northumberland</a> and the County Palatine of Durham. Space was left in it for <a class="enc-link" href="/encyclopedia/london">London</a> and <a class="enc-link" href="/encyclopedia/winchester">Winchester</a>, which were never written up.</p><p>Each volume is arranged in chapters listing the manors held by each tenant-in-chief directly from the king, opening with the king's own demesne, then <a class="enc-link" href="/encyclopedia/bishop">bishops</a>, abbeys, lay tenants-in-chief and lastly the king's serjeants and thegns. For each manor the record gives the tax assessment, the arable land and plough teams, meadow, woodland, pasture, fisheries, mills and salt-pans, the peasants by class, and the annual value at the death of <a class="enc-link" href="/encyclopedia/edward-the-confessor">Edward the Confessor</a>, when the new holder received it and at the time of the survey. In all it tallies 268,984 heads of household, names 13,418 places and lists 5,624 mills and 28,000 slaves; H. C. Darby put the total population at between 1.2 and 1.6 million.</p></div>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <div class="profile-section-body"><p>Most shires were visited by a group of royal officers (legati) who held a public inquiry, probably in the shire court, attended by representatives of every township and of the local lords. The unit of inquiry was the hundred, and each hundred's return was sworn to by 12 local jurors, half English and half Norman. Comparison of the details recorded suggests six circuits for Great Domesday and a seventh for the Little Domesday shires. Fuller records of the original returns survive in the <a class="enc-link" href="/encyclopedia/cambridge">Cambridge</a> <a class="enc-link" href="/encyclopedia/portuguese-inquisition">Inquisition</a>, the Inquisitio Eliensis of Ely Abbey and the Exon Domesday for the south-western counties.</p><p>Great Domesday appears to have been copied out on parchment by one person, while six scribes seem to have worked on Little Domesday, which represents an earlier stage before the drastic abbreviation and rearrangement of the Great Domesday scribe. It is not known exactly when the book was compiled. Writing in 2000, David Roffe argued that the inquest and the making of the book were distinct exercises and that the book was completed, if not started, by William II; research by Carol <a class="enc-link" href="/encyclopedia/syme">Symes</a> indicates it might have been completed as late as 1098 to 1114.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <div class="profile-section-body"><p>To the English, who held the book in awe, it became known as Domesday, in allusion to the Last Judgment and to the definitive character of the record. Richard FitzNeal, treasurer of <a class="enc-link" href="/encyclopedia/england">England</a> under Henry II, wrote in the Dialogus de Scaccario (c. 1179) that when any dispute arose about matters in the book, its word could not be denied or set aside, so that from it, as from the Last Judgment, there was no appeal. The custodians took up the name, first found in an official document in 1221. Through false etymology or wordplay it was also linked with the <a class="enc-link" href="/encyclopedia/latin">Latin</a> Domus Dei, a reading found in Adam of Damerham in the late 13th century and believed by antiquaries such as John Stow and Sir Richard Baker.</p><p>In the <a class="enc-link" href="/encyclopedia/middle-ages">Middle Ages</a> the book's evidence was frequently invoked in the law courts. Early British authors thought the survey's aim was to show that all private property in land came only from the grant of King William. Around 1100 the <a class="enc-link" href="/encyclopedia/normans">Normans</a> in southern <a class="enc-link" href="/encyclopedia/italy">Italy</a> completed their own Catalogus Baronum based on Domesday Book. The usual modern convention calls the work Domesday Book, without a definite article.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <div class="profile-section-body"><p>The book was kept from the late 11th to the early 13th century in the royal Treasury at <a class="enc-link" href="/encyclopedia/winchester">Winchester</a>, and went with the Treasury to the <a class="enc-link" href="/encyclopedia/palace-of-westminster">Palace of Westminster</a>, probably under <a class="enc-link" href="/encyclopedia/john-king-of-england">King John</a>. It stayed at Westminster in various Exchequer offices until the 19th century, apart from journeys with the Chancellor of the Exchequer to York and Lincoln in 1300, to York in 1303 and 1319, to Hertford in the 1580s or 1590s and to Nonsuch Palace in 1666 after the Great Fire of <a class="enc-link" href="/encyclopedia/london">London</a>. From the 1740s it was held in the chapter house of <a class="enc-link" href="/encyclopedia/westminster-abbey">Westminster Abbey</a>, and in 1859 it moved to the new Public Record Office.</p><p>The volumes have been rebound many times: Little Domesday in 1320, both probably in the Tudor period, in 1819 and 1869, in 1952 and in 1986, when Great Domesday was divided into two physical volumes and Little Domesday into three. They were sent to <a class="enc-link" href="/encyclopedia/southampton">Southampton</a> in 1861 to 1863 for photozincographic reproduction, and evacuated to Bodmin Prison during the <a class="enc-link" href="/encyclopedia/first-world-war">First World War</a> and to Shepton Mallet Prison during the <a class="enc-link" href="/encyclopedia/second-world-war">Second World War</a>. They are now held at the National Archives at Kew, together with the chest in which they were stowed in the 17th and 18th centuries.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>The government began a project to publish Domesday in 1773, and the book appeared in two volumes in 1783, set in record type as a partial facsimile; indexes followed in 1811 and a supplementary volume with the Exon Domesday, the Inquisitio Eliensis, the Liber Winton and the Boldon Book in 1816. Photographic facsimiles of each county were published in 1861 to 1863. In 1986 the BBC marked the 900th anniversary with its Domesday Project, and in 2006 the contents went online with an English translation.</p><p>No survey approaching its scope was attempted again in <a class="enc-link" href="/encyclopedia/britain">Britain</a> until the 1873 Return of Owners of Land, sometimes called the Modern Domesday. The book is a primary source for historians, especially economic historians; H. C. Darby called it the oldest public record in <a class="enc-link" href="/encyclopedia/england">England</a> and probably the most remarkable statistical document in the history of <a class="enc-link" href="/encyclopedia/europe">Europe</a>. Darby also warned of its omissions, errors and ambiguities, and of the difference between the geography of England and the geography of Domesday Book. Its evidence has still been cited in courts in recent decades, on manorial rights in 1960 and 2010 and on a market in 2019.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Domesday Book is the record of the Great Survey of <a class="enc-link" href="/encyclopedia/england">England</a> ordered by <a class="enc-link" href="/encyclopedia/william-the-conqueror">William the Conqueror</a> in 1085, listing who held the land, its resources and its value to the king. Traditionally dated to 1086, though some historians date the book later, it is held at the National Archives and remains a primary source for medieval England.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="domesday-book"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The name Domesday is first found in an official document","o":["1221","1783","1986","1859"],"a":0,"w":"1221: The name Domesday is first found in an official document."},{"p":"Which came first?","q":"","o":["The two volumes are transferred to the new Public Record Office in London","The book's colophon states that the survey was completed"],"a":1,"w":"1859: The two volumes are transferred to the new Public Record Office in London · 1086: The book's colophon states that the survey was completed."},{"p":"In which year?","q":"According to the Anglo-Saxon Chronicle, William the Conqueror sends his men into every shire to survey the land and its dues","o":["1783","1085","1221","1986"],"a":1,"w":"1085: According to the Anglo-Saxon Chronicle, William the Conqueror sends his men into every shire to survey the land and its dues."},{"p":"Which came first?","q":"","o":["The volumes are rebound for the ninth centenary, and the BBC releases the Domesday Project","The name Domesday is first found in an official document"],"a":1,"w":"1986: The volumes are rebound for the ninth centenary, and the BBC releases the Domesday Project · 1221: The name Domesday is first found in an official document."},{"p":"In which year?","q":"The two volumes are transferred to the new Public Record Office in London","o":["1086","1085","1859","1221"],"a":2,"w":"1859: The two volumes are transferred to the new Public Record Office in London."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Bates, David, A Bibliography of Domesday Book (Boydell, 1985)</li>
+        <li>Finn, R. Welldon, Domesday Book: a guide (Phillimore, 1973)</li>
+        <li>Sawyer, Peter, ed., Domesday Book: a reassessment (Edward Arnold, 1985)</li>
+        <li>Snooks, Graeme D.; McDonald, John, Domesday Economy: a new approach to Anglo-Norman history (Clarendon Press, 1986)</li>
+        <li>Darby, Henry C., The Domesday Geography of Eastern England (Cambridge University Press, 2003)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/bayeux-tapestry"><img src="/logos/thumbs/Bayeux%20Tapestry.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Bayeux Tapestry</span><span class="related-card-dates">c. 1070 CE – present</span></a><a class="related-card" href="/work/angkor-wat"><img src="/logos/thumbs/Angkor%20Wat.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Angkor Wat</span><span class="related-card-dates">1122 CE – present</span></a><a class="related-card" href="/work/the-tale-of-genji"><img src="/logos/thumbs/The%20Tale%20of%20Genji.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">The Tale of Genji</span><span class="related-card-dates">c. 1008 CE – present</span></a><a class="related-card" href="/work/great-zimbabwe"><img src="/logos/thumbs/Great%20Zimbabwe.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Great Zimbabwe</span><span class="related-card-dates">c. 1000 CE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/bayeux-tapestry"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Bayeux%20Tapestry.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Bayeux Tapestry</span><span class="related-card-dates">c. 1070 CE – present</span></a><a class="related-card" href="/work/angkor-wat"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Angkor%20Wat.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Angkor Wat</span><span class="related-card-dates">1122 CE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Domesday Book",slug="domesday-book",url="https://the-epoch-institute.org/work/domesday-book";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Domesday Book on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/domesday-book #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/domesday-book"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Domesday Book",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Domesday Book",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

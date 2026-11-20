@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Great Zimbabwe: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Great Zimbabwe is the stone-walled city near Masvingo built by ancestral Shona people from the 11th to the 15th century, capital of the Kingdom of Great…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Great Zimbabwe: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="Great Zimbabwe is the stone-walled city near Masvingo built by ancestral Shona people from the 11th to the 15th century, capital of the Kingdom of Great…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/great-zimbabwe">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/great-zimbabwe.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/great-zimbabwe.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/great-zimbabwe">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Great Zimbabwe"}]},{"@type":"Article","headline":"Great Zimbabwe","description":"Great Zimbabwe is the stone-walled city near Masvingo built by ancestral Shona people from the 11th to the 15th century, capital of the Kingdom of Great…","url":"https://the-epoch-institute.org/work/great-zimbabwe","mainEntityOfPage":"https://the-epoch-institute.org/work/great-zimbabwe","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Great Zimbabwe","sameAs":["https://en.wikipedia.org/wiki/Great_Zimbabwe","https://www.wikidata.org/wiki/Q209217"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/great-zimbabwe.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Great Zimbabwe</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Great%20Zimbabwe.png" alt="Great Zimbabwe" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · Sub-Saharan Africa</p>
+        <h1 class="profile-detail-name">Great Zimbabwe</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 1000 CE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val">Ancestral <a class="enc-link" href="/encyclopedia/shona">Shona</a> people, the <a class="enc-link" href="/encyclopedia/karanga">Karanga</a>, descendants of the Gumanye, who settled the site from around 1000; the stone walls were raised by its ruling dynasty over more than 300 years</span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">Three groups of mortarless granite <a class="enc-link" href="/encyclopedia/dry-stone-construction">dry-stone</a> walls, the Hill Complex, the Great Enclosure and the Valley Complex, spread over 7.22 square kilometres, the Great Enclosure's walls up to 11 metres high and about 250 metres long around a conical tower</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">In the south-eastern hills of <a class="enc-link" href="/encyclopedia/zimbabwe">Zimbabwe</a> near Masvingo, a national monument and <a class="enc-link" href="/encyclopedia/unesco-world-heritage-site">UNESCO World Heritage Site</a>; most of the soapstone birds are back in Zimbabwe, one remains at Groote Schuur in <a class="enc-link" href="/encyclopedia/cape-town">Cape Town</a> and a soapstone figurine is in the <a class="enc-link" href="/encyclopedia/british-museum">British Museum</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">the Great Enclosure and its Conical Tower; the eight soapstone <a class="enc-link" href="/encyclopedia/zimbabwe">Zimbabwe</a> Birds; trade in gold and <a class="enc-link" href="/encyclopedia/ivory-trade">ivory</a> to the <a class="enc-link" href="/encyclopedia/swahili">Swahili</a> coast; Chinese and Persian imports; the colonial 'Zimbabwe controversy'; the name of the modern state</span></div>
+        </div>
+        <p class="empire-meta">5 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Great Zimbabwe grew rich from <a class="enc-link" href="/encyclopedia/cattle">cattle</a> and from controlling the trade in gold and <a class="enc-link" href="/encyclopedia/ivory-trade">ivory</a> between the Zimbabwean Plateau and the <a class="enc-link" href="/encyclopedia/swahili">Swahili</a> coast.</li><li>Power and trade shifted north and west in the 15th and 16th centuries, to <a class="enc-link" href="/encyclopedia/mutapa-empire">Mutapa</a> and <a class="enc-link" href="/encyclopedia/khami">Khami</a>, and the city was abandoned in the 16th or 17th century.</li><li>Rhodesia's white government pressed archaeologists to deny that black Africans built it; its African origin became the scholarly consensus by the 1950s, and independent <a class="enc-link" href="/encyclopedia/zimbabwe">Zimbabwe</a> took its name and its bird.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>When the Portuguese captain Vicente Pegado recorded the ruins in 1531, he wrote that 'the natives of the country call these edifices Symbaoe, which according to their language signifies court'.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 1000</span><span class="rf-text">Ancestral <a class="enc-link" href="/encyclopedia/shona">Shona</a> people settled the site</span></li><li><span class="rf-year">11th century</span><span class="rf-text">Construction of the stone buildings began, starting with the Hill Complex</span></li><li><span class="rf-year">13th century</span><span class="rf-text">The Great Enclosure was begun, and the city became capital of the Kingdom of Great Zimbabwe</span></li><li><span class="rf-year">c. 1300</span><span class="rf-text">Great Zimbabwe replaced Mapungubwe as the region's centre of trade</span></li><li><span class="rf-year">15th century</span><span class="rf-text">Trade declined, and by the century's end offshoots of the royal family were founding new dynasties</span></li><li><span class="rf-year">1531</span><span class="rf-text">Vicente Pegado, captain of the Portuguese garrison of <a class="enc-link" href="/encyclopedia/sofala">Sofala</a>, recorded the name Symbaoe</span></li><li><span class="rf-year">1871</span><span class="rf-text">European investigations of the site began, followed by looting by antiquarians from the 1890s to the 1920s</span></li><li><span class="rf-year">1980</span><span class="rf-text">The newly independent country was named after the site and kept the soapstone bird as a national symbol</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The area of Great Zimbabwe was settled by the San long before farming peoples arrived. <a class="enc-link" href="/encyclopedia/bantu-peoples">Bantu-speaking</a> peoples settled there from around 150 BCE, forming agricultural <a class="enc-link" href="/encyclopedia/chiefdom">chiefdoms</a> from the 4th century CE. Between the 4th and 7th centuries communities of the Gokomere or Ziwa cultures farmed the valley and mined and worked iron, but built nothing in stone. The later Gumanye people are considered the ancestors of the <a class="enc-link" href="/encyclopedia/karanga">Karanga</a>, the south-central <a class="enc-link" href="/encyclopedia/shona">Shona</a> who would build Great Zimbabwe.</p><p>Ancestral Shona people settled the site from around 1000. Agriculture and <a class="enc-link" href="/encyclopedia/cattle">cattle</a> underpinned a growing social network, and long-distance trade transformed local organisations into regional ones. The ruling dynasty used its wealth to build houses of thick daga, earthen daub, and stone walls to shield itself from public view, a process that advanced rapidly in the 13th century, when Great Zimbabwe became the capital of a kingdom. Its growth has been linked to the decline of Mapungubwe from around 1300, or to the greater availability of gold in its hinterland. The name <a class="enc-link" href="/encyclopedia/zimbabwe">Zimbabwe</a> may come from Shona dzimba-dze-mabwe, 'large houses of stone', or from dzimba-hwe, 'venerated houses'.</p></div>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p>The ruins form three groups. The Hill Complex, the oldest, includes the Eastern Enclosure, where the <a class="enc-link" href="/encyclopedia/zimbabwe">Zimbabwe</a> Birds are thought to have stood, a high balcony enclosure over it and a huge boulder shaped like the bird. The Great Enclosure has an inner wall circling a series of structures and a younger outer wall, between which stands the Conical Tower, 5.5 metres in diameter and 9 metres high. The Valley Complex is divided into Upper and Lower Valley Ruins. Within the perimeter walls was room for commoners' housing, and dhaka pits served as <a class="enc-link" href="/encyclopedia/reservoir">reservoirs</a>, <a class="enc-link" href="/encyclopedia/well">wells</a> and springs, together able to store more than 18,000 cubic metres of water.</p><p>Scholars disagree on what the complexes were for. One view holds that successive kings founded new residences, moving the seat of power from the Hill Complex to the Great Enclosure, the Upper Valley and finally the Lower Valley in the early 16th century. A 'structuralist' view assigns separate functions: rituals, perhaps for rain making, on the hill, the king in the Great Enclosure and citizens in the valley, though some argue the dating of finds does not support it. The Great Enclosure likely served as the royal residence, with public spaces for ritual.</p></div>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <div class="profile-section-body"><p>Construction of the stone buildings began in the 11th century and continued for over 300 years. The Hill Complex was occupied from the 11th to 13th centuries, the Great Enclosure, built during the 13th and 14th centuries, from the 13th to 15th, and the Valley Complex from the 14th to 16th. The walls were made of dry stone, set without mortar, and the surviving ruins are built entirely of stone, spanning 730 hectares, an area similar to medieval <a class="enc-link" href="/encyclopedia/london">London</a>. Most people, however, lived in houses of mud on wooden frames, so the stone structures are assumed to have been royal, official or elite buildings.</p><p>Population estimates vary: traditional figures put the peak at as many as 18,000 or 20,000 people, while a more recent survey concluded that it likely never exceeded 10,000; no burials have been found to offer another basis. The city was also a centre of gold working. Excavated clay containers, crucibles and tools show gold being heated and turned into wire, <a class="enc-link" href="/encyclopedia/bead">beads</a> and ornaments in particular areas of the site, the work of practised artisans rather than a common activity.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <div class="profile-section-body"><p>The city's politico-religious ideology legitimised the king, the mambo, by linking rulers, their ancestors and <a class="enc-link" href="/encyclopedia/mwari-cult">Mwari</a>, God. Great Zimbabwe traded salt, <a class="enc-link" href="/encyclopedia/cattle">cattle</a>, grain and <a class="enc-link" href="/encyclopedia/copper">copper</a> as far north as the Kundelungu Plateau, and much of its wealth came from controlling the routes from the plateau's goldfields to the <a class="enc-link" href="/encyclopedia/swahili">Swahili</a> coast. Traders travelled the Save and Runde rivers and, through Swahili <a class="enc-link" href="/encyclopedia/city-state">city-states</a> such as <a class="enc-link" href="/encyclopedia/sofala">Sofala</a>, sent gold and <a class="enc-link" href="/encyclopedia/ivory-trade">ivory</a> into the <a class="enc-link" href="/encyclopedia/indian-ocean-trade">Indian Ocean trade</a>. Chinese pottery, including Longquan stoneware and blue-and-white <a class="enc-link" href="/encyclopedia/porcelain">porcelain</a> of the 14th and 15th centuries, Arabian coins and glass <a class="enc-link" href="/encyclopedia/bead">beads</a> reached the city, though there is no evidence of architectural exchange with centres such as Kilwa.</p><p>The most important finds are eight birds carved in soapstone on top of monoliths the height of a person, thought to represent the bateleur eagle, in <a class="enc-link" href="/encyclopedia/shona">Shona</a> culture a good omen, protective spirit and messenger of god. Pegado's description of 1531 spoke of a 'fortress built of stones of marvelous size' with no mortar. In the 20th century, both colonial and black nationalist writers invoked Great Zimbabwe's past to support their visions of the country, in popular histories and in fiction such as Wilbur Smith's The Sunbird and Stanlake Samkange's Year of the Uprising.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <div class="profile-section-body"><p>What ended Great Zimbabwe is unknown. Climate change seems unlikely to have been the main cause, given its favourable rainfall. <a class="enc-link" href="/encyclopedia/shona">Shona</a> oral tradition blames a shortage of salt, which may be a figurative way of speaking of depleted land or resources; the <a class="enc-link" href="/encyclopedia/aquifer">aquifer</a> may also have run dry or been contaminated. From the early 15th century a global downturn reduced demand for gold. Korekore tradition says <a class="enc-link" href="/encyclopedia/nyatsimba-mutota">Nyatsimba Mutota</a> of the royal family led people north and founded the <a class="enc-link" href="/encyclopedia/mutapa-empire">Mutapa Empire</a>, and a new trade route along the <a class="enc-link" href="/encyclopedia/zambezi">Zambezi</a> favoured <a class="enc-link" href="/encyclopedia/khami">Khami</a>. The site was probably inhabited into the 17th century before it was abandoned.</p><p>Investigations began in 1871. European antiquarians looted the site from the 1890s to the 1920s, Richard Nicklin Hall's diggings and gold mining doing much damage and destroying its stratigraphy. Carvings taken around 1890 were sold to <a class="enc-link" href="/encyclopedia/cecil-rhodes">Cecil Rhodes</a>; most have since been returned. In the '<a class="enc-link" href="/encyclopedia/zimbabwe">Zimbabwe</a> controversy', theories credited <a class="enc-link" href="/encyclopedia/jews">Jews</a>, <a class="enc-link" href="/encyclopedia/arabs">Arabs</a> or <a class="enc-link" href="/encyclopedia/phoenicians">Phoenicians</a> with the building, and in the 1960s and 1970s Rhodesia's government censored archaeologists who disputed the official line, until Peter Garlake and Roger Summers left the country. Reconstruction since 1980 and heavy visiting have caused further damage.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Great Zimbabwe gave its name to the many smaller zimbabwes, more than 400 sites with monumental mortarless walls across southern <a class="enc-link" href="/encyclopedia/africa">Africa</a>, such as Bumbusi in <a class="enc-link" href="/encyclopedia/zimbabwe">Zimbabwe</a> and Manyikeni in <a class="enc-link" href="/encyclopedia/mozambique">Mozambique</a>. To black nationalists it became a symbol of African achievement, and reclaiming its history was a major aim of those seeking majority rule. In 1980 the newly independent country was named after it, and the soapstone bird, already on the Rhodesian flag and coat of arms, was kept on the new flag; a tower of the site appears on the coat of arms.</p><p>Since independence the site has been used to support the ruling party's shifting policies, first as a picture of pre-colonial 'African socialism' in Ken Mufuka's much criticised booklet of 1983, later as a story of wealth gathered by a ruling elite. Local clans, each claiming the site, lament its desecration by antiquarians and archaeologists alike and hold the government responsible for its 'silence' and 'closure'; for many communities it is a living cultural landscape rather than a relic. It is a <a class="enc-link" href="/encyclopedia/unesco-world-heritage-site">UNESCO World Heritage Site</a>, and a university nearby draws on its history.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Great Zimbabwe, near Masvingo, was built in dry stone by ancestral <a class="enc-link" href="/encyclopedia/shona">Shona</a> people from the 11th to the 15th century and grew rich on <a class="enc-link" href="/encyclopedia/cattle">cattle</a> and the <a class="enc-link" href="/encyclopedia/gold-trade">gold trade</a> to the <a class="enc-link" href="/encyclopedia/swahili">Swahili</a> coast. Abandoned by the 17th century, looted under colonial rule and wrongly credited to outsiders by Rhodesia's government, it gave its name and its bird to independent <a class="enc-link" href="/encyclopedia/zimbabwe">Zimbabwe</a>.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Peter Garlake, Great Zimbabwe: New Aspects of Archaeology (Thames &amp; Hudson, 1973)</li>
+        <li>Peter Garlake, Great Zimbabwe (Zimbabwe Publishing House, 1982)</li>
+        <li>Peter Garlake, Early Art and Architecture of Africa (Oxford University Press, 2002)</li>
+        <li>Edward Matenga, Soapstone Birds of Great Zimbabwe: Symbols of a Nation (African Publishing Group, 2008)</li>
+        <li>Innocent Pikirayi, The Zimbabwe Culture: Origins and Decline of Southern Zambezian States (Rowman Altamira, 2001)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/the-tale-of-genji"><img src="/logos/thumbs/The%20Tale%20of%20Genji.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">The Tale of Genji</span><span class="related-card-dates">c. 1008 CE – present</span></a><a class="related-card" href="/work/shahnameh"><img src="/logos/thumbs/Shahnameh.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Shahnameh</span><span class="related-card-dates">c. 977 CE – present</span></a><a class="related-card" href="/work/beowulf"><img src="/logos/thumbs/Beowulf.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Beowulf</span><span class="related-card-dates">c. 975 CE – present</span></a><a class="related-card" href="/work/bayeux-tapestry"><img src="/logos/thumbs/Bayeux%20Tapestry.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Bayeux Tapestry</span><span class="related-card-dates">c. 1070 CE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/shahnameh"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Shahnameh.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Shahnameh</span><span class="related-card-dates">c. 977 CE – present</span></a><a class="related-card" href="/work/the-tale-of-genji"><span class="related-card-label">Later →</span><img src="/logos/thumbs/The%20Tale%20of%20Genji.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">The Tale of Genji</span><span class="related-card-dates">c. 1008 CE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Great Zimbabwe",slug="great-zimbabwe",url="https://the-epoch-institute.org/work/great-zimbabwe";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Great Zimbabwe on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/great-zimbabwe #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/great-zimbabwe"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Great Zimbabwe",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Great Zimbabwe",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

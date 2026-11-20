@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Colosseum: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Colosseum is the elliptical amphitheatre in the centre of Rome, begun under Vespasian in 72 and completed under Titus in 80, the largest ancient…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Colosseum: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Colosseum is the elliptical amphitheatre in the centre of Rome, begun under Vespasian in 72 and completed under Titus in 80, the largest ancient…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/colosseum">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/colosseum.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/colosseum.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/colosseum">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Colosseum"}]},{"@type":"Article","headline":"Colosseum","description":"The Colosseum is the elliptical amphitheatre in the centre of Rome, begun under Vespasian in 72 and completed under Titus in 80, the largest ancient…","url":"https://the-epoch-institute.org/work/colosseum","mainEntityOfPage":"https://the-epoch-institute.org/work/colosseum","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Colosseum"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/colosseum.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Colosseum</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Colosseum.png" alt="Colosseum" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · Europe</p>
+        <h1 class="profile-detail-name">Colosseum</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 72 CE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val">Built for the Flavian emperors: begun by Vespasian, finished by <a class="enc-link" href="/encyclopedia/titus-saint">Titus</a> and remodelled by <a class="enc-link" href="/encyclopedia/domitian">Domitian</a>; professional Roman builders, engineers and decorators, with slaves and prisoners of war often assumed to have formed much of the workforce</span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">A free-standing elliptical amphitheatre of travertine, tuff and <a class="enc-link" href="/encyclopedia/roman-concrete">Roman concrete</a>, 189 metres long and 156 metres wide, with an outer wall 48 metres high, an arena 87 by 55 metres and the underground hypogeum beneath it</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">In the centre of <a class="enc-link" href="/encyclopedia/rome">Rome</a>, just east of the <a class="enc-link" href="/encyclopedia/roman-forum">Roman Forum</a>, between the Caelian, Esquiline and Palatine Hills</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">gladiatorial contests and animal hunts; seating for an estimated 50,000 to 80,000; the velarium awning worked by sailors; the hypogeum of tunnels and lifts; medieval reuse as housing, fortress and quarry; the Good Friday Way of the Cross</span></div>
+        </div>
+        <p class="empire-meta">5 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Vespasian built the Colosseum on the site of <a class="enc-link" href="/encyclopedia/nero">Nero</a>'s artificial lake, funding it from the spoils of the <a class="enc-link" href="/encyclopedia/first-jewish-roman-war">First Jewish–Roman War</a>, and placed it at the heart of the city rather than on its outskirts.</li><li>It hosted gladiatorial shows, animal hunts, executions and other spectacles for centuries; gladiatorial fights are last mentioned around 435 and animal hunts continued until at least 523.</li><li>Earthquakes and stone robbers ruined much of it, but from 1749 the popes treated it as a sacred site of the martyrs, protected it and began its long restoration.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Spectators were given tickets in the form of numbered pottery shards, and the passageways that let them reach and leave their seats in minutes were called vomitoria, from the <a class="enc-link" href="/encyclopedia/latin">Latin</a> word for a rapid discharge.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">72</span><span class="rf-text">Construction of the amphitheatre began under the emperor Vespasian</span></li><li><span class="rf-year">80</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/titus-saint">Titus</a> completed the top level, and the inaugural games were held in 80 or 81</span></li><li><span class="rf-year">217</span><span class="rf-text">A major fire, caused by lightning according to <a class="enc-link" href="/encyclopedia/cassius-dio">Dio Cassius</a>, destroyed the wooden upper levels of the interior</span></li><li><span class="rf-year">c. 435</span><span class="rf-text">Gladiatorial fights are last mentioned, after <a class="enc-link" href="/encyclopedia/honorius">Honorius</a> had banned them in 399 and again in 404</span></li><li><span class="rf-year">1349</span><span class="rf-text">A great earthquake brought down the outer south side, and much of the fallen stone was reused across <a class="enc-link" href="/encyclopedia/rome">Rome</a></span></li><li><span class="rf-year">1749</span><span class="rf-text">Pope <a class="enc-link" href="/encyclopedia/benedict-xiv">Benedict XIV</a> forbade quarrying, consecrated the building to the <a class="enc-link" href="/encyclopedia/passion-of-jesus">Passion of Christ</a> and installed Stations of the Cross</span></li><li><span class="rf-year">1930s</span><span class="rf-text">The arena substructure was fully exposed under <a class="enc-link" href="/encyclopedia/benito-mussolini">Benito Mussolini</a></span></li><li><span class="rf-year">1993</span><span class="rf-text">A major restoration programme began, running until 2000</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The Colosseum stands on the floor of a low valley between the Caelian, Esquiline and Palatine Hills, through which a canalised stream ran. By the 2nd century BCE the area was densely inhabited. After the Great Fire of <a class="enc-link" href="/encyclopedia/rome">Rome</a> in 64 CE, <a class="enc-link" href="/encyclopedia/nero">Nero</a> seized much of it for his own domain and built the Domus Aurea there, with an artificial lake surrounded by pavilions, gardens and porticoes, and the gigantic bronze Colossus of Nero at its entrance.</p><p>Under Vespasian much of the Domus Aurea was torn down, the lake was filled in and the land reused for the new amphitheatre. Building on Nero's lake can be seen as a populist gesture, returning to the people a part of the city that Nero had appropriated. Unlike many amphitheatres, which stood on the outskirts of a city, the Colosseum was placed in the city centre, symbolically and geographically at the heart of Rome. Its construction was funded by the spoils taken from the Jewish Temple after the <a class="enc-link" href="/encyclopedia/first-jewish-roman-war">First Jewish–Roman War</a>; a reconstructed inscription found on the site records that "the emperor Vespasian ordered this new amphitheatre to be erected from his general's share of the booty."</p></div>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p>The Colosseum is an entirely free-standing structure whose architecture derives from two <a class="enc-link" href="/encyclopedia/theatre">theatres</a> placed back to back. Elliptical in plan, it is 189 metres long and 156 metres wide, and its outer wall rises 48 metres. The surviving façade has three superposed storeys of arcades framed by engaged columns of the Doric, Ionic and Corinthian orders, topped by an attic with Corinthian pilasters. Two hundred and forty mast corbels supported the velarium, a retractable awning of canvas and ropes worked by sailors from the naval headquarters at Misenum.</p><p>Eighty entrances ringed the building, 76 of them for ordinary spectators; the northern main entrance was reserved for the emperor. Seating reflected the stratified order of Roman society: boxes for the emperor and the Vestal Virgins, a podium for senators, tiers for the equites and for richer and poorer citizens, and at the top a gallery for the common poor, slaves and women. Beneath the sand-covered wooden floor of the arena lay the hypogeum, a two-level network of tunnels and cages with eighty vertical shafts, lifts and pulleys that raised animals and scenery to the surface.</p></div>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <div class="profile-section-body"><p>Construction began under Vespasian in around 70–72 CE (73–75 according to some sources). The building had reached the third storey by Vespasian's death in 79; his son <a class="enc-link" href="/encyclopedia/titus-saint">Titus</a> finished the top level in 80, and the inaugural games were held in 80 or 81. Vespasian's younger son <a class="enc-link" href="/encyclopedia/domitian">Domitian</a> remodelled it further, building the hypogeum and adding a gallery at the top to increase its capacity.</p><p>It is often assumed, as with many Roman projects of the time, that slaves and prisoners of war contributed much of the unskilled labour, while teams of professional builders, engineers, artists, painters and decorators carried out the specialised work. The materials included wood, limestone, tuff, tiles, cement and mortar, with <a class="enc-link" href="/encyclopedia/roman-concrete">Roman concrete</a> for foundations, corridor vaults and secondary walls. The outer wall is estimated to have required over 100,000 cubic metres of travertine, set without mortar and held together by 300 tons of iron clamps. The hypogeum was restructured many times: at least twelve phases of construction can be seen.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <div class="profile-section-body"><p>The shows held in the Colosseum, called munera, were always given by private individuals rather than the state; they had a strong religious element but were also demonstrations of power and family prestige, and were immensely popular. Animal hunts used beasts imported mainly from <a class="enc-link" href="/encyclopedia/africa">Africa</a> and the <a class="enc-link" href="/encyclopedia/middle-east">Middle East</a>. <a class="enc-link" href="/encyclopedia/trajan">Trajan</a> is said to have celebrated his Dacian victories in 107 with contests involving 11,000 animals and 10,000 gladiators over 123 days. Condemned people were executed by beasts during the lunch intervals, and ancient writers recorded mock sea battles in the early years, though historians debate how the arena could have been flooded.</p><p><a class="enc-link" href="/encyclopedia/honorius">Honorius</a> banned gladiator fights in 399 and again in 404, and they are last mentioned around 435; animal hunts continued until at least 523. Christians generally regard the Colosseum as a site where many believers were martyred. Other scholars hold that most martyrdoms took place elsewhere in <a class="enc-link" href="/encyclopedia/rome">Rome</a>, notably the Circus Maximus. In the <a class="enc-link" href="/encyclopedia/middle-ages">Middle Ages</a> the building was not on pilgrims' itineraries, but in 1653 Fioravante Martinelli listed it first among places sacred to the martyrs, and in 1749 Pope <a class="enc-link" href="/encyclopedia/benedict-xiv">Benedict XIV</a> declared it sanctified by their blood, a claim for which there is no historical evidence.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <div class="profile-section-body"><p>A fire in 217 destroyed the wooden upper levels, and repairs followed until about 240, in 250 or 252 and in 320; an inscription records restoration under <a class="enc-link" href="/encyclopedia/theodosius-ii">Theodosius II</a> and <a class="enc-link" href="/encyclopedia/valentinian-iii">Valentinian III</a>, possibly after an earthquake in 443. After the games ended, a chapel was built into the structure, the arena became a cemetery and the vaulted spaces were rented out as housing and workshops. Around 1200 the Frangipani family fortified it as a castle. The earthquake of 1349 brought down the outer south side, and the fallen stone was reused for palaces, churches and hospitals. The marble façade was burned for quicklime, and the iron clamps were hacked out, leaving pockmarks that still scar the walls.</p><p>A religious confraternity restored part of it in 1377 and lived in its northern section until the early 19th century. <a class="enc-link" href="/encyclopedia/benedict-xiv">Benedict XIV</a>'s ban on quarrying in 1749 marked a turn; later popes cleared vegetation, reinforced the façade with brick wedges in 1807 and 1827 and repaired the interior. The substructure was partly excavated in 1810–1814 and 1874 and fully exposed in the 1930s. A restoration of 1993–2000 was followed by a privately sponsored cleaning and repair of the façade, completed in 2016.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>The Colosseum remains a renowned symbol of Imperial <a class="enc-link" href="/encyclopedia/rome">Rome</a> and one of the city's most visited sites, listed among the New 7 Wonders of the World and shown on the Italian 5 euro cent coin. The name itself, believed to come from the nearby Colossus of <a class="enc-link" href="/encyclopedia/nero">Nero</a>, passed into medieval and modern languages; by the early 16th century the French colisée could mean any amphitheatre. An 8th-century epigram attributed to <a class="enc-link" href="/encyclopedia/bede">the Venerable Bede</a>, "as long as the Colossus stands, so shall Rome", is often misread as referring to the building.</p><p>Its Christian associations continue: each Good Friday the pope leads a torchlit Way of the Cross procession to the amphitheatre, and crosses stand around the arena. Since 2000 the city has lit the building in gold whenever a death sentence somewhere is commuted or a jurisdiction abolishes capital punishment. Architects have copied or echoed it, from the unfinished Nazi Kongresshalle in <a class="enc-link" href="/encyclopedia/nuremberg">Nuremberg</a> and <a class="enc-link" href="/encyclopedia/benito-mussolini">Mussolini</a>'s Palazzo della Civiltà Italiana to the <a class="enc-link" href="/encyclopedia/los-angeles">Los Angeles</a> Memorial Coliseum and the Vancouver Public Library, and it appeared on Olympic medals from 1928 to 2000.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Colosseum, begun by Vespasian in 72 and finished by <a class="enc-link" href="/encyclopedia/titus-saint">Titus</a> in 80, was <a class="enc-link" href="/encyclopedia/rome">Rome</a>'s great amphitheatre for gladiatorial shows and animal hunts until the 6th century. Fire, earthquakes and stone robbers ruined much of it, and it served as housing, fortress and quarry before the popes made it a shrine of the martyrs and began its restoration.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="colosseum"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Titus completed the top level, and the inaugural games were held in 80 or 81","o":["72","80","1349","1993"],"a":1,"w":"80: Titus completed the top level, and the inaugural games were held in 80 or 81."},{"p":"Which came first?","q":"","o":["A great earthquake brought down the outer south side, and much of the fallen stone was reused across Rome","Titus completed the top level, and the inaugural games were held in 80 or 81"],"a":1,"w":"1349: A great earthquake brought down the outer south side, and much of the fallen stone was reused across Rome · 80: Titus completed the top level, and the inaugural games were held in 80 or 81."},{"p":"In which year?","q":"A major fire, caused by lightning according to Dio Cassius, destroyed the wooden upper levels of the interior","o":["1749","217","72","1993"],"a":1,"w":"217: A major fire, caused by lightning according to Dio Cassius, destroyed the wooden upper levels of the interior."},{"p":"Which came first?","q":"","o":["Titus completed the top level, and the inaugural games were held in 80 or 81","A major restoration programme began, running until 2000"],"a":0,"w":"80: Titus completed the top level, and the inaugural games were held in 80 or 81 · 1993: A major restoration programme began, running until 2000."},{"p":"In which year?","q":"A great earthquake brought down the outer south side, and much of the fallen stone was reused across Rome","o":["1749","72","1349","80"],"a":2,"w":"1349: A great earthquake brought down the outer south side, and much of the fallen stone was reused across Rome."}]</script>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/aeneid"><img src="/logos/thumbs/Aeneid.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Aeneid</span><span class="related-card-dates">29 BCE – present</span></a><a class="related-card" href="/work/pantheon"><img src="/logos/thumbs/Pantheon.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Pantheon</span><span class="related-card-dates">c. 29 BCE – present</span></a><a class="related-card" href="/work/rosetta-stone"><img src="/logos/thumbs/Rosetta%20Stone.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Rosetta Stone</span><span class="related-card-dates">196 BCE – present</span></a><a class="related-card" href="/work/terracotta-army"><img src="/logos/thumbs/Terracotta%20Army.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Terracotta Army</span><span class="related-card-dates">c. 246 BCE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/pantheon"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Pantheon.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Pantheon</span><span class="related-card-dates">c. 29 BCE – present</span></a><a class="related-card" href="/work/hagia-sophia"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Hagia%20Sophia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Hagia Sophia</span><span class="related-card-dates">532 CE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Colosseum",slug="colosseum",url="https://the-epoch-institute.org/work/colosseum";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Colosseum on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/colosseum #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/colosseum"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Colosseum",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Colosseum",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

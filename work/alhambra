@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Alhambra: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Alhambra is a palace and fortress complex in Granada, begun in 1238 by Muhammad I Ibn al-Ahmar, founder of the Nasrid Emirate of Granada, and the…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Alhambra: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Alhambra is a palace and fortress complex in Granada, begun in 1238 by Muhammad I Ibn al-Ahmar, founder of the Nasrid Emirate of Granada, and the…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/alhambra">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/alhambra.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/alhambra.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/alhambra">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Alhambra"}]},{"@type":"Article","headline":"Alhambra","description":"The Alhambra is a palace and fortress complex in Granada, begun in 1238 by Muhammad I Ibn al-Ahmar, founder of the Nasrid Emirate of Granada, and the…","url":"https://the-epoch-institute.org/work/alhambra","mainEntityOfPage":"https://the-epoch-institute.org/work/alhambra","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Alhambra","sameAs":["https://en.wikipedia.org/wiki/Alhambra","https://www.wikidata.org/wiki/Q47476"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/alhambra.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Alhambra</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Alhambra.png" alt="Alhambra" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · Europe</p>
+        <h1 class="profile-detail-name">Alhambra</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">1238 CE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val">The Nasrid sultans of <a class="enc-link" href="/encyclopedia/granada">Granada</a>, from Muhammad I <a class="enc-link" href="/encyclopedia/muhammad-i-of-granada">Ibn al-Ahmar</a> (1238) to the great works of Isma'il I, Yusuf I and Muhammad V; court poet-<a class="enc-link" href="/encyclopedia/vizier">viziers</a> such as Ibn al-Jayyab, <a class="enc-link" href="/encyclopedia/ibn-al-khatib">Ibn al-Khatib</a> and <a class="enc-link" href="/encyclopedia/ibn-zamrak">Ibn Zamrak</a>; later Christian additions under <a class="enc-link" href="/encyclopedia/charles-v-holy-roman-emperor">Charles V</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">A walled palace-city about 700-740 m long on the Sabika hill, of rammed earth, brick and plaster with pine roofs, marble columns, tile mosaic and carved stucco, with the Alcazaba fortress, the Nasrid palaces and the Palace of <a class="enc-link" href="/encyclopedia/charles-v-holy-roman-emperor">Charles V</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">On the Sabika hill above <a class="enc-link" href="/encyclopedia/granada">Granada</a>, <a class="enc-link" href="/encyclopedia/spain">Spain</a>, with the <a class="enc-link" href="/encyclopedia/generalife">Generalife</a> nearby; objects from it are in the Alhambra Museum and the National Archaeological Museum in <a class="enc-link" href="/encyclopedia/madrid">Madrid</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">the Court of the Lions and its fountain; the <a class="enc-link" href="/encyclopedia/court-of-the-myrtles">Court of the Myrtles</a> and the Hall of the Ambassadors; <a class="enc-link" href="/encyclopedia/muqarnas">muqarnas</a> domes; walls of Arabic inscriptions and poetry; Washington Irving's <a class="enc-link" href="/encyclopedia/tales-of-the-alhambra">Tales of the Alhambra</a>; a World Heritage Site</span></div>
+        </div>
+        <p class="empire-meta">5 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The Nasrid sultans built the Alhambra as a self-contained royal city, with its greatest palaces raised in the 14th century under Yusuf I and Muhammad V.</li><li>After the surrender of <a class="enc-link" href="/encyclopedia/granada">Granada</a> in 1492 it became a royal palace of the Spanish Crown, altered and added to by <a class="enc-link" href="/encyclopedia/charles-v-holy-roman-emperor">Charles V</a>.</li><li>Neglected and damaged in the 18th and 19th centuries, it drew Romantic travellers and has been restored and studied since the 19th century.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The tiles of the Alhambra contain nearly all, if not all, of the seventeen mathematically possible wallpaper groups. M. C. Escher's study of them after his visit in 1922 inspired his later work on tessellation.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">1238</span><span class="rf-text">Muhammad I <a class="enc-link" href="/encyclopedia/muhammad-i-of-granada">Ibn al-Ahmar</a> settles in <a class="enc-link" href="/encyclopedia/granada">Granada</a> and begins building the Alhambra</span></li><li><span class="rf-year">1348</span><span class="rf-text">The main gate, the Puerta de la Justicia, is built under Yusuf I</span></li><li><span class="rf-year">1354–1391</span><span class="rf-text">Muhammad V builds the Palace of the Lions and gives the <a class="enc-link" href="/encyclopedia/comares-palace">Comares Palace</a> much of its final look</span></li><li><span class="rf-year">1492</span><span class="rf-text">Muhammad XI surrenders <a class="enc-link" href="/encyclopedia/granada">Granada</a> to Ferdinand and Isabella, who make the Alhambra their court</span></li><li><span class="rf-year">1527</span><span class="rf-text">Construction begins on the <a class="enc-link" href="/encyclopedia/renaissance">Renaissance</a> Palace of <a class="enc-link" href="/encyclopedia/charles-v-holy-roman-emperor">Charles V</a></span></li><li><span class="rf-year">1812</span><span class="rf-text">Departing French troops blow up eight towers before the remaining fuses are disabled</span></li><li><span class="rf-year">1832</span><span class="rf-text">Washington Irving's <a class="enc-link" href="/encyclopedia/tales-of-the-alhambra">Tales of the Alhambra</a> is first published</span></li><li><span class="rf-year">1984</span><span class="rf-text">The Alhambra and <a class="enc-link" href="/encyclopedia/generalife">Generalife</a> are listed as a <a class="enc-link" href="/encyclopedia/unesco-world-heritage-site">UNESCO World Heritage Site</a></span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The Sabika hill above <a class="enc-link" href="/encyclopedia/granada">Granada</a> held fortresses long before the Nasrids. A citadel, probably of Visigothic date, existed there in the 9th century, and the first reference to the Qal'at al-Hamra, the red castle, comes from the fighting of the reign of 'Abdallah ibn Muhammad (888 to 912). In the 11th century the Zirids of the <a class="enc-link" href="/encyclopedia/taifa">Taifa</a> of Granada had their palace on the <a class="enc-link" href="/encyclopedia/albaicin">Albaicín</a> hill, joined to fortresses on the Sabika and Mauror hills, and their powerful Jewish administrator Samuel ibn Naghrillah built a palace with gardens on the Sabika, of which nothing remains.</p><p>After <a class="enc-link" href="/encyclopedia/almohad-caliphate">Almohad</a> rule collapsed in 1228 and <a class="enc-link" href="/encyclopedia/kingdom-of-castile">Castile</a> took <a class="enc-link" href="/encyclopedia/cordoba">Córdoba</a> and <a class="enc-link" href="/encyclopedia/seville">Seville</a>, Muhammad I <a class="enc-link" href="/encyclopedia/muhammad-i-of-granada">Ibn al-Ahmar</a> founded the <a class="enc-link" href="/encyclopedia/nasrid-dynasty">Nasrid dynasty</a>, which ruled the <a class="enc-link" href="/encyclopedia/emirate">Emirate</a> of Granada as the last Muslim state of <a class="enc-link" href="/encyclopedia/al-andalus">al-Andalus</a>. Settling in Granada in 1238, he began the Alhambra that same year; an Arabic chronicle records that he marked the foundations of a castle, finished the ramparts within the year and brought water from the river. The <a class="enc-link" href="/encyclopedia/sultan">Sultan</a>'s Canal, bringing water from the mountains to the east, turned the hill into a palace-city rather than a fortress alone.</p></div>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p>In the Nasrid era the Alhambra was a city apart from <a class="enc-link" href="/encyclopedia/granada">Granada</a>, with a Friday mosque, baths, streets, houses, workshops, a tannery and a water system. At its western tip stands the Alcazaba fortress; along the northern edge, overlooking the <a class="enc-link" href="/encyclopedia/albaicin">Albaicín</a>, stood at least six palaces. The best preserved are the Mexuar, where the sultan received petitions; the <a class="enc-link" href="/encyclopedia/comares-palace">Comares Palace</a>, built round the <a class="enc-link" href="/encyclopedia/court-of-the-myrtles">Court of the Myrtles</a> with its long reflecting pool and the Hall of the Ambassadors, the throne room, under a wooden dome of 8,017 pieces representing the seven heavens; the Palace of the Lions; and the Partal Palace. East of the walls lies the <a class="enc-link" href="/encyclopedia/generalife">Generalife</a>, a Nasrid country estate.</p><p>The Palace of the Lions, built under Muhammad V, has a courtyard ringed by single, paired and grouped columns, with the Fountain of the Lions at its centre: a basin on twelve marble lions, its rim carved with a poem by <a class="enc-link" href="/encyclopedia/ibn-zamrak">Ibn Zamrak</a>. Its halls carry <a class="enc-link" href="/encyclopedia/muqarnas">muqarnas</a> vaults, the Hall of the Two Sisters one of more than 5,000 pieces. Throughout, the walls bear Qur'anic verses, court poetry and the Nasrid motto, there is no victor but God, some poems speaking as if the room itself addressed the reader.</p></div>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <div class="profile-section-body"><p>Later Nasrid rulers continuously modified the site, and the fragile materials needed regular repair, so its exact chronology is hard to fix. Muhammad II probably built the earliest palaces of which traces survive; Muhammad III built the Partal Palace, the oldest still standing, and the main mosque, completed in 1305. Isma'il I began the official palace of the sultan and the state with the <a class="enc-link" href="/encyclopedia/comares-palace">Comares Palace</a> and the Mexuar, and Yusuf I added the Hall of the Ambassadors, the Puerta de la Justicia of 1348 and the Torre de la Cautiva. Muhammad V's reign marked the high point, with the Palace of the Lions and the Comares Façade.</p><p>Little is known of the builders, but the terms of office of the heads of the chancery, who were often also <a class="enc-link" href="/encyclopedia/vizier">viziers</a>, coincide with the main building phases, and three of them, Ibn al-Jayyab, <a class="enc-link" href="/encyclopedia/ibn-al-khatib">Ibn al-Khatib</a> and <a class="enc-link" href="/encyclopedia/ibn-zamrak">Ibn Zamrak</a>, wrote much of the poetry on the walls. Walls were raised in rammed earth, lime concrete or brick and plastered, roofs and ceilings made of pine, columns and fountains of white Macael marble. Tile mosaic covered the lower walls and carved stucco the upper ones, all once painted in red, blue and gold. Courtyards were aligned north to south to catch the winter sun and shade the summer.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <div class="profile-section-body"><p>The last sultan, Muhammad XI, surrendered <a class="enc-link" href="/encyclopedia/granada">Granada</a> in January 1492 without the Alhambra being attacked, and moved his ancestors' remains from its mausoleum. Ferdinand and Isabella held court there for some months: on 31 March they signed the Alhambra Decree expelling the <a class="enc-link" href="/encyclopedia/jews">Jews</a> of <a class="enc-link" href="/encyclopedia/spain">Spain</a> who refused to convert, and in the Hall of the Ambassadors <a class="enc-link" href="/encyclopedia/christopher-columbus">Christopher Columbus</a> presented his plans, the contract for his voyage being signed on 17 April. The Tendilla family became its governors and strengthened its towers against artillery.</p><p><a class="enc-link" href="/encyclopedia/charles-v-holy-roman-emperor">Charles V</a> visited in 1526 and turned parts of the Nasrid palaces into royal apartments between 1528 and 1537. He also demolished part of the <a class="enc-link" href="/encyclopedia/comares-palace">Comares Palace</a> for a new palace designed by Pedro Machuca in the Italian <a class="enc-link" href="/encyclopedia/renaissance">Renaissance</a> style, a building meant to show the emperor's status and the triumph of <a class="enc-link" href="/encyclopedia/christianity">Christianity</a> over <a class="enc-link" href="/encyclopedia/islam">Islam</a>; it was begun in 1527 and left unroofed in 1637. The mosque was replaced by the Church of Santa María de la Alhambra. In Muslim societies the Alhambra was often remembered with nostalgia after 1492, and Saadian monuments in <a class="enc-link" href="/encyclopedia/morocco">Morocco</a> appear to imitate the Court of the Lions.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <div class="profile-section-body"><p>Decline began after 1717 to 1718, when Philip V removed the Tendilla-Mondéjar family; the palaces fell to self-interested local governors, and early 19th-century visitors found prisoners, disabled soldiers and the poor living in them. <a class="enc-link" href="/encyclopedia/napoleon">Napoleon</a>'s troops occupied it from 1810 to 1812 and on leaving blew up eight towers before a Spanish soldier, José Garcia, disabled the remaining fuses. An earthquake in 1821 and a fire in the Sala de la Barca in 1890 caused further damage.</p><p>Restoration began in 1828 under José Contreras, followed by his son and grandson, who practised stylistic restoration and added invented features such as Persian-looking domes in the Court of the Lions. The Alhambra became a National Monument in 1870. Leopoldo Torres Balbás, chief architect from 1923 to 1936, brought a scientific approach on the lines of the 1931 Athens Charter: he reversed many inaccurate additions, roofed the Palace of <a class="enc-link" href="/encyclopedia/charles-v-holy-roman-emperor">Charles V</a> and excavated lost Nasrid palaces. A Council of the Alhambra has overseen the site since 1940, under the Regional Government of <a class="enc-link" href="/encyclopedia/andalusia">Andalusia</a> since 1984. Research and restoration continue.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>From the late 18th century Spanish illustrators recorded the Alhambra, and in the 19th it became an object of fascination for Romantic writers and artists, whose work, coloured by European Orientalism, set its ornate halls against their ruin. Washington Irving, who lived in <a class="enc-link" href="/encyclopedia/granada">Granada</a> in 1830, published <a class="enc-link" href="/encyclopedia/tales-of-the-alhambra">Tales of the Alhambra</a> in 1832, which did much to bring southern <a class="enc-link" href="/encyclopedia/spain">Spain</a>'s Islamic monuments to international attention; Richard Ford, Chateaubriand, John Frederick Lewis and Owen Jones made it widely known.</p><p>Owen Jones's Plans, Elevations, Sections and Details of the Alhambra, published from 1842 to 1845, helped launch the Alhambresque or Moresque style in Western building, seen in the Isaac M. Wise Temple in Cincinnati and the Villa Zorayda in <a class="enc-link" href="/encyclopedia/florida">Florida</a>, and later taken up in the <a class="enc-link" href="/encyclopedia/ottoman-empire">Ottoman Empire</a> and in <a class="enc-link" href="/encyclopedia/cairo">Cairo</a>'s Gezira Palace, whose interiors Jones designed. The Alhambra was one of the first Islamic monuments to be studied by modern scholarship, and M. C. Escher, after his visit in 1922, drew on the symmetries of its tiles for his work on tessellation. With the <a class="enc-link" href="/encyclopedia/generalife">Generalife</a> it has been a <a class="enc-link" href="/encyclopedia/unesco-world-heritage-site">UNESCO World Heritage Site</a> since 1984 and is one of Spain's most visited places.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Alhambra is the palace-city of the Nasrid sultans of <a class="enc-link" href="/encyclopedia/granada">Granada</a>, begun in 1238 and given its finest palaces in the 14th century, with courtyards, fountains, <a class="enc-link" href="/encyclopedia/muqarnas">muqarnas</a> vaults and walls of carved poetry. A Spanish royal palace after 1492, damaged and neglected in later centuries, it has been restored since the 19th century and is a World Heritage Site.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="alhambra"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Washington Irving's Tales of the Alhambra is first published","o":["1492","1832","1238","1812"],"a":1,"w":"1832: Washington Irving's Tales of the Alhambra is first published."},{"p":"Which came first?","q":"","o":["The main gate, the Puerta de la Justicia, is built under Yusuf I","Departing French troops blow up eight towers before the remaining fuses are disabled"],"a":0,"w":"1348: The main gate, the Puerta de la Justicia, is built under Yusuf I · 1812: Departing French troops blow up eight towers before the remaining fuses are disabled."},{"p":"In which year?","q":"The main gate, the Puerta de la Justicia, is built under Yusuf I","o":["1527","1238","1348","1492"],"a":2,"w":"1348: The main gate, the Puerta de la Justicia, is built under Yusuf I."},{"p":"Which came first?","q":"","o":["Departing French troops blow up eight towers before the remaining fuses are disabled","Muhammad I Ibn al-Ahmar settles in Granada and begins building the Alhambra"],"a":1,"w":"1812: Departing French troops blow up eight towers before the remaining fuses are disabled · 1238: Muhammad I Ibn al-Ahmar settles in Granada and begins building the Alhambra."},{"p":"In which year?","q":"Departing French troops blow up eight towers before the remaining fuses are disabled","o":["1812","1832","1492","1527"],"a":0,"w":"1812: Departing French troops blow up eight towers before the remaining fuses are disabled."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Fernández Puertas, Antonio, The Alhambra. Vol 1: From the Ninth Century to Yusuf I (1354) (Saqi Books, 1997)</li>
+        <li>Fernández Puertas, Antonio, The Alhambra. Vol 2: (1354–1391) (Saqi Books, 1998)</li>
+        <li>Fernández Puertas, Antonio, The Alhambra. Vol 3: From 1391 to the Present Day (Saqi Books, 1999)</li>
+        <li>Grabar, Oleg, The Alhambra (Harvard University Press, 1978)</li>
+        <li>Jacobs, Michael; Fernández, Francisco, Alhambra (Frances Lincoln, 2009)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/magna-carta"><img src="/logos/thumbs/Magna%20Carta.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Magna Carta</span><span class="related-card-dates">1215 CE – present</span></a><a class="related-card" href="/work/rock-hewn-churches-of-lalibela"><img src="/logos/thumbs/Rock-hewn%20churches%20of%20Lalibela.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Rock-hewn churches of Lalibela</span><span class="related-card-dates">c. 1181 CE – present</span></a><a class="related-card" href="/work/divine-comedy"><img src="/logos/thumbs/Divine%20Comedy.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Divine Comedy</span><span class="related-card-dates">c. 1308 CE – present</span></a><a class="related-card" href="/work/angkor-wat"><img src="/logos/thumbs/Angkor%20Wat.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Angkor Wat</span><span class="related-card-dates">1122 CE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/magna-carta"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Magna%20Carta.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Magna Carta</span><span class="related-card-dates">1215 CE – present</span></a><a class="related-card" href="/work/divine-comedy"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Divine%20Comedy.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Divine Comedy</span><span class="related-card-dates">c. 1308 CE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Alhambra",slug="alhambra",url="https://the-epoch-institute.org/work/alhambra";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Alhambra on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/alhambra #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/alhambra"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Alhambra",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Alhambra",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

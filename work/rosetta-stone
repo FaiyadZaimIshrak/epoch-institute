@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Rosetta Stone: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="A granodiorite stele inscribed in 196 BC with a decree of Egyptian priests for King Ptolemy V in hieroglyphic, Demotic and Greek, whose three versions…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Rosetta Stone: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="A granodiorite stele inscribed in 196 BC with a decree of Egyptian priests for King Ptolemy V in hieroglyphic, Demotic and Greek, whose three versions…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/rosetta-stone">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/rosetta-stone.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/rosetta-stone.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/rosetta-stone">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Rosetta Stone"}]},{"@type":"Article","headline":"Rosetta Stone","description":"A granodiorite stele inscribed in 196 BC with a decree of Egyptian priests for King Ptolemy V in hieroglyphic, Demotic and Greek, whose three versions…","url":"https://the-epoch-institute.org/work/rosetta-stone","mainEntityOfPage":"https://the-epoch-institute.org/work/rosetta-stone","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Rosetta Stone","sameAs":["https://en.wikipedia.org/wiki/Rosetta_Stone","https://www.wikidata.org/wiki/Q48584"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/rosetta-stone.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Rosetta Stone</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Rosetta%20Stone.png" alt="Rosetta Stone" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · Egypt &amp; North Africa</p>
+        <h1 class="profile-detail-name">Rosetta Stone</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">196 BCE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val">Inscribed with the Memphis decree, issued by a congress of priests gathered at Memphis on behalf of Ptolemy V Epiphanes of the <a class="enc-link" href="/encyclopedia/ptolemaic-kingdom">Ptolemaic dynasty</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">A fragment of a larger stele of dark grey granodiorite, 112.3 cm high, 75.7 cm wide and 28.4 cm thick, weighing about 760 kg; 14 surviving lines of hieroglyphs, 32 of <a class="enc-link" href="/encyclopedia/demotic-egyptian-script">Demotic</a> and 54 of Greek</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">The <a class="enc-link" href="/encyclopedia/british-museum">British Museum</a> in <a class="enc-link" href="/encyclopedia/london">London</a> (EA 24), on display almost continuously since 1802</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">The key to deciphering <a class="enc-link" href="/encyclopedia/egyptian-hieroglyphs">Egyptian hieroglyphs</a>; <a class="enc-link" href="/encyclopedia/jean-francois-champollion">Champollion</a>'s announcement of 1822; <a class="enc-link" href="/encyclopedia/thomas-young-scientist">Thomas Young</a>'s work on cartouches; its finding at Fort Julien in 1799; its transfer to <a class="enc-link" href="/encyclopedia/britain">Britain</a> in 1801; the most visited object in the <a class="enc-link" href="/encyclopedia/british-museum">British Museum</a>; Egyptian calls for its return</span></div>
+        </div>
+        <p class="empire-meta">5 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The stone carries one priestly decree in three scripts, the language of the gods, of documents and of the <a class="enc-link" href="/encyclopedia/greeks">Greeks</a>, with only minor differences between them.</li><li>Its decipherment was the work of many scholars over two decades, from Silvestre de Sacy and Åkerblad on the <a class="enc-link" href="/encyclopedia/demotic-egyptian-script">Demotic</a> to Young and finally <a class="enc-link" href="/encyclopedia/jean-francois-champollion">Champollion</a> in 1822.</li><li>Taken by the British from the French in 1801 and shown in <a class="enc-link" href="/encyclopedia/london">London</a> ever since, it has been the subject of Egyptian requests for its return since 2003.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The stone's dark colour, which led to its long identification as black basalt, came from a layer of carnauba wax added in <a class="enc-link" href="/encyclopedia/london">London</a>; cleaning in 1999 revealed dark grey granodiorite with a pink vein.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">196 BC</span><span class="rf-text">A congress of priests at Memphis issued the decree establishing the divine cult of Ptolemy V</span></li><li><span class="rf-year">1799</span><span class="rf-text">Pierre-François Bouchard spotted the inscribed slab during work on Fort Julien near Rosetta</span></li><li><span class="rf-year">1801</span><span class="rf-text">The stone passed to the British under the Capitulation of <a class="enc-link" href="/encyclopedia/alexandria">Alexandria</a></span></li><li><span class="rf-year">1802</span><span class="rf-text">It went on display at the <a class="enc-link" href="/encyclopedia/british-museum">British Museum</a></span></li><li><span class="rf-year">1803</span><span class="rf-text">The first published translations of the Greek text appeared</span></li><li><span class="rf-year">1822</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/jean-francois-champollion">Jean-François Champollion</a> announced his alphabet of phonetic hieroglyphs in <a class="enc-link" href="/encyclopedia/paris">Paris</a></span></li><li><span class="rf-year">1972</span><span class="rf-text">It left the museum for one month to be shown at the <a class="enc-link" href="/encyclopedia/louvre">Louvre</a> beside <a class="enc-link" href="/encyclopedia/jean-francois-champollion">Champollion</a>'s Lettre</span></li><li><span class="rf-year">2003</span><span class="rf-text">Zahi Hawass called for the stone to be returned to <a class="enc-link" href="/encyclopedia/egypt">Egypt</a></span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The stele records a decree issued in a turbulent period. Ptolemy V Epiphanes became king at the age of five after his parents were murdered in a conspiracy that, according to contemporary sources, involved <a class="enc-link" href="/encyclopedia/ptolemy-iv-philopator">Ptolemy IV</a>'s mistress Agathoclea. Abroad, <a class="enc-link" href="/encyclopedia/antiochus-iii-the-great">Antiochus III</a> and <a class="enc-link" href="/encyclopedia/philip-v-of-macedon">Philip V of Macedon</a> had agreed to divide <a class="enc-link" href="/encyclopedia/egypt">Egypt</a>'s overseas possessions, and the <a class="enc-link" href="/encyclopedia/battle-of-panium">Battle of Panium</a> in 198 BC had cost the Ptolemies <a class="enc-link" href="/encyclopedia/coele-syria">Coele-Syria</a>. At home, the <a class="enc-link" href="/encyclopedia/great-theban-revolt">Great Theban Revolt</a> was still under way when Ptolemy V was crowned at Memphis at the age of 12.</p><p>Securing the favour of the priesthood was essential to Ptolemaic rule, and the High Priests of Memphis, where the king was crowned, were the highest religious authorities of the time. Issuing the decree at Memphis rather than <a class="enc-link" href="/encyclopedia/alexandria">Alexandria</a> shows the young king's wish for their support. Stelae of this kind, set up on the initiative of the temples rather than the king, are unique to Ptolemaic Egypt; honouring a ruler in this way was a feature of Greek cities. Three slightly earlier decrees of the same type are known: those of Alexandria in 243 BC, Canopus in 238 BC and Memphis under Ptolemy IV, c. 218 BC.</p></div>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p>The decree establishes the divine cult of the new king. It is dated in the Macedonian and Egyptian calendars to 27 March 196 BC, the ninth year of Ptolemy V's reign, a year confirmed by the naming of four priests of the royal cults. The Greek and hieroglyphic texts also give a second date, 27 November 197 BC, the anniversary of the coronation, which the <a class="enc-link" href="/encyclopedia/demotic-egyptian-script">Demotic</a> text contradicts. The decree records the king's gifts of <a class="enc-link" href="/encyclopedia/silver">silver</a> and grain to the temples and his damming of the excess waters of an unusually high <a class="enc-link" href="/encyclopedia/nile">Nile</a> flood. In return the priests pledged to celebrate his birthday and coronation each year and to serve him alongside the other gods.</p><p>It ends by ordering a copy for every temple in the "language of the gods" (hieroglyphs), the "language of documents" (Demotic) and the "language of the <a class="enc-link" href="/encyclopedia/greeks">Greeks</a>". The hieroglyphic text is in a deliberately archaic "neo-Middle Egyptian", while the Demotic stands closer to the Egyptian spoken in Ptolemaic times. Whether one version was the original remains controversial: Letronne argued in 1841 for the Greek, Derchain and Thissen that all three were composed together, and John Ray that the hieroglyphs mattered most.</p></div>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <div class="profile-section-body"><p>The stone is a fragment of a larger stele. Comparison with the Klemm collection of rock samples shows a close resemblance to granodiorite from a small quarry at Gebel Tingar, west of Elephantine near Aswan; the pink vein across its top left corner is typical of rock from that region. The front was polished and the inscriptions lightly incised; the sides were smoothed, but the back was only roughly worked, presumably because it would not have been seen once the stele was erected.</p><p>Today it stands 112.3 centimetres high at its highest point, 75.7 centimetres wide and 28.4 centimetres thick, and weighs about 760 kilograms. None of the three texts is complete. The hieroglyphic register has suffered most: only its last 14 lines remain, all broken on the right. The <a class="enc-link" href="/encyclopedia/demotic-egyptian-script">Demotic</a> has survived best, with 32 lines. The Greek has 54 lines, of which the first 27 are whole and the rest increasingly fragmentary because of a diagonal break at the bottom right. Later searches of the Rosetta site found no further pieces. In <a class="enc-link" href="/encyclopedia/london">London</a> the inscriptions were filled with white chalk and the surface coated with carnauba wax, which were removed when it was cleaned in 1999.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <div class="profile-section-body"><p>Knowledge of hieroglyphs had faded by the 4th century AD; the last known hieroglyphic inscription, at <a class="enc-link" href="/encyclopedia/philae">Philae</a>, dates from 394. Horapollo's Hieroglyphica of the 5th century misled later readers. Dhul-Nun al-Misri and Ibn Wahshiyya compared hieroglyphs with Coptic in the 9th and 10th centuries, and Pierius Valerianus and Athanasius Kircher attempted them without success. The stone, recognised in 1799 as three versions of one text, supplied what was missing.</p><p>The Greek was translated first, by Hubert-Pascal Ameilhon and Christian Gottlob Heyne in 1803. In 1802 Antoine-Isaac Silvestre de Sacy identified five names in the <a class="enc-link" href="/encyclopedia/demotic-egyptian-script">Demotic</a>, and Johan <a class="enc-link" href="/encyclopedia/david">David</a> Åkerblad published an alphabet of 29 letters, over half correct. <a class="enc-link" href="/encyclopedia/thomas-young-scientist">Thomas Young</a> found the phonetic spelling of Ptolemaios in a hieroglyphic cartouche and some 80 likenesses between the hieroglyphic and Demotic texts. Using the Philae <a class="enc-link" href="/encyclopedia/obelisk">obelisk</a>'s names as well, <a class="enc-link" href="/encyclopedia/jean-francois-champollion">Jean-François Champollion</a> built an alphabet of phonetic hieroglyphs, announced on 27 September 1822, and in 1823 read the names of Ramesses and Thutmose. British critics accused Champollion of plagiarising Young, a rivalry that outlived both men.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <div class="profile-section-body"><p>The stele probably first stood in a temple inland, possibly at <a class="enc-link" href="/encyclopedia/sais">Sais</a>, which was probably closed around AD 392 when <a class="enc-link" href="/encyclopedia/theodosius-i">Theodosius I</a> ordered non-Christian temples shut. It broke, and was later built into the foundations of a fortress raised by the <a class="enc-link" href="/encyclopedia/mamluk">Mamluk</a> sultan <a class="enc-link" href="/encyclopedia/qaitbay">Qaitbay</a> at Rashid. In mid-July 1799, during the French invasion of <a class="enc-link" href="/encyclopedia/egypt">Egypt</a>, soldiers strengthening Fort Julien uncovered it and Lieutenant Pierre-François Bouchard saw its importance. Prints were made from it, and Nicolas-Jacques Conté used the stone itself as a <a class="enc-link" href="/encyclopedia/printing-press">printing</a> block.</p><p>After the French surrender in 1801, General Menou claimed it as his private property; accounts differ on how the British took it. Colonel Tomkyns Hilgrove Turner brought it to Portsmouth in 1802, and it entered the <a class="enc-link" href="/encyclopedia/british-museum">British Museum</a> that year, painted with the words "Captured in Egypt by the British Army in 1801". From 1917 it spent two years in a Postal Tube Railway station at Mount Pleasant near Holborn. In 1999 it was cleaned in the gallery, and since 2004 it has stood in a special case. Zahi Hawass asked for its return in 2003 and later, and the British Museum gave Egypt a replica in 2005.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Three other copies of the decree were later found: the Nubayrah Stele, a stele from Elephantine and Noub Taha, and an inscription on the <a class="enc-link" href="/encyclopedia/philae">Philae</a> <a class="enc-link" href="/encyclopedia/obelisk">obelisk</a>. Though the stone is not unique, it was the essential key to the modern understanding of ancient Egyptian literature and civilisation. <a class="enc-link" href="/encyclopedia/jean-francois-champollion">Champollion</a> went on to draw on many other texts for an Egyptian grammar and dictionary, published after his death in 1832.</p><p>According to the museum's records it is the <a class="enc-link" href="/encyclopedia/british-museum">British Museum</a>'s most visited single object, and its image was long the museum's best-selling postcard. Its name has become a general term for the essential clue to a new field of knowledge. Other multilingual texts, such as the <a class="enc-link" href="/encyclopedia/behistun-inscription">Behistun Inscription</a>, the <a class="enc-link" href="/encyclopedia/sardis">Sardis</a> bilingual and the Greek-Brahmi coins of Agathocles, have been called Rosetta stones, and scientists have applied the phrase to the hydrogen spectrum and to genes of the immune system. The European Space Agency named its comet probe Rosetta. In a remark often quoted on the question of its return, John Ray observed that the day may come when the stone has spent longer in the British Museum than it ever did in Rosetta.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Rosetta Stone is a fragment of a stele inscribed in 196 BC with a decree of Egyptian priests honouring Ptolemy V, written in hieroglyphs, <a class="enc-link" href="/encyclopedia/demotic-egyptian-script">Demotic</a> and Greek. Found by French soldiers in 1799 and taken by the British in 1801, it allowed <a class="enc-link" href="/encyclopedia/jean-francois-champollion">Champollion</a> and others to decipher Egyptian scripts, and has been shown at the <a class="enc-link" href="/encyclopedia/british-museum">British Museum</a> since 1802.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="rosetta-stone"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"It left the museum for one month to be shown at the Louvre beside Champollion's Lettre","o":["2003","1803","1799","1972"],"a":3,"w":"1972: It left the museum for one month to be shown at the Louvre beside Champollion's Lettre."},{"p":"Which came first?","q":"","o":["Jean-François Champollion announced his alphabet of phonetic hieroglyphs in Paris","It went on display at the British Museum"],"a":1,"w":"1822: Jean-François Champollion announced his alphabet of phonetic hieroglyphs in Paris · 1802: It went on display at the British Museum."},{"p":"In which year?","q":"Pierre-François Bouchard spotted the inscribed slab during work on Fort Julien near Rosetta","o":["1802","1803","1972","1799"],"a":3,"w":"1799: Pierre-François Bouchard spotted the inscribed slab during work on Fort Julien near Rosetta."},{"p":"Which came first?","q":"","o":["Zahi Hawass called for the stone to be returned to Egypt","The first published translations of the Greek text appeared"],"a":1,"w":"2003: Zahi Hawass called for the stone to be returned to Egypt · 1803: The first published translations of the Greek text appeared."},{"p":"In which year?","q":"It went on display at the British Museum","o":["1803","1802","2003","1799"],"a":1,"w":"1802: It went on display at the British Museum."}]</script>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/terracotta-army"><img src="/logos/thumbs/Terracotta%20Army.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Terracotta Army</span><span class="related-card-dates">c. 246 BCE – present</span></a><a class="related-card" href="/work/dead-sea-scrolls"><img src="/logos/thumbs/Dead%20Sea%20Scrolls.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Dead Sea Scrolls</span><span class="related-card-dates">c. 250 BCE – present</span></a><a class="related-card" href="/work/aeneid"><img src="/logos/thumbs/Aeneid.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Aeneid</span><span class="related-card-dates">29 BCE – present</span></a><a class="related-card" href="/work/pantheon"><img src="/logos/thumbs/Pantheon.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Pantheon</span><span class="related-card-dates">c. 29 BCE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/terracotta-army"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Terracotta%20Army.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Terracotta Army</span><span class="related-card-dates">c. 246 BCE – present</span></a><a class="related-card" href="/work/aeneid"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Aeneid.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Aeneid</span><span class="related-card-dates">29 BCE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Rosetta Stone",slug="rosetta-stone",url="https://the-epoch-institute.org/work/rosetta-stone";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Rosetta Stone on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/rosetta-stone #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/rosetta-stone"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Rosetta Stone",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Rosetta Stone",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

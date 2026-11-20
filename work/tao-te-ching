@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Tao Te Ching: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Tao Te Ching, or Laozi, is an ancient Chinese classic traditionally attributed to the sage Laozi and compiled during the Warring States period, the…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Tao Te Ching: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Tao Te Ching, or Laozi, is an ancient Chinese classic traditionally attributed to the sage Laozi and compiled during the Warring States period, the…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/tao-te-ching">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/tao-te-ching.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/tao-te-ching.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/tao-te-ching">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Tao Te Ching"}]},{"@type":"Article","headline":"Tao Te Ching","description":"The Tao Te Ching, or Laozi, is an ancient Chinese classic traditionally attributed to the sage Laozi and compiled during the Warring States period, the…","url":"https://the-epoch-institute.org/work/tao-te-ching","mainEntityOfPage":"https://the-epoch-institute.org/work/tao-te-ching","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Tao Te Ching","sameAs":["https://en.wikipedia.org/wiki/Tao_Te_Ching","https://www.wikidata.org/wiki/Q134425"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/tao-te-ching.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Tao Te Ching</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Tao%20Te%20Ching.png" alt="Tao Te Ching" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · Central &amp; East Asia</p>
+        <h1 class="profile-detail-name">Tao Te Ching</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 400 BCE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val">Traditionally ascribed to <a class="enc-link" href="/encyclopedia/laozi">Laozi</a>, the &quot;Old Master&quot;, whose historical existence is debated; most modern scholars hold it to be a compilation of sayings consolidated during the fourth century BCE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">A Classical Chinese text of around 5,162 to 5,450 characters in 81 brief chapters, in two parts, the Tao Ching (chapters 1–37) and the Te Ching (chapters 38–81); about three-quarters rhymed in Old Chinese</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">Transmitted in the Yan Zun, Heshang Gong and Wang Bi editions; early <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a> found at <a class="enc-link" href="/encyclopedia/dunhuang">Dunhuang</a>, Mawangdui and Guodian</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">The Tao as the source of all existence; wu wei, &quot;non-action&quot;; simplicity and humility; paradox and the limits of language; avoiding war, harsh laws and heavy taxes; foundation of <a class="enc-link" href="/encyclopedia/taoism">Taoism</a></span></div>
+        </div>
+        <p class="empire-meta">5 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Its author and date are debated: the oldest excavated fragments, the Guodian bamboo slips, date to around 300 BCE, and a relatively complete text probably existed by the mid third century BCE.</li><li>It describes the Tao as the root of all things and urges a return to harmony with it through wu wei, simplicity and humility, in laconic, paradoxical verse.</li><li>Central to philosophical and religious <a class="enc-link" href="/encyclopedia/taoism">Taoism</a>, it was reread by Legalists, Confucians and Chinese Buddhists, and is one of the most translated texts in world literature.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The two silk copies found at Mawangdui in 1973 put the Te Ching before the Tao Ching, reversing the traditional order, so one English translation of them is titled Te-Tao Ching.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 300 BCE</span><span class="rf-text">The Guodian bamboo slips, the oldest known version of the text, are written</span></li><li><span class="rf-year">168 BCE</span><span class="rf-text">The tomb at Mawangdui that held two nearly complete silk copies is dated to this year</span></li><li><span class="rf-year">157–141 BCE</span><span class="rf-text">The title Tao Te Ching, marking the work as a classic, is first applied under <a class="enc-link" href="/encyclopedia/emperor-jing-of-han">Emperor Jing of Han</a></span></li><li><span class="rf-year">226–249</span><span class="rf-text">Wang Bi writes the commentary behind the most verified of the received editions</span></li><li><span class="rf-year">731</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/emperor-xuanzong-of-tang">Emperor Xuanzong of Tang</a> declares himself an authority on the text, claiming descent from <a class="enc-link" href="/encyclopedia/laozi">Laozi</a></span></li><li><span class="rf-year">1868</span><span class="rf-text">John Chalmers publishes the first English translation</span></li><li><span class="rf-year">1973</span><span class="rf-text">Archaeologists recover the Mawangdui Silk Texts</span></li><li><span class="rf-year">1993</span><span class="rf-text">The Guodian Chu slips are found near Guodian in Jingmen, <a class="enc-link" href="/encyclopedia/hubei">Hubei</a></span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The Tao Te Ching, "Classic of the Way and its Virtue", is also known simply as the <a class="enc-link" href="/encyclopedia/laozi">Laozi</a> after its traditional author. Laozi, whose name means "Old Master", is a figure whose historical existence scholars debate. The first account of his life, in the <a class="enc-link" href="/encyclopedia/records-of-the-grand-historian">Records of the Grand Historian</a> by the Han historian <a class="enc-link" href="/encyclopedia/sima-qian">Sima Qian</a>, gives three stories: in one he is Li Er or <a class="enc-link" href="/encyclopedia/emperor-ruizong-of-tang">Li Dan</a>, an archivist and contemporary of <a class="enc-link" href="/encyclopedia/confucius">Confucius</a> who wrote a book in two parts at the request of Yinxi, keeper of a pass, before departing to the West.</p><p>Scholars give different dates. Alan Chan of the Stanford Encyclopedia of Philosophy argues that archaeology indicates that bodies of sayings attributed to Laozi were committed to writing probably from the second half of the fifth century BCE, and that overlapping collections were consolidated during the fourth century BCE. No Western scholarship follows the traditional dating to the time of Confucius, and few now hold that none of the text predates the <a class="enc-link" href="/encyclopedia/zhuangzi">Zhuangzi</a>.</p><p>The compound dao-de, "way and virtue", emerges only in the late <a class="enc-link" href="/encyclopedia/warring-states-period">Warring States period</a>, and terms such as "ten thousand <a class="enc-link" href="/encyclopedia/chariot">chariots</a>" also point to a Warring States development or at least interpolation of parts of the text.</p></div>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p>The text describes the Tao as the source and ideal of all existence: unseen but not transcendent, immensely powerful yet supremely humble, the root of all things. People, having desires and free will, often act unnaturally and upset its balance, and the work aims to lead readers back to a natural state in harmony with the Tao. It treats language and conventional wisdom as biased and artificial and uses paradox to sharpen the point.</p><p>Wu wei, literally "non-action", is a central idea, with meanings ranging from "not forcing" to "acting spontaneously". It explains ziran, harmony with the Tao, and sets simplicity and humility against selfish action; on a political level it means avoiding war, harsh laws and heavy taxes.</p><p>The modern text has 81 short chapters in two parts. The first, the Daojing, chapters 1–37, is often considered more metaphysical, and the second, the Dejing, chapters 38–81, more political. Unlike Confucian texts, its statements refer to no particular persons, times or places. The style is laconic, with few grammatical particles, and poetic, combining short declarative statements with deliberate contradictions that invite varied interpretations.</p></div>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <div class="profile-section-body"><p>Most modern scholarship holds the text to be a compilation, as is typical of long early Chinese works. The Guodian slips of around 300 BCE contain only about 2,000 characters that correspond to it, divided only by section endings, and lack the last fifteen chapters, 67 to 81. Franklin Perkins argues that their absence is not coincidental and suggests that these chapters, with their support for punishment and lack of self-cultivation practices, were merged later.</p><p>Traditional sources report early versions of 64, 68 or 72 chapters. The Heshang Gong edition divided the text into its present 81 chapters and gave them titles, though this was not universally accepted until perhaps the <a class="enc-link" href="/encyclopedia/tang-dynasty">Tang dynasty</a>. Linguistic studies by William Baxter and Liu Xiaogan point to a date before the <a class="enc-link" href="/encyclopedia/chu-ci">Chuci</a> and, for at least a substantial portion, before the Inner <a class="enc-link" href="/encyclopedia/zhuangzi">Zhuangzi</a>; Scott Cook's study of the Guodian texts supports this.</p><p>The title Tao Te Ching, which marked the work as a classic, was first applied under <a class="enc-link" href="/encyclopedia/emperor-jing-of-han">Emperor Jing of Han</a> (157–141 BCE), though it appears not to have been widely used until near the end of the Han. The earliest versions were written in seal script, later ones in clerical and regular script.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <div class="profile-section-body"><p>The late Warring States <a class="enc-link" href="/encyclopedia/xunzi-philosopher">Xunzi</a> gives the first reference to Lao Dan as a philosopher under the name <a class="enc-link" href="/encyclopedia/laozi">Laozi</a>, criticising him for having "insight into retreat and yielding, but no insight into firmness and trustworthiness." The <a class="enc-link" href="/encyclopedia/han-fei">Han Feizi</a> contains the earliest known commentaries on the text. Its terms were reinterpreted by Legalist thinkers and Confucianists, and above all through Chinese <a class="enc-link" href="/encyclopedia/buddhism">Buddhism</a>, which arrived long after the text was in wide use.</p><p>The three main transmitted editions are named after early commentaries: those of Yan Zun, of the legendary Heshang Gong, and of the <a class="enc-link" href="/encyclopedia/three-kingdoms-period">Three Kingdoms</a> philosopher Wang Bi (226–249). The Heshang Gong rose to prominence with <a class="enc-link" href="/encyclopedia/taoism">Taoism</a> under imperial patronage in the fifth and sixth centuries. In 719 Liu Zhiji argued for Wang Bi's superiority, but the Tang state kept the Heshang Gong in place because Wang Bi was less widely used. In 731 <a class="enc-link" href="/encyclopedia/emperor-xuanzong-of-tang">Emperor Xuanzong of Tang</a>, whose house claimed descent from Laozi, declared himself an authority on it.</p><p>Readings changed over time: the Heshang Gong understood it largely through longevity practices, the Tang through Buddhist logic and the <a class="enc-link" href="/encyclopedia/song-dynasty">Song</a> through internal <a class="enc-link" href="/encyclopedia/alchemy">alchemy</a>.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <div class="profile-section-body"><p>From the early <a class="enc-link" href="/encyclopedia/tang-dynasty">Tang dynasty</a> onward the text was transmitted mainly with the commentaries of Heshang Gong and Wang Bi. <a class="enc-link" href="/encyclopedia/song-dynasty">Song</a> scholars compared old <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a> to preserve what they took to be the older text, and later scholars such as Yao Nai and Ma Xulun continued to argue that Wang Bi's was the standard.</p><p>Archaeology has since recovered manuscripts older than any received text. In the 1920s and 1930s Marc <a class="enc-link" href="/encyclopedia/aurel-stein">Aurel Stein</a> and others found thousands of scrolls in the <a class="enc-link" href="/encyclopedia/mogao-caves">Mogao Caves</a> near <a class="enc-link" href="/encyclopedia/dunhuang">Dunhuang</a>, including more than 50 partial and complete manuscripts and a copy of the lost Xiang'er commentary. In 1973 the Mawangdui Silk Texts, from a tomb dated to 168 BCE, yielded two nearly complete copies, Text A and Text B, both placing the Te Ching first.</p><p>In 1993 the oldest known version was found on bamboo slips in a tomb near Guodian in Jingmen, <a class="enc-link" href="/encyclopedia/hubei">Hubei</a>: around 800 slips with over 13,000 characters. Both the Mawangdui and Guodian versions are generally consistent with the received texts apart from chapter order and graphic variants, and several recent translations draw on them.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>The Tao Te Ching is regarded, with the <a class="enc-link" href="/encyclopedia/zhuangzi">Zhuangzi</a>, as the foundational text of <a class="enc-link" href="/encyclopedia/taoism">Taoism</a>. It is central to both philosophical and religious Taoism and has been described as profoundly influential in Chinese culture, art and medicine more broadly.</p><p>First translated into French in the early nineteenth century, it is one of the most translated texts in world literature, next to the <a class="enc-link" href="/encyclopedia/bible">Bible</a>: over 250 times into Western languages by one count, and 1930 translations into 94 languages by another. The first English version, by the Scottish missionary John Chalmers in 1868, drew heavily on Stanislas Julien's French; James Legge later translated it for the Sacred Books of the East. Chinese scholars and teachers including Lin Yutang, D. C. Lau, Wing-tsit Chan and Gia-Fu Feng produced English versions in the twentieth century.</p><p>Classical Chinese, with no tense, number or person and little punctuation, makes it hard to translate, and many passages seem deliberately ambiguous. Popular interpretive versions are disputed: Russell Kirkland calls them Orientalist fantasies, while Michael LaFargue and Jonathan Herman argue that they meet a real spiritual need in the West.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Tao Te Ching, traditionally ascribed to <a class="enc-link" href="/encyclopedia/laozi">Laozi</a>, is a short Classical Chinese text compiled from sayings during the <a class="enc-link" href="/encyclopedia/warring-states-period">Warring States period</a>, known from bamboo slips of about 300 BCE. Teaching the Tao, wu wei and simplicity in paradoxical verse, it founded <a class="enc-link" href="/encyclopedia/taoism">Taoism</a>, shaped Chinese thought and has been translated more than almost any other book.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="tao-te-ching"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"John Chalmers publishes the first English translation","o":["168 BCE","1868","1973","731"],"a":1,"w":"1868: John Chalmers publishes the first English translation."},{"p":"Which came first?","q":"","o":["The tomb at Mawangdui that held two nearly complete silk copies is dated to this year","The Guodian Chu slips are found near Guodian in Jingmen, Hubei"],"a":0,"w":"168 BCE: The tomb at Mawangdui that held two nearly complete silk copies is dated to this year · 1993: The Guodian Chu slips are found near Guodian in Jingmen, Hubei."},{"p":"In which year?","q":"Archaeologists recover the Mawangdui Silk Texts","o":["168 BCE","1973","1868","1993"],"a":1,"w":"1973: Archaeologists recover the Mawangdui Silk Texts."},{"p":"Which came first?","q":"","o":["The tomb at Mawangdui that held two nearly complete silk copies is dated to this year","Emperor Xuanzong of Tang declares himself an authority on the text, claiming descent from Laozi"],"a":0,"w":"168 BCE: The tomb at Mawangdui that held two nearly complete silk copies is dated to this year · 731: Emperor Xuanzong of Tang declares himself an authority on the text, claiming descent from Laozi."},{"p":"In which year?","q":"The Guodian Chu slips are found near Guodian in Jingmen, Hubei","o":["1868","1973","1993","168 BCE"],"a":2,"w":"1993: The Guodian Chu slips are found near Guodian in Jingmen, Hubei."}]</script>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/mahabharata"><img src="/logos/thumbs/Mahabharata.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mahabharata</span><span class="related-card-dates">c. 400 BCE – present</span></a><a class="related-card" href="/work/petra"><img src="/logos/thumbs/Petra.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Petra</span><span class="related-card-dates">c. 400 BCE – present</span></a><a class="related-card" href="/work/parthenon"><img src="/logos/thumbs/Parthenon.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Parthenon</span><span class="related-card-dates">447 BCE – present</span></a><a class="related-card" href="/work/analects"><img src="/logos/thumbs/Analects.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Analects</span><span class="related-card-dates">c. 475 BCE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/petra"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Petra.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Petra</span><span class="related-card-dates">c. 400 BCE – present</span></a><a class="related-card" href="/work/dead-sea-scrolls"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Dead%20Sea%20Scrolls.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Dead Sea Scrolls</span><span class="related-card-dates">c. 250 BCE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Tao Te Ching",slug="tao-te-ching",url="https://the-epoch-institute.org/work/tao-te-ching";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Tao Te Ching on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/tao-te-ching #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/tao-te-ching"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Tao Te Ching",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Tao Te Ching",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

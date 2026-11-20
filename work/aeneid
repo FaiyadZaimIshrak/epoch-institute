@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Aeneid: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Aeneid is a Latin epic poem by Virgil, written between 29 and 19 BC, telling how the Trojan Aeneas fled Troy and reached Italy to become ancestor of…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Aeneid: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Aeneid is a Latin epic poem by Virgil, written between 29 and 19 BC, telling how the Trojan Aeneas fled Troy and reached Italy to become ancestor of…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/aeneid">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/aeneid.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/aeneid.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/aeneid">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Aeneid"}]},{"@type":"Article","headline":"Aeneid","description":"The Aeneid is a Latin epic poem by Virgil, written between 29 and 19 BC, telling how the Trojan Aeneas fled Troy and reached Italy to become ancestor of…","url":"https://the-epoch-institute.org/work/aeneid","mainEntityOfPage":"https://the-epoch-institute.org/work/aeneid","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Aeneid","sameAs":["https://en.wikipedia.org/wiki/Aeneid","https://www.wikidata.org/wiki/Q60220"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/aeneid.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Aeneid</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Aeneid.png" alt="Aeneid" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · Europe</p>
+        <h1 class="profile-detail-name">Aeneid</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">29 BCE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia/virgil">Virgil</a>, Roman poet, under Augustus and with Maecenas as his patron; published after his death by his literary executors Lucius Varius Rufus and Plotius Tucca on Augustus' order</span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">A <a class="enc-link" href="/encyclopedia/latin">Latin</a> epic of 9,896 lines in dactylic hexameter, in twelve books of roughly 700 to 900 lines each, left unfinished</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">Read in printed editions and in translations into many languages</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia/arma-people">Arma</a> virumque cano; <a class="enc-link" href="/encyclopedia/dido">Dido</a> and <a class="enc-link" href="/encyclopedia/aeneas">Aeneas</a>; the descent to the underworld; pietas and furor; the founding myth of <a class="enc-link" href="/encyclopedia/rome">Rome</a>; <a class="enc-link" href="/encyclopedia/virgil">Virgil</a> as <a class="enc-link" href="/encyclopedia/dante-alighieri">Dante</a>'s guide</span></div>
+        </div>
+        <p class="empire-meta">5 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li><a class="enc-link" href="/encyclopedia/virgil">Virgil</a> shaped scattered older tales of <a class="enc-link" href="/encyclopedia/aeneas">Aeneas</a> into a founding myth that tied <a class="enc-link" href="/encyclopedia/rome">Rome</a> to <a class="enc-link" href="/encyclopedia/troy">Troy</a> and the family of <a class="enc-link" href="/encyclopedia/julius-caesar">Julius Caesar</a> to its heroes and gods.</li><li>The first six books follow the wanderings from <a class="enc-link" href="/encyclopedia/troy">Troy</a> to <a class="enc-link" href="/encyclopedia/italy">Italy</a>, after the <a class="enc-link" href="/encyclopedia/odyssey">Odyssey</a>, and the last six the war in <a class="enc-link" href="/encyclopedia/latium">Latium</a>, after the <a class="enc-link" href="/encyclopedia/iliad">Iliad</a>.</li><li>Unfinished at <a class="enc-link" href="/encyclopedia/virgil">Virgil</a>'s death in 19 BC, it was published on Augustus' order and became a cornerstone of <a class="enc-link" href="/encyclopedia/latin">Latin</a> education for centuries.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p><a class="enc-link" href="/encyclopedia/virgil">Virgil</a> died with the poem unfinished and wished the <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a> burned; Augustus ordered his executors to disregard the wish and publish it with as few changes as possible. Its many half-complete lines and abrupt ending are read as signs that it was never finished.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">6th century BC</span><span class="rf-text">Greek vases already show accounts of <a class="enc-link" href="/encyclopedia/aeneas">Aeneas</a> founding a new home in <a class="enc-link" href="/encyclopedia/etruria">Etruria</a></span></li><li><span class="rf-year">29 BC</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/virgil">Virgil</a> begins writing the Aeneid</span></li><li><span class="rf-year">19 BC</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/virgil">Virgil</a> dies at Brundisium with the poem unfinished; Augustus orders it published</span></li><li><span class="rf-year">4th century</span><span class="rf-text">The grammarian Maurus Servius Honoratus writes the most complete ancient commentary on the poem</span></li><li><span class="rf-year">1513</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/gavin-douglas">Gavin Douglas</a> completes his Eneados, the first full and faithful rendering in an Anglic language</span></li><li><span class="rf-year">1688</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/henry-purcell">Henry Purcell</a>'s opera <a class="enc-link" href="/encyclopedia/dido">Dido</a> and <a class="enc-link" href="/encyclopedia/aeneas">Aeneas</a> is performed</span></li><li><span class="rf-year">1798</span><span class="rf-text">Ivan Kotliarevsky writes Eneida, a mock-heroic burlesque in the Ukrainian language</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The story of <a class="enc-link" href="/encyclopedia/aeneas">Aeneas</a> reaching <a class="enc-link" href="/encyclopedia/italy">Italy</a> predates <a class="enc-link" href="/encyclopedia/virgil">Virgil</a> by centuries. As Greek settlements spread from the sixth century BC, colonists tied their new homes to their existing myths, and the fall of <a class="enc-link" href="/encyclopedia/troy">Troy</a> suited the purpose. The legend combined Greek, Etruscan, <a class="enc-link" href="/encyclopedia/latin">Latin</a> and Roman elements: Greek vases of the sixth century BC already show Aeneas founding a new home in <a class="enc-link" href="/encyclopedia/etruria">Etruria</a>, he was worshipped at <a class="enc-link" href="/encyclopedia/lavinium">Lavinium</a>, and a fragment usually attributed to Hellanicus of <a class="enc-link" href="/encyclopedia/lesbos">Lesbos</a> made him the founder of <a class="enc-link" href="/encyclopedia/rome">Rome</a> with the help of <a class="enc-link" href="/encyclopedia/odysseus">Odysseus</a>. The <a class="enc-link" href="/encyclopedia/roman-empire">Romans</a> most likely took a full interest in these Greek myths after the war against <a class="enc-link" href="/encyclopedia/pyrrhus-of-epirus">Pyrrhus of Epirus</a> in 280 BC.</p><p>Virgil wrote in a time of great change, after the fall of the <a class="enc-link" href="/encyclopedia/roman-republic">Roman Republic</a> and the civil wars ending at Actium, when the new emperor Augustus was promoting peace and a return to traditional Roman values. He took the scattered tales of Aeneas, a figure known since the <a class="enc-link" href="/encyclopedia/iliad">Iliad</a> but with no fixed character beyond his pietas, and made of them a national epic that tied Rome to Troy, explained the <a class="enc-link" href="/encyclopedia/punic-wars">Punic Wars</a> and presented the Julio-Claudian line as descendants of the founders and gods of Rome and Troy.</p></div>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p>The poem opens with <a class="enc-link" href="/encyclopedia/arma-people">Arma</a> virumque cano, of arms and the man I sing, and begins in the middle of things with the Trojan fleet driven by a storm that the goddess Juno has raised. Shipwrecked in <a class="enc-link" href="/encyclopedia/africa">Africa</a>, <a class="enc-link" href="/encyclopedia/aeneas">Aeneas</a> tells <a class="enc-link" href="/encyclopedia/dido">Dido</a>, queen of the new city of <a class="enc-link" href="/encyclopedia/carthage">Carthage</a>, of the wooden horse, the sack of <a class="enc-link" href="/encyclopedia/troy">Troy</a>, the loss of his wife Creusa and his wanderings round the <a class="enc-link" href="/encyclopedia/mediterranean">Mediterranean</a>. Dido falls in love with him, but Jupiter sends Mercury to remind him of his duty; when he sails, she kills herself on a pyre and calls for eternal strife between their peoples. After funeral games in <a class="enc-link" href="/encyclopedia/sicily">Sicily</a>, Aeneas descends with the <a class="enc-link" href="/encyclopedia/cumaean-sibyl">Cumaean Sibyl</a> into the underworld, where his father Anchises shows him the future of <a class="enc-link" href="/encyclopedia/rome">Rome</a>.</p><p>In the second half Aeneas settles in <a class="enc-link" href="/encyclopedia/latium">Latium</a>, where King Latinus is told by oracles to give his daughter Lavinia to a stranger rather than to Turnus of the Rutuli. Juno stirs up war. Aeneas gains allies from Evander, at the site of the future Rome, and a shield made by Vulcan showing Rome's history; Turnus kills Evander's son Pallas. The poem ends when Aeneas, about to spare the defeated Turnus, sees Pallas' belt on him and kills him in rage.</p></div>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <div class="profile-section-body"><p><a class="enc-link" href="/encyclopedia/virgil">Virgil</a> wrote the Aeneid between 29 and 19 BC, and legend held that he wrote only three lines a day. It is composed in dactylic hexameter, each line of six feet made of dactyls and spondees, with a metre based on the length of syllables. Its twelve books fall into two halves, books 1 to 6 commonly linked with <a class="enc-link" href="/encyclopedia/homer">Homer</a>'s <a class="enc-link" href="/encyclopedia/odyssey">Odyssey</a> and books 7 to 12 with the <a class="enc-link" href="/encyclopedia/iliad">Iliad</a>, reflecting Virgil's ambition to rival Homer, though the correspondence is rough; the narrative can also be read in three groups of four books, on <a class="enc-link" href="/encyclopedia/dido">Dido</a>, the arrival in <a class="enc-link" href="/encyclopedia/italy">Italy</a> and the war. Virgil's <a class="enc-link" href="/encyclopedia/latin">Latin</a> has been praised for its evenness, subtlety and dignity, and he uses alliteration, assonance, metaphor and simile to build tension.</p><p>According to tradition Virgil travelled to <a class="enc-link" href="/encyclopedia/greece">Greece</a> around 19 BC to revise the poem, met Augustus at <a class="enc-link" href="/encyclopedia/athens">Athens</a>, caught a fever near Megara and died at Brundisium on his way home, wishing the <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a> burned. Some legends say he had come to dislike a passage in book 8. Augustus ordered his executors Lucius Varius Rufus and Plotius Tucca to publish it with few changes. The half-complete lines and abrupt ending are generally taken as evidence that it was unfinished.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <div class="profile-section-body"><p>The poem appears to have been a success from the start. <a class="enc-link" href="/encyclopedia/virgil">Virgil</a> is said to have recited books 2, 4 and 6 to Augustus, and the mention of Marcellus in book 6 apparently caused Augustus' sister Octavia to faint. By the 2nd century AD at the latest it had become an essential part of a <a class="enc-link" href="/encyclopedia/latin">Latin</a> education, usually memorised, and it stayed central after the decline of the <a class="enc-link" href="/encyclopedia/roman-empire">Roman Empire</a>. In Latin-Christian culture it was a canonical text studied with commentaries, the most complete written by the 4th-century grammarian Maurus Servius Honoratus.</p><p>Critics have long debated its tone. Some read it as pessimistic and subversive of the Augustan regime, others as a celebration of the new dynasty; many see <a class="enc-link" href="/encyclopedia/aeneas">Aeneas</a>, founder of <a class="enc-link" href="/encyclopedia/rome">Rome</a>, as a figure for Augustus, its re-founder, and its prophecies and the shield's picture of Actium as support for him. Its <a class="enc-link" href="/encyclopedia/theme-system">themes</a> of pietas, fate and divine intervention, and Aeneas' final killing of Turnus in furor, have been read as an unfinished Roman ideal or as a comment on the violence of the late Republican civil wars. The exit from the underworld through the <a class="enc-link" href="/encyclopedia/ivory-trade">ivory</a> gate of false dreams is among its most disputed passages.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <div class="profile-section-body"><p>Because the Aeneid was composed and preserved in writing rather than orally, its text shows less variation than other classical epics. Its survival was tied to the schoolroom: from antiquity through the <a class="enc-link" href="/encyclopedia/middle-ages">Middle Ages</a> it was copied, taught and commented on as a basic text of <a class="enc-link" href="/encyclopedia/latin">Latin</a> learning, and from 1600 to 1900 the Latin school stood at the centre of European education, with <a class="enc-link" href="/encyclopedia/virgil">Virgil</a> taught at the advanced level. In the <a class="enc-link" href="/encyclopedia/united-states">United States</a> it was taught in the fourth year of Latin at least until the 1960s.</p><p>Its unfinished ending led later writers to complete it. The 15th-century poet Maffeo Vegio wrote a Thirteenth Book, widely printed in the <a class="enc-link" href="/encyclopedia/renaissance">Renaissance</a>; Pier Candido Decembrio began another; and modern supplements include Claudio Salvucci's The Laviniad of 1994 and Ursula K. Le Guin's novel Lavinia of 2008. Translations carried it into the vernaculars: <a class="enc-link" href="/encyclopedia/gavin-douglas">Gavin Douglas</a>'s Scots Eneados of 1513, <a class="enc-link" href="/encyclopedia/john-dryden">John Dryden</a>'s English version, partial versions by Henry Howard, Earl of Surrey, and Seamus Heaney, and many modern verse translations, among them those of Cecil Day-Lewis, Robert Fitzgerald, Robert Fagles and Sarah Ruden.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>The Aeneid is a cornerstone of the Western canon and was long held to be the summit of <a class="enc-link" href="/encyclopedia/latin">Latin</a> literature, as the <a class="enc-link" href="/encyclopedia/iliad">Iliad</a> was of Greek. Its influence has been traced in <a class="enc-link" href="/encyclopedia/beowulf">Beowulf</a>, Layamon's Brut, The Faerie Queene and Milton's Paradise Lost, and in <a class="enc-link" href="/encyclopedia/os-lusiadas">Os Lusíadas</a> by <a class="enc-link" href="/encyclopedia/luis-de-camoes">Luís de Camões</a>. <a class="enc-link" href="/encyclopedia/dante-alighieri">Dante</a> quoted and alluded to it throughout the <a class="enc-link" href="/encyclopedia/divine-comedy">Divine Comedy</a> and made <a class="enc-link" href="/encyclopedia/virgil">Virgil</a> his guide through the Inferno and <a class="enc-link" href="/encyclopedia/purgatorio">Purgatorio</a>. Phrases from it entered Latin as Shakespeare's did English, such as Sunt lacrimae rerum, the tears of things.</p><p>It has been retold on the stage and screen: <a class="enc-link" href="/encyclopedia/henry-purcell">Henry Purcell</a>'s opera <a class="enc-link" href="/encyclopedia/dido">Dido</a> and <a class="enc-link" href="/encyclopedia/aeneas">Aeneas</a> of 1688 with its lament When I am laid in earth, <a class="enc-link" href="/encyclopedia/hector-berlioz">Hector Berlioz</a>'s Les Troyens, Italian film and television versions, and Brian Friel's play Translations, which ends with a passage from it. It also invited parody, from Paul Scarron's French travesty, which spread across <a class="enc-link" href="/encyclopedia/europe">Europe</a>, to Ivan Kotliarevsky's Eneida of 1798, considered the first literary work published wholly in modern Ukrainian and made into an animated film in 1991. In the <a class="enc-link" href="/encyclopedia/united-states">United States</a> its Latin lines remain part of the Advanced Placement Latin syllabus.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Aeneid is <a class="enc-link" href="/encyclopedia/virgil">Virgil</a>'s <a class="enc-link" href="/encyclopedia/latin">Latin</a> epic of the Trojan <a class="enc-link" href="/encyclopedia/aeneas">Aeneas</a>, who flees burning <a class="enc-link" href="/encyclopedia/troy">Troy</a>, loses <a class="enc-link" href="/encyclopedia/dido">Dido</a> and wins a home in <a class="enc-link" href="/encyclopedia/italy">Italy</a> as ancestor of the <a class="enc-link" href="/encyclopedia/roman-empire">Romans</a>. Written under Augustus and left unfinished in 19 BC, it was published on the emperor's order and has shaped Latin education and European literature ever since.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Farrell, Joseph; Putnam, Michael C. J., A Companion to Vergil's Aeneid and its Tradition (John Wiley &amp; Sons, 2014)</li>
+        <li>Hardie, Philip R., Virgil's Aeneid: Cosmos and Imperium (Clarendon Press, 1986)</li>
+        <li>Heinze, Richard, Virgil's Epic Technique (University of California Press, 1993)</li>
+        <li>Johnson, W. R., Darkness Visible: A Study of Vergil's Aeneid (University of California Press, 1979)</li>
+        <li>Gransden, K. W.; Harrison, Stephen J., Virgil: The Aeneid (Cambridge University Press, 2003)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/pantheon"><img src="/logos/thumbs/Pantheon.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Pantheon</span><span class="related-card-dates">c. 29 BCE – present</span></a><a class="related-card" href="/work/colosseum"><img src="/logos/thumbs/Colosseum.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Colosseum</span><span class="related-card-dates">c. 72 CE – present</span></a><a class="related-card" href="/work/rosetta-stone"><img src="/logos/thumbs/Rosetta%20Stone.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Rosetta Stone</span><span class="related-card-dates">196 BCE – present</span></a><a class="related-card" href="/work/terracotta-army"><img src="/logos/thumbs/Terracotta%20Army.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Terracotta Army</span><span class="related-card-dates">c. 246 BCE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/rosetta-stone"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Rosetta%20Stone.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Rosetta Stone</span><span class="related-card-dates">196 BCE – present</span></a><a class="related-card" href="/work/pantheon"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Pantheon.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Pantheon</span><span class="related-card-dates">c. 29 BCE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Aeneid",slug="aeneid",url="https://the-epoch-institute.org/work/aeneid";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Aeneid on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/aeneid #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/aeneid"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Aeneid",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Aeneid",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

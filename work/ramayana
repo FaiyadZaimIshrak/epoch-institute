@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Ramayana: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Ramayana is a Sanskrit epic of ancient India, traditionally attributed to Valmiki, which tells the life and journey of Rama, prince of Ayodhya, and…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Ramayana: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Ramayana is a Sanskrit epic of ancient India, traditionally attributed to Valmiki, which tells the life and journey of Rama, prince of Ayodhya, and…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/ramayana">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/ramayana.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/ramayana.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/ramayana">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Ramayana"}]},{"@type":"Article","headline":"Ramayana","description":"The Ramayana is a Sanskrit epic of ancient India, traditionally attributed to Valmiki, which tells the life and journey of Rama, prince of Ayodhya, and…","url":"https://the-epoch-institute.org/work/ramayana","mainEntityOfPage":"https://the-epoch-institute.org/work/ramayana","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Ramayana","sameAs":["https://en.wikipedia.org/wiki/Ramayana","https://www.wikidata.org/wiki/Q37293"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/ramayana.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Ramayana</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Ramayana.png" alt="Ramayana" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · South &amp; Southeast Asia</p>
+        <h1 class="profile-detail-name">Ramayana</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 750 BCE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val">Traditionally attributed to the sage Valmiki; scholars see it as a growth of centuries from an oral source, with the first and last books generally held to be later additions</span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">A <a class="enc-link" href="/encyclopedia/sanskrit">Sanskrit</a> epic poem of about 24,000 shlokas (couplet verses) in seven kandas and about 500 sargas (chapters)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">Read in northern and southern recensions and many <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a>; a critical edition was compiled at <a class="enc-link" href="/encyclopedia/maharaja-sayajirao-university-of-baroda">Maharaja Sayajirao University of Baroda</a> in the 1960s and 1970s</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia/rama">Rama</a>'s fourteen-year exile; the abduction of <a class="enc-link" href="/encyclopedia/sita">Sita</a> by Ravana; Hanuman's leap to Lanka; the war with Ravana; Rama rajya as the ideal of just rule; <a class="enc-link" href="/encyclopedia/diwali">Diwali</a> and <a class="enc-link" href="/encyclopedia/ramlila">Ramlila</a></span></div>
+        </div>
+        <p class="empire-meta">5 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li><a class="enc-link" href="/encyclopedia/hinduism">Hindus</a> count the Ramayana, with the <a class="enc-link" href="/encyclopedia/mahabharata">Mahabharata</a>, among the Itihasas; it tells of <a class="enc-link" href="/encyclopedia/rama">Rama</a>, held to be the seventh avatar of <a class="enc-link" href="/encyclopedia/vishnu">Vishnu</a>, and portrays ideal sons, brothers, wives and kings.</li><li>Scholars place its oral composition roughly in the 8th to 4th centuries BCE, with later stages reaching the 3rd century CE; books two to six are the oldest.</li><li>It was retold in nearly every Indian language and in Buddhist and Jain versions, and became the <a class="enc-link" href="/encyclopedia/reamker">Reamker</a> of <a class="enc-link" href="/encyclopedia/cambodia">Cambodia</a>, the <a class="enc-link" href="/encyclopedia/ramakien">Ramakien</a> of <a class="enc-link" href="/encyclopedia/thailand">Thailand</a> and the <a class="enc-link" href="/encyclopedia/kakawin">Kakawin</a> Ramayana of <a class="enc-link" href="/encyclopedia/java">Java</a>.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>In the Jain versions of the epic it is Lakshmana, not <a class="enc-link" href="/encyclopedia/rama">Rama</a>, who kills Ravana, and Jain texts hold that Ravana will become a future Tirthankara.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">750-500 BCE</span><span class="rf-text">Robert P. Goldman's probable date for the oral composition of Valmiki's Ramayana</span></li><li><span class="rf-year">3rd century CE</span><span class="rf-text">Later stages of the text extend to about this time; a panel at <a class="enc-link" href="/encyclopedia/nagarjunakonda">Nagarjunakonda</a> shows Bharata meeting <a class="enc-link" href="/encyclopedia/rama">Rama</a></span></li><li><span class="rf-year">c. 870</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/kakawin">Kakawin</a> Ramayana is written in <a class="enc-link" href="/encyclopedia/central-java">Central Java</a></span></li><li><span class="rf-year">12th century</span><span class="rf-text">Kamban writes the Ramavataram in Tamil</span></li><li><span class="rf-year">1576</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/tulsidas">Tulsidas</a> composes the Ramcharitmanas in Awadhi</span></li><li><span class="rf-year">c. 1594</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/akbar">Akbar</a> commissions an illustrated simplified text for his mother, Hamida Banu Begum</span></li><li><span class="rf-year">1960s</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/oriental-institute">Oriental Institute</a> at Baroda compiles a critical edition from dozens of <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a></span></li><li><span class="rf-year">2016</span><span class="rf-text">Robert P. Goldman completes an English translation of the critical edition</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The Ramayana, also known as the Valmiki Ramayana, is a <a class="enc-link" href="/encyclopedia/sanskrit">Sanskrit</a> epic of ancient <a class="enc-link" href="/encyclopedia/india">India</a> traditionally attributed to the sage Valmiki. Its name joins <a class="enc-link" href="/encyclopedia/rama">Rama</a> and ayana, "journey", and so means "Rama's journey". It belongs to the Itihasa, narratives of past events that include teachings on the goals of human life; modern scholars often place it in the genre of epics.</p><p>Scholarly estimates for its primary oral stage range from the 8th–5th to the 5th–4th century BCE, "although the legends constituting it go back farther in time", and later stages extend to the 3rd century CE. Robert P. Goldman gives 750 to 500 BCE as the probable date of its oral composition, noting that the narrative does not mention <a class="enc-link" href="/encyclopedia/buddhism">Buddhism</a>, does not reflect the later prominence of <a class="enc-link" href="/encyclopedia/magadha">Magadha</a>, and names <a class="enc-link" href="/encyclopedia/ayodhya">Ayodhya</a> rather than <a class="enc-link" href="/encyclopedia/saketa">Saketa</a> or <a class="enc-link" href="/encyclopedia/shravasti">Shravasti</a> as the capital of Kosala. Goldman and Sally <a class="enc-link" href="/encyclopedia/sutherland">Sutherland</a> Goldman later placed it around the middle of the first millennium BCE.</p><p>In the epic's own frame story, Valmiki asks the sage Narada whether a righteous man is left in the world and is told of Rama; after seeing two birds shot, Valmiki creates the shloka metre and composes the poem, which he teaches to Rama's sons Lava and Kusha.</p></div>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p><a class="enc-link" href="/encyclopedia/rama">Rama</a>, son of King Dasaratha of <a class="enc-link" href="/encyclopedia/ayodhya">Ayodhya</a> and his first wife Kausalya, wins <a class="enc-link" href="/encyclopedia/sita">Sita</a>, daughter of King <a class="enc-link" href="/encyclopedia/janaka">Janaka</a> of <a class="enc-link" href="/encyclopedia/mithila">Mithila</a>, by stringing and breaking a bow no one else could string. On the eve of his crowning, his stepmother Kaikeyi claims two boons and has him exiled to the forest for fourteen years so that her son Bharata may succeed. Rama accepts; Sita and his brother Lakshmana go with him, and Bharata rules only on Rama's behalf.</p><p>In the forest Ravana, king of Lanka, carries Sita away with the help of a demon disguised as a golden deer. Rama allies with the Vanaras of Kishkindha, and Hanuman, the greatest of his devotees, leaps across the sea, finds Sita in the <a class="enc-link" href="/encyclopedia/ashoka">Ashoka</a> grove and sets fire to Ravana's citadel. A bridge is built, and in the war that follows Rama kills Ravana and installs his brother Vibhishana as king. Sita proves her fidelity by entering a fire from which the god <a class="enc-link" href="/encyclopedia/karashahr">Agni</a> restores her, and Rama returns to Ayodhya to be crowned; his reign, Rama rajya, is described as just and fair. The last book tells of Sita's exile, the birth of Lava and Kusha and Rama's last days.</p><p>The epic depicts the duties of relationships through ideal characters and joins philosophical and ethical teaching to its story.</p></div>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <div class="profile-section-body"><p>In its extant form the poem has over 24,000 couplet verses called shlokas in seven kandas: Bala, <a class="enc-link" href="/encyclopedia/ayodhya">Ayodhya</a>, Aranya, Kishkindha, Sundara, Yuddha and Uttara. It is regarded as one of the longest epic poems ever written. Romesh Chunder Dutt wrote that it is "a growth of centuries, but the main story is more distinctly the creation of one mind."</p><p>Books two to six are the oldest part. Differences of style and contradictions in the narrative have led scholars including Hermann Jacobi to regard the first and last books, the Bala Kanda and the Uttara Kanda, as later additions, and both are absent from the oldest <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a>. Some hold that the Uttara Kanda contradicts the rest of the epic's picture of <a class="enc-link" href="/encyclopedia/rama">Rama</a> and <a class="enc-link" href="/encyclopedia/dharma">dharma</a>; M. R. Parameswaran argues that its treatment of women and <a class="enc-link" href="/encyclopedia/shudra">Shudras</a>, in the stories of <a class="enc-link" href="/encyclopedia/sita">Sita</a>'s abandonment and the killing of the ascetic Shambuka, shows it to be a later insertion.</p><p>The text was handed down orally along two regional paths for a long time before being fixed in writing, producing a northern and a southern recension with profound verbal differences. The northern tradition moved toward a simpler gloss, while the more conservative southern one forms the backbone of modern critical editions.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <div class="profile-section-body"><p>The Ramayana strongly influenced later <a class="enc-link" href="/encyclopedia/sanskrit">Sanskrit</a> poetry and <a class="enc-link" href="/encyclopedia/hinduism">Hindu</a> life and culture, and its figures became central to the cultural consciousness of many Hindu and Buddhist nations. Its chief moral lesson was the importance of virtue, in the life of a citizen and in the ideal of the state as <a class="enc-link" href="/encyclopedia/rama">Rama</a> rajya. Around thirty-three commentaries were written on it; the tilaka, bhushana and shiromani are the best known.</p><p>Tamil literature refers to the story from the Sangam age, in the Akananuru and Purananuru, and in the <a class="enc-link" href="/encyclopedia/silappatikaram">Silappatikaram</a>, Manimekalai and the Alvar poets, before Kamban wrote the Ramavataram in the 12th century. Regional retellings followed in Telugu, Assamese (Madhava Kandali's Saptakanda Ramayana), Bengali (<a class="enc-link" href="/encyclopedia/krittibas-ojha">Krittibas Ojha</a>), Odia, <a class="enc-link" href="/encyclopedia/kannada">Kannada</a>, Malayalam, <a class="enc-link" href="/encyclopedia/marathi">Marathi</a> and Gujarati, and <a class="enc-link" href="/encyclopedia/tulsidas">Tulsidas</a>'s Ramcharitmanas of 1576 recast it in Awadhi in the spirit of bhakti. The Mughal emperor <a class="enc-link" href="/encyclopedia/akbar">Akbar</a> commissioned an illustrated simplified text around 1594 and dedicated it to his mother.</p><p>Buddhists told it as the Dasaratha Jataka, in which Rama is a previous birth of the Buddha and there is no Ravana, and Jains as Vimalsuri's Paumachariyam and later works, in which Rama renounces his kingdom and becomes a monk.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <div class="profile-section-body"><p>As with many oral epics, many versions survive, and the story told in north <a class="enc-link" href="/encyclopedia/india">India</a> differs in important respects from that kept in the south and in <a class="enc-link" href="/encyclopedia/southeast-asia">Southeast Asia</a>. A 6th-century <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a> from <a class="enc-link" href="/encyclopedia/west-bengal">West Bengal</a> presents the epic without the Bala and Uttara Kandas. Oral and folk versions continue: the Gond Ramayani of the Gondi people, with Lakshmana as its hero, and the Adiya Ramayana of Wayanad, in which <a class="enc-link" href="/encyclopedia/rama">Rama</a> is tried in a tribal court for abandoning his pregnant wife.</p><p>In Southeast Asia the story became <a class="enc-link" href="/encyclopedia/cambodia">Cambodia</a>'s <a class="enc-link" href="/encyclopedia/reamker">Reamker</a>, whose manuscript is first mentioned in a 7th-century inscription and whose surviving text dates from the 16th century, and the Trai Bhet; the <a class="enc-link" href="/encyclopedia/kakawin">Kakawin</a> Ramayana of <a class="enc-link" href="/encyclopedia/java">Java</a>, based on Bhatti's poem on the killing of Ravana rather than on Valmiki; the Balinese Ramakavaca, the Malay Hikayat Seri Rama, the Burmese Yama Zatdaw and the Thai <a class="enc-link" href="/encyclopedia/ramakien">Ramakien</a>. The Maranao Maharadia Lawana of the <a class="enc-link" href="/encyclopedia/philippines">Philippines</a> was first written down when Juan R. Francisco and Nagasura Madale documented and translated it in 1968.</p><p>A critical edition was compiled in the 1960s and 1970s by the <a class="enc-link" href="/encyclopedia/oriental-institute">Oriental Institute</a> at <a class="enc-link" href="/encyclopedia/maharaja-sayajirao-university-of-baroda">Maharaja Sayajirao University of Baroda</a> from dozens of manuscripts, and Robert P. Goldman completed its English translation in 2016.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>The Ramayana has had a profound impact on art and culture across the <a class="enc-link" href="/encyclopedia/indian-subcontinent">Indian subcontinent</a> and <a class="enc-link" href="/encyclopedia/southeast-asia">Southeast Asia</a>, with the exception of <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a>. Its scenes appear in terracottas, stone sculptures, bronzes and paintings, from the 3rd-century panel at <a class="enc-link" href="/encyclopedia/nagarjunakonda">Nagarjunakonda</a> to the 9th-century reliefs of Prambanan in <a class="enc-link" href="/encyclopedia/java">Java</a> and the murals of <a class="enc-link" href="/encyclopedia/wat-phra-kaew">Wat Phra Kaew</a> in <a class="enc-link" href="/encyclopedia/bangkok">Bangkok</a>. In Java and <a class="enc-link" href="/encyclopedia/bali">Bali</a> it is a source of moral guidance and of wayang shadow puppetry, the Balinese kecak dance and the Ramayana Ballet staged before Prambanan.</p><p><a class="enc-link" href="/encyclopedia/hinduism">Hindus</a> connect <a class="enc-link" href="/encyclopedia/diwali">Diwali</a>, the festival of lights, with <a class="enc-link" href="/encyclopedia/rama">Rama</a>'s return to <a class="enc-link" href="/encyclopedia/ayodhya">Ayodhya</a>, and dramatic enactments called <a class="enc-link" href="/encyclopedia/ramlila">Ramlila</a> take place across <a class="enc-link" href="/encyclopedia/india">India</a> and the Indian diaspora. Rampur is the commonest name for villages and towns in much of India, and "Ram Ram" is used as a greeting.</p><p>Modern retellings include versions by <a class="enc-link" href="/encyclopedia/c-rajagopalachari">C. Rajagopalachari</a> and R. K. Narayan and novels by Ashok Banker and Amish Tripathi. Gopal Sharman's play The Ramayana has had more than 3,000 performances, and films from Lanka Dahan in 1917 to Ramanand Sagar's television series of 1987 have carried the story to new audiences.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Ramayana, a <a class="enc-link" href="/encyclopedia/sanskrit">Sanskrit</a> epic traditionally attributed to Valmiki and composed orally over centuries from about the mid-first millennium BCE, tells of <a class="enc-link" href="/encyclopedia/rama">Rama</a>'s exile, the abduction of <a class="enc-link" href="/encyclopedia/sita">Sita</a> and the war with Ravana. Retold in Buddhist, Jain and many regional versions across South and <a class="enc-link" href="/encyclopedia/southeast-asia">Southeast Asia</a>, it shapes festivals, art and ideas of just rule.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>J. L. Brockington and Mary Brockington, Rāma the Steadfast: An Early Form of the Rāmāyaṇa (Penguin, 2006)</li>
+        <li>Robert P. Goldman, The Ramayana of Valmiki: An Epic of Ancient India (Princeton University Press, 1990–2016)</li>
+        <li>Bibek Debroy, The Valmiki Ramayana (Penguin, 2017)</li>
+        <li>Arshia Sattar, The Rāmāyaṇa by Vālmīki: An Epic of Ancient India (Viking, 1996)</li>
+        <li>Ralph T. H. Griffith, The Ramayan of Valmiki (Trübner, 1870–1874)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/iliad"><img src="/logos/thumbs/Iliad.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Iliad</span><span class="related-card-dates">c. 725 BCE – present</span></a><a class="related-card" href="/work/great-wall-of-china"><img src="/logos/thumbs/Great%20Wall%20of%20China.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Great Wall of China</span><span class="related-card-dates">c. 700 BCE – present</span></a><a class="related-card" href="/work/odyssey"><img src="/logos/thumbs/Odyssey.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Odyssey</span><span class="related-card-dates">c. 700 BCE – present</span></a><a class="related-card" href="/work/analects"><img src="/logos/thumbs/Analects.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Analects</span><span class="related-card-dates">c. 475 BCE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/book-of-the-dead"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Book%20of%20the%20Dead.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Book of the Dead</span><span class="related-card-dates">c. 1700 BCE – present</span></a><a class="related-card" href="/work/iliad"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Iliad.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Iliad</span><span class="related-card-dates">c. 725 BCE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Ramayana",slug="ramayana",url="https://the-epoch-institute.org/work/ramayana";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Ramayana on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/ramayana #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/ramayana"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Ramayana",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Ramayana",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

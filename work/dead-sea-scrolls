@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Dead Sea Scrolls: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Ancient Jewish manuscripts of the Second Temple period, dated from the 3rd century BCE to the 1st century CE and found in caves near Qumran between 1946…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Dead Sea Scrolls: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="Ancient Jewish manuscripts of the Second Temple period, dated from the 3rd century BCE to the 1st century CE and found in caves near Qumran between 1946…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/dead-sea-scrolls">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/dead-sea-scrolls.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/dead-sea-scrolls.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/dead-sea-scrolls">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Dead Sea Scrolls"}]},{"@type":"Article","headline":"Dead Sea Scrolls","description":"Ancient Jewish manuscripts of the Second Temple period, dated from the 3rd century BCE to the 1st century CE and found in caves near Qumran between 1946…","url":"https://the-epoch-institute.org/work/dead-sea-scrolls","mainEntityOfPage":"https://the-epoch-institute.org/work/dead-sea-scrolls","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Dead Sea Scrolls","sameAs":["https://en.wikipedia.org/wiki/Dead_Sea_Scrolls","https://www.wikidata.org/wiki/Q145780"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/dead-sea-scrolls.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Dead Sea Scrolls</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Dead%20Sea%20Scrolls.png" alt="Dead Sea Scrolls" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · Ancient Near East</p>
+        <h1 class="profile-detail-name">Dead Sea Scrolls</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 250 BCE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val">Jewish scribes of the <a class="enc-link" href="/encyclopedia/temple-in-jerusalem">Second Temple</a> period; long associated with the <a class="enc-link" href="/encyclopedia/essenes">Essenes</a> at Khirbet Qumran, though some scholars attribute them to Sadducee priests, <a class="enc-link" href="/encyclopedia/jerusalem">Jerusalem</a> libraries or other Jewish groups</span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">About 15,000 scrolls and fragments from 981 <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a>, mostly in <a class="enc-link" href="/encyclopedia/hebrew">Hebrew</a>, some in <a class="enc-link" href="/encyclopedia/aramaic">Aramaic</a> and Greek; written mainly on parchment, some on <a class="enc-link" href="/encyclopedia/papyrus">papyrus</a> and one on copper</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">Almost all in the Shrine of the Book at the Israel Museum in <a class="enc-link" href="/encyclopedia/jerusalem">Jerusalem</a>; part of the collection, with the Copper Scroll, at The Jordan Museum in <a class="enc-link" href="/encyclopedia/amman">Amman</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">The Great Isaiah Scroll; the oldest <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a> of the <a class="enc-link" href="/encyclopedia/hebrew-bible">Hebrew Bible</a>; the Community Rule and War Scroll; the Qumran–Essene hypothesis; Cave 4's 15,000 fragments; the long delays in publication; disputed ownership</span></div>
+        </div>
+        <p class="empire-meta">5 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The scrolls pushed the oldest known <a class="enc-link" href="/encyclopedia/hebrew">Hebrew</a> biblical <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a> back more than a millennium and showed both the stability of the Masoretic tradition and a fluid text before about 100 CE.</li><li>About 40% are copies of canonical scriptures, about 30% other <a class="enc-link" href="/encyclopedia/temple-in-jerusalem">Second Temple</a> texts such as Enoch and Jubilees, and the rest sectarian works such as the Community Rule.</li><li>Who wrote them is debated: the Qumran–Essene theory held almost universally until the 1990s is now challenged by Sadducee, <a class="enc-link" href="/encyclopedia/jerusalem">Jerusalem</a> and other origins.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The Temple Scroll from Cave 11, by far the longest, measures 8.15 metres, and its original length may have been over 8.75 metres.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">1946</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/bedouin">Bedouin</a> shepherds found the first seven scrolls in jars in what became Cave 1, between November 1946 and February 1947</span></li><li><span class="rf-year">1948</span><span class="rf-text">Millar Burrows of the American Schools of Oriental Research announced the discovery</span></li><li><span class="rf-year">1952</span><span class="rf-text">Cave 4, by far the most productive of the caves, was found and excavated</span></li><li><span class="rf-year">1954</span><span class="rf-text">Four scrolls advertised in The Wall Street Journal were bought for Israel for $250,000</span></li><li><span class="rf-year">1956</span><span class="rf-text">Cave 11 yielded the last fragments found near Qumran, among them the Temple Scroll</span></li><li><span class="rf-year">1965</span><span class="rf-text">The collection moved to the newly built Shrine of the Book in <a class="enc-link" href="/encyclopedia/jerusalem">Jerusalem</a></span></li><li><span class="rf-year">1991</span><span class="rf-text">A Facsimile Edition and the opening of the Huntington Library's photographs ended restricted access</span></li><li><span class="rf-year">2009</span><span class="rf-text">The 40th and final volume of Discoveries in the Judaean Desert was published</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The scrolls come from the late <a class="enc-link" href="/encyclopedia/temple-in-jerusalem">Second Temple</a> period of Jewish history. Scholarly consensus dates them between the 3rd century BCE and the 1st century CE, and bronze coins found at the same sites run from <a class="enc-link" href="/encyclopedia/john-hyrcanus">John Hyrcanus</a>, ruler of Hasmonean Judea from 135 to 104 BCE, to the First Jewish–Roman War of 66 to 73 CE. The eleven Qumran caves lie near Khirbet Qumran, a Hellenistic-period Jewish settlement about 1.5 kilometres from the north-western shore of the <a class="enc-link" href="/encyclopedia/dead-sea">Dead Sea</a>. Storing worn-out sacred <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a> in jars or caves is related to the ancient Jewish custom of genizah.</p><p>Who produced them is much debated. The Qumran–Essene hypothesis of Roland de Vaux and Józef Milik, almost universally held until the 1990s, points to likenesses between the Community Rule and <a class="enc-link" href="/encyclopedia/josephus">Josephus</a>'s account of the <a class="enc-link" href="/encyclopedia/essenes">Essenes</a>, inkwells in a room de Vaux called the scriptorium, ritual baths, and <a class="enc-link" href="/encyclopedia/pliny-the-elder">Pliny the Elder</a>'s report of Essenes near the Dead Sea. Lawrence Schiffman has argued for Zadokite priests, citing the purity laws of 4QMMT. Karl Heinrich Rengstorf and Norman Golb proposed libraries in <a class="enc-link" href="/encyclopedia/jerusalem">Jerusalem</a>, and some archaeologists see Qumran as a Hasmonean fort.</p></div>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p>Researchers have assembled 981 <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a> from 11 caves. About 40% are copies of texts from the <a class="enc-link" href="/encyclopedia/hebrew">Hebrew</a> scriptures; there are parts of every book of the <a class="enc-link" href="/encyclopedia/hebrew-bible">Hebrew Bible</a> except Esther, and of Tobit, Sirach, Baruch 6 and Psalm 151. About 30% are <a class="enc-link" href="/encyclopedia/temple-in-jerusalem">Second Temple</a> texts that were not canonised, such as the Book of Enoch, Jubilees and Psalms 152 to 155. The rest are previously unknown sectarian works that describe the rules and beliefs of a group within <a class="enc-link" href="/encyclopedia/judaism">Judaism</a>, such as the Community Rule, the War Scroll, the Pesher on Habakkuk and the Rule of the Blessing.</p><p>Cave 1 held the original seven scrolls: the Great Isaiah Scroll, a second copy of Isaiah, the Community Rule, the Pesher on Habakkuk, the War Scroll, the <a class="enc-link" href="/encyclopedia/thanksgiving">Thanksgiving</a> Hymns and the Genesis Apocryphon. Cave 4 produced about 90% of the material, some 15,000 fragments from 500 texts, with tefillin and mezuzot. Cave 3 gave the Copper Scroll, and Cave 11 the Temple Scroll, which <a class="enc-link" href="/encyclopedia/yigael-yadin">Yigael Yadin</a> called "The <a class="enc-link" href="/encyclopedia/torah">Torah</a> According to the <a class="enc-link" href="/encyclopedia/essenes">Essenes</a>" and Hartmut Stegemann thought of no exceptional significance. Most texts are in Hebrew, some in <a class="enc-link" href="/encyclopedia/aramaic">Aramaic</a> and a few in Greek.</p></div>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <div class="profile-section-body"><p>Most texts are written on parchment made from animal hide, about 85.5 to 90.5% of the scrolls, with <a class="enc-link" href="/encyclopedia/papyrus">papyrus</a> making up 8 to 13% and sheets of copper and <a class="enc-link" href="/encyclopedia/tin">tin</a> about 1.5%. Tests in <a class="enc-link" href="/encyclopedia/sicily">Sicily</a> on water used in the parchment suggested that some of it was made in the Qumran area. DNA testing by the Israel Antiquities Authority suggests a possible hierarchy of importance, with goat and calf hide used for more significant texts than gazelle or ibex.</p><p>The black ink is carbon black, mostly soot from <a class="enc-link" href="/encyclopedia/olive-oil">olive oil</a> lamps, thinned with honey, oil, vinegar and water and sometimes strengthened with galls; a red ink of cinnabar occurs only four times. The writers used reed pens. Palaeographers such as Cross and Avigad dated fragments from 225 BCE to 50 CE by their letter forms. Radiocarbon tests, first on linen in 1950, gave VanderKam and Flint "strong reason" to place most <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a> in the last two centuries BCE and the 1st century CE. A study of 2025 led by Mladen Popović, using radiocarbon dates and an AI model called Enoch, proposed older dates for some, placing a Daniel fragment between 230 and 160 BCE.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <div class="profile-section-body"><p>John C. Trever of the American Schools of Oriental Research compared the script of the first scrolls with the Nash <a class="enc-link" href="/encyclopedia/papyrus">Papyrus</a>, then the oldest known biblical <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a>, and the discovery was announced in April 1948. For scholars of the <a class="enc-link" href="/encyclopedia/hebrew-bible">Hebrew Bible</a> the central question was whether the scrolls would confirm or undermine the Masoretic text, whose oldest manuscripts dated from about the 9th and 10th centuries CE. Millar Burrows stressed their agreement with the Masoretic tradition; Paul Kahle stressed the variant readings, and Burrows came to accept them as the second point of importance.</p><p>Manuscripts of Exodus and Samuel from Cave 4 differ greatly from the traditional text, leading scholars to rethink the theory of three manuscript families. Interpreters have read the scrolls in many ways: José O'Callaghan argued that fragment 7Q5 preserves Mark 6:52–53, and Robert Eisenman linked some texts to the early Christian community. Publication was slow, controlled by a small editorial team headed by John Strugnell, and scholars such as Norman Golb and the writer Hershel Shanks campaigned for decades for open access, which came in 1991.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <div class="profile-section-body"><p>The dry climate, untanned parchment, low airflow in the caves and storage in clay jars preserved the scrolls. After discovery they deteriorated faster: adhesive tape damaged them in the late 1940s and early 1950s, fragments lay between window glass at the <a class="enc-link" href="/encyclopedia/palestine">Palestine</a> Archaeological Museum in East <a class="enc-link" href="/encyclopedia/jerusalem">Jerusalem</a>, and storage in a damp bank vault in <a class="enc-link" href="/encyclopedia/amman">Amman</a> during the <a class="enc-link" href="/encyclopedia/suez-crisis">Suez Crisis</a> brought mildew. By 1958 up to 5% of some scrolls had perished. In 1991 the Israel Antiquities Authority set up a climate-controlled laboratory.</p><p>Najib Albina's infrared photographs of 1952 to 1967 are often considered the best record of the fragments before further decay. NASA's Jet Propulsion Laboratory applied multispectral imaging from 1993, and the Israel Museum and Google put high-resolution images online from 2011. Ownership is contested: the scrolls were mostly found after the Jordanian annexation of the <a class="enc-link" href="/encyclopedia/west-bank">West Bank</a> and came under Israeli control after the 1967 war, and Jordan and the Palestinian Authority dispute Israel's custody, while Israel's claim rests on historical and religious grounds. Forgeries have appeared since 2002; in 2020 the Museum of the <a class="enc-link" href="/encyclopedia/bible">Bible</a> found all 16 of its fragments to be modern fakes.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>The scrolls cast new light on the emergence of Rabbinic <a class="enc-link" href="/encyclopedia/judaism">Judaism</a> and of <a class="enc-link" href="/encyclopedia/christianity">Christianity</a>. They showed that the Masoretic tradition was transmitted with remarkable overall stability from the 2nd century BCE, while revealing a fluid biblical text before its standardisation around 100 CE. Scholars now also recognise that some non-biblical works were composed earlier than the community that kept them, while some biblical books were still being written or edited.</p><p>Their publication shaped scholarship and law. The 40 volumes of Discoveries in the Judaean Desert appeared from Oxford University Press between 1955 and 2009, accelerated under Emanuel Tov from 1990. The case of Qimron v. Shanks, decided for <a class="enc-link" href="/encyclopedia/elisha">Elisha</a> Qimron in 1993 and upheld by Israel's Supreme Court in 2000, held that a scholar's deciphered text can be protected by copyright while the scrolls themselves are not. The Shrine of the Book has displayed them since 1965, and searches in the Judaean Desert still yield finds, such as a twelfth cave in 2017 and Greek fragments of Zechariah and Nahum in 2021, and the project Tracing Scribes and Scrolls, announced in 2026, is studying 250 items with artificial intelligence.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Dead Sea Scrolls are some 15,000 fragments of Jewish <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a> from the 3rd century BCE to the 1st century CE, found near Qumran between 1946 and 1956. They include the oldest surviving copies of biblical books and previously unknown sectarian texts, whose authors are debated, and their custody remains disputed between Israel, Jordan and the Palestinian Authority.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="dead-sea-scrolls"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The collection moved to the newly built Shrine of the Book in Jerusalem","o":["1948","1965","1946","1991"],"a":1,"w":"1965: The collection moved to the newly built Shrine of the Book in Jerusalem."},{"p":"Which came first?","q":"","o":["A Facsimile Edition and the opening of the Huntington Library's photographs ended restricted access","Cave 4, by far the most productive of the caves, was found and excavated"],"a":1,"w":"1991: A Facsimile Edition and the opening of the Huntington Library's photographs ended restricted access · 1952: Cave 4, by far the most productive of the caves, was found and excavated."},{"p":"In which year?","q":"Millar Burrows of the American Schools of Oriental Research announced the discovery","o":["1956","1946","2009","1948"],"a":3,"w":"1948: Millar Burrows of the American Schools of Oriental Research announced the discovery."},{"p":"Which came first?","q":"","o":["A Facsimile Edition and the opening of the Huntington Library's photographs ended restricted access","Cave 11 yielded the last fragments found near Qumran, among them the Temple Scroll"],"a":1,"w":"1991: A Facsimile Edition and the opening of the Huntington Library's photographs ended restricted access · 1956: Cave 11 yielded the last fragments found near Qumran, among them the Temple Scroll."},{"p":"In which year?","q":"A Facsimile Edition and the opening of the Huntington Library's photographs ended restricted access","o":["1965","1952","1956","1991"],"a":3,"w":"1991: A Facsimile Edition and the opening of the Huntington Library's photographs ended restricted access."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Roland Kenneth Harrison, The Dead Sea Scrolls: An Introduction (Harper, 1961)</li>
+        <li>Edna Ullmann-Margalit, Out of the Cave: A Philosophical Inquiry into the Dead Sea Scrolls Research (Harvard University Press, 2006)</li>
+        <li>Angela Kim Harkins and Mladen Popović (eds.), &quot;Religious Experience and the Dead Sea Scrolls&quot;, Dead Sea Discoveries 22.3 (2015)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/terracotta-army"><img src="/logos/thumbs/Terracotta%20Army.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Terracotta Army</span><span class="related-card-dates">c. 246 BCE – present</span></a><a class="related-card" href="/work/rosetta-stone"><img src="/logos/thumbs/Rosetta%20Stone.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Rosetta Stone</span><span class="related-card-dates">196 BCE – present</span></a><a class="related-card" href="/work/mahabharata"><img src="/logos/thumbs/Mahabharata.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mahabharata</span><span class="related-card-dates">c. 400 BCE – present</span></a><a class="related-card" href="/work/petra"><img src="/logos/thumbs/Petra.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Petra</span><span class="related-card-dates">c. 400 BCE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/tao-te-ching"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Tao%20Te%20Ching.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tao Te Ching</span><span class="related-card-dates">c. 400 BCE – present</span></a><a class="related-card" href="/work/terracotta-army"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Terracotta%20Army.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Terracotta Army</span><span class="related-card-dates">c. 246 BCE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Dead Sea Scrolls",slug="dead-sea-scrolls",url="https://the-epoch-institute.org/work/dead-sea-scrolls";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Dead Sea Scrolls on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/dead-sea-scrolls #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/dead-sea-scrolls"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Dead Sea Scrolls",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Dead Sea Scrolls",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

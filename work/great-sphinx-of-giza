@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Great Sphinx of Giza: History, Meaning and Legacy</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Great Sphinx of Giza is a limestone statue of a resting sphinx carved from the bedrock of the Giza Plateau, probably under Khufu or Khafre in the Old…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Great Sphinx of Giza: History, Meaning and Legacy">
+<meta property="og:description" content="The Great Sphinx of Giza is a limestone statue of a resting sphinx carved from the bedrock of the Giza Plateau, probably under Khufu or Khafre in the Old…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/great-sphinx-of-giza">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/great-sphinx-of-giza.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/great-sphinx-of-giza.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/great-sphinx-of-giza">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Great Sphinx of Giza"}]},{"@type":"Article","headline":"Great Sphinx of Giza","description":"The Great Sphinx of Giza is a limestone statue of a resting sphinx carved from the bedrock of the Giza Plateau, probably under Khufu or Khafre in the Old…","url":"https://the-epoch-institute.org/work/great-sphinx-of-giza","mainEntityOfPage":"https://the-epoch-institute.org/work/great-sphinx-of-giza","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Great Sphinx of Giza"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/great-sphinx-of-giza.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Great Sphinx of Giza</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Great%20Sphinx%20of%20Giza.png" alt="Great Sphinx of Giza" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · Egypt &amp; North Africa</p>
+        <h1 class="profile-detail-name">Great Sphinx of Giza</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 2550 BCE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia/egyptians">Egyptians</a> of the Old Kingdom, probably in the reign of <a class="enc-link" href="/encyclopedia/khufu">Khufu</a> or <a class="enc-link" href="/encyclopedia/khafre">Khafre</a>; whose face it shows (Khufu, Djedefre or Khafre) remains in dispute</span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">A monolith carved from the limestone bedrock of the Mokattam Formation, 73 m long from paw to tail, 20 m high and 19 m wide at the rear haunches, facing east</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">On the <a class="enc-link" href="/encyclopedia/giza">Giza</a> Plateau, on the west bank of the <a class="enc-link" href="/encyclopedia/nile">Nile</a> in Giza, <a class="enc-link" href="/encyclopedia/egypt">Egypt</a>, part of the Memphite Necropolis World Heritage Site</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">the oldest known monumental sculpture in <a class="enc-link" href="/encyclopedia/egypt">Egypt</a>; a lion's body with a human head; the missing nose; the Dream Stele of <a class="enc-link" href="/encyclopedia/thutmose-iv">Thutmose IV</a>; centuries buried in sand; disputes over its date and likeness</span></div>
+        </div>
+        <p class="empire-meta">5 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Archaeological evidence places the carving between 2600 and 2500 BC, for <a class="enc-link" href="/encyclopedia/khufu">Khufu</a> or his son <a class="enc-link" href="/encyclopedia/khafre">Khafre</a>, though no contemporary inscription names its maker.</li><li>Its body was cut from the quarry bedrock of the plateau, and the stone taken from around it built a temple in front that was never finished.</li><li>Drifting sand buried it again and again, and <a class="enc-link" href="/encyclopedia/pharaoh">pharaohs</a>, Roman officials and modern excavators cleared it in turn.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Its nose was not shot off by <a class="enc-link" href="/encyclopedia/napoleon">Napoleon</a>'s troops. The face shows marks of rods or chisels hammered in at the bridge and below the nostril, and the nose has been documented as damaged since at least the 10th century.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">2600–2500 BC</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/sphinx">Sphinx</a> is carved from the bedrock of the <a class="enc-link" href="/encyclopedia/giza">Giza</a> Plateau for <a class="enc-link" href="/encyclopedia/khufu">Khufu</a> or <a class="enc-link" href="/encyclopedia/khafre">Khafre</a></span></li><li><span class="rf-year">c. 1400 BC</span><span class="rf-text">The young <a class="enc-link" href="/encyclopedia/thutmose-iv">Thutmose IV</a> digs out the front paws and sets up the Dream Stele between them</span></li><li><span class="rf-year">1st century AD</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/sphinx">Sphinx</a> is cleared of sand in honour of <a class="enc-link" href="/encyclopedia/nero">Nero</a> and a monumental stairway is built before its paws</span></li><li><span class="rf-year">166 AD</span><span class="rf-text">A stela commemorates the restoration of the retaining walls around the <a class="enc-link" href="/encyclopedia/sphinx">Sphinx</a></span></li><li><span class="rf-year">1378</span><span class="rf-text">According to <a class="enc-link" href="/encyclopedia/al-maqrizi">al-Maqrizi</a>, the <a class="enc-link" href="/encyclopedia/sufism">Sufi</a> Muhammad Sa'im al-Dahr defaces the <a class="enc-link" href="/encyclopedia/sphinx">Sphinx</a></span></li><li><span class="rf-year">1817</span><span class="rf-text">The first modern archaeological dig, under Giovanni Battista Caviglia, uncovers the chest completely</span></li><li><span class="rf-year">1931</span><span class="rf-text">Egyptian government engineers repair the head with a concrete collar after part of the headdress fell in 1926</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The <a class="enc-link" href="/encyclopedia/sphinx">Sphinx</a> stands on the <a class="enc-link" href="/encyclopedia/giza">Giza</a> Plateau, on the west bank of the <a class="enc-link" href="/encyclopedia/nile">Nile</a>, as part of the Memphite Necropolis of the Old Kingdom. The archaeological evidence suggests it was created between 2600 and 2500 BC for the king <a class="enc-link" href="/encyclopedia/khufu">Khufu</a>, builder of the Great Pyramid, or his son <a class="enc-link" href="/encyclopedia/khafre">Khafre</a>, builder of the second pyramid. The plateau's bedrock served as the quarry for the pyramids and the other monuments there, and the Sphinx was carved from the same rock.</p><p>Its relation to Khafre's buildings is the main clue to its date. To build the temple in front of it, the northern wall of the Khafre Valley Temple had to be taken down, so Khafre's funerary complex came first; the south wall of the enclosure also suggests that the causeway from Khafre's pyramid to his Valley Temple already existed. Selim Hassan, writing in 1949, gave the credit to Khafre, with the reservation that not one contemporary inscription connects the Sphinx with him. The original name its makers gave it is unknown, and the scarcity of Old Kingdom material suggests no cult of the Sphinx was established at the time. The lower base of the Sphinx temple also shows that it does not predate the Valley Temple.</p></div>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p>The Great <a class="enc-link" href="/encyclopedia/sphinx">Sphinx</a> is a statue of a resting sphinx, a mythical creature with the head of a human and the body of a lion. It faces east, towards the rising sun, in keeping with the Egyptian solar cult. It is 73 metres long from paw to tail, 20 metres high from the base to the top of the head and 19 metres wide at its rear haunches. The head wears the nemes headdress, and fragments of a ceremonial pharaonic beard found between the forepaws were most likely part of the original carving.</p><p>Like most Egyptian sphinxes it has a man's head and no wings. Residue of red pigment survives on the face, and traces of yellow and blue elsewhere led Mark Lehner to suggest that the monument was once brightly painted; <a class="enc-link" href="/encyclopedia/pliny-the-elder">Pliny the Elder</a> also described the face as coloured red. Scholars believe the face was carved to represent <a class="enc-link" href="/encyclopedia/khufu">Khufu</a> or one of his sons, Djedefre or <a class="enc-link" href="/encyclopedia/khafre">Khafre</a>, but no consensus has been reached. In front of the statue stand the remains of the unfinished Sphinx temple, built from the stone cut from around its body. Many <a class="enc-link" href="/encyclopedia/new-kingdom-of-egypt">New Kingdom</a> stelae show the Sphinx wearing a crown, and a hole in its head may have anchored one.</p></div>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <div class="profile-section-body"><p>The <a class="enc-link" href="/encyclopedia/sphinx">Sphinx</a> is a monolith carved directly from the limestone bedrock of the Eocene-aged Mokattam Formation. The Egyptian geologist Farouk El-Baz has suggested that the head may have been carved first out of a natural yardang, a ridge of rock shaped by the wind, and that the ditch around the body was quarried out later to free the full figure. The blocks cut from around the body were used to build the temple in front of it, but neither the enclosure nor the temple was completed.</p><p>The layers of rock differ in hardness. The legs and lowest part of the body are solid rock, the softer middle layer has disintegrated badly, and the head was cut from a harder limestone that has resisted erosion better. Egyptologists have argued over the date and maker: Gaston Maspero thought the Sphinx predated <a class="enc-link" href="/encyclopedia/khafre">Khafre</a>, Ludwig Borchardt assigned it to the <a class="enc-link" href="/encyclopedia/middle-francia">Middle Kingdom</a>, Rainer Stadelmann argued from the headdress and beard for <a class="enc-link" href="/encyclopedia/khufu">Khufu</a>, and in 2004 Vassil Dobrev proposed Djedefre, a view Nigel Strudwick found not implausible but unconvincing. The geologist Colin Reader has argued from erosion of the enclosure that it may be a few centuries older than the pyramids.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <div class="profile-section-body"><p>Some time around the <a class="enc-link" href="/encyclopedia/first-intermediate-period">First Intermediate Period</a> the <a class="enc-link" href="/encyclopedia/giza">Giza</a> Necropolis was abandoned and sand buried the <a class="enc-link" href="/encyclopedia/sphinx">Sphinx</a> to its shoulders. In the <a class="enc-link" href="/encyclopedia/new-kingdom-of-egypt">New Kingdom</a> it was revered as the solar god Hor-em-akhet, <a class="enc-link" href="/encyclopedia/horus">Horus</a> of the Horizon, called Harmachis by the <a class="enc-link" href="/encyclopedia/greeks">Greeks</a>. <a class="enc-link" href="/encyclopedia/thutmose-iv">Thutmose IV</a>'s Dream Stele tells how, as a prince, he slept in its shadow and the god promised him the kingship if he cleared away the sand; Amenhotep II built a temple to Hor-em-akhet north-east of the Sphinx. The name Sphinx was given to it in classical antiquity, after the Greek mythological beast.</p><p>In Graeco-Roman times Giza had become a place visited for its antiquities, and Roman emperors came to see the Sphinx; the last emperor connected with it is <a class="enc-link" href="/encyclopedia/septimius-severus">Septimius Severus</a>, around 200 AD. Some non-<a class="enc-link" href="/encyclopedia/egyptians">Egyptians</a> identified it with the god Hauron, the Harranians saw it as the burial place of Hermes Trismegistus, and Arab authors described it as a talisman guarding the land; <a class="enc-link" href="/encyclopedia/al-maqrizi">al-Maqrizi</a> called it the talisman of the <a class="enc-link" href="/encyclopedia/nile">Nile</a> on which locals believed the flood depended. From the 16th to the 19th century European travellers often described and drew it with a woman's face and breast.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <div class="profile-section-body"><p>The <a class="enc-link" href="/encyclopedia/sphinx">Sphinx</a> was buried and cleared many times. <a class="enc-link" href="/encyclopedia/thutmose-iv">Thutmose IV</a> dug out its paws around 1400 BC, <a class="enc-link" href="/encyclopedia/ramesses-ii">Ramesses II</a> may have excavated it again, and it was cleared in the first century AD in honour of <a class="enc-link" href="/encyclopedia/nero">Nero</a> and the governor Tiberius Claudius Balbilus. After the fall of Roman power the sand covered it once more. In 1817 Giovanni Battista Caviglia uncovered the chest, by 1887 the chest, paws and altar were visible, and Émile Baraize cleared the enclosure in the 1920s and 1930s.</p><p>How the nose was lost is unknown, but the face shows marks of rods or chisels and the nose has been documented as damaged since at least the 10th century; the popular story that <a class="enc-link" href="/encyclopedia/napoleon">Napoleon</a>'s troops shot it off is a myth. <a class="enc-link" href="/encyclopedia/al-maqrizi">Al-Maqrizi</a> attributed the damage to the <a class="enc-link" href="/encyclopedia/sufism">Sufi</a> Muhammad Sa'im al-Dahr in 1378. Treasure hunters dug shafts into and under the body, and in 1837 John Shae Perring drilled into its back for Howard Vyse; a great natural fissure through its waist had been excavated by Auguste Mariette in 1853. Part of the headdress fell in 1926; the 1931 repair added a concrete collar, and the base and body were restored in the 1980s and again in the 1990s.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>The Great <a class="enc-link" href="/encyclopedia/sphinx">Sphinx</a> is part of the Memphite Necropolis, a <a class="enc-link" href="/encyclopedia/unesco-world-heritage-site">UNESCO World Heritage Site</a>, and over the centuries writers and travellers have recorded their impressions of it, often mixing description with romance and mystery. Its <a class="enc-link" href="/encyclopedia/new-kingdom-of-egypt">New Kingdom</a> worship as Hor-em-akhet, its classical name and its medieval Arabic name Abu al-Hawl, father of terror, show how each age gave it a meaning of its own; medieval Arab writers also called it Belhib, from a name of the Canaanite god Hauron.</p><p>It has also drawn ideas that mainstream scholarship rejects for lack of evidence. The Orion correlation theory claims it was aligned with the constellation of Leo around 10,500 BC; the water erosion hypothesis of René Schwaller de Lubicz, John Anthony West and Robert M. Schoch dates it before <a class="enc-link" href="/encyclopedia/khafre">Khafre</a> from supposed rain weathering; and Edgar Cayce predicted in the 1930s that a Hall of Records from Atlantis would be found beneath it in 1998. These are considered pseudoarchaeology. Until the early 20th century its face was also discussed in terms of racial concepts that are now outdated. Among Egyptologists, the date and the identity of its face remain open questions.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Great <a class="enc-link" href="/encyclopedia/sphinx">Sphinx</a> of <a class="enc-link" href="/encyclopedia/giza">Giza</a> is a lion with a human head carved from the bedrock of the Giza Plateau, probably for <a class="enc-link" href="/encyclopedia/khufu">Khufu</a> or <a class="enc-link" href="/encyclopedia/khafre">Khafre</a> between 2600 and 2500 BC. Worshipped in the <a class="enc-link" href="/encyclopedia/new-kingdom-of-egypt">New Kingdom</a> as <a class="enc-link" href="/encyclopedia/horus">Horus</a> of the Horizon and repeatedly buried by sand, it has been cleared and restored many times and still raises debate over its date and likeness.</em></p>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/great-pyramid-of-giza"><img src="/logos/thumbs/Great%20Pyramid%20of%20Giza.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Great Pyramid of Giza</span><span class="related-card-dates">c. 2600 BCE – present</span></a><a class="related-card" href="/work/stonehenge"><img src="/logos/thumbs/Stonehenge.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Stonehenge</span><span class="related-card-dates">c. 3100 BCE – present</span></a><a class="related-card" href="/work/epic-of-gilgamesh"><img src="/logos/thumbs/Epic%20of%20Gilgamesh.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Epic of Gilgamesh</span><span class="related-card-dates">c. 1800 BCE – present</span></a><a class="related-card" href="/work/code-of-hammurabi"><img src="/logos/thumbs/Code%20of%20Hammurabi.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Code of Hammurabi</span><span class="related-card-dates">c. 1753 BCE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/great-pyramid-of-giza"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Great%20Pyramid%20of%20Giza.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Great Pyramid of Giza</span><span class="related-card-dates">c. 2600 BCE – present</span></a><a class="related-card" href="/work/epic-of-gilgamesh"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Epic%20of%20Gilgamesh.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Epic of Gilgamesh</span><span class="related-card-dates">c. 1800 BCE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Great Sphinx of Giza",slug="great-sphinx-of-giza",url="https://the-epoch-institute.org/work/great-sphinx-of-giza";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Great Sphinx of Giza on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/great-sphinx-of-giza #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/great-sphinx-of-giza"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Great Sphinx of Giza",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Great Sphinx of Giza",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

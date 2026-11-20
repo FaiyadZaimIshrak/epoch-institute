@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Book of the Dead: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Book of the Dead is an ancient Egyptian funerary text of magic spells, written mostly on papyrus from the beginning of the New Kingdom to around 50…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Book of the Dead: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Book of the Dead is an ancient Egyptian funerary text of magic spells, written mostly on papyrus from the beginning of the New Kingdom to around 50…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/book-of-the-dead">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/book-of-the-dead.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/book-of-the-dead.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/book-of-the-dead">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Book of the Dead"}]},{"@type":"Article","headline":"Book of the Dead","description":"The Book of the Dead is an ancient Egyptian funerary text of magic spells, written mostly on papyrus from the beginning of the New Kingdom to around 50…","url":"https://the-epoch-institute.org/work/book-of-the-dead","mainEntityOfPage":"https://the-epoch-institute.org/work/book-of-the-dead","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Book of the Dead"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/book-of-the-dead.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Book of the Dead</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Book%20of%20the%20Dead.png" alt="Book of the Dead" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · Egypt &amp; North Africa</p>
+        <h1 class="profile-detail-name">Book of the Dead</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 1700 BCE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val">Written by many priests over about 1,000 years, drawing on the older <a class="enc-link" href="/encyclopedia/pyramid-texts">Pyramid Texts</a> and Coffin Texts; each copy made to order by scribes and artists in funerary workshops</span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">A loose collection of some 192 known spells in hieroglyphic or <a class="enc-link" href="/encyclopedia/hieratic">hieratic</a> script, in black and red ink on <a class="enc-link" href="/encyclopedia/papyrus">papyrus</a> scrolls from about 1 m to 40 m long, often illustrated with vignettes</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">Copies in many museums, among them the <a class="enc-link" href="/encyclopedia/papyrus">Papyrus</a> of Ani and the Papyrus of Hunefer in the <a class="enc-link" href="/encyclopedia/british-museum">British Museum</a> and the Book of the Dead of Kha in the Museo Egizio, <a class="enc-link" href="/encyclopedia/turin">Turin</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">Spells of Coming Forth by Day; the Weighing of the Heart in Spell 125; the Negative Confession; <a class="enc-link" href="/encyclopedia/osiris">Osiris</a>, <a class="enc-link" href="/encyclopedia/anubis">Anubis</a> and Ammit the Devourer; the Field of Reeds; the <a class="enc-link" href="/encyclopedia/papyrus">Papyrus</a> of Ani</span></div>
+        </div>
+        <p class="empire-meta">6 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>There was no single Book of the Dead: each <a class="enc-link" href="/encyclopedia/papyrus">papyrus</a> held its own selection of spells, and a fixed order appeared only with the Saite recension of the 25th and 26th Dynasties.</li><li>Its spells set out Egyptian beliefs about death: preserving the body, heart, name, ba and shadow, passing the guardians of the Duat and being judged before <a class="enc-link" href="/encyclopedia/osiris">Osiris</a>.</li><li>Named by Karl Richard Lepsius in 1842, it remains a vital source for Egyptian ideas of the afterlife and is studied today by the Book of the Dead Project in <a class="enc-link" href="/encyclopedia/bonn">Bonn</a>.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Many copies were prefabricated in workshops with spaces left for the owner's name; in the <a class="enc-link" href="/encyclopedia/papyrus">Papyrus</a> of Ani the name &quot;Ani&quot; is in a different hand from the rest and is in places mis-spelt or left out.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 1700 BC</span><span class="rf-text">The Book of the Dead first develops in <a class="enc-link" href="/encyclopedia/thebes-greece">Thebes</a>, its earliest spells known from the coffin of Queen Mentuhotep</span></li><li><span class="rf-year">c. 1550 BC</span><span class="rf-text">From the beginning of the <a class="enc-link" href="/encyclopedia/new-kingdom-of-egypt">New Kingdom</a> the spells are written mainly on <a class="enc-link" href="/encyclopedia/papyrus">papyrus</a> scrolls</span></li><li><span class="rf-year">c. 1475 BC</span><span class="rf-text">Spell 125, the Weighing of the Heart, is first known, from the reign of <a class="enc-link" href="/encyclopedia/hatshepsut">Hatshepsut</a> and <a class="enc-link" href="/encyclopedia/thutmose-iii">Thutmose III</a></span></li><li><span class="rf-year">c. 600 BC</span><span class="rf-text">The spells are ordered and numbered consistently in the Saite recension</span></li><li><span class="rf-year">1st century BC</span><span class="rf-text">The last use of the Book of the Dead</span></li><li><span class="rf-year">1842</span><span class="rf-text">Karl Richard Lepsius publishes a translation, names it Todtenbuch and numbers its spells</span></li><li><span class="rf-year">1888</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/papyrus">Papyrus</a> of Ani is acquired by E. A. Wallis Budge and taken to the <a class="enc-link" href="/encyclopedia/british-museum">British Museum</a></span></li><li><span class="rf-year">2023</span><span class="rf-text">Sections of the Book of the Dead are found on a 16-metre <a class="enc-link" href="/encyclopedia/papyrus">papyrus</a> near the <a class="enc-link" href="/encyclopedia/pyramid-of-djoser">Step Pyramid of Djoser</a></span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The Book of the Dead grew out of a tradition of funerary texts reaching back to the Old Kingdom. The first were the <a class="enc-link" href="/encyclopedia/pyramid-texts">Pyramid Texts</a>, carved on the walls of burial chambers from the pyramid of King Unas of the 5th Dynasty, around 2400 BC, and reserved for the <a class="enc-link" href="/encyclopedia/pharaoh">pharaoh</a> and later the queen. They aimed to help the dead king join the gods, above all his divine father Ra, in an afterlife then placed in the sky. By the end of the Old Kingdom regional governors and high officials had adopted them.</p><p>In the <a class="enc-link" href="/encyclopedia/middle-francia">Middle Kingdom</a> the Coffin Texts appeared, in a newer form of the language, with new spells and, for the first time, illustrations. Written mostly inside coffins, they were available to wealthy private people, a process described as the "democratization of the afterlife".</p><p>The Book of the Dead itself first developed in Thebes toward the beginning of the <a class="enc-link" href="/encyclopedia/second-intermediate-period">Second Intermediate Period</a>, around 1700 BC. Its earliest known spells appear on the coffin of Queen Mentuhotep of the 16th Dynasty, among older Pyramid and Coffin Texts. Some new spells claimed an older origin: the rubric to Spell 30B says that Prince Hordjedef found it in the reign of King <a class="enc-link" href="/encyclopedia/menkaure">Menkaure</a>, centuries before it is attested.</p></div>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p>The Egyptian name, rw nw prt m hrw, is translated as Spells of Coming Forth by Day. Some 192 spells are known, though no <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a> contains them all. Some give the dead mystical knowledge or identify them with the gods; others preserve and reunite the parts of the person, protect the dead from hostile forces or guide them past the obstacles of the underworld. The texts were magical as well as religious: the <a class="enc-link" href="/encyclopedia/egyptians">Egyptians</a> saw little distinction between the two, held that spoken and written words had creative power, and believed that knowing a thing's name gave power over it.</p><p>The spells describe the parts of a person to be kept: the body, the heart, the ka or life-force, the name, the ba that could "go forth by day" and the shadow, so that the dead might live on as an akh among the gods. The dead must pass gates and caverns guarded by armed creatures with names such as "He who dances in blood", pacified by the right spells. They might join Ra in his sun-barque or live in the Field of Reeds, where shabti figures did their labour.</p><p>In the Weighing of the Heart, shown in Spell 125, <a class="enc-link" href="/encyclopedia/anubis">Anubis</a> leads the dead before <a class="enc-link" href="/encyclopedia/osiris">Osiris</a>, they recite the Negative Confession, and their heart is weighed against Maat; a heart out of balance is eaten by Ammit, the Devourer.</p></div>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <div class="profile-section-body"><p>A Book of the Dead was produced to order by scribes, for people preparing for their own funerals or for relatives of the newly dead. Copies were expensive: one source gives the price of a scroll as one deben of <a class="enc-link" href="/encyclopedia/silver">silver</a>, perhaps half a labourer's annual pay. Many were prefabricated in funerary workshops, with spaces left for the owner's name.</p><p>Scrolls were made of joined sheets of <a class="enc-link" href="/encyclopedia/papyrus">papyrus</a>, from as short as 1 m to 40 m long. <a class="enc-link" href="/encyclopedia/new-kingdom-of-egypt">New Kingdom</a> copies were written in cursive hieroglyphs in columns separated by black lines, with illustrations framed above, below or between them; from the 21st Dynasty more copies are in <a class="enc-link" href="/encyclopedia/hieratic">hieratic</a>, in horizontal lines. Most of the text was in carbon-based black ink, with red ochre ink for spell titles, instructions and the names of dangerous beings such as Apep. Vignettes ranged from lavish colour with gold leaf to simple line drawings. Several scribes and artists often worked on one copy, and some books have empty spaces where pictures were never added.</p><p>The text changed over time. Lavish vignettes marked the 19th Dynasty; cheaper hieratic scrolls appeared in the Third Intermediate Period; and in the 25th and 26th Dynasties the spells were revised and, for the first time, ordered and numbered consistently in what is called the Saite recension.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <div class="profile-section-body"><p>The book was placed in the coffin or burial chamber of the dead. By the 17th Dynasty it was used not only by the royal family but by courtiers and officials, its spells then usually written on linen shrouds. Most later owners were also part of the elite: scribes, priests and officials. Early copies belonged roughly ten to men for every one to a woman, but in the Third Intermediate Period two were for women for every one for a man, and women owned about a third of the <a class="enc-link" href="/encyclopedia/hieratic">hieratic</a> papyri of the Late and Ptolemaic periods.</p><p>Some owners seem to have chosen the spells they thought most vital. Certain spells continued to be inscribed separately on tomb walls and sarcophagi, and spells concerning the heart were inscribed on scarabs. In the Late and Ptolemaic periods copies followed the Saite recension, increasingly abbreviated, while new texts such as the Book of Breathing came into use. The last use was in the 1st century BC, though some of its motifs survived into Roman times.</p><p>Egyptologists differ on its moral teaching. John Taylor sees a pragmatic approach in Spells 30B and 125, which stop the heart from bearing witness against its owner; Ogden Goelet holds that a moral life was essential; Geraldine Pinch argues that success depended on knowing the judges' true names.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <div class="profile-section-body"><p>The book's existence was known as early as the <a class="enc-link" href="/encyclopedia/middle-ages">Middle Ages</a>, long before it could be read, and because it came from tombs it was widely and wrongly thought to be an Egyptian equivalent of the <a class="enc-link" href="/encyclopedia/bible">Bible</a> or Qur'an. <a class="enc-link" href="/encyclopedia/napoleon">Napoleon</a>'s invasion of <a class="enc-link" href="/encyclopedia/egypt">Egypt</a> in 1798 encouraged European interest; in 1805 Jean-Marcel Cadet made the first publication of a copy, and <a class="enc-link" href="/encyclopedia/jean-francois-champollion">Champollion</a>'s decipherment of hieroglyphs followed in 1822.</p><p>In 1842 Karl Richard Lepsius published a translation of a Ptolemaic <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a>, coined the name Todtenbuch and introduced the spell numbering still in use. Édouard Naville produced a comparative edition between 1875 and 1886, and Samuel Birch of the <a class="enc-link" href="/encyclopedia/british-museum">British Museum</a> published the first extensive English translation in 1867. The <a class="enc-link" href="/encyclopedia/papyrus">Papyrus</a> of Ani, regarded as the finest surviving example, was found in <a class="enc-link" href="/encyclopedia/luxor">Luxor</a> in 1888 by <a class="enc-link" href="/encyclopedia/egyptians">Egyptians</a> trading in illegal antiquities and acquired by E. A. Wallis Budge for the British Museum, where it remains.</p><p>Copies are held in many museums, among them the British Museum, the Museo Egizio in <a class="enc-link" href="/encyclopedia/turin">Turin</a>, the Rijksmuseum van Oudheden in <a class="enc-link" href="/encyclopedia/leiden">Leiden</a> and the Royal Ontario Museum; the Joseph Smith Papyri survive only as fragments, many destroyed in modern times. In 2023 Egypt's Ministry of Antiquities announced sections on a 16-metre papyrus found near the <a class="enc-link" href="/encyclopedia/pyramid-of-djoser">Step Pyramid of Djoser</a>, now called the Waziri Papyrus I.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>The Book of the Dead is a vital source of information about Egyptian beliefs on death and the afterlife, and one of the few Egyptian religious texts with explicit moral content. For every "I have not" of the Negative Confession an unspoken "Thou shalt not" can be read, though it is less a revealed law, as the <a class="enc-link" href="/encyclopedia/ten-commandments">Ten Commandments</a> are held to be, than a divine enforcement of everyday morality.</p><p>Budge's hieroglyphic editions and English translations of the <a class="enc-link" href="/encyclopedia/papyrus">Papyrus</a> of Ani are still in wide circulation, though his translations are now considered inaccurate and out of date. Newer English translations were published by Raymond O. Faulkner in 1972 and Thomas George Allen in 1974, and further study has raised the count of known spells to 192. Paul Barguet's study of 1967 first showed common <a class="enc-link" href="/encyclopedia/theme-system">themes</a> within the texts, which Egyptologists had thought had no internal structure.</p><p>In the 1970s Ursula Rößler-Köhler began a working group at the University of <a class="enc-link" href="/encyclopedia/bonn">Bonn</a> that became the Book of the Dead Project, which keeps documentation and photographs of 80% of the surviving copies and fragments and publishes monograph and <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a> series. Hieroglyphic fonts and digital <a class="enc-link" href="/encyclopedia/printing-press">printing</a> have made publication cheaper, but much of the material in museums remains unpublished.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Book of the Dead, the Egyptian Spells of Coming Forth by Day, was a changing collection of some 192 funerary spells, developed from the Pyramid and Coffin Texts around 1700 BC and used until the 1st century BC. Its papyri, such as the <a class="enc-link" href="/encyclopedia/papyrus">Papyrus</a> of Ani, are a main source for Egyptian beliefs about death, judgment and the afterlife.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>John H. Taylor (ed.), Ancient Egyptian Book of the Dead: Journey through the afterlife (British Museum Press, 2010)</li>
+        <li>Erik Hornung, The Ancient Egyptian Books of the Afterlife, trans. D. Lorton (Cornell University Press, 1999)</li>
+        <li>Geraldine Pinch, Magic in Ancient Egypt (British Museum Press, 1994)</li>
+        <li>Thomas George Allen, The Book of the Dead or Going Forth by Day (University of Chicago Press, 1974)</li>
+        <li>Raymond O. Faulkner, The Ancient Egyptian Book of the Dead, ed. Carol Andrews (University of Texas Press, 1972)</li>
+        <li>Jan Assmann, Death and Salvation in Ancient Egypt, trans. David Lorton (Cornell University Press, 2005)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/code-of-hammurabi"><img src="/logos/thumbs/Code%20of%20Hammurabi.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Code of Hammurabi</span><span class="related-card-dates">c. 1753 BCE – present</span></a><a class="related-card" href="/work/epic-of-gilgamesh"><img src="/logos/thumbs/Epic%20of%20Gilgamesh.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Epic of Gilgamesh</span><span class="related-card-dates">c. 1800 BCE – present</span></a><a class="related-card" href="/work/great-sphinx-of-giza"><img src="/logos/thumbs/Great%20Sphinx%20of%20Giza.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Great Sphinx of Giza</span><span class="related-card-dates">c. 2550 BCE – present</span></a><a class="related-card" href="/work/great-pyramid-of-giza"><img src="/logos/thumbs/Great%20Pyramid%20of%20Giza.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Great Pyramid of Giza</span><span class="related-card-dates">c. 2600 BCE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/code-of-hammurabi"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Code%20of%20Hammurabi.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Code of Hammurabi</span><span class="related-card-dates">c. 1753 BCE – present</span></a><a class="related-card" href="/work/ramayana"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Ramayana.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ramayana</span><span class="related-card-dates">c. 750 BCE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Book of the Dead",slug="book-of-the-dead",url="https://the-epoch-institute.org/work/book-of-the-dead";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Book of the Dead on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/book-of-the-dead #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/book-of-the-dead"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Book of the Dead",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Book of the Dead",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>
