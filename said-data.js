@@ -546,7 +546,7 @@ var SAID = {p:[
 ["dong-zhuo","Dong Zhuo","d. 192","/images/encyclopedia/thumbs/dong-zhuo.jpg"],
 ["lope-de-vega","Lope de Vega","1562–1635","/images/encyclopedia/thumbs/lope-de-vega.jpg"],
 ["william-pitt-the-elder","William Pitt the Elder","1708–1778","/images/encyclopedia/thumbs/william-pitt-the-elder.jpg"],
-["abd-al-rahman-iii","Abd al-Rahman III","891–961","/images/encyclopedia/thumbs/abd-al-rahman-iii.jpg"],
+["abd-al-rahman-iii","Abd al-Rahman III","890 or 891–961","/images/encyclopedia/thumbs/abd-al-rahman-iii.jpg"],
 ["machado-de-assis","Machado de Assis","1839–1908","/images/encyclopedia/thumbs/machado-de-assis.jpg"],
 ["nadab-of-israel","Nadab of Israel","late 10th century BCE","/images/encyclopedia/thumbs/nadab-of-israel.jpg"],
 ["shalmaneser-iii","Shalmaneser III","r. 859–824 BCE","/images/encyclopedia/thumbs/shalmaneser-iii.jpg"],
