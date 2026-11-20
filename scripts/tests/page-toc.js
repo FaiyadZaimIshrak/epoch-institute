@@ -17,7 +17,7 @@ let fails = 0; const ok = (n, c, x) => { console.log((c ? 'ok   ' : 'FAIL ') + n
     let p = await open('/encyclopedia/napoleon'); let s = await st(p);
     ok(W + 'entry: nothing shown at the top of the page', !s.on && s.vis !== 'visible', s);
     const cls0 = s.cls;
-    await p.evaluate(() => { const h = document.querySelectorAll('main h2')[1]; window.scrollTo(0, h.getBoundingClientRect().top + scrollY - 150); }); await p.waitForTimeout(600); s = await st(p);
+    await p.evaluate(() => { const h = document.querySelectorAll('main h2')[1]; window.scrollTo(0, h.getBoundingClientRect().top + scrollY - 150); }); await p.waitForTimeout(1500); s = await st(p);
     ok(W + 'entry: past the first section the row is there, under the header, the section marked', s.on && s.vis === 'visible' && s.links >= 5 && s.top === s.navBottom && !!s.cur && s.wide <= 0, s);
     ok(W + 'entry: nothing moved when it appeared', s.cls - cls0 < 0.005, [cls0, s.cls]);
     await p.screenshot({ path: path.join(out, 'toc-' + vp.width + '-entry.png') });

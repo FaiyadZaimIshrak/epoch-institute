@@ -45,9 +45,12 @@ var SONG_LINKS = {
 "Samos":[["carmagnole","La Carmagnole","1792"]],
 "Singapore":[["rule-britannia","Rule, Britannia!","1740"],["sansoen-phra-barami","Sansoen Phra Barami","1888"],["rasa-sayang","Rasa Sayang","c. 1930"],["the-moon-represents-my-heart","The Moon Represents My Heart","1973"],["tian-mi-mi","Tian Mi Mi","1979"],["e-ipo","E Ipo","1982"]],
 "Tanzania":[["nkosi-sikelel-iafrika","Nkosi Sikelel' iAfrika","1897"],["jambo-bwana","Jambo Bwana","1982"]],
+"Thebes":[["great-hymn-to-the-aten","Great Hymn to the Aten","c. 1350 BCE"]],
 "Uganda":[["oh-uganda-land-of-beauty","Oh Uganda, Land of Beauty","1962"]],
 "United States":[["the-minstrel-boy","The Minstrel Boy","1813"],["aogeba-totoshi","Aogeba Tōtoshi","1884"],["over-there","Over There","1917"],["besame-mucho","Bésame Mucho","1932"],["wide-is-my-motherland","Wide Is My Motherland","1936"],["pata-pata","Pata Pata","1956"],["sukiyaki","Sukiyaki (Ue o Muite Arukō)","1961"],["gracias-a-la-vida","Gracias a la vida","1966"]],
 "Ur":[["kesh-temple-hymn","Kesh Temple Hymn","c. 2600 BCE"],["lament-for-ur","Lament for Ur","c. 2000 BCE"]],
 "Uruk":[["lament-for-ur","Lament for Ur","c. 2000 BCE"],["epic-of-gilgamesh","Epic of Gilgamesh","c. 1800 BCE"]],
-"Velvet Revolution":[["we-shall-overcome","We Shall Overcome","1945"]]
+"Velvet Revolution":[["we-shall-overcome","We Shall Overcome","1945"]],
+"Vichy France":[["marechal-nous-voila","Maréchal, nous voilà !","1941"]],
+"Weimar Republic":[["heil-dir-im-siegerkranz","Heil dir im Siegerkranz","1795"],["deutschlandlied","Deutschlandlied","1841"],["wir-sind-des-geyers-schwarzer-haufen","Wir sind des Geyers schwarzer Haufen","1919"],["horst-wessel-lied","Horst-Wessel-Lied","1929"],["solidaritatslied","Solidaritätslied","1931"]]
 };

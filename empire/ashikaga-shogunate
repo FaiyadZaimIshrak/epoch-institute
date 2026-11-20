@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Ashikaga shogunate (1336–1573): History, Rise and Fall</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The feudal military government of Japan during the Muromachi period, ruled by the Ashikaga clan from Kyoto, remembered for arts shaped by Zen Buddhism…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Ashikaga shogunate (1336–1573): History, Rise and Fall">
+<meta property="og:description" content="The feudal military government of Japan during the Muromachi period, ruled by the Ashikaga clan from Kyoto, remembered for arts shaped by Zen Buddhism…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/empire/ashikaga-shogunate">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/ashikaga-shogunate.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/ashikaga-shogunate.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/empire/ashikaga-shogunate">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Central & East Asia","item":"https://the-epoch-institute.org/profiles?region=Central%20%26%20East%20Asia"},{"@type":"ListItem","position":4,"name":"Ashikaga shogunate"}]},{"@type":"Article","headline":"Ashikaga shogunate","description":"The feudal military government of Japan during the Muromachi period, ruled by the Ashikaga clan from Kyoto, remembered for arts shaped by Zen Buddhism…","url":"https://the-epoch-institute.org/empire/ashikaga-shogunate","mainEntityOfPage":"https://the-epoch-institute.org/empire/ashikaga-shogunate","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Country","name":"Ashikaga shogunate"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/ashikaga-shogunate.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?region=Central%20%26%20East%20Asia">Central &amp; East Asia</a></li><li aria-current="page">Ashikaga shogunate</li></ol></nav>
+    <span class="empire-nav-acts"><a href="/explorer#//Ashikaga%20shogunate" class="empire-view-explorer">View on Explorer →</a><a href="/race?p=ashikaga-shogunate" class="empire-view-explorer">Race its rivals →</a></span>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Ashikaga%20shogunate.png" alt="Ashikaga shogunate" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Central &amp; East Asia</p>
+        <h1 class="profile-detail-name">Ashikaga shogunate</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">1392 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">237 yrs</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">1336 CE – 1573 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Capital</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia/heian-kyo">Heian-kyō</a> (<a class="enc-link" href="/encyclopedia/kyoto">Kyoto</a>); the Muromachi residence from 1379</span></div>
+          <div class="info-stat"><span class="info-stat-label">Founder</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia/ashikaga-takauji">Ashikaga Takauji</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Preceded by</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia/kamakura">Kamakura</a> <a class="enc-link" href="/encyclopedia/shogun">shogunate</a>; Kenmu Restoration</span></div>
+          <div class="info-stat"><span class="info-stat-label">Succeeded by</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia/sengoku-period">Sengoku period</a>; rule of <a class="enc-link" href="/encyclopedia/oda-nobunaga">Oda Nobunaga</a></span></div>
+        </div>
+        <p class="empire-meta">4 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li><a class="enc-link" href="/encyclopedia/ashikaga-takauji">Ashikaga Takauji</a> set up his military government in <a class="enc-link" href="/encyclopedia/kyoto">Kyoto</a> in 1336 after overthrowing the Kenmu Restoration of <a class="enc-link" href="/encyclopedia/emperor-go-daigo">Emperor Go-Daigo</a>.</li><li>It was the weakest of <a class="enc-link" href="/encyclopedia/japan">Japan</a>'s three military governments, depending on the loyalty of the daimyō because the shōgun held little territory of his own.</li><li><a class="enc-link" href="/encyclopedia/oda-nobunaga">Oda Nobunaga</a> drove the fifteenth shōgun, <a class="enc-link" href="/encyclopedia/ashikaga-yoshiaki">Ashikaga Yoshiaki</a>, out of <a class="enc-link" href="/encyclopedia/kyoto">Kyoto</a> in 1573, ending the <a class="enc-link" href="/encyclopedia/shogun">shogunate</a>.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The name Muromachi comes from the Muromachi district of <a class="enc-link" href="/encyclopedia/kyoto">Kyoto</a>, where the third shōgun, <a class="enc-link" href="/encyclopedia/ashikaga-yoshimitsu">Ashikaga Yoshimitsu</a>, built his residence known as the &quot;Flower Palace&quot; in 1379.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <div id="empire-stats-panel" data-empire="Ashikaga shogunate"></div>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Rise &amp; Fall</h2>
+      <figure class="rf-chart"><svg viewBox="0 0 760 206" role="img" aria-label="Relative power of the Ashikaga shogunate over time, peaking in 1392 CE"><line class="rf-base" x1="20" x2="740" y1="160" y2="160"/><path class="rf-area" d="M20.0 93.0 L26.1 79.6 L117.2 66.2 L150.6 39.4 L190.1 26.0 L196.2 39.4 L299.5 66.2 L339.0 93.0 L418.0 119.8 L448.4 133.2 L658.0 133.2 L715.7 146.6 L724.8 133.2 L740.0 146.6 L740.0 160 L20.0 160 Z"/><path class="rf-line" d="M20.0 93.0 L26.1 79.6 L117.2 66.2 L150.6 39.4 L190.1 26.0 L196.2 39.4 L299.5 66.2 L339.0 93.0 L418.0 119.8 L448.4 133.2 L658.0 133.2 L715.7 146.6 L724.8 133.2 L740.0 146.6"/><circle class="rf-peak" cx="190.1" cy="26.0" r="5"/><text class="rf-peak-label" x="190.1" y="16.0" text-anchor="middle">Peak 1392 CE</text><g class="rf-ev"><line x1="20.0" x2="20.0" y1="160" y2="166"/><circle cx="20.0" cy="160" r="8"/><text x="20.0" y="164" text-anchor="middle">1</text><title>1336: Ashikaga Takauji establishes his own military government in Kyoto, overthrowing the Kenmu Restoration</title></g><g class="rf-ev"><line x1="150.6" x2="150.6" y1="160" y2="166"/><circle cx="150.6" cy="160" r="8"/><text x="150.6" y="164" text-anchor="middle">2</text><title>1379: Ashikaga Yoshimitsu establishes the &quot;Flower Palace&quot; on Muromachi Street in Kyoto</title></g><g class="rf-ev"><line x1="190.1" x2="190.1" y1="160" y2="166"/><circle cx="190.1" cy="160" r="8"/><text x="190.1" y="164" text-anchor="middle">3</text><title>1392: The Southern Court gives up and the Northern and Southern Courts are combined into one</title></g><g class="rf-ev"><line x1="339.0" x2="339.0" y1="160" y2="166"/><circle cx="339.0" cy="160" r="8"/><text x="339.0" y="164" text-anchor="middle">4</text><title>1441: The death of Ashikaga Yoshinori leaves the authority of the bakufu almost vanished</title></g><g class="rf-ev"><line x1="418.0" x2="418.0" y1="160" y2="166"/><circle cx="418.0" cy="160" r="8"/><text x="418.0" y="164" text-anchor="middle">5</text><title>1467–1477: The Ōnin War breaks out among the daimyō, beginning the Sengoku period</title></g><g class="rf-ev"><line x1="715.7" x2="715.7" y1="160" y2="166"/><circle cx="715.7" cy="160" r="8"/><text x="715.7" y="164" text-anchor="middle">6</text><title>1565: The shōgun Ashikaga Yoshiteru is assassinated, and Oda Nobunaga installs Ashikaga Yoshiaki as his puppet</title></g><g class="rf-ev"><line x1="740.0" x2="740.0" y1="160" y2="166"/><circle cx="740.0" cy="160" r="8"/><text x="740.0" y="164" text-anchor="middle">7</text><title>1573: Oda Nobunaga drives Ashikaga Yoshiaki out of Kyoto, ending the shogunate</title></g><text class="rf-axis" x="20" y="200">1336 CE</text><text class="rf-axis" x="740" y="200" text-anchor="end">1573 CE</text></svg><figcaption>Relative power on the Institute's 0–10 scale (each profile scaled to its own peak). Numbers mark the key events below.</figcaption></figure><ol class="rf-events"><li><span class="rf-year">1336</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/ashikaga-takauji">Ashikaga Takauji</a> establishes his own military government in <a class="enc-link" href="/encyclopedia/kyoto">Kyoto</a>, overthrowing the Kenmu Restoration</span></li><li><span class="rf-year">1379</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/ashikaga-yoshimitsu">Ashikaga Yoshimitsu</a> establishes the &quot;Flower Palace&quot; on Muromachi Street in <a class="enc-link" href="/encyclopedia/kyoto">Kyoto</a></span></li><li><span class="rf-year">1392</span><span class="rf-text">The Southern Court gives up and the Northern and Southern Courts are combined into one</span></li><li><span class="rf-year">1441</span><span class="rf-text">The death of <a class="enc-link" href="/encyclopedia/ashikaga-yoshinori">Ashikaga Yoshinori</a> leaves the authority of the bakufu almost vanished</span></li><li><span class="rf-year">1467–1477</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/onin-war">Ōnin War</a> breaks out among the daimyō, beginning the <a class="enc-link" href="/encyclopedia/sengoku-period">Sengoku period</a></span></li><li><span class="rf-year">1565</span><span class="rf-text">The shōgun <a class="enc-link" href="/encyclopedia/ashikaga-yoshiteru">Ashikaga Yoshiteru</a> is assassinated, and <a class="enc-link" href="/encyclopedia/oda-nobunaga">Oda Nobunaga</a> installs <a class="enc-link" href="/encyclopedia/ashikaga-yoshiaki">Ashikaga Yoshiaki</a> as his puppet</span></li><li><span class="rf-year">1573</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/oda-nobunaga">Oda Nobunaga</a> drives <a class="enc-link" href="/encyclopedia/ashikaga-yoshiaki">Ashikaga Yoshiaki</a> out of <a class="enc-link" href="/encyclopedia/kyoto">Kyoto</a>, ending the <a class="enc-link" href="/encyclopedia/shogun">shogunate</a></span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="foundation">
+        <h2 class="profile-section-title">Foundation</h2>
+        <div class="profile-section-body"><p>From 1180 to 1185 the <a class="enc-link" href="/encyclopedia/genpei-war">Genpei War</a> between the Taira and <a class="enc-link" href="/encyclopedia/minamoto-clan">Minamoto clans</a> ended with the victory of <a class="enc-link" href="/encyclopedia/minamoto-no-yoritomo">Minamoto no Yoritomo</a> and the founding of the <a class="enc-link" href="/encyclopedia/kamakura">Kamakura</a> <a class="enc-link" href="/encyclopedia/shogun">shogunate</a>, later dominated by the <a class="enc-link" href="/encyclopedia/hojo-clan">Hōjō clan</a>. The Hōjō monopoly of power, and the lack of a reward of lands after the defeat of the Mongol invasions, left their <a class="enc-link" href="/encyclopedia/vassal">vassals</a> resentful. In 1333 <a class="enc-link" href="/encyclopedia/emperor-go-daigo">Emperor Go-Daigo</a> called on local vassals to oppose Hōjō rule in the Kenmu Restoration. Sent by Kamakura to crush the rising, <a class="enc-link" href="/encyclopedia/ashikaga-takauji">Ashikaga Takauji</a> turned against the shogunate for reasons that remain unclear and helped overthrow it.</p><p>Go-Daigo's policies were unpopular and failed to satisfy those who had fought for him. In 1336 Takauji set up his own military government in <a class="enc-link" href="/encyclopedia/kyoto">Kyoto</a> and made himself shōgun. A dispute with Go-Daigo over how to govern led Takauji to have Prince Yutahito installed as <a class="enc-link" href="/encyclopedia/emperor-komyo">Emperor Kōmyō</a>, while Go-Daigo fled the capital. <a class="enc-link" href="/encyclopedia/japan">Japan</a> was divided between a Northern Court in Kyoto under Ashikaga influence and a Southern Court in Yoshino, the beginning of the Nanboku-chō period.</p></div>
+      </div>
+      <div class="profile-section-block" id="socioeconomy">
+        <h2 class="profile-section-title">Socioeconomy</h2>
+        <div class="profile-section-body"><p>The <a class="enc-link" href="/encyclopedia/shogun">shogunate</a> gave more attention to the arts and to trade than to gaining control of surrounding territories. It traded with Joseon <a class="enc-link" href="/encyclopedia/korea">Korea</a>, using the daimyō of <a class="enc-link" href="/encyclopedia/tsushima-island">Tsushima Island</a> as middlemen, and with imperial <a class="enc-link" href="/encyclopedia/china">China</a>, where goods were exchanged and labelled as offerings from one emperor to another. <a class="enc-link" href="/encyclopedia/ashikaga-yoshimitsu">Ashikaga Yoshimitsu</a> expanded these relations, receiving large quantities of <a class="enc-link" href="/encyclopedia/porcelain">porcelain</a>, <a class="enc-link" href="/encyclopedia/silk">silk</a> and bronze coins from China and sending swords, lumber and ores in return. Marginal trade with <a class="enc-link" href="/encyclopedia/southeast-asia">Southeast Asia</a> sent similar goods, together with <a class="enc-link" href="/encyclopedia/fur-trade">furs</a>, for <a class="enc-link" href="/encyclopedia/spice-trade">spices</a> and other kinds of lumber.</p><p>The economic base of the old order shifted to the provinces. The shugo appointed by the shogunate absorbed the judicial, economic and taxation powers of the local Imperial governors, and government holdings in each province passed rapidly into the personal holdings of the daimyō and their <a class="enc-link" href="/encyclopedia/vassal">vassals</a>. The Imperial court lost both its political weight and its economic base.</p></div>
+      </div>
+      <div class="profile-section-block" id="military">
+        <h2 class="profile-section-title">Military</h2>
+        <div class="profile-section-body"><p>For 56 years the Northern and Southern Courts struggled for power. The Northern Court usually dominated, but the Southern Court was occasionally able to capture the capital; each time it was pushed back by the larger Northern armies. The struggle ended in 1392, under the third shōgun, when the Southern Court gave up and the two courts were combined.</p><p>Because Takauji had little personal territory, the military power of the shōgun depended on the loyalty of the daimyō, and the regime was weak militarily. Bloody succession crises among the warrior families wore down its authority, and the daimyō feuded among themselves for power. The <a class="enc-link" href="/encyclopedia/onin-war">Ōnin War</a> of 1467 to 1477 turned these feuds into open warfare and began the constant civil war of the <a class="enc-link" href="/encyclopedia/sengoku-period">Sengoku period</a>. In 1565 the shōgun <a class="enc-link" href="/encyclopedia/ashikaga-yoshiteru">Ashikaga Yoshiteru</a> was assassinated, and the daimyō <a class="enc-link" href="/encyclopedia/oda-nobunaga">Oda Nobunaga</a> used the opening to install Yoshiteru's brother <a class="enc-link" href="/encyclopedia/ashikaga-yoshiaki">Ashikaga Yoshiaki</a> as shōgun.</p></div>
+      </div>
+      <div class="profile-section-block" id="governance">
+        <h2 class="profile-section-title">Governance &amp; Law</h2>
+        <div class="profile-section-body"><p>The Ashikaga <a class="enc-link" href="/encyclopedia/shogun">shogunate</a> is described as the weakest of the three Japanese military governments. Unlike the <a class="enc-link" href="/encyclopedia/kamakura">Kamakura</a> shogunate before it or the <a class="enc-link" href="/encyclopedia/tokugawa-shogunate">Tokugawa shogunate</a> after it, it relied heavily on the prestige and personal authority of the shōgun. The centralised master-<a class="enc-link" href="/encyclopedia/vassal">vassal</a> system of Kamakura gave way to a highly decentralised system of daimyō, local lords whose authority grew far beyond that of Kamakura times.</p><p>The Imperial court was no longer a credible threat. The failure of the Kenmu Restoration had left it weak and subservient, and Takauji reinforced this by placing his government near the Emperor in <a class="enc-link" href="/encyclopedia/kyoto">Kyoto</a>. Powers lost by the court passed to the shōgun, and this position reached its peak under <a class="enc-link" href="/encyclopedia/ashikaga-yoshimitsu">Ashikaga Yoshimitsu</a>. After him the structural weakness of the regime was exposed by repeated succession crises and early deaths. The list of shōgun runs to fifteen, from <a class="enc-link" href="/encyclopedia/ashikaga-takauji">Ashikaga Takauji</a> to <a class="enc-link" href="/encyclopedia/ashikaga-yoshiaki">Ashikaga Yoshiaki</a>, with gaps and a second reign for Ashikaga Yoshitane.</p></div>
+      </div>
+      <div class="profile-section-block" id="impact">
+        <h2 class="profile-section-title">Global &amp; Regional Impact</h2>
+        <div class="profile-section-body"><p>The Ashikaga era was a period of great development in Japanese culture and art, with <a class="enc-link" href="/encyclopedia/zen">Zen Buddhism</a> as a large contributor. The <a class="enc-link" href="/encyclopedia/japanese-tea-ceremony">tea ceremony</a> moved from a large open room to a small, quiet setting and became a form of meditation. Flower arranging became an art of spiritual value, its arrangements often used as offerings to the Buddha. Noh <a class="enc-link" href="/encyclopedia/theatre">theatre</a> was created in this period; its performances were enjoyed and protected by nobles and elites, and helped to widen the <a class="enc-link" href="/encyclopedia/theme-system">themes</a> of shows and to produce poetry. The performing arts suffered during the <a class="enc-link" href="/encyclopedia/onin-war">Ōnin War</a> but recovered once power had fully shifted.</p><p>Abroad, the <a class="enc-link" href="/encyclopedia/shogun">shogunate</a>'s contacts with Joseon and with <a class="enc-link" href="/encyclopedia/china">China</a> shaped its foreign relations, and its trade carried Japanese swords, lumber and ores across the sea. The name of the Muromachi district of <a class="enc-link" href="/encyclopedia/kyoto">Kyoto</a>, where Yoshimitsu built his residence, gave the period its name.</p></div>
+      </div>
+      <div class="profile-section-block" id="decline">
+        <h2 class="profile-section-title">Decline &amp; Fall</h2>
+        <div class="profile-section-body"><p>The authority of the bakufu had almost vanished by 1441, at the death of <a class="enc-link" href="/encyclopedia/ashikaga-yoshinori">Ashikaga Yoshinori</a>. After the <a class="enc-link" href="/encyclopedia/onin-war">Ōnin War</a> the <a class="enc-link" href="/encyclopedia/shogun">shogunate</a> was reduced to little more than a local political force in <a class="enc-link" href="/encyclopedia/kyoto">Kyoto</a>. The puppet shōgun <a class="enc-link" href="/encyclopedia/ashikaga-yoshiaki">Ashikaga Yoshiaki</a>, installed by <a class="enc-link" href="/encyclopedia/oda-nobunaga">Oda Nobunaga</a> in 1568, was not wholly subservient: he struck bargains with the monasteries and mediated between powerful clans such as the Otomo and Mori. In 1573 Nobunaga drove him out of Kyoto, and the shogunate was destroyed. Yoshiaki fled first to <a class="enc-link" href="/encyclopedia/shikoku">Shikoku</a> and later received the protection of the Mōri clan in western <a class="enc-link" href="/encyclopedia/japan">Japan</a>.</p><p>The Ashikaga family survived the 16th century, and a branch of it became the daimyō family of the Kitsuregawa domain. The site of the "Flower Palace" in Kyoto, bounded by Karasuma, Imadegawa, Muromachi and Kamidachiuri streets, is marked by a stone, and relics and excavations of the area are kept in the Kanbai-kan of Dōshisha University.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Ashikaga <a class="enc-link" href="/encyclopedia/shogun">shogunate</a> ruled <a class="enc-link" href="/encyclopedia/japan">Japan</a> from <a class="enc-link" href="/encyclopedia/kyoto">Kyoto</a> between 1336 and 1573, after <a class="enc-link" href="/encyclopedia/ashikaga-takauji">Ashikaga Takauji</a> overthrew the Kenmu Restoration. Weak in land and arms, it leaned on the daimyō, reached its height under <a class="enc-link" href="/encyclopedia/ashikaga-yoshimitsu">Ashikaga Yoshimitsu</a>, fostered Zen arts and Noh, and dissolved into the <a class="enc-link" href="/encyclopedia/sengoku-period">Sengoku</a> wars until <a class="enc-link" href="/encyclopedia/oda-nobunaga">Oda Nobunaga</a> ended it.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="ashikaga-shogunate"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The shōgun Ashikaga Yoshiteru is assassinated, and Oda Nobunaga installs Ashikaga Yoshiaki as his puppet","o":["1336","1573","1379","1565"],"a":3,"w":"1565: The shōgun Ashikaga Yoshiteru is assassinated, and Oda Nobunaga installs Ashikaga Yoshiaki as his puppet."},{"p":"Which came first?","q":"","o":["Oda Nobunaga drives Ashikaga Yoshiaki out of Kyoto, ending the shogunate","Ashikaga Takauji establishes his own military government in Kyoto, overthrowing the Kenmu Restoration"],"a":1,"w":"1573: Oda Nobunaga drives Ashikaga Yoshiaki out of Kyoto, ending the shogunate · 1336: Ashikaga Takauji establishes his own military government in Kyoto, overthrowing the Kenmu Restoration."},{"p":"Which city was a capital of Ashikaga shogunate?","q":"","o":["Hanseong","Nanjing","Heian-kyō","Beijing"],"a":2,"w":"Capital: Heian-kyō (Kyoto); the Muromachi residence from 1379."},{"p":"Who founded Ashikaga shogunate?","q":"","o":["Batu Khan","Yi Seong-gye","Ashikaga Takauji","Hongwu Emperor"],"a":2,"w":"Founder: Ashikaga Takauji."},{"p":"In which year?","q":"The Southern Court gives up and the Northern and Southern Courts are combined into one","o":["1379","1392","1565","1573"],"a":1,"w":"1392: The Southern Court gives up and the Northern and Southern Courts are combined into one."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Kang, Etsuko Hae-Jin, Diplomacy and Ideology in Japanese-Korean Relations: From the Fifteenth to the Eighteenth Century (Palgrave Macmillan, 1997)</li>
+        <li>Nussbaum, Louis-Frédéric; Roth, Käthe, Japan Encyclopedia (Harvard University Press, 2002)</li>
+        <li>Arai, Hakuseki; Ackroyd, Joyce Irene, Lessons from history: the Tokushi yoron (University of Queensland Press, 1982)</li>
+      </ul>
+    </div>
+
+    <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
+      <p class="profile-references-title" id="mini-cx-title">Connections</p>
+      <div class="cx-map" id="mini-cx" data-id="ashikaga-shogunate"></div>
+      <a class="mini-connections-more" href="/connections#ashikaga-shogunate">Open the full connections map →</a>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Related states and empires</p>
+      <div class="related-grid"><a class="related-card" href="/empire/ming-empire"><img src="/logos/thumbs/Ming%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ming Empire</span><span class="related-card-dates">1368 CE – 1644 CE</span></a><a class="related-card" href="/empire/joseon"><img src="/logos/thumbs/Joseon.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Joseon</span><span class="related-card-dates">1392 CE – 1897 CE</span></a><a class="related-card" href="/empire/golden-horde"><img src="/logos/thumbs/Golden%20Horde.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Golden Horde</span><span class="related-card-dates">1242 CE – 1502 CE</span></a><a class="related-card" href="/empire/chagatai-empire"><img src="/logos/thumbs/Chagatai%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Chagatai Empire</span><span class="related-card-dates">1225 CE – 1500 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/empire/aztec-empire"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Aztec%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Aztec Empire</span><span class="related-card-dates">1325 CE – 1521 CE</span></a><a class="related-card" href="/empire/vijayanagara-empire"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Vijayanagara%20Empire.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Vijayanagara Empire</span><span class="related-card-dates">1336 CE – 1646 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script src="/epoch-stats.js?v=4"></script>
+<script src="/connections-map.js?v=13" defer></script>
+<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});</script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Ashikaga shogunate",slug="ashikaga-shogunate",url="https://the-epoch-institute.org/empire/ashikaga-shogunate";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Ashikaga shogunate on The Epoch Institute — detailed civilisational history and power trajectory data. https://the-epoch-institute.org/empire/ashikaga-shogunate #history #empires #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/empire/ashikaga-shogunate"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Ashikaga shogunate",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Ashikaga shogunate",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>
