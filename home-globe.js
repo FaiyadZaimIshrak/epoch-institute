@@ -83,10 +83,23 @@
     root.onmessage = function (e) {
       var m = e.data;
       if (m.t === 'init') {
-        root.importScripts(m.d3, m.land);
-        hg = HomeGlobe(m.canvas, { pts: m.pts, dpr: m.dpr, coarse: m.coarse });
-        hg.colours(m.colours); hg.size(m.w, m.h, m.dpr); hg.run(m.run);
-        root.postMessage({ t: 'ready' });
+        // the two files come cold from the host after every deploy (Cloudflare is purged), and the host drops a
+        // connection now and then: a failed download is tried again, then reported, so the page can draw the globe
+        // itself (until Nov 2026 the worker died silently and the flat map stayed)
+        var tries = 0, waits = [500, 1500, 4000];
+        var go = function () {
+          try {
+            if (!root.d3) root.importScripts(m.d3 + (tries ? '&again=' + tries : ''));
+            if (!root.ATLAS_GLOBE) root.importScripts(m.land + (tries ? '&again=' + tries : ''));
+          } catch (err) {
+            if (tries < waits.length) { setTimeout(go, waits[tries++]); return; }
+            root.postMessage({ t: 'fail' }); return;
+          }
+          hg = HomeGlobe(m.canvas, { pts: m.pts, dpr: m.dpr, coarse: m.coarse });
+          hg.colours(m.colours); hg.size(m.w, m.h, m.dpr); hg.run(m.run);
+          root.postMessage({ t: 'ready' });
+        };
+        go();
       } else if (hg && m.t === 'size') hg.size(m.w, m.h, m.dpr);
       else if (hg && m.t === 'colours') hg.colours(m.colours);
       else if (hg && m.t === 'run') hg.run(m.on);

@@ -661,7 +661,7 @@ initNav('home');
   if (navigator.connection && navigator.connection.saveData) return;
   // drawn by /home-globe.js: in a worker on an OffscreenCanvas where the browser can (the page stays free while it
   // turns), else on the page; the page sends the size, the theme's colours and whether the globe is on screen
-  var GLOBE_JS = '/home-globe.js?v=1', D3 = '/d3-geo.js?v=1', pts = [];
+  var GLOBE_JS = '/home-globe.js?v=2', D3 = '/d3-geo.js?v=1', pts = [];
   for (var i = 0; i < HOME_GLOBE.length; i += 3) pts.push([HOME_GLOBE[i] / 100, HOME_GLOBE[i + 1] / 100, HOME_GLOBE[i + 2]]);
   var coarse = matchMedia('(pointer: coarse)').matches, dpr = Math.min(coarse ? 1.5 : 2, window.devicePixelRatio || 1), onScreen = true;
   function colours() {
@@ -686,21 +686,49 @@ initNav('home');
     new IntersectionObserver(function (es) { onScreen = es[0].isIntersecting; api.run(live()); }, { rootMargin: '80px' }).observe(cv);
     document.addEventListener('visibilitychange', function () { api.run(live()); });
   }
-  function load(src, cb) { var s = document.createElement('script'); s.src = src; s.onload = cb; document.head.appendChild(s); }
+  // a script asked for again when it does not arrive (after every deploy the files come cold from the slow host)
+  function load(src, cb, fail, n) {
+    n = n || 0;
+    var s = document.createElement('script'); s.src = src + (n ? '&again=' + n : ''); s.onload = cb;
+    s.onerror = function () { s.remove(); if (n < 3) setTimeout(function () { load(src, cb, fail, n + 1); }, [500, 1500, 4000][n]); else if (fail) fail(); };
+    document.head.appendChild(s);
+  }
+  // the globe drawn on the page itself: where there is no worker, or the worker could not get its files
+  function onPage(b) {
+    var go = function () { var hg = HomeGlobe(cv, { pts: pts, dpr: dpr, coarse: coarse }); hg.colours(colours()); hg.size(b[0], b[1], dpr); show(hg); hg.run(live()); };
+    var again = function () {   // nothing came: keep the flat map, and try once more when the line or the tab comes back
+      var retry = function () { window.removeEventListener('online', retry); document.removeEventListener('visibilitychange', vis); onPage(box()); };
+      var vis = function () { if (!document.hidden) retry(); };
+      window.addEventListener('online', retry); document.addEventListener('visibilitychange', vis);
+    };
+    var land = function (f) { if (window.ATLAS_GLOBE) f(); else load(HOME_GLOBE_SRC, f, again); };
+    var globe = function () { if (window.HomeGlobe) go(); else load(GLOBE_JS, go, again); };
+    if (window.d3 && window.d3.geoOrthographic) land(globe); else load(D3, function () { land(globe); }, again);
+  }
   function start() {
     var b = box(), wk = null;
     if (cv.transferControlToOffscreen && window.Worker && window.OffscreenCanvas) { try { wk = new Worker(GLOBE_JS); } catch (e) { wk = null; } }
     if (wk) {
-      var off = cv.transferControlToOffscreen();
+      var off = cv.transferControlToOffscreen(), done = false;
+      // the worker could not get its files, failed or never answered: a fresh canvas (the old one belongs to the
+      // worker now) and the globe drawn on the page instead
+      var fallback = function () {
+        if (done) return; done = true; try { wk.terminate(); } catch (e) {}
+        var fresh = cv.cloneNode(false); cv.parentNode.replaceChild(fresh, cv); cv = fresh;
+        onPage(box());
+      };
+      var timer = setTimeout(fallback, 20000);
+      wk.onerror = fallback;
       wk.onmessage = function (e) {
-        if (e.data.t !== 'ready') return;
+        if (e.data.t === 'fail') { clearTimeout(timer); fallback(); return; }
+        if (e.data.t !== 'ready' || done) return;
+        done = true; clearTimeout(timer);
         show({ size: function (w, h, d) { wk.postMessage({ t: 'size', w: w, h: h, dpr: d }); }, colours: function (c) { wk.postMessage({ t: 'colours', colours: c }); }, run: function (on) { wk.postMessage({ t: 'run', on: on }); } });
       };
       wk.postMessage({ t: 'init', canvas: off, d3: D3, land: HOME_GLOBE_SRC, pts: pts, dpr: dpr, coarse: coarse, colours: colours(), w: b[0], h: b[1], run: live() }, [off]);
       return;
     }
-    var go = function () { var hg = HomeGlobe(cv, { pts: pts, dpr: dpr, coarse: coarse }); hg.colours(colours()); hg.size(b[0], b[1], dpr); show(hg); hg.run(live()); };
-    load(D3, function () { (window.ATLAS_GLOBE ? function (f) { f(); } : function (f) { load(HOME_GLOBE_SRC, f); })(function () { load(GLOBE_JS, go); }); });
+    onPage(b);
   }
   var idle = window.requestIdleCallback || function (f) { setTimeout(f, 1200); };
   // after the page has loaded, or after six seconds if something is still on its way (a picture hanging on a slow line
