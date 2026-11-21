@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Lincoln's Farewell at Springfield (11 February 1861) — Great Speeches</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Abraham Lincoln, 11 February 1861: the key passage, its setting and what followed, with the full text.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/speeches/lincoln-farewell-at-springfield">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lincoln's Farewell at Springfield (11 February 1861) — Great Speeches">
+<meta property="og:description" content="Abraham Lincoln, 11 February 1861: the key passage, its setting and what followed, with the full text.">
+<meta property="og:url" content="https://the-epoch-institute.org/speeches/lincoln-farewell-at-springfield">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/speech-lincoln-farewell-at-springfield.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/speech-lincoln-farewell-at-springfield.jpg">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Great Speeches","item":"https://the-epoch-institute.org/speeches/"},{"@type":"ListItem","position":3,"name":"Lincoln's Farewell at Springfield"}]},{"@type":"Article","headline":"Lincoln's Farewell at Springfield","description":"Abraham Lincoln, 11 February 1861: the key passage, its setting and what followed, with the full text.","url":"https://the-epoch-institute.org/speeches/lincoln-farewell-at-springfield","mainEntityOfPage":"https://the-epoch-institute.org/speeches/lincoln-farewell-at-springfield","inLanguage":"en-GB","dateModified":"2026-11-21","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Event","name":"Lincoln's Farewell at Springfield"}},{"@type":"Quotation","text":"I now leave, not knowing when, or whether ever, I may return, with a task before me greater than that which rested upon Washington.","creator":{"@type":"Person","name":"Abraham Lincoln"},"isPartOf":{"@type":"CreativeWork","name":"Lincoln's Farewell at Springfield","url":"https://en.wikisource.org/wiki/Abraham_Lincoln%27s_Farewell_Address"}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body data-nav="speeches">
+
+<main id="main" class="sp-page ref-page">
+<div class="sp-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/speeches/">Great Speeches</a></li><li aria-current="page">Lincoln's Farewell at Springfield</li></ol></nav>
+<article class="sp-view">
+<header class="sp-head"><a class="sp-portrait" href="/encyclopedia/abraham-lincoln" tabindex="-1" aria-hidden="true"><img src="/images/encyclopedia/abraham-lincoln.jpg" alt="" width="104" height="104"></a><p class="featured-region">11 February 1861 · The train depot, Springfield, Illinois</p><h1 class="sp-title">Lincoln's Farewell at Springfield</h1><p class="sp-by"><a class="enc-link" href="/encyclopedia/abraham-lincoln">Abraham Lincoln</a></p></header>
+<section class="sp-sec"><h2>The setting</h2><p>Several thousand people gathered at the Springfield train depot to see President-elect Lincoln leave for his inauguration in Washington. His election had already led several states to secede, and it was uncertain when he would return. He gave a brief, impromptu speech from his railroad car, in heavy rain.</p></section>
+<section class="sp-sec"><h2>Key passage</h2><blockquote class="sp-quote"><p>I now leave, not knowing when, or whether ever, I may return, with a task before me greater than that which rested upon Washington.</p></blockquote><p class="sp-source">Wikisource's text. Lincoln began writing the speech down on the moving train and his secretary John Nicolay finished the copy; the Illinois State Journal and Harper's Weekly printed other versions.</p><div class="sp-full"><button type="button" class="sp-share" data-share-text="“I now leave, not knowing when, or whether ever, I may return, with a task before me greater than that which rested upon Washington.” — Abraham Lincoln, Lincoln's Farewell at Springfield" data-share-img="/images/og/speech-lincoln-farewell-at-springfield.jpg">Share this quote</button></div></section>
+<section class="sp-sec sp-ft" id="full-text"><h2>The full speech</h2><div class="sp-ft-body"><p>My friends, no one, not in my situation, can appreciate my feeling of sadness at this parting. To this place, and the kindness of these people, I owe everything. Here I have lived a quarter of a century, and have passed from a young to an old man. Here my children have been born, and one is buried. I now leave, not knowing when, or whether ever, I may return, with a task before me greater than that which rested upon Washington. Without the assistance of that Divine Being who ever attended him, I cannot succeed. With that assistance I cannot fail. Trusting in Him who can go with me, and remain with you, and be everywhere for good, let us confidently hope that all will yet be well. To His care commending you, as I hope in your prayers you will commend me, I bid you an affectionate farewell.</p></div><p class="sp-ft-credit">Text: <a href="https://en.wikisource.org/wiki/Abraham_Lincoln%27s_Farewell_Address" target="_blank" rel="noopener">Wikisource</a>, from Wikisource's transcription. The text is in the public domain; the Wikisource transcription is shared under CC BY-SA 4.0.</p></section>
+<section class="sp-sec"><h2>What followed</h2><p>Lincoln feared assassination even before he was sworn in, and such fears led to the uncovering of the alleged Baltimore Plot. Soon after, the Civil War began. He never returned to Springfield alive: after his assassination in 1865 his body came back by a long memorial train for his funeral and burial.</p><div class="sp-led"><h3 class="sp-led-k">What it led to</h3><div class="tih-tags"><a class="tih-tag enc-link" href="/encyclopedia/american-civil-war">American Civil War</a><a class="tih-tag enc-link" href="/encyclopedia/assassination-of-abraham-lincoln">Assassination of Abraham Lincoln</a></div></div></section>
+<section class="sp-sec"><h2>Connected</h2><div class="tih-tags"><a class="tih-tag tih-tag-profile" href="/empire/united-states">United States</a><a class="tih-tag enc-link" href="/encyclopedia/abraham-lincoln">Abraham Lincoln</a><a class="tih-tag enc-link" href="/encyclopedia/george-washington">George Washington</a><a class="tih-tag enc-link" href="/encyclopedia/washington-dc">Washington, D.C.</a></div></section>
+<section class="sp-sec"><h2>In song</h2><p>Songs in History that name Abraham Lincoln:</p><div class="tih-tags"><a class="tih-tag" href="/songs/dixie">Dixie</a><a class="tih-tag" href="/songs/john-browns-body">John Brown's Body</a><a class="tih-tag" href="/songs/battle-cry-of-freedom">Battle Cry of Freedom</a></div></section>
+<nav class="ref-prevnext" aria-label="Other speeches"><a class="prev" rel="prev" href="/speeches/lincoln-first-inaugural"><span class="lbl">&larr; Earlier speech</span><span class="nm">Lincoln's First Inaugural Address</span></a><a class="next" rel="next" href="/speeches/bismarck-iron-and-blood"><span class="lbl">Later speech &rarr;</span><span class="nm">Bismarck: Iron and Blood</span></a></nav>
+<p class="enc-article-foot"><a class="enc-random-link" href="/speeches/">All great speeches &rarr;</a></p>
+</article>
+</div>
+</main>
+
+<script src="/shared-nav.js" defer></script>
+<script src="/enc-page.js" defer></script>
+</body>
+</html>

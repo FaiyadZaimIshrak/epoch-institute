@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Paul's Sermon at the Areopagus (c. 50 CE) — Great Speeches</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Paul the Apostle, c. 50 CE: the key passage, its setting and what followed, with the full text.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/speeches/paul-at-the-areopagus">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Paul's Sermon at the Areopagus (c. 50 CE) — Great Speeches">
+<meta property="og:description" content="Paul the Apostle, c. 50 CE: the key passage, its setting and what followed, with the full text.">
+<meta property="og:url" content="https://the-epoch-institute.org/speeches/paul-at-the-areopagus">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/speech-paul-at-the-areopagus.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/speech-paul-at-the-areopagus.jpg">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Great Speeches","item":"https://the-epoch-institute.org/speeches/"},{"@type":"ListItem","position":3,"name":"Paul's Sermon at the Areopagus"}]},{"@type":"Article","headline":"Paul's Sermon at the Areopagus","description":"Paul the Apostle, c. 50 CE: the key passage, its setting and what followed, with the full text.","url":"https://the-epoch-institute.org/speeches/paul-at-the-areopagus","mainEntityOfPage":"https://the-epoch-institute.org/speeches/paul-at-the-areopagus","inLanguage":"en-GB","dateModified":"2026-11-21","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Event","name":"Paul's Sermon at the Areopagus"}},{"@type":"Quotation","text":"For as I passed by, and beheld your devotions, I found an altar with this inscription, TO THE UNKNOWN GOD. Whom therefore ye ignorantly worship, him declare I unto you.","creator":{"@type":"Person","name":"Paul the Apostle"},"isPartOf":{"@type":"CreativeWork","name":"Paul's Sermon at the Areopagus","url":"https://en.wikisource.org/wiki/Bible_(King_James)/Acts"}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body data-nav="speeches">
+
+<main id="main" class="sp-page ref-page">
+<div class="sp-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/speeches/">Great Speeches</a></li><li aria-current="page">Paul's Sermon at the Areopagus</li></ol></nav>
+<article class="sp-view">
+<header class="sp-head"><p class="featured-region">c. 50 CE · Areopagus, Athens</p><h1 class="sp-title">Paul's Sermon at the Areopagus</h1><p class="sp-by">Paul the Apostle</p></header>
+<section class="sp-sec"><h2>The setting</h2><p>On his second missionary journey Paul preached in the synagogue and the agora of Athens while he waited for Silas and Timothy, distressed, Acts says, to see the city full of idols. Epicurean and Stoic philosophers who heard him took him to the Areopagus, the city's high court, to explain his teaching. The speech is known only from the Acts of the Apostles, whose author, some scholars argue, shaped its speeches in his own style.</p></section>
+<section class="sp-sec"><h2>Key passage</h2><blockquote class="sp-quote"><p>For as I passed by, and beheld your devotions, I found an altar with this inscription, TO THE UNKNOWN GOD. Whom therefore ye ignorantly worship, him declare I unto you.</p></blockquote><p class="sp-source">Acts of the Apostles 17:22-31, King James Version (1611). The words are those the author of Acts gives Paul; scholars disagree how closely they follow what he said.</p><div class="sp-full"><button type="button" class="sp-share" data-share-text="“For as I passed by, and beheld your devotions, I found an altar with this inscription, TO THE UNKNOWN GOD. Whom therefore ye ignorantly worship, him declare I unto you.” — Paul the Apostle, Paul's Sermon at the Areopagus" data-share-img="/images/og/speech-paul-at-the-areopagus.jpg">Share this quote</button></div></section>
+<section class="sp-sec sp-ft" id="full-text"><h2>The full speech</h2><div class="sp-ft-body"><p>Ye men of Athens, I perceive that in all things ye are too superstitious.</p><p>For as I passed by, and beheld your devotions, I found an altar with this inscription, TO THE UNKNOWN GOD. Whom therefore ye ignorantly worship, him declare I unto you.</p><p>God that made the world and all things therein, seeing that he is Lord of heaven and earth, dwelleth not in temples made with hands;</p><p>Neither is worshipped with men's hands, as though he needed any thing, seeing he giveth to all life, and breath, and all things;</p><p>And hath made of one blood all nations of men for to dwell on all the face of the earth, and hath determined the times before appointed, and the bounds of their habitation;</p><p>That they should seek the Lord, if haply they might feel after him, and find him, though he be not far from every one of us:</p><p>For in him we live, and move, and have our being; as certain also of your own poets have said, For we are also his offspring.</p><p>Forasmuch then as we are the offspring of God, we ought not to think that the Godhead is like unto gold, or silver, or stone, graven by art and man's device.</p><p>And the times of this ignorance God winked at; but now commandeth all men every where to repent:</p><p>Because he hath appointed a day, in the which he will judge the world in righteousness by that man whom he hath ordained; whereof he hath given assurance unto all men, in that he hath raised him from the dead.</p></div><p class="sp-ft-credit">Text: <a href="https://en.wikisource.org/wiki/Bible_(King_James)/Acts" target="_blank" rel="noopener">Wikisource</a>, Acts 17:22-31, King James Version (1611). The text is in the public domain; the Wikisource transcription is shared under CC BY-SA 4.0.</p></section>
+<section class="sp-sec"><h2>What followed</h2><p>Some of those who heard him became his followers, among them a woman named Damaris and Dionysius, a member of the Areopagus. Paul went on from Athens to Corinth, where he founded a church and stayed for 18 months. The sermon, which quotes Greek poets, is read as an early step towards the Christian attempts to explain the nature of Christ.</p><div class="sp-led"><h3 class="sp-led-k">What it led to</h3><div class="tih-tags"><a class="tih-tag enc-link" href="/encyclopedia/christianity">Christianity</a></div></div></section>
+<section class="sp-sec"><h2>Connected</h2><div class="tih-tags"><a class="tih-tag tih-tag-profile" href="/empire/roman-empire">Roman Empire</a><a class="tih-tag enc-link" href="/encyclopedia/athens">Athens</a><a class="tih-tag enc-link" href="/encyclopedia/areopagus">Areopagus</a><a class="tih-tag enc-link" href="/encyclopedia/stoicism">Stoicism</a><a class="tih-tag enc-link" href="/encyclopedia/acts-of-the-apostles">Acts of the Apostles</a><a class="tih-tag enc-link" href="/encyclopedia/epimenides">Epimenides</a></div></section>
+<nav class="ref-prevnext" aria-label="Other speeches"><a class="prev" rel="prev" href="/speeches/claudius-on-the-gauls-in-the-senate"><span class="lbl">&larr; Earlier speech</span><span class="nm">Claudius on Admitting the Gauls to the Senate</span></a><a class="next" rel="next" href="/speeches/boudica-before-the-battle"><span class="lbl">Later speech &rarr;</span><span class="nm">Boudica before the Final Battle</span></a></nav>
+<p class="enc-article-foot"><a class="enc-random-link" href="/speeches/">All great speeches &rarr;</a></p>
+</article>
+</div>
+</main>
+
+<script src="/shared-nav.js" defer></script>
+<script src="/enc-page.js" defer></script>
+</body>
+</html>

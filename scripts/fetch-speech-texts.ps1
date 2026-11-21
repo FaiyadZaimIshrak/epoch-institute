@@ -49,6 +49,8 @@ $LICENCES = @{
   'jinnah-to-the-constituent-assembly' = 'Spoken in the Constituent Assembly of Pakistan in 1947 and printed in its debates; in the public domain in Pakistan.'
 }
 $FIXES = @{
+  # Demosthenes, On the Crown (Wikisource): the transcription marks italics with underscores ("[_The decree is read_.]")
+  'demosthenes-on-the-crown' = @(@('_', ''))
   # England's Black Tribunal: the drop cap, the printer's unclear marks, and the margin notes and speakers' names that the
   # transcription runs into the sentences (the note "Strafford" stood beside "an unjust Sentence that I suffered")
   'charles-i-on-the-scaffold' = @(
