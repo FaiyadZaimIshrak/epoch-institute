@@ -121,7 +121,7 @@
 <script src="/shared-nav.js"></script>
 <script src="/maps/basemap.js?v=4478c4912d"></script>
 <script src="/maps/atlas-data.js?v=6f142f0b68"></script>
-<script>var ATLAS_GLOBE_SRC = '/maps/globe-land.js?v=47369e946f', ATLAS_YEARS_SRC = '/data/years.json?v=7dc8cd1cff', ATLAS_BORN_SRC = '/data/born-near.json?v=147eb4c3fb', ATLAS_SONGS_SRC = '/data/songs-by-country.json?v=903d9adb51';</script>
+<script>var ATLAS_GLOBE_SRC = '/maps/globe-land.js?v=47369e946f', ATLAS_YEARS_SRC = '/data/years.json?v=2a70beb756', ATLAS_BORN_SRC = '/data/born-near.json?v=147eb4c3fb', ATLAS_SONGS_SRC = '/data/songs-by-country.json?v=903d9adb51';</script>
 <script src="/atlas.js?v=10"></script>
 <script>initNav('atlas');</script>
 </body>
