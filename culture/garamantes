@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Garamantes: History, Society and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Garamantes were an ancient people of the Fezzan in southern Libya who, from at least 1000 BC to the late 7th century AD, built a desert kingdom on…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Garamantes: History, Society and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Garamantes were an ancient people of the Fezzan in southern Libya who, from at least 1000 BC to the late 7th century AD, built a desert kingdom on…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/culture/garamantes">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/garamantes.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/garamantes.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/culture/garamantes">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Cultures & civilisations","item":"https://the-epoch-institute.org/profiles?kind=culture"},{"@type":"ListItem","position":4,"name":"Garamantes"}]},{"@type":"Article","headline":"Garamantes","description":"The Garamantes were an ancient people of the Fezzan in southern Libya who, from at least 1000 BC to the late 7th century AD, built a desert kingdom on…","url":"https://the-epoch-institute.org/culture/garamantes","mainEntityOfPage":"https://the-epoch-institute.org/culture/garamantes","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Garamantes"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/garamantes.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=culture">Cultures &amp; civilisations</a></li><li aria-current="page">Garamantes</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Garamantes.png" alt="Garamantes" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Culture · Egypt &amp; North Africa</p>
+        <h1 class="profile-detail-name">Garamantes</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Homeland</span><span class="info-stat-val">The <a class="enc-link" href="/encyclopedia/fezzan">Fezzan</a> region of southern <a class="enc-link" href="/encyclopedia/libya">Libya</a>, centred on the Wadi al-Ajjal; their capital <a class="enc-link" href="/encyclopedia/garama">Garama</a> lay at modern Germa, about 150 km west of <a class="enc-link" href="/encyclopedia/sabha-libya">Sabha</a>, with an earlier capital at Zinkekara; other sites include Fewet, Saniat bin Huwaydi, and the southern oases of <a class="enc-link" href="/encyclopedia/ghat">Ghat</a> and Barkat</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">Settlement in the <a class="enc-link" href="/encyclopedia/fezzan">Fezzan</a> at least as early as 1000 BC; a powerful polity from the 6th century BC; <a class="enc-link" href="/encyclopedia/foggara">foggara</a> irrigation appearing between 200 BC and 200 CE; a major regional power from the mid-2nd century AD; the end of the kingdom in the late 7th century AD</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia/foggara">foggara</a> (<a class="enc-link" href="/encyclopedia/qanat">qanat</a>) irrigation tapping fossil water; the first urban society in a major desert not centred on a river; control of trade routes between the <a class="enc-link" href="/encyclopedia/niger-bend">Niger Bend</a>, <a class="enc-link" href="/encyclopedia/lake-chad">Lake Chad</a> and the <a class="enc-link" href="/encyclopedia/mediterranean">Mediterranean</a>; <a class="enc-link" href="/encyclopedia/slave-raiding">slave raiding</a> and trading; inscriptions in a Libyan script that are only partly decipherable; conflict with <a class="enc-link" href="/encyclopedia/rome">Rome</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">How we know them</span><span class="info-stat-val">Greco-Roman writers from <a class="enc-link" href="/encyclopedia/herodotus">Herodotus</a> in the 5th century BC to <a class="enc-link" href="/encyclopedia/strabo">Strabo</a>, <a class="enc-link" href="/encyclopedia/tacitus">Tacitus</a>, <a class="enc-link" href="/encyclopedia/pliny-the-elder">Pliny the Elder</a>, Ptolemy and Solinus; excavations at Germa in the 1960s; satellite imagery published in 2011; skeletal and isotopic studies by Sergi (1951), Chamla (1968), Mattingly et al. (2003), Lahr et al. (2010), Nikita et al. (2011), Ricci et al. (2013) and Power et al. (2019)</span></div>
+        </div>
+        <p class="empire-meta">5 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The <a class="enc-link" href="/encyclopedia/garamantian-empire">Garamantes</a> mined fossil water from under the desert through a network of tunnels and shafts, the <a class="enc-link" href="/encyclopedia/foggara">foggaras</a>, which supported farming and a large population in the <a class="enc-link" href="/encyclopedia/fezzan">Fezzan</a>.</li><li>Their largest town, <a class="enc-link" href="/encyclopedia/garama">Garama</a>, had about four thousand inhabitants, with another six thousand in villages within a 5 km radius, and up to 50,000 people may have lived in the whole wadi.</li><li>The fall of the ground water level over the centuries of the kingdom may have contributed to its end in the late 7th century AD.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The Roman traveller <a class="enc-link" href="/encyclopedia/julius-maternus">Julius Maternus</a> journeyed with the king of the <a class="enc-link" href="/encyclopedia/garamantian-empire">Garamantes</a> for about four months from <a class="enc-link" href="/encyclopedia/garama">Garama</a> to a land called <a class="enc-link" href="/encyclopedia/agisymba">Agisymba</a>, whose people the king presented as his subjects.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#society">Society</a></li><li><a href="#beliefs">Beliefs &amp; Worldview</a></li><li><a href="#arts">Arts &amp; Knowledge</a></li><li><a href="#exchange">Contact &amp; Exchange</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 1000 BC</span><span class="rf-text">Peoples who may have descended from <a class="enc-link" href="/encyclopedia/berbers">Berber</a> and Toubou tribes and Saharan pastoralists are settled in the <a class="enc-link" href="/encyclopedia/fezzan">Fezzan</a></span></li><li><span class="rf-year">6th century BC</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/garamantian-empire">Garamantes</a> form a powerful polity controlling trade routes between the <a class="enc-link" href="/encyclopedia/niger-bend">Niger Bend</a> and the <a class="enc-link" href="/encyclopedia/mediterranean">Mediterranean</a></span></li><li><span class="rf-year">5th century BC</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/herodotus">Herodotus</a> describes the <a class="enc-link" href="/encyclopedia/garamantian-empire">Garamantes</a> as a very great nation who herded <a class="enc-link" href="/encyclopedia/cattle">cattle</a> and farmed dates</span></li><li><span class="rf-year">19 BC</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/lucius-cornelius-balbus">Lucius Cornelius Balbus</a> and other <a class="enc-link" href="/encyclopedia/roman-empire">Romans</a> capture fifteen Garamantian settlements in response to continuous raiding</span></li><li><span class="rf-year">202 AD</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/septimius-severus">Septimius Severus</a> captures the capital city of <a class="enc-link" href="/encyclopedia/garama">Garama</a></span></li><li><span class="rf-year">late 7th century AD</span><span class="rf-text">The Garamantian kingdom comes to an end as the ground water level falls</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The <a class="enc-link" href="/encyclopedia/garamantian-empire">Garamantes</a> may have descended from Libyco-<a class="enc-link" href="/encyclopedia/berbers">Berber</a> tribes, Toubou tribes and Saharan pastoralists who settled in an area of the <a class="enc-link" href="/encyclopedia/fezzan">Fezzan</a> region, in present-day southern <a class="enc-link" href="/encyclopedia/libya">Libya</a>, at least as early as 1000 BC. At the Takarkori rockshelter, Final Pastoral peoples restructured their society around 3000 BP and created burial sites for several hundred individuals, with non-local luxury goods and drum-type architecture; this made way for the development of the Garamantian kingdom. People of the <a class="enc-link" href="/encyclopedia/tichitt-culture">Tichitt culture</a> in southeastern <a class="enc-link" href="/encyclopedia/mauritania">Mauritania</a> may also have contributed to Garamantian domestic architecture and ceramics, possibly through the presence of Sahelian women married into Garamantian society.</p><p>From the 6th century BC the Garamantes formed a powerful polity, and they emerged as a major regional power in the mid-2nd century AD, with a kingdom of roughly 180,000 km2. What language they spoke is open to conjecture. The linguist Roger Blench has noted that they wrote in a Libyan script although there is no evidence they spoke Berber, and has suggested that a Nilo-Saharan language related to Songhay or to Teda is the most likely hypothesis.</p></div>
+      </div>
+      <div class="profile-section-block" id="society">
+        <h2 class="profile-section-title">Society</h2>
+        <div class="profile-section-body"><p>The <a class="enc-link" href="/encyclopedia/garamantian-empire">Garamantes</a> developed the first urban society in a major desert that was not centred on a river system. Excavations in the 1960s uncovered part of their capital, <a class="enc-link" href="/encyclopedia/garama">Garama</a>, at modern Germa; an earlier capital, Zinkekara, lay nearby. Research indicates about eight major towns, three of which had been examined by 2004, and many smaller settlements. Garama had a population of around four thousand, with another six thousand living in villages within a 5 km radius, and up to 50,000 people could have lived in the whole wadi.</p><p>This life rested on the <a class="enc-link" href="/encyclopedia/foggara">foggaras</a>, a network of tunnels and shafts that mined fossil water from under the limestone layer beneath the desert sand. Their dating is disputed: they appear between 200 BC and 200 CE and remained in use until at least the 7th century. The system supported a strong agricultural economy and was maintained with slave labour. Skeletal studies by Nikita and colleagues (2011) found little sign of regular warfare or strenuous activity, and low sexual dimorphism in the upper limbs consistent with an agricultural population.</p></div>
+      </div>
+      <div class="profile-section-block" id="beliefs">
+        <h2 class="profile-section-title">Beliefs &amp; Worldview</h2>
+        <div class="profile-section-body"><p>Little is known of the beliefs of the <a class="enc-link" href="/encyclopedia/garamantian-empire">Garamantes</a>. What survives comes mainly from their dead: the archaeological remains of the kingdom include numerous tombs and cemeteries, and Mattingly and colleagues (2003) note that some light-skinned <a class="enc-link" href="/encyclopedia/libyans">Libyans</a> were buried in monumental graves. Roman writers describe the Garamantes as bearing ritual scars and tattoos.</p><p>Burial seems to have drawn people of different origins into one custom. The remains of a young woman from <a class="enc-link" href="/encyclopedia/sub-saharan-africa">sub-Saharan Africa</a>, dated to the 1st millennium BC and wearing a lip plug of a kind associated with Sahelian groups, were found among other sub-Saharan Africans in a Garamantian cemetery. Power and colleagues (2019) argue that the ornament shows that some Garamantes shared material culture with Sahelian societies, while the burial itself shows that such people were integrated into the normal funerary rituals of Garamantian society. Inscriptions were also placed in the tombs of Garamantian cemeteries, such as those of Saniat bin Huwaydi, though most of them cannot be read.</p></div>
+      </div>
+      <div class="profile-section-block" id="arts">
+        <h2 class="profile-section-title">Arts &amp; Knowledge</h2>
+        <div class="profile-section-body"><p>The <a class="enc-link" href="/encyclopedia/garamantian-empire">Garamantes</a> left numerous tombs, forts and cemeteries, and satellite imagery published in 2011 revealed more of the buildings and structures they constructed. Their greatest work of engineering was the <a class="enc-link" href="/encyclopedia/foggara">foggara</a> system, which brought water from under the desert to their fields, and its builders have been described as brilliant farmers, resourceful engineers and enterprising merchants.</p><p>They had a script of their own. Sites near Jarma, the Garamantian capital, have abundant inscriptions cut or painted on dark grey <a class="enc-link" href="/encyclopedia/amphora">amphorae</a> and in tombs, and a project under the British Library has digitised most of them. They may have used a nearly indecipherable form of proto-Tifinagh: the inscriptions are in <a class="enc-link" href="/encyclopedia/berbers">Berber</a> characters, but only some can be read. Blench (2019) lists the explanations scholars have offered: the messages may have been deliberately coded for particular readers, may have been playful, or may have been written in a non-Berber language, perhaps Nilo-Saharan or something unknown. Rock art across the <a class="enc-link" href="/encyclopedia/sahara">Sahara</a> as far as southern <a class="enc-link" href="/encyclopedia/mauritania">Mauritania</a>, some showing a war <a class="enc-link" href="/encyclopedia/chariot">chariot</a> chasing a man, is likely testimony to Garamantian mobility.</p></div>
+      </div>
+      <div class="profile-section-block" id="exchange">
+        <h2 class="profile-section-title">Contact &amp; Exchange</h2>
+        <div class="profile-section-body"><p>The king of the <a class="enc-link" href="/encyclopedia/garamantian-empire">Garamantes</a> controlled trade routes that reached deep into <a class="enc-link" href="/encyclopedia/sub-saharan-africa">sub-Saharan Africa</a>, to the regions between the <a class="enc-link" href="/encyclopedia/niger-bend">Niger Bend</a> and <a class="enc-link" href="/encyclopedia/lake-chad">Lake Chad</a>; the southern oases of <a class="enc-link" href="/encyclopedia/ghat">Ghat</a> and Barkat were bases for traders travelling into tropical <a class="enc-link" href="/encyclopedia/africa">Africa</a>. Part of this trade was in people. <a class="enc-link" href="/encyclopedia/herodotus">Herodotus</a> wrote that they used four-horse <a class="enc-link" href="/encyclopedia/chariot">chariots</a> to hunt the "Troglodyte Ethiopians", though Sonja and Carlos Magnavita (2018) treat this as possibly a speculative tale. In the last millennium BCE, agropastoralists at <a class="enc-link" href="/encyclopedia/dhar-tichitt">Dhar Tichitt</a> in <a class="enc-link" href="/encyclopedia/mauritania">Mauritania</a> were repeatedly raided from the north by people archaeologists think were Libyco-<a class="enc-link" href="/encyclopedia/berbers">Berbers</a> or Garamantes, perhaps taken as labourers to the <a class="enc-link" href="/encyclopedia/fezzan">Fezzan</a>. Ostraca from the Roman fort of Bu Djem document Garamantian traders and black slaves.</p><p>Relations with <a class="enc-link" href="/encyclopedia/rome">Rome</a> were often hostile. <a class="enc-link" href="/encyclopedia/tacitus">Tacitus</a> wrote that the Garamantes assisted the rebel <a class="enc-link" href="/encyclopedia/tacfarinas">Tacfarinas</a> and raided Roman coastal settlements. According to <a class="enc-link" href="/encyclopedia/pliny-the-elder">Pliny the Elder</a>, <a class="enc-link" href="/encyclopedia/lucius-cornelius-balbus">Lucius Cornelius Balbus</a> and other <a class="enc-link" href="/encyclopedia/roman-empire">Romans</a> captured fifteen of their settlements in 19 BC, and in 202 AD <a class="enc-link" href="/encyclopedia/septimius-severus">Septimius Severus</a> captured <a class="enc-link" href="/encyclopedia/garama">Garama</a>. The traveller <a class="enc-link" href="/encyclopedia/julius-maternus">Julius Maternus</a> also accompanied a Garamantian king on an expedition of about four months to <a class="enc-link" href="/encyclopedia/agisymba">Agisymba</a>.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>The decline of the <a class="enc-link" href="/encyclopedia/garamantian-empire">Garamantes</a> may have been connected to worsening climatic conditions or to the overuse of water. Their irrigation drew on fossil water, a non-renewable resource, and over the centuries of the kingdom the ground water level fell, contributing to its end in the late 7th century AD. Land that is now Saharan desert was once farmland of fairly good quality, improved by Garamantian irrigation.</p><p>The Garamantes have become a subject of debate about who they were. Roman writers saw some as very dark-skinned and others as close to the <a class="enc-link" href="/encyclopedia/berbers">Berber</a> peoples, and Mattingly and colleagues (2003) concluded that this mixed picture most likely reflects the ancient reality. Later skeletal studies disagree in detail: Lahr and colleagues (2010) found that Roman-era skeletons from the <a class="enc-link" href="/encyclopedia/fezzan">Fezzan</a> clustered most closely with <a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a> Sahelian samples, while Nikita and colleagues (2011) found the Garamantes an isolated population. Ricci and colleagues (2013) found gene flow, probably from sub-Saharan populations and more evident in women. The practice of stealing women from the south was attributed to the Garamantes and to later peoples such as the <a class="enc-link" href="/encyclopedia/tuareg">Tuareg</a> and Tebu.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The <a class="enc-link" href="/encyclopedia/garamantian-empire">Garamantes</a> were a people of the <a class="enc-link" href="/encyclopedia/fezzan">Fezzan</a> in southern <a class="enc-link" href="/encyclopedia/libya">Libya</a> who, from at least 1000 BC until the late 7th century AD, built towns in the desert on water drawn from deep underground. They controlled trade routes across the <a class="enc-link" href="/encyclopedia/sahara">Sahara</a>, including a trade in enslaved people, fought with <a class="enc-link" href="/encyclopedia/rome">Rome</a>, and wrote in a script that is still only partly understood.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Eamonn Gearon, The Sahara: A Cultural History (Signal Books, 2011)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other cultures</p>
+      <div class="related-grid"><a class="related-card" href="/culture/cimmerians"><img src="/logos/thumbs/Cimmerians.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Cimmerians</span><span class="related-card-dates">c. 1000 BCE – c. 630 BCE</span></a><a class="related-card" href="/culture/dong-son-culture"><img src="/logos/thumbs/Dong%20Son%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Dong Son culture</span><span class="related-card-dates">c. 1000 BCE – c. 100 CE</span></a><a class="related-card" href="/culture/sami"><img src="/logos/thumbs/S%C3%A1mi.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Sámi</span><span class="related-card-dates">c. 1000 BCE – present</span></a><a class="related-card" href="/culture/thracians"><img src="/logos/thumbs/Thracians.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Thracians</span><span class="related-card-dates">c. 1000 BCE – c. 600 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/culture/dong-son-culture"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Dong%20Son%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Dong Son culture</span><span class="related-card-dates">c. 1000 BCE – c. 100 CE</span></a><a class="related-card" href="/culture/sami"><span class="related-card-label">Later →</span><img src="/logos/thumbs/S%C3%A1mi.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Sámi</span><span class="related-card-dates">c. 1000 BCE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Garamantes",slug="garamantes",url="https://the-epoch-institute.org/culture/garamantes";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Garamantes on The Epoch Institute — history, society and legacy. https://the-epoch-institute.org/culture/garamantes #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/culture/garamantes"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Garamantes",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Garamantes",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

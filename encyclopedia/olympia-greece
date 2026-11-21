@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Olympia: Small town in Elis — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Olympia is a small town in Elis in the western Peloponnese, Greece, beside the archaeological site of the ancient sanctuary of the same name.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/encyclopedia/olympia-greece">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Olympia: Small town in Elis — The Epoch Institute">
+<meta property="og:description" content="Olympia is a small town in Elis in the western Peloponnese, Greece, beside the archaeological site of the ancient sanctuary of the same name.">
+<meta property="og:url" content="https://the-epoch-institute.org/encyclopedia/olympia-greece">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/encyclopedia/olympia-greece.jpg">
+<meta property="og:image:width" content="330">
+<meta property="og:image:height" content="247">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/encyclopedia/olympia-greece.jpg">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"O","item":"https://the-epoch-institute.org/encyclopedia/browse/o-3"},{"@type":"ListItem","position":4,"name":"Olympia"}]},{"@type":"Article","headline":"Olympia","description":"Olympia is a small town in Elis in the western Peloponnese, Greece, beside the archaeological site of the ancient sanctuary of the same name.","url":"https://the-epoch-institute.org/encyclopedia/olympia-greece","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/olympia-greece","inLanguage":"en-GB","dateModified":"2026-11-21","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Place","name":"Olympia","alternateName":["Archaia Olympia","Ancient Olympia"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/encyclopedia/olympia-greece.jpg","contentUrl":"https://the-epoch-institute.org/images/encyclopedia/olympia-greece.jpg","width":330,"height":247,"license":"https://creativecommons.org/licenses/by-sa/2.0/","acquireLicensePage":"https://commons.wikimedia.org/wiki/File:Ancient_Olympia,_Greece2.jpg","creditText":"John Karakatsanis from Athens, Greece","creator":{"@type":"Person","name":"John Karakatsanis from Athens, Greece"},"copyrightNotice":"John Karakatsanis from Athens, Greece"}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body data-nav="encyclopedia">
+
+<main id="main" class="enc-page ref-page">
+<div class="enc-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/encyclopedia/">Encyclopedia</a></li><li><a href="/encyclopedia/browse/o-3">O</a></li><li aria-current="page">Olympia</li></ol></nav>
+<article class="enc-article">
+<header><p class="enc-kicker">Place · site</p><h1 class="enc-title">Olympia</h1><p class="enc-meta">Also known as Archaia Olympia, Ancient Olympia</p></header>
+<div class="enc-body"><p class="enc-desc"><a class="enc-link" href="/encyclopedia/olympia">Olympia</a> is a small town in Elis in the western <a class="enc-link" href="/encyclopedia/peloponnese">Peloponnese</a>, <a class="enc-link" href="/encyclopedia/greece">Greece</a>, beside the archaeological site of the ancient sanctuary of the same name. The sacred precinct, the Altis, was dedicated mainly to <a class="enc-link" href="/encyclopedia/zeus">Zeus</a>, and the Olympic Games were held there every four years from the 8th century BCE to the 4th century CE, the first major games at its stadium said to date to the 720s BCE. As a Panhellenic centre it drew visitors from the whole Greek world and helped shape a shared Greek identity. The site held over 760 significant buildings, among them the Pelopion, the tomb of Pelops, and the stadium whose length set the stadion.</p><figure class="enc-fig"><img src="/images/encyclopedia/olympia-greece.jpg" alt="Olympia" width="330" height="247" fetchpriority="high"><figcaption>Image: John Karakatsanis from Athens, Greece · CC BY-SA 2.0 · <a href="https://commons.wikimedia.org/wiki/File:Ancient_Olympia,_Greece2.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure></div>
+<section><h2 class="enc-section-title">See also</h2><ul class="enc-seealso"><li><a href="/encyclopedia/greece"><img src="/images/encyclopedia/thumbs/greece.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Greece</span><span class="tp">Place</span></span></a></li><li><a href="/encyclopedia/zeus"><img src="/images/encyclopedia/thumbs/zeus.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Zeus</span><span class="tp">Religion / idea</span></span></a></li><li><a href="/encyclopedia/peloponnese"><img src="/images/encyclopedia/thumbs/peloponnese.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Peloponnese</span><span class="tp">Place</span></span></a></li><li><a href="/encyclopedia/olympia"><span class="ph ph-place" aria-hidden="true"></span><span><span class="nm">Olympia</span><span class="tp">Place</span></span></a></li></ul></section>
+<nav class="ref-prevnext" aria-label="Neighbouring entries"><a class="prev" rel="prev" href="/encyclopedia/olympia"><span class="lbl">&larr; Previous entry</span><span class="nm">Olympia</span></a><a class="next" rel="next" href="/encyclopedia/olympias"><span class="lbl">Next entry &rarr;</span><span class="nm">Olympias</span></a></nav>
+<details class="ref-cite"><summary>Cite this entry</summary><dl><dt>APA</dt><dd><span>The Epoch Institute. (2026). Olympia. In <i>The Epoch Institute Encyclopedia</i>. https://the-epoch-institute.org/encyclopedia/olympia-greece</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>MLA</dt><dd><span>&#8220;Olympia.&#8221; <i>The Epoch Institute Encyclopedia</i>, The Epoch Institute, 2026, https://the-epoch-institute.org/encyclopedia/olympia-greece. Accessed <span data-today></span>.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Chicago</dt><dd><span>The Epoch Institute. &#8220;Olympia.&#8221; <i>The Epoch Institute Encyclopedia</i>. 2026. https://the-epoch-institute.org/encyclopedia/olympia-greece.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Harvard</dt><dd><span>The Epoch Institute (2026) &#8216;Olympia&#8217;, <i>The Epoch Institute Encyclopedia</i>. Available at: https://the-epoch-institute.org/encyclopedia/olympia-greece (Accessed: <span data-today></span>).</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd></dl></details>
+<p class="ref-updated"><span>Last reviewed October 2026</span><a class="enc-random-link" href="/encyclopedia/" data-random="entry">Random entry &#8635;</a></p>
+</article>
+</div>
+</main>
+
+<script src="/shared-nav.js" defer></script>
+<script src="/enc-page.js" defer></script>
+</body>
+</html>

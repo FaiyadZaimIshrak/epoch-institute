@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Zapotec civilisation: History, Society and Legacy</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Zapotec civilisation flourished in the Valley of Oaxaca in Mesoamerica from about 700 BC to AD 1521, with Monte Albán, one of the first major cities…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Zapotec civilisation: History, Society and Legacy">
+<meta property="og:description" content="The Zapotec civilisation flourished in the Valley of Oaxaca in Mesoamerica from about 700 BC to AD 1521, with Monte Albán, one of the first major cities…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/culture/zapotec-civilisation">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/zapotec-civilisation.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/zapotec-civilisation.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/culture/zapotec-civilisation">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Cultures & civilisations","item":"https://the-epoch-institute.org/profiles?kind=culture"},{"@type":"ListItem","position":4,"name":"Zapotec civilisation"}]},{"@type":"Article","headline":"Zapotec civilisation","description":"The Zapotec civilisation flourished in the Valley of Oaxaca in Mesoamerica from about 700 BC to AD 1521, with Monte Albán, one of the first major cities…","url":"https://the-epoch-institute.org/culture/zapotec-civilisation","mainEntityOfPage":"https://the-epoch-institute.org/culture/zapotec-civilisation","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Zapotec civilisation"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/zapotec-civilisation.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=culture">Cultures &amp; civilisations</a></li><li aria-current="page">Zapotec civilisation</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Zapotec%20civilisation.png" alt="Zapotec civilisation" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Culture · Americas</p>
+        <h1 class="profile-detail-name">Zapotec civilisation</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Homeland</span><span class="info-stat-val">The Central Valleys of <a class="enc-link" href="/encyclopedia/oaxaca">Oaxaca</a> in southern <a class="enc-link" href="/encyclopedia/mexico">Mexico</a> (Etla, Ocotlán and Mitla), about 200 km south of <a class="enc-link" href="/encyclopedia/mexico-city">Mexico City</a>; key sites Monte Albán, <a class="enc-link" href="/encyclopedia/san-jose-mogote">San José Mogote</a>, Mitla, <a class="enc-link" href="/encyclopedia/lambityeco">Lambityeco</a>, Dainzú, Yagul, El Palmillo, Zaachila and <a class="enc-link" href="/encyclopedia/guiengola">Guiengola</a> on the <a class="enc-link" href="/encyclopedia/isthmus-of-tehuantepec">Isthmus of Tehuantepec</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">Rosario phase (700–500 BC); Monte Alban 1 (late phase 400–100 BC); Monte Alban 2 (c. 100 BC – AD 200), the peak of expansion; Monte Albán the largest city of the southern Mexican highlands until about AD 700; Aztec conquest of the area in 1458; Spanish rule from 1521</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">Monte Albán and its monumental buildings, ball courts and tombs; one of the first writing systems of <a class="enc-link" href="/encyclopedia/mesoamerica">Mesoamerica</a>; a calendar; building J, the &quot;Conquest Slab&quot;; finely worked gold jewellery; the ruins of Mitla; canal irrigation</span></div>
+          <div class="info-stat"><span class="info-stat-label">How we know them</span><span class="info-stat-val">Excavations at Monte Albán, begun by Alfonso Caso in the 1930s; the work of Joyce Marcus and Kent V. Flannery; colonial-era sources on the gods, compiled by Michael Lind; legends written down after the Spanish conquest; finds by <a class="enc-link" href="/encyclopedia/mexico">Mexico</a>'s National Institute of Anthropology and History (INAH)</span></div>
+        </div>
+        <p class="empire-meta">5 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Monte Albán was founded on a mountain in the no-man's-land between three rival valley societies, and its early pottery suggests settlers came from <a class="enc-link" href="/encyclopedia/san-jose-mogote">San José Mogote</a>.</li><li>The Zapotec developed a logosyllabic writing system thought to be one of the first in <a class="enc-link" href="/encyclopedia/mesoamerica">Mesoamerica</a>; it remains undeciphered.</li><li>The Zapotec called themselves by a variant of Be'ena'a, the Cloud People, from their elite's belief that they descended from beings who lived among the clouds.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Building J at Monte Albán, shaped like an arrowhead, carries more than 40 carved stones that archaeologists read as the provinces the Zapotec controlled; upside-down heads on them are believed to stand for rulers killed in conquest.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#society">Society</a></li><li><a href="#beliefs">Beliefs &amp; Worldview</a></li><li><a href="#arts">Arts &amp; Knowledge</a></li><li><a href="#exchange">Contact &amp; Exchange</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">700–500 BC</span><span class="rf-text">In the Rosario phase three rival societies divide the valleys of <a class="enc-link" href="/encyclopedia/oaxaca">Oaxaca</a>, and at its end <a class="enc-link" href="/encyclopedia/san-jose-mogote">San José Mogote</a> loses most of its population</span></li><li><span class="rf-year">400–100 BC</span><span class="rf-text">The state formed at Monte Albán begins to expand beyond the valley</span></li><li><span class="rf-year">c. 100 BC – AD 200</span><span class="rf-text">Zapotec expansion peaks in the Monte Alban 2 phase, by conquest and by colonisation</span></li><li><span class="rf-year">c. AD 700</span><span class="rf-text">Monte Albán ceases to be the largest city in the southern Mexican highlands</span></li><li><span class="rf-year">1458</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/aztec-empire">Aztecs</a> conquer the area</span></li><li><span class="rf-year">1497–1502</span><span class="rf-text">The last battle between the <a class="enc-link" href="/encyclopedia/aztec-empire">Aztecs</a> and the Zapotec is fought at <a class="enc-link" href="/encyclopedia/guiengola">Guiengola</a> under the Aztec ruler Ahuizotl</span></li><li><span class="rf-year">1521</span><span class="rf-text">Francisco de Orozco arrives in the <a class="enc-link" href="/encyclopedia/valley-of-oaxaca">Valley of Oaxaca</a>, and the Zapotec soon submit to the rule of <a class="enc-link" href="/encyclopedia/hernan-cortes">Hernán Cortés</a></span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>Zapotec civilisation arose in the Y-shaped Central Valleys of <a class="enc-link" href="/encyclopedia/oaxaca">Oaxaca</a>, where the valleys of Etla, Ocotlán and Mitla meet at about 4,500 feet above sea level; the region is considered one of the cradles of <a class="enc-link" href="/encyclopedia/maize">maize</a>. Archaeological evidence shows the culture originated at least 2,500 years ago. In the Rosario phase (700–500 BC) the valleys were divided among three societies of different size, separated by a no-man's-land of about 80 square kilometres. Burned temples and sacrificed war captives suggest that they competed against each other. At the end of the phase the largest settlement, <a class="enc-link" href="/encyclopedia/san-jose-mogote">San José Mogote</a>, lost most of its population.</p><p>In the same period a large new settlement, later called Monte Albán, grew on a mountain in the no-man's-land overlooking the three valleys. Its early pottery resembles that of San José Mogote, which suggests its people came from there. Walls built during Monte Alban 2 suggest the city answered a military threat, and Joyce Marcus and Kent V. Flannery compare its founding to Greek synoikism, the gathering of scattered people into one city. The Zapotec languages belong to the Oto-Manguean family.</p></div>
+      </div>
+      <div class="profile-section-block" id="society">
+        <h2 class="profile-section-title">Society</h2>
+        <div class="profile-section-body"><p>The Zapotec were a sedentary people living in villages and towns, in houses of stone and mortar. Between Monte Alban phases 1 and 2 the population of the <a class="enc-link" href="/encyclopedia/valley-of-oaxaca">Valley of Oaxaca</a> grew considerably, and with it came greater social differentiation, more centralised political power and more ceremonial activity. In those phases the valley seems to have been split among several independent states with regional centres; by Monte Alban 3 the population and urban growth of Monte Albán itself had swelled.</p><p>Farming depended on water. The Atoyac River watered a narrow strip of land when it flooded, and elsewhere the Zapotec used canal irrigation, bringing water from small streams even to Monte Albán, 400 metres above the valley floor; archaeologists found a small dam and canal on the mountain's south-eastern flank. Because the valley alone could not feed the fast-growing population of Monte Alban 1, crops were also grown on the less fertile foothills. There was a dry season from November until May, but along the rivers two harvests a year were possible. In war the Zapotec used <a class="enc-link" href="/encyclopedia/cotton">cotton</a> armour.</p></div>
+      </div>
+      <div class="profile-section-block" id="beliefs">
+        <h2 class="profile-section-title">Beliefs &amp; Worldview</h2>
+        <div class="profile-section-body"><p>Zapotec religion, like most Mesoamerican religions, was polytheistic, and its gods were mostly associated with fertility and agriculture. Known deities include Cocijo, the rain god; Coquihani, the god of light; and Pitao Cozobi, the god of <a class="enc-link" href="/encyclopedia/maize">maize</a>. "Pitao" is simply the word for god. From colonial-era sources Michael Lind has listed others, among them Cozichacozee, god of war, and Leraa Queche, god of medicine. Male and female deities are told apart by costume, breechcloths for men and skirts for women. There is some evidence that gods of other peoples were worshipped too, such as the <a class="enc-link" href="/encyclopedia/quetzalcoatl">Feathered Serpent</a> of Teotihuacan and the <a class="enc-link" href="/encyclopedia/nahuatl">Nahuatl</a> god <a class="enc-link" href="/encyclopedia/xipe-totec">Xipe Totec</a>. Local rulers also appear to have been deified, and it is believed that the Zapotec practised <a class="enc-link" href="/encyclopedia/human-sacrifice">human sacrifice</a> in some rituals.</p><p>Legends of their origin, written down only after the Spanish conquest, say their ancestors were born from rocks, emerged from caves or descended from big cats such as jaguars. The governing elite believed it descended from supernatural beings who lived among the clouds and would return to them at death. A dedication cache in Mound III at Cuilapan, dated to AD 700, held jade <a class="enc-link" href="/encyclopedia/bead">beads</a>, obsidian blades, shells, a pearl and small bird bones.</p></div>
+      </div>
+      <div class="profile-section-block" id="arts">
+        <h2 class="profile-section-title">Arts &amp; Knowledge</h2>
+        <div class="profile-section-body"><p>Monte Albán has monumental buildings, ball courts, tombs and grave goods, including finely worked gold jewellery. On its main plaza stands building J, shaped like an arrowhead, with more than 40 carved stones bearing hieroglyphic writing and heads in elaborate headdresses. Alfonso Caso, who excavated there in the 1930s, read the glyphs as the provinces controlled by the Zapotec. The well-known ruins of Mitla are also attributed to the Zapotec.</p><p>The Zapotec developed a calendar and a logosyllabic writing system, read in columns from top to bottom. It is thought to be one of the first writing systems of <a class="enc-link" href="/encyclopedia/mesoamerica">Mesoamerica</a> and a predecessor of the Maya, Mixtec and Aztec scripts; some signs can be recognised as calendar information, but the script remains undeciphered and went out of use in the late Classic period. The earliest known example is a Danzante stone, Monument 3 from <a class="enc-link" href="/encyclopedia/san-jose-mogote">San José Mogote</a>, showing what appears to be a dead captive with two glyphs, possibly his name; it was first dated to 500–600 BC, but the date is doubted. A tomb about 1,400 years old found in January 2026 has an owl-head frieze and polychrome murals of a procession carrying bags of copal.</p></div>
+      </div>
+      <div class="profile-section-block" id="exchange">
+        <h2 class="profile-section-title">Contact &amp; Exchange</h2>
+        <div class="profile-section-body"><p>During late Monte Alban 1 and Monte Alban 2 the Zapotec rulers took control of provinces outside the <a class="enc-link" href="/encyclopedia/valley-of-oaxaca">Valley of Oaxaca</a>, and by 200 their influence reached from Quiotepec in the north to Ocelotepec and Chiltepec in the south. In many regions local pottery styles were suddenly replaced by Zapotec ones. Marcus and Flannery see both colonisation and conquest in this expansion. Relations with central <a class="enc-link" href="/encyclopedia/mexico">Mexico</a> were long: Teotihuacan had a Zapotec neighbourhood, and Monte Albán a Teotihuacan-style guest house. Later, Zapotec and Mixtec artisans in <a class="enc-link" href="/encyclopedia/tenochtitlan">Tenochtitlan</a> made jewellery for Aztec rulers, including <a class="enc-link" href="/encyclopedia/moctezuma-ii">Moctezuma II</a>.</p><p>In the 1450s Aztec forces invaded the Valley of Oaxaca and conquered the area in 1458; in 1486 they built a fort on the hill of Huaxyácac to enforce tribute. The last battle between <a class="enc-link" href="/encyclopedia/aztec-empire">Aztecs</a> and Zapotec was fought at <a class="enc-link" href="/encyclopedia/guiengola">Guiengola</a> between 1497 and 1502. When news came that the Spaniards had defeated the Aztecs, King Cosijoeza told his people not to confront them and sent a delegation to seek an alliance. Francisco de Orozco arrived in 1521; the Zapotec and <a class="enc-link" href="/encyclopedia/mixtecs">Mixtecs</a> soon submitted, though <a class="enc-link" href="/encyclopedia/antequera">Antequera</a> resisted until the end of that year.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>After 1526 the Zapotec lands became part of the Marquessate of the <a class="enc-link" href="/encyclopedia/valley-of-oaxaca">Valley of Oaxaca</a> in the <a class="enc-link" href="/encyclopedia/viceroyalty-of-new-spain">Viceroyalty of New Spain</a>, under <a class="enc-link" href="/encyclopedia/hernan-cortes">Hernán Cortés</a>. <a class="enc-link" href="/encyclopedia/dominican-order">Dominican friars</a> settled in <a class="enc-link" href="/encyclopedia/antequera">Antequera</a> from 1528, and after the Bishopric of <a class="enc-link" href="/encyclopedia/oaxaca">Oaxaca</a> was founded in 1535 Catholic priests came in growing numbers. Settlers brought horses, <a class="enc-link" href="/encyclopedia/cattle">cattle</a>, goats, sheep, chickens and mules, never before seen in Oaxaca, and over the centuries native people and Spanish settlers intermarried.</p><p>Conquest brought catastrophe through disease. <a class="enc-link" href="/encyclopedia/smallpox">Smallpox</a>, <a class="enc-link" href="/encyclopedia/measles">measles</a>, typhoid, influenza, cocoliztli and other epidemics struck Oaxaca again and again: some nineteen major epidemics came before the first century of Spanish rule was over, and the native population of Oaxaca is estimated to have fallen from 1.5 million in 1520 to 150,000 in 1650 before it recovered. The <a class="enc-link" href="/encyclopedia/zapotecs">Zapotec peoples</a> of today are the descendants of the civilisation. Their languages, of which there are 7 distinct ones and over 100 dialects, are tone languages spoken in the Sierra Norte, the Central Valleys, the Southern Sierra, the <a class="enc-link" href="/encyclopedia/isthmus-of-tehuantepec">Isthmus of Tehuantepec</a> and along the Pacific coast, and through migration also in <a class="enc-link" href="/encyclopedia/mexico-city">Mexico City</a> and <a class="enc-link" href="/encyclopedia/los-angeles">Los Angeles</a>.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Zapotec civilisation of the <a class="enc-link" href="/encyclopedia/valley-of-oaxaca">Valley of Oaxaca</a> built Monte Albán, one of the first major cities of <a class="enc-link" href="/encyclopedia/mesoamerica">Mesoamerica</a>, and from it a state that conquered and colonised much of what is now <a class="enc-link" href="/encyclopedia/oaxaca">Oaxaca</a>. Its people developed one of the earliest Mesoamerican scripts, were conquered by the <a class="enc-link" href="/encyclopedia/aztec-empire">Aztecs</a> in 1458 and submitted to the Spaniards in 1521; the <a class="enc-link" href="/encyclopedia/zapotecs">Zapotec peoples</a> of today are their descendants.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Lind, Michael, Ancient Zapotec Religion (University Press of Colorado, 2015)</li>
+        <li>Whitecotton, Joseph W., The Zapotecs: princes, priests, and peasants (The University of Oklahoma Press, 1984)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other cultures</p>
+      <div class="related-grid"><a class="related-card" href="/culture/celts"><img src="/logos/thumbs/Celts.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Celts</span><span class="related-card-dates">c. 800 BCE – c. 84 CE</span></a><a class="related-card" href="/culture/iberians"><img src="/logos/thumbs/Iberians.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Iberians</span><span class="related-card-dates">c. 600 BCE – c. 100 CE</span></a><a class="related-card" href="/culture/paracas-culture"><img src="/logos/thumbs/Paracas%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Paracas culture</span><span class="related-card-dates">c. 800 BCE – c. 100 BCE</span></a><a class="related-card" href="/culture/scythians"><img src="/logos/thumbs/Scythians.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Scythians</span><span class="related-card-dates">c. 800 BCE – c. 260 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/culture/scythians"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Scythians.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Scythians</span><span class="related-card-dates">c. 800 BCE – c. 260 CE</span></a><a class="related-card" href="/culture/iberians"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Iberians.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Iberians</span><span class="related-card-dates">c. 600 BCE – c. 100 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Zapotec civilisation",slug="zapotec-civilisation",url="https://the-epoch-institute.org/culture/zapotec-civilisation";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Zapotec civilisation on The Epoch Institute — history, society and legacy. https://the-epoch-institute.org/culture/zapotec-civilisation #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/culture/zapotec-civilisation"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Zapotec civilisation",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Zapotec civilisation",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

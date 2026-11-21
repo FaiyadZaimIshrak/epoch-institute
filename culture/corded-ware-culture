@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Corded Ware culture: History, Society and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Corded Ware culture was a broad archaeological horizon of northern, central and eastern Europe between about 2900 and 2300 BC, named for its…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Corded Ware culture: History, Society and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Corded Ware culture was a broad archaeological horizon of northern, central and eastern Europe between about 2900 and 2300 BC, named for its…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/culture/corded-ware-culture">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/corded-ware-culture.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/corded-ware-culture.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/culture/corded-ware-culture">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Cultures & civilisations","item":"https://the-epoch-institute.org/profiles?kind=culture"},{"@type":"ListItem","position":4,"name":"Corded Ware culture"}]},{"@type":"Article","headline":"Corded Ware culture","description":"The Corded Ware culture was a broad archaeological horizon of northern, central and eastern Europe between about 2900 and 2300 BC, named for its…","url":"https://the-epoch-institute.org/culture/corded-ware-culture","mainEntityOfPage":"https://the-epoch-institute.org/culture/corded-ware-culture","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Corded Ware culture"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/corded-ware-culture.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=culture">Cultures &amp; civilisations</a></li><li aria-current="page">Corded Ware culture</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Corded%20Ware%20culture.png" alt="Corded Ware culture" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Culture · Europe</p>
+        <h1 class="profile-detail-name">Corded Ware culture</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Homeland</span><span class="info-stat-val">Most of continental northern <a class="enc-link" href="/encyclopedia/europe">Europe</a> from the <a class="enc-link" href="/encyclopedia/rhine">Rhine</a> to the <a class="enc-link" href="/encyclopedia/volga">Volga</a>, from <a class="enc-link" href="/encyclopedia/germany">Germany</a>, the <a class="enc-link" href="/encyclopedia/kingdom-of-the-netherlands">Netherlands</a> and <a class="enc-link" href="/encyclopedia/denmark">Denmark</a> through <a class="enc-link" href="/encyclopedia/poland">Poland</a> and the Baltic to northern <a class="enc-link" href="/encyclopedia/ukraine">Ukraine</a> and <a class="enc-link" href="/encyclopedia/european-russia">European Russia</a>, with coastal <a class="enc-link" href="/encyclopedia/norway">Norway</a> and southern <a class="enc-link" href="/encyclopedia/sweden">Sweden</a> and <a class="enc-link" href="/encyclopedia/finland">Finland</a>; sites include Bronocice, Eulau, Esperstedt, Zeewijk and Turinge</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 2900–2300 BC, from the Late <a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a> through the Copper Age to the early <a class="enc-link" href="/encyclopedia/bronze-age">Bronze Age</a>; in <a class="enc-link" href="/encyclopedia/switzerland">Switzerland</a>, dated by dendrochronology, only from 2750 to 2400 BC; regional groups include the Middle <a class="enc-link" href="/encyclopedia/dnieper">Dnieper</a>, Fatyanovo–Balanovo, Single Grave, Scandinavian Battle Axe (from c. 2800 BC) and Finnish Battle Axe cultures</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">pottery decorated with twisted cord; single burial under small mounds in a crouched position; stone battle axes as men's grave goods; wheeled vehicles; steppe ancestry shared with the Yamnaya; a likely role in spreading <a class="enc-link" href="/encyclopedia/indo-european-languages">Indo-European languages</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">How we know them</span><span class="info-stat-val">Named by Friedrich Klopfleisch in 1883; the Single Grave culture defined by Andreas Peter Madsen; mostly known from burials; ancient DNA studies including Haak et al. (2015), Allentoft et al. (2015), Saag et al. (2017) and Papac et al. (2021)</span></div>
+        </div>
+        <p class="empire-meta">5 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The Corded Ware culture is named after the cord-like impressions on its pottery, and its other names, Single Grave and Battle Axe culture, come from its burials and its men's grave goods.</li><li>Ancient DNA shows its people shared much of their ancestry with the Yamnaya culture of the steppe, though whether they descended from the Yamnaya themselves is still argued.</li><li>It is considered a likely vector for the spread of many <a class="enc-link" href="/encyclopedia/indo-european-languages">Indo-European languages</a> in <a class="enc-link" href="/encyclopedia/europe">Europe</a>.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>About 3,000 battle axes have been found across <a class="enc-link" href="/encyclopedia/scandinavia">Scandinavia</a> in Battle Axe culture graves, and archaeologists think they were above all objects of status.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#society">Society</a></li><li><a href="#beliefs">Beliefs &amp; Worldview</a></li><li><a href="#arts">Arts &amp; Knowledge</a></li><li><a href="#exchange">Contact &amp; Exchange</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 3000 BC</span><span class="rf-text">The earliest radiocarbon dates for Corded Ware come from Kujawy and <a class="enc-link" href="/encyclopedia/lesser-poland">Lesser Poland</a>, though they are disputed</span></li><li><span class="rf-year">c. 2900 BC</span><span class="rf-text">Corded Ware appears more or less at once in a number of centres across north central <a class="enc-link" href="/encyclopedia/europe">Europe</a></span></li><li><span class="rf-year">c. 2800 BC</span><span class="rf-text">The Battle Axe culture appears in <a class="enc-link" href="/encyclopedia/denmark">Denmark</a>, <a class="enc-link" href="/encyclopedia/sweden">Sweden</a> and <a class="enc-link" href="/encyclopedia/norway">Norway</a></span></li><li><span class="rf-year">2750 BC</span><span class="rf-text">Corded Ware appears in <a class="enc-link" href="/encyclopedia/switzerland">Switzerland</a>, where it lasts until 2400 BC</span></li><li><span class="rf-year">c. 2300 BC</span><span class="rf-text">The Corded Ware horizon ends in the early <a class="enc-link" href="/encyclopedia/bronze-age">Bronze Age</a></span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The Corded Ware culture comprised a broad archaeological horizon from the <a class="enc-link" href="/encyclopedia/rhine">Rhine</a> in the west to the <a class="enc-link" href="/encyclopedia/volga">Volga</a> in the east, between about 2900 and 2300 BC. Its origins are among the main unresolved questions of the Indo-European homeland debate. It was long regarded as Indo-European, shaped by the pastoral societies of the steppe, while some archaeologists held that it grew independently in central <a class="enc-link" href="/encyclopedia/europe">Europe</a> from the Funnelbeaker and Globular <a class="enc-link" href="/encyclopedia/amphora">Amphora</a> cultures. The earliest radiocarbon dates come from <a class="enc-link" href="/encyclopedia/poland">Poland</a>, around 3000 BC, but later reviews argue that these rest on outlier graves; some researchers conclude that Corded Ware appeared at much the same time in several centres in the early 29th century BC.</p><p>Genetic studies suggest a westward migration of Yamnaya-related people from the steppe. Haak et al. (2015) found the DNA of Corded Ware skeletons in <a class="enc-link" href="/encyclopedia/germany">Germany</a> around 75% similar to Yamnaya individuals. Scholars disagree on how direct the link was: Kristiansen et al. (2017) proposed Yamnaya men taking wives from farming communities, while Barry Cunliffe and Leo Klejn noted that Corded Ware men carried different paternal lineages. The Middle <a class="enc-link" href="/encyclopedia/dnieper">Dnieper</a> culture forms a bridge between the two.</p></div>
+      </div>
+      <div class="profile-section-block" id="society">
+        <h2 class="profile-section-title">Society</h2>
+        <div class="profile-section-body"><p>Corded Ware was not a unified culture: its groups over so vast an area had their own ways of making a living, their own settlements and their own societies, while sharing burial customs, cord-decorated pottery and distinctive stone axes. So few settlements have been found that it was long thought a culture of nomadic herders. Evidence of settled farming has since emerged: emmer, common wheat and barley at Bronocice in south-east <a class="enc-link" href="/encyclopedia/poland">Poland</a>, and wheeled vehicles, presumably drawn by oxen. In <a class="enc-link" href="/encyclopedia/switzerland">Switzerland</a> sheep may have been kept for wool. In <a class="enc-link" href="/encyclopedia/scandinavia">Scandinavia</a> people lived on small, separate farmsteads without defences; fewer than 100 settlements are known there, most ploughed away. The Finnish Battle Axe culture mixed <a class="enc-link" href="/encyclopedia/cattle">cattle</a> breeding with hunting and gathering.</p><p>Ancient DNA has shed light on families. Studies suggest women of European farmer ancestry were taken into Corded Ware communities by marriage with incoming men of steppe ancestry; in <a class="enc-link" href="/encyclopedia/bohemia">Bohemia</a> every early Corded Ware sample without steppe ancestry was female. Papac et al. (2021) describe the early culture there as polyethnic. Three males from one burial at Eulau, probably a father and two children, suggested to Haak et al. (2008) that wives moved to their husbands' homes.</p></div>
+      </div>
+      <div class="profile-section-block" id="beliefs">
+        <h2 class="profile-section-title">Beliefs &amp; Worldview</h2>
+        <div class="profile-section-body"><p>The culture is known mostly from its graves. The dead were buried in flat graves or under small mounds in a flexed position. On the continent men lay on their right side and women on their left, both facing south, while in <a class="enc-link" href="/encyclopedia/sweden">Sweden</a> and parts of northern <a class="enc-link" href="/encyclopedia/poland">Poland</a> men lay on their left and women on their right, both facing east. In <a class="enc-link" href="/encyclopedia/denmark">Denmark</a> the dead were laid one above another under small mounds, sometimes three burials deep. Men were usually given a stone battle axe, and beakers and other pots were the most common gifts; wagons and sacrificed animals were also placed in graves.</p><p>The shift from the collective megalithic graves of the Funnelbeaker culture to individual graves with individual offerings marks a change in the social order. In 1993 a death house excavated at Turinge in Södermanland held about twenty clay vessels, six work axes, a battle axe and the cremated remains of at least six people, the earliest cremation known in <a class="enc-link" href="/encyclopedia/scandinavia">Scandinavia</a>. An unusual burial found near <a class="enc-link" href="/encyclopedia/prague">Prague</a> in 2011, of a male laid as women were, was widely sensationalised; Turek notes several older men buried with women's goods and suggests some may have chosen to live as women in old age.</p></div>
+      </div>
+      <div class="profile-section-block" id="arts">
+        <h2 class="profile-section-title">Arts &amp; Knowledge</h2>
+        <div class="profile-section-body"><p>The culture takes its name from its pottery: twisted cord, of <a class="enc-link" href="/encyclopedia/flax">flax</a> or hemp, was pressed into the wet clay to make patterns and motifs. Both men and women were buried with such vessels, which were sometimes also decorated with incisions and other impressions. Beakers were especially common, and an emphasis on drinking equipment, already present in the Funnelbeaker culture, continued. In <a class="enc-link" href="/encyclopedia/scandinavia">Scandinavia</a> and northern <a class="enc-link" href="/encyclopedia/germany">Germany</a> drinking vessels with a protruding foot define the Protruding-Foot Beaker culture, from which the Beaker culture has been proposed to derive.</p><p>The stone boat-shaped battle axe was the characteristic grave offering for men and gave the Battle Axe or Boat Axe culture its name. In Scandinavia there are strong continuities with earlier stone craft. Early Corded Ware metalwork is thought to have grown from the copper metallurgy of the Cucuteni-Trypillia culture, with some eastern <a class="enc-link" href="/encyclopedia/mediterranean">Mediterranean</a> influence. At Zeewijk in the <a class="enc-link" href="/encyclopedia/kingdom-of-the-netherlands">Netherlands</a> a rectangular building measuring 22 by 5.5–7 m has been excavated and may have had a ritual purpose. Einar Østmo points to rock carvings of this era in Scandinavia that show thousands of ships.</p></div>
+      </div>
+      <div class="profile-section-block" id="exchange">
+        <h2 class="profile-section-title">Contact &amp; Exchange</h2>
+        <div class="profile-section-body"><p>Corded Ware spread over a vast area and in many regions appears to herald a new culture and physical type; over most of its range it was clearly intrusive. From the Middle <a class="enc-link" href="/encyclopedia/dnieper">Dnieper</a> culture it spread west and east. The eastward movement gave rise to the Fatyanovo–Balanovo culture on the upper <a class="enc-link" href="/encyclopedia/volga">Volga</a>, which contributed to the Abashevo culture and so to the Sintashta culture. In the west it overlapped with the Bell Beaker culture beyond the <a class="enc-link" href="/encyclopedia/elbe">Elbe</a>, which had similar burial customs and with which it shared much of Western and <a class="enc-link" href="/encyclopedia/central-europe">Central Europe</a>.</p><p>Contact with older peoples was not always a story of conquest. In <a class="enc-link" href="/encyclopedia/scandinavia">Scandinavia</a> archaeologists see little evidence of large-scale migration, and none of a violent one: local farmers took part in changes as members of the same network. Østmo argues that the <a class="enc-link" href="/encyclopedia/north-sea">North Sea</a> and Baltic coasts were joined by a vigorous maritime economy, for which the sea was a highway, not a divider. The Fatyanovo–Balanovo culture may have had an Indo-European layer over a Uralic one, though Häkkinen holds that Uralic contacts began only in the Corded Ware period.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>The Corded Ware culture may have played a central role in spreading <a class="enc-link" href="/encyclopedia/indo-european-languages">Indo-European languages</a> in <a class="enc-link" href="/encyclopedia/europe">Europe</a>. Mallory (1999) suggested it may have been the common ancestor of the later Celtic, Germanic, Baltic, Slavic and possibly some Italic languages, and Anthony (2007) that it brought Germanic, Baltic and Slavic into northern Europe. How the languages spread is debated: <a class="enc-link" href="/encyclopedia/marija-gimbutas">Gimbutas</a> saw a military victory, Anthony proposed elite recruitment, and the authors of Haak et al. (2015) argued that a migration in which both sexes took part could have done it by numbers alone. Guus Kroonen describes the Indo-Europeanisation of Europe as a largely unrecorded extinction of earlier languages, of which Basque survives.</p><p>Genetically, Corded Ware people resembled those of the Beaker, Únětice and Nordic <a class="enc-link" href="/encyclopedia/bronze-age">Bronze Age</a> cultures, and with the Nordic Bronze Age showed the highest lactose tolerance of Bronze Age Europe. Allentoft et al. (2015) and Narasimhan et al. (2019) found close links with the Sintashta and <a class="enc-link" href="/encyclopedia/andronovo-culture">Andronovo cultures</a> of the east. Haak et al. (2015) estimated that steppe ancestry makes up 40–54% of the ancestry of modern Central and Northern Europeans.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Corded Ware culture spread across northern <a class="enc-link" href="/encyclopedia/europe">Europe</a> between about 2900 and 2300 BC, known chiefly from single graves holding cord-decorated pots and stone battle axes. Ancient DNA links its people to the Yamnaya of the steppe, and many scholars see it as a means by which <a class="enc-link" href="/encyclopedia/indo-european-languages">Indo-European languages</a> reached much of Europe, though how directly is still debated.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>David W. Anthony, The Horse, the Wheel, and Language: How Bronze-Age riders from the Eurasian steppes shaped the modern world (Princeton University Press, 2007)</li>
+        <li>Marija Gimbutas, The Kurgan culture and the Indo-Europeanization of Europe: Selected articles from 1952 to 1993 (Institute for the Study of Man, 1997)</li>
+        <li>J. P. Mallory, Encyclopedia of Indo-European Culture (Taylor &amp; Francis, 1997)</li>
+        <li>J. P. Mallory, In Search of the Indo-Europeans (Thames and Hudson, 1999)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other cultures</p>
+      <div class="related-grid"><a class="related-card" href="/culture/bell-beaker-culture"><img src="/logos/thumbs/Bell%20Beaker%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Bell Beaker culture</span><span class="related-card-dates">c. 2800 BCE – c. 1800 BCE</span></a><a class="related-card" href="/culture/caral-supe-civilisation"><img src="/logos/thumbs/Caral%E2%80%93Supe%20civilisation.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Caral–Supe civilisation</span><span class="related-card-dates">c. 3000 BCE – c. 1800 BCE</span></a><a class="related-card" href="/culture/longshan-culture"><img src="/logos/thumbs/Longshan%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Longshan culture</span><span class="related-card-dates">c. 3000 BCE – c. 1900 BCE</span></a><a class="related-card" href="/culture/cycladic-culture"><img src="/logos/thumbs/Cycladic%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Cycladic culture</span><span class="related-card-dates">c. 3100 BCE – c. 1000 BCE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/culture/longshan-culture"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Longshan%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Longshan culture</span><span class="related-card-dates">c. 3000 BCE – c. 1900 BCE</span></a><a class="related-card" href="/culture/bell-beaker-culture"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Bell%20Beaker%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Bell Beaker culture</span><span class="related-card-dates">c. 2800 BCE – c. 1800 BCE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Corded Ware culture",slug="corded-ware-culture",url="https://the-epoch-institute.org/culture/corded-ware-culture";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Corded Ware culture on The Epoch Institute — history, society and legacy. https://the-epoch-institute.org/culture/corded-ware-culture #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/culture/corded-ware-culture"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Corded Ware culture",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Corded Ware culture",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

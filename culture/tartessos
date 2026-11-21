@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Tartessos: History, Society and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Tartessos was a civilisation of the southern Iberian Peninsula, from the late Bronze Age to the 5th century BC, rich in metals, trading with Phoenicians…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Tartessos: History, Society and Legacy — The Epoch Institute">
+<meta property="og:description" content="Tartessos was a civilisation of the southern Iberian Peninsula, from the late Bronze Age to the 5th century BC, rich in metals, trading with Phoenicians…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/culture/tartessos">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/tartessos.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/tartessos.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/culture/tartessos">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Cultures & civilisations","item":"https://the-epoch-institute.org/profiles?kind=culture"},{"@type":"ListItem","position":4,"name":"Tartessos"}]},{"@type":"Article","headline":"Tartessos","description":"Tartessos was a civilisation of the southern Iberian Peninsula, from the late Bronze Age to the 5th century BC, rich in metals, trading with Phoenicians…","url":"https://the-epoch-institute.org/culture/tartessos","mainEntityOfPage":"https://the-epoch-institute.org/culture/tartessos","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Tartessos"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/tartessos.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=culture">Cultures &amp; civilisations</a></li><li aria-current="page">Tartessos</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Tartessos.png" alt="Tartessos" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Culture · Europe</p>
+        <h1 class="profile-detail-name">Tartessos</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Homeland</span><span class="info-stat-val">Western <a class="enc-link" href="/encyclopedia/andalusia">Andalusia</a> around the lower <a class="enc-link" href="/encyclopedia/guadalquivir">Guadalquivir</a> (the ancient Baetis), <a class="enc-link" href="/encyclopedia/extremadura">Extremadura</a> and southern Portugal; key sites <a class="enc-link" href="/encyclopedia/huelva">Huelva</a>, the Treasure of El Carambolo at Camas near <a class="enc-link" href="/encyclopedia/seville">Seville</a>, La Joya, <a class="enc-link" href="/encyclopedia/medellin">Medellín</a>, Cástulo, <a class="enc-link" href="/encyclopedia/cancho-roano">Cancho Roano</a> and Turuñuelo at Guareña</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">Pattern-burnished and &quot;Carambolo&quot; wares from the 9th to the 6th centuries BC; an Early Orientalizing phase from c. 750 BC; an orientalizing phase c. 750–550 BC; most sites abandoned in the 5th century BC, after which the Classic Iberian culture took its place</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">wealth in <a class="enc-link" href="/encyclopedia/tin">tin</a>, <a class="enc-link" href="/encyclopedia/silver">silver</a>, gold and <a class="enc-link" href="/encyclopedia/copper">copper</a>; trade with the <a class="enc-link" href="/encyclopedia/phoenicians">Phoenicians</a> of Gadir and with Greek <a class="enc-link" href="/encyclopedia/phocaeans">Phocaeans</a>; the Southwest script; King <a class="enc-link" href="/encyclopedia/arganthonios">Arganthonios</a>; the gold Treasure of El Carambolo; the earliest mosaic recorded in <a class="enc-link" href="/encyclopedia/western-europe">Western Europe</a>, at Cástulo</span></div>
+          <div class="info-stat"><span class="info-stat-label">How we know them</span><span class="info-stat-val">Greek and Roman writers including <a class="enc-link" href="/encyclopedia/herodotus">Herodotus</a>, <a class="enc-link" href="/encyclopedia/ephorus">Ephorus</a>, <a class="enc-link" href="/encyclopedia/aristotle">Aristotle</a>, <a class="enc-link" href="/encyclopedia/strabo">Strabo</a>, Pausanias, <a class="enc-link" href="/encyclopedia/pliny-the-elder">Pliny the Elder</a> and Appian; <a class="enc-link" href="/encyclopedia/adolf-schulten">Adolf Schulten</a>'s work published in 1922; excavations at El Carambolo from 1958, at <a class="enc-link" href="/encyclopedia/huelva">Huelva</a> and at Turuñuelo from 2015; carbon-14 dating by the University of <a class="enc-link" href="/encyclopedia/groningen">Groningen</a>; about 97 inscriptions in the Southwest script</span></div>
+        </div>
+        <p class="empire-meta">5 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Tartessos was the first entity in south-western <a class="enc-link" href="/encyclopedia/iberia">Iberia</a> recognised as a kingdom, and <a class="enc-link" href="/encyclopedia/herodotus">Herodotus</a> names its king <a class="enc-link" href="/encyclopedia/arganthonios">Arganthonios</a> as the host of the first <a class="enc-link" href="/encyclopedia/greeks">Greeks</a> to reach Iberia.</li><li>Its wealth lay in metals: by the <a class="enc-link" href="/encyclopedia/late-bronze-age">Late Bronze Age</a> <a class="enc-link" href="/encyclopedia/silver">silver</a> extraction in <a class="enc-link" href="/encyclopedia/huelva">Huelva</a> Province had reached industrial proportions.</li><li>Scholars describe it as a hybrid archaeological culture, formed around the 9th century BC through contact between Phoenician settlers and local people.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Excavations on two adjoining lots in the centre of <a class="enc-link" href="/encyclopedia/huelva">Huelva</a>, together 2,150 square metres, yielded some 90,000 fragments of local, Phoenician and Greek pottery dated from the 10th to the early 8th centuries BC.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#society">Society</a></li><li><a href="#beliefs">Beliefs &amp; Worldview</a></li><li><a href="#arts">Arts &amp; Knowledge</a></li><li><a href="#exchange">Contact &amp; Exchange</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">10th century BC</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/huelva">Huelva</a> becomes a manufacturing and trading harbour receiving goods from distant places</span></li><li><span class="rf-year">8th century BC</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/phoenicians">Phoenicians</a> settle in <a class="enc-link" href="/encyclopedia/iberia">Iberia</a> and build their own harbour at Gadir</span></li><li><span class="rf-year">c. 750 BC</span><span class="rf-text">The Early Orientalizing phase begins, with the first imports from the eastern <a class="enc-link" href="/encyclopedia/mediterranean">Mediterranean</a></span></li><li><span class="rf-year">7th–6th centuries BC</span><span class="rf-text">The oldest known indigenous texts of <a class="enc-link" href="/encyclopedia/iberia">Iberia</a> are written in Tartessian in the Southwest script</span></li><li><span class="rf-year">late 6th century BC</span><span class="rf-text">A pebble mosaic is laid at Cástulo, the earliest recorded in <a class="enc-link" href="/encyclopedia/western-europe">Western Europe</a></span></li><li><span class="rf-year">5th century BC</span><span class="rf-text">Most Tartessian sites are abandoned</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>Tartessos, as archaeology defines it, was a civilisation settled in the southern <a class="enc-link" href="/encyclopedia/iberia">Iberian Peninsula</a> from about the late <a class="enc-link" href="/encyclopedia/bronze-age">Bronze Age</a> until the 5th century BC. In this region the Tartessian culture was born around the 9th century BC through hybridisation between Phoenician settlers and the local inhabitants, and scholars call it a hybrid archaeological culture. Mining and smelting were older than the arrival of <a class="enc-link" href="/encyclopedia/phoenicians">Phoenicians</a> and <a class="enc-link" href="/encyclopedia/greeks">Greeks</a>, which began in the 8th century BC.</p><p>In written records Tartessos appears as a semi-mythical harbour city and its surrounding culture on the south coast of Iberia, at the mouth of the <a class="enc-link" href="/encyclopedia/guadalquivir">Guadalquivir</a>. It is named in Greek and Near Eastern sources from the first millennium BC; <a class="enc-link" href="/encyclopedia/herodotus">Herodotus</a> placed it beyond the Pillars of Hercules. <a class="enc-link" href="/encyclopedia/aristotle">Aristotle</a> and others called Tartessos a river, and <a class="enc-link" href="/encyclopedia/pausanias-general">Pausanias</a> described a river with two mouths and a city of the same name between them, which the later Baetis, now the Guadalquivir, seems to fit. <a class="enc-link" href="/encyclopedia/adolf-schulten">Adolf Schulten</a> thought the city might lie buried in the wetlands near the river's mouth, now the Doñana National Park. Tartessian was an extinct pre-Roman language, unclassified for lack of data.</p></div>
+      </div>
+      <div class="profile-section-block" id="society">
+        <h2 class="profile-section-title">Society</h2>
+        <div class="profile-section-body"><p>Tartessos was the first entity in south-western <a class="enc-link" href="/encyclopedia/iberia">Iberia</a> recognised as a kingdom, and <a class="enc-link" href="/encyclopedia/herodotus">Herodotus</a> tells of a king, <a class="enc-link" href="/encyclopedia/arganthonios">Arganthonios</a>. Yet its <a class="enc-link" href="/encyclopedia/late-bronze-age">Late Bronze Age</a> sites were not particularly complex, and one mainstream view is that a domestic mode of production predominated. Earlier scholars treated the Tartessians as a less developed people taking up better eastern ways; later ones have looked instead at how local institutions grew.</p><p>New finds at <a class="enc-link" href="/encyclopedia/huelva">Huelva</a> are revising those views. The remains there point to a substantial industrial and commercial emporion that lasted several centuries, and the protohistoric town is estimated at some 20 hectares, large for Iberia in that period. Carbon-14 dates from the University of <a class="enc-link" href="/encyclopedia/groningen">Groningen</a> and pottery give a sequence of crafts from the 10th century BC: melting pots, casting nozzles, weights, worked wood, ship parts, <a class="enc-link" href="/encyclopedia/ivory-trade">ivory</a> from the only workshop of its time proven in the west, gold and <a class="enc-link" href="/encyclopedia/silver">silver</a>. Houses changed in the 7th and 6th centuries BC from scattered round or oval huts to rectangular houses with <a class="enc-link" href="/encyclopedia/dry-stone-construction">dry-stone</a> foundations and plastered wattle-and-daub walls, in planned settlements rebuilt on the same sites.</p></div>
+      </div>
+      <div class="profile-section-block" id="beliefs">
+        <h2 class="profile-section-title">Beliefs &amp; Worldview</h2>
+        <div class="profile-section-body"><p>There is very little evidence for Tartessian religion. It is assumed that, like other <a class="enc-link" href="/encyclopedia/mediterranean">Mediterranean</a> peoples, the Tartessians were polytheists, and it is believed that through Phoenician influence they worshipped the goddess <a class="enc-link" href="/encyclopedia/astarte">Astarte</a> or <a class="enc-link" href="/encyclopedia/potnia">Potnia</a> and the male god <a class="enc-link" href="/encyclopedia/baal">Baal</a> or Melkart. Sanctuaries modelled on Phoenician architecture have been found at Cástulo, near <a class="enc-link" href="/encyclopedia/linares">Linares</a> in <a class="enc-link" href="/encyclopedia/jaen">Jaén</a>, and near <a class="enc-link" href="/encyclopedia/carmona">Carmona</a>, and images of Phoenician gods have come to light in Cádiz, <a class="enc-link" href="/encyclopedia/huelva">Huelva</a> and <a class="enc-link" href="/encyclopedia/seville">Seville</a>.</p><p>At Turuñuelo in Guareña, excavated since 2015 and declared a national heritage site in May 2022, two ornate stone busts were found in 2023. With their jewellery and hairstyles they are thought to be the first known faces of Tartessian goddesses, and they are somewhat similar to the <a class="enc-link" href="/encyclopedia/lady-of-elche">Lady of Elche</a>. Fragments of at least three other busts were also recovered, one of them thought to be a warrior because part of his helmet survives. Burial is known mainly from later sites: no necropolis from before the colonists has been identified, but <a class="enc-link" href="/encyclopedia/medellin">Medellín</a> on the <a class="enc-link" href="/encyclopedia/guadiana">Guadiana</a> and La Joya at Huelva held rich cemeteries, the latter with hundreds of artefacts.</p></div>
+      </div>
+      <div class="profile-section-block" id="arts">
+        <h2 class="profile-section-title">Arts &amp; Knowledge</h2>
+        <div class="profile-section-body"><p>Tartessian craft is known through its pottery and metalwork. Distinctive are the fully evolved pattern-burnished wares of the <a class="enc-link" href="/encyclopedia/late-bronze-age">Late Bronze Age</a> and the geometrically banded "Carambolo" wares of the 9th to 6th centuries BC, and later grey ware turned on the fast wheel, thought to imitate imported Phoenician red-slip pottery. The Late Orientalizing phase saw the finest bronze casting and goldsmith work. Characteristic bronzes include pear-shaped jugs, often found in burials with shallow dish-shaped braziers with loop handles, <a class="enc-link" href="/encyclopedia/incense">incense</a> burners with floral motifs, fibulas of elbowed and double-spring types, and belt buckles.</p><p>In September 1958 the rich gold Treasure of El Carambolo was discovered at Camas, three kilometres west of <a class="enc-link" href="/encyclopedia/seville">Seville</a>. At Cástulo a mosaic of river pebbles from the end of the 6th century BC is the earliest mosaic recorded in <a class="enc-link" href="/encyclopedia/western-europe">Western Europe</a>. Tartessos also had writing: the Southwest script, a semi-syllabic system, survives in some 97 inscriptions in an unknown language, the oldest indigenous texts of <a class="enc-link" href="/encyclopedia/iberia">Iberia</a>, dated to the 7th and 6th centuries BC and found in south-western <a class="enc-link" href="/encyclopedia/spain">Spain</a> and southern Portugal.</p></div>
+      </div>
+      <div class="profile-section-block" id="exchange">
+        <h2 class="profile-section-title">Contact &amp; Exchange</h2>
+        <div class="profile-section-body"><p>The Tartessians were rich in metals. Alluvial <a class="enc-link" href="/encyclopedia/tin">tin</a> was panned in their streams from an early date, and tin, needed for bronze and comparatively rare, was a lucrative trade. In the 4th century BC the historian <a class="enc-link" href="/encyclopedia/ephorus">Ephorus</a> described "a very prosperous market called Tartessos, with much tin carried by river, as well as gold and <a class="enc-link" href="/encyclopedia/copper">copper</a> from Celtic lands". The spread of a <a class="enc-link" href="/encyclopedia/silver">silver</a> standard in <a class="enc-link" href="/encyclopedia/assyrian-empire">Assyria</a> and the invention of coinage in the 7th century BC raised the demand for silver, and trade, once chiefly in elite goods, took on a broader economic role. Pre-Roman silver slag is found in the Tartessian cities of <a class="enc-link" href="/encyclopedia/huelva">Huelva</a> Province, and at Riotinto Cypriot and Phoenician metalworkers left 15 million tons of residues.</p><p>The Tartessians became important trading partners of the <a class="enc-link" href="/encyclopedia/phoenicians">Phoenicians</a>, who built their own harbour at Gadir, present-day Cádiz. <a class="enc-link" href="/encyclopedia/herodotus">Herodotus</a> wrote that <a class="enc-link" href="/encyclopedia/arganthonios">Arganthonios</a> welcomed Phocaean <a class="enc-link" href="/encyclopedia/greeks">Greeks</a>, and <a class="enc-link" href="/encyclopedia/pausanias-general">Pausanias</a> that the Sicyonian tyrant Myron built a treasury of Tartessian bronze. Huelva holds the largest store of imported elite goods, among them fine Greek painted pottery of the first half of the 6th century BC. These contacts sparked an orientalizing phase in Tartessian culture, c. 750–550 BC.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Most Tartessian sites were abandoned in the 5th century BC, for reasons that remain unexplained, and the Classic Iberian culture took the place of the Tartessian. Roman authors mostly repeated the Greek sources, and by around the end of the first millennium BC the name had fallen out of use; the city may have been lost to flooding. <a class="enc-link" href="/encyclopedia/pliny-the-elder">Pliny the Elder</a> wrongly identified it with Carteia, and Appian thought Carpia had once been called Tartessos.</p><p>The modern search began with <a class="enc-link" href="/encyclopedia/adolf-schulten">Adolf Schulten</a>'s discoveries, published in 1922, which moved the study from philologists to archaeologists. J. M. Luzón was the first to identify Tartessos with <a class="enc-link" href="/encyclopedia/huelva">Huelva</a>, and many archaeologists now link the "lost" city with it. Biblical archaeologists have often identified Tartessos with Tarshish, a place in the <a class="enc-link" href="/encyclopedia/hebrew-bible">Hebrew Bible</a> associated with mineral wealth, while others connect Tarshish with <a class="enc-link" href="/encyclopedia/tarsus">Tarsus</a> in <a class="enc-link" href="/encyclopedia/anatolia">Anatolia</a> or more distant places. Schulten also claimed Tartessos as the source of the legend of Atlantis, and in 2011 Richard Freund announced evidence for it in Doñana; Spanish scientists said he was sensationalising their work and called his claims fanciful.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Tartessos was a culture of southern <a class="enc-link" href="/encyclopedia/iberia">Iberia</a> from the late <a class="enc-link" href="/encyclopedia/bronze-age">Bronze Age</a> to the 5th century BC, grown rich on <a class="enc-link" href="/encyclopedia/tin">tin</a>, <a class="enc-link" href="/encyclopedia/silver">silver</a> and gold and shaped by trade with Phoenician and Greek merchants. Remembered by Greek writers as a half-legendary city and kingdom, it is now traced through sites such as <a class="enc-link" href="/encyclopedia/huelva">Huelva</a> and El Carambolo and through inscriptions in the undeciphered Southwest script.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Jaime Alvar &amp; José María Blázquez, eds., Los enigmas de Tartessos (Catedra, 1993)</li>
+        <li>José María Blázquez, Tartessos y los orígenes de la colonización fenicia en Occidente, 2nd edn. (University of Salamanca, 1975)</li>
+        <li>Fernando González de Canales Cerisola, Jorge Llompart Gómez &amp; Leonardo Serrano Pichardo, El emporio fenicio precolonial de Huelva, ca. 900-770 a.C. (Biblioteca Nueva, 2004)</li>
+        <li>Sebastián Celestino Pérez &amp; Carolina López-Ruiz, Tartessos and the Phoenicians in Iberia (Oxford University Press, 2016)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other cultures</p>
+      <div class="related-grid"><a class="related-card" href="/culture/etruscans"><img src="/logos/thumbs/Etruscans.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Etruscans</span><span class="related-card-dates">c. 900 BCE – c. 27 BCE</span></a><a class="related-card" href="/culture/celts"><img src="/logos/thumbs/Celts.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Celts</span><span class="related-card-dates">c. 800 BCE – c. 84 CE</span></a><a class="related-card" href="/culture/cimmerians"><img src="/logos/thumbs/Cimmerians.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Cimmerians</span><span class="related-card-dates">c. 1000 BCE – c. 630 BCE</span></a><a class="related-card" href="/culture/dong-son-culture"><img src="/logos/thumbs/Dong%20Son%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Dong Son culture</span><span class="related-card-dates">c. 1000 BCE – c. 100 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/culture/etruscans"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Etruscans.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Etruscans</span><span class="related-card-dates">c. 900 BCE – c. 27 BCE</span></a><a class="related-card" href="/culture/celts"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Celts.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Celts</span><span class="related-card-dates">c. 800 BCE – c. 84 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Tartessos",slug="tartessos",url="https://the-epoch-institute.org/culture/tartessos";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Tartessos on The Epoch Institute — history, society and legacy. https://the-epoch-institute.org/culture/tartessos #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/culture/tartessos"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Tartessos",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Tartessos",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

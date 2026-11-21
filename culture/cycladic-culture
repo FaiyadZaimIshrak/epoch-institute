@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Cycladic culture: History, Society and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Cycladic culture was a Bronze Age culture of the Cyclades in the Aegean Sea, c. 3100–1000 BC, best known for its schematic white marble figurines and…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Cycladic culture: History, Society and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Cycladic culture was a Bronze Age culture of the Cyclades in the Aegean Sea, c. 3100–1000 BC, best known for its schematic white marble figurines and…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/culture/cycladic-culture">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/cycladic-culture.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/cycladic-culture.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/culture/cycladic-culture">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Cultures & civilisations","item":"https://the-epoch-institute.org/profiles?kind=culture"},{"@type":"ListItem","position":4,"name":"Cycladic culture"}]},{"@type":"Article","headline":"Cycladic culture","description":"The Cycladic culture was a Bronze Age culture of the Cyclades in the Aegean Sea, c. 3100–1000 BC, best known for its schematic white marble figurines and…","url":"https://the-epoch-institute.org/culture/cycladic-culture","mainEntityOfPage":"https://the-epoch-institute.org/culture/cycladic-culture","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Cycladic culture"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/cycladic-culture.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=culture">Cultures &amp; civilisations</a></li><li aria-current="page">Cycladic culture</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Cycladic%20culture.png" alt="Cycladic culture" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Culture · Europe</p>
+        <h1 class="profile-detail-name">Cycladic culture</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Homeland</span><span class="info-stat-val">The islands of the <a class="enc-link" href="/encyclopedia/cyclades">Cyclades</a> in the <a class="enc-link" href="/encyclopedia/aegean">Aegean Sea</a>; excavated sites include Chalandriani, <a class="enc-link" href="/encyclopedia/phylakopi">Phylakopi</a>, Skarkos, Saliagos, Kephala and <a class="enc-link" href="/encyclopedia/ayia-irini-kea">Ayia Irini</a> on Kea, Grotta on Naxos, and <a class="enc-link" href="/encyclopedia/amorgos">Amorgos</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">Early Cycladic in three phases, c. 3100–2300 BC; Middle Cycladic from c. 2000 BC; Late Cycladic to c. 1000 BC, when Cycladic and <a class="enc-link" href="/encyclopedia/minoan-civilisation">Minoan civilisation</a> had largely converged; the Cycladic and Helladic dating systems are linked in varying ways</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">flat schematic female (rarely male) figurines of white island marble; the Cycladic “frying pans” with pictures of ships; longboats crewed by at least twenty-five oarsmen; pottery traded by sea; early <a class="enc-link" href="/encyclopedia/copper">copper</a>-working at Kephala; the sanctuary of <a class="enc-link" href="/encyclopedia/delos">Delos</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">How we know them</span><span class="info-stat-val">Excavations from the 1880s by antiquaries such as Theodore Bent, then the British School at <a class="enc-link" href="/encyclopedia/athens">Athens</a> and Christos Tsountas, who investigated burials on several islands in 1898–99 and coined the term “Cycladic civilization”; pottery sequences and graves; the dating schemes of Oliver Dickinson</span></div>
+        </div>
+        <p class="empire-meta">4 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The Cycladic culture is best known for flat, schematic marble figurines of uncertain purpose, most of them female.</li><li>Pictures of ships on the clay “frying pans” and Late Cycladic boat models show a seafaring people whose longboats carried crews of at least twenty-five.</li><li>Around 90% of the known figurines may have been looted or removed without record, so their meaning may never be fully understood.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Collectors from the early 1900s prized Cycladic figures for looking like modern sculpture by Jean Arp or Constantin Brâncuși, a demand that fed the looting of graves and a brisk trade in forgeries.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#society">Society</a></li><li><a href="#beliefs">Beliefs &amp; Worldview</a></li><li><a href="#arts">Arts &amp; Knowledge</a></li><li><a href="#exchange">Contact &amp; Exchange</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">3400 to 2200 BC</span><span class="rf-text">Pottery at <a class="enc-link" href="/encyclopedia/knossos">Knossos</a> on <a class="enc-link" href="/encyclopedia/crete">Crete</a> shows the influence of Cycladic civilisation</span></li><li><span class="rf-year">c. 3100 BC</span><span class="rf-text">The Early Cycladic period began, developing in three phases until c. 2300 BC</span></li><li><span class="rf-year">c. 2000 BC</span><span class="rf-text">The Early Cycladic period gave way to the less well known Middle Cycladic</span></li><li><span class="rf-year">1600–1400 BC</span><span class="rf-text">The settlement of <a class="enc-link" href="/encyclopedia/ayia-irini-kea">Ayia Irini</a> on Kea reached its height</span></li><li><span class="rf-year">around 1300 BC</span><span class="rf-text">The Mycenaean town of Naxos spread from today’s city to the islet of Palatia</span></li><li><span class="rf-year">c. 1000 BC</span><span class="rf-text">By the end of the Late Cycladic sequence, Cycladic and <a class="enc-link" href="/encyclopedia/minoan-civilisation">Minoan civilisation</a> had largely converged</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The Cycladic culture, also called Cycladic civilisation, was a <a class="enc-link" href="/encyclopedia/bronze-age">Bronze Age</a> culture of about 3100 to 1000 BC found throughout the <a class="enc-link" href="/encyclopedia/cyclades">Cyclades</a> in the <a class="enc-link" href="/encyclopedia/aegean">Aegean Sea</a>. As a chronology it is a relative dating system for artefacts, roughly contemporary with the Helladic chronology of mainland <a class="enc-link" href="/encyclopedia/greece">Greece</a> and the Minoan chronology of <a class="enc-link" href="/encyclopedia/crete">Crete</a>. It is divided into Early, Middle and Late Cycladic: the early period began around 3100 BC and developed in three phases until about 2300 BC, and gave way around 2000 BC to the archaeologically murkier Middle Cycladic.</p><p>Before it, a distinctive <a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a> culture combining Anatolian and mainland Greek elements arose in the western Aegean, living on emmer and wild-type barley, sheep, goats, pigs, and tuna apparently speared from small boats. Excavated sites such as Saliagos and Kephala on Kea belong to this background, and Kephala shows signs of <a class="enc-link" href="/encyclopedia/copper">copper</a>-working. Naxos has been inhabited since at least the fourth millennium BC, and its place names suggest it was never abandoned. Scholars use one “cultural” and one “chronological” dating system, and attempts to link them, such as Oliver Dickinson’s, give varying combinations.</p></div>
+      </div>
+      <div class="profile-section-block" id="society">
+        <h2 class="profile-section-title">Society</h2>
+        <div class="profile-section-body"><p>Each of the small Cycladic islands could support no more than a few thousand people. The communities were scattered, but Late Cycladic boat models show that crews of twenty-five oarsmen could be gathered from them, and the sea joined the islands to each other and to their neighbours. There were probably two kinds of ships: a small boat handled by one person or a very small crew, and a longboat that could carry at least twenty-five.</p><p>The settlements are known from excavated sites such as Chalandriani, <a class="enc-link" href="/encyclopedia/phylakopi">Phylakopi</a> and Skarkos. At Kea a <a class="enc-link" href="/encyclopedia/bronze-age">Bronze Age</a> settlement grew at the site now called <a class="enc-link" href="/encyclopedia/ayia-irini-kea">Ayia Irini</a>, reaching its height in the Late Minoan and early Mycenaean eras, 1600–1400 BC. On Naxos the Mycenaean town of around 1300 BC covered the ground from today’s city to the islet of Palatia; part of it lies under the square before the <a class="enc-link" href="/encyclopedia/eastern-orthodox-church">Orthodox</a> Cathedral in Chora, at the site of Grotta. In the <a class="enc-link" href="/encyclopedia/middle-bronze-age">Middle Bronze Age</a> walls were extended beyond older Cycladic walls in many places, a sign of growth.</p></div>
+      </div>
+      <div class="profile-section-block" id="beliefs">
+        <h2 class="profile-section-title">Beliefs &amp; Worldview</h2>
+        <div class="profile-section-body"><p>Graves are a primary source for the Cycladic culture, and the burials of the Early Cycladic cemeteries held the objects for which it is best known. The figurines carved from the islands’ pure white marble are flat and schematic, mostly female and rarely male, and their purpose is uncertain. Because so many were taken from graves without record, the context that might explain them has largely been destroyed.</p><p>One island kept a sacred role long after the culture itself. <a class="enc-link" href="/encyclopedia/delos">Delos</a>, one of the exceptions to the islands’ decline in importance under Minoan influence, retained its ancient reputation as a sanctuary through the period of Classical Greek civilisation, when it was the seat of the <a class="enc-link" href="/encyclopedia/delian-league">Delian League</a>. The Cycladic “frying pans”, clay objects whose original function remains unknown, carry imagery that may have had meaning beyond decoration, but what they were used for is not known.</p></div>
+      </div>
+      <div class="profile-section-block" id="arts">
+        <h2 class="profile-section-title">Arts &amp; Knowledge</h2>
+        <div class="profile-section-body"><p>The marble figurines are the culture’s most famous works: flat, schematic human figures, most of them female, carved from the islands’ white marble. Their clean, simple forms later struck collectors as close to modern sculpture by Jean Arp or Constantin Brâncuși.</p><p>Pottery makes up a large part of the surviving finds, especially from excavated contexts, and shifts in its style and materials over time have been used to divide Cycladic chronology into periods; transitions in pottery styles helped fix the dates of the Middle Cycladic. The clay “frying pans” bear images, among them ships, which show how Cycladic vessels were likely built and how much seafaring mattered to the islanders. <a class="enc-link" href="/encyclopedia/copper">Copper</a>-working appears early, at Kephala on Kea.</p></div>
+      </div>
+      <div class="profile-section-block" id="exchange">
+        <h2 class="profile-section-title">Contact &amp; Exchange</h2>
+        <div class="profile-section-body"><p>The <a class="enc-link" href="/encyclopedia/cyclades">Cyclades</a> lay between <a class="enc-link" href="/encyclopedia/crete">Crete</a> and the Greek mainland, and their culture was in close contact with both. Excavations at <a class="enc-link" href="/encyclopedia/knossos">Knossos</a> on Crete show Cycladic influence there between 3400 and 2200 BC, as evidenced by pottery finds. Pottery was also a primary good traded to and from the islands by boat, especially in the Early Cycladic period. In the <a class="enc-link" href="/encyclopedia/middle-bronze-age">Middle Bronze Age</a>, artefacts and communities point to an expansion of Cycladic influence, including onto the mainland and Crete.</p><p>The balance later shifted. When the highly organised palace culture of Crete arose, the islands became relatively less significant, and Cycladic culture was increasingly submerged in the rising influence of Minoan Crete. Kea, Naxos and <a class="enc-link" href="/encyclopedia/delos">Delos</a> were exceptions. By the end of the Late Cycladic sequence, around 1000 BC, the Cycladic and <a class="enc-link" href="/encyclopedia/minoan-civilisation">Minoan civilisations</a> had essentially converged, and Naxos by then held a Mycenaean town.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Archaeological work began in the 1880s with antiquaries such as Theodore Bent, followed by systematic excavation by the British School at <a class="enc-link" href="/encyclopedia/athens">Athens</a> and by Christos Tsountas, who investigated burial sites on several islands in 1898–99 and coined the term “Cycladic civilization”. Interest then lagged, but revived in the mid-20th century, partly because collectors wanted artefacts from the Early Cycladic cemeteries.</p><p>That demand did lasting harm. Since the early 1900s private collectors have coveted Cycladic figures, feeding a huge illicit trade in objects stolen from burials and a brisk trade in forgeries. It has been suggested that around 90% of the known figures were looted or removed unscientifically, so their meaning may never be fully understood. Between 2009 and 2010 scholars met a man they identified only as “the forger”, whose account of how forgeries were made and sold has helped them identify fakes and trace objects to their places of origin. Cycladic art is shown today in collections such as the Goulandris Museum of Cycladic Art.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Cycladic culture flourished on the islands of the <a class="enc-link" href="/encyclopedia/aegean">Aegean</a> from about 3100 to 1000 BC, its small communities linked by longboats and by the trade in pottery. Famous for its schematic white marble figurines, it was gradually absorbed into the Minoan world, and the looting of its graves for collectors has left much of its meaning lost.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Doumas, Christos G., Thera, Pompeii of the Ancient Aegean: Excavations at Akrotiri 1967-1979 (Thames and Hudson, 1983)</li>
+        <li>Morgan, Lyvia, The miniature wall paintings of Thera: a study in Aegean culture and iconography (Cambridge University Press, 1988)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other cultures</p>
+      <div class="related-grid"><a class="related-card" href="/culture/minoan-civilisation"><img src="/logos/thumbs/Minoan%20civilisation.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Minoan civilisation</span><span class="related-card-dates">c. 3100 BCE – c. 1100 BCE</span></a><a class="related-card" href="/culture/caral-supe-civilisation"><img src="/logos/thumbs/Caral%E2%80%93Supe%20civilisation.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Caral–Supe civilisation</span><span class="related-card-dates">c. 3000 BCE – c. 1800 BCE</span></a><a class="related-card" href="/culture/longshan-culture"><img src="/logos/thumbs/Longshan%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Longshan culture</span><span class="related-card-dates">c. 3000 BCE – c. 1900 BCE</span></a><a class="related-card" href="/culture/corded-ware-culture"><img src="/logos/thumbs/Corded%20Ware%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Corded Ware culture</span><span class="related-card-dates">c. 2900 BCE – c. 2300 BCE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/culture/yamnaya-culture"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Yamnaya%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Yamnaya culture</span><span class="related-card-dates">c. 3300 BCE – c. 2600 BCE</span></a><a class="related-card" href="/culture/minoan-civilisation"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Minoan%20civilisation.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Minoan civilisation</span><span class="related-card-dates">c. 3100 BCE – c. 1100 BCE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Cycladic culture",slug="cycladic-culture",url="https://the-epoch-institute.org/culture/cycladic-culture";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Cycladic culture on The Epoch Institute — history, society and legacy. https://the-epoch-institute.org/culture/cycladic-culture #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/culture/cycladic-culture"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Cycladic culture",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Cycladic culture",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

@@ -41314,6 +41314,840 @@
     ]
    ],
    "wave": "d1"
+  },
+  {
+   "slug": "pantheon-rome",
+   "name": "Pantheon",
+   "type": "work",
+   "subtype": "monument",
+   "aka": [
+    "Pantheum",
+    "Basilica of Saint Mary and the Holy Martyrs",
+    "Santa Maria Rotonda"
+   ],
+   "dates": "c. 126",
+   "desc": "The Pantheon is an ancient Roman temple in Rome, built on the site of an earlier temple commissioned by Marcus Vipsanius Agrippa under Augustus and rebuilt by the emperor Hadrian, probably dedicated around 126 CE. Its exact date is uncertain because Hadrian re-inscribed it with Agrippa's original inscription. A portico of granite Corinthian columns leads to a rotunda under a coffered concrete dome with an oculus; the height to the oculus and the interior diameter are both 43 metres, and it is still the largest unreinforced concrete dome in the world. Since 609 it has been a church, which helped to preserve it.",
+   "links": [
+    [
+     "Pantheon, Rome",
+     0
+    ],
+    [
+     "the Pantheon in Rome",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/pantheon-rome.jpg",
+   "credit": {
+    "artist": "NikonZ7II",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pantheon_(Rome)_-_Right_side_and_front.jpg"
+   }
+  },
+  {
+   "slug": "catholic-church",
+   "name": "Catholic Church",
+   "type": "institution",
+   "aka": [
+    "Roman Catholic Church",
+    "Ecclesia Catholica"
+   ],
+   "desc": "The Catholic Church is the largest Christian denomination, made up of the Latin Church and 23 Eastern Catholic Churches organised into nearly 3,500 dioceses and eparchies. Its doctrine rests on the Nicene Creed and holds that its bishops succeed the apostles and that the pope, the bishop of Rome, succeeds Saint Peter. The Eucharist, celebrated in the Mass, stands at the centre of its seven sacraments. The church had a large role in the development of Western civilization; it separated from the Church of the East after 431, from the Oriental Orthodox after 451 and gradually from the Eastern Orthodox, and the 16th-century Reformation prompted its Counter-Reformation.",
+   "links": [
+    [
+     "Catholic Church",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/catholic-church.jpg",
+   "credit": {
+    "artist": "Jebulon",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Saint_Peter's_Basilica_facade,_Rome,_Italy.jpg"
+   }
+  },
+  {
+   "slug": "church-fathers",
+   "name": "Church Fathers",
+   "type": "group",
+   "aka": [
+    "Early Church Fathers",
+    "Fathers of the Church",
+    "Christian Fathers"
+   ],
+   "desc": "The Church Fathers were ancient Christian theologians and writers who laid the intellectual and doctrinal foundations of Christianity. Their age, the Patristic Era, ran roughly from the late 1st to the mid-8th century and flourished in the 4th and 5th centuries, as Christianity became the state church of the Roman Empire. The earliest, the Apostolic Fathers such as Clement of Rome, Ignatius of Antioch and Polycarp of Smyrna, were believed to have known or been shaped by the apostles. Many denominations count their writings as part of Sacred Tradition, though some, such as Origen and Tertullian, had parts of their teaching later condemned.",
+   "links": [
+    [
+     "Church Fathers",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/church-fathers.jpg",
+   "credit": {
+    "artist": "Anonymous Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Otsy.jpg"
+   }
+  },
+  {
+   "slug": "supreme-court-of-the-united-states",
+   "name": "Supreme Court of the United States",
+   "type": "institution",
+   "aka": [
+    "SCOTUS"
+   ],
+   "dates": "founded 1789",
+   "desc": "The Supreme Court of the United States is the highest court of the federal judiciary, created under Article Three of the Constitution and organised by the Judiciary Act of 1789. It has final appellate jurisdiction over federal cases and over state cases that turn on constitutional or federal law. In 1803 it asserted the power of judicial review, the ability to strike down a statute that violates the Constitution. Nine justices, the chief justice and eight associate justices, sit for life, appointed by the president with the advice and consent of the Senate. It receives about 7,000 petitions a year and grants about 80.",
+   "links": [
+    [
+     "Supreme Court of the United States",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/supreme-court-of-the-united-states.jpg",
+   "credit": {
+    "artist": "UpstateNYer",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:USSupremeCourtWestFacade.JPG"
+   }
+  },
+  {
+   "slug": "alexander-pope",
+   "name": "Alexander Pope",
+   "type": "person",
+   "aka": [
+    "Pope"
+   ],
+   "dates": "1688–1744",
+   "desc": "Alexander Pope was an English poet, translator and satirist of the Enlightenment, a leading figure of Augustan literature in the early 18th century. Born in London to Catholic parents, he was barred by the Test Acts from university and largely taught himself from the classical and English poets, while Pott disease, a tuberculosis of the spine, affected his health from the age of 12. His works include An Essay on Criticism (1711), The Rape of the Lock (1712–1717) and The Dunciad (1728–1743), and his translations of Homer paid for his move in 1719 to a villa at Twickenham. Many of his lines entered common speech.",
+   "links": [
+    [
+     "Alexander Pope",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/alexander-pope.jpg",
+   "credit": {
+    "artist": "Michael Dahl",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Alexander_Pope_by_Michael_Dahl.jpg"
+   }
+  },
+  {
+   "slug": "archaeological-survey-of-india",
+   "name": "Archaeological Survey of India",
+   "type": "institution",
+   "aka": [
+    "ASI"
+   ],
+   "dates": "founded 1861",
+   "desc": "The Archaeological Survey of India is the Indian government agency responsible for archaeological research and for conserving the country's historic monuments. It grew out of earlier study by the Asiatic Society, founded in Calcutta in 1784, and James Prinsep's decipherment of the Brahmi script in 1837. Alexander Cunningham, who had excavated stupas across India, lobbied for a permanent body, and the survey was formed in 1861 by a statute under Lord Canning with Cunningham as its first Archaeological Surveyor. Suspended for lack of funds from 1865, it was revived in 1871 as a separate department with Cunningham as Director-General.",
+   "links": [
+    [
+     "Archaeological Survey of India",
+     0
+    ]
+   ],
+   "wave": "d2"
+  },
+  {
+   "slug": "world-heritage-site",
+   "name": "World Heritage Site",
+   "type": "term",
+   "aka": [
+    "World Heritage Sites"
+   ],
+   "dates": "1972",
+   "desc": "A World Heritage Site is a landmark or area given legal protection under an international treaty administered by UNESCO for its cultural, historical or scientific significance. The programme began with the Convention Concerning the Protection of the World Cultural and Natural Heritage, adopted by UNESCO's General Conference on 16 November 1972 and since ratified by 196 states. It grew from the campaign launched in 1960 to save the monuments of Nubia from the reservoir of the Aswan High Dam, which moved temples such as Abu Simbel and Philae. Sites are nominated by their host country and chosen by the World Heritage Committee of 21 states parties.",
+   "links": [
+    [
+     "World Heritage Site",
+     0
+    ]
+   ],
+   "wave": "d2"
+  },
+  {
+   "slug": "mount-vesuvius",
+   "name": "Mount Vesuvius",
+   "type": "place",
+   "subtype": "mountain",
+   "aka": [
+    "Vesuvius",
+    "Vesaevus",
+    "Vesevus",
+    "Vesbius"
+   ],
+   "desc": "Mount Vesuvius is a somma-stratovolcano on the Gulf of Naples in Campania, Italy, about 9 km east of Naples. Its eruption of 79 CE destroyed the Roman cities of Pompeii, Herculaneum, Oplontis and Stabiae, throwing a cloud of stones, ash and gas to a height of 33 km; more than 1,000 people are thought to have died, and the only surviving witness account is two letters of Pliny the Younger to Tacitus. The Romans held the mountain sacred to Hercules. It has erupted many times since, most recently from 1913 to 1944, and is counted among the most dangerous volcanoes in the world.",
+   "links": [
+    [
+     "Mount Vesuvius",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/mount-vesuvius.jpg",
+   "credit": {
+    "artist": "pietro scerrato",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Il_cratere_del_Vulcano_-_panoramio.jpg"
+   }
+  },
+  {
+   "slug": "olympia-greece",
+   "name": "Olympia",
+   "type": "place",
+   "subtype": "site",
+   "aka": [
+    "Archaia Olympia",
+    "Ancient Olympia"
+   ],
+   "desc": "Olympia is a small town in Elis in the western Peloponnese, Greece, beside the archaeological site of the ancient sanctuary of the same name. The sacred precinct, the Altis, was dedicated mainly to Zeus, and the Olympic Games were held there every four years from the 8th century BCE to the 4th century CE, the first major games at its stadium said to date to the 720s BCE. As a Panhellenic centre it drew visitors from the whole Greek world and helped shape a shared Greek identity. The site held over 760 significant buildings, among them the Pelopion, the tomb of Pelops, and the stadium whose length set the stadion.",
+   "links": [],
+   "wave": "d2",
+   "img": "/images/encyclopedia/olympia-greece.jpg",
+   "credit": {
+    "artist": "John Karakatsanis from Athens, Greece",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ancient_Olympia,_Greece2.jpg"
+   }
+  },
+  {
+   "slug": "mausoleum-at-halicarnassus",
+   "name": "Mausoleum at Halicarnassus",
+   "type": "work",
+   "subtype": "monument",
+   "aka": [
+    "Tomb of Mausolus"
+   ],
+   "dates": "353–351 BCE",
+   "desc": "The Mausoleum at Halicarnassus was a tomb built between 353 and 351 BCE in Halicarnassus, present-day Bodrum in Turkey, for Mausolus, a Carian satrap of the Achaemenid Persian Empire, and his sister-wife Artemisia II. Designed by the Greek architects Satyros of Paros and Pythius of Priene after the tombs of Lycia, it stood about 45 m high, with reliefs on its four sides by Leochares, Bryaxis, Scopas and Timotheus and 400 freestanding sculptures. Antipater of Sidon counted it among the Seven Wonders of the Ancient World. Earthquakes from the 12th to the 15th century destroyed it, and its name gave the word mausoleum.",
+   "links": [
+    [
+     "Mausoleum at Halicarnassus",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/mausoleum-at-halicarnassus.jpg",
+   "credit": {
+    "artist": "Jona Lendering",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mausoleum_at_Halicarnassus_at_the_Bodrum_Museum_of_Underwater_Archaeology.jpg"
+   }
+  },
+  {
+   "slug": "statue-of-zeus-at-olympia",
+   "name": "Statue of Zeus at Olympia",
+   "type": "work",
+   "subtype": "monument",
+   "dates": "c. 435 BCE",
+   "desc": "The Statue of Zeus at Olympia was a seated figure about 12.4 m tall, made by the Greek sculptor Phidias around 435 BCE for the Temple of Zeus in the sanctuary of Olympia. Commissioned by the Eleans, custodians of the Olympic Games, it was a chryselephantine work of ivory plates and gold panels on a wooden frame, seated on a cedarwood throne adorned with ebony, ivory, gold and precious stones, and was counted among the Seven Wonders of the Ancient World. Pausanias described it in detail. It was lost before the end of the 6th century CE, by conflicting accounts, and is known only from descriptions, coins and gems.",
+   "links": [
+    [
+     "Statue of Zeus at Olympia",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/statue-of-zeus-at-olympia.jpg",
+   "credit": {
+    "artist": "Quatremère de Quincy",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Le_Jupiter_Olympien_ou_l'art_de_la_sculpture_antique.jpg"
+   }
+  },
+  {
+   "slug": "elgin-marbles",
+   "name": "Elgin Marbles",
+   "type": "work",
+   "subtype": "artifact",
+   "aka": [
+    "Parthenon Marbles",
+    "Parthenon Sculptures"
+   ],
+   "desc": "The Elgin Marbles are ancient Greek sculptures from the Parthenon and other buildings of the Acropolis of Athens, most made in the 5th century BCE under the direction of Phidias. Between 1801 and 1812 agents of Thomas Bruce, 7th Earl of Elgin, removed about half the surviving Parthenon sculptures from Ottoman Greece and shipped them to Britain; Elgin said he had the Ottoman officials' permission, and the legality is disputed. A parliamentary inquiry of 1816 found the acquisition legal and they passed to the British Museum. Greece formally asked for their return in 1983, and the dispute continues, each side setting out its own case.",
+   "links": [
+    [
+     "Elgin Marbles",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/elgin-marbles.jpg",
+   "credit": {
+    "artist": "Jay.M",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Elgin-marbles-jan-2024.jpg"
+   }
+  },
+  {
+   "slug": "roman-roads",
+   "name": "Roman roads",
+   "type": "work",
+   "subtype": "infrastructure",
+   "aka": [
+    "viae Romanae",
+    "via Romana"
+   ],
+   "dates": "from c. 300 BCE",
+   "desc": "Roman roads were the network of routes built from about 300 BCE through the expansion of the Roman Republic and later the Roman Empire, carrying armies, officials, messages and trade overland. The main roads were often paved with stone or gravel, cambered for drainage and laid along carefully surveyed courses, with cuttings and bridges over rivers and ravines. At the empire's height 29 military highways radiated from Rome and 372 great roads linked its 113 provinces, more than 400,000 kilometres in all, over 80,500 of them paved. Many of their courses survived for millennia, some beneath modern roads.",
+   "links": [
+    [
+     "Roman roads",
+     0
+    ]
+   ],
+   "wave": "d2"
+  },
+  {
+   "slug": "circus-maximus",
+   "name": "Circus Maximus",
+   "type": "place",
+   "subtype": "site",
+   "aka": [
+    "Circo Massimo"
+   ],
+   "desc": "The Circus Maximus was an ancient Roman chariot-racing stadium and mass entertainment venue in the valley between the Aventine and Palatine hills in Rome. The first and largest stadium of ancient Rome, it measured 621 m in length and 118 m in width and could hold over 150,000 spectators. It was Rome's largest venue for ludi, the public games of religious festivals, with races, beast-hunts and processions, and became the model for circuses throughout the empire. The last known beast-hunt there took place in 523 and the last known races in 549. The site is now a public park.",
+   "links": [
+    [
+     "Circus Maximus",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/circus-maximus.jpg",
+   "credit": {
+    "artist": "Rabax63",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:CircusMaximusSO.jpg"
+   }
+  },
+  {
+   "slug": "domus-aurea",
+   "name": "Domus Aurea",
+   "type": "work",
+   "subtype": "monument",
+   "aka": [
+    "Golden House"
+   ],
+   "dates": "64–68",
+   "desc": "The Domus Aurea, the Golden House, was a vast landscaped palace complex built by the emperor Nero, largely on the Oppian Hill in Rome, after the great fire of 64 CE. His engineer-architects Celer and Severus nearly completed it before Nero's death in 68. Seen as a symbol of decadence, it was stripped of its marble, jewels and ivory, and the Flavian Amphitheatre, the Baths of Titus and the Baths of Trajan were built on its grounds; the Oppian wing burned under Trajan in 104. Its buried frescoes, rediscovered at the end of the 15th century, inspired the grotesque decoration of Raphael and other Renaissance artists.",
+   "links": [
+    [
+     "Domus Aurea",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/domus-aurea.jpg",
+   "credit": {
+    "artist": "Rabax63",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:EingangDomusAurea.jpg"
+   }
+  },
+  {
+   "slug": "baths-of-caracalla",
+   "name": "Baths of Caracalla",
+   "type": "work",
+   "subtype": "monument",
+   "aka": [
+    "Terme di Caracalla"
+   ],
+   "dates": "c. 212–216",
+   "desc": "The Baths of Caracalla were the second largest public bath complex of ancient Rome, after the Baths of Diocletian. Probably begun under Septimius Severus and completed by his son Caracalla, they were inaugurated in 216 CE, heated by a hypocaust and fed by a dedicated aqueduct, and were free and open to the public. In 537, during the Gothic War, the Ostrogothic king Vitiges cut Rome's water supply, and the baths were soon abandoned. Their ruins yielded sculptures such as the Farnese Bull and the Farnese Hercules, and inspired buildings from the Basilica of Maxentius to the original Pennsylvania Station in New York.",
+   "links": [
+    [
+     "Baths of Caracalla",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/baths-of-caracalla.jpg",
+   "credit": {
+    "artist": "Ethan Doyle White",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Baths_of_Caracalla,_facing_Caldarium.jpg"
+   }
+  },
+  {
+   "slug": "ara-pacis",
+   "name": "Ara Pacis",
+   "type": "work",
+   "subtype": "monument",
+   "aka": [
+    "Ara Pacis Augustae",
+    "Altar of Augustan Peace"
+   ],
+   "dates": "13–9 BCE",
+   "desc": "The Ara Pacis Augustae, the Altar of Augustan Peace, is an altar in Rome dedicated to the Pax Romana. The Roman Senate commissioned it in 13 BCE to honour the return of Augustus from three years in Hispania and Gaul, and it was consecrated in 9 BCE in the Campus Martius. Its marble friezes show sacrifices, plant life evoking abundance and a procession that includes the imperial household, supporting Augustus's regime and the claims of his dynasty. Buried under silt, it was recovered in fragments from 1568 onward and reassembled in 1938, in what is now the Museum of the Ara Pacis.",
+   "links": [
+    [
+     "Ara Pacis",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/ara-pacis.jpg",
+   "credit": {
+    "artist": "Rabax63",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ara_Pacis_(SW).jpg"
+   }
+  },
+  {
+   "slug": "arch-of-titus",
+   "name": "Arch of Titus",
+   "type": "work",
+   "subtype": "monument",
+   "aka": [
+    "Arco di Tito",
+    "Arcus Titi"
+   ],
+   "dates": "c. 81",
+   "desc": "The Arch of Titus is an honorific arch on the Via Sacra in Rome, just south-east of the Roman Forum, built in about 81 CE by the emperor Domitian after the death of his brother Titus. It commemorates Titus's deification and his victory, with their father Vespasian, over the Jewish rebellion in Judaea. Its panels show the triumphal procession of 71 CE after the fall of Jerusalem, with spoils from Herod's Temple, including the menorah. The arch became a symbol of the Jewish diaspora, its menorah the model for the emblem of the State of Israel, and it inspired later triumphal arches, among them the Arc de Triomphe in Paris.",
+   "links": [
+    [
+     "Arch of Titus",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/arch-of-titus.jpg",
+   "credit": {
+    "artist": "Jebulon",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Arch_Titus,_Forum_Romanum,_Rome,_Italy.jpg"
+   }
+  },
+  {
+   "slug": "temple-of-jupiter-optimus-maximus",
+   "name": "Temple of Jupiter Optimus Maximus",
+   "type": "work",
+   "subtype": "monument",
+   "aka": [
+    "Temple of Jupiter Capitolinus",
+    "Aedes Iovis Optimi Maximi Capitolini"
+   ],
+   "dates": "509 BCE",
+   "desc": "The Temple of Jupiter Optimus Maximus, or Temple of Jupiter Capitolinus, was the most important temple of ancient Rome, on the Capitoline Hill. Traditionally dedicated in 509 BCE, the first temple, built of wood with the help of Etruscan specialists, was the largest in the Italian world, though its exact size is disputed. Roman tradition credits the kings Tarquinius Priscus and Tarquinius Superbus with its foundations and building. It burned in 83 BCE and was rebuilt by 69 BCE; after further fires the fourth temple stood until the fall of the empire. Only parts of its foundations and podium survive.",
+   "links": [
+    [
+     "Temple of Jupiter Optimus Maximus",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/temple-of-jupiter-optimus-maximus.jpg",
+   "credit": {
+    "artist": "Hiro-o at Japanese Wikipedia",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:TempleofCapitoliumRome.jpg"
+   }
+  },
+  {
+   "slug": "palatine-hill",
+   "name": "Palatine Hill",
+   "type": "place",
+   "subtype": "site",
+   "aka": [
+    "Palatium",
+    "Palatino"
+   ],
+   "desc": "The Palatine Hill is the centremost of the seven hills of Rome and one of the oldest parts of the city. Excavations show that people lived there from the 10th century BCE, and in Roman mythology it held the Lupercal cave where the she-wolf kept Romulus and Remus alive, and was where Romulus founded the city. Before imperial times the hill was mostly occupied by the houses of the rich; from Augustus onward emperors built their palaces there, and its name is the origin of the word palace. The site is now largely an open-air museum, with the Palatine Museum holding finds from its excavations.",
+   "links": [
+    [
+     "Palatine Hill",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/palatine-hill.jpg",
+   "credit": {
+    "artist": "Lil Herodotus",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Palatine_Hill_from_across_the_Circus_Maximus_April_2019.jpg"
+   }
+  },
+  {
+   "slug": "pax-romana",
+   "name": "Pax Romana",
+   "type": "idea",
+   "subtype": "period",
+   "aka": [
+    "Roman Peace"
+   ],
+   "dates": "27 BCE–180",
+   "desc": "The Pax Romana, the Roman Peace, was a period of roughly 200 years of relative peace, stability and prosperity in the Roman Empire, though it still saw internal revolts and external wars. It is traditionally dated from the accession of Augustus in 27 BCE to the death of Marcus Aurelius in 180 CE. The empire reached its greatest extent under Trajan in 117, and its population is estimated to have peaked at 70 million. Historians debate its limits: Arthur M. Eckstein finds the Roman peace emerging in parts of the Mediterranean under the Republic, while Walter Goffart doubted that peace is what the period shows.",
+   "links": [
+    [
+     "Pax Romana",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/pax-romana.jpg",
+   "credit": {
+    "artist": "Carin (empereur romain). Autorité émettrice de monnaie présumée Numérien (0254?-0284 ; empereur romain). Autorité émettrice de monnaie présu",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Monnaie_-_Aurelianus,_Carin_et_Numérien,_Lyon_-_btv1b113442700_(2_of_2).jpg"
+   }
+  },
+  {
+   "slug": "roman-citizenship",
+   "name": "Roman citizenship",
+   "type": "term",
+   "aka": [
+    "civitas"
+   ],
+   "desc": "Roman citizenship, civitas, was the privileged political and legal status of free individuals in ancient Rome, governing their rights in law, property and government. There were several kinds, shaped by gender, class and political ties, and citizens owed duties to the state, such as military service, and were recorded in a census every five years under the Republic. The Twelve Tables of about 449 BCE are the oldest surviving document of its rights. Citizenship was extended to the Italian allies around the Social War, and in 212 CE the Edict of Caracalla gave it to all free men of the empire, with some exceptions.",
+   "links": [],
+   "wave": "d2"
+  },
+  {
+   "slug": "cursus-honorum",
+   "name": "Cursus honorum",
+   "type": "term",
+   "subtype": "office",
+   "aka": [
+    "course of honors",
+    "ladder of offices"
+   ],
+   "desc": "The cursus honorum, the course of honours, was the sequence of public offices held by aspiring politicians of senatorial rank in the Roman Republic and the early Roman Empire. After about ten years of military service, a man could rise from quaestor, from the age of 30 after Sulla's reforms, through aedile and praetor to consul, two of whom were elected each year. Holding each office at the youngest age allowed was a mark of success. The rules were often ignored in the last century of the Republic: Gaius Marius was consul seven times, five years in a row from 104 to 100 BCE.",
+   "links": [
+    [
+     "Cursus honorum",
+     0
+    ]
+   ],
+   "wave": "d2"
+  },
+  {
+   "slug": "roman-legion",
+   "name": "Roman legion",
+   "type": "group",
+   "aka": [
+    "legio"
+   ],
+   "desc": "The Roman legion was the largest unit of the Roman army, made up of Roman citizens serving as legionaries. In the Republic the manipular legion had 4,200 infantry and 300 cavalry in three lines of maniples; from about 100 BCE a legion of about 5,000 men was organised in ten cohorts, the first of double strength. For most of the imperial period the legions were the army's elite heavy infantry, alongside auxiliaries recruited from provincials. Many legions lasted for centuries, but by the third century CE the legion had become a smaller unit of about 1,000 to 1,500 men.",
+   "links": [
+    [
+     "Roman legion",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/roman-legion.jpg",
+   "credit": {
+    "artist": "No machine-readable author provided. MatthiasKabel assumed (based on copyright claims).",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Roman_legion_at_attack.jpg"
+   }
+  },
+  {
+   "slug": "praetorian-guard",
+   "name": "Praetorian Guard",
+   "type": "group",
+   "aka": [
+    "cohortes praetoriae"
+   ],
+   "dates": "27 BCE–312",
+   "desc": "The Praetorian Guard was the imperial guard of the Roman army, serving the emperor as bodyguard, in crowd control and in gathering intelligence. Under the Republic praetorians guarded generals, first recorded with the Scipio family around 275 BCE; in 27 BCE Augustus made them his personal escort. For three centuries they were known for palace intrigue, overthrowing emperors and proclaiming successors: their prefect Sejanus gathered great power under Tiberius, and they once put the empire up to auction to Didius Julianus. Constantine the Great disbanded the guard in 312 and destroyed its barracks, the Castra Praetoria.",
+   "links": [
+    [
+     "Praetorian Guard",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/praetorian-guard.jpg",
+   "credit": {
+    "artist": "Sunappu-shashin",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Relief_historique_dit_Relief_des_Prétoriens_01.jpg"
+   }
+  },
+  {
+   "slug": "gladiator",
+   "name": "Gladiator",
+   "type": "term",
+   "desc": "A gladiator was an armed combatant who fought other gladiators, wild animals and condemned criminals before audiences in the Roman Republic and Empire. Some were volunteers, but most were slaves, trained under harsh conditions and socially marginalised, though a gladiator who fought or died well could win admiration. The origin of the games is debated: Livy places the first Roman games in 264 BCE, when three pairs fought at a funeral in the Forum Boarium. The games lasted nearly a thousand years, peaking between the 1st century BCE and the 2nd century CE, until Honorius banned them in 399 and again in 404, at least in the West.",
+   "links": [],
+   "wave": "d2",
+   "img": "/images/encyclopedia/gladiator.jpg",
+   "credit": {
+    "artist": "Jean-Léon Gérôme",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jean-Leon_Gerome_Pollice_Verso.jpg"
+   }
+  },
+  {
+   "slug": "code-of-justinian",
+   "name": "Code of Justinian",
+   "type": "work",
+   "subtype": "text",
+   "aka": [
+    "Codex Justinianus",
+    "Codex Repetitae Praelectionis"
+   ],
+   "dates": "529–534",
+   "desc": "The Code of Justinian was a compilation of imperial Roman laws, one part of the Corpus Juris Civilis ordered by Justinian I, the Eastern Roman emperor in Constantinople. In February 528 he set up a ten-man commission, headed by John the Cappadocian and including Tribonian, to review the earlier codes and gather the laws in force; its first edition was promulgated in April 529. Because new laws soon made it out of date, a second edition was published in 534. It has twelve books, covering church law, private law, crimes and administrative law.",
+   "links": [
+    [
+     "Code of Justinian",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/code-of-justinian.jpg",
+   "credit": {
+    "artist": "Unknown author Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ghent,_Ghent_University_Library_MS_Bibliotheek_Letteren_en_Wijsbegeerte-Handschriften_0021_fol._24v-25r_Code_of_Justinian.jpg"
+   }
+  },
+  {
+   "slug": "nicene-creed",
+   "name": "Nicene Creed",
+   "type": "work",
+   "subtype": "text",
+   "aka": [
+    "Niceno-Constantinopolitan Creed",
+    "Credo"
+   ],
+   "dates": "325",
+   "desc": "The Nicene Creed is the original statement of belief of Nicene Christianity, adopted at the First Council of Nicaea in 325 to resolve the Arian controversy over the divinity of Jesus. According to the traditional view, put forward by the Council of Chalcedon of 451, it was amended in 381 by the First Council of Constantinople; the amended form is known as the Niceno-Constantinopolitan Creed. It is professed by the Eastern Orthodox, Oriental Orthodox, Catholic, Lutheran, Anglican and many other churches, and is said or sung at the Eucharist.",
+   "links": [
+    [
+     "Nicene Creed",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/nicene-creed.jpg",
+   "credit": {
+    "artist": "Unknown author Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Nicaea_icon.jpg"
+   }
+  },
+  {
+   "slug": "benedictines",
+   "name": "Benedictines",
+   "type": "group",
+   "aka": [
+    "Order of Saint Benedict",
+    "O.S.B.",
+    "Black Monks"
+   ],
+   "dates": "founded 529",
+   "desc": "The Benedictines, officially the Order of Saint Benedict, are a mainly contemplative monastic order of the Catholic Church for men and women who follow the Rule of Saint Benedict. Benedict of Nursia established the monastery at Subiaco in Italy c. 529 and later founded the Abbey of Monte Cassino, though there is no evidence he meant to found an order. By the ninth century the Benedictine rule had become the standard form of monastic life across most of Western Europe. The order is a collection of autonomous monasteries, represented since 1893 by the Benedictine Confederation.",
+   "links": [
+    [
+     "Benedictines",
+     0
+    ]
+   ],
+   "wave": "d2"
+  },
+  {
+   "slug": "house-of-habsburg",
+   "name": "House of Habsburg",
+   "type": "group",
+   "aka": [
+    "House of Austria",
+    "Habsburgs",
+    "Habsburg-Lorraine"
+   ],
+   "desc": "The House of Habsburg, also known as the House of Austria, was a European dynasty named after Habsburg Castle, a Swabian fortress built in the 1020s in present-day Switzerland. In 1273 Rudolph was elected King of the Romans and, after his victory over Ottokar II of Bohemia in 1278, moved the family's power base to Vienna, where it ruled until 1918. The Habsburgs held the throne of the Holy Roman Empire from 1440 to 1740, and as Habsburg-Lorraines from 1765 to 1806. After Charles V abdicated in 1556 the family split into Spanish and Austrian branches, which ruled Spain, Hungary, Bohemia and much else.",
+   "links": [
+    [
+     "House of Habsburg",
+     0
+    ]
+   ],
+   "wave": "d2"
+  },
+  {
+   "slug": "house-of-windsor",
+   "name": "House of Windsor",
+   "type": "group",
+   "aka": [
+    "Windsor"
+   ],
+   "dates": "founded 1917",
+   "desc": "The House of Windsor is the royal house of the United Kingdom and other Commonwealth realms, founded in 1917 when King George V changed the name of the royal house from the German Saxe-Coburg and Gotha to Windsor, after Windsor Castle. The change came because of anti-German sentiment during the First World War, which peaked as Gotha bombers began bombing London. A royal proclamation of 17 July 1917 announced the new name. Five British monarchs have belonged to the house: George V, Edward VIII, George VI, Elizabeth II and Charles III.",
+   "links": [
+    [
+     "House of Windsor",
+     0
+    ]
+   ],
+   "wave": "d2"
+  },
+  {
+   "slug": "ottoman-dynasty",
+   "name": "Ottoman dynasty",
+   "type": "group",
+   "aka": [
+    "House of Osman",
+    "Ottomans",
+    "Osmanoğlu family"
+   ],
+   "dates": "c. 1299–1922",
+   "desc": "The Ottoman dynasty was the imperial House of Osman, which ruled the Ottoman Empire from c. 1299 to 1922. According to Ottoman tradition the family came from the Kayı branch of the Oghuz Turks, led by Osman I in northwestern Anatolia around Söğüt. From Orhan to Ahmed I, succession was often settled by violence among a dead sultan's sons, a practice known as fratricide. The sultan was usually an absolute monarch, though much power often passed to the Grand Vizier. The sultanate was abolished on 1 November 1922 and the family was sent into exile.",
+   "links": [
+    [
+     "Ottoman dynasty",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/ottoman-dynasty.jpg",
+   "credit": {
+    "artist": "Şivekar Koçubey",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rukiye_Sabiha_Sultan_wedding.jpg"
+   }
+  },
+  {
+   "slug": "carolingian-dynasty",
+   "name": "Carolingian dynasty",
+   "type": "group",
+   "aka": [
+    "Carolingians",
+    "Carlovingians",
+    "Karlings"
+   ],
+   "desc": "The Carolingian dynasty was a Frankish noble family named after Charles Martel and his grandson Charlemagne, descended from the Arnulfing and Pippinid clans of the 7th century. In the 8th century the family made the office of mayor of the palace hereditary and became the real power behind the Merovingian throne. In 751 the Merovingians were overthrown and Pepin the Short was crowned king of the Franks. The dynasty reached its peak in 800 with Charlemagne's coronation as emperor; after his death in 814 the empire fragmented, leading towards the Kingdom of France and the Holy Roman Empire.",
+   "links": [
+    [
+     "Carolingian dynasty",
+     0
+    ]
+   ],
+   "wave": "d2"
+  },
+  {
+   "slug": "salian-dynasty",
+   "name": "Salian dynasty",
+   "type": "group",
+   "aka": [
+    "Salic dynasty",
+    "Salier"
+   ],
+   "dates": "1024–1125",
+   "desc": "The Salian dynasty was a royal dynasty of the High Middle Ages that provided four kings of Germany from 1024 to 1125, all of them crowned Holy Roman emperors. After the death of the last Ottonian emperor in 1024 the crown passed to Conrad II, who was followed by Henry III, Henry IV and Henry V. Modern historians suppose the family descended from the Widonids, nobles of Rhenish Franconia. The Salians made their monarchy a major European power and developed an administrative system based on public officials answerable to the crown.",
+   "links": [
+    [
+     "Salian dynasty",
+     0
+    ]
+   ],
+   "wave": "d2"
+  },
+  {
+   "slug": "stonehenge",
+   "name": "Stonehenge",
+   "type": "work",
+   "subtype": "monument",
+   "dates": "c. 3100–1600 BCE",
+   "desc": "Stonehenge is a prehistoric megalithic monument on Salisbury Plain in Wiltshire, England, consisting of an outer ring of sarsen standing stones topped by lintels, an inner ring of bluestones and free-standing trilithons. It was built in phases from about 3100 BCE, when the surrounding bank and ditch were dug, until about 1600 BCE; the large sarsen circle was placed between 2600 and 2400 BCE. The monument is aligned on the summer solstice sunrise and winter solstice sunset, and human bone deposits suggest it may have been a burial ground. It became a World Heritage Site in 1986.",
+   "links": [
+    [
+     "Stonehenge",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/stonehenge.jpg",
+   "credit": {
+    "artist": "garethwiscombe",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Stonehenge2007_07_30.jpg"
+   }
+  },
+  {
+   "slug": "colosseum",
+   "name": "Colosseum",
+   "type": "work",
+   "subtype": "monument",
+   "aka": [
+    "Flavian Amphitheatre",
+    "Amphitheatrum Flavium",
+    "Colosseo"
+   ],
+   "dates": "72–80",
+   "desc": "The Colosseum is an elliptical amphitheatre in the centre of Rome, just east of the Roman Forum, and the largest ancient amphitheatre ever built. Construction began under Emperor Vespasian in 72 and was completed in 80 under Titus, with further changes under Domitian. Built of travertine, tuff and Roman concrete, it held an estimated 50,000 to 80,000 spectators for gladiatorial contests, animal hunts, executions and other spectacles. It ceased to be used for entertainment in the early medieval era and was later used for housing, workshops, a fortress and a quarry.",
+   "links": [
+    [
+     "Colosseum",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/colosseum.jpg",
+   "credit": {
+    "artist": "FeaturedPics",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Colosseo_2020.jpg"
+   }
+  },
+  {
+   "slug": "book-of-the-dead",
+   "name": "Book of the Dead",
+   "type": "work",
+   "subtype": "text",
+   "aka": [
+    "Spells of Coming Forth by Day",
+    "Totenbuch"
+   ],
+   "dates": "c. 1550–50 BCE",
+   "desc": "The Book of the Dead is an ancient Egyptian funerary text, generally written on papyrus and used from the beginning of the New Kingdom, around 1550 BCE, to around 50 BCE. It is a loose collection of magic spells meant to help the dead through the Duat, the underworld, and into the afterlife; its Egyptian name is translated as Spells of Coming Forth by Day. Some spells were drawn from the older Pyramid Texts and Coffin Texts. There was no single canonical version, and the papyri, such as the Papyrus of Ani in the British Museum, vary in their spells and illustrations.",
+   "links": [
+    [
+     "Book of the Dead",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/book-of-the-dead.jpg",
+   "credit": {
+    "artist": "Hunefer",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:El_pesado_del_corazón_en_el_Papiro_de_Hunefer.jpg"
+   }
+  },
+  {
+   "slug": "great-sphinx-of-giza",
+   "name": "Great Sphinx of Giza",
+   "type": "work",
+   "subtype": "monument",
+   "aka": [
+    "Abu al-Hawl",
+    "Hor-em-akhet",
+    "Harmachis"
+   ],
+   "desc": "The Great Sphinx of Giza is a limestone statue of a resting sphinx, with a human head and a lion's body, carved from the bedrock of the Giza Plateau on the west bank of the Nile in Egypt. Archaeological evidence suggests it was made in the Old Kingdom during the reign of Khufu or Khafre, but whose face it shows remains in dispute. It is 73 m long, 20 m high and 19 m wide, the oldest known monumental sculpture in Egypt. In the New Kingdom it was revered as the sun god Hor-em-akhet. Its nose was deliberately damaged, though not by Napoleon's troops.",
+   "links": [
+    [
+     "Great Sphinx of Giza",
+     0
+    ]
+   ],
+   "wave": "d2",
+   "img": "/images/encyclopedia/great-sphinx-of-giza.jpg",
+   "credit": {
+    "artist": "Hesham Ebaid",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sphinx_with_the_third_pyramid.jpg"
+   }
   }
  ],
  "patterns": [
@@ -45474,6 +46308,174 @@
    "Kurohito",
    "CC BY-SA 3.0",
    "https://commons.wikimedia.org/wiki/File:Statuevizir095.jpg"
+  ],
+  [
+   "pantheon-rome",
+   "NikonZ7II",
+   "CC BY-SA 4.0",
+   "https://commons.wikimedia.org/wiki/File:Pantheon_(Rome)_-_Right_side_and_front.jpg"
+  ],
+  [
+   "catholic-church",
+   "Jebulon",
+   "CC0",
+   "https://commons.wikimedia.org/wiki/File:Saint_Peter's_Basilica_facade,_Rome,_Italy.jpg"
+  ],
+  [
+   "church-fathers",
+   "Anonymous Unknown author",
+   "Public domain",
+   "https://commons.wikimedia.org/wiki/File:Otsy.jpg"
+  ],
+  [
+   "supreme-court-of-the-united-states",
+   "UpstateNYer",
+   "CC BY-SA 3.0",
+   "https://commons.wikimedia.org/wiki/File:USSupremeCourtWestFacade.JPG"
+  ],
+  [
+   "alexander-pope",
+   "Michael Dahl",
+   "Public domain",
+   "https://commons.wikimedia.org/wiki/File:Alexander_Pope_by_Michael_Dahl.jpg"
+  ],
+  [
+   "mount-vesuvius",
+   "pietro scerrato",
+   "CC BY 3.0",
+   "https://commons.wikimedia.org/wiki/File:Il_cratere_del_Vulcano_-_panoramio.jpg"
+  ],
+  [
+   "olympia-greece",
+   "John Karakatsanis from Athens, Greece",
+   "CC BY-SA 2.0",
+   "https://commons.wikimedia.org/wiki/File:Ancient_Olympia,_Greece2.jpg"
+  ],
+  [
+   "mausoleum-at-halicarnassus",
+   "Jona Lendering",
+   "CC0",
+   "https://commons.wikimedia.org/wiki/File:Mausoleum_at_Halicarnassus_at_the_Bodrum_Museum_of_Underwater_Archaeology.jpg"
+  ],
+  [
+   "statue-of-zeus-at-olympia",
+   "Quatremère de Quincy",
+   "Public domain",
+   "https://commons.wikimedia.org/wiki/File:Le_Jupiter_Olympien_ou_l'art_de_la_sculpture_antique.jpg"
+  ],
+  [
+   "elgin-marbles",
+   "Jay.M",
+   "CC BY-SA 4.0",
+   "https://commons.wikimedia.org/wiki/File:Elgin-marbles-jan-2024.jpg"
+  ],
+  [
+   "circus-maximus",
+   "Rabax63",
+   "CC BY-SA 4.0",
+   "https://commons.wikimedia.org/wiki/File:CircusMaximusSO.jpg"
+  ],
+  [
+   "domus-aurea",
+   "Rabax63",
+   "CC BY-SA 4.0",
+   "https://commons.wikimedia.org/wiki/File:EingangDomusAurea.jpg"
+  ],
+  [
+   "baths-of-caracalla",
+   "Ethan Doyle White",
+   "CC BY-SA 4.0",
+   "https://commons.wikimedia.org/wiki/File:Baths_of_Caracalla,_facing_Caldarium.jpg"
+  ],
+  [
+   "ara-pacis",
+   "Rabax63",
+   "CC BY-SA 4.0",
+   "https://commons.wikimedia.org/wiki/File:Ara_Pacis_(SW).jpg"
+  ],
+  [
+   "arch-of-titus",
+   "Jebulon",
+   "CC0",
+   "https://commons.wikimedia.org/wiki/File:Arch_Titus,_Forum_Romanum,_Rome,_Italy.jpg"
+  ],
+  [
+   "temple-of-jupiter-optimus-maximus",
+   "Hiro-o at Japanese Wikipedia",
+   "CC BY-SA 3.0",
+   "https://commons.wikimedia.org/wiki/File:TempleofCapitoliumRome.jpg"
+  ],
+  [
+   "palatine-hill",
+   "Lil Herodotus",
+   "CC BY-SA 4.0",
+   "https://commons.wikimedia.org/wiki/File:Palatine_Hill_from_across_the_Circus_Maximus_April_2019.jpg"
+  ],
+  [
+   "pax-romana",
+   "Carin (empereur romain). Autorité émettrice de monnaie présumée Numérien (0254?-0284 ; empereur romain). Autorité émettrice de monnaie présu",
+   "Public domain",
+   "https://commons.wikimedia.org/wiki/File:Monnaie_-_Aurelianus,_Carin_et_Numérien,_Lyon_-_btv1b113442700_(2_of_2).jpg"
+  ],
+  [
+   "roman-legion",
+   "No machine-readable author provided. MatthiasKabel assumed (based on copyright claims).",
+   "CC BY-SA 3.0",
+   "https://commons.wikimedia.org/wiki/File:Roman_legion_at_attack.jpg"
+  ],
+  [
+   "praetorian-guard",
+   "Sunappu-shashin",
+   "CC BY-SA 4.0",
+   "https://commons.wikimedia.org/wiki/File:Relief_historique_dit_Relief_des_Prétoriens_01.jpg"
+  ],
+  [
+   "gladiator",
+   "Jean-Léon Gérôme",
+   "Public domain",
+   "https://commons.wikimedia.org/wiki/File:Jean-Leon_Gerome_Pollice_Verso.jpg"
+  ],
+  [
+   "code-of-justinian",
+   "Unknown author Unknown author",
+   "Public domain",
+   "https://commons.wikimedia.org/wiki/File:Ghent,_Ghent_University_Library_MS_Bibliotheek_Letteren_en_Wijsbegeerte-Handschriften_0021_fol._24v-25r_Code_of_Justinian.jpg"
+  ],
+  [
+   "nicene-creed",
+   "Unknown author Unknown author",
+   "Public domain",
+   "https://commons.wikimedia.org/wiki/File:Nicaea_icon.jpg"
+  ],
+  [
+   "ottoman-dynasty",
+   "Şivekar Koçubey",
+   "Public domain",
+   "https://commons.wikimedia.org/wiki/File:Rukiye_Sabiha_Sultan_wedding.jpg"
+  ],
+  [
+   "stonehenge",
+   "garethwiscombe",
+   "CC BY 2.0",
+   "https://commons.wikimedia.org/wiki/File:Stonehenge2007_07_30.jpg"
+  ],
+  [
+   "colosseum",
+   "FeaturedPics",
+   "CC BY-SA 4.0",
+   "https://commons.wikimedia.org/wiki/File:Colosseo_2020.jpg"
+  ],
+  [
+   "book-of-the-dead",
+   "Hunefer",
+   "Public domain",
+   "https://commons.wikimedia.org/wiki/File:El_pesado_del_corazón_en_el_Papiro_de_Hunefer.jpg"
+  ],
+  [
+   "great-sphinx-of-giza",
+   "Hesham Ebaid",
+   "CC0",
+   "https://commons.wikimedia.org/wiki/File:Sphinx_with_the_third_pyramid.jpg"
   ]
  ],
  "fixes": [

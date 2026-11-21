@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Vinča culture: History, Society and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Vinča culture was a Neolithic culture of the central Balkans, 5400–4500 BC, known for some of the largest settlements of prehistoric Europe…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Vinča culture: History, Society and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Vinča culture was a Neolithic culture of the central Balkans, 5400–4500 BC, known for some of the largest settlements of prehistoric Europe…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/culture/vinca-culture">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/vinca-culture.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/vinca-culture.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/culture/vinca-culture">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Cultures & civilisations","item":"https://the-epoch-institute.org/profiles?kind=culture"},{"@type":"ListItem","position":4,"name":"Vinča culture"}]},{"@type":"Article","headline":"Vinča culture","description":"The Vinča culture was a Neolithic culture of the central Balkans, 5400–4500 BC, known for some of the largest settlements of prehistoric Europe…","url":"https://the-epoch-institute.org/culture/vinca-culture","mainEntityOfPage":"https://the-epoch-institute.org/culture/vinca-culture","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Vinča culture"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/vinca-culture.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=culture">Cultures &amp; civilisations</a></li><li aria-current="page">Vinča culture</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Vin%C4%8Da%20culture.png" alt="Vinča culture" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Culture · Europe</p>
+        <h1 class="profile-detail-name">Vinča culture</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Homeland</span><span class="info-stat-val">Southeastern <a class="enc-link" href="/encyclopedia/europe">Europe</a>, mainly modern <a class="enc-link" href="/encyclopedia/serbia">Serbia</a> but also parts of southern <a class="enc-link" href="/encyclopedia/hungary">Hungary</a>, western and central <a class="enc-link" href="/encyclopedia/romania">Romania</a> (<a class="enc-link" href="/encyclopedia/oltenia">Oltenia</a>, <a class="enc-link" href="/encyclopedia/transylvania">Transylvania</a>), western <a class="enc-link" href="/encyclopedia/bulgaria">Bulgaria</a>, eastern <a class="enc-link" href="/encyclopedia/croatia">Croatia</a>, eastern <a class="enc-link" href="/encyclopedia/bosnia">Bosnia</a>, northern Montenegro and <a class="enc-link" href="/encyclopedia/north-macedonia">North Macedonia</a>; key sites Vinča-Belo Brdo near <a class="enc-link" href="/encyclopedia/belgrade">Belgrade</a>, Pločnik, Rudna Glava, Divostin, Crkvine-Stubline, Gomolava, Selevac, Tărtăria and Vršac</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">5400/5300–4500 BC on 600 radiocarbon dates (2016); phases A–D after the type site, with the “Vinča C shock” or Gradac phase (Vinča B2–C1) and a late Vinča D phase, c. 4850–4500 cal BC</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">large tell settlements such as Vinča-Belo Brdo; dark-burnished, Black-topped and Rainbow Ware pottery; zoomorphic and anthropomorphic figurines; the Vinča symbols; the earliest known <a class="enc-link" href="/encyclopedia/copper-smelting">copper smelting</a> and <a class="enc-link" href="/encyclopedia/copper">copper</a> tools at Pločnik; copper mining at Rudna Glava; common wheat, oats and <a class="enc-link" href="/encyclopedia/flax">flax</a> brought to temperate <a class="enc-link" href="/encyclopedia/europe">Europe</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">How we know them</span><span class="info-stat-val">Excavation of the type site Vinča-Belo Brdo, discovered by Miloje Vasić in 1908; radiocarbon dating (76 dates in 1996, 155 in 2009, 600 in 2016); the syntheses of John Chapman, <a class="enc-link" href="/encyclopedia/colin-renfrew">Colin Renfrew</a>, Ruth Tringham, V. Gordon Childe and Milutin Garašanin; archaeogenetic studies of 2017 and 2018</span></div>
+        </div>
+        <p class="empire-meta">5 min read · Last reviewed October 2026</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Vinča settlements were larger than those of almost every other European culture of their time; Vinča-Belo Brdo covered 29 hectares with up to 2,500 people.</li><li>The Vinča site of Pločnik has produced the earliest <a class="enc-link" href="/encyclopedia/copper">copper</a> tools in the world, though copper was used mostly for ornaments while working tools stayed of stone, bone and antler.</li><li>Whether the culture grew out of the local Starčevo culture or came with a new movement of people from <a class="enc-link" href="/encyclopedia/anatolia">Anatolia</a> is still undecided.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The Vinča symbols incised on objects of the culture are conjectured by some to be the earliest form of proto-writing.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#society">Society</a></li><li><a href="#beliefs">Beliefs &amp; Worldview</a></li><li><a href="#arts">Arts &amp; Knowledge</a></li><li><a href="#exchange">Contact &amp; Exchange</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">5400/5300 BC</span><span class="rf-text">The Vinča culture began, according to 600 radiocarbon dates published in 2016</span></li><li><span class="rf-year">4900–4650 BC</span><span class="rf-text">The Divostin site was occupied twice, with an estimated 1,028 houses built</span></li><li><span class="rf-year">4850/4800 BC</span><span class="rf-text">Crkvine-Stubline was founded, perhaps housing up to 4,000 people</span></li><li><span class="rf-year">c. 4850–4500 BC</span><span class="rf-text">In the Vinča D phase the centre of the network shifted from Vinča-Belo Brdo to Vršac</span></li><li><span class="rf-year">c. 4500 BC</span><span class="rf-text">The Vinča network lost its cohesion and fell into decline</span></li><li><span class="rf-year">1908</span><span class="rf-text">Miloje Vasić discovered the type site, Vinča-Belo Brdo</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The Vinča culture, also called the Turdaș or Vinča-Turdaș culture, is a <a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a> culture of Southeast <a class="enc-link" href="/encyclopedia/europe">Europe</a> dated to 5400–4500 BC. It is named for its type site, Vinča-Belo Brdo, a large tell settlement near <a class="enc-link" href="/encyclopedia/belgrade">Belgrade</a> discovered by the Serbian archaeologist Miloje Vasić in 1908. Radiocarbon dating has narrowed its span: 155 dates published in 2009 placed the type site at 5400/5300–4650/4600 BC, and 600 dates in 2016 placed the culture between 5400/5300 and 4500 BC.</p><p>Its origins are still debated, and Marko Porčić wrote in 2016 that there is not enough evidence to accept or reject any of the hypotheses. One, proposed by <a class="enc-link" href="/encyclopedia/colin-renfrew">Colin Renfrew</a> and Ruth Tringham, has it develop locally from the Starčevo culture; but the earliest southern sites seem as early as the northern ones and lack local continuity. The other, proposed by V. Gordon Childe and Milutin Garašanin, sees a second movement of people from <a class="enc-link" href="/encyclopedia/anatolia">Anatolia</a> into the <a class="enc-link" href="/encyclopedia/balkans">Balkans</a>. Archaeogenetic studies of 15 individuals found mostly Y-DNA haplogroup G2a and about 90–97% Early European Farmer ancestry, closest to Neolithic Anatolia.</p></div>
+      </div>
+      <div class="profile-section-block" id="society">
+        <h2 class="profile-section-title">Society</h2>
+        <div class="profile-section-body"><p>Farming brought to the region by the First Temperate <a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a> was developed further under the Vinča culture, fuelling a population boom. Settlements fell into sizes of about 1–1.9, 4–4.9 and 20–29 hectares, and some outgrew the <a class="enc-link" href="/encyclopedia/aegean">Aegean</a> and Near Eastern cities of a millennium later. Vinča-Belo Brdo covered 29 hectares with up to 2,500 people, Crkvine-Stubline may have held 4,000, and Parța perhaps 1,575. Early densities were 50–200 people per hectare. Yet there is no evidence of proto-urbanism or of specialised military, religious or administrative centres, though settlements had defences, and the network was probably not politically unified.</p><p>Most people worked at producing food in a mixed economy of farming, herding, hunting and foraging. Vinča farmers introduced common wheat, oats and <a class="enc-link" href="/encyclopedia/flax">flax</a> to temperate <a class="enc-link" href="/encyclopedia/europe">Europe</a> and made more use of barley, and there is indirect evidence for the <a class="enc-link" href="/encyclopedia/cattle">cattle</a>-drawn plough. Cattle mattered more than sheep and goats and were kept for milk, leather and draught. <a class="enc-link" href="/encyclopedia/johann-gottfried-herder">Herders</a> took livestock to the uplands each season. Deer, boar and aurochs were hunted and carp and catfish caught. Crafts were made in the household, with little sign of specialists.</p></div>
+      </div>
+      <div class="profile-section-block" id="beliefs">
+        <h2 class="profile-section-title">Beliefs &amp; Worldview</h2>
+        <div class="profile-section-body"><p>Like other cultures of its age, the Vinča culture is distinguished chiefly by its settlement pattern and its ritual behaviour. Figurines in various zoomorphic and anthropomorphic styles were among its hallmarks, and the cohesion of its scattered settlements was kept up by the long-distance exchange of ritual items, the figurines among them. The Vinča C phase, also called the “Vinča C shock” or Gradac phase, saw an increase in ritual figurines alongside changes in pottery, settlement and metalworking; the change was strongest in the South-Moravian and Kosovian variants of the culture.</p><p>The Vinča symbols, marks incised on objects, are among the culture’s most discussed features. Some conjecture that they are the earliest form of proto-writing, a reading that remains a matter of debate. <a class="enc-link" href="/encyclopedia/marija-gimbutas">Marija Gimbutas</a> placed the culture within her “Old <a class="enc-link" href="/encyclopedia/europe">Europe</a>”, which she described as relatively homogeneous, peaceful and matrifocal. That view was widely held until the 1990s, when evidence of violent massacres and defensively enclosed settlements in the <a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a> began to emerge.</p></div>
+      </div>
+      <div class="profile-section-block" id="arts">
+        <h2 class="profile-section-title">Arts &amp; Knowledge</h2>
+        <div class="profile-section-body"><p>The culture was particularly noted for its distinctive dark-burnished pottery. Some Vinča wares were made with considerable technical skill: a two-stage method produced pottery with a polished, multicoloured finish known as Black-topped and Rainbow Ware, and powdered cinnabar and limonite were sometimes applied to the fired clay as decoration. The figurines were made in many styles, animal and human.</p><p>Figurines also show how people dressed, in open-necked tunics and decorated skirts. Cloth was woven from <a class="enc-link" href="/encyclopedia/flax">flax</a> and wool, flax becoming more important later, and buttons were made of shell or stone. In metalworking the Vinča culture featured the earliest known example of <a class="enc-link" href="/encyclopedia/copper-smelting">copper smelting</a>, though it is not usually counted as <a class="enc-link" href="/encyclopedia/chalcolithic">Chalcolithic</a>. <a class="enc-link" href="/encyclopedia/copper">Copper</a> ores were mined on a large scale at Rudna Glava, but only a fraction was smelted and cast, into ornaments and trinkets rather than tools, which stayed of chipped stone, bone and antler. Most mined ore was probably used as powder, for pottery or for decorating the body. In the late Vinča D phase the first toggling harpoon appeared.</p></div>
+      </div>
+      <div class="profile-section-block" id="exchange">
+        <h2 class="profile-section-title">Contact &amp; Exchange</h2>
+        <div class="profile-section-body"><p>The Vinča region had already been settled by farming societies of the First Temperate <a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a>, such as the Starčevo culture, and the culture showed strong links with its neighbours: Karanovo in <a class="enc-link" href="/encyclopedia/bulgaria">Bulgaria</a>, Precucuteni-Tripolye A in Moldavia and <a class="enc-link" href="/encyclopedia/ukraine">Ukraine</a>, Dimini in <a class="enc-link" href="/encyclopedia/greece">Greece</a>, and the late Starčevo and early Sopot cultures in eastern <a class="enc-link" href="/encyclopedia/croatia">Croatia</a>. Its settlements, spread across the central <a class="enc-link" href="/encyclopedia/balkans">Balkans</a>, kept a high degree of cultural uniformity through the long-distance exchange of ritual items, though they were probably not politically unified.</p><p>Exchange shifted in the late Vinča D phase. The centre of the network moved from Vinča-Belo Brdo to Vršac, and the long-distance trade in obsidian from modern-day <a class="enc-link" href="/encyclopedia/hungary">Hungary</a> and Spondylus shell from the <a class="enc-link" href="/encyclopedia/aegean">Aegean</a> became more important than the exchange of figurines. Settlements, though they show no specialised military centres, had defensive works. Seasonal movement into the uplands was driven partly by the search for stone and minerals, and where these were rich, permanent upland settlements were founded that relied more on herding.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Eventually the Vinča network lost its cohesion and fell into decline. After two millennia of intensive farming, economic stress from falling soil fertility was probably partly responsible. <a class="enc-link" href="/encyclopedia/marija-gimbutas">Gimbutas</a> argued that the decline was followed by an invasion of horse-riding Proto-Indo-European tribes from the <a class="enc-link" href="/encyclopedia/pontic-caspian-steppe">Pontic–Caspian steppe</a>, a view since criticised as “New Age sentiment” and prevalent until the 1990s, when evidence of <a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a> massacres and fortified settlements emerged; the debate over the culture’s end, like its origins, remains open.</p><p>The culture is remembered for some of the largest settlements of prehistoric <a class="enc-link" href="/encyclopedia/europe">Europe</a>, surpassed in its time only by the Cucuteni–Trypillia culture, and for the beginnings of <a class="enc-link" href="/encyclopedia/copper">copper</a> metallurgy. Its genetic profile links it to the Neolithic movement of farmers from <a class="enc-link" href="/encyclopedia/anatolia">Anatolia</a> through the <a class="enc-link" href="/encyclopedia/balkans">Balkans</a> into central Europe, and a 2021 study found that Neolithic farmers, the Vinča among them, produced lower levels of inflammatory cytokines than earlier hunter-gatherers, a trait that has passed into the immune system of modern Europeans. Its type site, Vinča-Belo Brdo, is today a suburb of <a class="enc-link" href="/encyclopedia/belgrade">Belgrade</a>.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Vinča culture flourished in the central <a class="enc-link" href="/encyclopedia/balkans">Balkans</a> from about 5400 to 4500 BC, its farmers building some of the largest settlements of prehistoric <a class="enc-link" href="/encyclopedia/europe">Europe</a>. Known for dark-burnished pottery, figurines, the debated Vinča symbols and the earliest known <a class="enc-link" href="/encyclopedia/copper-smelting">copper smelting</a>, its network declined after two millennia of intensive farming.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Shennan, Stephen, The First Farmers of Europe: An Evolutionary Perspective (Cambridge University Press, 2018)</li>
+        <li>Tasić, Nikola; Srejović, Dragoslav; Stojanović, Bratislav, Vinča: Centre of the Neolithic culture of the Danubian region (Centre for Archaeological Research, Faculty of Philosophy, Belgrade, 1990)</li>
+        <li>Chapman, John, “The Vinča group - (Almost) 40 years on”, Quaternary International 560–561 (2020)</li>
+        <li>Vasić, Miloje, Preistorijska Vinča I (Beograd, 1932)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other cultures</p>
+      <div class="related-grid"><a class="related-card" href="/culture/linear-pottery-culture"><img src="/logos/thumbs/Linear%20Pottery%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Linear Pottery culture</span><span class="related-card-dates">c. 5500 BCE – c. 4500 BCE</span></a><a class="related-card" href="/culture/cucuteni-trypillia-culture"><img src="/logos/thumbs/Cucuteni%E2%80%93Trypillia%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Cucuteni–Trypillia culture</span><span class="related-card-dates">c. 5050 BCE – c. 2950 BCE</span></a><a class="related-card" href="/culture/yangshao-culture"><img src="/logos/thumbs/Yangshao%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Yangshao culture</span><span class="related-card-dates">c. 5000 BCE – c. 3000 BCE</span></a><a class="related-card" href="/culture/hongshan-culture"><img src="/logos/thumbs/Hongshan%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Hongshan culture</span><span class="related-card-dates">c. 4700 BCE – c. 2900 BCE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/culture/linear-pottery-culture"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Linear%20Pottery%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Linear Pottery culture</span><span class="related-card-dates">c. 5500 BCE – c. 4500 BCE</span></a><a class="related-card" href="/culture/cucuteni-trypillia-culture"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Cucuteni%E2%80%93Trypillia%20culture.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Cucuteni–Trypillia culture</span><span class="related-card-dates">c. 5050 BCE – c. 2950 BCE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Vinča culture",slug="vinca-culture",url="https://the-epoch-institute.org/culture/vinca-culture";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Vinča culture on The Epoch Institute — history, society and legacy. https://the-epoch-institute.org/culture/vinca-culture #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/culture/vinca-culture"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Vinča culture",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Vinča culture",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>
