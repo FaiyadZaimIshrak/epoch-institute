@@ -38,6 +38,10 @@
   <span class="hero-ornament"></span>
   <h1 class="research-title">The Rise and Fall Race</h1>
   <p class="ref-lede">Pick up to four states and empires and watch them rise and fall, year by year: who led the world&#8217;s stage, when they overtook each other, and how long each held on.</p>
+<!-- build:howto -->
+<div class="howto" id="howto" hidden><p class="howto-h">How to use it</p><ol class="howto-steps"><li>Choose up to four states and empires, or start from one of the ready-made races.</li><li>Press play, or drag the year slider, and watch the bars change places.</li><li>Hover over or tap the chart for any year’s standings; Share sends a picture of the race.</li></ol><button type="button" class="howto-x">Got it</button></div><button type="button" class="howto-open" id="howto-open" hidden aria-controls="howto">How to use it</button>
+<script>(function(){var k="race",d={};try{d=JSON.parse(localStorage.getItem('epoch-howto')||'{}')||{}}catch(e){}var h=document.getElementById('howto'),o=document.getElementById('howto-open');if(d[k])o.hidden=false;else h.hidden=false;function save(){try{localStorage.setItem('epoch-howto',JSON.stringify(d))}catch(e){}}h.querySelector('.howto-x').onclick=function(){h.hidden=true;o.hidden=false;d[k]=1;save();o.focus()};o.onclick=function(){h.hidden=false;o.hidden=true;delete d[k];save()}})();</script>
+<!-- /build:howto -->
 </header>
 
 <section class="rc" id="race" aria-label="The race"><noscript><p class="pass-note">The race needs JavaScript; the <a href="/explorer">Empire Explorer</a> shows the same curves.</p></noscript></section>

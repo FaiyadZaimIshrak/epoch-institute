@@ -8,7 +8,7 @@ const R = path.join(__dirname, '..', '..');
 const args = Object.fromEntries(process.argv.slice(2).map(a => { const m = a.match(/^--([^=]+)=?(.*)$/); return m ? [m[1], m[2] || true] : [a, true]; }));
 const MAX = +args.max || 12;
 const ROOTPAGES = ['index', 'research', 'research-series', 'about', 'contributors', 'dataset', 'explorer', 'profiles', 'community', 'connections',
-  'atlas', 'quiz', 'contact', 'start', 'games', 'kids', 'search', 'timeline', 'passport', 'weekly', 'past-games', 'write', 'faiths', 'flashcards', 'race',
+  'atlas', 'quiz', 'contact', 'start', 'games', 'kids', 'search', 'timeline', 'passport', 'weekly', 'past-games', 'discover', 'write', 'faiths', 'flashcards', 'race',
   'inventions', 'governance', 'compare', 'new', 'today-card', '404.html', 'offline.html'];
 const FOLDERS = ['encyclopedia', 'state', 'today-in-history', 'countries', 'centuries', 'paths', 'speeches', 'years', 'people', 'teachers',
   'societies', 'songs', 'essays', 'articles', 'empire', 'religion', 'language', 'culture', 'movement', 'government', 'ideology', 'work', 'life'];

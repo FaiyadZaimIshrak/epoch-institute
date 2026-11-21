@@ -38,6 +38,10 @@
   <span class="hero-ornament"></span>
   <h1 class="research-title">Flashcards</h1>
   <p class="ref-lede">Learn the words, faces, capitals and dates of history a few cards at a time. Turn a card over and say whether you knew it: the cards you miss come back the same day, the ones you know wait a little longer each time. Your progress is kept in this browser.</p>
+<!-- build:howto -->
+<div class="howto" id="howto" hidden><p class="howto-h">How to use it</p><ol class="howto-steps"><li>Choose a deck.</li><li>Read the front, then turn the card: tap it, or press Space.</li><li>Say whether you knew it: the cards you miss come back today, the ones you know later.</li></ol><button type="button" class="howto-x">Got it</button></div><button type="button" class="howto-open" id="howto-open" hidden aria-controls="howto">How to use it</button>
+<script>(function(){var k="flashcards",d={};try{d=JSON.parse(localStorage.getItem('epoch-howto')||'{}')||{}}catch(e){}var h=document.getElementById('howto'),o=document.getElementById('howto-open');if(d[k])o.hidden=false;else h.hidden=false;function save(){try{localStorage.setItem('epoch-howto',JSON.stringify(d))}catch(e){}}h.querySelector('.howto-x').onclick=function(){h.hidden=true;o.hidden=false;d[k]=1;save();o.focus()};o.onclick=function(){h.hidden=false;o.hidden=true;delete d[k];save()}})();</script>
+<!-- /build:howto -->
 </header>
 
 <div class="fc-app" id="fc-app" hidden></div>

@@ -43,6 +43,10 @@
   <span class="hero-ornament"></span>
   <h1 class="research-title">History Quiz</h1>
   <p class="ref-lede">Four clues, four guesses. Name the empire, person, event, place, idea or work: each wrong guess reveals another clue. For lighter rounds, try the <a href="/games">history games</a>.</p>
+<!-- build:howto -->
+<div class="howto" id="howto" hidden><p class="howto-h">How to use it</p><ol class="howto-steps"><li>Read the first clue and type a guess, picking a name from the suggestions.</li><li>Each wrong guess shows another clue: four in all.</li><li>A new puzzle comes every day; the practice rounds below have more.</li></ol><button type="button" class="howto-x">Got it</button></div><button type="button" class="howto-open" id="howto-open" hidden aria-controls="howto">How to use it</button>
+<script>(function(){var k="quiz",d={};try{d=JSON.parse(localStorage.getItem('epoch-howto')||'{}')||{}}catch(e){}var h=document.getElementById('howto'),o=document.getElementById('howto-open');if(d[k])o.hidden=false;else h.hidden=false;function save(){try{localStorage.setItem('epoch-howto',JSON.stringify(d))}catch(e){}}h.querySelector('.howto-x').onclick=function(){h.hidden=true;o.hidden=false;d[k]=1;save();o.focus()};o.onclick=function(){h.hidden=false;o.hidden=true;delete d[k];save()}})();</script>
+<!-- /build:howto -->
 </header>
 
 <section class="qz-block" aria-labelledby="qz-daily-title">

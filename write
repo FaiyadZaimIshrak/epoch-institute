@@ -38,6 +38,10 @@
   <span class="hero-ornament"></span>
   <h1 class="research-title">Write in Ancient Scripts</h1>
   <p class="ref-lede">Twelve languages of the past in their own scripts, from the cuneiform of Sumer to the runes of the Vikings. Every key shows a sign with its value and how it sounds. Write a word or your name, then save it as a picture, copy it or share it.</p>
+<!-- build:howto -->
+<div class="howto" id="howto" hidden><p class="howto-h">How to use it</p><ol class="howto-steps"><li>Choose a language and its script.</li><li>Type in ordinary letters, or press the keys: each key shows a sign, its value and how it sounds.</li><li>Make a picture of your writing to save, copy or share.</li></ol><button type="button" class="howto-x">Got it</button></div><button type="button" class="howto-open" id="howto-open" hidden aria-controls="howto">How to use it</button>
+<script>(function(){var k="write",d={};try{d=JSON.parse(localStorage.getItem('epoch-howto')||'{}')||{}}catch(e){}var h=document.getElementById('howto'),o=document.getElementById('howto-open');if(d[k])o.hidden=false;else h.hidden=false;function save(){try{localStorage.setItem('epoch-howto',JSON.stringify(d))}catch(e){}}h.querySelector('.howto-x').onclick=function(){h.hidden=true;o.hidden=false;d[k]=1;save();o.focus()};o.onclick=function(){h.hidden=false;o.hidden=true;delete d[k];save()}})();</script>
+<!-- /build:howto -->
 </header>
 
 <nav class="write-langs" id="write-langs" aria-label="Choose a language"></nav>

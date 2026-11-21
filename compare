@@ -38,6 +38,10 @@
   <span class="hero-ornament"></span>
   <h1 class="research-title">Compare Two Profiles</h1>
   <p class="ref-lede">Any two of the Institute&#8217;s profiles side by side: two cultures, a state and a religion, a language and a movement. When each lived, whether they met in time, their facts and their key events on one line of time.</p>
+<!-- build:howto -->
+<div class="howto" id="howto" hidden><p class="howto-h">How to use it</p><ol class="howto-steps"><li>Type two profiles into First and Second (a state, a culture, a religion…), or press Surprise me.</li><li>See when each lived and whether they met in time.</li><li>Read their facts and their key events side by side, on one line of time.</li></ol><button type="button" class="howto-x">Got it</button></div><button type="button" class="howto-open" id="howto-open" hidden aria-controls="howto">How to use it</button>
+<script>(function(){var k="compare",d={};try{d=JSON.parse(localStorage.getItem('epoch-howto')||'{}')||{}}catch(e){}var h=document.getElementById('howto'),o=document.getElementById('howto-open');if(d[k])o.hidden=false;else h.hidden=false;function save(){try{localStorage.setItem('epoch-howto',JSON.stringify(d))}catch(e){}}h.querySelector('.howto-x').onclick=function(){h.hidden=true;o.hidden=false;d[k]=1;save();o.focus()};o.onclick=function(){h.hidden=false;o.hidden=true;delete d[k];save()}})();</script>
+<!-- /build:howto -->
 </header>
 <form class="cmp-pick" role="search" aria-label="Choose two profiles" onsubmit="return false">
   <label class="cmp-f is-a"><span>First</span><input id="cmp-a" list="cmp-names" placeholder="A culture, a state, a religion…" autocomplete="off"></label>

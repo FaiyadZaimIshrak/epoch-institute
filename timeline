@@ -41,6 +41,10 @@
 <header class="atl-head">
   <h1 class="research-title">World Timeline</h1>
   <p class="ref-lede">Five thousand years of states and empires on one line, region by region. Each bar runs from a state&#8217;s founding to its end; gold bars have a full profile. Drag sideways to travel through time, pinch or hold Ctrl and scroll to zoom.</p>
+<!-- build:howto -->
+<div class="howto" id="howto" hidden><p class="howto-h">How to use it</p><ol class="howto-steps"><li>Each bar is one state, from its founding to its end; gold bars have a full profile.</li><li>Drag sideways to travel through time; pinch, or hold Ctrl and scroll, to zoom; the era buttons jump to an age.</li><li>Search for a state, or tap a bar twice to open its page.</li></ol><button type="button" class="howto-x">Got it</button></div><button type="button" class="howto-open" id="howto-open" hidden aria-controls="howto">How to use it</button>
+<script>(function(){var k="timeline",d={};try{d=JSON.parse(localStorage.getItem('epoch-howto')||'{}')||{}}catch(e){}var h=document.getElementById('howto'),o=document.getElementById('howto-open');if(d[k])o.hidden=false;else h.hidden=false;function save(){try{localStorage.setItem('epoch-howto',JSON.stringify(d))}catch(e){}}h.querySelector('.howto-x').onclick=function(){h.hidden=true;o.hidden=false;d[k]=1;save();o.focus()};o.onclick=function(){h.hidden=false;o.hidden=true;delete d[k];save()}})();</script>
+<!-- /build:howto -->
 </header>
 
 <section class="atl-app tl-app" aria-label="Interactive world timeline">

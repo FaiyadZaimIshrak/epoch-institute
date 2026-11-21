@@ -531,7 +531,7 @@ function searchThumb(r) {
   return '';
 }
 var SEARCH_INDEX_SRC = '/search-index.js?v=d4275ad099';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
-var SEARCH_PAGES_SRC = '/search-pages.js?v=722136ec38';
+var SEARCH_PAGES_SRC = '/search-pages.js?v=79af8fb48b';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
 var searchLoading = null, searchReady = false;
@@ -725,27 +725,27 @@ function initNav(activePage) {
   const MONTH_URL = '/today-in-history/' + ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'][new Date().getUTCMonth()];
   const MENUS = [
     ['maps', 'Maps &amp; Time', [
-      ['Maps', [['atlas', '/atlas', 'Atlas', 'The world in any year'], ['faiths', '/faiths', 'Faith Maps', 'How the religions spread'],
+      ['Maps', [['atlas', '/atlas', 'Atlas', 'The world in any year', 1], ['faiths', '/faiths', 'Faith Maps', 'How the religions spread'],
         ['connections', '/connections', 'Connections', 'The states as a network'], ['states', '/state/', 'States Register', 'Every state on record']]],
-      ['Time', [['timeline', '/timeline', 'World Timeline', 'Every state on one line'], ['centuries', '/centuries/', 'Centuries', 'One century at a time'],
+      ['Time', [['today', '/today-in-history/', 'Today in History', 'What happened on this day', 1], ['timeline', '/timeline', 'World Timeline', 'Every state on one line'], ['centuries', '/centuries/', 'Centuries', 'One century at a time'],
         ['years', '/years/', 'Year by Year', 'What happened in any year'], ['', MONTH_URL, 'This Month in History', 'Its events, festivals and people'], ['', '/today', 'Today at the Institute', 'The day in one place'], ['', '/now', 'History Now', 'In the news, coming anniversaries'], ['countries', '/countries/', 'Country Histories', 'Each land through time'],
         ['race', '/race', 'Rise and Fall Race', 'Empires racing through the years'], ['explorer', '/explorer', 'Power Curves', 'Rise and fall compared']]]]],
     ['themes', 'Themes', [
-      ['Societies and ideas', [['people', '/people/', 'People', 'Who lived when'], ['', '/profiles?kind=life', 'Great Lives', 'Forty lives told in full'], ['dynasties', '/encyclopedia/dynasties', 'Ruling Houses', 'Dynasties and their members'], ['', '/encyclopedia/quotations', 'Quotations', 'In their own words, with sources'], ['governance', '/governance', 'Forms of Government', 'Who should rule, and how'], ['societies', '/societies/', 'Social Ladders', 'From emperor to enslaved'],
+      ['Societies and ideas', [['people', '/people/', 'People', 'Who lived when'], ['', '/profiles?kind=life', 'Great Lives', 'Sixty lives told in full', 1], ['dynasties', '/encyclopedia/dynasties', 'Ruling Houses', 'Dynasties and their members'], ['', '/encyclopedia/quotations', 'Quotations', 'In their own words, with sources'], ['governance', '/governance', 'Forms of Government', 'Who should rule, and how'], ['societies', '/societies/', 'Social Ladders', 'From emperor to enslaved'],
         ['inventions', '/inventions', 'Inventions Tree', 'What led to what, and who made it first'], ['speeches', '/speeches/', 'Great Speeches', 'The words that moved history'],
         ['songs', '/songs/', 'Songs in History', 'Hymns, anthems and folk songs handed down']]],
-      ['Read and discover', [['paths', '/paths/', 'Reading Paths', 'Themed routes through history'], ['series', '/research-series', 'Research Series', 'Essays from the Institute'],
+      ['Read and discover', [['paths', '/paths/', 'Reading Paths', 'Themed routes through history', 1], ['series', '/research-series', 'Research Series', 'Essays from the Institute'],
         ['glossary', '/encyclopedia/glossary', 'Glossary', 'Historical terms explained'], ['compare', '/compare', 'Compare Two Profiles', 'Two cultures, states or faiths side by side'],
         ['start', '/start', 'Find Your Way In', 'Four questions, your reading paths']]]]],
     ['play', 'Play', [
-      ['', [['quiz', '/quiz', 'History Quiz', 'A new puzzle every day'], ['games', '/games', 'History Games', 'Puzzles, word hunts and the globe'],
+      ['', [['games', '/games', 'History Games', 'Puzzles, word hunts and the globe', 1], ['quiz', '/quiz', 'History Quiz', 'A new puzzle every day'],
         ['flashcards', '/flashcards', 'Flashcards', 'Learn a few cards a day'], ['write', '/write', 'Write in Ancient Scripts', 'Cuneiform, hieroglyphs, runes'],
         ['kids', '/kids', 'Kids Corner', 'History for young explorers'], ['passport', '/passport', 'My Passport', 'Your reading, stamps and streaks'], ['weekly', '/weekly', 'My Week of Games', 'Seven days of the daily games'], ['past-games', '/past-games', 'Past Games', 'Every earlier day of the daily games'], ['', '/today-in-history/#birthday', 'Your Birthday', 'Your own day in history'], ['advent', '/advent', 'Advent Calendar', 'A door of history for each day of December']]]]]];
   const MORE = [['about', '/about', 'About the Institute'], ['new', '/new', 'What&#8217;s New'], ['research', '/research', 'Explore Everything'], ['dataset', '/dataset', 'Open Data'],
     ['teachers', '/teachers/', 'Teachers&#8217; Corner'], ['community', '/community', 'Community'], ['', '/community#submit', 'Submit an Article'],
     ['contributors', '/contributors', 'Write for Us'], ['', '/#newsletter-section', 'Newsletter'], ['support', '/support', 'Support the Institute'], ['contact', '/contact', 'Contact']];
   // New tags in the menus (Nov 2026): address -> the day the tag comes off. A release adds a line here.
-  const NEW_UNTIL = { '/past-games': '2026-12-16', '/profiles?kind=life': '2026-12-14', '/encyclopedia/quotations': '2026-12-12', '/today': '2026-12-12', '/now': '2026-12-10', '/advent': '2026-12-08', '/today-in-history/#birthday': '2026-12-01' };
+  const NEW_UNTIL = { '/discover': '2026-12-21', '/past-games': '2026-12-16', '/profiles?kind=life': '2026-12-14', '/encyclopedia/quotations': '2026-12-12', '/today': '2026-12-12', '/now': '2026-12-10', '/advent': '2026-12-08', '/today-in-history/#birthday': '2026-12-01' };
   const newTag = h => NEW_UNTIL[h] && Date.now() < Date.parse(NEW_UNTIL[h]) ? '<i class="new-tag">New</i>' : '';
   const inMenu = m => m[2].some(c => c[1].some(x => x[0] === activePage));
   const moreActive = MORE.some(x => x[0] && x[0] === activePage);
@@ -755,7 +755,7 @@ function initNav(activePage) {
     <div class="nav-group-wrap" id="nav-${m[0]}-wrap">
       <button class="nav-parent-btn${inMenu(m) ? ' active-group' : ''}" id="nav-${m[0]}-btn" aria-haspopup="true" aria-expanded="false">${m[1]} ▾</button>
       <div class="nav-group-menu nav-mega" id="nav-${m[0]}-menu">
-        ${m[2].map(c => `<div class="nav-col">${c[0] ? `<span class="nav-col-h">${c[0]}</span>` : ''}${c[1].map(x => `<a href="${x[1]}"${activeStyle(x[0])}><b>${x[2]}${newTag(x[1])}</b><span>${x[3]}</span></a>`).join('')}${m[0] === 'play' ? surprise : ''}</div>`).join('\n        ')}
+        ${m[2].map(c => `<div class="nav-col">${c[0] ? `<span class="nav-col-h">${c[0]}</span>` : ''}${c[1].map(x => `<a href="${x[1]}"${activeStyle(x[0])}><b>${x[2]}${newTag(x[1])}${x[4] ? '<i class="start-tag">Start here</i>' : ''}</b><span>${x[3]}</span></a>`).join('')}${m[0] === 'play' ? surprise : ''}</div>`).join('\n        ')}
       </div>
     </div>`;
   const ddSec = (label, open, links) => `<details class="nav-dd-sec"${open ? ' open' : ''}><summary class="nav-dd-sum">${label}</summary><div class="nav-dd-list">${links}</div></details>`;
@@ -767,9 +767,9 @@ function initNav(activePage) {
     <span class="nav-logo-text">THE EPOCH INSTITUTE</span>
   </a>
   <div class="nav-links">
-    <a href="/profiles" class="nav-link"${activeStyle('profiles')}>Profiles</a>
-    <a href="/encyclopedia/" class="nav-link"${activeStyle('encyclopedia')}>Encyclopedia</a>${MENUS.map(menuHtml).join('')}
-    <a href="/today-in-history/" class="nav-link"${activeStyle('today')}>Today in History</a>
+    <a href="/discover" class="nav-link"${activeStyle('discover')}>Discover${newTag('/discover')}</a>
+    <a href="/encyclopedia/" class="nav-link"${activeStyle('encyclopedia')}>Encyclopedia</a>
+    <a href="/profiles" class="nav-link"${activeStyle('profiles')}>Profiles</a>${MENUS.map(menuHtml).join('')}
     <div class="nav-group-wrap" id="nav-more-wrap">
       <button class="nav-parent-btn${moreActive ? ' active-group' : ''}" id="nav-more-btn" aria-haspopup="true" aria-expanded="false">More ▾</button>
       <div class="nav-group-menu" id="nav-more-menu">
@@ -785,7 +785,7 @@ function initNav(activePage) {
   </div>
   <div id="nav-dropdown" class="nav-dropdown">
     <div class="nav-dd-display" role="group" aria-label="Display"><button type="button" class="nav-dd-btn" id="nav-dd-theme"></button><button type="button" class="nav-dd-btn" id="nav-dd-kids"></button></div>
-    ${[['profiles', '/profiles', 'Profiles'], ['encyclopedia', '/encyclopedia/', 'Encyclopedia'], ['today', '/today-in-history/', 'Today in History']].map(x => navItem(x, 'nav-dropdown-link')).join('\n    ')}
+    ${[['discover', '/discover', 'Discover'], ['encyclopedia', '/encyclopedia/', 'Encyclopedia'], ['profiles', '/profiles', 'Profiles'], ['today', '/today-in-history/', 'Today in History']].map(x => navItem(x, 'nav-dropdown-link')).join('\n    ')}
     ${MENUS.map(m => ddSec(m[1], inMenu(m), m[2].map(c => c[1].map(x => navItem(x, 'nav-dropdown-link nav-dd-sub')).join('')).join('') +
       (m[0] === 'play' ? '<a href="#" class="nav-dropdown-link nav-dd-sub" data-surprise>Surprise me</a>' : ''))).join('\n    ')}
     ${ddSec('More', moreActive, MORE.map(x => navItem(x, 'nav-dropdown-link nav-dd-sub')).join(''))}
@@ -821,6 +821,7 @@ function initNav(activePage) {
     <div class="footer-links">
       <div class="footer-col">
         <span class="footer-col-title">Collections</span>
+        <a class="footer-link" href="/discover">Discover</a>
         <a class="footer-link" href="/profiles">Profiles</a>
         <a class="footer-link" href="/encyclopedia/">Encyclopedia</a>
         <a class="footer-link" href="/state/">States Register</a>

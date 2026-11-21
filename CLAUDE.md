@@ -19,7 +19,13 @@ Plus 404.html and generator.html (generator is NOT deployed — see scripts/depl
 
 ## Menu (shared-nav.js initNav: MENUS, MORE)
 Regrouped by theme on 31 Oct 2026 (the user: Explore had grown to 22 items and looked cramped):
-Profiles · Encyclopedia · Maps & Time ▾ · Themes ▾ · Play ▾ · Today in History · More ▾.
+Since 21 Nov 2026: Discover · Encyclopedia · Profiles · Maps & Time ▾ · Themes ▾ · Play ▾ · More ▾ (Today in History
+moved to the head of Maps & Time → Time; the phone bar keeps Today). A menu item's fifth field marks it "Start here"
+(.start-tag: Atlas, Today in History, Great Lives, Reading Paths, History Games). Tool pages open with three plain steps
+(build:howto, scripts/tools/make-howto.js HOWTO; "Got it" folds them, localStorage epoch-howto; tests/howto.js).
+/discover (hand page written by scripts/tools/make-discover.js; discover.js; data/discover.json, about 2,100 cards of
+profiles, well-known pictured entries and speeches; a quick look before the page; tests/discover.js) is the first item.
+Before that (31 Oct 2026): Profiles · Encyclopedia · Maps & Time ▾ · Themes ▾ · Play ▾ · Today in History · More ▾.
 - Maps & Time: Maps (Atlas, Faith Maps, Connections, States Register) | Time (World Timeline, Centuries, Year by Year, Country
   Histories, Rise and Fall Race, Power Curves). "States Register" and "Power Curves" (/state/ and /explorer; the page titles
   kept) since 4 Nov 2026.
@@ -1168,6 +1174,12 @@ contrast (pure black / white). Kids mode keeps its own colours (:not([data-kids=
   opacity fell under 4.5:1), and the scratchpad's look-test.js (29 checks: the snippet, the season's first and last
   days, the panel, snow, Kids mode, the atlas repainting, the phone row and panel). The chart colours (--cat-*, --rc-*,
   --fm-*, --gv-*) stay the theme's: a new look's page must keep close to the lightness of the classic one.
+- Character (21 Nov 2026; the user: "making the themes (looks) better"): the block after the contrast grain rule gives
+  each look more than colours. Illuminated: an initial (::first-letter, floated) opening entry descriptions, every
+  profile section and every essay section, gold leaf (dark) or red ink (light), gold heading rules, a lapis glow or
+  vellum shading on body. Marble: faint veins (body gradients) and bronze or verdigris heading rules. Winter: a cold
+  light from the top and a frosted header. Contrast: links in text underlined, a 3 px focus ring, no shadows in main.
+  The look menu's swatches show each look's dark page, accent and light page. Kids mode and print unchanged.
 - Ideas kept for later, not built: Papyrus, Silk Road (indigo and saffron), Lapis Night, Terracotta, and seasonal
   Spring (Nowruz to Easter) and Harvest looks, which would reuse the date switch.
 - Cloudflare (11 Nov 2026): after the looks' deploy, entry and profile pages showed no look: the edge still served
@@ -2822,20 +2834,24 @@ Found in the R9 checks (29 Oct 2026), not fixed yet:
   posts that too); the canvas is shown once the worker has drawn ('ready'); the still map stays under reduced motion or
   Save-Data; a head script sets html.home-globe-on with the
   same tests, so the link keeps the globe's 25:14 box from the first paint and nothing moves when it swaps; the canvas's
-  [hidden] must win over .home-map canvas, which once showed an empty box under the map), then (regrouped 31 Oct 2026,
-  the user: more engaging, nothing cramped, no gaps): "Continue where you left off" (returning readers), On this day
-  (one row: the anniversary event's picture with its year and title as a caption, then the international day and/or
-  events in year order, never the pictured one again; links today's day page), "Try it yourself" (build:home-try,
-  $HOMETRY in the builder: six picture cards for the interactive tools, each with what to do: be born into history,
-  trace an invention, race the empires, write in hieroglyphs, watch a faith spread, the Kids Corner), the daily row
-  (Daily Quiz beside "Today's Puzzles", a 2 x 2 of the Daily Ten, Connections, the Crossword and Who Said It?, then
-  "From the Encyclopedia", the entry of the day, as a wide card), "Ways into history" (build:home-doors: eight doors,
-  picture on top, with the short line `s` of $SECTIONS: profiles, encyclopedia, states, atlas, countries, centuries,
-  people, paths), featured profiles + era/region chips, centuries strip and country chips (builder), reading paths,
-  newsletter (the announcements, a Google Drive folder, were removed on 29 Oct 2026). On phones the featured profiles
-  and the chip rows scroll sideways (.browse-cols > div needs min-width: 0, or the column grows to the unwrapped chips
-  and they cannot scroll), and the doors stand two to a row. Sections fade in a little before they reach the screen
-  (IntersectionObserver rootMargin 20% at the bottom). The mission paragraph is on About.
+  [hidden] must win over .home-map canvas, which once showed an empty box under the map). If the worker cannot get its
+  files (they come cold from the host after every deploy's purge) it retries, then posts 'fail'; the page then draws the
+  globe itself on a fresh canvas (also after an error or 20 s of silence), and with no files at all the flat map stays
+  and it tries again when the line or the tab comes back (scripts/tests/home-globe.js).
+  **Picture-first since 21 Nov 2026** (the user: the site was overwhelming; "most people would prefer looking through
+  things they want to see before actually thinking of delving deeper"; no visitor-mode switch): the hero has four doors
+  by what the visitor wants (.hero-doors: Look around → /discover, Follow a story → /paths/, Play → /games, Look
+  something up → /encyclopedia/; each with two small links, .hd-also) and a row for researchers and teachers
+  (.hero-research: open data, method, corrections, Teachers' Corner, About, Explore Everything; /about must stay linked
+  here). Then: the first-visit banner (to /discover and /start) or "Continue where you left off"; the season row; Look
+  Around (#home-discover: twelve pictures a day from a pool of 84 gentle, pictured cards, build:home-discover written by
+  scripts/tools/make-discover.js, drawn by an inline script before the first paint); On This Day (the strip, then Born
+  on This Day beside the Song of the Day, .home-today-two); the Daily Quiz beside Today's Puzzles (with a link to
+  /past-games); the newsletter. Taken off the home page then: History Now (on /now and /today), Try it yourself, the
+  entry of the day, Today's Number, Ways into history, Featured Profiles, the centuries strip, country chips and Reading
+  Paths. Their build blocks are written only if their markers are in index (SetBlockIf in build-pages.ps1).
+  Sections fade in a little before they reach the screen (IntersectionObserver rootMargin 20% at the bottom). The
+  mission paragraph is on About.
 - Daily quiz (quiz.js, on index and /quiz): rotates profile → person → event → place → profile → idea → work. Profiles of every kind (title from PROFILE_KINDS), entry puzzles from the encyclopedia with the name masked in the clues. `?quizday=N` previews another day. /quiz adds practice rounds by category with a score and best run.
   An entry puzzle's first clue names the kind (the subtype: "A river", "A siege"…), the dates and the entry's region
   (as the search filter, see /people/: "A battle · 31 BCE · Egypt and North Africa"; the clues of all 197 puzzles

@@ -549,6 +549,8 @@ function Emit([string]$path, [string]$content) {   # path: site path (/encyclope
   if ([EpochBuild.W]::WriteIfChanged($file, $content.Replace('@@MOD@@', $mod))) { $script:NWRITE++ }
 }
 # a generated block (<!-- build:name --> ... <!-- /build:name -->) in a hand-written page
+# a block a page may have dropped (the home page of Nov 2026 moved its collections to /research): written when its markers are there
+function SetBlockIf([string]$file, [string]$name, [string]$html) { if ([IO.File]::ReadAllText($file, $U8).Contains("<!-- build:$name -->")) { SetBlock $file $name $html } }
 function SetBlock([string]$file, [string]$name, [string]$html) {
   $t = [IO.File]::ReadAllText($file, $U8); $a = "<!-- build:$name -->"; $b = "<!-- /build:$name -->"
   $i = $t.IndexOf($a); $j = $t.IndexOf($b); if ($i -lt 0 -or $j -lt $i) { throw "markers $a ... $b missing in $file" }
@@ -4635,7 +4637,7 @@ $HUBGROUPS = @(@('Read', @('profiles', 'encyclopedia', 'states', 'countries', 'p
   @('Play', @('quiz', 'games', 'flashcards', 'write', 'kids', 'passport')), @('The Institute', @('series', 'new', 'teachers', 'dataset', 'community', 'contributors')))
 SetBlock "$Repo\research" 'hub' (($HUBGROUPS | ForEach-Object { '<section class="hub-group" aria-label="' + $_[0] + '"><h2 class="hub-group-t">' + $_[0] + '</h2><ul class="hub-grid' + $(switch (@($_[1]).Count) { 5 { ' hub-5' } 6 { ' hub-6' } 9 { ' hub-6' } default { '' } }) + '">' + (($_[1] | ForEach-Object { HubCard $SECTIONS[$_] 'hub-card' }) -join '') + '</ul></section>' }) -join '')
 # the home page's doors: read, explore, and the lighter ways in (a day's events, speeches, games, the Kids corner)
-SetBlock "$Repo\index" 'home-doors' ('<ul class="doors">' + ((@('profiles', 'encyclopedia', 'states', 'atlas', 'countries', 'centuries', 'people', 'paths') | ForEach-Object { HubCard $SECTIONS[$_] 'door' }) -join '') + '</ul>')
+SetBlockIf "$Repo\index" 'home-doors' ('<ul class="doors">' + ((@('profiles', 'encyclopedia', 'states', 'atlas', 'countries', 'centuries', 'people', 'paths') | ForEach-Object { HubCard $SECTIONS[$_] 'door' }) -join '') + '</ul>')
 # "Try it yourself" on the home page (31 Oct 2026, to draw readers in): the interactive tools, each with a big picture, a
 # line and what to do: [section, title, line, call, address]
 $HOMETRY = @(@('societies', 'Be born into history', 'Chance places you in a society of the past, as birth placed most people: emperor, peasant or enslaved.', 'Be born', '/societies/?born=1#born'),
@@ -4644,7 +4646,7 @@ $HOMETRY = @(@('societies', 'Be born into history', 'Chance places you in a soci
   @('write', 'Write your name in hieroglyphs', 'Or in cuneiform, runes or Linear B: every sign with its sound, and your writing as a picture.', 'Start writing', '/write#ancient-egyptian'),
   @('faiths', 'Watch a faith spread', 'Where each religion began and how it travelled, century by century on a turning globe.', 'Open the maps', '/faiths'),
   @('kids', 'For young explorers', 'Pyramids, knights and Vikings: picture stories, a fact of the day and games for younger readers.', 'Visit the Kids Corner', '/kids'))
-SetBlock "$Repo\index" 'home-try' ('<ul class="tries">' + ((@($HOMETRY | ForEach-Object { $trS = $SECTIONS[$_[0]]; $trImg = PicOf $trS.pic
+SetBlockIf "$Repo\index" 'home-try' ('<ul class="tries">' + ((@($HOMETRY | ForEach-Object { $trS = $SECTIONS[$_[0]]; $trImg = PicOf $trS.pic
   '<li><a class="try" href="' + $_[4] + '"><span class="try-img">' + $(if ($trImg) { '<img src="' + $trImg + '" alt="" loading="lazy">' } else { '' }) + '</span><span class="try-b"><span class="try-k">' + (Hx $trS.t) + '</span><span class="try-t">' + (Hx $_[1]) + '</span><span class="try-d">' + (Hx $_[2]) + '</span><span class="try-go">' + (Hx $_[3]) + ' &rarr;</span></span></a></li>' })) -join '') + '</ul>')
 # "Today's Number" on the home page (4 Nov 2026): figures counted from the data, each with the page it comes from; the
 # page's inline script shows one a day (UTC day times a prime stride), drawn before the first paint (build:home-numbers)
@@ -4666,7 +4668,7 @@ $hnF = @{}; foreach ($hn in $POL['nodes']) { if ($null -ne $hn['s'] -and -not $h
 foreach ($hcc in $CENTPAGES) { if ($hnF.ContainsKey($hcc) -and $hnF[$hcc] -ge 10) { HomeNum $hnF[$hcc] ('states on record were founded in the ' + $hcc) ('/centuries/' + (CenturySlug $hcc)) } }
 # the inventions of each lane
 foreach ($hl in $INVCATS.Keys) { $hc = @($INVN.Values | Where-Object { $_.cat -eq $hl }).Count; if ($hc) { HomeNum $hc ('inventions and discoveries in the lane ' + $INVCATS[$hl].ToLowerInvariant()) ('/inventions') } }
-SetBlock "$Repo\index" 'home-numbers' ('<script>var HOME_NUMS=[' + ($hnL -join ',') + '];</script>')
+SetBlockIf "$Repo\index" 'home-numbers' ('<script>var HOME_NUMS=[' + ($hnL -join ',') + '];</script>')
 Say "home page: $($hnL.Count) numbers for Today's Number"
 # /connections names the register's size in its title and og:title ("Connections Map of 5,468 States"): kept current
 $cnF = "$Repo\connections"; $cnT = [IO.File]::ReadAllText($cnF, $U8)
@@ -4684,8 +4686,8 @@ foreach ($n in $POL['nodes']) {
 }
 SetBlock "$Repo\index" 'home-map' ('<figure class="home-map"><a href="/atlas?year=1000" aria-label="Open the atlas at the year 1000">' + (MapSvg ([double[]]@(0, 20, 1000, ($MAPH - 20))) $hm[0] 'World map: the states that existed in the year 1000' 'map-world') + '<canvas id="home-globe" aria-hidden="true" hidden></canvas>' + '</a><figcaption>The world in 1000 CE: <b>' + $hm[1] + ' recorded states</b>. <a href="/atlas?year=1000">Travel through time in the atlas &rarr;</a></figcaption>' +
   '<script>var HOME_GLOBE=[' + $hg.ToString() + '];var HOME_GLOBE_SRC="/maps/globe-land.js?v=' + $GLOBEV + '";</script></figure>')
-SetBlock "$Repo\index" 'home-centuries' ('<ol class="cen-bars cen-bars-home">' + (($CENTPAGES | ForEach-Object { $ii = $CENTINFO[$_]; '<li><a href="/centuries/' + $ii.slug + '" title="' + (Hx (CentTitle $_)) + ': ' + $ii.alive + ' states"><span class="cen-bar" style="height:' + ([Math]::Max(2, $ii.alive / $maxA * 100)).ToString('0.0', $INV) + '%"></span><span class="cen-lbl">' + (Hx (($_ -replace ' century', '') -replace ' BCE', ' BC')) + '</span></a></li>' }) -join '') + '</ol>')
-SetBlock "$Repo\index" 'home-countries' ('<ul class="cty-chips">' + ((@($CINFO.Keys | Sort-Object @{ e = { $CINFO[$_].n }; Descending = $true } | Select-Object -First 18) | ForEach-Object { '<li><a href="/countries/' + $CINFO[$_].slug + '">' + (Hx $_) + ' <span>' + $CINFO[$_].n + '</span></a></li>' }) -join '') + '<li><a class="cty-all" href="/countries/">All ' + $CPAGE.Count + ' countries &rarr;</a></li></ul>')
+SetBlockIf "$Repo\index" 'home-centuries' ('<ol class="cen-bars cen-bars-home">' + (($CENTPAGES | ForEach-Object { $ii = $CENTINFO[$_]; '<li><a href="/centuries/' + $ii.slug + '" title="' + (Hx (CentTitle $_)) + ': ' + $ii.alive + ' states"><span class="cen-bar" style="height:' + ([Math]::Max(2, $ii.alive / $maxA * 100)).ToString('0.0', $INV) + '%"></span><span class="cen-lbl">' + (Hx (($_ -replace ' century', '') -replace ' BCE', ' BC')) + '</span></a></li>' }) -join '') + '</ol>')
+SetBlockIf "$Repo\index" 'home-countries' ('<ul class="cty-chips">' + ((@($CINFO.Keys | Sort-Object @{ e = { $CINFO[$_].n }; Descending = $true } | Select-Object -First 18) | ForEach-Object { '<li><a href="/countries/' + $CINFO[$_].slug + '">' + (Hx $_) + ' <span>' + $CINFO[$_].n + '</span></a></li>' }) -join '') + '<li><a class="cty-all" href="/countries/">All ' + $CPAGE.Count + ' countries &rarr;</a></li></ul>')
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # Open data (/dataset): the states register and the power curves as CSV and JSON (root files, CC BY 4.0)
@@ -4834,7 +4836,7 @@ $HANDP = @(@('World Atlas', '/atlas', 'atlas|map|maps|world map|globe|historical
   @('Flashcards', '/flashcards', 'flashcards|flash cards|cards|memorise|memorize|revision|revise|spaced repetition'),
   @('History Games', '/games', 'games|play|crossword|word hunt|emblem pairs|globe hunt|which came first|guess the year|daily ten|picture puzzle|connections game|order the ages'), @('Who Said It?', '/games#said', 'who said it|quotes|famous quotes|quotations|sayings'),
   @('Kids Corner', '/kids', 'kids|children|for kids|kids mode'), @('Glossary', '/encyclopedia/glossary', 'glossary|terms|definitions'), @('Ruling Houses and Dynasties', '/encyclopedia/dynasties', 'dynasties|ruling houses|royal houses|royal families|dynasty|house of'), @('Wars and Their Battles', '/encyclopedia/wars', 'wars|battles|list of wars|wars of history|battles by war'),
-  @('Find Your Way In', '/start', 'start|where to begin|beginners|what kind of reader'), @('Quotations', '/encyclopedia/quotations', 'quotations|quotes|famous quotes|sayings|in their words|who said'), @('Today at the Institute', '/today', 'today|today at the institute|daily|my day|what is on today|todays games'), @('History Now', '/now', 'now|history now|news|history news|archaeology news|headlines|in the news|anniversaries|coming anniversaries|upcoming anniversaries'), @('Your Birthday in History', '/today-in-history/#birthday', 'birthday|my birthday|born on this day|what happened on my birthday|day i was born'), @('Advent Calendar of History', '/advent', 'advent|advent calendar|christmas calendar|december doors|24 doors'), @('My Week of Games', '/weekly', 'my week|weekly|week of games|daily games results'), @('Past Games', '/past-games', 'past games|earlier puzzles|previous puzzles|archive|games archive|yesterday''s puzzle|old puzzles|play past days'), @('My Passport', '/passport', 'passport|my history|stamps|my reading|my timeline|reading history'),
+  @('Find Your Way In', '/start', 'start|where to begin|beginners|what kind of reader'), @('Quotations', '/encyclopedia/quotations', 'quotations|quotes|famous quotes|sayings|in their words|who said'), @('Today at the Institute', '/today', 'today|today at the institute|daily|my day|what is on today|todays games'), @('History Now', '/now', 'now|history now|news|history news|archaeology news|headlines|in the news|anniversaries|coming anniversaries|upcoming anniversaries'), @('Your Birthday in History', '/today-in-history/#birthday', 'birthday|my birthday|born on this day|what happened on my birthday|day i was born'), @('Advent Calendar of History', '/advent', 'advent|advent calendar|christmas calendar|december doors|24 doors'), @('My Week of Games', '/weekly', 'my week|weekly|week of games|daily games results'), @('Discover', '/discover', 'discover|browse|pictures|gallery|look around|explore in pictures|picture wall'), @('Past Games', '/past-games', 'past games|earlier puzzles|previous puzzles|archive|games archive|yesterday''s puzzle|old puzzles|play past days'), @('My Passport', '/passport', 'passport|my history|stamps|my reading|my timeline|reading history'),
   @('Today in History', '/today-in-history/', 'today in history|on this day|this day in history|anniversaries'), @('Encyclopedia', '/encyclopedia/', 'encyclopedia|a-z|entries'),
   @('States', '/state/', 'states|register of states|kingdoms'), @('Profiles', '/profiles', 'profiles|empires|civilisations|civilizations'),
   @('Research Series', '/research-series', 'research series|essays'), @('Open Data', '/dataset', 'open data|dataset|download|csv'),
@@ -5068,12 +5070,15 @@ if ($LASTEXITCODE) { throw 'History Now: scripts/tools/make-now.js failed (above
 # Born Where? (a mode of Globe Hunt): born-data.js from people-data.js and scripts/entry-places.tsv
 foreach ($bwL in (& $songExe "$PSScriptRoot\tools\make-born-game.js")) { Say $bwL }
 if ($LASTEXITCODE) { throw 'Born Where?: scripts/tools/make-born-game.js failed (above)' }
+# Discover (/discover): history in pictures, data/discover.json and the hand page, written by scripts/tools/make-discover.js
+foreach ($dcL in (& $songExe "$PSScriptRoot\tools\make-discover.js")) { Say $dcL }
+if ($LASTEXITCODE) { throw 'Discover: scripts/tools/make-discover.js failed (above)' }
 # Today at the Institute (/today): the day's things in one place, written by scripts/tools/make-today.js
 foreach ($tdL in (& $songExe "$PSScriptRoot\tools\make-today.js")) { Say $tdL }
 if ($LASTEXITCODE) { throw 'Today: scripts/tools/make-today.js failed (above)' }
 
 # sitemaps: hand-written pages and profiles too (lastmod from their content)
-foreach ($p in @('/', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/write', '/faiths', '/flashcards', '/race', '/inventions', '/governance', '/compare', '/privacy', '/terms', '/method', '/corrections', '/support', '/advent', '/now', '/encyclopedia/', '/state/', '/today-in-history/')) {
+foreach ($p in @('/', '/discover', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/write', '/faiths', '/flashcards', '/race', '/inventions', '/governance', '/compare', '/privacy', '/terms', '/method', '/corrections', '/support', '/advent', '/now', '/encyclopedia/', '/state/', '/today-in-history/')) {
   $file = if ($p -eq '/') { "$Repo\index" } elseif ($p.EndsWith('/')) { Join-Path $Repo ($p.Trim('/') + '\index') } else { Join-Path $Repo $p.TrimStart('/') }
   [void](Stamp $p ([IO.File]::ReadAllText($file, $U8)))
 }

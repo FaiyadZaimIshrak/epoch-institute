@@ -38,6 +38,10 @@
   <span class="hero-ornament"></span>
   <h1 class="research-title">Faith Maps</h1>
   <p class="ref-lede">Thirty religions on the map, century by century: where each began, how it spread, where it was a main faith or held communities, and where it last lived on. Choose a faith, press Play and turn the globe, or lay a second faith over the first to compare them.</p>
+<!-- build:howto -->
+<div class="howto" id="howto" hidden><p class="howto-h">How to use it</p><ol class="howto-steps"><li>Choose a faith.</li><li>Press Play, or move the century slider, to watch where it spread; drag the globe to turn it.</li><li>Compare with lays a second faith over the first; tap a glow, a route or a mark to read its note.</li></ol><button type="button" class="howto-x">Got it</button></div><button type="button" class="howto-open" id="howto-open" hidden aria-controls="howto">How to use it</button>
+<script>(function(){var k="faiths",d={};try{d=JSON.parse(localStorage.getItem('epoch-howto')||'{}')||{}}catch(e){}var h=document.getElementById('howto'),o=document.getElementById('howto-open');if(d[k])o.hidden=false;else h.hidden=false;function save(){try{localStorage.setItem('epoch-howto',JSON.stringify(d))}catch(e){}}h.querySelector('.howto-x').onclick=function(){h.hidden=true;o.hidden=false;d[k]=1;save();o.focus()};o.onclick=function(){h.hidden=false;o.hidden=true;delete d[k];save()}})();</script>
+<!-- /build:howto -->
 </header>
 
 <nav class="write-langs faith-list" id="faith-list" aria-label="Choose a faith">

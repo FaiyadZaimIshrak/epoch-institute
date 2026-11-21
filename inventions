@@ -43,6 +43,10 @@
   <p class="ref-lede"><!-- build:inv-lede -->
 From stone tools to the World Wide Web: when and where each of 291 inventions and discoveries first appeared, who is credited, and what each one led to.
 <!-- /build:inv-lede --></p>
+<!-- build:howto -->
+<div class="howto" id="howto" hidden><p class="howto-h">How to use it</p><ol class="howto-steps"><li>Each card is an invention, placed in its lane by its first date; hover over or tap one to light up what it built on and what it led to.</li><li>Drag to move along the tree; hold Ctrl and scroll, or use + and −, to zoom; the strip above jumps to an age.</li><li>Use Trace the road to… to follow one invention back, or switch to By civilisation or List.</li></ol><button type="button" class="howto-x">Got it</button></div><button type="button" class="howto-open" id="howto-open" hidden aria-controls="howto">How to use it</button>
+<script>(function(){var k="inventions",d={};try{d=JSON.parse(localStorage.getItem('epoch-howto')||'{}')||{}}catch(e){}var h=document.getElementById('howto'),o=document.getElementById('howto-open');if(d[k])o.hidden=false;else h.hidden=false;function save(){try{localStorage.setItem('epoch-howto',JSON.stringify(d))}catch(e){}}h.querySelector('.howto-x').onclick=function(){h.hidden=true;o.hidden=false;d[k]=1;save();o.focus()};o.onclick=function(){h.hidden=false;o.hidden=true;delete d[k];save()}})();</script>
+<!-- /build:howto -->
 </header>
 
 <section class="atl-app inv-app" aria-label="Tree of inventions and discoveries">
