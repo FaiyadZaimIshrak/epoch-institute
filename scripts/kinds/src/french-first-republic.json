@@ -1,0 +1,61 @@
+{
+ "id": "french-first-republic",
+ "name": "French First Republic",
+ "region": "Europe",
+ "start": 1792,
+ "end": 1804,
+ "info": "The republic founded in 1792 during the French Revolution, which abolished the monarchy, executed Louis XVI, passed through the Reign of Terror, the Directory and the Consulate, and ended with Napoleon's empire in 1804.",
+ "facts": {
+  "capital": "Paris",
+  "founder": "The deputies of the National Convention",
+  "predecessor": "The constitutional monarchy of France under the Legislative Assembly",
+  "successor": "The First French Empire under Napoléon Bonaparte"
+ },
+ "t": [
+  "On 21 September 1792 the deputies of the National Convention, meeting for the first time, unanimously abolished the constitutional monarchy in France.",
+  "The Republic's form of government changed several times: the National Convention (1792–1795), the Directory (1795–1799) and the Consulate (1799–1804).",
+  "From 1792 to 1802 France was at war with the rest of Europe, and it also fought internal conflicts such as the wars in the Vendée."
+ ],
+ "dyk": "The Republic was never officially proclaimed on 22 September 1792; instead the Convention decided to date its acts from the year I of the Republic.",
+ "ev": [
+  ["1792", "Citizens storm the Tuileries Palace in the insurrection of 10 August and demand the removal of the king"],
+  ["1792", "The National Convention abolishes the monarchy on 21 September and founds the Republic"],
+  ["1793", "Louis XVI is convicted of high treason and executed on 21 January"],
+  ["1793", "The Convention creates the Committee of Public Safety, which begins the Reign of Terror"],
+  ["1794", "Robespierre is arrested and executed, and the Jacobin club is closed"],
+  ["1795", "The Directory is established on 3 November under the Constitution of the Year III"],
+  ["1799", "The coup of 18 Brumaire makes Napoleon Bonaparte First Consul"],
+  ["1804", "The Senate proclaims Napoleon Emperor of the French on 18 May"]
+ ],
+ "sections": {
+  "foundation": "<p>Before the Republic, France was a constitutional monarchy governed under the Legislative Assembly and at war with Prussia and Austria. In July 1792 the Duke of Brunswick, commanding the Austro-Prussian Army, issued the Brunswick Manifesto, which threatened Paris with destruction if any harm came to King Louis XVI and his family. The threat deepened the turmoil of the French Revolution. In the insurrection of 10 August 1792 citizens stormed the Tuileries Palace, killed six hundred of the king's Swiss guards and demanded the king's removal. In the first week of September, fearing counter-revolution, crowds broke into the prisons of Paris and killed over half of the prisoners, nobles, clergymen and political prisoners as well as common criminals, in what became known as the September Massacres.</p><p>A committee of six members of the Legislative Assembly oversaw elections to a National Convention, charged with abolishing the monarchy and drafting a new constitution. On 21 September 1792, gathered for the first time, its deputies unanimously abolished the monarchy, and on 25 September they declared the Republic \"one and indivisible\".</p>",
+  "socioeconomy": "<p>The early Republic was a time of scarcity. Through the winter of 1792 and the spring of 1793 Paris suffered food riots and mass hunger, and the Convention, occupied with the war, did little about it until late spring 1793. Among the tasks it then gave the Committee of Public Safety were the food shortages and riots and the radical movement of the Enragés.</p><p>The Directory's years were marked by hyperinflation of the paper money, the assignats, which helped to make its government unstable. After the fall of Robespierre the Convention re-established freedom of worship and began to release large numbers of prisoners. The Republic also counted time in its own way: its acts were dated from the year I of the Republic.</p>",
+  "military": "<p>The Republic was born at war. France was already fighting Prussia and Austria under the Legislative Assembly, and from 1792 to 1802 it was at war with the rest of Europe. Inside France it faced the wars in the Vendée. In the spring of 1793 the Convention listed among the dangers it set the Committee of Public Safety to deal with the revolt in the Vendée and in Brittany, recent defeats of the republic's armies and the desertion of its commanding general.</p><p>War also shaped the Republic's later governments. French military disasters in 1798 and 1799, together with inflation, undermined the Directory, which was overthrown in 1799 by a coup in which Napoleon Bonaparte took part.</p>",
+  "governance": "<p>The Convention's first act was to establish the Republic and strip the king of all political power. The constitution of the Republic provided no formal head of state or of government; the presidency of the National Convention changed every two weeks. In June 1793 the Convention drafted the Constitution of 1793, ratified by popular vote in early August, but under the Committee of Public Safety, seen as an emergency government, the rights it guaranteed, and those of the Declaration of the Rights of Man and of the Citizen of 1789, were suspended.</p><p>The Constitution of the Year III created the Directory on 3 November 1795: a Council of Elders of 250 members, a Council of Five Hundred and an executive of five members. The Consulate of 1799 gave Bonaparte, as First Consul, a powerful executive with four assemblies: a Council of State appointed by him to draft laws, a Tribunate of one hundred to deliberate on them, a Legislative Body of three hundred to vote on them without debate, and a Conservative Senate of sixty members appointed by Bonaparte, which elected the other bodies and later drafted laws itself, the sénatus-consultes.</p>",
+  "impact": "<p>The First Republic ended the monarchy in France. Louis XVI, by then a private citizen under his family name of Capet, was tried for high treason from December 1792, convicted on 16 January 1793 and executed on 21 January. The period that followed saw the establishment of the National Convention and the Reign of Terror, in which perceived enemies of the Republic were executed by guillotine at an ever-increasing rate, then the Thermidorian Reaction and the founding of the Directory.</p><p>Its form of government changed several times, from an assembly with no formal head of state to the five-member executive of the Directory and the First Consul of the Consulate. In historiography the period is sometimes called Revolutionary France, and the Republic was named the First Republic only in retrospect.</p>",
+  "decline": "<p>After the arrest and execution of Robespierre on 28 July 1794 the Jacobin club was closed and the surviving Girondins were reinstated. A year later the Convention adopted the Constitution of the Year III and called elections for a new legislature. The Directory that took over in November 1795 lasted only four years, weakened by the hyperinflation of the assignats and by the military disasters of 1798 and 1799.</p><p>The coup of 18 Brumaire, on 9 November 1799, was planned by members of the Directory itself, a sign of how far its power had failed, and Napoleon Bonaparte, a co-conspirator, became head of the government as First Consul. The powers of the Senate grew under the Constitution of the Year X. On 18 May 1804 the Conservative Senate proclaimed Napoleon Emperor of the French, ending the First Republic and opening the First French Empire.</p>"
+ },
+ "summary": "The French First Republic, founded by the National Convention on 21 September 1792, abolished the monarchy and executed Louis XVI. It was at war with the rest of Europe until 1802 and passed through the Reign of Terror, the Directory and the Consulate before Napoleon Bonaparte was proclaimed emperor in 1804.",
+ "references": [
+  "William Doyle, The Oxford History of the French Revolution (Oxford University Press, 1989)"
+ ],
+ "points": [[1792, 6], [1793, 5], [1794, 6], [1795, 7], [1798, 5], [1799, 7], [1800, 8], [1802, 10], [1804, 9]],
+ "pointDescs": {
+  "1792": "The National Convention abolishes the monarchy on 21 September, while France is at war with Prussia and Austria.",
+  "1793": "Louis XVI is executed in January; amid hunger, revolt in the Vendée and military defeats, the Committee of Public Safety begins the Reign of Terror.",
+  "1794": "Robespierre is arrested and executed on 28 July, the Jacobin club is closed and the surviving Girondins return.",
+  "1795": "The Constitution of the Year III establishes the Directory on 3 November.",
+  "1798": "French military disasters and the hyperinflation of the assignats weaken the Directory.",
+  "1799": "The coup of 18 Brumaire on 9 November overthrows the Directory and makes Napoleon Bonaparte First Consul.",
+  "1800": "The assemblies of the Consulate are set up, the Tribunate and the Legislative Body on 1 January 1800.",
+  "1802": "France's decade of war with the rest of Europe ends.",
+  "1804": "The Conservative Senate proclaims Napoleon Emperor of the French on 18 May, ending the Republic."
+ },
+ "stats": {"militaryPower": 8, "territorialReach": 5, "economicStrength": 5, "tradeNetworks": 4, "administrativeSophistication": 6, "culturalIntellectualOutput": 6, "institutionalLongevity": 2, "historicalInfluence": 9},
+ "tags": ["Republican", "Military", "Imperial"],
+ "notes": [
+  "The article is short (about 1,300 words) and says almost nothing on the economy, society, military campaigns or the Republic's influence abroad, so the socioeconomy, military, impact and decline sections are well under 1,100 characters rather than padded.",
+  "The article names no capital; Paris is the seat of the Convention, the Tuileries and the Committee as the article describes them. It names no battle or campaign, so the curve rests on the political turning points and the article's 'military disasters in 1798 and 1799' and 'at war ... from 1792 to 1802'; the 1802 peak is my judgement from the end of the war.",
+  "The 1800 point and its description rest on the Tribunate being established on 1 January 1800 and the Legislative Body 'concurrently'. Only one reference is listed in the article's bibliography."
+ ]
+}
