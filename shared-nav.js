@@ -531,7 +531,7 @@ function searchThumb(r) {
   return '';
 }
 var SEARCH_INDEX_SRC = '/search-index.js?v=0fb74f708c';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
-var SEARCH_PAGES_SRC = '/search-pages.js?v=bcacd66db5';
+var SEARCH_PAGES_SRC = '/search-pages.js?v=10bc440471';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
 var searchLoading = null, searchReady = false;
@@ -725,7 +725,7 @@ function initNav(activePage) {
   const MONTH_URL = '/today-in-history/' + ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'][new Date().getUTCMonth()];
   const MENUS = [
     ['maps', 'Maps &amp; Time', [
-      ['Maps', [['atlas', '/atlas', 'Atlas', 'The world in any year', 1], ['faiths', '/faiths', 'Faith Maps', 'How the religions spread'],
+      ['Maps', [['atlas', '/atlas', 'Atlas', 'The world in any year', 1], ['faiths', '/faiths', 'Faith Maps', 'How the religions spread'], ['journeys', '/journeys', 'Journeys on the Globe', 'Great journeys, stop by stop'],
         ['connections', '/connections', 'Connections', 'The states as a network'], ['states', '/state/', 'States Register', 'Every state on record']]],
       ['Time', [['today', '/today-in-history/', 'Today in History', 'What happened on this day', 1], ['timeline', '/timeline', 'World Timeline', 'Every state on one line'], ['centuries', '/centuries/', 'Centuries', 'One century at a time'],
         ['years', '/years/', 'Year by Year', 'What happened in any year'], ['', MONTH_URL, 'This Month in History', 'Its events, festivals and people'], ['', '/today', 'Today at the Institute', 'The day in one place'], ['', '/now', 'History Now', 'In the news, coming anniversaries'], ['countries', '/countries/', 'Country Histories', 'Each land through time'],
@@ -745,7 +745,7 @@ function initNav(activePage) {
     ['teachers', '/teachers/', 'Teachers&#8217; Corner'], ['community', '/community', 'Community'], ['', '/community#submit', 'Submit an Article'],
     ['contributors', '/contributors', 'Write for Us'], ['', '/#newsletter-section', 'Newsletter'], ['support', '/support', 'Support the Institute'], ['contact', '/contact', 'Contact']];
   // New tags in the menus (Nov 2026): address -> the day the tag comes off. A release adds a line here.
-  const NEW_UNTIL = { '/religions': '2026-12-22', '/discover': '2026-12-21', '/past-games': '2026-12-16', '/profiles?kind=life': '2026-12-14', '/encyclopedia/quotations': '2026-12-12', '/today': '2026-12-12', '/now': '2026-12-10', '/advent': '2026-12-08', '/today-in-history/#birthday': '2026-12-01' };
+  const NEW_UNTIL = { '/journeys': '2026-12-22', '/religions': '2026-12-22', '/discover': '2026-12-21', '/past-games': '2026-12-16', '/profiles?kind=life': '2026-12-14', '/encyclopedia/quotations': '2026-12-12', '/today': '2026-12-12', '/now': '2026-12-10', '/advent': '2026-12-08', '/today-in-history/#birthday': '2026-12-01' };
   const newTag = h => NEW_UNTIL[h] && Date.now() < Date.parse(NEW_UNTIL[h]) ? '<i class="new-tag">New</i>' : '';
   const inMenu = m => m[2].some(c => c[1].some(x => x[0] === activePage));
   const moreActive = MORE.some(x => x[0] && x[0] === activePage);
@@ -838,6 +838,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/atlas">Atlas</a>
         <a class="footer-link" href="/timeline">World Timeline</a>
         <a class="footer-link" href="/faiths">Faith Maps</a>
+        <a class="footer-link" href="/journeys">Journeys on the Globe</a>
         <a class="footer-link" href="/centuries/">Centuries</a>
         <a class="footer-link" href="/years/">Year by Year</a>
         <a class="footer-link" href="${MONTH_URL}">This Month in History</a>

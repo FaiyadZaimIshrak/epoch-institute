@@ -1,0 +1,255 @@
+# journey	leg	stop	place	latitude	longitude	source	km from the stop before
+alexander	1	1	Mount Ossa	39.800	22.700	wikidata:Mount Ossa (Greece)	0
+alexander	1	2	Corinth	37.906	22.879	wikidata:Ancient Corinth	211
+alexander	1	3	Mount Haemus	42.784	24.976	wikidata:Balkan Mountains	571
+alexander	1	4	Thebes	38.321	23.318	entry	516
+alexander	2	1	Hellespont	40.200	26.400	wikidata:Dardanelles	338
+alexander	2	2	Granicus River	40.228	27.242	wikidata:Battle of the Granicus	72
+alexander	2	3	Halicarnassus	37.038	27.424	wikidata:Halicarnassus	355
+alexander	2	4	Issus	36.838	36.164	wikidata:Issus (Cilicia)	777
+alexander	2	5	Tyre	33.267	35.200	wikidata:Tyre, Lebanon	407
+alexander	2	6	Gaza	31.508	34.460	wikidata:Gaza City	208
+alexander	3	1	Gaugamela	36.360	43.250	wikidata:Battle of Gaugamela	973
+alexander	3	2	Babylon	32.523	44.424	entry	440
+alexander	3	3	Susa	32.189	48.256	entry	362
+alexander	3	4	Persian Gates	30.708	51.599	wikidata:Persian Gates	357
+alexander	3	5	Persepolis	29.935	52.890	entry	151
+alexander	4	1	Sogdian Rock	40.400	69.400	wikidata:Siege of the Sogdian Rock	1894
+alexander	4	2	Taxila	33.746	72.787	entry	798
+alexander	4	3	Hydaspes River	32.828	73.639	wikidata:Battle of the Hydaspes	129
+alexander	4	4	Hyphasis River	31.678	74.912	wikidata:Alexandria Hyphasis	175
+alexander	5	1	Multan	30.198	71.471	entry	367
+alexander	5	2	Gedrosian Desert	25.509	64.144	wikidata:Makran	889
+beagle	1	1	Plymouth Sound	50.343	-4.143	entry	0
+beagle	1	2	Tenerife	28.269	-16.606	wikidata:Tenerife	2670
+beagle	1	3	Praia, Santiago	14.918	-23.509	entry	1646
+beagle	1	4	Bahia (Salvador)	-12.983	-38.493	wikidata:Salvador, Bahia	3514
+beagle	1	5	Rio de Janeiro	-22.911	-43.206	entry	1211
+beagle	1	6	Punta Alta	-38.880	-62.075	wikidata:Punta Alta	2519
+beagle	2	1	Tierra del Fuego	-54.000	-70.000	entry	1785
+beagle	2	2	Port St Julian	-49.307	-67.730	wikidata:Puerto San Julián	545
+beagle	2	3	Tierra del Fuego, the mission site	-54.000	-70.000	entry	545
+beagle	2	4	Santa Cruz River	-50.133	-68.350	wikidata:Santa Cruz River (Argentina)	444
+beagle	3	1	Chiloé Island	-42.600	-73.950	entry	941
+beagle	3	2	Valparaíso	-33.046	-71.620	entry	1082
+beagle	3	3	Valdivia	-39.814	-73.246	entry	766
+beagle	3	4	Concepción	-36.827	-73.050	entry	333
+beagle	3	5	Lima	-12.060	-77.037	entry	2783
+beagle	4	1	Chatham Island, Galápagos	-0.800	-89.400	wikidata:San Cristóbal Island	1851
+beagle	4	2	Tahiti	-17.667	-149.467	wikidata:Tahiti	6820
+beagle	4	3	Sydney	-33.868	151.210	entry	6122
+beagle	4	4	Hobart	-42.883	147.317	entry	1058
+beagle	4	5	Keeling Islands	-12.117	96.895	wikidata:Cocos (Keeling) Islands	5913
+beagle	4	6	Cape Town	-33.925	18.424	entry	8204
+beagle	4	7	St Helena	-15.965	-5.715	entry	3133
+beagle	4	8	Ascension Island	-7.950	-14.350	wikidata:Ascension Island	1294
+beagle	4	9	Falmouth	50.150	-5.067	wikidata:Falmouth, Cornwall	6523
+columbus	1	1	Palos	37.228	-6.893	wikidata:Palos de la Frontera	0
+columbus	1	2	San Sebastián de La Gomera	28.092	-17.110	wikidata:San Sebastián de La Gomera	1393
+columbus	1	3	San Salvador (Guanahani)	24.035	-74.498	wikidata:San Salvador Island	5698
+columbus	1	4	Cuba	22.000	-79.500	entry	560
+columbus	1	5	Fort Navidad	19.691	-72.016	entry	819
+columbus	1	6	Santa Maria, Azores	36.973	-25.095	wikidata:Santa Maria Island	4919
+columbus	1	7	Lisbon	38.708	-9.139	entry	1412
+columbus	1	8	Palos	37.228	-6.893	wikidata:Palos de la Frontera	257
+columbus	2	1	Cádiz	36.535	-6.298	wikidata:Cádiz	93
+columbus	2	2	Dominica	15.417	-61.333	entry	5891
+columbus	2	3	Puerto Rico	18.250	-66.500	entry	634
+columbus	2	4	La Navidad	19.691	-72.016	entry	602
+columbus	2	5	La Isabela	19.890	-71.079	entry	101
+columbus	2	6	Jamaica	18.180	-77.400	entry	691
+columbus	2	7	Guadeloupe	16.250	-61.500	wikidata:Guadeloupe	1702
+columbus	2	8	Bay of Cádiz	36.494	-6.217	wikidata:Bay of Cádiz	5860
+columbus	3	1	Sanlúcar	36.779	-6.354	wikidata:Sanlúcar de Barrameda	34
+columbus	3	2	Trinidad	10.461	-61.249	wikidata:Trinidad	6208
+columbus	3	3	Paria Peninsula	10.700	-62.500	wikidata:Paria Peninsula	139
+columbus	3	4	Margarita	10.987	-63.936	wikidata:Margarita Island	160
+columbus	3	5	Hispaniola	19.000	-71.000	entry	1170
+columbus	3	6	Santo Domingo	18.462	-69.936	entry	127
+columbus	3	7	Granada	37.175	-3.600	entry	6711
+columbus	4	1	Cádiz	36.535	-6.298	wikidata:Cádiz	250
+columbus	4	2	Martinique	14.650	-61.015	wikidata:Martinique	5911
+columbus	4	3	Santo Domingo	18.462	-69.936	entry	1041
+columbus	4	4	Guanaja	16.472	-85.877	wikidata:Guanaja	1705
+columbus	4	5	Almirante Bay	9.300	-82.400	wikidata:Almirante District	882
+columbus	4	6	St. Ann's Bay	18.435	-77.202	wikidata:Saint Ann's Bay	1160
+columbus	4	7	Sanlúcar de Barrameda	36.779	-6.354	wikidata:Sanlúcar de Barrameda	7115
+cook	1	1	Plymouth	50.371	-4.142	wikidata:Plymouth	0
+cook	1	2	Rio de Janeiro	-22.911	-43.206	entry	9008
+cook	1	3	Cape Horn	-55.980	-67.289	entry	4172
+cook	1	4	Matavai Bay	-17.500	-149.500	wikidata:Matavai Bay	7922
+cook	1	5	Huahine	-16.733	-151.033	entry	184
+cook	1	6	Raiatea	-16.820	-151.440	wikidata:Raʻiātea	44
+cook	2	1	Poverty Bay	-38.716	177.991	wikidata:Poverty Bay	3837
+cook	2	2	Cape Kidnappers	-39.643	177.096	wikidata:Cape Kidnappers	129
+cook	2	3	Mercury Bay	-36.810	175.743	wikidata:Mercury Bay	336
+cook	2	4	Queen Charlotte Sound	-41.250	174.016	wikidata:Queen Charlotte Sound / Tōtaranui	516
+cook	3	1	Point Hicks	-38.000	148.883	wikidata:Point Hicks	2175
+cook	3	2	Botany Bay	-33.983	151.183	wikidata:Botany Bay	492
+cook	3	3	Seventeen Seventy	-24.169	151.882	wikidata:Seventeen Seventy, Queensland	1093
+cook	3	4	Endeavour River	-15.458	145.233	wikidata:Endeavour River	1192
+cook	3	5	Possession Island	-10.727	142.397	wikidata:Possession Island (Queensland)	609
+cook	4	1	Batavia	-6.135	106.813	wikidata:Batavia, Dutch East Indies	3945
+cook	4	2	Cape of Good Hope	-34.358	18.472	entry	9471
+cook	4	3	Saint Helena	-15.965	-5.715	entry	3163
+cook	4	4	Deal	51.223	1.401	wikidata:Deal, Kent	7503
+hijra	1	1	al-'Aqabah	21.413	39.893	wikidata:Mina, Saudi Arabia	0
+hijra	1	2	Mecca	21.422	39.826	entry	7
+hijra	1	3	Mount Thawr	21.383	39.850	wikidata:Jabal Thawr	5
+hijra	1	4	Medina	24.470	39.610	entry	344
+ibn-battuta	1	1	Tangier	35.769	-5.804	entry	0
+ibn-battuta	1	2	Alexandria	31.198	29.892	entry	3331
+ibn-battuta	1	3	Damascus	33.513	36.292	entry	654
+ibn-battuta	1	4	Mecca	21.422	39.826	entry	1389
+ibn-battuta	1	5	Baghdad	33.315	44.366	entry	1396
+ibn-battuta	2	1	Aden	12.800	45.033	entry	2282
+ibn-battuta	2	2	Mogadishu	2.039	45.342	wikidata:Mogadishu	1197
+ibn-battuta	2	3	Kilwa	-8.982	39.517	entry	1385
+ibn-battuta	3	1	Antalya	36.908	30.696	wikidata:Antalya	5185
+ibn-battuta	3	2	Constantinople	41.012	28.976	entry	480
+ibn-battuta	3	3	Samarkand	39.655	66.976	entry	3199
+ibn-battuta	4	1	Delhi	28.667	77.217	entry	1541
+ibn-battuta	4	2	Calicut	11.248	75.780	wikidata:Kozhikode	1943
+ibn-battuta	4	3	Malé	4.175	73.508	wikidata:Malé	825
+ibn-battuta	4	4	Samudra Pasai	5.134	97.201	wikidata:Samudera Pasai Sultanate	2628
+ibn-battuta	4	5	Quanzhou	24.914	118.586	entry	3169
+ibn-battuta	4	6	Beijing	39.904	116.408	entry	1679
+ibn-battuta	5	1	Damascus	33.513	36.292	entry	6934
+ibn-battuta	5	2	Tangier	35.769	-5.804	entry	3830
+ibn-battuta	5	3	Granada	37.175	-3.600	entry	252
+ibn-battuta	5	4	Sijilmasa	31.280	-4.280	entry	658
+ibn-battuta	5	5	Taghaza	23.000	-4.200	wikidata:Taghaza	921
+ibn-battuta	5	6	Timbuktu	16.773	-3.007	entry	704
+ibn-battuta	5	7	Gao	16.267	-0.050	entry	320
+lewis-and-clark	1	1	Camp Dubois	38.803	-90.101	wikidata:Camp Dubois	0
+lewis-and-clark	1	2	St. Charles	38.789	-90.512	wikidata:St. Charles, Missouri	36
+lewis-and-clark	1	3	Floyd's Bluff, Sioux City	42.496	-96.405	wikidata:Sioux City, Iowa	646
+lewis-and-clark	1	4	The Bad River, near Fort Pierre	44.359	-100.376	wikidata:Fort Pierre, South Dakota	382
+lewis-and-clark	1	5	Fort Mandan	47.296	-101.286	wikidata:Fort Mandan	334
+lewis-and-clark	2	1	Marias River	47.930	-110.491	wikidata:Marias River	693
+lewis-and-clark	2	2	Lemhi Pass	44.974	-113.445	wikidata:Lemhi Pass	399
+lewis-and-clark	2	3	Lolo Pass	46.635	-114.580	wikidata:Lolo Pass (Idaho–Montana)	205
+lewis-and-clark	2	4	Celilo Falls	45.649	-120.978	wikidata:Celilo Falls	505
+lewis-and-clark	2	5	Dismal Nitch	46.250	-123.863	wikidata:Dismal Nitch	233
+lewis-and-clark	2	6	Fort Clatsop	46.134	-123.880	wikidata:Fort Clatsop	13
+lewis-and-clark	3	1	Fort Clatsop	46.134	-123.880	wikidata:Fort Clatsop	0
+lewis-and-clark	3	2	Camp Chopunnish	46.222	-116.010	wikidata:Camp Chopunnish	606
+lewis-and-clark	3	3	Marias River	48.467	-112.467	wikidata:Two Medicine Fight Site	365
+lewis-and-clark	3	4	Confluence of the Yellowstone and Missouri	47.985	-103.989	wikidata:Missouri-Yellowstone Confluence Interpretive Center	630
+lewis-and-clark	3	5	St. Louis	38.626	-90.199	wikidata:St. Louis	1521
+long-march	1	1	Ruijin	25.883	116.033	entry	0
+long-march	1	2	Yudu	25.957	115.487	wikidata:Yudu County	55
+long-march	2	1	Tongdao	26.158	109.778	wikidata:Tongdao Dong Autonomous County	571
+long-march	2	2	Liping	26.235	109.133	wikidata:Liping County	65
+long-march	2	3	Zunyi	27.705	106.934	wikidata:Zunyi	272
+long-march	3	1	Luding Bridge	29.915	102.230	wikidata:Luding Bridge	520
+long-march	3	2	Maogong	31.001	102.362	wikidata:Xiaojin County	122
+long-march	3	3	Zoigê Marsh	33.700	102.633	wikidata:Zoigê Marsh	301
+long-march	3	4	Lazikou Pass	34.109	103.894	wikidata:Lazikou Pass	125
+long-march	3	5	Yan'an	36.595	109.486	wikidata:Yan'an	577
+magellan	1	1	Sanlúcar de Barrameda	36.779	-6.354	wikidata:Sanlúcar de Barrameda	0
+magellan	1	2	Tenerife	28.269	-16.606	wikidata:Tenerife	1347
+magellan	1	3	Rio de Janeiro	-22.911	-43.206	entry	6366
+magellan	1	4	Río de la Plata	-34.883	-56.714	entry	1867
+magellan	1	5	Port St. Julian	-49.307	-67.730	wikidata:Puerto San Julián	1839
+magellan	1	6	Santa Cruz	-50.133	-68.350	wikidata:Santa Cruz River (Argentina)	102
+magellan	2	1	Cape Virgenes	-52.333	-68.354	wikidata:Cape Virgenes	245
+magellan	2	2	Strait of Magellan	-54.000	-71.000	wikidata:Strait of Magellan	256
+magellan	2	3	Guam	13.500	144.800	wikidata:Guam	14536
+magellan	2	4	Homonhon	10.733	125.717	wikidata:Homonhon	2097
+magellan	2	5	Limasawa	9.908	125.075	wikidata:Limasawa	116
+magellan	2	6	Cebu	10.317	123.750	entry	152
+magellan	2	7	Mactan	10.300	123.967	wikidata:Mactan	24
+magellan	2	8	Cebu	10.317	123.750	entry	24
+magellan	3	1	Tidore	0.683	127.400	wikidata:Tidore	1145
+magellan	3	2	Cape of Good Hope	-34.358	18.472	entry	11779
+magellan	3	3	Cape Verde	15.300	-23.700	wikidata:Cape Verde	7096
+magellan	3	4	Sanlúcar de Barrameda	36.779	-6.354	wikidata:Sanlúcar de Barrameda	2940
+mansa-musa	1	1	Pyramids of Giza	29.976	31.133	wikidata:Giza pyramid complex	0
+mansa-musa	1	2	Cairo	30.044	31.236	wikidata:Cairo	12
+mansa-musa	1	3	Medina	24.470	39.610	entry	1034
+mansa-musa	1	4	Mecca	21.422	39.826	entry	340
+mansa-musa	1	5	Suez	29.967	32.533	wikidata:Suez	1198
+mansa-musa	1	6	Gao	16.267	-0.050	entry	3646
+mansa-musa	1	7	Timbuktu	16.773	-3.007	entry	320
+marco-polo	1	1	Venice	45.440	12.332	entry	0
+marco-polo	1	2	Acre	32.926	35.084	wikidata:Acre, Israel	2391
+marco-polo	1	3	Hormuz	27.067	56.460	wikidata:Hormuz Island	2155
+marco-polo	1	4	Shangdu	42.358	116.185	entry	5597
+marco-polo	1	5	Yangzhou	32.391	119.436	entry	1145
+marco-polo	2	1	Zaitun	24.914	118.586	entry	836
+marco-polo	2	2	Sumatra	-0.299	101.271	entry	3366
+marco-polo	2	3	Hormuz	27.067	56.460	wikidata:Hormuz Island	5671
+marco-polo	2	4	Trebizond	41.005	39.722	entry	2179
+marco-polo	2	5	Constantinople	41.012	28.976	entry	901
+marco-polo	2	6	Venice	45.440	12.332	entry	1432
+paul	1	1	Antioch	36.200	36.150	entry	0
+paul	1	2	Cyprus	35.000	33.000	entry	314
+paul	1	3	Perga	36.960	30.854	wikidata:Perga	291
+paul	1	4	Pisidian Antioch	38.306	31.189	wikidata:Antioch of Pisidia	153
+paul	2	1	Antioch	36.200	36.150	entry	498
+paul	2	2	Lystra	37.664	32.211	wikidata:Lystra	386
+paul	2	3	Philippi	41.012	24.285	wikidata:Philippi	776
+paul	2	4	Athens	37.984	23.728	entry	340
+paul	2	5	Corinth	37.906	22.879	wikidata:Ancient Corinth	75
+paul	3	1	Ephesus	37.941	27.339	entry	391
+paul	3	2	Corinth	37.906	22.879	wikidata:Ancient Corinth	391
+paul	3	3	Troas	39.752	26.159	wikidata:Alexandria Troas	350
+paul	3	4	Miletus	37.531	27.276	wikidata:Miletus	265
+paul	3	5	Tyre	33.267	35.200	wikidata:Tyre, Lebanon	860
+paul	3	6	Jerusalem	31.777	35.234	wikidata:Jerusalem	166
+paul	4	1	Caesarea	32.501	34.892	wikidata:Caesarea Maritima	87
+paul	4	2	Malta	35.900	14.400	entry	1918
+paul	4	3	Syracuse	37.069	15.287	wikidata:Syracuse, Sicily	152
+paul	4	4	Rhegium	38.114	15.650	entry	120
+paul	4	5	Puteoli	40.823	14.122	entry	329
+paul	4	6	Rome	41.893	12.483	entry	181
+xuanzang	1	1	Chang'an	34.308	108.858	entry	0
+xuanzang	1	2	Agni (Turfan)	42.950	89.182	entry	1954
+xuanzang	1	3	Kucha	41.650	82.900	wikidata:Kucha	536
+xuanzang	1	4	Tokmak	42.839	75.291	wikidata:Tokmok	640
+xuanzang	1	5	Tashkent	41.311	69.280	entry	524
+xuanzang	1	6	Bactra	36.758	66.899	entry	546
+xuanzang	1	7	Bamiyana	34.817	67.817	wikidata:Bamyan	231
+xuanzang	2	1	Taxila	33.746	72.787	entry	472
+xuanzang	2	2	Kashmira	34.500	76.000	entry	307
+xuanzang	2	3	Kushinagara	26.740	83.889	entry	1146
+xuanzang	2	4	Baranasi	25.319	83.013	entry	181
+xuanzang	2	5	Bodh Gaya	24.695	84.993	entry	211
+xuanzang	2	6	Nalanda	25.137	85.444	entry	67
+xuanzang	2	7	Amaravati	16.576	80.357	wikidata:Amaravati Stupa	1089
+xuanzang	2	8	Kanchi	12.831	79.708	entry	422
+xuanzang	2	9	Nalanda	25.137	85.444	entry	1495
+xuanzang	3	1	Kanyakubja	27.031	79.922	entry	590
+xuanzang	3	2	Prayag	25.450	81.850	entry	261
+xuanzang	3	3	Kanyakubja	27.031	79.922	entry	261
+xuanzang	3	4	Kashgar	39.450	75.983	entry	1428
+xuanzang	3	5	Khotan	37.101	79.933	wikidata:Hotan	432
+xuanzang	3	6	Dunhuang	40.141	94.664	entry	1322
+xuanzang	3	7	Chang'an	34.308	108.858	entry	1412
+zheng-he	1	1	Nanjing	32.061	118.779	entry	0
+zheng-he	1	2	Champa	14.000	108.000	entry	2288
+zheng-he	1	3	Malacca	2.200	102.251	entry	1456
+zheng-he	1	4	Calicut	11.248	75.780	wikidata:Kozhikode	3088
+zheng-he	1	5	Palembang	-2.983	104.764	entry	3575
+zheng-he	1	6	Nanjing	32.061	118.779	entry	4168
+zheng-he	2	1	Java	-7.312	109.418	entry	4489
+zheng-he	2	2	Calicut	11.248	75.780	wikidata:Kozhikode	4255
+zheng-he	3	1	Galle	6.033	80.216	entry	758
+zheng-he	3	2	Kotte	6.900	79.916	entry	102
+zheng-he	4	1	Hormuz	27.067	56.460	wikidata:Hormuz Island	3341
+zheng-he	4	2	Semudera	5.134	97.201	wikidata:Samudera Pasai Sultanate	4953
+zheng-he	5	1	Quanzhou	24.914	118.586	entry	3169
+zheng-he	5	2	Aden	12.800	45.033	entry	7772
+zheng-he	5	3	Mogadishu	2.039	45.342	wikidata:Mogadishu	1197
+zheng-he	5	4	Brava	1.113	44.030	wikidata:Barawa	178
+zheng-he	5	5	Malindi	-3.219	40.117	wikidata:Malindi	649
+zheng-he	6	1	Dhofar	18.000	54.000	entry	2808
+zheng-he	6	2	Aden	12.800	45.033	entry	1121
+zheng-he	7	1	Surabaya	-7.246	112.738	wikidata:Surabaya	7804
+zheng-he	7	2	Great Nicobar Island	7.000	93.833	wikidata:Great Nicobar Island	2628
+zheng-he	7	3	Calicut	11.248	75.780	wikidata:Kozhikode	2037
+zheng-he	7	4	Hormuz	27.067	56.460	wikidata:Hormuz Island	2678
+zheng-he	7	5	Mecca	21.422	39.826	entry	1798
+zheng-he	7	6	Taicang	31.452	121.104	wikidata:Taicang	7993
+zheng-he	7	7	Beijing	39.904	116.408	entry	1031

@@ -1,0 +1,206 @@
+{
+  "slug": "magellan",
+  "title": "Magellan and Elcano's Voyage Round the World",
+  "years": "1519–1522",
+  "traveller": "Ferdinand Magellan",
+  "intro": "A fleet of five ships, planned and first led by the Portuguese explorer Ferdinand Magellan for the Spanish crown, left Spain in 1519 with about 270 men. Its purpose was to secure a sea route to the Moluccas, or Spice Islands, in present-day Indonesia.",
+  "ending": "Magellan died in battle in the Philippines in April 1521. Juan Sebastián Elcano brought the Victoria back to Spain on 6 September 1522 with 18 men, the first circumnavigation of the Earth.",
+  "legs": [
+    {
+      "title": "Across the Atlantic and down South America",
+      "stops": [
+        {
+          "place": "Sanlúcar de Barrameda",
+          "entry": null,
+          "wp": "Sanlúcar de Barrameda",
+          "date": "20 September 1519",
+          "year": 1519,
+          "by": "sea",
+          "text": "The five ships left Seville and went down the Guadalquivir to Sanlúcar de Barrameda at its mouth, where they stayed more than five weeks before setting sail and leaving Spain.",
+          "quote": "On 10 August 1519, the five ships under Magellan's command left Seville and descended the Guadalquivir River to Sanlúcar de Barrameda, at the mouth of the river. There they remained more than five weeks. Finally they set sail on 20 September 1519 and left Spain."
+        },
+        {
+          "place": "Tenerife",
+          "entry": null,
+          "wp": "Tenerife",
+          "date": "26 September 1519",
+          "year": 1519,
+          "by": "sea",
+          "text": "The fleet stopped in the Canary Islands to take in supplies. Here Magellan received a secret warning that some of the Castilian captains were planning a mutiny.",
+          "quote": "On 26 September, the fleet stopped at Tenerife in the Canary Islands, where they took in supplies"
+        },
+        {
+          "place": "Rio de Janeiro",
+          "entry": "rio-de-janeiro",
+          "wp": "Rio de Janeiro",
+          "date": "13 December 1519",
+          "year": 1519,
+          "by": "sea",
+          "text": "The fleet reached the harbour, which was nominally Portuguese territory but had no permanent settlement then. Over 13 days the crew repaired the ships, took on food and water, and traded with the local people.",
+          "quote": "On 13 December, the fleet reached Rio de Janeiro."
+        },
+        {
+          "place": "Río de la Plata",
+          "entry": "rio-de-la-plata",
+          "wp": "Río de la Plata",
+          "date": "11 January 1520",
+          "year": 1520,
+          "by": "sea",
+          "text": "Magellan believed he had found the strait he sought, but it was the mouth of a river. Juan Serrano, sent to probe it, reported that it was a river, and the fleet found fresh water.",
+          "quote": "Magellan believed he had found el paso, though in fact he had reached the Río de la Plata."
+        },
+        {
+          "place": "Port St. Julian",
+          "entry": null,
+          "wp": "Puerto San Julián",
+          "date": "31 March 1520",
+          "year": 1520,
+          "by": "sea",
+          "text": "Weather had grown so bad that Magellan chose to wait out the winter in a natural harbour. A mutiny led by Juan de Cartagena and others began within a day, and the fleet stayed about five months.",
+          "quote": "On 31 March 1520, a break in the coast was spotted. There, the fleet found a natural harbour which they called Port St. Julian."
+        },
+        {
+          "place": "Santa Cruz",
+          "entry": null,
+          "wp": "Santa Cruz River (Argentina)",
+          "date": "24 August 1520",
+          "year": 1520,
+          "by": "sea",
+          "text": "After the Santiago found shelter at the Santa Cruz estuary, Magellan moved the fleet there from St. Julian around this date. They spent six weeks there before resuming the search for a strait.",
+          "quote": "After almost five months at St. Julian, the fleet left for Santa Cruz around 24 August."
+        }
+      ]
+    },
+    {
+      "title": "The strait, the Pacific and the Philippines",
+      "stops": [
+        {
+          "place": "Cape Virgenes",
+          "entry": null,
+          "wp": "Cape Virgenes",
+          "date": "21 October 1520",
+          "year": 1520,
+          "by": "sea",
+          "text": "The fleet sighted a headland at 52°S and named it Cape Virgenes. A storm drove two ships into a narrow passage beyond it, which proved to be the strait they sought.",
+          "quote": "Soon after, on 21 October 1520, they spotted a headland at 52°S latitude which they named Cape Virgenes."
+        },
+        {
+          "place": "Strait of Magellan",
+          "entry": null,
+          "wp": "Strait of Magellan",
+          "date": "28 November 1520",
+          "year": 1520,
+          "by": "sea",
+          "text": "The three remaining ships completed the passage to the Pacific, which Magellan named the Mar Pacifico. The San Antonio had turned back and sailed to Spain.",
+          "quote": "The fleet entered the Pacific from the Strait of Magellan on 28 November 1520 and initially sailed north, following the coast of Chile."
+        },
+        {
+          "place": "Guam",
+          "entry": null,
+          "wp": "Guam",
+          "date": "6 March 1521",
+          "year": 1521,
+          "by": "sea",
+          "text": "After the Pacific crossing the fleet reached the Mariana Islands and anchored at Guam. Chamorro people took goods from the ships, and Magellan's men later burned Chamorro houses and killed seven men.",
+          "quote": "On 6 March 1521, the fleet reached the Mariana Islands. The first land they spotted was likely the island of Rota, but the ships were unable to land there. Instead, they dropped anchor thirty hours later on Guam"
+        },
+        {
+          "place": "Homonhon",
+          "entry": null,
+          "wp": "Homonhon Island",
+          "date": "16 March 1521",
+          "year": 1521,
+          "by": "sea",
+          "text": "The fleet landed on an uninhabited island and traded with people from nearby Suluan. They rested and gathered food and water for nearly two weeks.",
+          "quote": "On 16 March, a week after leaving Guam, the fleet first sighted the island of Samar, then landed on the island of Homonhon, which was then uninhabited."
+        },
+        {
+          "place": "Limasawa",
+          "entry": null,
+          "wp": "Limasawa",
+          "date": "31 March 1521",
+          "year": 1521,
+          "by": "sea",
+          "text": "Magellan met Rajah Kolambu and Rajah Siawi here. On Easter Day he and fifty men attended the first Catholic Mass in the Philippines, and he claimed the archipelago for Spain.",
+          "quote": "On Sunday, 31 March, Easter Day, Magellan and fifty of his men came ashore to Limasawa to participate in the first Catholic Mass in the Philippines, given by the armada's chaplain."
+        },
+        {
+          "place": "Cebu",
+          "entry": "cebu",
+          "wp": "Cebu",
+          "date": "7 April 1521",
+          "year": 1521,
+          "by": "sea",
+          "text": "Magellan persuaded Rajah Humabon to waive the tribute usually asked of visitors. Humabon and his family were baptised on 14 April, and in total 2,200 people were converted.",
+          "quote": "They sighted Cebu on 6 April, and made landfall the next day."
+        },
+        {
+          "place": "Mactan",
+          "entry": null,
+          "wp": "Mactan",
+          "date": "April 1521",
+          "year": 1521,
+          "by": "sea",
+          "text": "Lapu-Lapu's people on Mactan resisted conversion, and Magellan decided to make them submit by force. He landed with 49 men against a far larger force and was killed in the battle.",
+          "quote": "When they continued to resist, Magellan informed his council on 26 April that he would bring an armed contingent to Mactan and make them submit under threat of force."
+        },
+        {
+          "place": "Cebu",
+          "entry": "cebu",
+          "wp": "Cebu",
+          "date": "1 May 1521",
+          "year": 1521,
+          "by": "sea",
+          "text": "Humabon invited about thirty men, mostly officers, to a feast. Armed Cebuanos entered the hall and killed twenty-seven of them, and the ships left port.",
+          "quote": "On 1 May, Humabon invited the men ashore for a great feast."
+        }
+      ]
+    },
+    {
+      "title": "The Moluccas and home",
+      "stops": [
+        {
+          "place": "Tidore",
+          "entry": null,
+          "wp": "Tidore",
+          "date": "8 November 1521",
+          "year": 1521,
+          "by": "sea",
+          "text": "The Trinidad and Victoria reached the Moluccas and were greeted by al-Mansur. A trading post was set up and the men bought large quantities of cloves.",
+          "quote": "The ships finally reached the Moluccas on 8 November, when they reached the island of Tidore."
+        },
+        {
+          "place": "Cape of Good Hope",
+          "entry": "cape-of-good-hope",
+          "wp": "Cape of Good Hope",
+          "date": "6 May 1522",
+          "year": 1522,
+          "by": "sea",
+          "text": "The Victoria, under Elcano, left Tidore on 21 December 1521 and crossed the Indian Ocean. It rounded the Cape with only rice for rations.",
+          "quote": "By 6 May 1522 the Victoria rounded the Cape of Good Hope, with only rice for rations."
+        },
+        {
+          "place": "Cape Verde",
+          "entry": null,
+          "wp": "Cape Verde",
+          "date": "9 July 1522",
+          "year": 1522,
+          "by": "sea",
+          "text": "Twenty crewmen had died of starvation when Elcano put in for provisions. The Portuguese detained 13 crew members on finding spices aboard, though the Victoria escaped.",
+          "quote": "Twenty crewmen died of starvation by 9 July 1522, when Elcano put into Portuguese Cape Verde for provisions."
+        },
+        {
+          "place": "Sanlúcar de Barrameda",
+          "entry": null,
+          "wp": "Sanlúcar de Barrameda",
+          "date": "6 September 1522",
+          "year": 1522,
+          "by": "sea",
+          "text": "Elcano and the remaining crew arrived aboard the Victoria almost exactly three years after they departed. They then sailed upriver to Seville.",
+          "quote": "On 6 September 1522, Elcano and the remaining crew of Magellan's voyage arrived in Sanlúcar de Barrameda in Spain aboard Victoria, almost exactly three years after they departed."
+        }
+      ]
+    }
+  ],
+  "notes": "Mactan: the article gives no day for the battle; the quote is the 26 April council decision and the date is 'April 1521' from the introduction. Left out: Rota, Palawan and Brunei (named only in passing, no dates or events), the Santiago's wreck (part of the Santa Cruz stage). Cape Verde: article says Portuguese Cape Verde; entry left null because places.tsv's Cape Verde is the present-day country. Cebu appears twice because the journey came back to it. Years for 26 September 1519, 11 January 1520 and similar are inferred from the surrounding narrative (the article gives day and month only)."
+}

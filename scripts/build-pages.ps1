@@ -1129,6 +1129,51 @@ if (Test-Path "$Repo\scripts\entry-houses.tsv") {
     foreach ($m in $hm) { if (-not $HOUSEOF.ContainsKey($m)) { $HOUSEOF[$m] = New-Object Collections.Generic.List[string] }; $HOUSEOF[$m].Add($hf[0]) }
   }
 }
+# family (22 Nov 2026): parents, spouses and children among the person entries (Wikidata P22, P25, P26, P40, read by
+# scripts/tools/entry-wd-family.js into scripts/entry-family.tsv): "Family" on a person's page; and the houses' family
+# trees (scripts/family-trees.tsv, drawn by scripts/tools/make-family-trees.js, run here so names and dates are the
+# entries' own) under "Rulers and members". Script-level names start with FAM / fm (names ignore case).
+$FAMPAR = @{}; $FAMKID = @{}; $FAMSP = @{}; $FAMTREE = @{}
+if (Test-Path "$Repo\scripts\entry-family.tsv") {
+  foreach ($fmL in (& $emExe "$PSScriptRoot\tools\make-family-trees.js")) { Say $fmL }
+  if ($LASTEXITCODE) { throw 'scripts/tools/make-family-trees.js failed' }
+  foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\entry-family.tsv", $U8)) {
+    if (-not $l -or $l[0] -eq '#') { continue }; $fmf = $l.Split("`t"); if ($fmf.Length -lt 3 -or -not $BY.ContainsKey($fmf[1]) -or -not $BY.ContainsKey($fmf[2])) { continue }
+    if ($fmf[0] -eq 'p') {
+      if (-not $FAMPAR.ContainsKey($fmf[2])) { $FAMPAR[$fmf[2]] = New-Object Collections.Generic.List[object] }; $FAMPAR[$fmf[2]].Add(@($fmf[1], $(if ($fmf.Length -gt 3) { $fmf[3] } else { '?' })))
+      if (-not $FAMKID.ContainsKey($fmf[1])) { $FAMKID[$fmf[1]] = New-Object Collections.Generic.List[string] }; $FAMKID[$fmf[1]].Add($fmf[2])
+    } elseif ($fmf[0] -eq 's') {
+      foreach ($fmPair in @(, @($fmf[1], $fmf[2])) + @(, @($fmf[2], $fmf[1]))) { if (-not $FAMSP.ContainsKey($fmPair[0])) { $FAMSP[$fmPair[0]] = New-Object Collections.Generic.List[string] }; $FAMSP[$fmPair[0]].Add($fmPair[1]) }
+    }
+  }
+  if (Test-Path "$Repo\scripts\family-trees.tsv") { foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\family-trees.tsv", $U8)) { if ($l -and $l[0] -ne '#') { $fmf = $l.Split("`t"); if ($fmf.Length -ge 3 -and $BY.ContainsKey($fmf[0])) { $FAMTREE[$fmf[0]] = @($fmf[1], $fmf[2]) } } } }
+}
+# Journeys on the Globe (/journeys, 22 Nov 2026): scripts/tools/make-journeys.js writes the page from scripts/journeys
+# and scripts/journey-entries.tsv (entry, journey, title): those entries link their journey. Names start with JRN / jr.
+$JRNENT = @{}
+if (Test-Path "$Repo\scripts\journeys\journeys.tsv") {
+  foreach ($jrL in (& $emExe "$PSScriptRoot\tools\make-journeys.js")) { Say $jrL }
+  if ($LASTEXITCODE) { throw 'Journeys on the Globe: scripts/tools/make-journeys.js failed (above)' }
+  foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\journey-entries.tsv", $U8)) { if ($l -and $l[0] -ne '#') { $jrf = $l.Split("`t"); if ($jrf.Length -ge 3 -and $BY.ContainsKey($jrf[0])) { if (-not $JRNENT.ContainsKey($jrf[0])) { $JRNENT[$jrf[0]] = New-Object Collections.Generic.List[object] }; $JRNENT[$jrf[0]].Add(@($jrf[1], $jrf[2])) } } }
+}
+function EntryJourney($e) {
+  $jrE = $JRNENT[$e.slug]; if (-not $jrE) { return '' }
+  $jrOut = ''; foreach ($jrX in $jrE) { $jrOut += '<p class="enc-article-foot enc-journey"><a class="enc-random-link" href="/journeys?j=' + $jrX[0] + '">On the globe, stop by stop: ' + (Hx $jrX[1]) + ' &rarr;</a></p>' }
+  return '<section class="enc-journeys">' + $jrOut + "</section>`n"
+}
+function FamYear([string]$slug) { if ($EYRS.ContainsKey($slug)) { [double]$EYRS[$slug][0] } else { 99999.0 } }
+function FamTile([string]$slug, [string]$rel) {
+  $o = $BY[$slug]
+  '<li><a href="/encyclopedia/' + $o.slug + '">' + $(if ($o.img) { '<img src="' + (ThumbOf $o.img) + '" alt="" loading="lazy" width="44" height="44">' } else { (PhSpan $o) }) + '<span><span class="nm">' + (Hx $o.name) + '</span><span class="tp">' + $rel + $(if ($o.dates) { ' &#183; ' + (Hx $o.dates) } else { '' }) + '</span></span></a></li>'
+}
+function PersonFamily($e) {
+  $fmP = $FAMPAR[$e.slug]; $fmK = $FAMKID[$e.slug]; $fmS = $FAMSP[$e.slug]; if (-not $fmP -and -not $fmK -and -not $fmS) { return '' }
+  $fmOut = New-Object Text.StringBuilder
+  if ($fmP) { foreach ($fmKind in @('f', 'm', '?')) { foreach ($fmX in $fmP) { if ($fmX[1] -eq $fmKind) { [void]$fmOut.Append((FamTile $fmX[0] $(if ($fmKind -eq 'f') { 'Father' } elseif ($fmKind -eq 'm') { 'Mother' } else { 'Parent' }))) } } } }
+  if ($fmS) { foreach ($fmX in @($fmS | Sort-Object @{ e = { FamYear $_ } }, @{ e = { $_ } })) { [void]$fmOut.Append((FamTile $fmX 'Married')) } }
+  if ($fmK) { foreach ($fmX in @($fmK | Sort-Object @{ e = { FamYear $_ } }, @{ e = { $_ } })) { [void]$fmOut.Append((FamTile $fmX 'Child')) } }
+  return '<section class="enc-family"><h2 class="enc-section-title">Family</h2><ul class="enc-seealso enc-fam">' + $fmOut.ToString() + '</ul><p class="ft-note">Parents, spouses and children as Wikidata records them, among the people of the encyclopedia: not the whole family.</p>' + "</section>`n"
+}
 # an entry's own point (Wikidata P625 of the same item; a battle's field, a town, a state's seat): "On the map"
 $ECOORD = @{}
 if (Test-Path "$Repo\scripts\entry-coords.tsv") { foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\entry-coords.tsv", $U8)) { if ($l -and $l[0] -ne '#') { $cf = $l.Split("`t"); $ECOORD[$cf[0]] = @([double]::Parse($cf[1], $INV), [double]::Parse($cf[2], $INV)) } } }
@@ -1318,10 +1363,11 @@ foreach ($e in $ENT) {
   if ($eQuotes) { [void]$body.Append('<section class="enc-quotes"><h2 class="enc-section-title">Across the Institute</h2><ul>' + $eQuotes + "</ul></section>`n") }
   if ($HOUSE.ContainsKey($e.slug)) {   # the house's people, on one scale of years
     $hRows = @($HOUSE[$e.slug] | ForEach-Object { [pscustomobject]@{ e = $BY[$_]; sp = $EYRS[$_]; k = (SpanKind $BY[$_].dates) } })
-    [void]$body.Append('<section class="enc-house"><h2 class="enc-section-title">Rulers and members</h2>' + (LifeChart $hRows ($hRows.Count.ToString() + ' people of the encyclopedia whose Wikidata record names this house as their family. Bright bars are lifespans; pale bars reigns or years of activity.')) + '<p class="enc-article-foot"><a class="enc-random-link" href="/encyclopedia/dynasties">All ruling houses &rarr;</a></p>' + "</section>`n")
+    [void]$body.Append('<section class="enc-house"><h2 class="enc-section-title">Rulers and members</h2>' + (LifeChart $hRows ($hRows.Count.ToString() + ' people of the encyclopedia whose Wikidata record names this house as their family. Bright bars are lifespans; pale bars reigns or years of activity.')) + $(if ($FAMTREE.ContainsKey($e.slug)) { '<h3 class="ft-h" id="family-tree">Family tree</h3><div class="ft-wrap" tabindex="0">' + $FAMTREE[$e.slug][1] + '</div><p class="ft-note">' + $FAMTREE[$e.slug][0] + ' people joined by the parents, spouses and children their Wikidata records name, the generations from left to right. A gold frame marks a member of the house; a short bar joins a husband or wife. It shows the people the encyclopedia holds, not the whole family.</p>' } else { '' }) + '<p class="enc-article-foot"><a class="enc-random-link" href="/encyclopedia/dynasties">All ruling houses &rarr;</a></p>' + "</section>`n")
   }
   [void]$body.Append((EntryLocator $e))
-  if ($e.type -eq 'person') { [void]$body.Append((PersonPlaces $e)) }
+  if ($e.type -eq 'person') { [void]$body.Append((PersonPlaces $e)); [void]$body.Append((PersonFamily $e)) }
+  [void]$body.Append((EntryJourney $e))
   [void]$body.Append((EntryQuotes $e))
   $thin = ((WordsIn $e.desc) + $(if ($eQuotes) { WordsIn ([regex]::Replace($eQuotes, '<a [^>]*>.*?</a>', ' ')) } else { 0 })) -lt $THINW
   if ($thin) { $nThin++ }
@@ -4835,6 +4881,7 @@ $HANDP = @(@('World Atlas', '/atlas', 'atlas|map|maps|world map|globe|historical
   @('Support the Institute', '/support', 'support|support the institute|donate|donation|ko-fi|friends of the institute|help the institute'),
   @('Privacy', '/privacy', 'privacy|cookies|cookie settings|data|gdpr|analytics'),
   @('Terms and Licences', '/terms', 'terms|licence|license|licences|copyright|reuse|cc by-sa|attribution'),
+  @('Journeys on the Globe', '/journeys', 'journeys|voyages|travels|routes|expeditions|ibn battuta travels|marco polo route|magellan voyage|zheng he voyages|silk road journey|hijra route|voyage of the beagle|lewis and clark route|long march route'),
   @('Faiths Side by Side', '/religions', 'religions compared|compare religions|world religions|faiths side by side|founders of religions|scriptures|holy books|sacred texts'),
   @('How the Institute Works', '/method', 'method|methodology|sources|editorial policy|how we work|fact checking|reliability|ai'),
   @('Corrections', '/corrections', 'corrections|errata|mistakes|errors|fact check'),
@@ -5088,7 +5135,7 @@ foreach ($tdL in (& $songExe "$PSScriptRoot\tools\make-today.js")) { Say $tdL }
 if ($LASTEXITCODE) { throw 'Today: scripts/tools/make-today.js failed (above)' }
 
 # sitemaps: hand-written pages and profiles too (lastmod from their content)
-foreach ($p in @('/', '/discover', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/write', '/faiths', '/flashcards', '/race', '/inventions', '/governance', '/compare', '/religions', '/privacy', '/terms', '/method', '/corrections', '/support', '/advent', '/now', '/encyclopedia/', '/state/', '/today-in-history/')) {
+foreach ($p in @('/', '/discover', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/write', '/faiths', '/flashcards', '/race', '/inventions', '/governance', '/compare', '/religions', '/journeys', '/privacy', '/terms', '/method', '/corrections', '/support', '/advent', '/now', '/encyclopedia/', '/state/', '/today-in-history/')) {
   $file = if ($p -eq '/') { "$Repo\index" } elseif ($p.EndsWith('/')) { Join-Path $Repo ($p.Trim('/') + '\index') } else { Join-Path $Repo $p.TrimStart('/') }
   [void](Stamp $p ([IO.File]::ReadAllText($file, $U8)))
 }

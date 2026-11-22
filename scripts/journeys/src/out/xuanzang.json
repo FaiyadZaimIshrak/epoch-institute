@@ -1,0 +1,256 @@
+{
+  "slug": "xuanzang",
+  "title": "Xuanzang's Journey to India and Back",
+  "years": "629–645",
+  "traveller": "Xuanzang",
+  "intro": "Xuanzang was a 7th-century Chinese Buddhist monk who sought original Sanskrit texts from India. Starting from Chang'an, he began a seventeen-year overland journey to India, defying his nation's ban on travel abroad.",
+  "ending": "He arrived back in Chang'an in 645, 16 years after he left Chinese territory, and a great procession celebrated his return. His biography says he brought over six hundred Mahayana and Hinayana texts, seven statues of the Buddha and more than a hundred sarira relics.",
+  "legs": [
+    {
+      "title": "Across Central Asia",
+      "stops": [
+        {
+          "place": "Chang'an",
+          "entry": "changan",
+          "wp": "Chang'an",
+          "date": "627 or 629",
+          "year": 629,
+          "by": "land",
+          "text": "At Chang'an, then under the rule of Emperor Taizong of Tang, Xuanzang developed the desire to visit India. Sources differ on whether he set out in 627 or 629, and most state 629.",
+          "quote": "At length, he came to Chang'an, then under the peaceful rule of Emperor Taizong of Tang, where Xuanzang developed the desire to visit India."
+        },
+        {
+          "place": "Agni (Turfan)",
+          "entry": "turfan",
+          "wp": "Turpan",
+          "date": "630",
+          "year": 630,
+          "by": "land",
+          "text": "He arrived in the kingdom of Agni, where the Buddhist king and others tried to persuade him to give up his journey and teach them. He declined, and they equipped him with letters of introduction and funds.",
+          "quote": "In 630 CE, he arrived in the kingdom of Agni (Yanqi, in a place called Turpan)."
+        },
+        {
+          "place": "Kucha",
+          "entry": null,
+          "wp": "Kucha",
+          "date": "c. 630",
+          "year": 630,
+          "by": "land",
+          "text": "After a meeting with Turkic robbers who fought over their loot and dispersed, he reached Kuchi, which he reported had over one hundred monasteries and five thousand monks.",
+          "quote": "Xuanzang thereafter reached the country of Kuchi."
+        },
+        {
+          "place": "Tokmak",
+          "entry": null,
+          "wp": "Tokmok",
+          "date": "c. 630",
+          "year": 630,
+          "by": "land",
+          "text": "He passed Aksu, crossed the Tian Shan and went on to Tokmak, where he met the great Khagan of the Göktürks and attended a feast.",
+          "quote": "Further west he passed Aksu before turning northwest to cross the Tian Shan and then further to Tokmak. He met the great Khagan of the Göktürks."
+        },
+        {
+          "place": "Tashkent",
+          "entry": "tashkent",
+          "wp": "Tashkent",
+          "date": "c. 630",
+          "year": 630,
+          "by": "land",
+          "text": "He continued west and then southwest to Tashkent, where he described monasteries with Buddha's footprints and statues.",
+          "quote": "Xuanzang continued west then southwest to Tashkent, capital of modern Uzbekistan."
+        },
+        {
+          "place": "Bactra",
+          "entry": "balkh",
+          "wp": "Balkh",
+          "date": "c. 630",
+          "year": 630,
+          "by": "land",
+          "text": "He crossed a desert, icy valleys and the Pamir range, and came to Bactra, modern Balkh. He described a monastery there with a jewelled Buddha statue and a tooth relic of the Buddha.",
+          "quote": "he crosses into country of Bactra (modern Balkh)"
+        },
+        {
+          "place": "Bamiyana",
+          "entry": null,
+          "wp": "Bamyan",
+          "date": "c. 630",
+          "year": 630,
+          "by": "land",
+          "text": "South of Bactra he crossed the Great Snow Mountains to Bamiyana, where his travelogue describes a colossal standing Buddha carved from rock, some one hundred and forty feet tall.",
+          "quote": "Crossing this pass, thereafter is the country of Bamiyana (a part of modern Afghanistan)."
+        }
+      ]
+    },
+    {
+      "title": "Through India",
+      "stops": [
+        {
+          "place": "Taxila",
+          "entry": "taxila",
+          "wp": "Taxila",
+          "date": null,
+          "year": null,
+          "by": "land",
+          "text": "He arrived in Taxila after crossing a river said to hold poisonous dragons and evil animals, and visited a major monastery of the Sautrantika school.",
+          "quote": "Xuanzang arrived in Taxila, after crossing a river with \"poisonous dragons and evil animals\"."
+        },
+        {
+          "place": "Kashmira",
+          "entry": "kashmir",
+          "wp": "Kashmir Valley",
+          "date": null,
+          "year": null,
+          "by": "land",
+          "text": "In Kashmira he was received by the king and by monks of the Jayendra monastery. He recorded over 100 monasteries and more than 5000 monks.",
+          "quote": "He was received by the king, and numerous monks from the Jayendra monastery."
+        },
+        {
+          "place": "Kushinagara",
+          "entry": "kushinagar",
+          "wp": "Kushinagar",
+          "date": null,
+          "year": null,
+          "by": "land",
+          "text": "He came to Kushinagara, where he found the towns and villages deserted and in a dilapidated condition, and described a large brick temple with a reclining Buddha.",
+          "quote": "Past this forest is the country of Kushinagara, where towns and villages are deserted and in a dilapidated condition."
+        },
+        {
+          "place": "Baranasi",
+          "entry": "varanasi",
+          "wp": "Varanasi",
+          "date": null,
+          "year": null,
+          "by": "land",
+          "text": "At Baranasi he described a densely populated city whose people were enormously wealthy. He found few Buddhists there and over one hundred deva temples, most dedicated to Shiva.",
+          "quote": "He starts with Baranasi, stating the country has Ganges river to its west."
+        },
+        {
+          "place": "Bodh Gaya",
+          "entry": "bodh-gaya",
+          "wp": "Bodh Gaya",
+          "date": null,
+          "year": null,
+          "by": "land",
+          "text": "He visited Gaya and the Bodhi tree, and described the Mahabodhi monastery nearby with its many buildings and its decorative paintings.",
+          "quote": "He visits Gaya and the Bodhi tree."
+        },
+        {
+          "place": "Nalanda",
+          "entry": "nalanda",
+          "wp": "Nalanda",
+          "date": null,
+          "year": null,
+          "by": "land",
+          "text": "At Nalanda he lived among several thousand monks and studied logic, grammar, Sanskrit and the Yogacara school of Buddhism with his teacher Silabhadra.",
+          "quote": "At Nalanda, he was in the company of several thousand monks."
+        },
+        {
+          "place": "Amaravati",
+          "entry": null,
+          "wp": "Amaravati Stupa",
+          "date": null,
+          "year": null,
+          "by": "land",
+          "text": "Turning south, he stayed at Amaravati and studied the Abhidhammapitakam texts. He observed many viharas there, some of them deserted.",
+          "quote": "He stayed at Amaravati and studied the Abhidhammapitakam texts."
+        },
+        {
+          "place": "Kanchi",
+          "entry": "kanchipuram",
+          "wp": "Kanchipuram",
+          "date": null,
+          "year": null,
+          "by": "land",
+          "text": "He went on to Kanchi, the capital of the Pallavas, and said that it was a strong centre of Buddhism.",
+          "quote": "He later proceeded to Kanchi, the capital of the Pallavas and has visited the Vaikunta Perumal Temple and also said that Kanchi was a strong center of Buddhism."
+        },
+        {
+          "place": "Nalanda",
+          "entry": "nalanda",
+          "wp": "Nalanda",
+          "date": null,
+          "year": null,
+          "by": "land",
+          "text": "After travelling on through Nasik, Ajanta and Malwa, he returned to Nalanda.",
+          "quote": "He continued travelling to Nasik, Ajanta, Malwa; from there he went to Mulasthana and Pravata before returning to Nalanda again."
+        }
+      ]
+    },
+    {
+      "title": "Home to Chang'an",
+      "stops": [
+        {
+          "place": "Kanyakubja",
+          "entry": "kannauj",
+          "wp": "Kannauj",
+          "date": null,
+          "year": null,
+          "by": "land",
+          "text": "At the request of Emperor Harshavardhana he attended a great Buddhist assembly at Kanyakubja, which monarchs, monks, Hindus and Jains also attended.",
+          "quote": "Xuanzang was welcomed to Kanyakubja at the request of the Emperor Harshavardhana"
+        },
+        {
+          "place": "Prayag",
+          "entry": "prayagraj",
+          "wp": "Prayagraj",
+          "date": null,
+          "year": null,
+          "by": "land",
+          "text": "Emperor Harsha invited him to the Kumbha Mela at Prayag, where he saw the Emperor's distribution of gifts to the poor.",
+          "quote": "Emperor Harsha invited Xuanzang to Kumbha Mela in Prayag where he witnessed the Emperor's generous distribution of gifts to the poor."
+        },
+        {
+          "place": "Kanyakubja",
+          "entry": "kannauj",
+          "wp": "Kannauj",
+          "date": null,
+          "year": null,
+          "by": "land",
+          "text": "He returned to Kanyakubja, where Emperor Harsha gave him a grand farewell, and set out for China through the Khyber Pass.",
+          "quote": "After visiting Prayag, he returned to the imperial capital of Kanyakubja where he was given a grand farewell by Emperor Harsha."
+        },
+        {
+          "place": "Kashgar",
+          "entry": "kashgar",
+          "wp": "Kashgar",
+          "date": null,
+          "year": null,
+          "by": "land",
+          "text": "On the way back to China Xuanzang travelled through the Khyber Pass and passed through Kashgar.",
+          "quote": "Xuanzang passed through Kashgar, Khotan, and Dunhuang on his way back to China."
+        },
+        {
+          "place": "Khotan",
+          "entry": null,
+          "wp": "Hotan",
+          "date": null,
+          "year": null,
+          "by": "land",
+          "text": "Xuanzang passed through Khotan on the same homeward route to China, after Kashgar.",
+          "quote": "Xuanzang passed through Kashgar, Khotan, and Dunhuang on his way back to China."
+        },
+        {
+          "place": "Dunhuang",
+          "entry": "dunhuang",
+          "wp": "Dunhuang",
+          "date": null,
+          "year": null,
+          "by": "land",
+          "text": "Xuanzang passed through Dunhuang on his way back to China, before he arrived at the capital, Chang'an.",
+          "quote": "Xuanzang passed through Kashgar, Khotan, and Dunhuang on his way back to China."
+        },
+        {
+          "place": "Chang'an",
+          "entry": "changan",
+          "wp": "Chang'an",
+          "date": "7th day of the first month of 645",
+          "year": 645,
+          "by": "land",
+          "text": "He arrived in the capital, Chang'an, 16 years after he left Chinese territory, and a great procession celebrated his return.",
+          "quote": "He arrived in the capital, Chang'an, on the seventh day of the first month of 645, 16 years after he left Chinese territory, and a great procession celebrated his return."
+        }
+      ]
+    }
+  ],
+  "notes": "Most India stops have date null and year null: the article gives no dates for them (only 630 for Agni and 645 for the return). Central Asian stops after Agni carry 'c. 630' only as a rough place in the sequence; the article does not date them. The Bactra and Kanyakubja quotes are parts of longer sentences. The article describes some places (Prayaga, Kanyakubja outward) as countries rather than clear visits; I kept stops where it says he arrived, visited, was welcomed or returned. The start date is disputed (627 or 629). Left out: Samarkand and Bukhara (named only among countries he crossed), Laghman, Pushkalavati, Udayana, Mathura, Shravasti, Kapilavastu, Vaishali, Nepal, Pundravardhana, Kamarupa."
+}

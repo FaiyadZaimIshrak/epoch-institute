@@ -1,0 +1,186 @@
+{
+ "slug": "marco-polo",
+ "title": "Marco Polo's Journey to China and Back",
+ "years": "1271–1295",
+ "traveller": "Marco Polo",
+ "intro": "Marco Polo, a Venetian merchant, set off in 1271 at the age of seventeen with his father Niccolò and his uncle Maffeo to fulfil a request from Kublai Khan. He lived in the emperor's lands for 17 years before the family returned to Venice.",
+ "ending": "The Polos reached Venice in 1295 after 24 years, with many riches and treasures. Marco dictated his account to Rustichello da Pisa while a prisoner of Genoa, and scholars still debate parts of it, though studies by Morgan, Haw and Vogel largely hold that he did go to China.",
+ "legs": [
+  {
+   "title": "From Venice to Kublai Khan's court",
+   "stops": [
+    {
+     "place": "Venice",
+     "entry": "venice",
+     "wp": "Venice",
+     "date": "1271",
+     "year": 1271,
+     "by": "sea",
+     "text": "Marco, aged seventeen, set off with his father and uncle for Asia. His father and uncle had already visited Kublai Khan and returned to Venice in 1269, meeting Marco for the first time.",
+     "quote": "In 1271, during the rule of Doge Lorenzo Tiepolo, Marco Polo (at seventeen years of age), his father, and his uncle set off for Asia on the series of adventures that Marco later documented in his book.",
+     "ll": [
+      45.44,
+      12.332
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Acre",
+     "entry": null,
+     "wp": "Acre, Israel",
+     "date": "1271",
+     "year": 1271,
+     "by": "sea",
+     "text": "They stayed for a few months and spoke with Archdeacon Tedaldo Visconti. When he was elected Pope, he entrusted them with letters for the Great Khan and sent two Dominican fathers with them as legates.",
+     "quote": "During the first stages of the journey, they stayed for a few months in Acre and were able to speak with Archdeacon Tedaldo Visconti of Piacenza.",
+     "ll": [
+      32.926,
+      35.084
+     ],
+     "psrc": "wikidata:Acre, Israel"
+    },
+    {
+     "place": "Hormuz",
+     "entry": null,
+     "wp": "Hormuz Island",
+     "date": "1271",
+     "year": 1271,
+     "by": "land",
+     "text": "They rode camels to the Persian port, wanting to sail into China. The ships there were not seaworthy, so they continued overland along the Silk Road. A caravan they joined was attacked by bandits.",
+     "quote": "In 1271, Niccolò, Maffeo, and Marco Polo embarked on their voyage to fulfil Kublai's request. They sailed to Acre, and then rode on camels to the Persian port of Hormuz. The Polos wanted to sail straight into China, but the ships there were not seaworthy, so they continued overland through the Silk Road",
+     "ll": [
+      27.067,
+      56.46
+     ],
+     "psrc": "wikidata:Hormuz Island"
+    },
+    {
+     "place": "Shangdu",
+     "entry": "shangdu",
+     "wp": "Shangdu",
+     "date": "between 1271 and 1275",
+     "year": 1274,
+     "by": "land",
+     "text": "The Polos were welcomed by Kublai into his palace, and Marco, about 21, was appointed an emissary. Some scholars have doubted that he reached China at all, but most now accept that he did.",
+     "quote": "They continued overland until they arrived at Kublai Khan's palace in Shangdu, China, then known as Cathay. By this time, Marco was 21 years old.",
+     "ll": [
+      42.358,
+      116.185
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Yangzhou",
+     "entry": "yangzhou",
+     "wp": "Yangzhou",
+     "date": "before 1284",
+     "year": 1284,
+     "by": "land",
+     "text": "The book says Marco ruled the city for three years, but David Morgan notes that no Chinese source mentions him. The earliest manuscripts differ on his role, and Paul Pelliot thought he may have served in the salt monopoly.",
+     "quote": "Xiangwei was transferred to Yangzhou in 1282–1283. Marco Polo reports that he was moved to Hangzhou the following year, in 1284.",
+     "ll": [
+      32.391,
+      119.436
+     ],
+     "psrc": "entry"
+    }
+   ]
+  },
+  {
+   "title": "The way home, 1292–1295",
+   "stops": [
+    {
+     "place": "Zaitun",
+     "entry": "quanzhou",
+     "wp": "Quanzhou",
+     "date": "1292",
+     "year": 1292,
+     "by": "land",
+     "text": "Kublai let the Polos go with a wedding party escorting a princess to Persia. The party left from Zaitun in southern China on a fleet of 14 junks.",
+     "quote": "In 1292, Kublai's great-nephew, then ruler of Persia, sent representatives to China in search of a potential wife, and they asked the Polos to accompany them, so they were permitted to return to Persia with the wedding party – which left that same year from Zaitun in southern China on a fleet of 14 junks.",
+     "ll": [
+      24.914,
+      118.586
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Sumatra",
+     "entry": "sumatra",
+     "wp": "Sumatra",
+     "date": "after 1292",
+     "year": 1292,
+     "by": "sea",
+     "text": "The fleet sailed to the port of Singapore and north to Sumatra, then around the southern tip of India and across the Arabian Sea. The voyage was perilous.",
+     "quote": "The party sailed to the port of Singapore, travelled north to Sumatra, and around the southern tip of India, eventually crossing the Arabian Sea to Hormuz.",
+     "ll": [
+      -0.299,
+      101.271
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Hormuz",
+     "entry": null,
+     "wp": "Hormuz Island",
+     "date": "c. 1293",
+     "year": 1293,
+     "by": "sea",
+     "text": "Of the six hundred people in the convoy, not counting the crew, only eighteen had survived, including all three Polos. They left the wedding party here and went overland towards the Black Sea.",
+     "quote": "The two-year voyage was perilous – of the six hundred people (not including the crew) in the convoy, only eighteen had survived (including all three Polos). The Polos left the wedding party after reaching Hormuz and travelled overland to the port of Trebizond on the Black Sea, the present-day Trabzon.",
+     "ll": [
+      27.067,
+      56.46
+     ],
+     "psrc": "wikidata:Hormuz Island"
+    },
+    {
+     "place": "Trebizond",
+     "entry": "trabzon",
+     "wp": "Trabzon",
+     "date": null,
+     "year": null,
+     "by": "land",
+     "text": "From Hormuz the Polos travelled overland to the port of Trebizond on the Black Sea, now Trabzon.",
+     "quote": "The Polos left the wedding party after reaching Hormuz and travelled overland to the port of Trebizond on the Black Sea, the present-day Trabzon.",
+     "ll": [
+      41.005,
+      39.722
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Constantinople",
+     "entry": "constantinople",
+     "wp": "Istanbul",
+     "date": "after 1293",
+     "year": 1293,
+     "by": "land",
+     "text": "In Persia they had learned that Arghun Khan had died, and Kököchin became a wife of his son Ghazan. After leaving the princess, the Polos travelled overland to Constantinople.",
+     "quote": "When the Polos arrived to Persia, they learned that Arghun Khan died, and Kököchin eventually became a wife of his son Ghazan. After leaving the princess, the Polos travelled overland to Constantinople.",
+     "ll": [
+      41.012,
+      28.976
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Venice",
+     "entry": "venice",
+     "wp": "Venice",
+     "date": "1295",
+     "year": 1295,
+     "by": "land",
+     "text": "They returned to Venice after 24 years with many riches and treasures, having travelled almost 15,000 miles. Venice was at war with Genoa, and Marco was later captured by the Genoese.",
+     "quote": "They returned to Venice in 1295, after 24 years, with many riches and treasures. They had travelled almost 15,000 miles (24,000 km).",
+     "ll": [
+      45.44,
+      12.332
+     ],
+     "psrc": "entry"
+    }
+   ]
+  }
+ ],
+ "notes": "11 stops. The article's own dates conflict: it says the Polos left China around 1291 to take Kököchin to Arghun Khan, and also that Kublai's great-nephew (the ruler of Persia) sent for a wife in 1292; I used 1292 (the Narrative section). Dates not given and set from sequence: Shangdu 1274 (three and a half years after 1271; the article says the exact date is unknown, 1271-1275), Yangzhou 1284 (the article says only that Marco says he moved to Hangzhou in 1284), Trebizond and Constantinople 1293 (Persia c. 1293, no later date stated). The article gives no mode of travel for the last leg to Venice (set to 'land', unsure) and the Trebizond text rests on the Narrative section's sentence while the quote is from the Early life section. Wikipedia titles: Hormuz is given as 'Hormuz Island' (the article names only a Persian port; the old port may be on the mainland); Zaitun is Quanzhou by the Ibn Battuta article's statement that Muslims called Quanzhou 'Zaitun', not by the Marco Polo article itself. Left out: the 1271 Pamir crossing (the article's commemoration section dates it to 1271, which conflicts with the arrival at Shangdu three and a half years after departure), Hangzhou, Khanbaliq (named only in the doubts), Xiangyang (the article says the Polos' presence is impossible), Genoese captivity (not a stage). Doubts: whether Marco reached China (Frances Wood, Herbert Franke, John Haeger against; Morgan, Haw, Vogel, de Rachewiltz, Jackson for), whether he governed Yangzhou."
+}

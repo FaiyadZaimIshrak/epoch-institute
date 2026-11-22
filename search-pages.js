@@ -26,6 +26,7 @@ var SEARCH_PAGES = [
 ["Support the Institute","/support","page","support|support the institute|donate|donation|ko-fi|friends of the institute|help the institute"],
 ["Privacy","/privacy","page","privacy|cookies|cookie settings|data|gdpr|analytics"],
 ["Terms and Licences","/terms","page","terms|licence|license|licences|copyright|reuse|cc by-sa|attribution"],
+["Journeys on the Globe","/journeys","page","journeys|voyages|travels|routes|expeditions|ibn battuta travels|marco polo route|magellan voyage|zheng he voyages|silk road journey|hijra route|voyage of the beagle|lewis and clark route|long march route"],
 ["Faiths Side by Side","/religions","page","religions compared|compare religions|world religions|faiths side by side|founders of religions|scriptures|holy books|sacred texts"],
 ["How the Institute Works","/method","page","method|methodology|sources|editorial policy|how we work|fact checking|reliability|ai"],
 ["Corrections","/corrections","page","corrections|errata|mistakes|errors|fact check"],

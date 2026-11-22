@@ -1,0 +1,56 @@
+{
+  "slug": "hijra",
+  "title": "The Hijrah: From Mecca to Medina",
+  "years": "622",
+  "traveller": "Muhammad and his followers",
+  "intro": "The Hijrah was the journey that the Islamic prophet Muhammad and his followers made from Mecca to Medina. Its date equates to 16 July 622 in the Julian calendar, and the year became the epoch of the Hijri calendars.",
+  "ending": "The Meccans seized the wealth and belongings the migrants left behind, and Muhammad's followers suffered from poverty in Medina. In 638 the caliph Umar designated the year of the Hijrah as the first year of the Islamic calendar.",
+  "legs": [
+    {
+      "title": "From the pledges to Medina",
+      "stops": [
+        {
+          "place": "al-'Aqabah",
+          "entry": null,
+          "wp": "Mina, Saudi Arabia",
+          "date": "Pilgrimage season of 622",
+          "year": 622,
+          "by": "land",
+          "text": "Muhammad met 75 Medinan converts, including two women, at al-Aqabah, and they took the second pledge there, also known as the pledge of war. Twelve delegates were chosen to oversee the pact.",
+          "quote": "In the pilgrimage season of 622, Muhammad had another meeting in al-Aqabah with the Medinan converts; this time, there were 75 of them, including 2 women."
+        },
+        {
+          "place": "Mecca",
+          "entry": "mecca",
+          "wp": "Mecca",
+          "date": "May 622",
+          "year": 622,
+          "by": "land",
+          "text": "After instructing his Meccan followers to relocate to Medina, Muhammad stayed behind to watch over them. In May 622 he then left his home secretly with Abu Bakr.",
+          "quote": "In May 622, after having convened twice with members of the Medinan tribes of Aws and Khazraj at al-'Aqabah near Mina, Muhammad secretly left his home in Mecca to emigrate to their city, along with his friend, father-in-law and companion Abu Bakr."
+        },
+        {
+          "place": "Mount Thawr",
+          "entry": null,
+          "wp": "Mount Thawr",
+          "date": "622",
+          "year": 622,
+          "by": "land",
+          "text": "Islamic tradition relates that Muhammad and Abu Bakr hid in a cave on Mount Thawr, about an hour's walk south of Mecca. After three days they set out for Medina on camels, with a guide, Abdallah ibn Arqat.",
+          "quote": "Muhammad then went with Abu Bakr to a cave in Mount Thawr, about an hour's walk south of Mecca, and hid there."
+        },
+        {
+          "place": "Medina",
+          "entry": "medina",
+          "wp": "Medina",
+          "date": "622",
+          "year": 622,
+          "by": "land",
+          "text": "Medina, an oasis more than 260 miles (420 km) north of Mecca, was the destination. Its Arab tribes, the Aws and Khazraj, had fought each other for nearly a hundred years before 620.",
+          "quote": "Located more than 260 miles (420 km) north of Mecca, Medina is a verdant oasis."
+        }
+      ]
+    }
+  ],
+  "notes": "The article gives no day or date of arrival in Medina or of the hiding in the cave, so those dates are the year only. The al-'Aqabah stop is the earlier pledge meeting that led to the migration, placed first; it is not on the route itself. The article says only 'near Mina' and 'just north of Mecca' for al-'Aqabah, so wp points to Mina (editor to check; entry null). Mount Thawr has no entry in places.tsv. The article says the date of the Hijrah equates to 16 July 622 while Muhammad left Mecca in May 622; it does not reconcile them. Muhammad's appearance is not described."
+}

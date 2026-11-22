@@ -1,0 +1,121 @@
+{
+ "slug": "mansa-musa",
+ "title": "Mansa Musa's Pilgrimage to Mecca",
+ "years": "1324–1325",
+ "traveller": "Mansa Musa of Mali",
+ "intro": "Mansa Musa, ruler of the Mali Empire, made the hajj to Mecca between 1324 and 1325, travelling with a very large entourage and a great supply of gold. He left his son Muhammad to rule in his absence.",
+ "ending": "Musa returned towards Mali with scholars such as the Andalusi poet Abu Ishaq al-Sahili, after going into debt on the way back. According to the Tarikh al-Sudan, Gao and Timbuktu submitted to his rule as he passed through.",
+ "legs": [
+  {
+   "title": "The pilgrimage and the return",
+   "stops": [
+    {
+     "place": "Pyramids of Giza",
+     "entry": null,
+     "wp": "Giza pyramid complex",
+     "date": "July 1324",
+     "year": 1324,
+     "by": "land",
+     "text": "Musa and his entourage arrived at the outskirts of Cairo in July 1324 and camped for three days by the Pyramids of Giza.",
+     "quote": "They camped for three days by the Pyramids of Giza before crossing the Nile into Cairo on 19 July.",
+     "ll": [
+      29.976,
+      31.133
+     ],
+     "psrc": "wikidata:Giza pyramid complex"
+    },
+    {
+     "place": "Cairo",
+     "entry": null,
+     "wp": "Cairo",
+     "date": "19 July 1324",
+     "year": 1324,
+     "by": "land",
+     "text": "Musa crossed the Nile into Cairo on 19 July and met the Mamluk sultan al-Nasir Muhammad. He stayed in the Qarafa district for three months and left on 18 October with the official caravan to Mecca.",
+     "quote": "Musa stayed in Cairo for three months, departing on 18 October with the official caravan to Mecca.",
+     "ll": [
+      30.044,
+      31.236
+     ],
+     "psrc": "wikidata:Cairo"
+    },
+    {
+     "place": "Medina",
+     "entry": "medina",
+     "wp": "Medina",
+     "date": "1324",
+     "year": 1324,
+     "by": "land",
+     "text": "Musa gave gifts to fellow pilgrims and the people of Medina as he travelled on towards Mecca.",
+     "quote": "Musa's generosity continued as he traveled onward to Mecca, and he gave gifts to fellow pilgrims and the people of Medina and Mecca.",
+     "ll": [
+      24.47,
+      39.61
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Mecca",
+     "entry": "mecca",
+     "wp": "Mecca",
+     "date": "1324–1325",
+     "year": 1325,
+     "by": "land",
+     "text": "In Mecca a conflict broke out between Malian pilgrims and Turkic pilgrims in the Masjid al-Haram. Swords were drawn, but Musa persuaded his men to back down.",
+     "quote": "While in Mecca, conflict broke out between a group of Malian pilgrims and a group of Turkic pilgrims in the Masjid al-Haram.",
+     "ll": [
+      21.422,
+      39.826
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Suez",
+     "entry": null,
+     "wp": "Suez",
+     "date": "1325",
+     "year": 1325,
+     "by": "land",
+     "text": "Musa's party returned separately from the main caravan. By the time they reached Suez, many Malian pilgrims had died of cold, starvation or bandit raids, and much of their supplies was lost.",
+     "quote": "By the time they reached Suez, many of the Malian pilgrims had died of cold, starvation, or bandit raids, and they had lost much of their supplies.",
+     "ll": [
+      29.967,
+      32.533
+     ],
+     "psrc": "wikidata:Suez"
+    },
+    {
+     "place": "Gao",
+     "entry": "gao",
+     "wp": "Gao",
+     "date": "1325",
+     "year": 1325,
+     "by": "land",
+     "text": "According to the Tarikh al-Sudan, Gao submitted to Musa's rule as he travelled through on his return. This is doubted: Ibn Khaldun credits Musa's general Saghmanja with the conquest, and another account places it under Mansa Sakura.",
+     "quote": "According to the Tarikh al-Sudan, the cities of Gao and Timbuktu submitted to Musa's rule as he traveled through on his return to Mali.",
+     "ll": [
+      16.267,
+      -0.05
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Timbuktu",
+     "entry": "timbuktu",
+     "wp": "Timbuktu",
+     "date": "1325",
+     "year": 1325,
+     "by": "land",
+     "text": "The Tarikh al-Sudan says Timbuktu also submitted to Musa on his return, but it is unlikely that a group of pilgrims, even armed, could have conquered a wealthy and powerful city.",
+     "quote": "It is unlikely, however, that a group of pilgrims, even if armed, would have been able to conquer a wealthy and powerful city.",
+     "ll": [
+      16.773,
+      -3.007
+     ],
+     "psrc": "entry"
+    }
+   ]
+  }
+ ],
+ "notes": "The article names no starting city in Mali, so there is no departure stop, and it does not name the route between Mali and Cairo. It gives July 1324 for Giza, 19 July for Cairo and 18 October for leaving Cairo; Medina, Mecca, Suez, Gao and Timbuktu have no date, so their years are the pilgrimage's span, not the article's date for the stop. The return is said to be 'to Cairo' but no second Cairo visit is described, so none is a stop. The Gao and Timbuktu submission is doubted in the article. The poet al-Sahili is met 'on his return journey' with no place named. Cairo has no entry in places.tsv."
+}

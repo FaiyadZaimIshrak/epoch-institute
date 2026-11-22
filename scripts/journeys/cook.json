@@ -1,0 +1,316 @@
+{
+ "slug": "cook",
+ "title": "James Cook's First Voyage in HMS Endeavour",
+ "years": "1768–1771",
+ "traveller": "James Cook",
+ "intro": "The first voyage of James Cook was a combined Royal Navy and Royal Society expedition to the south Pacific aboard HMS Endeavour. Its aims were to observe the 1769 transit of Venus from Tahiti and to seek evidence of the postulated Terra Australis Incognita.",
+ "ending": "Endeavour reached the English port of Deal on 12 July 1771, and the voyage lasted almost three years. Seven of the expedition died in Batavia and a further 23 on the passage from there to England.",
+ "legs": [
+  {
+   "title": "To Tahiti and the Society Islands",
+   "stops": [
+    {
+     "place": "Plymouth",
+     "entry": null,
+     "wp": "Plymouth",
+     "date": "26 August 1768",
+     "year": 1768,
+     "by": "sea",
+     "text": "Cook left Plymouth Dockyard with 94 people and 18 months of provisions.",
+     "quote": "Cook departed from Plymouth on 26 August 1768, carrying 94 people and 18 months of provisions.",
+     "ll": [
+      50.371,
+      -4.142
+     ],
+     "psrc": "wikidata:Plymouth"
+    },
+    {
+     "place": "Rio de Janeiro",
+     "entry": "rio-de-janeiro",
+     "wp": "Rio de Janeiro",
+     "date": "15 November 1768",
+     "year": 1768,
+     "by": "sea",
+     "text": "Endeavour stayed at Rio until 2 December to re-provision and make repairs. The Viceroy suspected the voyage had other aims, and Cook took offence at his suspicion.",
+     "quote": "On 15 November, Endeavour reached Rio de Janeiro and stayed there until 2 December, re-provisioning and making repairs.",
+     "ll": [
+      -22.911,
+      -43.206
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Cape Horn",
+     "entry": "cape-horn",
+     "wp": "Cape Horn",
+     "date": null,
+     "year": null,
+     "by": "sea",
+     "text": "After leaving Rio de Janeiro the ship rounded Cape Horn and continued westward across the Pacific, reaching Tahiti in April 1769.",
+     "quote": "The ship rounded Cape Horn and continued westward across the Pacific to arrive at Matavai Bay, Tahiti on 13 April 1769, where the observations were to be made.",
+     "ll": [
+      -55.98,
+      -67.289
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Matavai Bay",
+     "entry": null,
+     "wp": "Matavai Bay",
+     "date": "13 April 1769",
+     "year": 1769,
+     "by": "sea",
+     "text": "Endeavour arrived at Matavai Bay in Tahiti, where Cook commissioned a small fort and observatory at Point Venus. The transit was observed on 3 June.",
+     "quote": "to arrive at Matavai Bay, Tahiti on 13 April 1769, where the observations were to be made.",
+     "ll": [
+      -17.5,
+      -149.5
+     ],
+     "psrc": "wikidata:Matavai Bay"
+    },
+    {
+     "place": "Huahine",
+     "entry": "huahine",
+     "wp": "Huahine",
+     "date": "16 July 1769",
+     "year": 1769,
+     "by": "sea",
+     "text": "Endeavour entered the harbour at Huahine. Tupaia, a local priest and mariner, had joined the ship as pilot, interpreter and intermediary.",
+     "quote": "Endeavour left Tahiti on 13 July and entered the harbour of the nearby island of Huahine on 16 July.",
+     "ll": [
+      -16.733,
+      -151.033
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Raiatea",
+     "entry": null,
+     "wp": "Raiatea",
+     "date": "20 July 1769",
+     "year": 1769,
+     "by": "sea",
+     "text": "Cook raised the flag and claimed Raiatea-Tahaa and the nearby islands for Great Britain, naming them the Society Islands.",
+     "quote": "From Huahine Cook sailed to the neighbouring island of Raiatea where, on 20 July, he raised the flag and claimed Raiatea-Tahaa",
+     "ll": [
+      -16.82,
+      -151.44
+     ],
+     "psrc": "wikidata:Raʻiātea"
+    }
+   ]
+  },
+  {
+   "title": "New Zealand",
+   "stops": [
+    {
+     "place": "Poverty Bay",
+     "entry": null,
+     "wp": "Poverty Bay",
+     "date": "7 October 1769",
+     "year": 1769,
+     "by": "sea",
+     "text": "Cook and a landing party went ashore in the north-east of the North Island. In the first two days the encounters with Māori resulted in the death of four or five locals.",
+     "quote": "Cook and a landing party arrived onshore on 7 October at Poverty Bay in the north-east of the North Island.",
+     "ll": [
+      -38.716,
+      177.991
+     ],
+     "psrc": "wikidata:Poverty Bay"
+    },
+    {
+     "place": "Cape Kidnappers",
+     "entry": null,
+     "wp": "Cape Kidnappers",
+     "date": "15 October 1769",
+     "year": 1769,
+     "by": "sea",
+     "text": "Three more Māori were killed in an encounter off Cape Kidnappers. Cook's journal shows regret that he had failed his instructions to avoid hostilities.",
+     "quote": "Three more Māori were killed in an encounter farther south off Cape Kidnappers on 15 October.",
+     "ll": [
+      -39.643,
+      177.096
+     ],
+     "psrc": "wikidata:Cape Kidnappers"
+    },
+    {
+     "place": "Mercury Bay",
+     "entry": null,
+     "wp": "Mercury Bay",
+     "date": "9 November 1769",
+     "year": 1769,
+     "by": "sea",
+     "text": "Cook observed the transit of Mercury here and formally claimed possession of the bay for Great Britain. One local was killed in a trading dispute, the last recorded death of a Māori at the hands of Cook's crew.",
+     "quote": "Sailing north, Endeavour next anchored at Mercury Bay where Cook observed the transit of Mercury on 9 November.",
+     "ll": [
+      -36.81,
+      175.743
+     ],
+     "psrc": "wikidata:Mercury Bay"
+    },
+    {
+     "place": "Queen Charlotte Sound",
+     "entry": null,
+     "wp": "Queen Charlotte Sound / Tōtaranui",
+     "date": "31 January 1770",
+     "year": 1770,
+     "by": "sea",
+     "text": "Cook claimed possession of the sound and the adjacent lands in the name of King George III. From Arapawa Island he had seen the strait he named Cook Strait.",
+     "quote": "On 31 January, Cook claimed possession of Queen Charlotte Sound \"and the adjacent lands\" in the name of King George III.",
+     "ll": [
+      -41.25,
+      174.016
+     ],
+     "psrc": "wikidata:Queen Charlotte Sound / Tōtaranui"
+    }
+   ]
+  },
+  {
+   "title": "The coast of New Holland",
+   "stops": [
+    {
+     "place": "Point Hicks",
+     "entry": null,
+     "wp": "Point Hicks",
+     "date": "19 April 1770",
+     "year": 1770,
+     "by": "sea",
+     "text": "Land was sighted at 6 a.m. and Cook named it Point Hicks. His party became the first recorded Europeans to encounter Australia's eastern coastline.",
+     "quote": "The ship's log recorded that land was sighted at 6 a.m. on Thursday 19 April 1770.",
+     "ll": [
+      -38,
+      148.883
+     ],
+     "psrc": "wikidata:Point Hicks"
+    },
+    {
+     "place": "Botany Bay",
+     "entry": null,
+     "wp": "Botany Bay",
+     "date": "29 April 1770",
+     "year": 1770,
+     "by": "sea",
+     "text": "Cook's party landed at Silver Beach on Botany Bay (Kamay). Two Gweagal men opposed the landing, and Cook fired small shot and wounded one of them in the leg.",
+     "quote": "On 29 April, Cook and crew made their first landfall on the continent at a beach now known as Silver Beach on Botany Bay (Kamay).",
+     "ll": [
+      -33.983,
+      151.183
+     ],
+     "psrc": "wikidata:Botany Bay"
+    },
+    {
+     "place": "Seventeen Seventy",
+     "entry": null,
+     "wp": "Seventeen Seventy, Queensland",
+     "date": "23 May 1770",
+     "year": 1770,
+     "by": "sea",
+     "text": "Endeavour stopped at Bustard Bay. On 24 May Cook and others went ashore, found a freshwater stream and saw fires and shells showing Aboriginal occupation.",
+     "quote": "He stopped at Bustard Bay (now known as Seventeen Seventy) at 8 o'clock on 23 May 1770",
+     "ll": [
+      -24.169,
+      151.882
+     ],
+     "psrc": "wikidata:Seventeen Seventy, Queensland"
+    },
+    {
+     "place": "Endeavour River",
+     "entry": null,
+     "wp": "Endeavour River",
+     "date": "16 June 1770",
+     "year": 1770,
+     "by": "sea",
+     "text": "After running aground on the Great Barrier Reef on 11 June, Cook got Endeavour into the river mouth on 16 June. Repairs delayed the voyage almost seven weeks, and encounters with the Guugu Yimidhirr were mainly peaceable.",
+     "quote": "It was not until 16 June that Cook was able to get Endeavour into a river mouth that was suitable for careening the ship to make repairs.",
+     "ll": [
+      -15.458,
+      145.233
+     ],
+     "psrc": "wikidata:Endeavour River"
+    },
+    {
+     "place": "Possession Island",
+     "entry": null,
+     "wp": "Possession Island (Queensland)",
+     "date": "22 August 1770",
+     "year": 1770,
+     "by": "sea",
+     "text": "Cook named Cape York and then went to Possession Island, where he claimed the whole eastern coastline he had explored as British territory.",
+     "quote": "Cook named the island Possession Island, where he claimed the entire eastern coastline that he had just explored as British territory.",
+     "ll": [
+      -10.727,
+      142.397
+     ],
+     "psrc": "wikidata:Possession Island (Queensland)"
+    }
+   ]
+  },
+  {
+   "title": "Home by the East Indies",
+   "stops": [
+    {
+     "place": "Batavia",
+     "entry": null,
+     "wp": "Batavia, Dutch East Indies",
+     "date": "October 1770",
+     "year": 1770,
+     "by": "sea",
+     "text": "Endeavour came into Batavia, the capital of the Dutch East Indies, for repairs. Seven of the expedition died there, among them Tupaia, and more died of illness on the passage home.",
+     "quote": "In October 1770 the badly damaged Endeavour came into the port of Batavia in the Dutch East Indies",
+     "ll": [
+      -6.135,
+      106.813
+     ],
+     "psrc": "wikidata:Batavia, Dutch East Indies"
+    },
+    {
+     "place": "Cape of Good Hope",
+     "entry": "cape-of-good-hope",
+     "wp": "Cape of Good Hope",
+     "date": "13 March 1771",
+     "year": 1771,
+     "by": "sea",
+     "text": "Endeavour rounded the Cape of Good Hope after leaving Batavia on 26 December.",
+     "quote": "They resumed their journey on 26 December, rounded the Cape of Good Hope on 13 March 1771",
+     "ll": [
+      -34.358,
+      18.472
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Saint Helena",
+     "entry": "saint-helena",
+     "wp": "Saint Helena",
+     "date": null,
+     "year": null,
+     "by": "sea",
+     "text": "After rounding the Cape of Good Hope, Cook stopped at Saint Helena. England was sighted again on 10 July 1771.",
+     "quote": "Cook then rounded the Cape of Good Hope and stopped at Saint Helena.",
+     "ll": [
+      -15.965,
+      -5.715
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Deal",
+     "entry": null,
+     "wp": "Deal, Kent",
+     "date": "12 July 1771",
+     "year": 1771,
+     "by": "sea",
+     "text": "Endeavour anchored in the Downs that afternoon and Cook went ashore at Deal, Kent. His return was unexpected, as newspapers had reported fears that the ship was lost.",
+     "quote": "that afternoon Endeavour anchored in the Downs, and Cook went ashore at Deal, Kent.",
+     "ll": [
+      51.223,
+      1.401
+     ],
+     "psrc": "wikidata:Deal, Kent"
+    }
+   ]
+  }
+ ],
+ "notes": "Plymouth: places.tsv has only Plymouth Sound and Plymouth, Montserrat, so entry is null. Cape Horn has no date in the article. Possession Island: the article does not say where the island is; the wp title is a guess for the editor to check, as are Seventeen Seventy and Batavia. Left out: Tolaga Bay and Anaura Bay (no date), Bream Head and the Bay of Islands (in passing), Admiralty Bay, Savu (no date), the reef grounding as its own stop (told under Endeavour River). The Raiatea quote is cut mid-sentence. Point Hicks is 19 April by Cook's nautical date; the article says that date is now called 20 April. The article's own lede says 'discovered' for lands the crew kept secret; these texts say 'claimed' or 'sighted'. Cook claimed lands where people lived; the texts say so plainly."
+}

@@ -48,6 +48,8 @@
 <script src="scripts/invention-links.js"></script>
 <script src="scripts/song-links.js"></script>
 <script src="scripts/state-rulers.js"></script>
+<script src="scripts/life-family.js"></script>
+<script src="scripts/journey-links.js"></script>
 <script src="scripts/essay-links.js"></script>
 <script src="scripts/kids-stories.js"></script>
 <script src="scripts/profile-sameas.js"></script>
@@ -463,7 +465,16 @@ function buildPage(emp) {
       // scripts/tools/state-rulers.js), after the governance section; not a complete list of its rulers
       var rulers = key === 'governance' && typeof STATE_RULERS !== 'undefined' && STATE_RULERS[name]
         ? '<div class="profile-inv"><p class="profile-inv-k">Rulers and leaders in the encyclopedia</p><p class="profile-inv-l">' + STATE_RULERS[name].map(function (l) { return '<a href="/encyclopedia/' + l[0] + '">' + esc(l[1]) + '<span>' + esc(l[2]) + '</span></a>'; }).join('') + '</p></div>' : '';
-      return '<div class="profile-section-block" id="'+key+'">\n        <h2 class="profile-section-title">'+label+'</h2>\n        '+sectionFigure(name, key)+'<div class="profile-section-body">'+body+'</div>' + ladder + rulers + inv + songs + essays + '\n      </div>';
+      // a Great Life's parents, spouses and children among the entries (scripts/life-family.js, written by
+      // scripts/tools/make-family-trees.js from Wikidata's records), after its first section
+      var famL = key === sectionKeys[0][0] && profileKind(emp) === 'life' && typeof LIFE_FAMILY !== 'undefined' && LIFE_FAMILY[name], family = '';
+      if (famL) { var famA = function (l, rel) { return '<a href="/encyclopedia/' + l[0] + '">' + esc(l[1]) + '<span>' + rel + '</span></a>'; };
+        family = '<div class="profile-inv"><p class="profile-inv-k">Family in the encyclopedia</p><p class="profile-inv-l">' + (famL.f ? famA(famL.f, 'Father') : '') + (famL.m ? famA(famL.m, 'Mother') : '') +
+          (famL.s || []).map(function (l) { return famA(l, 'Married'); }).join('') + (famL.c || []).map(function (l) { return famA(l, 'Child'); }).join('') + '</p></div>'; }
+      // the journeys its subject made (scripts/journey-links.js, written by scripts/tools/make-journeys.js), after the last section
+      var journey = key === sectionKeys[sectionKeys.length - 1][0] && typeof JOURNEY_LINKS !== 'undefined' && JOURNEY_LINKS[name]
+        ? '<div class="profile-inv"><p class="profile-inv-k">On the globe, stop by stop</p><p class="profile-inv-l">' + JOURNEY_LINKS[name].map(function (l) { return '<a href="/journeys?j=' + l[0] + '">' + esc(l[1]) + '<span>Journey</span></a>'; }).join('') + '</p></div>' : '';
+      return '<div class="profile-section-block" id="'+key+'">\n        <h2 class="profile-section-title">'+label+'</h2>\n        '+sectionFigure(name, key)+'<div class="profile-section-body">'+body+'</div>' + family + journey + ladder + rulers + inv + songs + essays + '\n      </div>';
     }).join('\n      ');
   }
 

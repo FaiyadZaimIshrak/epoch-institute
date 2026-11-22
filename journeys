@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<title>Journeys on the Globe: 14 Great Journeys, Stop by Stop</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Fourteen journeys drawn stop by stop on a globe: Ibn Battuta, Marco Polo, Xuanzang, Zheng He, Magellan, Alexander, the Hijra, Darwin's Beagle and more.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Journeys on the Globe — The Epoch Institute">
+<meta property="og:description" content="Fourteen journeys drawn stop by stop on a globe: Ibn Battuta, Marco Polo, Xuanzang, Zheng He, Magellan, Alexander, the Hijra, Darwin's Beagle and more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the-epoch-institute.org/journeys">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/journeys">
+<link rel="stylesheet" href="/css/journeys.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Journeys on the Globe"}]},{"@type":"CollectionPage","name":"Journeys on the Globe","url":"https://the-epoch-institute.org/journeys","description":"Fourteen journeys drawn stop by stop on a globe: Ibn Battuta, Marco Polo, Xuanzang, Zheng He, Magellan, Alexander, the Hijra, Darwin's Beagle and more.","publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"name":"Alexander the Great's Campaigns","url":"https://the-epoch-institute.org/journeys?j=alexander"},{"@type":"ListItem","position":2,"name":"The Journeys of Paul the Apostle","url":"https://the-epoch-institute.org/journeys?j=paul"},{"@type":"ListItem","position":3,"name":"The Hijrah: From Mecca to Medina","url":"https://the-epoch-institute.org/journeys?j=hijra"},{"@type":"ListItem","position":4,"name":"Xuanzang's Journey to India and Back","url":"https://the-epoch-institute.org/journeys?j=xuanzang"},{"@type":"ListItem","position":5,"name":"Marco Polo's Journey to China and Back","url":"https://the-epoch-institute.org/journeys?j=marco-polo"},{"@type":"ListItem","position":6,"name":"Mansa Musa's Pilgrimage to Mecca","url":"https://the-epoch-institute.org/journeys?j=mansa-musa"},{"@type":"ListItem","position":7,"name":"The Travels of Ibn Battuta","url":"https://the-epoch-institute.org/journeys?j=ibn-battuta"},{"@type":"ListItem","position":8,"name":"Zheng He's Treasure Voyages","url":"https://the-epoch-institute.org/journeys?j=zheng-he"},{"@type":"ListItem","position":9,"name":"The Voyages of Christopher Columbus","url":"https://the-epoch-institute.org/journeys?j=columbus"},{"@type":"ListItem","position":10,"name":"Magellan and Elcano's Voyage Round the World","url":"https://the-epoch-institute.org/journeys?j=magellan"},{"@type":"ListItem","position":11,"name":"James Cook's First Voyage in HMS Endeavour","url":"https://the-epoch-institute.org/journeys?j=cook"},{"@type":"ListItem","position":12,"name":"The Lewis and Clark Expedition","url":"https://the-epoch-institute.org/journeys?j=lewis-and-clark"},{"@type":"ListItem","position":13,"name":"The Second Voyage of HMS Beagle","url":"https://the-epoch-institute.org/journeys?j=beagle"},{"@type":"ListItem","position":14,"name":"The Long March of the First Front Army","url":"https://the-epoch-institute.org/journeys?j=long-march"}]}}]}</script>
+<!-- Google tag (gtag.js) -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body data-nav="journeys">
+<main id="main" class="ref-page jr-page" data-no-toc>
+<div class="jr-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Journeys on the Globe</li></ol></nav>
+<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Journeys on the Globe</h1>
+<p class="ref-lede">Fourteen journeys that crossed the known world of their day, drawn stop by stop: pilgrims, merchants, fleets, armies and naturalists, 254 stops in all. Choose a journey, then press Play or step through it; each stop says what happened there.</p></header>
+<nav class="jr-pick" aria-label="Journeys">
+<a href="#alexander" data-j="alexander" data-kids="0"><b>Alexander's campaigns</b><span>336–323 BCE</span></a>
+<a href="#paul" data-j="paul" data-kids="1"><b>Paul's journeys</b><span>c. 46–c. 60 CE</span></a>
+<a href="#hijra" data-j="hijra" data-kids="1"><b>The Hijra</b><span>622</span></a>
+<a href="#xuanzang" data-j="xuanzang" data-kids="1"><b>Xuanzang to India</b><span>629–645</span></a>
+<a href="#marco-polo" data-j="marco-polo" data-kids="1"><b>Marco Polo</b><span>1271–1295</span></a>
+<a href="#mansa-musa" data-j="mansa-musa" data-kids="1"><b>Mansa Musa's pilgrimage</b><span>1324–1325</span></a>
+<a href="#ibn-battuta" data-j="ibn-battuta" data-kids="1"><b>Ibn Battuta</b><span>1325–1354</span></a>
+<a href="#zheng-he" data-j="zheng-he" data-kids="1"><b>Zheng He's voyages</b><span>1405–1433</span></a>
+<a href="#columbus" data-j="columbus" data-kids="0"><b>Columbus's voyages</b><span>1492–1504</span></a>
+<a href="#magellan" data-j="magellan" data-kids="0"><b>Magellan and Elcano</b><span>1519–1522</span></a>
+<a href="#cook" data-j="cook" data-kids="0"><b>Cook's first voyage</b><span>1768–1771</span></a>
+<a href="#lewis-and-clark" data-j="lewis-and-clark" data-kids="1"><b>Lewis and Clark</b><span>1804–1806</span></a>
+<a href="#beagle" data-j="beagle" data-kids="1"><b>Darwin and the Beagle</b><span>1831–1836</span></a>
+<a href="#long-march" data-j="long-march" data-kids="0"><b>The Long March</b><span>1934–1935</span></a>
+</nav>
+<div class="jr-stage">
+<div class="jr-map">
+<div class="jr-views" role="group" aria-label="View"><button type="button" data-v="globe" class="is-on" aria-pressed="true">Globe</button><button type="button" data-v="flat" aria-pressed="false">Flat map</button></div>
+<div class="jr-box"><canvas id="jr-globe" tabindex="0" role="img" aria-label="Globe: the route of the journey. The stops are listed beside it."></canvas><svg id="jr-flat" hidden role="img" aria-label="Map: the route of the journey"></svg><p id="jr-msg" class="jr-msg" hidden>Loading the globe&#8230;</p></div>
+<div class="jr-ctl"><button type="button" id="jr-prev" aria-label="The stop before">&#8249; Back</button><button type="button" id="jr-play" aria-pressed="false">Play the journey</button><button type="button" id="jr-next" aria-label="The next stop">Next &#8250;</button><span class="jr-zooms"><button type="button" class="jr-zoom" data-z="out" aria-label="Zoom out">&#8722;</button><button type="button" class="jr-zoom" data-z="in" aria-label="Zoom in">+</button></span></div>
+<div id="jr-now" class="jr-now" aria-live="polite"></div>
+<p class="jr-how">Drag to turn the globe; pinch, or click it and scroll, to zoom. Tap a dot, or a stop in the list. A dashed line is a passage by sea.</p>
+</div>
+<div class="jr-list">
+<article class="jr-j" id="alexander" data-kids="0">
+<h2>Alexander the Great's Campaigns</h2>
+<p class="jr-meta">336–323 BCE &#183; <a href="/life/alexander-the-great">Alexander the Great</a> &#183; 21 stops</p>
+<p class="jr-intro">Alexander of Macedon became king after the assassination of his father, Philip II, in 336 BCE. He first secured Greece and the north, then led his army east against the Achaemenid Empire of Darius III. The campaigns took him through Anatolia, Syria, Mesopotamia and Persia to Bactria and the Indus Valley.</p>
+<h3 class="jr-leg">Greece and the Balkans</h3>
+<ol class="jr-stops" start="1">
+<li data-ll="39.800,22.700" data-by="land"><span class="jr-place">Mount Ossa</span> <span class="jr-date">c. 336 BCE</span><p>Facing a revolt after Philip's death, Alexander rode south with his Macedonian cavalry. Finding the Thessalians blocking the pass, he had his men ride over Mount Ossa and came out behind them, and they surrendered.</p></li>
+<li data-ll="37.906,22.879" data-by="land"><span class="jr-place">Corinth</span> <span class="jr-date">c. 336 BCE</span><p>After stopping at Thermopylae, Alexander went on to Corinth. There he was given the title Hegemon of the Greek forces against the Persians, and there he heard of a Thracian uprising in the north.</p></li>
+<li data-ll="42.784,24.976" data-by="land"><span class="jr-place">Mount Haemus</span> <span class="jr-date">spring 335 BCE</span><p>To secure his northern borders before crossing to Asia, Alexander advanced into Thrace. At Mount Haemus his army defeated a Thracian garrison holding the heights, then crushed the Triballi who attacked it from behind.</p></li>
+<li data-ll="38.321,23.318" data-by="land"><span class="jr-place"><a href="/encyclopedia/thebes-greece">Thebes</a></span> <span class="jr-date">335 BCE</span><p>While Alexander was campaigning in the north, the Thebans and Athenians rebelled again. Thebes chose to resist, and the city was razed to the ground with great bloodshed. Its fall brought Athens to submit.</p></li>
+</ol>
+<h3 class="jr-leg">Asia Minor, Syria and Palestine</h3>
+<ol class="jr-stops" start="5">
+<li data-ll="40.200,26.400" data-by="sea"><span class="jr-place">Hellespont</span> <span class="jr-date">334 BCE</span><p>Alexander crossed the Hellespont into Asia. It took over one hundred triremes to carry the whole Macedonian army, and the Persians decided to ignore the movement.</p></li>
+<li data-ll="40.228,27.242" data-by="land"><span class="jr-place">Granicus River</span> <span class="jr-date">May 334 BCE</span><p>The Persian satraps of Anatolia drew up on the east bank of the Granicus River. Alexander attacked at once, broke the Persian line and won the battle, fought in north-western Asia Minor near the site of Troy.</p></li>
+<li data-ll="37.038,27.424" data-by="land"><span class="jr-place">Halicarnassus</span> <span class="jr-date">334 BCE</span><p>Orontobates and Memnon of Rhodes entrenched themselves in Halicarnassus. Alexander's army broke through the walls, Memnon set fire to the city and withdrew, and Alexander handed the government of Caria to Ada.</p></li>
+<li data-ll="36.838,36.164" data-by="land"><span class="jr-place">Issus</span> <span class="jr-date">November 333 BCE</span><p>Darius took personal command of his army and cut Alexander's line of supply, so that Alexander had to turn back. The battle was fought near the mouth of the Pinarus River, south of Issus, and Darius fled, leaving his wife and much treasure.</p></li>
+<li data-ll="33.267,35.200" data-by="land"><span class="jr-place">Tyre</span> <span class="jr-date">332 BCE</span><p>The Tyrians refused Alexander and killed his envoys, and he besieged the island city with a causeway and, in the end, a fleet. Those who sheltered in the temple of Heracles were pardoned. About 30,000 people were sold into slavery.</p></li>
+<li data-ll="31.508,34.460" data-by="land"><span class="jr-place">Gaza</span> <span class="jr-date">c. 332 BCE</span><p>Batis, commander of the fortress of Gaza, refused to surrender. The stronghold fell after three failed assaults, and Alexander was seriously wounded in the shoulder. The men were put to the sword and the women and children sold into slavery.</p></li>
+</ol>
+<h3 class="jr-leg">Mesopotamia and Persia</h3>
+<ol class="jr-stops" start="11">
+<li data-ll="36.360,43.250" data-by="land"><span class="jr-place">Gaugamela</span> <span class="jr-date">331 BCE</span><p>Alexander crossed the Euphrates and the Tigris without opposition and met Darius's much larger army at Gaugamela. The result was a decisive Macedonian victory. Darius fled with a small part of his force.</p></li>
+<li data-ll="32.523,44.424" data-by="land"><span class="jr-place"><a href="/encyclopedia/babylon">Babylon</a></span> <span class="jr-date">c. 331 BCE</span><p>After Gaugamela, Alexander advanced to Babylon, one of the Persian capitals, and from there went on to Susa.</p></li>
+<li data-ll="32.189,48.256" data-by="land"><span class="jr-place"><a href="/encyclopedia/susa">Susa</a></span> <span class="jr-date">c. 331 BCE</span><p>At Susa Alexander found 50,000 talents. He sacrificed at the altars and held a torch race, and sent 3,000 silver talents to Antipater to fund the fight against the Spartans.</p></li>
+<li data-ll="30.708,51.599" data-by="land"><span class="jr-place">Persian Gates</span> <span class="jr-date">winter 330 BCE</span><p>Alexander took the route towards Persis and walked into an ambush in the narrow Persian Gates, where the satrap Ariobarzanes made a last stand. The Persians held the pass for a month before Alexander encircled them and broke through.</p></li>
+<li data-ll="29.935,52.890" data-by="land"><span class="jr-place"><a href="/encyclopedia/persepolis">Persepolis</a></span> <span class="jr-date">c. 330 BCE</span><p>Four months after reaching Persepolis, Alexander allowed his troops to loot the city. A fire broke out and spread through it. It is not clear whether this was a drunken accident or a deliberate act of revenge.</p></li>
+</ol>
+<h3 class="jr-leg">Central Asia and India</h3>
+<ol class="jr-stops" start="16">
+<li data-ll="40.400,69.400" data-by="land"><span class="jr-place">Sogdian Rock</span> <span class="jr-date">327 BCE</span><p>Oxyartes of Bactria had sent his wife and daughters, one of them Roxana, to the fortress for safety. Some 300 men climbed the cliff at night and the defenders surrendered. Alexander later married Roxana.</p></li>
+<li data-ll="33.746,72.787" data-by="land"><span class="jr-place"><a href="/encyclopedia/taxila">Taxila</a></span> <span class="jr-date">c. 326 BCE</span><p>Alexander gained control of the former Achaemenid satrapy of Gandhara, including the city of Taxila, whose ruler Omphis had complied with his summons. He then advanced into the Punjab.</p></li>
+<li data-ll="32.828,73.639" data-by="land"><span class="jr-place">Hydaspes River</span> <span class="jr-date">326 BCE</span><p>In the Punjab Alexander fought the king Porus and defeated him. It was the most costly battle the Macedonians fought. Impressed by Porus, Alexander let him keep governing his kingdom as a satrap.</p></li>
+<li data-ll="31.678,74.912" data-by="land"><span class="jr-place">Hyphasis River</span> <span class="jr-date">c. 326 BCE</span><p>Exhausted by years of campaigning and afraid of the Nanda army, the Macedonians mutinied at the Hyphasis River and refused to march further east. This river marked the easternmost extent of Alexander's conquests.</p></li>
+</ol>
+<h3 class="jr-leg">The return from India</h3>
+<ol class="jr-stops" start="20">
+<li data-ll="30.198,71.471" data-by="land"><span class="jr-place"><a href="/encyclopedia/multan">Multan</a></span> <span class="jr-date">after 326 BCE</span><p>On the way back, Alexander's army conquered the Malli clans, in the area of present-day Multan.</p></li>
+<li data-ll="25.509,64.144" data-by="land"><span class="jr-place">Gedrosian Desert</span> <span class="jr-date">after 326 BCE</span><p>Alexander sent much of his army to Carmania with Craterus and a fleet along the Persian Gulf shore under Nearchus. He led the rest back through the Gedrosian Desert. According to Plutarch, he lost three-quarters of his army on the 60-day march.</p></li>
+</ol>
+<p class="jr-end">His army mutinied at the Hyphasis River and refused to go further east, so Alexander turned back, sending part of his forces by land and a fleet along the Persian Gulf shore, and leading the rest home through the Gedrosian Desert. After his death his generals, the Diadochi, fought each other for about 40 years over the territories he had conquered.</p>
+<p class="jr-src">Told after the Wikipedia article &#8220;Wars of Alexander the Great&#8221;. Places with an encyclopedia entry are linked.</p>
+</article>
+<article class="jr-j" id="paul" data-kids="1">
+<h2>The Journeys of Paul the Apostle</h2>
+<p class="jr-meta">c. 46–c. 60 CE &#183; <a href="/life/paul-the-apostle">Paul the Apostle</a> &#183; 21 stops</p>
+<p class="jr-intro">According to the Acts of the Apostles, Paul made three missionary journeys, which Acts arranges as three separate accounts, and then travelled to Rome for his appeal to Caesar. It has been estimated that the journeys recorded in Acts covered over 12,000 kilometres by land and over 8,000 kilometres by sea.</p>
+<h3 class="jr-leg">First missionary journey</h3>
+<ol class="jr-stops" start="1">
+<li data-ll="36.200,36.150" data-by="land"><span class="jr-place"><a href="/encyclopedia/antioch">Antioch</a></span> <span class="jr-date">c. 46–49 CE</span><p>According to Acts, the Antioch community commissioned Paul and Barnabas, and Barnabas led at first. The traditional and majority dating of the first journey is 46–49 CE, against a minority dating of after 37 CE.</p></li>
+<li data-ll="35.000,33.000" data-by="sea"><span class="jr-place"><a href="/encyclopedia/cyprus">Cyprus</a></span> <span class="jr-date">c. 46–49 CE</span><p>In Cyprus, according to Acts, Paul rebuked and blinded Elymas the magician, who had been criticising their teachings.</p></li>
+<li data-ll="36.960,30.854" data-by="sea"><span class="jr-place">Perga</span> <span class="jr-date">c. 46–49 CE</span><p>Paul and Barnabas sailed to Perga in Pamphylia. There John Mark left them and returned to Jerusalem.</p></li>
+<li data-ll="38.306,31.189" data-by="land"><span class="jr-place">Pisidian Antioch</span> <span class="jr-date">c. 46–49 CE</span><p>On the Sabbath Paul and Barnabas went to the synagogue, where the leaders invited them to speak.</p></li>
+</ol>
+<h3 class="jr-leg">Second missionary journey</h3>
+<ol class="jr-stops" start="5">
+<li data-ll="36.200,36.150" data-by="land"><span class="jr-place"><a href="/encyclopedia/antioch">Antioch</a></span> <span class="jr-date">late autumn 49 CE</span><p>The second journey began in late autumn 49 CE, after the Council of Jerusalem. At Antioch Paul and Barnabas argued over taking John Mark, and parted: Barnabas took John Mark, and Silas joined Paul.</p></li>
+<li data-ll="37.664,32.211" data-by="land"><span class="jr-place">Lystra</span> <span class="jr-date">c. 49–50 CE</span><p>Paul and Silas visited Tarsus, Derbe and Lystra. At Lystra they met Timothy, a disciple who was spoken well of, and took him with them.</p></li>
+<li data-ll="41.012,24.285" data-by="land"><span class="jr-place">Philippi</span> <span class="jr-date">c. 49–50 CE</span><p>According to Acts, Paul cast a spirit of divination out of a servant girl. Her masters, who lost income from her soothsaying, seized Paul and Silas, and the two were put in jail.</p></li>
+<li data-ll="37.984,23.728" data-by="land"><span class="jr-place"><a href="/encyclopedia/athens">Athens</a></span> <span class="jr-date">c. 50 CE</span><p>Passing by Berea, Paul reached Athens, where he preached daily to the Jews and God-fearing Greeks in the synagogue and in the Agora. He was taken to the court of the Areopagus and preached to the elite there.</p></li>
+<li data-ll="37.906,22.879" data-by="land"><span class="jr-place">Corinth</span> <span class="jr-date">c. 50–51 CE</span><p>Paul arrived at Corinth and founded the church there, staying 18 months. The stay is dated from the reference in Acts to the proconsul Gallio, and Priscilla and Aquila became his helpers there.</p></li>
+</ol>
+<h3 class="jr-leg">Third missionary journey</h3>
+<ol class="jr-stops" start="10">
+<li data-ll="37.941,27.339" data-by="land"><span class="jr-place"><a href="/encyclopedia/ephesus">Ephesus</a></span> <span class="jr-date">before 56 CE</span><p>According to Acts, Paul travelled through Galatia and Phrygia and then to Ephesus, staying almost three years. He left after a silversmith incited a crowd against his preaching and pro-Artemis riots broke out.</p></li>
+<li data-ll="37.906,22.879" data-by="land"><span class="jr-place">Corinth</span> <span class="jr-date">56–57 CE</span><p>Paul went through Macedonia into Achaea and stayed in Greece, probably at Corinth, for three months. Commentators generally agree he dictated the Epistle to the Romans in this period.</p></li>
+<li data-ll="39.752,26.159" data-by="land"><span class="jr-place">Troas</span> <span class="jr-date">c. 57 CE</span><p>Paul and his companions called at Troas on the way back to Jerusalem.</p></li>
+<li data-ll="37.531,27.276" data-by="sea"><span class="jr-place">Miletus</span> <span class="jr-date">c. 57 CE</span><p>Paul and his companions called at Miletus on the way back to Jerusalem.</p></li>
+<li data-ll="33.267,35.200" data-by="sea"><span class="jr-place">Tyre</span> <span class="jr-date">c. 57 CE</span><p>Paul and his companions visited Tyre on the way back to Jerusalem, before a stop at Caesarea.</p></li>
+<li data-ll="31.777,35.234" data-by="land"><span class="jr-place">Jerusalem</span> <span class="jr-date">57 CE</span><p>Paul arrived with a collection of money for the local community, on what was his fifth and final visit. Acts says he was seized after Jews from Asia accused him of defiling the temple.</p></li>
+</ol>
+<h3 class="jr-leg">The journey to Rome</h3>
+<ol class="jr-stops" start="16">
+<li data-ll="32.501,34.892" data-by="land"><span class="jr-place">Caesarea</span> <span class="jr-date">c. 57 CE</span><p>After a plot against him, Paul was taken to Caesarea and held under guard in Herod's headquarters. He was held there for two years by Felix, and when Festus proposed a trial in Jerusalem he appealed to Caesar.</p></li>
+<li data-ll="35.900,14.400" data-by="sea"><span class="jr-place"><a href="/encyclopedia/malta">Malta</a></span> <span class="jr-date">c. 60 CE</span><p>According to Acts, the ship was wrecked on Melita, identified with present-day Malta. The islanders showed Paul unusual kindness, and he was met there by Publius.</p></li>
+<li data-ll="37.069,15.287" data-by="sea"><span class="jr-place">Syracuse</span> <span class="jr-date">c. 60 CE</span><p>After leaving Malta, Paul travelled on towards Rome by way of Syracuse.</p></li>
+<li data-ll="38.114,15.650" data-by="sea"><span class="jr-place"><a href="/encyclopedia/reggio-calabria">Rhegium</a></span> <span class="jr-date">c. 60 CE</span><p>Paul passed through Rhegium on his way from Malta to Rome, after Syracuse and before Puteoli.</p></li>
+<li data-ll="40.823,14.122" data-by="sea"><span class="jr-place"><a href="/encyclopedia/pozzuoli">Puteoli</a></span> <span class="jr-date">c. 60 CE</span><p>Paul's route from Malta to Rome ended with a stop at Puteoli, after Syracuse and Rhegium.</p></li>
+<li data-ll="41.893,12.483" data-by="land"><span class="jr-place"><a href="/encyclopedia/rome">Rome</a></span> <span class="jr-date">c. 60 CE</span><p>Paul arrived in Rome and, according to the traditional account, spent two years under house arrest. Acts ends with him preaching there from his rented home while awaiting trial.</p></li>
+</ol>
+<p class="jr-end">According to the traditional account, Paul reached Rome c. 60 CE and spent two years under house arrest. Acts ends with him preaching there while awaiting trial and does not mention his death, which is believed to have come after the Great Fire of Rome in July 64 and before 68.</p>
+<p class="jr-src">Told after the Wikipedia article &#8220;Paul the Apostle&#8221;. Places with an encyclopedia entry are linked.</p>
+</article>
+<article class="jr-j" id="hijra" data-kids="1">
+<h2>The Hijrah: From Mecca to Medina</h2>
+<p class="jr-meta">622 &#183; <a href="/life/muhammad">Muhammad and his followers</a> &#183; 4 stops</p>
+<p class="jr-intro">The Hijrah was the journey that the Islamic prophet Muhammad and his followers made from Mecca to Medina. Its date equates to 16 July 622 in the Julian calendar, and the year became the epoch of the Hijri calendars.</p>
+<ol class="jr-stops" start="1">
+<li data-ll="21.413,39.893" data-by="land"><span class="jr-place">al-'Aqabah</span> <span class="jr-date">Pilgrimage season of 622</span><p>Muhammad met 75 Medinan converts, including two women, at al-Aqabah, and they took the second pledge there, also known as the pledge of war. Twelve delegates were chosen to oversee the pact.</p></li>
+<li data-ll="21.422,39.826" data-by="land"><span class="jr-place"><a href="/encyclopedia/mecca">Mecca</a></span> <span class="jr-date">May 622</span><p>After instructing his Meccan followers to relocate to Medina, Muhammad stayed behind to watch over them. In May 622 he left his home secretly with Abu Bakr.</p></li>
+<li data-ll="21.383,39.850" data-by="land"><span class="jr-place">Mount Thawr</span> <span class="jr-date">622</span><p>Islamic tradition relates that Muhammad and Abu Bakr hid in a cave on Mount Thawr, about an hour's walk south of Mecca. After three days they set out for Medina on camels, with a guide, Abdallah ibn Arqat.</p></li>
+<li data-ll="24.470,39.610" data-by="land"><span class="jr-place"><a href="/encyclopedia/medina">Medina</a></span> <span class="jr-date">622</span><p>Medina, an oasis more than 260 miles (420 km) north of Mecca, was the destination. Its Arab tribes, the Aws and Khazraj, had fought each other for nearly a hundred years before 620.</p></li>
+</ol>
+<p class="jr-end">The Meccans seized the wealth and belongings the migrants left behind, and Muhammad's followers suffered from poverty in Medina. In 638 the caliph Umar designated the year of the Hijrah as the first year of the Islamic calendar.</p>
+<p class="jr-src">Told after the Wikipedia article &#8220;Hijrah&#8221;. Places with an encyclopedia entry are linked.</p>
+</article>
+<article class="jr-j" id="xuanzang" data-kids="1">
+<h2>Xuanzang's Journey to India and Back</h2>
+<p class="jr-meta">629–645 &#183; <a href="/encyclopedia/xuanzang">Xuanzang</a> &#183; 23 stops</p>
+<p class="jr-intro">Xuanzang was a 7th-century Chinese Buddhist monk who sought original Sanskrit texts from India. Starting from Chang'an, he began a seventeen-year overland journey to India, defying his nation's ban on travel abroad.</p>
+<h3 class="jr-leg">Across Central Asia</h3>
+<ol class="jr-stops" start="1">
+<li data-ll="34.308,108.858" data-by="land"><span class="jr-place"><a href="/encyclopedia/changan">Chang'an</a></span> <span class="jr-date">627 or 629</span><p>At Chang'an, then under the rule of Emperor Taizong of Tang, Xuanzang developed the desire to visit India. Sources differ on whether he set out in 627 or 629, and most state 629.</p></li>
+<li data-ll="42.950,89.182" data-by="land"><span class="jr-place"><a href="/encyclopedia/turfan">Agni (Turfan)</a></span> <span class="jr-date">630</span><p>He arrived in the kingdom of Agni, where the Buddhist king and others tried to persuade him to give up his journey and teach them. He declined, and they equipped him with letters of introduction and funds.</p></li>
+<li data-ll="41.650,82.900" data-by="land"><span class="jr-place">Kucha</span> <span class="jr-date">c. 630</span><p>After a meeting with Turkic robbers who fought over their loot and dispersed, he reached Kuchi, which he reported had over one hundred monasteries and five thousand monks.</p></li>
+<li data-ll="42.839,75.291" data-by="land"><span class="jr-place">Tokmak</span> <span class="jr-date">c. 630</span><p>He passed Aksu, crossed the Tian Shan and went on to Tokmak, where he met the great Khagan of the Göktürks and attended a feast.</p></li>
+<li data-ll="41.311,69.280" data-by="land"><span class="jr-place"><a href="/encyclopedia/tashkent">Tashkent</a></span> <span class="jr-date">c. 630</span><p>He continued west and then southwest to Tashkent, where he described monasteries with Buddha's footprints and statues.</p></li>
+<li data-ll="36.758,66.899" data-by="land"><span class="jr-place"><a href="/encyclopedia/balkh">Bactra</a></span> <span class="jr-date">c. 630</span><p>He crossed a desert, icy valleys and the Pamir range, and came to Bactra, modern Balkh. He described a monastery there with a jewelled Buddha statue and a tooth relic of the Buddha.</p></li>
+<li data-ll="34.817,67.817" data-by="land"><span class="jr-place">Bamiyana</span> <span class="jr-date">c. 630</span><p>South of Bactra he crossed the Great Snow Mountains to Bamiyana, where his travelogue describes a colossal standing Buddha carved from rock, some one hundred and forty feet tall.</p></li>
+</ol>
+<h3 class="jr-leg">Through India</h3>
+<ol class="jr-stops" start="8">
+<li data-ll="33.746,72.787" data-by="land"><span class="jr-place"><a href="/encyclopedia/taxila">Taxila</a></span><p>He arrived in Taxila after crossing a river said to hold poisonous dragons and evil animals, and visited a major monastery of the Sautrantika school.</p></li>
+<li data-ll="34.500,76.000" data-by="land"><span class="jr-place"><a href="/encyclopedia/kashmir">Kashmira</a></span><p>In Kashmira he was received by the king and by monks of the Jayendra monastery. He recorded over 100 monasteries and more than 5000 monks.</p></li>
+<li data-ll="26.740,83.889" data-by="land"><span class="jr-place"><a href="/encyclopedia/kushinagar">Kushinagara</a></span><p>He came to Kushinagara, where he found the towns and villages deserted and in a dilapidated condition, and described a large brick temple with a reclining Buddha.</p></li>
+<li data-ll="25.319,83.013" data-by="land"><span class="jr-place"><a href="/encyclopedia/varanasi">Baranasi</a></span><p>At Baranasi he described a densely populated city whose people were enormously wealthy. He found few Buddhists there and over one hundred deva temples, most dedicated to Shiva.</p></li>
+<li data-ll="24.695,84.993" data-by="land"><span class="jr-place"><a href="/encyclopedia/bodh-gaya">Bodh Gaya</a></span><p>He visited Gaya and the Bodhi tree, and described the Mahabodhi monastery nearby with its many buildings and its decorative paintings.</p></li>
+<li data-ll="25.137,85.444" data-by="land"><span class="jr-place"><a href="/encyclopedia/nalanda">Nalanda</a></span><p>At Nalanda he lived among several thousand monks and studied logic, grammar, Sanskrit and the Yogacara school of Buddhism with his teacher Silabhadra.</p></li>
+<li data-ll="16.576,80.357" data-by="land"><span class="jr-place">Amaravati</span><p>Turning south, he stayed at Amaravati and studied the Abhidhammapitakam texts. He observed many viharas there, some of them deserted.</p></li>
+<li data-ll="12.831,79.708" data-by="land"><span class="jr-place"><a href="/encyclopedia/kanchipuram">Kanchi</a></span><p>He went on to Kanchi, the capital of the Pallavas, and said that it was a strong centre of Buddhism.</p></li>
+<li data-ll="25.137,85.444" data-by="land"><span class="jr-place"><a href="/encyclopedia/nalanda">Nalanda</a></span><p>After travelling on through Nasik, Ajanta and Malwa, he returned to Nalanda.</p></li>
+</ol>
+<h3 class="jr-leg">Home to Chang'an</h3>
+<ol class="jr-stops" start="17">
+<li data-ll="27.031,79.922" data-by="land"><span class="jr-place"><a href="/encyclopedia/kannauj">Kanyakubja</a></span><p>At the request of Emperor Harshavardhana he attended a great Buddhist assembly at Kanyakubja, which monarchs, monks, Hindus and Jains also attended.</p></li>
+<li data-ll="25.450,81.850" data-by="land"><span class="jr-place"><a href="/encyclopedia/prayagraj">Prayag</a></span><p>Emperor Harsha invited him to the Kumbha Mela at Prayag, where he saw the Emperor's distribution of gifts to the poor.</p></li>
+<li data-ll="27.031,79.922" data-by="land"><span class="jr-place"><a href="/encyclopedia/kannauj">Kanyakubja</a></span><p>He returned to Kanyakubja, where Emperor Harsha gave him a grand farewell, and set out for China through the Khyber Pass.</p></li>
+<li data-ll="39.450,75.983" data-by="land"><span class="jr-place"><a href="/encyclopedia/kashgar">Kashgar</a></span><p>On the way back to China Xuanzang travelled through the Khyber Pass and passed through Kashgar.</p></li>
+<li data-ll="37.101,79.933" data-by="land"><span class="jr-place">Khotan</span><p>Xuanzang passed through Khotan on the same homeward route to China, after Kashgar.</p></li>
+<li data-ll="40.141,94.664" data-by="land"><span class="jr-place"><a href="/encyclopedia/dunhuang">Dunhuang</a></span><p>Xuanzang passed through Dunhuang on his way back to China, before he arrived at the capital, Chang'an.</p></li>
+<li data-ll="34.308,108.858" data-by="land"><span class="jr-place"><a href="/encyclopedia/changan">Chang'an</a></span> <span class="jr-date">7th day of the first month of 645</span><p>He arrived in the capital, Chang'an, 16 years after he left Chinese territory, and a great procession celebrated his return.</p></li>
+</ol>
+<p class="jr-end">He arrived back in Chang'an in 645, 16 years after he left Chinese territory, and a great procession celebrated his return. His biography says he brought over six hundred Mahayana and Hinayana texts, seven statues of the Buddha and more than a hundred sarira relics.</p>
+<p class="jr-src">Told after the Wikipedia article &#8220;Xuanzang&#8221;. Places with an encyclopedia entry are linked.</p>
+</article>
+<article class="jr-j" id="marco-polo" data-kids="1">
+<h2>Marco Polo's Journey to China and Back</h2>
+<p class="jr-meta">1271–1295 &#183; <a href="/encyclopedia/marco-polo">Marco Polo</a> &#183; 11 stops</p>
+<p class="jr-intro">Marco Polo, a Venetian merchant, set off in 1271 at the age of seventeen with his father Niccolò and his uncle Maffeo to fulfil a request from Kublai Khan. He lived in the emperor's lands for 17 years before the family returned to Venice.</p>
+<h3 class="jr-leg">From Venice to Kublai Khan's court</h3>
+<ol class="jr-stops" start="1">
+<li data-ll="45.440,12.332" data-by="sea"><span class="jr-place"><a href="/encyclopedia/venice">Venice</a></span> <span class="jr-date">1271</span><p>Marco, aged seventeen, set off with his father and uncle for Asia. His father and uncle had already visited Kublai Khan and returned to Venice in 1269, meeting Marco for the first time.</p></li>
+<li data-ll="32.926,35.084" data-by="sea"><span class="jr-place">Acre</span> <span class="jr-date">1271</span><p>They stayed for a few months and spoke with Archdeacon Tedaldo Visconti. When he was elected Pope, he entrusted them with letters for the Great Khan and sent two Dominican fathers with them as legates.</p></li>
+<li data-ll="27.067,56.460" data-by="land"><span class="jr-place">Hormuz</span> <span class="jr-date">1271</span><p>They rode camels to the Persian port, wanting to sail into China. The ships there were not seaworthy, so they continued overland along the Silk Road. A caravan they joined was attacked by bandits.</p></li>
+<li data-ll="42.358,116.185" data-by="land"><span class="jr-place"><a href="/encyclopedia/shangdu">Shangdu</a></span> <span class="jr-date">between 1271 and 1275</span><p>The Polos were welcomed by Kublai into his palace, and Marco, about 21, was appointed an emissary. Some scholars have doubted that he reached China at all, but most now accept that he did.</p></li>
+<li data-ll="32.391,119.436" data-by="land"><span class="jr-place"><a href="/encyclopedia/yangzhou">Yangzhou</a></span> <span class="jr-date">before 1284</span><p>The book says Marco ruled the city for three years, but David Morgan notes that no Chinese source mentions him. The earliest manuscripts differ on his role, and Paul Pelliot thought he may have served in the salt monopoly.</p></li>
+</ol>
+<h3 class="jr-leg">The way home, 1292–1295</h3>
+<ol class="jr-stops" start="6">
+<li data-ll="24.914,118.586" data-by="land"><span class="jr-place"><a href="/encyclopedia/quanzhou">Zaitun</a></span> <span class="jr-date">1292</span><p>Kublai let the Polos go with a wedding party escorting a princess to Persia. The party left from Zaitun in southern China on a fleet of 14 junks.</p></li>
+<li data-ll="-0.299,101.271" data-by="sea"><span class="jr-place"><a href="/encyclopedia/sumatra">Sumatra</a></span> <span class="jr-date">after 1292</span><p>The fleet sailed to the port of Singapore and north to Sumatra, then around the southern tip of India and across the Arabian Sea. The voyage was perilous.</p></li>
+<li data-ll="27.067,56.460" data-by="sea"><span class="jr-place">Hormuz</span> <span class="jr-date">c. 1293</span><p>Of the six hundred people in the convoy, not counting the crew, only eighteen had survived, including all three Polos. They left the wedding party here and went overland towards the Black Sea.</p></li>
+<li data-ll="41.005,39.722" data-by="land"><span class="jr-place"><a href="/encyclopedia/trabzon">Trebizond</a></span><p>From Hormuz the Polos travelled overland to the port of Trebizond on the Black Sea, now Trabzon.</p></li>
+<li data-ll="41.012,28.976" data-by="land"><span class="jr-place"><a href="/encyclopedia/constantinople">Constantinople</a></span> <span class="jr-date">after 1293</span><p>In Persia they had learned that Arghun Khan had died, and Kököchin became a wife of his son Ghazan. After leaving the princess, the Polos travelled overland to Constantinople.</p></li>
+<li data-ll="45.440,12.332" data-by="land"><span class="jr-place"><a href="/encyclopedia/venice">Venice</a></span> <span class="jr-date">1295</span><p>They returned to Venice after 24 years with many riches and treasures, having travelled almost 15,000 miles. Venice was at war with Genoa, and Marco was later captured by the Genoese.</p></li>
+</ol>
+<p class="jr-end">The Polos reached Venice in 1295 after 24 years, with many riches and treasures. Marco dictated his account to Rustichello da Pisa while a prisoner of Genoa, and scholars still debate parts of it, though studies by Morgan, Haw and Vogel largely hold that he did go to China.</p>
+<p class="jr-src">Told after the Wikipedia article &#8220;Marco Polo&#8221;. Places with an encyclopedia entry are linked.</p>
+</article>
+<article class="jr-j" id="mansa-musa" data-kids="1">
+<h2>Mansa Musa's Pilgrimage to Mecca</h2>
+<p class="jr-meta">1324–1325 &#183; <a href="/life/mansa-musa">Mansa Musa of Mali</a> &#183; 7 stops</p>
+<p class="jr-intro">Mansa Musa, ruler of the Mali Empire, made the hajj to Mecca between 1324 and 1325, travelling with a very large entourage and a great supply of gold. He left his son Muhammad to rule in his absence.</p>
+<ol class="jr-stops" start="1">
+<li data-ll="29.976,31.133" data-by="land"><span class="jr-place">Pyramids of Giza</span> <span class="jr-date">July 1324</span><p>Musa and his entourage arrived at the outskirts of Cairo in July 1324 and camped for three days by the Pyramids of Giza.</p></li>
+<li data-ll="30.044,31.236" data-by="land"><span class="jr-place">Cairo</span> <span class="jr-date">19 July 1324</span><p>Musa crossed the Nile into Cairo on 19 July and met the Mamluk sultan al-Nasir Muhammad. He stayed in the Qarafa district for three months and left on 18 October with the official caravan to Mecca.</p></li>
+<li data-ll="24.470,39.610" data-by="land"><span class="jr-place"><a href="/encyclopedia/medina">Medina</a></span> <span class="jr-date">1324</span><p>Musa gave gifts to fellow pilgrims and the people of Medina as he travelled on towards Mecca.</p></li>
+<li data-ll="21.422,39.826" data-by="land"><span class="jr-place"><a href="/encyclopedia/mecca">Mecca</a></span> <span class="jr-date">1324–1325</span><p>In Mecca a conflict broke out between Malian pilgrims and Turkic pilgrims in the Masjid al-Haram. Swords were drawn, but Musa persuaded his men to back down.</p></li>
+<li data-ll="29.967,32.533" data-by="land"><span class="jr-place">Suez</span> <span class="jr-date">1325</span><p>Musa's party returned separately from the main caravan. By the time they reached Suez, many Malian pilgrims had died of cold, starvation or bandit raids, and much of their supplies was lost.</p></li>
+<li data-ll="16.267,-0.050" data-by="land"><span class="jr-place"><a href="/encyclopedia/gao">Gao</a></span> <span class="jr-date">1325</span><p>According to the Tarikh al-Sudan, Gao submitted to Musa's rule as he travelled through on his return. This is doubted: Ibn Khaldun credits Musa's general Saghmanja with the conquest, and another account places it under Mansa Sakura.</p></li>
+<li data-ll="16.773,-3.007" data-by="land"><span class="jr-place"><a href="/encyclopedia/timbuktu">Timbuktu</a></span> <span class="jr-date">1325</span><p>The Tarikh al-Sudan says Timbuktu also submitted to Musa on his return, but it is unlikely that a group of pilgrims, even armed, could have conquered a wealthy and powerful city.</p></li>
+</ol>
+<p class="jr-end">Musa returned towards Mali with scholars such as the Andalusi poet Abu Ishaq al-Sahili, after going into debt on the way back. According to the Tarikh al-Sudan, Gao and Timbuktu submitted to his rule as he passed through.</p>
+<p class="jr-src">Told after the Wikipedia article &#8220;Mansa Musa&#8221;. Places with an encyclopedia entry are linked.</p>
+</article>
+<article class="jr-j" id="ibn-battuta" data-kids="1">
+<h2>The Travels of Ibn Battuta</h2>
+<p class="jr-meta">1325–1354 &#183; <a href="/life/ibn-battuta">Ibn Battuta</a> &#183; 24 stops</p>
+<p class="jr-intro">Ibn Battuta, a Maghrebi Muslim scholar from Tangier, set off in 1325 at the age of 21 to make the hajj to Mecca. Over thirty years he visited much of Africa, Asia and the Iberian Peninsula, and the total is put at around 117,000 km.</p>
+<h3 class="jr-leg">The first pilgrimage and Iraq, 1325–1327</h3>
+<ol class="jr-stops" start="1">
+<li data-ll="35.769,-5.804" data-by="land"><span class="jr-place"><a href="/encyclopedia/tangier">Tangier</a></span> <span class="jr-date">14 June 1325</span><p>Ibn Battuta set off from his home town at the age of 21 to perform a hajj to Mecca, a journey that would ordinarily take sixteen months. He did not return to Morocco for 24 years.</p></li>
+<li data-ll="31.198,29.892" data-by="land"><span class="jr-place"><a href="/encyclopedia/alexandria">Alexandria</a></span> <span class="jr-date">early spring 1326</span><p>He arrived at the port, then part of the Bahri Mamluk empire, after a journey of over 3,500 km. There Sheikh Burhanuddin is supposed to have foretold that he would become a world traveller.</p></li>
+<li data-ll="33.513,36.292" data-by="land"><span class="jr-place"><a href="/encyclopedia/damascus">Damascus</a></span> <span class="jr-date">August 1326</span><p>He reached Damascus by a side trip from Cairo, a route the Mamluk authorities kept safe for pilgrims because of the holy places along it. He spent Ramadan there, in August, before joining a caravan south to Medina.</p></li>
+<li data-ll="21.422,39.826" data-by="land"><span class="jr-place"><a href="/encyclopedia/mecca">Mecca</a></span> <span class="jr-date">November 1326</span><p>He completed his first pilgrimage and took the honorific status of El-Hajji. Rather than going home, he decided to carry on travelling, choosing the Ilkhanate, a Mongol khanate to the northeast, as his next destination.</p></li>
+<li data-ll="33.315,44.366" data-by="land"><span class="jr-place"><a href="/encyclopedia/baghdad">Baghdad</a></span> <span class="jr-date">June 1327</span><p>After a six-month detour into Iran that took him to Isfahan and Shiraz, he arrived in Baghdad. Parts of the city were still ruined from the damage done by Hulagu Khan's army in 1258.</p></li>
+</ol>
+<h3 class="jr-leg">Arabia and the East African coast, c. 1329–1332</h3>
+<ol class="jr-stops" start="6">
+<li data-ll="12.800,45.033" data-by="sea"><span class="jr-place"><a href="/encyclopedia/aden">Aden</a></span> <span class="jr-date">c. 1329 or 1331</span><p>After the hajj he went to Jeddah and followed the Red Sea coast in small boats, then through Yemen, where he met the Rasulid king at Taiz. He probably went on directly to Aden; his visit to Sanaa is doubtful.</p></li>
+<li data-ll="2.039,45.342" data-by="sea"><span class="jr-place">Mogadishu</span> <span class="jr-date">1332</span><p>He sailed from Aden to Zeila and Cape Guardafui, about a week at each. At Mogadishu he found a Somali sultan, Abu Bakr ibn Shaikh 'Umar, and many rich merchants selling fine fabric abroad, including to Egypt.</p></li>
+<li data-ll="-8.982,39.517" data-by="sea"><span class="jr-place"><a href="/encyclopedia/kilwa-kisiwani">Kilwa</a></span> <span class="jr-date">1330</span><p>Kilwa was an important transit centre of the gold trade. He described it as one of the finest and most beautifully built towns, with wooden buildings, and wrote favourably of its ruler, Sultan al-Hasan ibn Sulaiman.</p></li>
+</ol>
+<h3 class="jr-leg">Anatolia, Constantinople and Central Asia, 1330–1333</h3>
+<ol class="jr-stops" start="9">
+<li data-ll="36.908,30.696" data-by="land"><span class="jr-place">Antalya</span> <span class="jr-date">1330 or 1332</span><p>Having crossed to Anatolia on a Genoese ship from Latakia to Alanya, he went west to Antalya. There he met the fityan associations of young artisans, whose hospitality impressed him. His later route across Anatolia is confused in the Rihla.</p></li>
+<li data-ll="41.012,28.976" data-by="land"><span class="jr-place"><a href="/encyclopedia/constantinople">Constantinople</a></span> <span class="jr-date">late 1332 (or 1334)</span><p>He joined the expedition taking Princess Bayalun home to give birth, his first journey beyond the Islamic world. He met the emperor Andronikos III Palaiologos, visited Hagia Sophia and spoke with an Orthodox priest about Jerusalem.</p></li>
+<li data-ll="39.655,66.976" data-by="land"><span class="jr-place"><a href="/encyclopedia/samarkand">Samarkand</a></span> <span class="jr-date">1331–1334</span><p>After a month in Constantinople he returned to Astrakhan and Sarai, then went on to Bukhara and Samarkand. He visited the Chagatai khan Tarmashirin and noted the city walls still ruined from the Mongol invasion of 1220.</p></li>
+</ol>
+<h3 class="jr-leg">India, the Maldives and China, 1333–1346</h3>
+<ol class="jr-stops" start="12">
+<li data-ll="28.667,77.217" data-by="land"><span class="jr-place"><a href="/encyclopedia/delhi">Delhi</a></span> <span class="jr-date">after 12 September 1333</span><p>He crossed the Hindu Kush and reached the Indus on 12 September 1333, then went to Delhi, where Sultan Muhammad bin Tughluq appointed him a qadi. For six years he alternated between favour and suspicion of treason.</p></li>
+<li data-ll="11.248,75.780" data-by="sea"><span class="jr-place">Calicut</span> <span class="jr-date">after 1341</span><p>Given charge of an embassy to China in 1341, he was robbed and kidnapped by bandits on the way to the coast. At Calicut he was the guest of the Zamorin, and a storm sank one of the expedition's ships.</p></li>
+<li data-ll="4.175,73.508" data-by="sea"><span class="jr-place">Malé</span> <span class="jr-date">after 1341</span><p>The leaders of the recently Islamised islands gave him pearls, gold jewellery and slaves and made leaving by ship impossible. He became chief judge, married into the royal family, and resigned after his strict rulings antagonised the rulers.</p></li>
+<li data-ll="5.134,97.201" data-by="sea"><span class="jr-place">Samudra Pasai</span> <span class="jr-date">1345</span><p>After a 40-day voyage he was the guest of the pious sultan Al-Malik Al-Zahir Jamal-ad-Din for about two weeks. No territory east of Samudra Pasai was ruled by a Muslim, and the sultan sent him on to China.</p></li>
+<li data-ll="24.914,118.586" data-by="sea"><span class="jr-place"><a href="/encyclopedia/quanzhou">Quanzhou</a></span> <span class="jr-date">1345</span><p>Muslims called the city Zaitun, but he found no olives. The head of the local Muslim merchants welcomed him with flags, drums and trumpets. Some scholars have questioned whether he reached China at all, suspecting passages borrowed from other authors.</p></li>
+<li data-ll="39.904,116.408" data-by="land"><span class="jr-place"><a href="/encyclopedia/beijing">Beijing</a></span> <span class="jr-date">after 1345</span><p>He is said to have called himself the long-lost ambassador from Delhi and to have been invited to the Yuan court. Scholars point to numerous errors in his account of China, such as confusing the Yellow River with the Grand Canal.</p></li>
+</ol>
+<h3 class="jr-leg">Home by way of the Black Death, Spain and the Sahara, 1348–1354</h3>
+<ol class="jr-stops" start="18">
+<li data-ll="33.513,36.292" data-by="land"><span class="jr-place"><a href="/encyclopedia/damascus">Damascus</a></span> <span class="jr-date">1348</span><p>He arrived intending to retrace his first hajj and learned that his father had died fifteen years earlier. The Black Death had struck, and he later returned to Damascus in July, when the toll had reached 2,400 victims each day.</p></li>
+<li data-ll="35.769,-5.804" data-by="sea"><span class="jr-place"><a href="/encyclopedia/tangier">Tangier</a></span> <span class="jr-date">1349</span><p>After one last detour to Sardinia he returned to Tangier by way of Fez, nearly a quarter of a century after leaving. He found that his mother had also died a few months before.</p></li>
+<li data-ll="37.175,-3.600" data-by="land"><span class="jr-place"><a href="/encyclopedia/granada">Granada</a></span> <span class="jr-date">1350</span><p>He joined Muslims leaving Tangier to defend Gibraltar against Alfonso XI of Castile and León. The Black Death had killed Alfonso before he arrived, so he turned the trip into a sight-seeing tour ending in Granada.</p></li>
+<li data-ll="31.280,-4.280" data-by="land"><span class="jr-place"><a href="/encyclopedia/sijilmasa">Sijilmasa</a></span> <span class="jr-date">autumn 1351</span><p>He left Fez and made his way to this town on the northern edge of the Sahara. There he bought a number of camels and stayed for four months before setting out with a caravan.</p></li>
+<li data-ll="23.000,-4.200" data-by="land"><span class="jr-place">Taghaza</span> <span class="jr-date">1352</span><p>The caravan reached the salt mines after 25 days. The local buildings were made from slabs of salt cut by the slaves of the Masufa tribe, and he recorded that the place was plagued by flies and the water was brackish.</p></li>
+<li data-ll="16.773,-3.007" data-by="land"><span class="jr-place"><a href="/encyclopedia/timbuktu">Timbuktu</a></span> <span class="jr-date">February</span><p>After meeting Mansa Suleyman at the capital of the Mali Empire, he travelled by camel to Timbuktu, at that time a small and relatively unimportant city. After a short stay he went down the Niger to Gao in a canoe.</p></li>
+<li data-ll="16.267,-0.050" data-by="land"><span class="jr-place"><a href="/encyclopedia/gao">Gao</a></span> <span class="jr-date">1353</span><p>After a month in Gao, then an important commercial centre, he left with a large caravan. A message from the Sultan of Morocco ordered him home, and he set off for Sijilmasa in September 1353.</p></li>
+</ol>
+<p class="jr-end">He returned to Morocco early in 1354 and, at the suggestion of the Marinid ruler Abu Inan Faris, dictated an account of his travels to Ibn Juzayy. Modern scholars doubt that he visited every place the account describes.</p>
+<p class="jr-src">Told after the Wikipedia article &#8220;Ibn Battuta&#8221;. Places with an encyclopedia entry are linked.</p>
+</article>
+<article class="jr-j" id="zheng-he" data-kids="1">
+<h2>Zheng He's Treasure Voyages</h2>
+<p class="jr-meta">1405–1433 &#183; <a href="/life/zheng-he">Zheng He</a> &#183; 26 stops</p>
+<p class="jr-intro">The Yongle Emperor ordered the construction of a treasure fleet in 1403, and Admiral Zheng He was commissioned to command it. It made seven voyages to the South China Sea and the Indian Ocean between 1405 and 1433, six under the Yongle Emperor and the seventh under the Xuande Emperor.</p>
+<h3 class="jr-leg">First voyage, 1405–1407</h3>
+<ol class="jr-stops" start="1">
+<li data-ll="32.061,118.779" data-by="sea"><span class="jr-place"><a href="/encyclopedia/nanjing">Nanjing</a></span> <span class="jr-date">autumn 1405</span><p>The fleet assembled at Nanjing in the autumn of 1405 and made ready to depart. The Yongle Emperor had held a banquet for the crew the evening before the maiden voyage.</p></li>
+<li data-ll="14.000,108.000" data-by="sea"><span class="jr-place"><a href="/encyclopedia/champa">Champa</a></span> <span class="jr-date">1405</span><p>After waiting at Changle for the northeast monsoon, the fleet left the Fujian coast. Champa was the first foreign destination, and the port of Qui Nhon was always the first the fleet visited.</p></li>
+<li data-ll="2.200,102.251" data-by="sea"><span class="jr-place"><a href="/encyclopedia/malacca">Malacca</a></span> <span class="jr-date">1405–1407</span><p>The fleet called at Malacca on the way out and stopped there again on its return journey to China.</p></li>
+<li data-ll="11.248,75.780" data-by="sea"><span class="jr-place">Calicut</span> <span class="jr-date">December 1406 to April 1407</span><p>On the Malabar Coast, the fleet went as far as Calicut. Mills states that it may have stayed four months there, from December to April 1407.</p></li>
+<li data-ll="-2.983,104.764" data-by="sea"><span class="jr-place"><a href="/encyclopedia/palembang">Palembang</a></span> <span class="jr-date">1407</span><p>On the return trip Zheng and his associates fought the pirate fleet of Chen Zuyi, who had seized Palembang and dominated the route through the Strait of Malacca. Chen's fleet was defeated.</p></li>
+<li data-ll="32.061,118.779" data-by="sea"><span class="jr-place"><a href="/encyclopedia/nanjing">Nanjing</a></span> <span class="jr-date">2 October 1407</span><p>The fleet returned to Nanjing. Foreign envoys from Calicut, Quilon, Semudera, Aru, Malacca and other nations had come with it to present tribute at the Ming court.</p></li>
+</ol>
+<h3 class="jr-leg">Second voyage, 1407–1409</h3>
+<ol class="jr-stops" start="7">
+<li data-ll="-7.312,109.418" data-by="sea"><span class="jr-place"><a href="/encyclopedia/java">Java</a></span> <span class="jr-date">late 1407 or early 1408</span><p>The fleet settled the enmity between Ming China and Java. In a civil war a King of West Java had killed 170 members of a Chinese embassy, and the Ming court demanded 60,000 liang of gold in compensation.</p></li>
+<li data-ll="11.248,75.780" data-by="sea"><span class="jr-place">Calicut</span> <span class="jr-date">late 1407 or early 1408</span><p>The fleet was tasked with the formal investiture of Mana Vikraan as King of Calicut. A tablet was placed in Calicut to commemorate the relationship between China and India.</p></li>
+</ol>
+<h3 class="jr-leg">Third voyage, 1409–1411</h3>
+<ol class="jr-stops" start="9">
+<li data-ll="6.033,80.216" data-by="sea"><span class="jr-place"><a href="/encyclopedia/galle">Galle</a></span> <span class="jr-date">1410</span><p>On the outward journey the fleet landed at Galle in Ceylon. There Zheng set up a trilingual inscription in Chinese, Tamil and Persian, praising the Buddha, the local god Tenavarai Nayanar and Allah.</p></li>
+<li data-ll="6.900,79.916" data-by="land"><span class="jr-place"><a href="/encyclopedia/sri-jayawardenepura-kotte">Kotte</a></span> <span class="jr-date">1411</span><p>On the homeward journey Zheng and 2,000 troops went overland into Kotte, where King Alakeshvara had lured them. The Chinese invaded Kotte, captured its capital and took Alakeshvara and his family captive.</p></li>
+</ol>
+<h3 class="jr-leg">Fourth voyage, 1413–1415</h3>
+<ol class="jr-stops" start="11">
+<li data-ll="27.067,56.460" data-by="sea"><span class="jr-place">Hormuz</span><p>The fleet sailed beyond Calicut for the first time, through the Maldive and Laccadive Islands to Hormuz.</p></li>
+<li data-ll="5.134,97.201" data-by="sea"><span class="jr-place">Semudera</span> <span class="jr-date">1415</span><p>On the way home the fleet stopped in northern Sumatra, where Zheng was ordered to attack the usurper Sekandar. The Ming forces defeated him and pursued his forces to Lambri, where they captured him, his wife and his child.</p></li>
+</ol>
+<h3 class="jr-leg">Fifth voyage, 1417–1419</h3>
+<ol class="jr-stops" start="13">
+<li data-ll="24.914,118.586" data-by="sea"><span class="jr-place"><a href="/encyclopedia/quanzhou">Quanzhou</a></span> <span class="jr-date">31 May 1417</span><p>Zheng may have left the Chinese coast in the autumn of 1417, first making port at Quanzhou to load porcelain and other goods. A Ming tablet there records him burning incense for divine protection for the voyage.</p></li>
+<li data-ll="12.800,45.033" data-by="sea"><span class="jr-place"><a href="/encyclopedia/aden">Aden</a></span> <span class="jr-date">January 1419</span><p>A Yemeni chronicle reports that Chinese ships reached the Aden coast in January 1419, and that they did not leave the Rasulid capital at Ta'izz before 19 March.</p></li>
+<li data-ll="2.039,45.342" data-by="sea"><span class="jr-place">Mogadishu</span> <span class="jr-date">1419</span><p>Mogadishu lay on the most likely route for Arabia and East Africa, which ran by Hormuz, Lasa, Aden, Mogadishu, Brava, Zhubu and Malindi. The fleet returned to China on 8 August 1419.</p></li>
+<li data-ll="1.113,44.030" data-by="sea"><span class="jr-place">Brava</span> <span class="jr-date">1419</span><p>The fleet probably called at Brava after Mogadishu on this voyage. Contemporary Chinese porcelain has been excavated at the East African places the fleet visited.</p></li>
+<li data-ll="-3.219,40.117" data-by="sea"><span class="jr-place">Malindi</span> <span class="jr-date">1419</span><p>Malindi, on the East African coast, was probably the last place the fleet reached on the fifth voyage before it turned for home.</p></li>
+</ol>
+<h3 class="jr-leg">Sixth voyage, 1421–1422</h3>
+<ol class="jr-stops" start="18">
+<li data-ll="18.000,54.000" data-by="sea"><span class="jr-place"><a href="/encyclopedia/dhofar">Dhofar</a></span> <span class="jr-date">1421–1422</span><p>After the fleet divided at Semudera, detached squadrons went on to destinations including the three Arabian states of Dhofar, Lasa and Aden.</p></li>
+<li data-ll="12.800,45.033" data-by="sea"><span class="jr-place"><a href="/encyclopedia/aden">Aden</a></span> <span class="jr-date">1421–1422</span><p>The eunuch Zhou, probably Zhou Man, led a detached squadron to Aden. The fleet returned to China on 3 September 1422 with envoys from Siam, Semudera, Aden and other countries.</p></li>
+</ol>
+<h3 class="jr-leg">Seventh voyage, 1431–1433</h3>
+<ol class="jr-stops" start="20">
+<li data-ll="-7.246,112.738" data-by="sea"><span class="jr-place">Surabaya</span> <span class="jr-date">7 March 1432</span><p>After leaving Nanjing on 19 January 1431, the fleet reached Surabaya in Java and departed on 13 July, according to the Xia Xiyang.</p></li>
+<li data-ll="7.000,93.833" data-by="sea"><span class="jr-place">Great Nicobar Island</span> <span class="jr-date">14 November 1432</span><p>Fei Xin writes that the fleet anchored for three days at Cuilanxu, probably Great Nicobar Island, because of unfavourable winds and waves. Local men and women came in log boats to trade coconuts.</p></li>
+<li data-ll="11.248,75.780" data-by="sea"><span class="jr-place">Calicut</span> <span class="jr-date">10 December 1432</span><p>The fleet arrived at Calicut on 10 December and left four days later, on 14 December.</p></li>
+<li data-ll="27.067,56.460" data-by="sea"><span class="jr-place">Hormuz</span> <span class="jr-date">17 January 1433</span><p>The fleet arrived at Hormuz, the farthest west of the eight destinations the Xia Xiyang records for this voyage, and left on 9 March.</p></li>
+<li data-ll="21.422,39.826" data-by="sea"><span class="jr-place"><a href="/encyclopedia/mecca">Mecca</a></span> <span class="jr-date">1432–1433</span><p>Ma Huan writes that Hong sent seven men from Calicut with a ship bound for Mecca. They took a year to go and return, and bought giraffes, lions and ostriches.</p></li>
+<li data-ll="31.452,121.104" data-by="sea"><span class="jr-place">Taicang</span> <span class="jr-date">7 July 1433</span><p>On the return the fleet arrived at Taicang. The Xia Xiyang did not record the later stages of the journey to the capital.</p></li>
+<li data-ll="39.904,116.408" data-by="land"><span class="jr-place"><a href="/encyclopedia/beijing">Beijing</a></span> <span class="jr-date">22 July 1433</span><p>The fleet arrived at the capital, Beijing. On 27 July the Xuande Emperor bestowed ceremonial robes and paper money on its personnel.</p></li>
+</ol>
+<p class="jr-end">The seventh voyage returned in 1433 with envoys from 11 countries, including one from Mecca. It is not exactly known why the voyages ended.</p>
+<p class="jr-src">Told after the Wikipedia article &#8220;Ming treasure voyages&#8221;. Places with an encyclopedia entry are linked.</p>
+</article>
+<article class="jr-j" id="columbus" data-kids="0">
+<h2>The Voyages of Christopher Columbus</h2>
+<p class="jr-meta">1492–1504 &#183; <a href="/life/christopher-columbus">Christopher Columbus</a> &#183; 30 stops</p>
+<p class="jr-intro">Between 1492 and 1504 the Genoese navigator Christopher Columbus led four transatlantic expeditions in the name of the Catholic Monarchs of Spain. He sailed in search of a westward route to India, China, Japan and the Spice Islands, and believed at first that he had reached the Indies.</p>
+<h3 class="jr-leg">First voyage, 1492–1493</h3>
+<ol class="jr-stops" start="1">
+<li data-ll="37.228,-6.893" data-by="sea"><span class="jr-place">Palos</span> <span class="jr-date">3 August 1492</span><p>Columbus set out with three ships, the Santa María, the Pinta and the Niña, going down the Rio Tinto into the Atlantic.</p></li>
+<li data-ll="28.092,-17.110" data-by="sea"><span class="jr-place">San Sebastián de La Gomera</span> <span class="jr-date">6 September 1492</span><p>After repairs to the Pinta's rudder in the Canary Islands, the ships met at La Gomera and departed from there for the Atlantic crossing, which lasted five weeks.</p></li>
+<li data-ll="24.035,-74.498" data-by="sea"><span class="jr-place">San Salvador (Guanahani)</span> <span class="jr-date">12 October 1492</span><p>Columbus came ashore on an island he called San Salvador, known to its people as Guanahani. He thought he had reached the Indies, and he met the Lucayan, Taíno and Arawak peoples and took some Arawaks prisoner.</p></li>
+<li data-ll="22.000,-79.500" data-by="sea"><span class="jr-place"><a href="/encyclopedia/cuba">Cuba</a></span> <span class="jr-date">28 October 1492</span><p>Columbus landed on the eastern coast of a large island he called Juana and explored its northeast coast. He believed he was near the lands of Asia.</p></li>
+<li data-ll="19.691,-72.016" data-by="sea"><span class="jr-place"><a href="/encyclopedia/la-navidad">Fort Navidad</a></span> <span class="jr-date">26 December 1492</span><p>The Santa María ran aground on Hispaniola on 25 December and was abandoned. Columbus began a fort built from its remains and left 39 men there.</p></li>
+<li data-ll="36.973,-25.095" data-by="sea"><span class="jr-place">Santa Maria, Azores</span> <span class="jr-date">17 February 1493</span><p>On the way home the Niña anchored off the island, where the cable broke on rocks. The island's captain later held part of the crew prisoner for a time.</p></li>
+<li data-ll="38.708,-9.139" data-by="sea"><span class="jr-place"><a href="/encyclopedia/lisbon">Lisbon</a></span> <span class="jr-date">4 March 1493</span><p>A storm forced Columbus into Lisbon. King John II of Portugal met him and said he believed the voyage broke the 1479 Treaty of Alcáçovas.</p></li>
+<li data-ll="37.228,-6.893" data-by="sea"><span class="jr-place">Palos</span> <span class="jr-date">15 March 1493</span><p>Columbus arrived back at his starting port and later reported to Ferdinand and Isabella in Barcelona, bringing gold samples, plants and some Taíno he had kidnapped.</p></li>
+</ol>
+<h3 class="jr-leg">Second voyage, 1493–1496</h3>
+<ol class="jr-stops" start="9">
+<li data-ll="36.535,-6.298" data-by="sea"><span class="jr-place">Cádiz</span> <span class="jr-date">25 September 1493</span><p>Columbus sailed with a much larger fleet of two carracks and 15 caravels. The stated purpose was to convert the Indigenous Americans to Christianity.</p></li>
+<li data-ll="15.417,-61.333" data-by="sea"><span class="jr-place"><a href="/encyclopedia/dominica">Dominica</a></span> <span class="jr-date">3 November 1493</span><p>The fleet landed on a rugged shore of this island, which Columbus named Dominica. On the same day he landed at Marie-Galante.</p></li>
+<li data-ll="18.250,-66.500" data-by="sea"><span class="jr-place"><a href="/encyclopedia/puerto-rico">Puerto Rico</a></span> <span class="jr-date">19 November 1493</span><p>The fleet sighted the island, known to the Taíno as Borinquen, on 17 November and landed at the Bay of Añasco on 19 November. Columbus named it San Juan Bautista and stayed two days.</p></li>
+<li data-ll="19.691,-72.016" data-by="sea"><span class="jr-place"><a href="/encyclopedia/la-navidad">La Navidad</a></span> <span class="jr-date">27 November 1493</span><p>The fleet signalled the fort and got no answer. Next day the Spaniards found its burnt remains, and Guacanagari's cousin admitted that Caonabo had wiped out the Europeans.</p></li>
+<li data-ll="19.890,-71.079" data-by="sea"><span class="jr-place"><a href="/encyclopedia/la-isabela">La Isabela</a></span> <span class="jr-date">2 January 1494</span><p>The fleet reached a plain on the north coast of Hispaniola and founded the settlement of La Isabela. By the end of 1494 disease and famine had claimed two-thirds of the Spanish settlers.</p></li>
+<li data-ll="18.180,-77.400" data-by="sea"><span class="jr-place"><a href="/encyclopedia/jamaica">Jamaica</a></span> <span class="jr-date">5 May 1494</span><p>After leaving Hispaniola, Columbus reached Cuba on 30 April and Discovery Bay on 5 May. He then explored the south coast of Cuba, which he believed to be a peninsula of China.</p></li>
+<li data-ll="16.250,-61.500" data-by="sea"><span class="jr-place">Guadeloupe</span> <span class="jr-date">10 April 1496</span><p>Short of food on the way home, Columbus asked the people of Guadeloupe for supplies. They ambushed the Spaniards with arrows, who destroyed some huts and held 13 women and children hostage to force a sale of cassava.</p></li>
+<li data-ll="36.494,-6.217" data-by="sea"><span class="jr-place">Bay of Cádiz</span> <span class="jr-date">11 June 1496</span><p>After landing in Portugal near Odemira on 8 June, the fleet returned to Spain through the Bay of Cádiz.</p></li>
+</ol>
+<h3 class="jr-leg">Third voyage, 1498–1500</h3>
+<ol class="jr-stops" start="17">
+<li data-ll="36.779,-6.354" data-by="sea"><span class="jr-place">Sanlúcar</span> <span class="jr-date">30 May 1498</span><p>Columbus left with six ships. Three went straight to Hispaniola with supplies, while he took the other three to explore what lay to the south.</p></li>
+<li data-ll="10.461,-61.249" data-by="sea"><span class="jr-place">Trinidad</span> <span class="jr-date">31 July 1498</span><p>The fleet sighted Trinidad from the southeast, sailed along its southern coast and anchored near Soldado Rock, where it met a group of Amerindians in canoes.</p></li>
+<li data-ll="10.700,-62.500" data-by="sea"><span class="jr-place">Paria Peninsula</span> <span class="jr-date">5 August 1498</span><p>After crossing the Gulf of Paria, the fleet landed on the mainland of South America. Columbus called it another world but still believed it was Asia.</p></li>
+<li data-ll="10.987,-63.936" data-by="sea"><span class="jr-place">Margarita</span> <span class="jr-date">14 August 1498</span><p>Columbus sailed to the islands of Chacachacare and Margarita. He also sighted Tobago and Grenada.</p></li>
+<li data-ll="19.000,-71.000" data-by="sea"><span class="jr-place"><a href="/encyclopedia/hispaniola">Hispaniola</a></span> <span class="jr-date">19 August 1498</span><p>Columbus returned in poor health to find many of the settlers in rebellion against his rule. They said he had misled them about the riches they expected.</p></li>
+<li data-ll="18.462,-69.936" data-by="sea"><span class="jr-place"><a href="/encyclopedia/santo-domingo">Santo Domingo</a></span> <span class="jr-date">3 February 1500</span><p>Columbus came back to Santo Domingo planning to sail to Spain to answer the rebels' accounts. In 1500 the Crown had him removed as governor and sent to Spain in chains.</p></li>
+<li data-ll="37.175,-3.600" data-by="land"><span class="jr-place"><a href="/encyclopedia/granada">Granada</a></span> <span class="jr-date">12 December 1500</span><p>The king and queen summoned the Columbus brothers to the Alhambra. With his chains removed, Columbus admitted his faults and begged forgiveness, and their freedom was restored.</p></li>
+</ol>
+<h3 class="jr-leg">Fourth voyage, 1502–1504</h3>
+<ol class="jr-stops" start="24">
+<li data-ll="36.535,-6.298" data-by="sea"><span class="jr-place">Cádiz</span> <span class="jr-date">9 May 1502</span><p>Columbus left with four ships, seeking a westward passage to the Indian Ocean. The king and queen ordered him not to stop at Hispaniola.</p></li>
+<li data-ll="14.650,-61.015" data-by="sea"><span class="jr-place">Martinique</span> <span class="jr-date">15 June 1502</span><p>After a crossing of twenty days with the trade winds, the ships landed at Carbet on Martinique.</p></li>
+<li data-ll="18.462,-69.936" data-by="sea"><span class="jr-place"><a href="/encyclopedia/santo-domingo">Santo Domingo</a></span> <span class="jr-date">29 June 1502</span><p>Columbus expected a hurricane and asked for shelter. He was refused port, and the governor would not heed his warning. A storm then sank many ships, and some of his enemies accused him of conjuring it.</p></li>
+<li data-ll="16.472,-85.877" data-by="sea"><span class="jr-place">Guanaja</span> <span class="jr-date">30 July 1502</span><p>Columbus reached the Bay Islands off Honduras. His brother Bartolomeo found native merchants, possibly Mayans, in a large canoe, and the local people introduced Columbus to cacao.</p></li>
+<li data-ll="9.300,-82.400" data-by="sea"><span class="jr-place">Almirante Bay</span> <span class="jr-date">16 October 1502</span><p>After two months searching the coasts of Honduras, Nicaragua and Costa Rica for a passage, Columbus arrived in Almirante Bay in Panama.</p></li>
+<li data-ll="18.435,-77.202" data-by="sea"><span class="jr-place">St. Ann's Bay</span> <span class="jr-date">25 June 1503</span><p>Damaged by storms, the ships were beached in Jamaica, where Columbus and his men remained stranded for a year. Help came from Hispaniola on 29 June 1504.</p></li>
+<li data-ll="36.779,-6.354" data-by="sea"><span class="jr-place">Sanlúcar de Barrameda</span> <span class="jr-date">7 November 1504</span><p>Columbus and his son Fernando had left Hispaniola in a caravel on 11 September 1504. They arrived at Sanlúcar and travelled on to Seville.</p></li>
+</ol>
+<p class="jr-end">After the fourth voyage Columbus reached Spain in November 1504 and died in 1506. The Americas were already inhabited by Indigenous peoples, and his voyages led to the Spanish colonization and conquest that followed.</p>
+<p class="jr-src">Told after the Wikipedia article &#8220;Voyages of Christopher Columbus&#8221;. Places with an encyclopedia entry are linked.</p>
+</article>
+<article class="jr-j" id="magellan" data-kids="0">
+<h2>Magellan and Elcano's Voyage Round the World</h2>
+<p class="jr-meta">1519–1522 &#183; <a href="/encyclopedia/ferdinand-magellan">Ferdinand Magellan</a> &#183; 18 stops</p>
+<p class="jr-intro">A fleet of five ships, planned and first led by the Portuguese explorer Ferdinand Magellan for the Spanish crown, left Spain in 1519 with about 270 men. Its purpose was to secure a sea route to the Moluccas, or Spice Islands, in present-day Indonesia.</p>
+<h3 class="jr-leg">Across the Atlantic and down South America</h3>
+<ol class="jr-stops" start="1">
+<li data-ll="36.779,-6.354" data-by="sea"><span class="jr-place">Sanlúcar de Barrameda</span> <span class="jr-date">20 September 1519</span><p>The five ships left Seville and went down the Guadalquivir to Sanlúcar de Barrameda at its mouth, where they stayed more than five weeks before setting sail and leaving Spain.</p></li>
+<li data-ll="28.269,-16.606" data-by="sea"><span class="jr-place">Tenerife</span> <span class="jr-date">26 September 1519</span><p>The fleet stopped in the Canary Islands to take in supplies. Here Magellan received a secret warning that some of the Castilian captains were planning a mutiny.</p></li>
+<li data-ll="-22.911,-43.206" data-by="sea"><span class="jr-place"><a href="/encyclopedia/rio-de-janeiro">Rio de Janeiro</a></span> <span class="jr-date">13 December 1519</span><p>The fleet reached the harbour, which was nominally Portuguese territory but had no permanent settlement then. Over 13 days the crew repaired the ships, took on food and water, and traded with the local people.</p></li>
+<li data-ll="-34.883,-56.714" data-by="sea"><span class="jr-place"><a href="/encyclopedia/rio-de-la-plata">Río de la Plata</a></span> <span class="jr-date">11 January 1520</span><p>Magellan believed he had found the strait he sought, but it was the mouth of a river. Juan Serrano, sent to probe it, reported that it was a river, and the fleet found fresh water.</p></li>
+<li data-ll="-49.307,-67.730" data-by="sea"><span class="jr-place">Port St. Julian</span> <span class="jr-date">31 March 1520</span><p>Weather had grown so bad that Magellan chose to wait out the winter in a natural harbour. A mutiny led by Juan de Cartagena and others began within a day, and the fleet stayed about five months.</p></li>
+<li data-ll="-50.133,-68.350" data-by="sea"><span class="jr-place">Santa Cruz</span> <span class="jr-date">24 August 1520</span><p>After the Santiago found shelter at the Santa Cruz estuary, Magellan moved the fleet there from St. Julian around this date. They spent six weeks there before resuming the search for a strait.</p></li>
+</ol>
+<h3 class="jr-leg">The strait, the Pacific and the Philippines</h3>
+<ol class="jr-stops" start="7">
+<li data-ll="-52.333,-68.354" data-by="sea"><span class="jr-place">Cape Virgenes</span> <span class="jr-date">21 October 1520</span><p>The fleet sighted a headland at 52°S and named it Cape Virgenes. A storm drove two ships into a narrow passage beyond it, which proved to be the strait they sought.</p></li>
+<li data-ll="-54.000,-71.000" data-by="sea"><span class="jr-place">Strait of Magellan</span> <span class="jr-date">28 November 1520</span><p>The three remaining ships completed the passage to the Pacific, which Magellan named the Mar Pacifico. The San Antonio had turned back and sailed to Spain.</p></li>
+<li data-ll="13.500,144.800" data-by="sea"><span class="jr-place">Guam</span> <span class="jr-date">6 March 1521</span><p>After the Pacific crossing the fleet reached the Mariana Islands and anchored at Guam. Chamorro people took goods from the ships, and Magellan's men later burned Chamorro houses and killed seven men.</p></li>
+<li data-ll="10.733,125.717" data-by="sea"><span class="jr-place">Homonhon</span> <span class="jr-date">16 March 1521</span><p>The fleet landed on an uninhabited island and traded with people from nearby Suluan. They rested and gathered food and water for nearly two weeks.</p></li>
+<li data-ll="9.908,125.075" data-by="sea"><span class="jr-place">Limasawa</span> <span class="jr-date">31 March 1521</span><p>Magellan met Rajah Kolambu and Rajah Siawi here. On Easter Day he and fifty men attended the first Catholic Mass in the Philippines, and he claimed the archipelago for Spain.</p></li>
+<li data-ll="10.317,123.750" data-by="sea"><span class="jr-place"><a href="/encyclopedia/cebu">Cebu</a></span> <span class="jr-date">7 April 1521</span><p>Magellan persuaded Rajah Humabon to waive the tribute usually asked of visitors. Humabon and his family were baptised on 14 April, and in total 2,200 people were converted.</p></li>
+<li data-ll="10.300,123.967" data-by="sea"><span class="jr-place">Mactan</span> <span class="jr-date">April 1521</span><p>Lapu-Lapu's people on Mactan resisted conversion, and Magellan decided to make them submit by force. He landed with 49 men against a far larger force and was killed in the battle.</p></li>
+<li data-ll="10.317,123.750" data-by="sea"><span class="jr-place"><a href="/encyclopedia/cebu">Cebu</a></span> <span class="jr-date">1 May 1521</span><p>Humabon invited about thirty men, mostly officers, to a feast. Armed Cebuanos entered the hall and killed twenty-seven of them, and the ships left port.</p></li>
+</ol>
+<h3 class="jr-leg">The Moluccas and home</h3>
+<ol class="jr-stops" start="15">
+<li data-ll="0.683,127.400" data-by="sea"><span class="jr-place">Tidore</span> <span class="jr-date">8 November 1521</span><p>The Trinidad and Victoria reached the Moluccas and were greeted by al-Mansur. A trading post was set up and the men bought large quantities of cloves.</p></li>
+<li data-ll="-34.358,18.472" data-by="sea"><span class="jr-place"><a href="/encyclopedia/cape-of-good-hope">Cape of Good Hope</a></span> <span class="jr-date">6 May 1522</span><p>The Victoria, under Elcano, left Tidore on 21 December 1521 and crossed the Indian Ocean. It rounded the Cape with only rice for rations.</p></li>
+<li data-ll="15.300,-23.700" data-by="sea"><span class="jr-place">Cape Verde</span> <span class="jr-date">9 July 1522</span><p>Twenty crewmen had died of starvation when Elcano put in for provisions. The Portuguese detained 13 crew members on finding spices aboard, though the Victoria escaped.</p></li>
+<li data-ll="36.779,-6.354" data-by="sea"><span class="jr-place">Sanlúcar de Barrameda</span> <span class="jr-date">6 September 1522</span><p>Elcano and the remaining crew arrived aboard the Victoria almost exactly three years after they departed. They then sailed upriver to Seville.</p></li>
+</ol>
+<p class="jr-end">Magellan died in battle in the Philippines in April 1521. Juan Sebastián Elcano brought the Victoria back to Spain on 6 September 1522 with 18 men, the first circumnavigation of the Earth.</p>
+<p class="jr-src">Told after the Wikipedia article &#8220;Magellan expedition&#8221;. Places with an encyclopedia entry are linked.</p>
+</article>
+<article class="jr-j" id="cook" data-kids="0">
+<h2>James Cook's First Voyage in HMS Endeavour</h2>
+<p class="jr-meta">1768–1771 &#183; <a href="/encyclopedia/james-cook">James Cook</a> &#183; 19 stops</p>
+<p class="jr-intro">The first voyage of James Cook was a combined Royal Navy and Royal Society expedition to the south Pacific aboard HMS Endeavour. Its aims were to observe the 1769 transit of Venus from Tahiti and to seek evidence of the postulated Terra Australis Incognita.</p>
+<h3 class="jr-leg">To Tahiti and the Society Islands</h3>
+<ol class="jr-stops" start="1">
+<li data-ll="50.371,-4.142" data-by="sea"><span class="jr-place">Plymouth</span> <span class="jr-date">26 August 1768</span><p>Cook left Plymouth Dockyard with 94 people and 18 months of provisions.</p></li>
+<li data-ll="-22.911,-43.206" data-by="sea"><span class="jr-place"><a href="/encyclopedia/rio-de-janeiro">Rio de Janeiro</a></span> <span class="jr-date">15 November 1768</span><p>Endeavour stayed at Rio until 2 December to re-provision and make repairs. The Viceroy suspected the voyage had other aims, and Cook took offence at his suspicion.</p></li>
+<li data-ll="-55.980,-67.289" data-by="sea"><span class="jr-place"><a href="/encyclopedia/cape-horn">Cape Horn</a></span><p>After leaving Rio de Janeiro the ship rounded Cape Horn and continued westward across the Pacific, reaching Tahiti in April 1769.</p></li>
+<li data-ll="-17.500,-149.500" data-by="sea"><span class="jr-place">Matavai Bay</span> <span class="jr-date">13 April 1769</span><p>Endeavour arrived at Matavai Bay in Tahiti, where Cook commissioned a small fort and observatory at Point Venus. The transit was observed on 3 June.</p></li>
+<li data-ll="-16.733,-151.033" data-by="sea"><span class="jr-place"><a href="/encyclopedia/huahine">Huahine</a></span> <span class="jr-date">16 July 1769</span><p>Endeavour entered the harbour at Huahine. Tupaia, a local priest and mariner, had joined the ship as pilot, interpreter and intermediary.</p></li>
+<li data-ll="-16.820,-151.440" data-by="sea"><span class="jr-place">Raiatea</span> <span class="jr-date">20 July 1769</span><p>Cook raised the flag and claimed Raiatea-Tahaa and the nearby islands for Great Britain, naming them the Society Islands.</p></li>
+</ol>
+<h3 class="jr-leg">New Zealand</h3>
+<ol class="jr-stops" start="7">
+<li data-ll="-38.716,177.991" data-by="sea"><span class="jr-place">Poverty Bay</span> <span class="jr-date">7 October 1769</span><p>Cook and a landing party went ashore in the north-east of the North Island. In the first two days the encounters with Māori resulted in the death of four or five locals.</p></li>
+<li data-ll="-39.643,177.096" data-by="sea"><span class="jr-place">Cape Kidnappers</span> <span class="jr-date">15 October 1769</span><p>Three more Māori were killed in an encounter off Cape Kidnappers. Cook's journal shows regret that he had failed his instructions to avoid hostilities.</p></li>
+<li data-ll="-36.810,175.743" data-by="sea"><span class="jr-place">Mercury Bay</span> <span class="jr-date">9 November 1769</span><p>Cook observed the transit of Mercury here and formally claimed possession of the bay for Great Britain. One local was killed in a trading dispute, the last recorded death of a Māori at the hands of Cook's crew.</p></li>
+<li data-ll="-41.250,174.016" data-by="sea"><span class="jr-place">Queen Charlotte Sound</span> <span class="jr-date">31 January 1770</span><p>Cook claimed possession of the sound and the adjacent lands in the name of King George III. From Arapawa Island he had seen the strait he named Cook Strait.</p></li>
+</ol>
+<h3 class="jr-leg">The coast of New Holland</h3>
+<ol class="jr-stops" start="11">
+<li data-ll="-38.000,148.883" data-by="sea"><span class="jr-place">Point Hicks</span> <span class="jr-date">19 April 1770</span><p>Land was sighted at 6 a.m. and Cook named it Point Hicks. His party became the first recorded Europeans to encounter Australia's eastern coastline.</p></li>
+<li data-ll="-33.983,151.183" data-by="sea"><span class="jr-place">Botany Bay</span> <span class="jr-date">29 April 1770</span><p>Cook's party landed at Silver Beach on Botany Bay (Kamay). Two Gweagal men opposed the landing, and Cook fired small shot and wounded one of them in the leg.</p></li>
+<li data-ll="-24.169,151.882" data-by="sea"><span class="jr-place">Seventeen Seventy</span> <span class="jr-date">23 May 1770</span><p>Endeavour stopped at Bustard Bay. On 24 May Cook and others went ashore, found a freshwater stream and saw fires and shells showing Aboriginal occupation.</p></li>
+<li data-ll="-15.458,145.233" data-by="sea"><span class="jr-place">Endeavour River</span> <span class="jr-date">16 June 1770</span><p>After running aground on the Great Barrier Reef on 11 June, Cook got Endeavour into the river mouth on 16 June. Repairs delayed the voyage almost seven weeks, and encounters with the Guugu Yimidhirr were mainly peaceable.</p></li>
+<li data-ll="-10.727,142.397" data-by="sea"><span class="jr-place">Possession Island</span> <span class="jr-date">22 August 1770</span><p>Cook named Cape York and then went to Possession Island, where he claimed the whole eastern coastline he had explored as British territory.</p></li>
+</ol>
+<h3 class="jr-leg">Home by the East Indies</h3>
+<ol class="jr-stops" start="16">
+<li data-ll="-6.135,106.813" data-by="sea"><span class="jr-place">Batavia</span> <span class="jr-date">October 1770</span><p>Endeavour came into Batavia, the capital of the Dutch East Indies, for repairs. Seven of the expedition died there, among them Tupaia, and more died of illness on the passage home.</p></li>
+<li data-ll="-34.358,18.472" data-by="sea"><span class="jr-place"><a href="/encyclopedia/cape-of-good-hope">Cape of Good Hope</a></span> <span class="jr-date">13 March 1771</span><p>Endeavour rounded the Cape of Good Hope after leaving Batavia on 26 December.</p></li>
+<li data-ll="-15.965,-5.715" data-by="sea"><span class="jr-place"><a href="/encyclopedia/saint-helena">Saint Helena</a></span><p>After rounding the Cape of Good Hope, Cook stopped at Saint Helena. England was sighted again on 10 July 1771.</p></li>
+<li data-ll="51.223,1.401" data-by="sea"><span class="jr-place">Deal</span> <span class="jr-date">12 July 1771</span><p>Endeavour anchored in the Downs that afternoon and Cook went ashore at Deal, Kent. His return was unexpected, as newspapers had reported fears that the ship was lost.</p></li>
+</ol>
+<p class="jr-end">Endeavour reached the English port of Deal on 12 July 1771, and the voyage lasted almost three years. Seven of the expedition died in Batavia and a further 23 on the passage from there to England.</p>
+<p class="jr-src">Told after the Wikipedia article &#8220;First voyage of James Cook&#8221;. Places with an encyclopedia entry are linked.</p>
+</article>
+<article class="jr-j" id="lewis-and-clark" data-kids="1">
+<h2>The Lewis and Clark Expedition</h2>
+<p class="jr-meta">1804–1806 &#183; <a href="/encyclopedia/lewis-and-clark-expedition">Meriwether Lewis and William Clark</a> &#183; 16 stops</p>
+<p class="jr-intro">After the Louisiana Purchase, President Thomas Jefferson commissioned the Corps of Discovery under Captain Meriwether Lewis and Second Lieutenant William Clark. It was to find a practical water route across the continent, map the land and establish relations with the Native American nations along the Missouri River.</p>
+<h3 class="jr-leg">Up the Missouri</h3>
+<ol class="jr-stops" start="1">
+<li data-ll="38.803,-90.101" data-by="land"><span class="jr-place">Camp Dubois</span> <span class="jr-date">14 May 1804</span><p>Under Clark's command the Corps set out at 4 pm up the Missouri in a keelboat and two pirogues. It may have had as many as 45 members, among them York, a Black man enslaved by Clark.</p></li>
+<li data-ll="38.789,-90.512" data-by="land"><span class="jr-place">St. Charles</span> <span class="jr-date">21 May 1804</span><p>Lewis joined the party at St. Charles, Missouri, six days after it left Camp Dubois. The expedition set out again the next afternoon, 21 May, and followed the Missouri upriver.</p></li>
+<li data-ll="42.496,-96.405" data-by="land"><span class="jr-place">Floyd's Bluff, Sioux City</span> <span class="jr-date">20 August 1804</span><p>Sergeant Charles Floyd died, apparently of acute appendicitis, the only member of the expedition to die. He was buried on a bluff by the river with a cedar post carrying his name and the day of his death.</p></li>
+<li data-ll="44.359,-100.376" data-by="land"><span class="jr-place">The Bad River, near Fort Pierre</span> <span class="jr-date">25 September 1804</span><p>The expedition met the Lakota, whom it called Sioux, under chiefs including Black Buffalo and the Partisan. The chiefs demanded tribute for passage, warriors seized a boat, and Lewis and Clark made a show of force until Black Buffalo ordered his men back.</p></li>
+<li data-ll="47.296,-101.286" data-by="land"><span class="jr-place">Fort Mandan</span> <span class="jr-date">winter 1804–1805</span><p>The party wintered in the Mandan nation's territory, where it met the trapper Toussaint Charbonneau and his young Shoshone wife Sacagawea. Peace with the Mandan chiefs was made by sharing a ceremonial pipe, and the keelboat went back to St. Louis on 7 April 1805.</p></li>
+</ol>
+<h3 class="jr-leg">Over the mountains to the Pacific</h3>
+<ol class="jr-stops" start="6">
+<li data-ll="47.930,-110.491" data-by="land"><span class="jr-place">Marias River</span> <span class="jr-date">16 June 1805</span><p>Sacagawea became dangerously ill at the Marias River. She found relief by drinking mineral water from the sulphur spring that fed into it.</p></li>
+<li data-ll="44.974,-113.445" data-by="land"><span class="jr-place">Lemhi Pass</span> <span class="jr-date">1805</span><p>The expedition followed the Missouri to its headwaters and crossed the Continental Divide near Lemhi Pass. Lewis and Clark held a mistaken belief that boats could easily be carried from the Missouri's headwaters to the Columbia.</p></li>
+<li data-ll="46.635,-114.580" data-by="land"><span class="jr-place">Lolo Pass</span> <span class="jr-date">1805</span><p>The party went north to Traveler's Rest and crossed the Bitterroot Mountains at Lolo Pass, then came down on foot to the Clearwater River.</p></li>
+<li data-ll="45.649,-120.978" data-by="land"><span class="jr-place">Celilo Falls</span> <span class="jr-date">1805</span><p>The party went down the Clearwater, Snake and Columbia rivers in canoes, past Celilo Falls and what is now Portland. The sight of Mount Hood showed that they had almost reached the Pacific.</p></li>
+<li data-ll="46.250,-123.863" data-by="land"><span class="jr-place">Dismal Nitch</span> <span class="jr-date">November 1805</span><p>The expedition sighted the Pacific Ocean on 7 November 1805. It then camped in a storm-wracked place Clark called Dismal Nitch, short of food because the elk had retreated and the party had too little to buy from neighbouring peoples.</p></li>
+<li data-ll="46.134,-123.880" data-by="land"><span class="jr-place">Fort Clatsop</span> <span class="jr-date">24 November 1805</span><p>The majority voted to move camp to the south side of the Columbia, and Sacagawea and York took part in the vote. The party built Fort Clatsop on the Netul River and spent the winter there, many of the men ill with colds and influenza.</p></li>
+</ol>
+<h3 class="jr-leg">The return</h3>
+<ol class="jr-stops" start="12">
+<li data-ll="46.134,-123.880" data-by="land"><span class="jr-place">Fort Clatsop</span> <span class="jr-date">23 March 1806</span><p>The journey home began on 23 March 1806, first by canoe up the Columbia and later overland. Before leaving, Clark gave the Chinook a letter for the next ship captain to call, Captain Hill, which reached Jefferson before the Corps did.</p></li>
+<li data-ll="46.222,-116.010" data-by="land"><span class="jr-place">Camp Chopunnish</span> <span class="jr-date">April 1806</span><p>At Camp Chopunnish on the Clearwater the party gathered 65 horses but could not cross the snowbound Bitterroot Mountains. When Native Americans stole Lewis's dog Seaman, he warned the chief that further wrongdoing would mean instant death.</p></li>
+<li data-ll="48.467,-112.467" data-by="land"><span class="jr-place">Marias River</span> <span class="jr-date">3 July 1806</span><p>The Corps split in two so Lewis could explore the Marias. His group of four met Blackfeet men, who tried to steal their weapons in the night, and the soldiers killed two of them. Lewis and three others fled over 100 miles in a day.</p></li>
+<li data-ll="47.985,-103.989" data-by="land"><span class="jr-place">Confluence of the Yellowstone and Missouri</span> <span class="jr-date">11 August 1806</span><p>The two groups met again. Clark had passed through Crow territory, where half his horses vanished in the night. As they reunited, the hunter Pierre Cruzatte mistook Lewis for an elk and shot him in the thigh.</p></li>
+<li data-ll="38.626,-90.199" data-by="land"><span class="jr-place">St. Louis</span> <span class="jr-date">23 September 1806</span><p>The Corps returned quickly down the Missouri and reached St. Louis on 23 September 1806. It then reported its findings to Jefferson through maps, sketches and various journals.</p></li>
+</ol>
+<p class="jr-end">The Corps reached St. Louis on 23 September 1806. It had reached the Pacific but found no continuous waterway to it, and it had relied on the help of about two dozen Native American nations. The expedition also served to assert American sovereignty over lands those nations already inhabited.</p>
+<p class="jr-src">Told after the Wikipedia article &#8220;Lewis and Clark Expedition&#8221;. Places with an encyclopedia entry are linked.</p>
+</article>
+<article class="jr-j" id="beagle" data-kids="1">
+<h2>The Second Voyage of HMS Beagle</h2>
+<p class="jr-meta">1831–1836 &#183; <a href="/life/charles-darwin">Robert FitzRoy and Charles Darwin</a> &#183; 24 stops</p>
+<p class="jr-intro">HMS Beagle left Plymouth on 27 December 1831 on a survey expedition under Robert FitzRoy, who had sought a naturalist to investigate geology. Charles Darwin, aged 22, accepted the place. The ship surveyed the coasts of southern South America and returned by Tahiti and Australia, circling the Earth.</p>
+<h3 class="jr-leg">Across the Atlantic to the Río de la Plata</h3>
+<ol class="jr-stops" start="1">
+<li data-ll="50.343,-4.143" data-by="sea"><span class="jr-place"><a href="/encyclopedia/plymouth-sound">Plymouth Sound</a></span> <span class="jr-date">27 December 1831</span><p>After delays from westerly gales, Beagle left its anchorage in the Barn Pool on the morning of 27 December 1831 and set out on its surveying expedition.</p></li>
+<li data-ll="28.269,-16.606" data-by="sea"><span class="jr-place">Tenerife</span> <span class="jr-date">6 January 1832</span><p>Beagle reached Tenerife in the Canary Islands but was quarantined because of cholera in England. Darwin was denied a landing, to his intense disappointment, and the ship sailed on.</p></li>
+<li data-ll="14.918,-23.509" data-by="sea"><span class="jr-place"><a href="/encyclopedia/praia">Praia, Santiago</a></span> <span class="jr-date">January 1832</span><p>Beagle made its first landing at Praia on Santiago in the Cape Verde Islands. FitzRoy set up an observatory on Quail Island, and Darwin studied its geology and first thought of writing a book on the subject.</p></li>
+<li data-ll="-12.983,-38.493" data-by="sea"><span class="jr-place">Bahia (Salvador)</span> <span class="jr-date">28 February 1832</span><p>Beagle reached the port of Bahia in Brazil to rate the chronometers and take on water. Darwin found slavery offensive, and when he doubted FitzRoy's account of slaves' answers to their master, FitzRoy banned him from his company, then apologised within hours.</p></li>
+<li data-ll="-22.911,-43.206" data-by="sea"><span class="jr-place"><a href="/encyclopedia/rio-de-janeiro">Rio de Janeiro</a></span> <span class="jr-date">4 April 1832</span><p>Beagle entered Rio de Janeiro harbour, where FitzRoy took longitude observations from Villegagnon Island. Darwin took lodgings at Botafogo and set off with local estate owners on a riding excursion to Rio Macaé.</p></li>
+<li data-ll="-38.880,-62.075" data-by="sea"><span class="jr-place">Punta Alta</span> <span class="jr-date">22 September 1832</span><p>During a cruise round Bahía Blanca, Darwin and FitzRoy stopped at Punta Alta. In the low cliffs Darwin found fossilised teeth and bones of gigantic extinct mammals and collected them over several days.</p></li>
+</ol>
+<h3 class="jr-leg">Tierra del Fuego and Patagonia</h3>
+<ol class="jr-stops" start="7">
+<li data-ll="-54.000,-70.000" data-by="sea"><span class="jr-place"><a href="/encyclopedia/tierra-del-fuego">Tierra del Fuego</a></span> <span class="jr-date">18 December 1832</span><p>Beagle reached Tierra del Fuego with the three Fuegians taken to England on the earlier voyage. Darwin met the Yaghan people for the first time and judged them harshly, in terms he later used in The Descent of Man.</p></li>
+<li data-ll="-49.307,-67.730" data-by="sea"><span class="jr-place">Port St Julian</span> <span class="jr-date">9 January 1834</span><p>Exploring the geology of the cliffs near the harbour, Darwin found pieces of a spine and a hind leg. He took them for a large animal such as a mastodon; Richard Owen later named the creature Macrauchenia.</p></li>
+<li data-ll="-54.000,-70.000" data-by="sea"><span class="jr-place"><a href="/encyclopedia/tierra-del-fuego">Tierra del Fuego, the mission site</a></span> <span class="jr-date">5 March 1834</span><p>Beagle returned to visit the missionaries and found their huts deserted. Jemmy Button, one of the three Fuegians, came out in a canoe, having lost his possessions and settled into the native ways with a wife.</p></li>
+<li data-ll="-50.133,-68.350" data-by="sea"><span class="jr-place">Santa Cruz River</span> <span class="jr-date">19 April 1834</span><p>An expedition including FitzRoy and Darwin took boats up the Santa Cruz river, with everyone taking turns hauling them upstream. Darwin read the terraces of shingle as old shores that had gradually risen. They turned back near the Andes.</p></li>
+</ol>
+<h3 class="jr-leg">The west coast of South America</h3>
+<ol class="jr-stops" start="11">
+<li data-ll="-42.600,-73.950" data-by="sea"><span class="jr-place"><a href="/encyclopedia/chiloe">Chiloé Island</a></span> <span class="jr-date">28 June 1834</span><p>Beagle and Adventure reached Chiloé in the wet, heavily wooded archipelago and then spent six months surveying the coast and islands southwards. Darwin found fragments of black lignite and petrified wood there.</p></li>
+<li data-ll="-33.046,-71.620" data-by="sea"><span class="jr-place"><a href="/encyclopedia/valparaiso">Valparaíso</a></span> <span class="jr-date">23 July 1834</span><p>Beagle arrived at Valparaíso. Darwin set off up the volcanic Andes on 14 August with a companion, then fell ill on his way back from Santiago and spent a month in bed.</p></li>
+<li data-ll="-39.814,-73.246" data-by="sea"><span class="jr-place"><a href="/encyclopedia/valdivia">Valdivia</a></span> <span class="jr-date">8 February 1835</span><p>Twelve days after arriving, Darwin was on shore when a severe earthquake struck. He returned to find the port town badly damaged.</p></li>
+<li data-ll="-36.827,-73.050" data-by="sea"><span class="jr-place"><a href="/encyclopedia/concepcion-chile">Concepción</a></span> <span class="jr-date">4 March 1835</span><p>Beagle found Concepción devastated by the same earthquake and a tsunami. FitzRoy found mussel beds now above high tide, evidence that the ground had risen about 9 feet.</p></li>
+<li data-ll="-12.060,-77.037" data-by="sea"><span class="jr-place"><a href="/encyclopedia/lima">Lima</a></span> <span class="jr-date">9 September 1835</span><p>Beagle sailed to Lima, where an armed insurrection kept Darwin with the ship. While writing up his notes he reached the idea that coral atolls formed as volcanic islands sank. FitzRoy joined them on 9 September.</p></li>
+</ol>
+<h3 class="jr-leg">Across the Pacific and home</h3>
+<ol class="jr-stops" start="16">
+<li data-ll="-0.800,-89.400" data-by="sea"><span class="jr-place">Chatham Island, Galápagos</span> <span class="jr-date">16 September 1835</span><p>Beagle anchored at Chatham Island in the Galápagos. Darwin spent his first hour ashore at what is now called Frigatebird Hill and began to collect plants, reptiles, birds and insects across the islands.</p></li>
+<li data-ll="-17.667,-149.467" data-by="sea"><span class="jr-place">Tahiti</span> <span class="jr-date">15 November 1835</span><p>Beagle reached Tahiti, where Darwin found the vegetation luxuriant and the people pleasant and intelligent. He thought they showed the benefits of Christianity and doubted what he had read about tyrannical missionaries.</p></li>
+<li data-ll="-33.868,151.210" data-by="sea"><span class="jr-place"><a href="/encyclopedia/sydney">Sydney</a></span> <span class="jr-date">12 January 1836</span><p>Darwin first sighted Australia on 12 January 1836 and admired Sydney. Inland he met Aboriginal people who gave a spear-throwing display for a shilling, and he reflected sadly that their numbers were falling.</p></li>
+<li data-ll="-42.883,147.317" data-by="sea"><span class="jr-place"><a href="/encyclopedia/hobart">Hobart</a></span> <span class="jr-date">1836</span><p>At Hobart, Darwin noted that the Aboriginal people of Tasmania had been removed and kept in effect as prisoners on a promontory. He wrote that the settlers' misconduct had first led to this step.</p></li>
+<li data-ll="-12.117,96.895" data-by="sea"><span class="jr-place">Keeling Islands</span> <span class="jr-date">1 April 1836</span><p>The Admiralty had asked for a survey of a coral atoll. On arrival the whole crew set to work, and FitzRoy's soundings supported Darwin's theory that encircling reefs become atolls as an island sinks.</p></li>
+<li data-ll="-33.925,18.424" data-by="sea"><span class="jr-place"><a href="/encyclopedia/cape-town">Cape Town</a></span> <span class="jr-date">31 May 1836</span><p>At the Cape, Darwin learned that extracts from his letters to Henslow had been printed as a pamphlet. Around 15 June he and FitzRoy visited the astronomer Sir John Herschel.</p></li>
+<li data-ll="-15.965,-5.715" data-by="sea"><span class="jr-place"><a href="/encyclopedia/saint-helena">St Helena</a></span> <span class="jr-date">8 July 1836</span><p>Beagle stopped on St Helena for six days. Darwin lodged near Napoleon's tomb, studied the island's strata and volcanic dykes, and noted that goats and hogs introduced in 1502 had destroyed much of the woodland.</p></li>
+<li data-ll="-7.950,-14.350" data-by="sea"><span class="jr-place">Ascension Island</span> <span class="jr-date">19 July 1836</span><p>At Ascension Darwin received letters from his sisters telling him of Sedgwick's praise for the collection he had sent home. He also climbed over the volcanic rocks with his geological hammer.</p></li>
+<li data-ll="50.150,-5.067" data-by="sea"><span class="jr-place">Falmouth</span> <span class="jr-date">2 October 1836</span><p>After a stormy passage with a stop at the Azores, Beagle anchored at Falmouth. Darwin left that night by the Royal Mail coach and reached his family home at Shrewsbury late on 4 October.</p></li>
+</ol>
+<p class="jr-end">Beagle reached Falmouth on 2 October 1836. The voyage had been offered to Darwin as a two-year trip and lasted almost five years. Darwin spent most of it exploring on land, and his journal later made him widely known as a writer.</p>
+<p class="jr-src">Told after the Wikipedia article &#8220;Second voyage of HMS Beagle&#8221;. Places with an encyclopedia entry are linked.</p>
+</article>
+<article class="jr-j" id="long-march" data-kids="0">
+<h2>The Long March of the First Front Army</h2>
+<p class="jr-meta">1934–1935 &#183; <a href="/encyclopedia/long-march">The First Front Red Army of the Chinese Communist Party</a> &#183; 10 stops</p>
+<p class="jr-intro">After defeat in Chiang Kai-shek's Fifth Encirclement Campaign, the Chinese Communist Party abandoned its Jiangxi Soviet in October 1934. The First Front Red Army of some 86,000 troops headed west over rugged terrain, retreating from the advancing Kuomintang forces towards a new headquarters in Yan'an, Shaanxi.</p>
+<h3 class="jr-leg">Breaking out of Jiangxi</h3>
+<ol class="jr-stops" start="1">
+<li data-ll="25.883,116.033" data-by="land"><span class="jr-place"><a href="/encyclopedia/ruijin">Ruijin</a></span> <span class="jr-date">10 October 1934</span><p>After the Red Army's defeat in the Fifth Encirclement Campaign, the Party decided on 10 October 1934 to abandon the Jiangxi Soviet and its headquarters at Ruijin. The First Front Red Army of some 86,000 troops headed west.</p></li>
+<li data-ll="25.957,115.487" data-by="land"><span class="jr-place">Yudu</span> <span class="jr-date">16 October 1934</span><p>A force under Bo Gu and Otto Braun attacked the Kuomintang positions near Yudu. More than 86,000 troops, 11,000 administrative personnel and thousands of porters completed the breakout; the wounded and ill stayed behind to fight a delaying action.</p></li>
+</ol>
+<h3 class="jr-leg">Guizhou and the Zunyi Conference</h3>
+<ol class="jr-stops" start="3">
+<li data-ll="26.158,109.778" data-by="land"><span class="jr-place">Tongdao</span> <span class="jr-date">12 December 1934</span><p>Leaders met near the Hunan and Guizhou border to decide the army's direction. Zhou Enlai endorsed Mao's proposal to turn towards Guizhou, urging the others to overrule the objections of Bo Gu and Braun.</p></li>
+<li data-ll="26.235,109.133" data-by="land"><span class="jr-place">Liping</span> <span class="jr-date">December 1934</span><p>In the mountains of south-east Guizhou a second dispute arose over direction. Braun wanted eastern Guizhou, Mao wanted the west, and Zhou sided with Mao, so the army marched towards Zunyi.</p></li>
+<li data-ll="27.705,106.934" data-by="land"><span class="jr-place">Zunyi</span> <span class="jr-date">15 January 1935</span><p>The army captured Zunyi, weakly defended and far from Nationalist forces, with little more than 10,000 men left. The conference there, 15 to 17 January, denounced Bo and Braun, and Mao won over the meeting.</p></li>
+</ol>
+<h3 class="jr-leg">Rivers, mountains and marshes to Shaanxi</h3>
+<ol class="jr-stops" start="6">
+<li data-ll="29.915,102.230" data-by="land"><span class="jr-place">Luding Bridge</span> <span class="jr-date">29 May 1935</span><p>The First Army is recorded as capturing Luding Bridge on 29 May. Official history extols this as a heroic triumph, but many historians now think the battle's difficulty was exaggerated or the incident fabricated for propaganda.</p></li>
+<li data-ll="31.001,102.362" data-by="land"><span class="jr-place">Maogong</span> <span class="jr-date">June–July 1935</span><p>The First Front Army met Zhang Guotao's Fourth Front Army. Zhang insisted on going south-west and Mao north towards Shaanxi; they could not agree, and the two armies split.</p></li>
+<li data-ll="33.700,102.633" data-by="land"><span class="jr-place">Zoigê Marsh</span> <span class="jr-date">August 1935</span><p>The First Army crossed the Zoigê Marsh. It traversed several swamps and was attacked by Hui Ma clique forces under Generals Ma Bufang and Ma Buqing.</p></li>
+<li data-ll="34.109,103.894" data-by="land"><span class="jr-place">Lazikou Pass</span> <span class="jr-date">16 September 1935</span><p>The First Army crossed the Lazikou Pass on 16 September 1935. In October it reached Shaanxi province and joined local Communist forces there, led by Liu Zhidan, Gao Gang and Xu Haidong.</p></li>
+<li data-ll="36.595,109.486" data-by="land"><span class="jr-place">Yan'an</span> <span class="jr-date">19 October 1935</span><p>The First Front Army arrived at Yan'an in northern Shaanxi. Only some 8,000 troops made it.</p></li>
+</ol>
+<p class="jr-end">The First Front Army reached Yan'an on 19 October 1935 with about 8,000 survivors. Mao Zedong's leadership during the retreat brought him great prestige, and the march marked the beginning of his ascent to primacy in the Party.</p>
+<p class="jr-src">Told after the Wikipedia article &#8220;Long March&#8221;. Places with an encyclopedia entry are linked.</p>
+</article>
+</div>
+</div>
+<script>(function(){var d=document,k=d.documentElement.getAttribute('data-kids')==='1',a=[].slice.call(d.querySelectorAll('.jr-j')),m=/[?&]j=([a-z0-9-]+)/.exec(location.search),w=m?m[1]:(location.hash||'').slice(1),c=null;a.forEach(function(x){if(x.id===w&&(!k||x.getAttribute('data-kids')==='1'))c=x});if(!c)c=a.filter(function(x){return !k||x.getAttribute('data-kids')==='1'})[0]||a[0];d.documentElement.classList.add('jr-js');c.classList.add('is-on')})()</script>
+<section class="jr-about"><h2>How the journeys are told</h2>
+<p>Each journey follows one Wikipedia article, named under it: the stops are the places that article treats as stages of the route, in its order, with its dates and its doubts. Where scholars question whether a traveller reached a place, the stop says so. A stop's point on the globe is the place's own, from its encyclopedia entry or from Wikidata; the lines between stops are the shortest paths on the globe, not the roads and sea lanes actually taken. Some journeys have a few more stops in their sources than are drawn here: a stage is left out when no point for the place itself could be found.</p>
+<p>More to explore: <a href="/atlas">the Atlas</a>, <a href="/faiths">Faith Maps</a>, <a href="/profiles?kind=life">Great Lives</a>, <a href="/paths/">Reading Paths</a>.</p></section>
+</div>
+</main>
+
+<script>var JR_GLOBE_SRC = '/maps/globe-land.js?v=9fe307d565';</script>
+<script src="/shared-nav.js"></script>
+<script>
+initNav('journeys');
+</script>
+<script src="/journeys.js?v=b4c99df87a" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+# The journeys of /journeys, in the page's order (scripts/tools/make-journeys.js). Columns, tab-separated:
+# slug, short name (the picker), the traveller's page (a profile's name, e:<entry slug>, or -), other pages that link the journey (; between),
+# suits Kids mode (yes/no: no for conquest, enslavement and war), the Wikipedia article it is told after
+alexander	Alexander's campaigns	Alexander the Great	e:alexander-the-great	no	Wars of Alexander the Great
+paul	Paul's journeys	Paul the Apostle	e:paul-the-apostle	yes	Paul the Apostle
+hijra	The Hijra	Muhammad	e:hijra	yes	Hijrah
+xuanzang	Xuanzang to India	e:xuanzang	-	yes	Xuanzang
+marco-polo	Marco Polo	e:marco-polo	-	yes	Marco Polo
+mansa-musa	Mansa Musa's pilgrimage	Mansa Musa	e:mansa-musa	yes	Mansa Musa
+ibn-battuta	Ibn Battuta	Ibn Battuta	e:ibn-battuta	yes	Ibn Battuta
+zheng-he	Zheng He's voyages	Zheng He	e:zheng-he; e:ming-treasure-voyages	yes	Ming treasure voyages
+columbus	Columbus's voyages	Christopher Columbus	e:christopher-columbus	no	Voyages of Christopher Columbus
+magellan	Magellan and Elcano	e:ferdinand-magellan	-	no	Magellan expedition
+cook	Cook's first voyage	e:james-cook	e:tupaia	no	First voyage of James Cook
+lewis-and-clark	Lewis and Clark	e:lewis-and-clark-expedition	-	yes	Lewis and Clark Expedition
+beagle	Darwin and the Beagle	Charles Darwin	e:charles-darwin; e:hms-beagle	yes	Second voyage of HMS Beagle
+long-march	The Long March	e:long-march	Mao Zedong	no	Long March
