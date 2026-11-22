@@ -54,6 +54,8 @@ if (cmd === 'cands') {
         if (!ii) { fs.writeFileSync(base + '.json', JSON.stringify({ file: c.files[k], error: 'no imageinfo' })); continue; }
         const m = ii.extmetadata || {}, lic = strip((m.LicenseShortName || {}).value), artist = strip((m.Artist || {}).value) || 'Unknown author';
         const meta = { file: c.files[k], licence: lic, artist, source: 'https://commons.wikimedia.org/wiki/File:' + c.files[k].replace(/ /g, '_'), mime: ii.mime, desc: strip((m.ImageDescription || {}).value).slice(0, 200) };
+        // an SVG (a flag, a coat of arms) comes as the PNG thumbnail Commons renders of it (Nov 2026)
+        if (ii.mime === 'image/svg+xml' && /\.png(\?|$)/.test(ii.thumburl || '')) ii.mime = 'image/png';
         if (!FREE(lic) || !/^image\/(jpeg|png|gif)$/.test(ii.mime)) { meta.error = 'not used: ' + lic + ' ' + ii.mime; fs.writeFileSync(base + '.json', JSON.stringify(meta)); skip++; continue; }
         let ok = false;
         for (let t = 0; t < 8 && !ok; t++) {

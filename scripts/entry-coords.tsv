@@ -1,10 +1,17 @@
 # entry	latitude	longitude (Wikidata P625, written by scripts/tools/entry-wd-claims.js)
+1556-shaanxi-earthquake	34.500	109.700
 1693-sicily-earthquake	37.140	15.013
 1755-lisbon-earthquake	36.000	-11.000
+1931-china-floods	30.581	114.273
+1976-tangshan-earthquake	39.664	118.401
 1988-armenian-earthquake	40.983	44.183
 1989-tiananmen-square-protests-and-massacre	39.903	116.392
 1992-summer-olympics	41.365	2.155
+20-july-plot	54.081	21.496
+2004-indian-ocean-earthquake-and-tsunami	3.295	95.982
+2010-haiti-earthquake	18.451	-72.445
 2011-christchurch-earthquake	-43.583	172.701
+2011-tohoku-earthquake-and-tsunami	38.322	142.369
 a-coruna	43.371	-8.396
 aachen	50.776	6.084
 aali	26.152	50.526
@@ -29,6 +36,7 @@ aberlemno	56.689	-2.781
 aberystwyth	52.414	-4.082
 abha	18.217	42.500
 abidjan	5.336	-4.027
+abkhazia	43.150	41.000
 abomey	7.185	1.991
 abruzzo	42.217	13.833
 absheron-peninsula	40.464	49.958
@@ -108,7 +116,7 @@ ain-farah	14.266	24.316
 ain-mallaha	33.087	35.579
 ainsa	42.417	0.138
 air-mountains	18.280	8.000
-aisne	49.500	3.500
+aisne	49.434	2.847
 aitutaki	-18.850	-159.790
 aix-en-provence	43.528	5.446
 aizpute	56.721	21.602
@@ -154,6 +162,7 @@ alba-fucens	42.079	13.411
 alba-iulia	46.076	23.573
 albaicin	37.182	-3.598
 alban-hills	41.730	12.700
+albania	41.000	20.000
 albany-new-york	42.650	-73.767
 albarracin	40.405	-1.444
 albemarle-sound	36.065	-76.065
@@ -305,6 +314,7 @@ antananarivo	-18.910	47.525
 antequera	37.018	-4.560
 anti-atlas	30.000	-8.500
 antibes	43.580	7.123
+antigua-and-barbuda	17.117	-61.850
 antigua-guatemala	14.557	-90.733
 antiguo-cuscatlan	13.673	-89.242
 antinoopolis	27.808	30.873
@@ -393,7 +403,6 @@ arslantepe	38.382	38.361
 arsuf	32.195	34.807
 arta-greece	39.165	20.988
 artaxata	39.887	44.579
-artsakh-historical-province	40.067	46.933
 artvin	41.183	41.829
 arunachal-pradesh	27.060	93.370
 arusha	-3.367	36.683
@@ -548,6 +557,7 @@ baghdad	33.315	44.366
 baghelkhand-agency	24.530	81.300
 bagnolo-in-piano	44.767	10.683
 bagram	34.933	69.233
+bahamas	25.000	-77.400
 bahia	-12.520	-41.690
 bahla	22.967	57.300
 bahrain	26.067	50.551
@@ -597,12 +607,13 @@ banda-islands	-4.583	129.917
 bandar-abbas	27.186	56.281
 bandar-e-anzali	37.473	49.458
 bandar-lengeh	26.562	54.884
-bandhavgarh	23.699	80.962
+bandhavgarh	23.683	81.035
 bandiagara	14.350	-3.611
 bandung	-6.922	107.607
 bandung-conference	-6.902	107.619
 banffshire	57.500	-3.083
 bangkok	13.750	100.517
+bangladesh	24.017	89.867
 bangor-on-dee	53.004	-2.911
 bangsamoro	7.217	124.250
 banias	33.247	35.693
@@ -621,6 +632,7 @@ bar-montenegro	42.100	19.100
 bar-sur-aube	48.233	4.706
 baracoa	20.344	-74.496
 baraqish	16.000	44.800
+barbados	13.170	-59.553
 barbar-temple	26.226	50.484
 barbastro	42.037	0.127
 barbuda	17.640	-61.810
@@ -847,7 +859,7 @@ battle-of-fei-river	31.736	116.520
 battle-of-fimreite	61.156	6.981
 battle-of-fleurus-1794	50.482	4.552
 battle-of-flodden	55.627	-2.175
-battle-of-fontenoy	50.569	3.475
+battle-of-fontenoy	47.650	3.300
 battle-of-formigny	49.337	-0.898
 battle-of-fort-sumter	32.752	-79.875
 battle-of-fraga	41.521	0.352
@@ -1257,6 +1269,7 @@ battle-of-torrevicente	41.333	-2.933
 battle-of-torvioll	41.767	20.367
 battle-of-tours	46.988	0.534
 battle-of-trafalgar	36.250	-6.200
+battle-of-trenton	40.226	-74.765
 battle-of-tricamarum	36.850	10.317
 battle-of-tsushima	34.450	130.150
 battle-of-tucapel	-37.796	-73.401
@@ -1366,6 +1379,7 @@ belfort-gap	47.604	6.995
 belgium	50.641	4.668
 belgrade	44.818	20.457
 belitung	-2.856	107.916
+belize	17.067	-88.700
 belize-city	17.499	-88.189
 belmopan	17.250	-88.767
 belovezha-accords	52.623	23.955
@@ -1374,14 +1388,14 @@ belyov	53.800	36.133
 belz	50.383	24.017
 belz-voivodeship	50.380	24.011
 belzec-extermination-camp	50.372	23.457
-benadir	2.050	45.262
 bendigo	-36.750	144.267
 bendorf	50.430	7.570
 benevento	41.133	14.783
 bengaluru	12.979	77.591
-bengkulu	-3.821	102.284
+bengkulu	-3.796	102.259
 benguela	-12.550	13.417
 beni-hasan	27.931	30.875
+benin	8.833	2.183
 benin-city	6.318	5.614
 bennachie	57.293	-2.562
 benue-river	7.783	6.767
@@ -1412,7 +1426,7 @@ besalu	42.199	2.699
 besancon	47.242	6.021
 bessarabia	46.833	29.000
 bessin	49.333	-0.617
-beth-shemesh	31.751	34.989
+beth-shemesh	31.751	34.975
 bethel	31.923	35.241
 bethlehem	31.704	35.206
 betwa-river	25.917	80.200
@@ -1438,6 +1452,8 @@ bhir-mound	33.743	72.821
 bhopal-agency	23.250	77.937
 bhubaneswar	20.295	85.825
 bhuj	23.250	69.670
+bhutan	27.450	90.500
+biafra	6.450	7.500
 biberach-an-der-riss	48.098	9.789
 bibracte	46.924	4.035
 bida	9.083	6.017
@@ -1548,6 +1564,7 @@ borno-state	11.500	13.000
 borovsk	55.200	36.483
 borre-mound-cemetery	59.382	10.471
 borsippa	32.392	44.342
+bosnia-and-herzegovina	44.000	18.000
 bosphorus	41.120	29.080
 bosten-lake	42.000	87.000
 boston	42.360	-71.058
@@ -1589,7 +1606,7 @@ brecon-castle	51.949	-3.394
 brecon-cathedral	51.951	-3.392
 breda	51.589	4.776
 breedon-on-the-hill	52.802	-1.399
-bregaglia	46.333	9.583
+bregaglia	46.332	9.514
 bregenz	47.505	9.749
 breisgau	47.933	7.817
 bremen	53.076	8.807
@@ -1628,6 +1645,7 @@ brugg	47.486	8.208
 bruhl-rhineland	50.833	6.900
 brumath	48.732	7.708
 bruneck	46.796	11.938
+brunei	4.400	114.567
 brussels	50.847	4.353
 bryggen	60.398	5.323
 bryn-euryn	53.303	-3.756
@@ -1674,6 +1692,7 @@ burhanpur	21.300	76.227
 burkina-faso	12.267	-2.067
 burlington-new-jersey	40.078	-74.853
 burra-south-australia	-33.667	138.933
+burundi	-3.667	29.817
 bury-st-edmunds	52.247	0.713
 burzenland	45.717	25.583
 bushehr	28.969	50.837
@@ -1893,7 +1912,7 @@ chaoyang-liaoning	41.576	120.449
 chapare-province	-16.833	-66.167
 charaideo	26.933	94.748
 charax-spasinou	30.898	47.567
-charente	45.833	0.333
+charente	45.957	-1.082
 charente-maritime	45.950	-0.967
 charles-town-jamaica	18.200	-76.667
 charlesfort	32.306	-80.676
@@ -1946,6 +1965,7 @@ chieti	42.351	14.167
 chihuahua-city	28.637	-106.077
 chikugo-province	33.213	130.554
 chikuzen-province	33.596	130.489
+chile	-33.000	-71.000
 chillon-river	-11.938	-77.140
 chiloe	-42.600	-73.950
 chimborazo	-1.469	-78.817
@@ -1987,6 +2007,7 @@ cilicia	36.985	35.120
 cilmeri	52.151	-3.457
 cimanuk-river	-6.245	108.345
 cinyps	32.530	14.446
+circus-maximus	41.886	12.486
 cirebon	-6.740	108.553
 cirencester	51.719	-1.968
 cirta	36.367	6.612
@@ -2033,6 +2054,7 @@ colline-metallifere	43.233	10.850
 colln	52.517	13.403
 colmar	48.081	7.355
 cologne	50.942	6.958
+colombia	4.000	-73.250
 colombo	6.927	79.861
 colon-panama	9.360	-79.900
 colonia-claudia-ara-agrippinensium	50.938	6.957
@@ -2091,6 +2113,7 @@ corrientes	-27.483	-58.817
 corseul	48.482	-2.170
 corsica	42.150	9.083
 cosenza	39.300	16.250
+costa-rica	10.000	-84.000
 cotabato-city	7.217	124.250
 cotentin-peninsula	49.500	-1.500
 cotes-darmor	48.333	-2.833
@@ -2298,6 +2321,7 @@ dizak	32.613	62.524
 djanet	24.555	9.485
 djenne	13.900	-4.550
 djerba	33.784	10.883
+djibouti	11.800	42.433
 djurdjura	36.447	4.228
 dmitrov	56.350	37.533
 dobruja	44.450	28.333
@@ -2312,6 +2336,7 @@ dolaucothi-gold-mines	52.045	-3.950
 dolon-nor	42.198	116.482
 dolores-hidalgo	21.156	-100.933
 dolwyddelan-castle	53.053	-3.908
+dominica	15.417	-61.333
 dominican-republic	18.800	-70.200
 domodossola	46.116	8.291
 domoni	-12.259	44.530
@@ -2335,7 +2360,6 @@ dorylaeum	39.775	30.517
 dos-pilas	16.446	-90.296
 douai	50.371	3.079
 douala	4.050	9.700
-doubs	47.167	6.417
 dougga	36.423	9.220
 douglas-isle-of-man	54.150	-4.478
 dover-new-hampshire	43.195	-70.875
@@ -2409,6 +2433,7 @@ east-khasi-hills	25.567	91.883
 east-lothian	55.917	-2.750
 east-pakistan	23.801	90.409
 east-prussia	54.710	20.510
+east-timor	-8.967	125.750
 east-tyrol	46.901	12.601
 easter-island	-27.120	-109.350
 easter-ross	57.668	-4.395
@@ -2424,6 +2449,7 @@ ecbatana	34.806	48.516
 echigo-province	37.559	139.053
 echizen-province	36.000	136.333
 ecija	37.541	-5.079
+ecuador	-1.000	-78.000
 edeirnion	52.947	-3.417
 edfu	24.978	32.879
 edinburgh	55.953	-3.189
@@ -2434,7 +2460,7 @@ edo-tokyo	35.684	139.774
 egge-hills	51.733	8.967
 egirdir	37.875	30.851
 egypt	27.000	29.000
-ehime-prefecture	33.841	132.766
+ehime-prefecture	33.833	132.767
 eichsfeld	51.330	10.250
 eichstatt	48.892	11.184
 eidsvoll	60.347	11.251
@@ -2463,6 +2489,7 @@ el-lahun	29.229	30.967
 el-mirador	17.755	-89.920
 el-mozote-massacre	13.900	-88.113
 el-oro-province	-3.483	-79.817
+el-salvador	13.669	-88.866
 el-teniente	-34.094	-70.351
 el-tintal	17.574	-89.996
 elam	29.900	52.400
@@ -2481,7 +2508,6 @@ eleusis	38.041	23.545
 eleuthera	25.135	-76.144
 elizabeth-new-jersey	40.662	-74.209
 elkab	25.117	32.800
-ellice-islands	-7.475	178.006
 ellwangen	48.961	10.131
 elmina	5.083	-1.350
 elmshorn	53.755	9.654
@@ -2495,6 +2521,7 @@ emirate-of-cordoba	37.880	-4.780
 emmendingen	48.121	7.849
 emmerich-am-rhein	51.835	6.245
 empire-of-japan	35.682	139.753
+empire-of-nicaea	40.429	29.719
 emporda	42.082	3.072
 encamp	42.536	1.583
 enewetak	11.500	162.333
@@ -2514,6 +2541,7 @@ entremont-oppidum	43.552	5.439
 ephesus	37.941	27.339
 epirus	39.737	20.704
 equatoria	4.867	31.583
+equatorial-guinea	1.500	10.000
 eran	24.092	78.165
 erbil	36.191	44.009
 erfurt	50.978	11.029
@@ -2544,6 +2572,7 @@ eswatini	-26.483	31.433
 esztergom	47.786	18.740
 etchu-province	36.648	137.262
 ethiopia	9.000	40.000
+ethiopian-civil-war	9.000	40.000
 ethiopian-empire	12.600	37.467
 ethiopian-highlands	10.000	38.167
 etosha-pan	-18.785	16.264
@@ -2551,7 +2580,6 @@ etowah-indian-mounds	34.128	-84.807
 etruria	42.228	11.839
 euboea	38.500	24.000
 eupen	50.633	6.033
-eure	49.083	1.000
 eureka-rebellion	-37.565	143.884
 euripus-strait	38.463	23.589
 eurotas	37.217	22.345
@@ -2572,7 +2600,7 @@ ezion-geber	29.547	34.980
 fachi	18.107	11.584
 fada-ngourma	12.050	0.367
 failaka-island	29.433	48.333
-faiyum	29.300	30.833
+faiyum	29.454	30.581
 faizabad	26.783	82.133
 falerii-novi	42.300	12.359
 falklands-war	-51.750	-59.000
@@ -2608,6 +2636,7 @@ fergana-valley	40.901	71.758
 ferns	52.593	-6.500
 ferrara	44.839	11.617
 ferryland	47.034	-52.883
+fertile-crescent	36.000	40.000
 fes-el-jdid	34.055	-4.990
 feurs	45.741	4.226
 fezzan	26.333	13.425
@@ -2687,7 +2716,6 @@ fougeres	48.352	-1.200
 foulpointe	-17.686	49.518
 foumban	5.717	10.917
 fountain-of-arethusa	37.057	15.293
-fourth-council-of-the-lateran	41.887	12.505
 fourviere	45.763	4.822
 fraga	41.521	0.352
 franc-of-bruges	51.208	3.228
@@ -2739,6 +2767,7 @@ futuna-wallis-and-futuna	-14.277	-178.140
 fuvahmulah	-0.293	73.424
 fuzhou	26.077	119.292
 gabes	33.881	10.098
+gabon	-0.683	11.500
 gaborone	-24.657	25.909
 gadag	15.417	75.617
 gadara	32.656	35.678
@@ -2767,7 +2796,6 @@ gan-addu-atoll	-0.695	73.155
 ganden-monastery	29.759	91.476
 gandhinagar	23.223	72.650
 gangaikondacholapuram	11.205	79.453
-ganges-plain	27.000	80.000
 ganghwa-island	37.710	126.440
 gangotri	30.980	78.930
 gangtok	27.330	88.620
@@ -2804,7 +2832,9 @@ geldern	51.520	6.332
 geneva	46.200	6.150
 george-town-cayman-islands	19.296	-81.382
 george-town-penang	5.415	100.329
+george-washingtons-crossing-of-the-delaware-river	40.300	-74.873
 georgetown-guyana	6.806	-58.151
+georgia	42.000	44.000
 gergovia	45.708	3.125
 german-east-africa	-2.413	30.544
 german-empire	52.519	13.376
@@ -2827,8 +2857,8 @@ ghazni	33.549	68.423
 ghent	51.054	3.725
 ghor	34.520	65.255
 ghumli	21.885	69.763
-gia-dinh	10.798	106.697
-gianh-river	17.757	106.419
+gia-dinh	10.804	106.697
+gianh-river	17.704	106.488
 giardini-naxos	37.833	15.267
 gibe-river	8.317	37.467
 gibeon-namibia	-25.117	17.767
@@ -2869,7 +2899,6 @@ gluckstadt	53.792	9.422
 glyndyfrdwy	52.975	-3.268
 gniezno	52.533	17.600
 goa	15.402	74.043
-goa-velha	15.442	73.883
 gobi-desert	42.500	103.000
 gobind-sagar	31.417	76.500
 gochang-hwasun-and-ganghwa-dolmen-sites	34.967	126.929
@@ -2903,7 +2932,7 @@ goryeong	35.730	128.269
 goryokaku	41.797	140.757
 goseong-county-south-gyeongsang	35.015	128.282
 gostynin	52.429	19.462
-gotha	50.949	10.718
+gotha	50.949	10.701
 gothenburg	57.708	11.967
 gotthard-pass	46.559	8.562
 gottingen	51.534	9.936
@@ -2924,7 +2953,6 @@ grand-bassam	5.200	-3.733
 grand-cayman	19.330	-81.240
 grand-duchy-of-lithuania	54.683	25.283
 grand-duchy-of-moscow	55.751	37.617
-grand-port	-20.400	57.640
 grand-turk-island	21.472	-71.139
 grand-village-of-the-illinois	41.321	-88.968
 grand-village-of-the-natchez	31.525	-91.382
@@ -2953,6 +2981,7 @@ greenland	72.000	-40.000
 greifswald	54.083	13.383
 greiz	50.655	12.200
 gremi	42.014	45.670
+grenada	12.100	-61.700
 grenadines	12.667	-61.250
 grenoble	45.187	5.726
 gresik	-7.193	112.553
@@ -2975,7 +3004,7 @@ guadalquivir	36.791	-6.357
 guadix	37.301	-3.135
 guanabara-bay	-22.790	-43.156
 guanaja	16.442	-85.887
-guanajuato	21.019	-101.263
+guanajuato	21.018	-101.257
 guangdong	23.400	113.500
 guangshan-county	32.013	114.901
 guangxi	23.600	108.300
@@ -3030,6 +3059,7 @@ gulf-of-taranto	39.885	17.277
 gulf-of-thailand	9.500	102.000
 guna-yala	9.296	-78.344
 gungnae	41.121	126.179
+gunpowder-plot	52.512	-2.171
 guntur	16.300	80.450
 gunz	48.066	10.302
 gunzburg	48.453	10.271
@@ -3040,6 +3070,7 @@ gustavia	17.899	-62.849
 gustrow	53.794	12.176
 gusuku-sites-and-related-properties-of-the-kingdom-of-ryukyu	26.209	127.683
 guwahati	26.181	91.750
+guyana	5.733	-59.317
 gwadar	25.126	62.322
 gyeongju	35.850	129.217
 gympie	-26.183	152.667
@@ -3104,7 +3135,6 @@ harar	9.311	42.128
 harare	-17.829	31.052
 harbel	6.275	-10.347
 harbin	45.750	126.633
-harburg-wilhelmsburg	53.450	9.967
 harda-district	22.234	76.964
 hargeisa	9.566	44.061
 harima-province	34.971	134.670
@@ -3238,6 +3268,7 @@ holy-roman-empire	50.000	10.000
 holyhead	53.317	-4.633
 homs	34.733	36.717
 honaine	35.176	-1.655
+honduras	14.633	-86.817
 hong-kong	22.278	114.159
 hong-kong-island	22.255	114.195
 hongkou	31.266	121.480
@@ -3295,6 +3326,7 @@ iao-valley	20.881	-156.545
 ibadan	7.378	3.906
 ibaraki-prefecture	36.342	140.447
 iberia	40.240	-4.239
+iceland	65.000	-19.000
 ichijodani	35.999	136.296
 idah	7.081	6.715
 idar-oberstein	49.702	7.325
@@ -3398,6 +3430,7 @@ isny-im-allgau	47.692	10.039
 isonokami-shrine	34.598	135.852
 isparta	37.767	30.550
 ispir	40.483	40.998
+israel	31.000	35.000
 issyk-kul	42.417	77.250
 issyk-kurgan	43.330	77.619
 istakhr	29.982	52.909
@@ -3530,6 +3563,7 @@ jokyu-war	35.012	135.768
 jolo	5.983	121.133
 jonesborough-tennessee	36.294	-82.472
 jonestown	7.705	-59.906
+jordan	31.200	36.500
 jorhat	26.758	94.203
 jos-plateau	9.567	9.083
 joshimath	30.555	79.565
@@ -3567,7 +3601,6 @@ kairatos	35.345	25.153
 kairouan	35.683	10.100
 kaiseraugst	47.541	7.728
 kaisheim	48.768	10.796
-kalabsha	23.637	32.887
 kalaburagi	17.333	76.833
 kalamata	37.038	22.111
 kalgoorlie	-30.749	121.466
@@ -3641,7 +3674,7 @@ kars	40.608	43.096
 kartasura	-7.569	110.762
 karthaia	37.560	24.330
 karur	10.960	78.075
-karyes	37.292	22.500
+karyes	40.257	24.246
 karytaina	37.485	22.042
 kashagan-field	46.636	52.454
 kashgar	39.450	75.983
@@ -3667,6 +3700,7 @@ kawit	14.433	120.900
 kayah-state	19.250	97.333
 kayes	14.450	-11.437
 kayseri	38.722	35.487
+kazakhstan	48.000	68.000
 kazan	55.791	49.114
 kazanlak	42.619	25.393
 kealakekua-bay	19.475	-155.929
@@ -3688,6 +3722,7 @@ ken-river	25.767	80.517
 kendujhar	21.633	85.583
 kengtung	21.291	99.604
 kenroku-en	36.562	136.662
+kenya	0.100	38.000
 keoladeo-national-park	27.167	77.517
 kerala	10.000	76.300
 kerameikos	37.978	23.719
@@ -3707,6 +3742,9 @@ khalchayan	38.294	67.979
 kham	30.602	96.842
 khambhat	22.313	72.619
 khami	-20.143	28.423
+khanate-of-bukhara	39.775	64.429
+khanate-of-kazan	55.783	49.150
+khanate-of-sibir	57.509	67.116
 khandesh	21.000	75.000
 kharg-island	29.245	50.310
 kharga-oasis	25.250	30.550
@@ -3757,6 +3795,8 @@ king-williams-town	-32.883	27.400
 kingdom-of-aragon	41.650	-0.900
 kingdom-of-dahomey	7.186	1.988
 kingdom-of-east-anglia	52.500	1.000
+kingdom-of-galicia-volhynia	49.905	24.961
+kingdom-of-germany	50.455	9.528
 kingdom-of-great-britain	51.500	-0.133
 kingdom-of-hungary	47.000	19.000
 kingdom-of-italy	41.900	12.500
@@ -3946,6 +3986,7 @@ kutahya	39.424	29.983
 kutaisi	42.272	42.706
 kutaisi-governorate	42.250	42.700
 kutna-hora	49.948	15.268
+kuwait	29.167	47.600
 kuwana	35.062	136.684
 kuyavia	52.700	18.550
 kvarner-gulf	44.804	14.141
@@ -3960,6 +4001,7 @@ kyauktaw	20.850	92.967
 kyiv	50.450	30.524
 kyle-ayrshire	55.450	-4.400
 kyparissia	37.251	21.671
+kyrgyzstan	41.000	75.000
 kythira	36.258	22.997
 kyushu	33.000	131.000
 kyustendil	42.280	22.687
@@ -4130,6 +4172,7 @@ lastovo	42.750	16.867
 lata-region	21.710	72.000
 latakia	35.520	35.778
 latgale	56.523	27.032
+latvia	57.000	25.000
 latvian-war-of-independence	57.000	24.940
 lausanne	46.533	6.633
 lauter-rhine	49.249	7.815
@@ -4172,12 +4215,12 @@ les-cayes	18.200	-73.750
 les-trois-ilets	14.538	-61.034
 lesbos	39.210	26.280
 lescar	43.325	-0.416
+lesotho	-29.550	28.250
 lesser-poland	50.067	19.950
 leuk	46.317	7.633
 leutkirch-im-allgau	47.826	10.022
 leuven	50.877	4.704
 levant	34.000	36.000
-leventina	46.483	8.800
 levuka	-17.684	178.840
 lewes-delaware	38.775	-75.142
 lewis-and-clark-expedition	38.803	-90.101
@@ -4202,6 +4245,7 @@ lichtenstein-saxony	50.756	12.632
 lidice	50.144	14.190
 lidzbark-warminski	54.117	20.583
 liebana	43.151	-4.620
+liechtenstein	47.145	9.554
 liege-revolution	50.645	5.576
 liepaja	56.508	21.011
 lier-belgium	51.131	4.570
@@ -4299,7 +4343,7 @@ lough-gill	54.254	-8.384
 lough-key	54.000	-8.250
 lough-leane	52.042	-9.550
 louisbourg	45.920	-59.973
-louisiana	31.000	-92.000
+louisiana	40.000	-100.000
 lourdes	43.094	-0.047
 louvre	48.861	2.336
 low-countries	52.000	5.000
@@ -4316,7 +4360,7 @@ lower-saxony	52.756	9.393
 lower-silesia	51.100	17.033
 lozere	44.333	3.600
 luan	31.754	116.508
-luanda	-8.838	13.234
+luanda	-8.815	13.230
 luanda-island	-8.779	13.244
 luang-prabang	19.890	102.135
 luba-empire	-7.360	25.678
@@ -4349,6 +4393,7 @@ lusatia	51.545	14.726
 lushnje	40.933	19.700
 lushunkou	38.851	121.257
 lutetia	48.855	2.348
+luxembourg	49.770	6.130
 luxor	25.697	32.644
 luzon	16.000	121.000
 lviv	49.842	24.032
@@ -4362,7 +4407,6 @@ lyubech	51.703	30.657
 maan-jordan	30.193	35.733
 maastricht	50.867	5.683
 macau	22.190	113.538
-macedonia-region	41.329	22.509
 machilipatnam	16.167	81.133
 machu-picchu	-13.163	-72.546
 machynlleth	52.591	-3.849
@@ -4421,6 +4465,7 @@ malawi	-13.000	34.000
 malay-peninsula	7.000	100.000
 malbork	54.028	19.044
 malchow	53.475	12.423
+maldives	4.180	73.510
 malebo-pool	-4.282	15.489
 malerkotla	30.517	75.883
 mali	17.000	-4.000
@@ -4557,6 +4602,7 @@ medina-del-campo	41.309	-4.915
 medinaceli	41.172	-2.435
 medinet-habu	25.719	32.601
 medinet-madi	29.193	30.642
+mediterranean-and-middle-east-theatre-of-world-war-ii	35.000	18.000
 meersburg	47.696	9.271
 meerut	28.980	77.706
 megarid	37.994	23.338
@@ -4659,7 +4705,6 @@ mississippi-river	29.154	-89.251
 missolonghi	38.369	21.429
 mitanni	37.650	39.892
 mito-ibaraki	36.366	140.471
-mixteca-alta	19.000	-98.000
 miyagi-prefecture	38.269	140.872
 mizoram	23.360	92.800
 mizpah-in-benjamin	31.885	35.216
@@ -4684,6 +4729,7 @@ molokai	21.135	-157.010
 molyvos	39.369	26.181
 momotombo	12.425	-86.538
 mona-passage	18.498	-67.750
+monaco	43.731	7.420
 monasterboice	53.778	-6.417
 monastery-of-irache	42.650	-2.043
 monastery-of-leyre	42.635	-1.172
@@ -4715,6 +4761,7 @@ monte-naranco	43.383	-5.867
 monte-testaccio	41.876	12.476
 monte-titano	43.928	12.452
 montego-bay	18.467	-77.917
+montenegro	42.767	19.217
 monterado	0.758	109.141
 montereau-fault-yonne	48.383	2.948
 monterey-california	36.600	-121.895
@@ -4805,6 +4852,7 @@ mount-penanggungan	-7.620	112.630
 mount-sinai	28.538	33.975
 mount-tai	36.267	117.100
 mount-tambora	-8.245	117.993
+mount-vesuvius	40.823	14.429
 mountainous-republic-of-the-northern-caucasus	42.817	47.117
 moynaq	43.767	59.033
 mozambique	-19.000	35.000
@@ -4927,7 +4975,6 @@ narendranagar	30.170	78.300
 narmadapuram-district	22.667	77.833
 narni	42.519	12.515
 narona	43.081	17.624
-nartiang	25.567	92.209
 narva	59.379	28.201
 narwar	25.644	77.913
 naryn-kala	42.053	48.274
@@ -4939,6 +4986,7 @@ nathdwara	24.929	73.819
 national-dialogue-conference-yemen	15.362	44.232
 naucratis	30.901	30.592
 naumburg	51.152	11.810
+nauru	-0.527	166.935
 nayarit	22.000	-105.000
 naypyidaw	19.747	96.115
 nazareth	32.702	35.298
@@ -4996,7 +5044,7 @@ new-york-accords	40.750	-73.967
 new-zealand	-41.200	174.000
 newcastle-upon-tyne	54.978	-1.613
 newcastle-west	52.451	-9.055
-newfoundland	53.000	-60.000
+newfoundland	48.542	-56.125
 newport-rhode-island	41.492	-71.312
 ngaruawahia	-37.668	175.147
 ngazargamu	13.047	12.228
@@ -5009,6 +5057,7 @@ niagara-river	42.884	-78.914
 niamey	13.515	2.118
 niassa-province	-13.250	36.500
 nicaea	40.429	29.720
+nicaragua	13.000	-85.000
 nice	43.702	7.268
 nicobar-islands	7.867	93.500
 nicomedia	40.763	29.918
@@ -5018,6 +5067,7 @@ nidaros-cathedral	63.427	10.397
 nidwalden	46.950	8.400
 niemodlin	50.633	17.600
 nigde	37.967	34.679
+niger	17.000	10.000
 niger-delta	4.833	6.000
 nigeria	9.000	8.000
 niigata-prefecture	37.902	139.023
@@ -5055,7 +5105,6 @@ norfolk-island	-29.033	167.950
 normandy-landings	49.340	-0.600
 north-brabant	51.633	5.100
 north-caucasus	43.405	43.832
-north-china	41.400	105.100
 north-china-plain	36.580	117.160
 north-gyeongsang-province	36.576	128.506
 north-india	31.056	76.591
@@ -5066,6 +5115,7 @@ north-ossetia-alania	43.183	44.233
 north-rhine-westphalia	51.467	7.550
 north-yorkshire	54.100	-1.350
 northern-cape	-30.000	22.000
+northern-cyprus	35.182	33.363
 northern-dobruja	44.667	28.500
 northern-england	55.000	-2.300
 northern-europe	57.000	14.000
@@ -5101,6 +5151,7 @@ numantia	41.809	-2.444
 nunavut	67.350	-90.900
 nur-mountains	36.750	36.333
 nuremberg	49.454	11.078
+nuremberg-trials	49.454	11.048
 nusantara	-0.973	116.709
 nuuk	64.175	-51.733
 nuzi	35.302	44.248
@@ -5136,7 +5187,7 @@ ohkay-owingeh	36.054	-106.070
 ohrid	41.117	20.802
 ohrigstad	-24.750	30.567
 ohringen	49.200	9.500
-oise	49.383	2.417
+oise-department	49.383	2.417
 oka-crisis	45.470	-74.080
 okavango-delta	-19.400	22.900
 okayama	34.655	133.920
@@ -5158,7 +5209,6 @@ olosega	-14.167	-169.617
 oltenia	44.500	23.500
 olumo-rock	7.167	3.343
 olympos-lycia	36.397	30.474
-omaheke	-22.000	19.500
 oman	21.000	57.000
 omdurman	15.684	32.463
 omi-province	35.211	136.124
@@ -5180,7 +5230,7 @@ oran	35.697	-0.633
 orange-free-state-province	-29.117	26.217
 orange-river-colony	-29.100	26.217
 orange-vaucluse	44.138	4.809
-oranjestad-sint-eustatius	17.483	-62.983
+oranjestad-sint-eustatius	17.483	-62.986
 orastie-mountains	45.623	23.312
 orbetello	42.439	11.213
 orchies	50.475	3.244
@@ -5200,7 +5250,6 @@ orinoco-belt	8.200	-64.737
 oristano	39.906	8.592
 orkney	59.000	-3.000
 orleans	47.902	1.904
-orne-river	48.700	0.000
 orongo	-27.189	-109.442
 orontes-river	36.045	35.964
 orthez	43.488	-0.771
@@ -5237,6 +5286,7 @@ ottawa	45.425	-75.695
 ottobeuren	47.941	10.299
 ottoman-empire	41.000	29.000
 ottoman-hungary	47.000	19.000
+ottoman-wars-in-europe	42.000	22.000
 otumba	19.660	-98.730
 ouadane	20.932	-11.620
 ouaddai-region	13.830	20.833
@@ -5259,6 +5309,7 @@ ozurgeti	41.923	42.005
 pachacamac	-12.252	-76.906
 pachuca	20.122	-98.736
 pactolus	38.523	28.043
+paderborn	51.717	8.767
 padua	45.408	11.873
 paestum	40.420	15.006
 pagasae	39.313	22.931
@@ -5277,12 +5328,14 @@ palapye	-22.550	27.133
 palar-river	12.468	80.155
 palatinate-neuburg	48.733	11.183
 palatinate-region	49.500	8.017
+palatine-hill	41.888	12.487
 palau	7.467	134.550
 palawan	10.000	118.833
 palembang	-2.983	104.764
 palencia	42.017	-4.533
 palenque	17.484	-92.046
 palermo	38.116	13.361
+palestine	32.000	35.250
 palghar-district	19.697	72.771
 palio-of-asti	44.900	8.207
 palk-strait	9.833	79.500
@@ -5295,6 +5348,7 @@ pampa-grande	-6.762	-79.474
 pampanga	15.067	120.667
 pamphylia	37.000	31.000
 pamplona	42.817	-1.650
+panama	8.617	-80.367
 panama-canal-zone	9.118	-79.720
 panama-city	8.971	-79.535
 panarukan	-7.703	113.957
@@ -5356,6 +5410,7 @@ pazyryk-burials	49.579	88.153
 peace-of-bautzen	51.181	14.424
 peace-of-constance	47.663	9.175
 peace-of-passau	50.122	8.612
+peace-of-westphalia	51.962	7.628
 pec	42.659	20.288
 pechina	36.915	-2.441
 pecs	46.071	18.233
@@ -5432,7 +5487,7 @@ phitsanulok	16.816	100.264
 phnom-kulen	13.613	104.112
 phnom-penh	11.570	104.921
 phocaea	38.670	26.753
-phocis	38.500	22.250
+phocis	38.525	22.375
 phoenice	39.912	20.058
 phoenicia	34.117	35.650
 phoenix-islands	-3.667	-172.333
@@ -5515,6 +5570,7 @@ pondicherry	11.930	79.830
 pontic-caspian-steppe	48.357	44.530
 popayan	2.454	-76.609
 popocatepetl	19.023	-98.623
+population-transfer-in-the-soviet-union	65.000	90.000
 porkkala	59.983	24.433
 porrentruy	47.417	7.083
 port-arthur-tasmania	-43.156	147.847
@@ -5539,6 +5595,7 @@ portoferraio	42.817	10.317
 portoviejo	-1.054	-80.454
 portsmouth-new-hampshire	43.076	-70.761
 portsmouth-rhode-island	41.600	-71.250
+portugal	38.700	-9.183
 portuguese-empire	38.717	-9.133
 portuguese-malacca	2.189	102.384
 portus-itius	49.120	1.771
@@ -5572,7 +5629,6 @@ princes-town-ghana	4.794	-2.135
 principality-of-regensburg	49.017	12.083
 principality-of-wales	52.300	-3.600
 pristina	42.667	21.167
-privernum	41.467	13.183
 prizren	42.230	20.740
 proclamation-of-the-german-empire	48.805	2.135
 proclamation-of-the-republic-brazil	-22.907	-43.189
@@ -5642,6 +5698,7 @@ qarshi	38.867	65.800
 qaryat-al-faw	19.783	45.150
 qashliq	58.149	68.520
 qasr-ibrim	22.650	31.992
+qatar	25.270	51.213
 qatif	26.568	50.009
 qena	26.167	32.717
 qilian-mountains	38.750	98.750
@@ -5655,7 +5712,7 @@ quanzhou	24.914	118.586
 quba	41.365	48.526
 quchan	37.106	58.509
 qudshanis	37.654	43.800
-quebec	52.000	-72.000
+quebec	46.816	-71.224
 quedlinburg	51.792	11.147
 quelimane	-17.876	36.887
 quentovic	50.483	1.721
@@ -5721,6 +5778,7 @@ razes	43.057	2.219
 recife	-8.054	-34.881
 recklinghausen	51.617	7.200
 red-river-colony	49.889	-97.130
+red-river-resistance	49.888	-97.135
 red-ruthenia	49.786	22.774
 red-sea	22.000	38.000
 red-square	55.754	37.620
@@ -5733,6 +5791,7 @@ rendlesham	52.130	1.414
 rengat	-0.393	102.438
 rennes	48.114	-1.681
 rensselaerswyck	42.694	-73.708
+republic-of-ireland	53.000	-8.000
 republic-of-new-granada	4.650	-74.050
 republic-of-serbian-krajina	44.042	16.199
 republic-of-the-congo	-0.750	15.383
@@ -5803,7 +5862,7 @@ rizal-province	14.667	121.250
 roatan	16.383	-86.418
 robben-island	-33.805	18.370
 roccagloriosa	40.117	15.433
-roccamonfina	41.300	13.983
+roccamonfina	41.294	13.969
 rochefort-charente-maritime	45.942	-0.967
 rochester-kent	51.388	0.505
 rock-of-cashel	52.520	-7.890
@@ -5817,6 +5876,7 @@ romagna	44.177	12.125
 roman-campagna	41.689	12.591
 roman-empire	41.900	12.500
 roman-forum	41.892	12.485
+roman-kingdom	41.883	12.483
 roman-republic	41.900	12.500
 romania	46.000	25.000
 rome	41.893	12.483
@@ -5830,7 +5890,7 @@ roossenekal	-25.195	29.925
 roquebrune-cap-martin	43.757	7.474
 roskilde	55.642	12.081
 ross-on-wye	51.914	-2.587
-rostov	47.222	39.710
+rostov	57.183	39.417
 rotenburg-an-der-wumme	53.111	9.411
 rothenburg-ob-der-tauber	49.377	10.179
 rotterdam	51.920	4.480
@@ -5895,6 +5955,7 @@ sagar-madhya-pradesh	23.830	78.710
 saguia-el-hamra	27.154	-13.203
 sagunto	39.680	-0.278
 sahagun	42.371	-5.033
+sahrawi-arab-democratic-republic	25.000	-13.000
 saidu-sharif	34.750	72.357
 saint-barthelemy	17.898	-62.834
 saint-catherines-monastery	28.556	33.976
@@ -5908,8 +5969,10 @@ saint-jean-dangely	45.944	-0.521
 saint-jean-pied-de-port	43.163	-1.238
 saint-john-u-s-virgin-islands	18.340	-64.750
 saint-kitts	17.320	-62.747
+saint-kitts-and-nevis	17.272	-62.667
 saint-lizier	43.002	1.137
 saint-louis-senegal	16.033	-16.500
+saint-lucia	13.883	-60.967
 saint-malo	48.649	-2.026
 saint-martin-island	18.060	-63.050
 saint-nicolas-de-port	48.631	6.302
@@ -5923,6 +5986,7 @@ saint-pol-de-leon	48.685	-3.986
 saint-sever	43.757	-0.574
 saint-thomas-u-s-virgin-islands	18.353	-64.937
 saint-valery-sur-somme	50.188	1.629
+saint-vincent-and-the-grenadines	13.250	-61.200
 sainte-marie-among-the-hurons	44.734	-79.845
 sainte-marie-aux-mines	48.247	7.184
 saipan	15.183	145.750
@@ -5959,6 +6023,7 @@ sambhar-salt-lake	26.942	75.076
 sambia-peninsula	54.833	20.283
 sambor-prei-kuk	12.867	105.040
 samerina	32.250	35.167
+samoa	-13.745	-172.218
 samoan-islands	-14.000	-171.000
 samogitia	55.983	22.250
 samos	37.750	26.833
@@ -5986,6 +6051,7 @@ san-juan-river-nicaragua	10.801	-84.211
 san-juancito	14.221	-87.067
 san-lorenzo-tenochtitlan	17.733	-94.800
 san-luis-potosi	22.603	-100.430
+san-marino	43.933	12.467
 san-miguel-bulacan	15.146	120.978
 san-miguel-de-tucuman	-26.817	-65.217
 san-millan-de-la-cogolla	42.329	-2.862
@@ -6031,7 +6097,8 @@ santo-domingo	18.462	-69.936
 sanuki-province	34.229	134.016
 sao-luis-maranhao	-2.530	-44.303
 sao-paulo	-23.550	-46.634
-sao-tome	0.338	6.728
+sao-tome	0.220	6.610
+sao-tome-and-principe	0.317	6.600
 sapaudia	45.750	6.250
 saqifah	24.470	39.607
 saqqara	29.850	31.233
@@ -6050,7 +6117,6 @@ saronic-gulf	37.700	23.600
 sarre-department	49.750	6.633
 sarreguemines	49.111	7.067
 sarsina	43.917	12.150
-sarthe	48.283	0.217
 saruj	36.975	38.424
 sasamon	42.418	-4.042
 sasanian-conquest-of-jerusalem	31.783	35.217
@@ -6109,6 +6175,7 @@ second-battle-of-panipat	29.390	76.970
 second-battle-of-tarain	29.780	76.940
 second-carib-war	13.250	-61.200
 second-french-empire	48.856	2.352
+second-spanish-republic	40.200	-3.500
 secunderabad	17.450	78.500
 sees	48.605	0.171
 sefidrud	37.468	49.941
@@ -6148,7 +6215,6 @@ serengeti	-2.331	34.833
 sergipe	-10.590	-37.380
 seri-menanti	2.700	102.167
 seria	4.614	114.330
-serrania-de-ronda	36.624	-5.224
 serres	41.083	23.550
 sese-islands	-0.433	32.250
 sesebi	20.110	30.543
@@ -6258,6 +6324,7 @@ siege-of-jerusalem-587-bce	31.783	35.217
 siege-of-jerusalem-597-bce	31.777	35.230
 siege-of-kawagoe-castle	35.924	139.491
 siege-of-kerman	30.283	57.083
+siege-of-leningrad	59.930	30.319
 siege-of-multan-1818	30.198	71.470
 siege-of-odawara-1590	35.251	139.154
 siege-of-osaka	34.640	135.520
@@ -6364,6 +6431,7 @@ solapur	17.670	75.901
 soleb	20.433	30.333
 solingen	51.172	7.085
 solokha	47.327	34.339
+solomon-islands	-9.467	159.817
 solor	-8.476	122.984
 solovki-prison-camp	65.024	35.711
 solsones	41.980	1.513
@@ -6563,7 +6631,7 @@ sutherland	58.082	-4.032
 sutorina	42.474	18.472
 sutri	42.248	12.216
 sutton-hoo	52.090	1.339
-suva	-18.133	178.433
+suva	-18.127	178.440
 suwalki	54.100	22.933
 suwayda	32.700	36.567
 suwon	37.286	127.010
@@ -6587,6 +6655,7 @@ sydney-nova-scotia	46.138	-60.183
 sylhet	24.900	91.867
 syria	35.217	38.583
 syria-palaestina	32.500	34.900
+syrian-civil-war	35.000	38.000
 syrian-coastal-mountain-range	35.250	36.100
 syros	37.450	24.900
 szczecin	53.425	14.555
@@ -6611,10 +6680,12 @@ taif	21.267	40.417
 taihang-mountains	36.994	113.928
 tainan	22.990	120.185
 taipei	25.038	121.563
+taiwan	24.000	121.000
 taiwan-strait	24.811	119.928
 taiyuan	37.873	112.542
 taiz	13.579	44.022
 taizhou-jiangsu	32.483	119.900
+tajikistan	38.583	71.367
 tajura	32.882	13.340
 takamatsu	34.343	134.047
 takedda	17.509	6.783
@@ -6649,7 +6720,7 @@ taos-new-mexico	36.407	-105.573
 tapa-estonia	59.264	25.963
 taputapuatea	-16.816	-151.407
 taraba-state	8.000	10.500
-tarapaca	-19.924	-69.511
+tarapaca	-20.283	-69.333
 taraz	42.883	71.367
 tarazona	41.904	-1.724
 tarbagatai-mountains	47.130	82.529
@@ -6705,9 +6776,8 @@ tell-el-farkha	30.875	31.602
 tell-halaf	36.827	40.040
 tell-harmal	33.367	44.467
 tell-leilan	36.957	41.505
-tell-rifaat	36.472	37.095
 tell-tayinat	36.248	36.376
-teltow	52.402	13.271
+teltow	52.367	13.333
 temes-county	45.750	21.233
 temwen-island	6.850	158.317
 ten-years-war	21.500	-80.000
@@ -6854,6 +6924,7 @@ tomebamba	-2.906	-78.998
 tomislavgrad	43.714	17.227
 tomsk	56.489	84.952
 tonala-river	18.211	-94.129
+tonga	-20.588	-174.810
 tongatapu	-21.211	-175.153
 tongeren	50.779	5.463
 tongwan	37.999	108.847
@@ -6889,6 +6960,7 @@ trakai-voivodeship	54.639	24.935
 tralee	52.272	-9.703
 transcaspian-oblast	37.950	58.383
 transkei	-31.000	29.000
+transnistria	47.300	29.250
 transoxiana	42.430	63.900
 transpadane-republic	45.467	9.170
 transvaal-province	-25.000	30.000
@@ -6940,6 +7012,7 @@ trikala	39.555	21.768
 trim-county-meath	53.552	-6.793
 trincomalee	8.567	81.233
 trinidad	10.461	-61.249
+trinidad-and-tobago	10.667	-61.517
 tripoli-greece	37.508	22.375
 tripura	23.840	91.280
 troad	39.927	26.499
@@ -6994,6 +7067,7 @@ turin	45.079	7.676
 turkey	39.000	36.000
 turkistan-city	43.302	68.269
 turkmenbasy	40.006	52.993
+turkmenistan	39.000	60.000
 turku	60.452	22.267
 turku-castle	60.435	22.228
 tursunzoda	38.511	68.230
@@ -7003,6 +7077,7 @@ tuskahoma-oklahoma	34.618	-95.277
 tutuila	-14.300	-170.722
 tuul-river	48.948	104.799
 tuva	51.783	94.750
+tuvalu	-7.475	178.006
 tuxtla-mountains	18.450	-94.950
 tvrda	45.561	18.696
 tyana	37.848	34.611
@@ -7043,6 +7118,7 @@ umbria	42.983	12.567
 umm-al-quwain	25.560	55.557
 umma	31.667	45.888
 una-himachal-pradesh	31.490	76.280
+unification-of-germany	48.804	2.120
 union-island	12.600	-61.433
 united-arab-republic	30.033	31.217
 united-kingdom-of-great-britain-and-ireland	51.507	-0.128
@@ -7119,13 +7195,13 @@ vale-of-pickering	54.200	-0.700
 vale-of-york	53.950	-1.083
 valencia	39.470	-0.376
 valenciennes	50.358	3.523
-valentinois	44.932	4.891
 valjala	58.408	22.788
 valka	57.775	26.021
 valladolid	41.652	-4.729
 valladolid-debate	41.657	-4.724
 valladolid-yucatan	20.689	-88.202
 valletta	35.898	14.512
+valley-forge	40.097	-75.439
 valley-of-elah	31.681	34.989
 valley-of-mexico	19.667	-98.867
 valley-of-oaxaca	17.045	-96.767
@@ -7377,6 +7453,7 @@ wollo	11.500	40.000
 woodlark-island	-9.126	152.772
 worcestershire	52.200	-2.167
 worlds-parliament-of-religions	41.962	-87.675
+wounded-knee-massacre	43.142	-102.365
 wroclaw	51.110	17.032
 wu-state	31.300	120.600
 wuchang	30.556	114.311
@@ -7407,6 +7484,7 @@ xuanwu-gate-incident	34.278	108.943
 xuzhou	34.261	117.186
 yaeyama-islands	24.333	124.000
 yakutsk	62.027	129.732
+yalta-conference	44.468	34.143
 yamagata-prefecture	38.240	140.364
 yamaguchi-city	34.178	131.474
 yamaguchi-prefecture	34.186	131.470
@@ -7448,8 +7526,6 @@ yinxu	36.123	114.319
 yodo-river	34.683	135.420
 yonago	35.428	133.331
 yonezawa	37.922	140.117
-yongcheng	33.932	116.446
-yonne-river	47.800	3.567
 york	53.950	-1.083
 york-factory	57.003	-92.305
 york-maine	43.163	-70.649
@@ -7472,7 +7548,7 @@ yushu-tibetan-autonomous-prefecture	33.002	97.009
 yuzhno-sakhalinsk	46.950	142.733
 zabid	14.200	43.317
 zabljak-crnojevica	42.317	19.157
-zacatecas	23.293	-102.701
+zacatecas	22.772	-102.575
 zacpeten	16.983	-89.650
 zadar	44.114	15.227
 zagan	51.617	15.317

@@ -3016,6 +3016,44 @@ Print this path (4 Nov 2026): a button under a path's header (.ws-print, the wor
 the path as a booklet: the stops with their reasons and, in print only, the first sentence of each stop's entry (or of a
 profile's own entry, ENC_LINKS.self); menus, share, Test yourself and the prev/next links are left out (@media print).
 
+## Present-day states (21 Nov 2026; the user: "missing points and entries for current modern states in the atlas and the encyclopedia")
+- **The gap:** the register stopped at many countries' colony, Soviet republic or last kingdom, so 72 present-day
+  countries had no state alive today and no dot on the atlas in 2025. Among them were Russia, Japan, Poland, Ukraine,
+  both Koreas, Nigeria, most of Africa and the Pacific, and the partly recognised states. Separately, 60 countries had
+  no encyclopedia entry.
+- **Scope:** the user's choice. The 193 UN members, the two observers, and Kosovo, the Sahrawi Republic, Northern
+  Cyprus, Abkhazia, South Ossetia and Transnistria; Taiwan and Somaliland were already in. No dependencies.
+- **The check:** scripts/tools/modern-states.js
+  - reads Wikidata (P463 Q1065 and the OTHER list; cached in %LOCALAPPDATA%\epoch-tools\modern-states.json,
+    --refresh asks again) and writes scripts/modern-states.tsv;
+  - lists, per state, a living register node, its placed point, text, picture, entry (or a full profile: a profile's
+    subject is not an entry too) and the entry's map point;
+  - scripts/modern-states-manual.tsv holds the editor's matches where the items differ (Abkhazia's article is
+    another item);
+  - `--check` (offline, from the tsv) runs in check-site.ps1, so a present-day state cannot go missing again.
+- **Wave ms1, the register (scripts/states/):**
+  - ms1/register.js: 77 rows, each starting at independence and linked to the state it followed. Five fill gaps: the
+    Polish People's Republic 1947-1989, the Moldavian SSR, the Crown Colony of Malta, Spanish Guinea (1778) and
+    Portuguese São Tomé and Príncipe (1470), the last two never on record before.
+  - merge-register.js inserts the rows and links into data/polities.json as text and adds the Wikidata items to
+    geo-qids.tsv.
+  - fetch-geo.ps1 also moves existing points when Wikidata changes (37 had moved): only the new ids' points were kept.
+  - The texts were written by eight agents with STATES-GUIDE.md and checked by check-states.js. The editor's changes are
+    in ms1/edits.json: the writers kept writing "the article says", which the guide now forbids.
+  - merge-texts.js writes the texts and flags; search-rows.js gives the new states their search rows and facets.
+  - scripts/entries/pictures.js now takes an SVG (a flag) as the PNG thumbnail Commons renders of it.
+- **Wave ms1, the entries:**
+  - 60 country entries in the A7 pipeline; patterns in states/ms1/entry-links.json.
+  - Names that mean other things link only by their long form: Jordan, Benin, Israel, Niger, Ireland, Samoa and
+    Abkhazia.
+  - Portugal's row is "Third Portuguese Republic": the bare name stays with the Kingdom of Portugal entry.
+  - Belize takes "British Honduras", so that name no longer links Honduras.
+  - Points for East Timor, Taiwan, Georgia and Palestine come from their country items' P625
+    (entry-coords-manual.tsv).
+- **Left as they were:** older gaps the tool lists (Andorra 987-1278, Bangladesh 1956-1971, Belgium 1810-1830,
+  Luxembourg 1803-1815, Palestine 1948-1988, Panama 1886-1903, Taiwan 1895-1912, Timor-Leste 1975-2002).
+- **Test:** scripts/tests/atlas-today.js.
+
 ## Connections map and the states register
 - `data/polities.json` — register of every state (incl. the modern Levant: Israel, the State of Palestine, Jordan, Lebanon, Syria — added by hand Oct 2026, successor links to the mandates): nodes {id, n name, t type, b broad region, s/e years, a aka, m mode, c capital, mo modern countries, p profile url} and links {s, t, r relation, f/u years}. Successions stored one way (successor-of). Built from regional research files by the scratchpad states/merge.ps1 (dedupe, relation resolution, validation report).
 - `connections` page + `connections-map.js` (no D3; radial layout, timeline, year slider, outliers). Empire pages include a lazy-loaded mini map (section #connections).

@@ -92,6 +92,9 @@ foreach ($smf in Get-ChildItem "$Repo\sitemaps" -Filter *.xml) { foreach ($m in 
 $NODE = (Get-Command node -ErrorAction SilentlyContinue).Source; if (-not $NODE) { $NODE = "$env:LOCALAPPDATA\epoch-tools\node\node.exe" }
 if (Test-Path $NODE) { $cssOut = & $NODE --max-old-space-size=6000 "$Repo\scripts\split-css.js" --check; if ($LASTEXITCODE) { $bad.Add("css/ : $cssOut") } }
 else { $bad.Add('css/ : node not found, so the stylesheets cut from shared.css could not be checked') }
+# every present-day state is in the register with a placed point, a text and a picture, and has an encyclopedia entry
+# (or a profile) with a map point (21 Nov 2026: 72 countries, Russia and Japan among them, had no state alive today)
+if (Test-Path $NODE) { $msOut = & $NODE "$Repo\scripts\tools\modern-states.js" --check; if ($LASTEXITCODE) { foreach ($msL in @($msOut | Select-Object -Skip 1)) { $bad.Add("present-day states : $($msL.Trim())") } } }
 # no release note is dated after today (12 Nov 2026: "New here" showed notes dated up to 27 November; scripts/tools/whats-new-dates.js --write sets them right)
 $wnToday = [DateTime]::UtcNow.AddDays(1).ToString('yyyy-MM-dd')   # a day's grace for a runner's clock
 foreach ($wnL in [IO.File]::ReadAllLines("$Repo\scripts\whats-new.tsv")) { if ($wnL -match '^(\d{4}-\d\d-\d\d)\t([^\t]*)' -and [string]::CompareOrdinal($Matches[1], $wnToday) -gt 0) { $bad.Add("whats-new.tsv : dated in the future: $($Matches[1]) $($Matches[2])") } }
