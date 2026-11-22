@@ -13,7 +13,7 @@ let fails = 0; const ok = (n, c, x) => { console.log((c ? 'ok   ' : 'FAIL ') + n
     const p = await ctx.newPage(); p.on('pageerror', e => errs.push(String(e)));
     const st = () => p.evaluate(() => ({ tab: [...document.querySelectorAll('.gm-tab[aria-selected="true"]')].map(x => x.id).join(), q: document.getElementById('hunt-q').textContent, how: document.querySelector('#game-hunt .gm-howto').textContent.slice(0, 40), seg: (document.querySelector('.gm-seg[data-for="hunt"] [aria-pressed="true"]') || {}).textContent, hash: location.hash, res: document.getElementById('hunt-res').hidden ? '' : document.getElementById('hunt-res').textContent, done: document.getElementById('hunt-done').hidden ? '' : document.getElementById('hunt-done').textContent.slice(0, 60), wide: document.documentElement.scrollWidth - innerWidth }));
     await p.goto(base + '/games', { waitUntil: 'domcontentloaded' }); await p.waitForTimeout(1000);
-    ok(W + 'the lobby has a card for it', await p.evaluate(() => !!document.querySelector('.gm-lc[data-g="born"]') && document.querySelectorAll('.gm-lc').length === 17));
+    ok(W + 'the lobby has a card for it', await p.evaluate(() => !!document.querySelector('.gm-lc[data-g="born"]') && document.querySelectorAll('.gm-lc').length === 18));
     await p.click('.gm-lc[data-g="born"]'); await p.waitForTimeout(4500);
     let s = await st();
     ok(W + 'the card opens it: its own tab marked, a person named with dates', s.tab === 'tab-born' && s.hash === '#hunt-born' && s.seg === 'Born where?' && /Round 1 of 5: where was .+ \(.+\) born\?/.test(s.q) && /^A person of history/.test(s.how) && s.wide <= 0, s);

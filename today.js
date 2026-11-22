@@ -26,7 +26,8 @@
     ['Where Is This Song From?', '/games#songq', 'Five songs, four regions', d0(10, 3), five(kids ? 'songq-k' : 'songq-')],
     ['Six Degrees', '/games#six', 'From one entry to another by its links', d0(10, 6), function (n) { var r = G['sixd-' + n]; return r ? [r.gave ? 'Route shown' : r.done ? 'Solved in ' + r.c + ' clicks' : 'In progress', !!(r.done || r.gave)] : null; }],
     ['Quote Cipher', '/games#cipher', 'A quotation in code', d0(10, 14), function (n) { var r = G['cipher-' + n]; return r ? [r.gave ? 'Answer shown' : r.done ? 'Solved' : 'In progress', !!(r.done || r.gave)] : null; }],
-    ['Finish the Line', '/games#line', 'Which line of the song comes next?', d0(10, 15), five('line-')]
+    ['Finish the Line', '/games#line', 'Which line of the song comes next?', d0(10, 15), five('line-')],
+    ['Whose Life?', '/games#whose', 'A great life in five clues', d0(10, 24), function (n) { var r = G['whose-' + n]; return r && r.g && r.g.length ? [r.done ? (r.w ? 'Found on clue ' + r.g.length : 'Not found') : 'In progress', !!r.done] : null; }]
   ];
   var quiz = null; try { quiz = JSON.parse(localStorage.getItem('epoch-quiz') || 'null'); } catch (e) {}
   var rows = [['Daily Quiz', '/quiz', 'Name it from the clues', quiz && quiz.day === Q ? [quiz.done ? (quiz.won ? 'Solved' : 'Not this time') : 'In progress', !!quiz.done] : null]]

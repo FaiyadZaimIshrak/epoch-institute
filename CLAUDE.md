@@ -6,7 +6,7 @@ histories, centuries, glossary, reading paths) are pre-built from the data by sc
 
 ## Pages
 Root pages are **extensionless** files served as HTML by `.htaccess` (`ForceType`):
-index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · weekly · write · faiths · flashcards · race · inventions · governance · religions · compare · new (generated) · today-card · privacy · terms · support · advent · now
+index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · weekly · write · faiths · flashcards · race · inventions · governance · religions · journeys · compare · new (generated) · today-card · privacy · terms · support · advent · now
 A new root page goes into the FilesMatch list at the top of the root .htaccess as well as deploy.sh's PAGES: left out,
 it goes out with no Content-Type under nosniff and browsers will not show it (/governance, 31 Oct 2026, for a few
 hours). check-site.ps1 fails on a root page missing from either list, and on a folder page no .htaccess serves as HTML.
@@ -48,7 +48,7 @@ panel at the right. The phone menu: the Display row, Profiles, Encyclopedia, Tod
 Time / Themes & Play / Institute) and the newsletter; the footer of every page except /contact starts with "Spotted a
 mistake on this page? Suggest a correction" (/contact?topic=correction&page=<path>). Page keys for initNav / body[data-nav]: profiles, encyclopedia, states,
 today, atlas, countries, centuries, explorer, connections, paths, quiz, glossary, series, dataset, research,
-community, about, contributors, contact, start, games, kids, speeches, songs, timeline, years, people, passport, teachers, write, faiths, flashcards, race, societies, inventions, governance, religions, dynasties, home. The header also
+community, about, contributors, contact, start, games, kids, speeches, songs, timeline, years, people, passport, teachers, write, faiths, flashcards, race, societies, inventions, governance, religions, journeys, dynasties, home. The header also
 carries the Kids mode star
 (see "Kids mode") between the shelf and the theme toggle. At ≤480 px the star and the theme toggle leave the bar (it
 holds search, shelf and the menu button; with five controls the menu button fell off a 390 px screen) and the phone
@@ -3262,6 +3262,64 @@ the globe, E6 cities through time, E7 battles as pages, E8 sources under each pr
     name), its tab and lobby card (New until 23 Dec), a column on My Week, a row on /today, its calendar on /past-games
     (make-past-games.js), My Passport (18 games). Styles gm-whose-*. games.js?v=23, passport.js?v=16;
     scripts/tests/whose-life.js.
+
+- **E4, family trees and "Family"** (22 Nov 2026):
+  - **scripts/tools/entry-wd-family.js** [--report] reads father, mother, spouse and child (Wikidata P22, P25, P26,
+    P40; the statements with their qualifiers, so adoptive, step and foster relations, "kinship to subject", are left
+    out) for every person entry whose item is "same", and keeps a relation only where the other person is a person
+    entry too: scripts/entry-family.tsv (p parent child f|m|? and s a b). A parent and child must be possible by
+    their dates (birth(): a lifespan gives the birth year, "d.", a reign, "fl." or a century a span of years in which
+    the person may have been born; the child 12 to 80 years after the parent and not after the parent's death), a
+    pair recorded both ways goes, nobody is their own ancestor, nobody has two fathers. The first version read "d.
+    1170" as a birth year and dropped 60 real parents: dates that are not lifespans are spans.
+    scripts/entry-family-manual.tsv (the editor's: "-" takes a relation away, f, m or + adds one) wins.
+  - **scripts/tools/make-family-trees.js** [--show=<house>] [--html=<file> --css=<file>] (run by build-pages.ps1
+    before it reads the tables): for each house of entry-houses.tsv the members and those one step from a member,
+    drawn as inline SVG, the generations in columns from left to right (a phone scrolls a tall tree, not a wide one),
+    children to the right, oldest at the top; a wife or husband with no parent in the tree stands under their partner,
+    joined by a short gold bar; a gold frame marks a member. Only groups of three or more, and only houses with a
+    group of four. scripts/family-trees.tsv (house, people, SVG) and scripts/life-family.js (LIFE_FAMILY, the Great
+    Lives' "Family in the encyclopedia" chips after their first section, generator.html).
+  - **The builder:** "Family" on a person's entry after Born and died (PersonFamily: tiles of father, mother,
+    married, children; "as Wikidata records them … not the whole family") and the tree on a house's entry under
+    "Rulers and members" (#family-tree, .ft-wrap scrolls sideways inside its box; the page never does). Styles ft-*.
+    scripts/tests/family-trees.js.
+  - A tree shows the people the encyclopedia holds: Henry VIII stands with Anne of Cleves alone, as his other wives
+    have no entry. New entries get relations only after scripts/tools/entry-wikidata.js has matched them to an item.
+
+- **E5, Journeys on the Globe** (/journeys, hand page, 22 Nov 2026; nav key journeys; menu Maps & Time → Maps):
+  - **The journeys** (scripts/journeys/<slug>.json; journeys.tsv is the editor's: order, short name, the traveller's
+    page, other pages that link the journey, Kids yes/no, the article): Alexander's campaigns, Paul's journeys, the
+    Hijra, Xuanzang, Marco Polo, Mansa Musa's pilgrimage, Ibn Battuta, Zheng He's voyages, Columbus's four voyages,
+    Magellan and Elcano, Cook's first voyage, Lewis and Clark, Darwin on the Beagle, the Long March: 14 journeys,
+    254 stops. Each stop: place, entry (a mapped place entry or null), wp (the place's own Wikipedia article), date,
+    by (sea or land), one or two sentences, and the article's words that support them (quote).
+  - **How they were made** (scripts/journeys/JOURNEYS-GUIDE.md; src/: wp/ the saved articles, out/ the drafts,
+    edit.js and edit-texts.json the editor's changes, check-journeys.js, freeze.js, points.tsv): six writers, one saved
+    article per journey; check-journeys.js <dir> <repo> [--points] finds every quotation word for word in its article,
+    flags praise words, dashes, BC/AD, "discovered", numbers not in the article, and with --points gives each stop its
+    point: the entry's own (entry-coords.tsv), else Wikidata's P625 of the article named in wp (never typed). A second
+    pass took every "the article says" out of the texts; the editor read every stop.
+  - **A river's article gives its source or mouth**, not the crossing (the Jhelum for the Hydaspes lay in Kashmir, the
+    Jinsha at its source 1,500 km off, the Yellowstone in Wyoming): such a stop takes the point of the battle's or
+    site's own article (Battle of the Hydaspes, Two Medicine Fight Site, the Missouri-Yellowstone Confluence centre)
+    or is left out (the Long March's Gan, Xiang, Wu and Jinsha crossings, Massaga, the Belén River): the page says
+    some stages are not drawn. Read points.tsv's distances before a journey ships.
+  - **scripts/tools/make-journeys.js** (run by build-pages.ps1 before the entry pages; STOPS on a stop without a
+    point, a text that speaks of its source, an unknown entry or page) writes the page from /privacy's head: every
+    journey as an article of legs and stops (li[data-ll][data-by]), so it reads without scripts and is searchable;
+    scripts/journey-links.js (JOURNEY_LINKS: "On the globe, stop by stop" after a profile's last section) and
+    scripts/journey-entries.tsv (the entries that link a journey, EntryJourney in the builder).
+  - **journeys.js** (?v= its hash, stamped by the tool): one journey at a time (?j=<slug>&s=<stop>; an inline script
+    marks it before the first paint, .jr-js .jr-j.is-on); a d3-geo globe on a canvas (as the faith maps: /d3-geo.js
+    and maps/globe-land.js loaded here, JR_GLOBE_SRC), the route faint, the part travelled bright and drawn out leg by
+    leg along great circles, a passage by sea dashed, the present stop ringed and named; it glides to each stop,
+    zoomed by the distance to its neighbours; Play (2.6 s a stop), Back, Next, a tap on a dot or on a stop of the
+    list, arrow keys, drag, pinch, wheel after a click; Flat map (an SVG over world.svg in the atlas's Equal Earth
+    plane, a leg across the map's edge in two parts), also the fallback without d3 or canvas; epoch-journey-view.
+    Kids mode leaves out the journeys of war, conquest and enslavement (data-kids="0": Alexander, Columbus, Magellan,
+    Cook, the Long March). window.epochJourneys. Styles jr-*. scripts/tests/journeys.js.
+  - The lines between stops are the shortest paths on the globe, not the roads and sea lanes taken: the page says so.
 
 ## Connections map and the states register
 - `data/polities.json` — register of every state (incl. the modern Levant: Israel, the State of Palestine, Jordan, Lebanon, Syria — added by hand Oct 2026, successor links to the mandates): nodes {id, n name, t type, b broad region, s/e years, a aka, m mode, c capital, mo modern countries, p profile url} and links {s, t, r relation, f/u years}. Successions stored one way (successor-of). Built from regional research files by the scratchpad states/merge.ps1 (dedupe, relation resolution, validation report).

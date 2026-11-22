@@ -4445,6 +4445,10 @@ if (Test-Path "$Repo\data\quotes.json") {
   # quotations (scripts/cipher.tsv, append only), which writes cipher-data.js and stamps its ?v= into /games (CIPHER_SRC)
   foreach ($cphL in (& $songExe "$PSScriptRoot\tools\make-cipher.js")) { Say $cphL }
   if ($LASTEXITCODE) { throw 'Quote Cipher: scripts/tools/make-cipher.js failed (above)' }
+  # Whose Life? (Nov 2026): a Great Life a day in five clues from its own profile, dealt by scripts/tools/make-whose-life.js
+  # (scripts/whose-life.tsv, append only), which writes whose-data.js and stamps its ?v= into /games (WHOSE_SRC)
+  foreach ($whoL in (& $songExe "$PSScriptRoot\tools\make-whose-life.js")) { Say $whoL }
+  if ($LASTEXITCODE) { throw 'Whose Life?: scripts/tools/make-whose-life.js failed (above)' }
 }
 # The Kids corner: scripts/kids-corner.tsv (@theme lines, entry lines with a line for young readers, ! facts)
 $kdThemes = New-Object Collections.Generic.List[object]; $kdFacts = New-Object Collections.Generic.List[string]; $kdBad = New-Object Collections.Generic.List[string]; $kdT = $null

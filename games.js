@@ -144,7 +144,7 @@ initNav('games');
   })();
 
   // ── tabs: a sliding marker, an animated change of game, arrow keys, #pairs ... #year (#words-egypt picks a theme) ──
-  var GAMES = ['pairs', 'order', 'ranks', 'hunt', 'first', 'puzzle', 'words', 'year', 'conn', 'cross', 'said', 'songq', 'six', 'line', 'cipher'], ink = document.querySelector('.gm-tab-ink'), current = null, MODS = {};
+  var GAMES = ['pairs', 'order', 'ranks', 'hunt', 'first', 'puzzle', 'words', 'year', 'conn', 'cross', 'said', 'songq', 'six', 'line', 'cipher', 'whose'], ink = document.querySelector('.gm-tab-ink'), current = null, MODS = {};
   function moveInk(btn) { ink.style.width = btn.offsetWidth + 'px'; ink.style.height = btn.offsetHeight + 'px'; ink.style.transform = 'translate(' + btn.offsetLeft + 'px,' + btn.offsetTop + 'px)'; }
   // The lobby (Nov 2026): /games opens on a card for every game (a bar of fourteen tabs hid most of them on phones, and a new
   // game was not found); a card, a tab or an address with a game's name opens it, "All games" and Back return here.
@@ -171,6 +171,7 @@ initNav('games');
     if (g === 'six') { r = G['sixd-' + dayNo(10, 6)]; return r ? [r.gave ? 'Route shown today' : r.done ? 'Solved today in ' + r.c + ' clicks' : 'In progress', !!(r.done || r.gave)] : null; }
     if (g === 'line') { r = G['line-' + Math.max(1, dayNo(10, 15))]; return r && r.m ? ['Today: ' + ones(r.m) + '/5' + (r.m.length < 5 ? ' so far' : ''), r.m.length >= 5] : null; }
     if (g === 'cipher') { r = G['cipher-' + Math.max(1, dayNo(10, 14))]; return r ? [r.gave ? 'Answer shown today' : r.done ? 'Solved today' : 'In progress', !!(r.done || r.gave)] : null; }
+    if (g === 'whose') { r = G['whose-' + Math.max(1, dayNo(10, 24))]; return r && r.g && r.g.length ? [r.done ? (r.w ? 'Found today on clue ' + r.g.length : 'Not found today') : 'In progress', !!r.done] : null; }
     if (g === 'lasted') return G['first-lasted'] ? ['Your best: ' + G['first-lasted'] + ' in a row', false] : null;
     if (g === 'born') return G['hunt-born'] ? ['Your best: ' + G['hunt-born'] + ' of 500', false] : null;
     return null;
@@ -2176,6 +2177,83 @@ initNav('games');
   })();
   MODS.line = Line;
   window.epochLine = Line;
+
+  // ── Whose Life? (#whose, Nov 2026): one Great Life a day, the same for everyone (UTC; #1 = 24 Nov 2026), from
+  // whose-data.js (WHOSE, by scripts/tools/make-whose-life.js: each life's own "Did you know?", a key event, a takeaway,
+  // what it is known for and who the person was, the name masked). Five clues, the hardest first; ten lives to choose
+  // among; a wrong answer brings the next clue. epoch-games whose-<number> {g: the lives chosen, in order, done, w},
+  // whose-streak {n, last, b}.
+  var Whose = (function () {
+    var D = null, N = 5, QDAY = Math.floor(Date.now() / 864e5), DAY0 = Math.floor(Date.UTC(2026, 10, 24) / 864e5), TODAY = Math.max(1, QDAY - DAY0 + 1);
+    var K = { num: 0, p: null, g: [], done: false, won: false, practice: false }, board = $('whose-board');
+    function key(num) { return 'whose-' + num; }
+    function save() { setBest(key(K.num), { g: K.g, done: K.done, w: K.won ? 1 : 0 }); }
+    function clues(p) { var l = D.l[p[0]]; return [l[4], l[5][p[1] % l[5].length], l[6][p[1] % l[6].length], l[7], l[8]]; }
+    function choices(p) { return [p[0]].concat(p[2]).sort(function (a, b) { return D.l[a][0] < D.l[b][0] ? -1 : 1; }); }   // by name: the same order for everyone
+    function emblem(i) { return '/logos/thumbs/' + encodeURIComponent(D.l[i][0]).replace(/'/g, '%27') + '.png'; }
+    function load(num, practice) {
+      K.num = num; K.practice = practice; K.p = D.p[(num - 1) % D.p.length];
+      var sv = best(key(num)), ok = function (i) { return i === K.p[0] || K.p[2].indexOf(i) >= 0; };
+      K.g = sv && sv.g ? sv.g.filter(ok).slice(0, N) : []; K.won = K.g.indexOf(K.p[0]) >= 0; K.done = K.won || K.g.length >= N || !!(sv && sv.done);
+      $('whose-num').innerHTML = (practice ? 'Earlier: ' : 'Today: ') + 'Whose Life? <b>#' + num + '</b>';
+      var sk = best('whose-streak'); $('whose-best').textContent = sk && sk.n > 1 && sk.last >= QDAY - 1 ? 'Played ' + sk.n + ' days in a row' : '';
+      $('whose-done').hidden = true; $('whose-done').innerHTML = '';
+      draw(); if (K.done) finish(true);
+    }
+    function dots() { var h = '<ol class="gm-said-dots" aria-hidden="true">'; for (var k = 0; k < N; k++) h += '<li class="' + (k < K.g.length ? (K.g[k] === K.p[0] ? 'ok' : 'no') : k === K.g.length && !K.done ? 'now' : '') + '"></li>'; return h + '</ol>'; }
+    function draw() {
+      var c = clues(K.p), shown = K.done ? N : Math.min(N, K.g.length + 1), h = dots() + '<ol class="gm-whose-clues">';
+      for (var k = 0; k < shown; k++) h += '<li' + (k === shown - 1 && !K.done ? ' class="is-new"' : '') + '><b>Clue ' + (k + 1) + '</b>' + escHtml(c[k]) + '</li>';
+      h += '</ol>';
+      if (!K.done) h += '<p class="gm-whose-ask" aria-live="polite">' + (K.g.length ? 'Not ' + escHtml(D.l[K.g[K.g.length - 1]][0]) + '. ' : '') + 'Whose life is it? ' + (shown < N ? 'A wrong answer brings the next clue.' : 'This is the last clue.') + '</p>';
+      h += '<div class="gm-whose-opts" role="group" aria-label="Whose life is it?">' + choices(K.p).map(function (i) {
+        var was = K.g.indexOf(i) >= 0, right = i === K.p[0];
+        return '<button type="button" class="gm-whose-o' + (was && !right ? ' is-wrong' : '') + (K.done && right ? ' is-right' : '') + '" data-i="' + i + '"' + (was || K.done ? ' disabled' : '') + '><img src="' + emblem(i) + '" alt="" width="56" height="56" loading="lazy"><span>' + escHtml(D.l[i][0]) + '</span></button>';
+      }).join('') + '</div>';
+      board.innerHTML = h;
+    }
+    function pick(i) {
+      if (K.done || K.g.indexOf(i) >= 0) return; K.g.push(i); var ok = i === K.p[0]; Sfx.play(ok ? 'good' : 'bad');
+      if (ok || K.g.length >= N) { K.done = true; K.won = ok; save(); draw(); finish(); return; }
+      save(); draw(); var nw = board.querySelector('.gm-whose-clues .is-new'); if (nw && nw.scrollIntoView) nw.scrollIntoView({ block: 'nearest', behavior: reduce ? 'auto' : 'smooth' });
+    }
+    board.addEventListener('click', function (e) { var b = e.target.closest('.gm-whose-o'); if (b && !b.disabled) pick(+b.getAttribute('data-i')); });
+    function finish(again) {
+      var l = D.l[K.p[0]], n = K.g.length, st = !K.won ? 0 : n <= 2 ? 3 : n === 3 ? 2 : 1, m = K.g.map(function (i) { return i === K.p[0] ? '1' : '0'; }).join('');
+      var squares = m.split('').map(function (x) { return x === '1' ? '🟩' : '🟥'; }).join(''), sk = best('whose-streak') || { n: 0, last: 0 };
+      if (!K.practice && K.num === TODAY && sk.last !== QDAY) { var nb = sk.last === QDAY - 1 ? sk.n + 1 : 1; sk = { n: nb, last: QDAY, b: Math.max(sk.b || 0, nb) }; setBest('whose-streak', sk); }
+      var dn = $('whose-done'), score = K.won ? n + '/' + N : 'X/' + N;
+      dn.innerHTML = '<div class="gm-done-card">' + stars(st) + '<p class="gm-done-t">' + (K.won ? (n === 1 ? 'On the first clue!' : 'Found on clue ' + n + ' of ' + N) : 'Not this time') + '</p>' +
+        '<p class="gm-whose-ans"><img src="' + emblem(K.p[0]) + '" alt="" width="72" height="72"><span><b>' + escHtml(l[0]) + '</b><i>' + escHtml(l[2]) + '</i><a href="/life/' + encodeURIComponent(l[1]) + '">Read the whole life &rarr;</a></span></p>' +
+        '<p class="gm-daily-sq" aria-label="Your answers">' + squares + '</p>' +
+        '<p class="gm-done-s">Whose Life? #' + K.num + (K.practice ? ' (an earlier one)' : (sk.n > 1 ? ' · played ' + sk.n + ' days in a row' : '')) + ' · a new life in <span data-countdown></span></p>' +
+        '<div class="gm-done-row">' + shareBtn() + '</div>' + (K.practice ? '' : newsletterPrompt('whose')) + '</div>';
+      share(dn, 'Epoch Whose Life? #' + K.num + ': ' + score + '\n' + squares, 'whose', { title: 'Whose Life? #' + K.num, score: score, unit: K.won ? (n === 1 ? 'clue needed' : 'clues needed') : 'not found today', stars: st, squares: m,
+        note: sk.n > 1 && !K.practice ? 'Played ' + sk.n + ' days in a row' : '', cta: 'A great life every day', url: 'the-epoch-institute.org/games#whose' });
+      dn.classList.add('gm-done-inline'); dn.hidden = false;
+      if (!again && K.won && n <= 3) { confetti(dn); Sfx.play('win'); }
+      var cd = dn.querySelector('[data-countdown]');
+      (function tick() { if (!cd.isConnected) return; var ms = (QDAY + 1) * 864e5 - Date.now(); if (ms <= 0) { cd.textContent = 'a moment'; return; } var h = Math.floor(ms / 36e5), mm = Math.floor(ms % 36e5 / 6e4); cd.textContent = (h ? h + ' h ' : '') + mm + ' min'; setTimeout(tick, 30000); })();
+    }
+    var pickEl = $('whose-pick');
+    function opts() {
+      var n = Math.min(TODAY - 1, 60), h = '<option value="' + TODAY + '">Today&rsquo;s life (#' + TODAY + ')</option>';
+      for (var i = TODAY - 1; i >= Math.max(1, TODAY - n); i--) h += '<option value="' + i + '">#' + i + (best(key(i)) && best(key(i)).done ? ' (played)' : '') + '</option>';
+      pickEl.innerHTML = h; pickEl.parentNode.hidden = TODAY < 2;
+    }
+    pickEl.addEventListener('change', function () { WANT.whose = +pickEl.value; pastFirst('whose', pickEl, TODAY, load); });
+    var started = false;
+    return { show: function () {
+      if (started) return; started = true;
+      var s = document.createElement('script'); s.src = typeof WHOSE_SRC !== 'undefined' ? WHOSE_SRC : '/whose-data.js';
+      s.onload = function () { D = typeof WHOSE !== 'undefined' ? WHOSE : null; if (!D || !D.p || !D.p.length) { board.innerHTML = '<p class="gm-howto">The lives are on their way.</p>'; return; } opts(); pastFirst('whose', pickEl, TODAY, load); };
+      s.onerror = function () { board.innerHTML = '<p class="gm-howto">The lives could not be loaded. Please try again later.</p>'; };
+      document.head.appendChild(s);
+    }, open: function () { if (D && WANT.whose) pastFirst('whose', pickEl, TODAY, load); },
+      state: function () { return { num: K.num, guesses: K.g.slice(), done: K.done, won: K.won, answer: K.p ? K.p[0] : null, choices: K.p ? choices(K.p) : [], name: K.p && D ? D.l[K.p[0]][0] : '' }; } };
+  })();
+  MODS.whose = Whose;
+  window.epochWhose = Whose;
 
   // open the game from the address (#words-egypt opens Word Hunt on Ancient Egypt), else the lobby with a card for each
   openHash(); started0 = true;

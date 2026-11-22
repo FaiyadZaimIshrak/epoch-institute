@@ -12,7 +12,7 @@ let fails = 0; const ok = (n, c, x) => { console.log((c ? 'ok   ' : 'FAIL ') + n
     await p.goto(base + '/past-games'); await p.waitForTimeout(900);
     await p.screenshot({ path: path.join(out, 'past-games-' + vp.width + '.png') });
     ok(vp.width + ': no sideways scroll', (await p.evaluate(() => document.documentElement.scrollWidth - innerWidth)) <= 0);
-    ok(vp.width + ': eight games to choose from', (await p.$$('.pg-game')).length === 8);
+    ok(vp.width + ': nine games to choose from', (await p.$$('.pg-game')).length === 9);
     ok(vp.width + ': the Daily Ten is shown first, a cell for every day since 26 October', (await p.$$('.pg-day')).length === Q - d0(9, 26) + 1, (await p.$$('.pg-day')).length);
     const five = await p.$eval('a.pg-day[href="/games#first-daily-5"]', a => [a.className, a.textContent]);
     ok(vp.width + ': a day played shows its result', /is-done/.test(five[0]) && /8\/10/.test(five[1]), five);

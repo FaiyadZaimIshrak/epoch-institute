@@ -6,7 +6,7 @@ let fails = 0; const ok = (n, c, x) => { console.log((c ? 'ok   ' : 'FAIL ') + n
 (async () => {
   const W = new Function(fs.readFileSync(path.join(process.argv[2], 'whose-data.js'), 'utf8') + '; return WHOSE;')();
   // the data: five clues a life, none naming it; nine different others each day; no life again within sixty days
-  const fold = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(), STOP = new Set('the of and ibn abi i ii great mother shi huang khan mansa guru'.split(' '));
+  const fold = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(), STOP = new Set('the of and ibn abi bint bin great magnificent conqueror saint mother father king queen emperor empress apostle prophet lord lady mansa khan shi huang virgin blessed holy guru pope sultan caliph prince tsar shah president general chairman elder younger'.split(' '));   // titles, as make-whose-life.js: no name words
   let leak = [], thin = 0;
   W.l.forEach(l => { const words = fold(l[0]).split(/\s+of\s+/)[0].split(/[^a-z']+/).filter(w => w.length >= 4 && !STOP.has(w)); const clues = [l[4]].concat(l[5], l[6], [l[7], l[8]]);
     if (!l[4] || !l[5].length || !l[6].length || !l[7] || !l[8]) thin++;

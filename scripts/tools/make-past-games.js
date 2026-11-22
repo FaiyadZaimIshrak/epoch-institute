@@ -62,7 +62,8 @@ const body = `</head>
     { k: 'songq', n: 'Where Is This Song From?', s: 'Five songs, four regions', day0: d0(10, 3), get: function (q, n) { return of(G['songq-' + (kids ? 'k' : '') + n], 5); } },
     { k: 'six', n: 'Six Degrees', s: 'From one entry to another', day0: d0(10, 6), get: function (q, n) { var r = G['sixd-' + n]; if (!r) return null; return [r.gave ? 'Shown' : r.done ? r.c + ' clicks' : 'Begun', !!r.done || !!r.gave]; } },
     { k: 'cipher', n: 'Quote Cipher', s: 'A quotation in code', day0: d0(10, 14), get: function (q, n) { var r = G['cipher-' + n]; if (!r) return null; return [r.gave ? 'Shown' : r.done ? 'Solved' : 'Begun', !!r.done || !!r.gave]; } },
-    { k: 'line', n: 'Finish the Line', s: 'Which line comes next?', day0: d0(10, 15), get: function (q, n) { return of(G['line-' + n], 5); } }];
+    { k: 'line', n: 'Finish the Line', s: 'Which line comes next?', day0: d0(10, 15), get: function (q, n) { return of(G['line-' + n], 5); } },
+    { k: 'whose', n: 'Whose Life?', s: 'A great life in five clues', day0: d0(10, 24), get: function (q, n) { var r = G['whose-' + n]; if (!r || !r.g || !r.g.length) return null; return [r.done ? (r.w ? 'Clue ' + r.g.length : 'Missed') : 'Begun', !!r.done]; } }];
   var esc = typeof escHtml === 'function' ? escHtml : function (s) { return String(s); };
   var box = document.getElementById('pg-games'), cal = document.getElementById('pg-cal'), cur = null;
   document.getElementById('pg-note').hidden = true;

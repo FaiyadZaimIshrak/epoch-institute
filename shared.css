@@ -3830,6 +3830,28 @@ svg.map-here { cursor: crosshair; }
 .gm-line .gm-said-o.gm-line-o { display: block; text-align: left; min-height: 52px; padding: 10px 14px; font-family: var(--font-text); font-size: 19px; line-height: 1.4; }
 .gm-line-o .gm-line-l { width: 100%; }
 .gm-line-o .gm-line-l i { margin: 2px 0 0; }
+/* Whose Life? (#whose, Nov 2026): the clues told so far, then ten lives to choose among */
+.gm-whose-clues { list-style: none; margin: 0 0 14px; padding: 0; display: grid; gap: 10px; text-align: left; }
+.gm-whose-clues li { padding: 12px 14px; border: 1px solid var(--border); border-left: 3px solid rgba(var(--gold-rgb), 0.45); border-radius: var(--radius); background: var(--surface); font-family: var(--font-text); font-size: 17.5px; line-height: 1.5; }
+.gm-whose-clues li.is-new { border-left-color: var(--gold); }
+.gm-whose-clues b { display: block; margin-bottom: 2px; font-family: var(--font-ui); font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.gm-whose-ask { margin: 0 0 12px; font-family: var(--font-ui); font-size: 14.5px; font-weight: 600; color: var(--text); }
+.gm-whose-opts { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+.gm-whose-o { display: flex; flex-direction: column; align-items: center; gap: 6px; min-height: 44px; padding: 10px 6px; border: 1px solid var(--field-border, var(--border)); border-radius: var(--radius); background: none; color: var(--text); font-family: var(--font-ui); font-size: 13.5px; font-weight: 600; line-height: 1.25; text-align: center; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.gm-whose-o img { width: 56px; height: 56px; object-fit: contain; }
+.gm-whose-o:hover:not(:disabled) { border-color: var(--gold); }
+.gm-whose-o:disabled { cursor: default; }
+.gm-whose-o.is-wrong { opacity: 0.45; }
+.gm-whose-o.is-wrong span { text-decoration: line-through; }
+.gm-whose-o.is-right { border-color: var(--gold); background: rgba(var(--gold-rgb), 0.12); }
+.gm-whose-ans { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 10px 0; text-align: left; }
+.gm-whose-ans img { flex: none; width: 72px; height: 72px; object-fit: contain; }
+.gm-whose-ans span { display: grid; gap: 2px; }
+.gm-whose-ans b { font-family: var(--font-display); font-size: 20px; color: var(--gold-light); }
+.gm-whose-ans i { font-family: var(--font-ui); font-size: 13.5px; font-style: normal; color: var(--muted); }
+.gm-whose-ans a { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold-light); text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 900px) { .gm-whose-opts { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .gm-whose-opts { grid-template-columns: repeat(2, minmax(0, 1fr)); } .gm-whose-o { flex-direction: row; justify-content: flex-start; text-align: left; padding: 8px 10px; } .gm-whose-o img { width: 40px; height: 40px; } .gm-whose-clues li { font-size: 16.5px; } }
 .gm-said-rq.gm-line-ls i { font-size: 13px; }
 /* /profiles' timeline view (Nov 2026): a bar per profile on a deep-time scale, by region; colours by kind */
 .tl-view { position: relative; margin: 0 40px; }

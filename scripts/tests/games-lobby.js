@@ -9,7 +9,7 @@ let fails = 0; const ok = (n, c, x) => { console.log((c ? 'ok   ' : 'FAIL ') + n
     await p.goto(base + '/games'); await p.waitForTimeout(1500);
     let s = await st(p); ok(W + 'opens on the lobby', s.lobby && !s.tabs && !s.back && !s.shown.length && s.wide <= 0, s);
     const cards = await p.$$eval('.gm-lc', e => e.map(a => [a.getAttribute('href'), a.querySelector('.gm-lc-t').textContent, a.classList.contains('is-new'), a.querySelector('.gm-lc-s').textContent]));
-    ok(W + 'a card for each game (a tab each too), the new ones marked', cards.length === (await p.$$eval('.gm-tab', t => t.length)) && cards.filter(c => c[2]).length <= 4, cards.map(c => c[1]));
+    ok(W + 'a card for each game (a tab each too), the new ones marked', cards.length === (await p.$$eval('.gm-tab', t => t.length)) && cards.filter(c => c[2]).length <= 6, cards.map(c => c[1]));
     const clip = await p.$$eval('.gm-lc', e => e.filter(a => a.scrollWidth > a.clientWidth + 1 || [...a.children].some(c => c.getBoundingClientRect().right > a.getBoundingClientRect().right + 1)).length); ok(W + 'no card text spills', clip === 0, clip);
     await p.screenshot({ path: path.join(out, 'lobby-' + vp.width + '.png'), fullPage: true });
     for (const c of cards) {   // every card opens its game
