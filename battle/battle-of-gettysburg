@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Battle of Gettysburg: The Two Sides, the Fighting and What Followed</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Union forces under George Meade defeated Robert E. Lee's Confederate army at Gettysburg, Pennsylvania, from 1 to 3 July 1863, ending Lee's invasion of…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Battle of Gettysburg: The Two Sides, the Fighting and What Followed">
+<meta property="og:description" content="Union forces under George Meade defeated Robert E. Lee's Confederate army at Gettysburg, Pennsylvania, from 1 to 3 July 1863, ending Lee's invasion of…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/battle/battle-of-gettysburg">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/battle-of-gettysburg.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/battle-of-gettysburg.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/battle/battle-of-gettysburg">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Battles","item":"https://the-epoch-institute.org/profiles?kind=battle"},{"@type":"ListItem","position":4,"name":"Battle of Gettysburg"}]},{"@type":"Article","headline":"Battle of Gettysburg","description":"Union forces under George Meade defeated Robert E. Lee's Confederate army at Gettysburg, Pennsylvania, from 1 to 3 July 1863, ending Lee's invasion of…","url":"https://the-epoch-institute.org/battle/battle-of-gettysburg","mainEntityOfPage":"https://the-epoch-institute.org/battle/battle-of-gettysburg","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Battle of Gettysburg","sameAs":["https://en.wikipedia.org/wiki/Battle_of_Gettysburg","https://www.wikidata.org/wiki/Q33132"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/battle-of-gettysburg.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=battle">Battles</a></li><li aria-current="page">Battle of Gettysburg</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Battle%20of%20Gettysburg.png" alt="Battle of Gettysburg" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Battle · Americas</p>
+        <h1 class="profile-detail-name">Battle of Gettysburg</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Date</span><span class="info-stat-val">1 to 3 July 1863</span></div>
+          <div class="info-stat"><span class="info-stat-label">Place</span><span class="info-stat-val">In and around Gettysburg, <a class="enc-link" href="/encyclopedia/pennsylvania">Pennsylvania</a>, <a class="enc-link" href="/encyclopedia/united-states">United States</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">The two sides</span><span class="info-stat-val">Union Army of the Potomac under George G. Meade (more than 100,000 men) against the Confederate <a class="enc-link" href="/encyclopedia/army-of-northern-virginia">Army of Northern Virginia</a> under <a class="enc-link" href="/encyclopedia/robert-e-lee">Robert E. Lee</a> (between 72,000 and 75,000 men)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Outcome</span><span class="info-stat-val">The Union army held its lines and repulsed Pickett's Charge; <a class="enc-link" href="/encyclopedia/robert-e-lee">Lee</a>'s invasion of the North ended and his army retreated, crossing the Potomac on 13 and 14 July.</span></div>
+        </div>
+        <p class="empire-meta">7 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li><a class="enc-link" href="/encyclopedia/robert-e-lee">Lee</a> invaded the North in June 1863 partly for supplies, relief for <a class="enc-link" href="/encyclopedia/virginia">Virginia</a> and the hope of strengthening the Northern peace movement, and the armies met by chance at Gettysburg.</li><li>The Union army held a fishhook-shaped line on interior lines through three days and turned back Pickett's Charge on 3 July.</li><li>Historians agree it was a Union victory but are divided on whether it was decisive, and the war went on for almost two more years.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Only one civilian death is documented during the battle, Ginnie Wade, yet the town of 2,400 was left to care for 14,000 wounded Union troops and 8,000 Confederate prisoners.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#background">Background</a></li><li><a href="#forces">The Two Sides</a></li><li><a href="#course">How It Went</a></li><li><a href="#aftermath">Aftermath</a></li><li><a href="#sources">How We Know</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">1863</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/robert-e-lee">Lee</a> wins at Chancellorsville and decides on a second invasion of the North; his army begins to move north from Fredericksburg on 3 June</span></li><li><span class="rf-year">June 1863</span><span class="rf-text">Meade replaces Hooker in command of the Army of the Potomac on 28 June</span></li><li><span class="rf-year">July 1863</span><span class="rf-text">On 1 July Heth's division meets Buford's cavalry west of Gettysburg and the Union I and XI corps retreat to Cemetery Hill</span></li><li><span class="rf-year">July 1863</span><span class="rf-text">On 2 July Longstreet attacks the Union left at the Peach Orchard, Devil's Den and Little Round Top; Ewell attacks Culp's Hill and East Cemetery Hill</span></li><li><span class="rf-year">July 1863</span><span class="rf-text">On 3 July Pickett's Charge is repulsed at Cemetery Ridge</span></li><li><span class="rf-year">July 1863</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/robert-e-lee">Lee</a> withdraws from 4 July, the day Vicksburg surrenders; his army crosses the Potomac on 13 and 14 July</span></li><li><span class="rf-year">1863</span><span class="rf-text">Lincoln speaks at the dedication of the Soldiers' National Cemetery on 19 November</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="background">
+        <h2 class="profile-section-title">Background</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/robert-e-lee"><img src="/images/encyclopedia/robert-e-lee.jpg" alt="Robert E. Lee" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/robert-e-lee">Robert E. Lee</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Robert_Edward_Lee_(3x4_cropped).jpg" target="_blank" rel="noopener">Julian Vannerson, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Battle of Gettysburg was fought in the <a class="enc-link" href="/encyclopedia/american-civil-war">American Civil War</a> between the Union and Confederate armies, in and around Gettysburg, <a class="enc-link" href="/encyclopedia/pennsylvania">Pennsylvania</a>. After the <a class="enc-link" href="/encyclopedia/army-of-northern-virginia">Army of Northern Virginia</a> defeated the Army of the Potomac at Chancellorsville (30 April to 6 May 1863), General <a class="enc-link" href="/encyclopedia/robert-e-lee">Robert E. Lee</a> decided on a second invasion of the North. Such a move would upset the Union's summer plans, possibly ease the pressure on the besieged Confederate garrison at Vicksburg, let the army live off northern farms while war-ravaged <a class="enc-link" href="/encyclopedia/virginia">Virginia</a> rested, and possibly strengthen the growing peace movement in the North.</p><p>Lee's army began to move north from Fredericksburg on 3 June. After the death of Thomas J. "Stonewall" Jackson he had reorganised it into three corps under James Longstreet, Richard S. Ewell and A. P. Hill. Lee ordered his army to limit its effect on civilians, but Northern farmers and merchants were paid in virtually worthless Confederate money, and towns such as York were required to pay indemnities under threat of destruction. During the invasion the Confederates seized between 40 and nearly 60 northern <a class="enc-link" href="/encyclopedia/african-americans">African Americans</a>; a few were escaped fugitives, but many were freemen, and all were sent south into <a class="enc-link" href="/encyclopedia/slavery">slavery</a> under guard.</p><p>Lee let J. E. B. Stuart take part of the cavalry around the Union army, and Stuart was absent from the army through the approach and the first two days of the battle. On 28 June Lincoln replaced Joseph Hooker with George Gordon Meade. On 1 July two <a class="enc-link" href="/encyclopedia/brigade">brigades</a> of Henry Heth's division advanced on Gettysburg, in what A. P. Hill meant as a reconnaissance in force.</p></div>
+      </div>
+      <div class="profile-section-block" id="forces">
+        <h2 class="profile-section-title">The Two Sides</h2>
+        <div class="profile-section-body"><p>The Union Army of the Potomac, under Hooker until 28 June and then Meade, numbered more than 100,000 men. It had seven infantry corps (I, II, III, V, VI, XI and XII), a Cavalry Corps under Alfred Pleasonton and an artillery reserve; Brigadier General Henry Jackson Hunt was chief of artillery on Meade's staff. John Buford's cavalry division was the first Union force to hold the ground west of Gettysburg, fighting dismounted with breech-loading Sharps carbines. A small minority of historians write that some troopers had Spencer repeating weapons, but most sources disagree.</p><p><a class="enc-link" href="/encyclopedia/robert-e-lee">Lee</a>'s <a class="enc-link" href="/encyclopedia/army-of-northern-virginia">Army of Northern Virginia</a> is given as 75,000 men in one passage of the source and 72,000 in another. Its three infantry corps were led by Longstreet (First), Ewell (Second) and Hill (Third), and Stuart commanded the cavalry division. Ewell and Hill, who had been division commanders under Jackson, were new to corps command.</p><p>On the first day about 22,000 of Meade's men and 27,000 of Lee's were engaged. By 2 July most of both armies had arrived. The Union line took the shape of a "fishhook" from Culp's Hill through Cemetery Hill and along Cemetery Ridge to just north of Little Round Top. The Confederate line ran about a mile to the west on Seminary Ridge and then through the town and round to a point opposite Culp's Hill, so that it was nearly five miles (8 km) long; the Union army held interior lines. Lee's plan for 2 July was a general assault, with Longstreet to attack the Union left and Ewell to attack Culp's Hill and Cemetery Hill when he heard Longstreet's guns.</p></div>
+      </div>
+      <div class="profile-section-block" id="course">
+        <h2 class="profile-section-title">How It Went</h2>
+        <div class="profile-section-body"><p>On 1 July Buford laid out his defence on three ridges west of the town. About 7:30 a.m. Heth's <a class="enc-link" href="/encyclopedia/brigade">brigades</a> met his cavalry three miles west, and by 10:20 a.m. the Confederates had pushed it back to McPherson Ridge, where the vanguard of John F. Reynolds's I Corps arrived. In the afternoon Robert E. Rodes's and Jubal Early's divisions of Ewell's corps struck the Union I and XI corps from the north and north-west, and both corps retreated through the town to Cemetery Hill. <a class="enc-link" href="/encyclopedia/robert-e-lee">Lee</a> had told Ewell to take Cemetery Hill "if practicable"; Ewell judged an assault not practicable and did not attempt it.</p><p>On 2 July Lee's attack on the Union left began late. Daniel Sickles had moved his III Corps forward to the Peach Orchard against orders, creating a salient. Hood's and McLaws's divisions attacked just after 4 p.m. and 5 p.m., and there was fighting at Devil's Den, the Wheatfield and Little Round Top. Meade sent 20,000 reinforcements, and McLaws's attack was beaten back. About six o'clock Ewell's divisions attacked Culp's Hill and East Cemetery Hill and did not break the line.</p><p>On 3 July the second fight for Culp's Hill ended about 11 a.m.. Around 1 p.m. 150 to 170 Confederate guns began a bombardment, probably the largest of the war. About 3 p.m. between 10,500 and 12,500 Confederate soldiers advanced towards Cemetery Ridge in what is called Pickett's Charge. Fire from artillery and from Hancock's II Corps met them. The line broke briefly at the Angle and was restored. Nearly half the attackers did not return, and Pickett's division lost about two-thirds of its men.</p></div>
+      </div>
+      <div class="profile-section-block" id="aftermath">
+        <h2 class="profile-section-title">Aftermath</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/ulysses-s-grant"><img src="/images/encyclopedia/ulysses-s-grant.jpg" alt="Ulysses S. Grant" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/ulysses-s-grant">Ulysses S. Grant</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Ulysses_S._Grant_1870-1880_(cropped).jpg" target="_blank" rel="noopener">Brady-Handy Photograph Collection, Library of Congress, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The two armies suffered between 46,000 and 51,000 casualties. Union casualties were 23,055 (3,155 killed, 14,531 wounded, 5,369 captured or missing). Many authors give as many as 28,000 for the Confederates; Busey and Martin (2005) document 23,231 (4,708 killed, 12,693 wounded, 5,830 captured or missing). Nearly a third of <a class="enc-link" href="/encyclopedia/robert-e-lee">Lee</a>'s general officers were killed, wounded or captured. Between 3,000 and 5,000 horses were killed.</p><p>Only one civilian death during the battle is documented: Ginnie Wade, 20, hit by a stray bullet in her kitchen. The town, with a population of 2,400, was left to care for 14,000 wounded Union troops and an additional 8,000 Confederate prisoners. Nearly 8,000 dead needed burying quickly in the summer heat, and more than 3,000 horse carcasses were burned south of the town, which made townspeople violently ill.</p><p>On 4 July, the day the Vicksburg garrison surrendered to <a class="enc-link" href="/encyclopedia/ulysses-s-grant">Ulysses S. Grant</a>, Meade did not attack, and Lee's proposal for a prisoner exchange was rejected. Lee began to withdraw that afternoon, with a wagon train seventeen miles long carrying supplies and wounded men. At Monterey Pass on 4 July Union cavalry took 150 to 300 wagons and 1,300 to 1,500 prisoners. Swollen water and a destroyed pontoon bridge held the Confederates at the Potomac until the night of 13 July. Meade's infantry did not fully pursue until 7 July, and Lincoln and Halleck urged a harder pursuit. Lee's army crossed on 14 July, when Union cavalry took 500 prisoners and J. Johnston Pettigrew was mortally wounded.</p></div><details class="sec-src"><summary>Sources for this section</summary><p class="sec-src-n">Works that Wikipedia&#8217;s article &#8220;Battle of Gettysburg&#8221; cites where it covers Casualties, Gettysburg Address:</p><ul><li>Sean Conant, The Gettysburg Address: Perspectives on Lincoln's Greatest Speech (Oxford University Press, 2015)</li></ul></details>
+      </div>
+      <div class="profile-section-block" id="sources">
+        <h2 class="profile-section-title">How We Know</h2>
+        <div class="profile-section-body"><p>Much of what is told about the battle rests on the accounts of those who took part. <a class="enc-link" href="/encyclopedia/robert-e-lee">Lee</a> wrote an official report; Longstreet and Heth left memoirs; and Ewell claimed years later that Lee had changed his orders for 2 July, though this appears in neither his own nor Lee's official report. Longstreet's memoir gives his own account of what he told Lee on 3 July. Heth's memoir says that he sent Pettigrew into the town to look for supplies, especially shoes. Works on the battle include The Bachelder Papers (subtitled Gettysburg in Their Own Words), the Fremantle Diary, Haskell's account and Frassanito's study of early <a class="enc-link" href="/encyclopedia/photography">photography</a> at the field, and the Official Records are available online.</p><p>Numbers are disputed. Union losses are given as 23,055, but Confederate losses are harder to establish: many authors give as many as 28,000, while Busey and Martin document 23,231. Stephen Sears puts the casualties of the whole six-week campaign at 57,225.</p><p>The causes of Lee's defeat are partisan ground. The dominant theme of the Lost Cause writers was that Lee's senior generals failed him, and they blamed his generals, Longstreet most of all, who criticised Lee in print and became a Republican after the war. Other historians hold that Lee did not manage his subordinates adequately, and most modern historians agree that both Lee and Stuart bear some responsibility for the cavalry's absence. Many historians speculate that Jackson would have taken Culp's Hill on 1 July. Whether the battle was decisive is also disputed (see Legacy).</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>The news electrified the North; The <a class="enc-link" href="/encyclopedia/philadelphia">Philadelphia</a> Inquirer ran the headline "Victory! <a class="enc-link" href="/encyclopedia/battle-of-waterloo">Waterloo</a> Eclipsed!" Enthusiasm faded when <a class="enc-link" href="/encyclopedia/robert-e-lee">Lee</a>'s army escaped, and Lincoln and others criticised Meade's pursuit. Lincoln refused passage to Confederate Vice President Alexander Stephens, who approached the lines under a flag of truce, and Henry Adams wrote that all idea of European intervention was at an end. In the South Gettysburg was at first seen as a setback, not a disaster.</p><p>Historians are divided on whether the battle was decisive. Its reputation as the "turning point", usually coupled with the fall of Vicksburg, rests on the observation that Lee's army conducted no more strategic offensives. James M. McPherson wrote that Lee's army never again had the power and reputation it carried into <a class="enc-link" href="/encyclopedia/pennsylvania">Pennsylvania</a>. Herman Hattaway and Archer Jones judged the strategic impact "fairly limited", and Alan Guelzo notes that the war lasted two more years. Thomas Goss and John Keegan doubt the label "decisive battle".</p><p>On 19 November 1863 Lincoln spoke at the dedication of the Soldiers' National Cemetery, later Gettysburg National Cemetery; his Gettysburg Address, of 271 words, is widely considered one of the most famous speeches in American history. Of 72 Medals of Honor for the campaign, 64 were for the battle; the latest went posthumously to Alonzo Cushing in 2014. At the 50th anniversary reunion in 1913 at least 35,000 Union veterans and a few more than 7,000 Confederate veterans attended, according to Carol Reardon, and some re-enacted Pickett's Charge in a spirit of reconciliation.</p></div><div class="profile-inv"><p class="profile-inv-k">Songs in history</p><p class="profile-inv-l"><a href="/songs/nearer-my-god-to-thee">Nearer, My God, to Thee<span>1841</span></a></p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>At Gettysburg in July 1863 the Union Army of the Potomac stopped <a class="enc-link" href="/encyclopedia/robert-e-lee">Robert E. Lee</a>'s second invasion of the North after three days of fighting and some 46,000 to 51,000 casualties on both sides. Historians still dispute how decisive it was.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Gabor S. Boritt (ed.), The Gettysburg Nobody Knows (Oxford University Press, 1997)</li>
+        <li>Thomas A. Desjardin, These Honored Dead: How the Story of Gettysburg Shaped American Memory (Da Capo Press, 2003)</li>
+        <li>James M. McPherson, Hallowed Ground: A Walk at Gettysburg (Crown Publishers, 2003)</li>
+        <li>Bradley M. Gottfried, The Maps of Gettysburg: An Atlas of the Gettysburg Campaign, June 3–13, 1863 (Savas Beatie, 2007)</li>
+        <li>Jeffrey C. Hall, The Stand of the U.S. Army at Gettysburg (Indiana University Press, 2003)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other battles</p>
+      <div class="related-grid"><a class="related-card" href="/battle/battle-of-adwa"><img src="/logos/thumbs/Battle%20of%20Adwa.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Adwa</span><span class="related-card-dates">1 March 1896</span></a><a class="related-card" href="/battle/battle-of-waterloo"><img src="/logos/thumbs/Battle%20of%20Waterloo.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Waterloo</span><span class="related-card-dates">18 June 1815</span></a><a class="related-card" href="/battle/battle-of-stalingrad"><img src="/logos/thumbs/Battle%20of%20Stalingrad.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Stalingrad</span><span class="related-card-dates">17 July 1942 – 2 February 1943</span></a><a class="related-card" href="/battle/third-battle-of-panipat"><img src="/logos/thumbs/Third%20Battle%20of%20Panipat.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Third Battle of Panipat</span><span class="related-card-dates">14 January 1761</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/battle/battle-of-waterloo"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Battle%20of%20Waterloo.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Waterloo</span><span class="related-card-dates">18 June 1815</span></a><a class="related-card" href="/battle/battle-of-adwa"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Battle%20of%20Adwa.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Adwa</span><span class="related-card-dates">1 March 1896</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Battle of Gettysburg",slug="battle-of-gettysburg",url="https://the-epoch-institute.org/battle/battle-of-gettysburg";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Battle of Gettysburg on The Epoch Institute — the two sides, the fighting and what followed. https://the-epoch-institute.org/battle/battle-of-gettysburg #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/battle/battle-of-gettysburg"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Battle of Gettysburg",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Battle of Gettysburg",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

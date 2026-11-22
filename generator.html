@@ -50,6 +50,7 @@
 <script src="scripts/state-rulers.js"></script>
 <script src="scripts/life-family.js"></script>
 <script src="scripts/journey-links.js"></script>
+<script src="scripts/profile-section-sources.js"></script>
 <script src="scripts/essay-links.js"></script>
 <script src="scripts/kids-stories.js"></script>
 <script src="scripts/profile-sameas.js"></script>
@@ -435,7 +436,7 @@ function buildPage(emp) {
   // then what the page holds, where it fits in 160 characters (Nov 2026: a search snippet that says what a click gives)
   var OFFER = { polity: 'Its rise and fall, key events and a timeline.', religion: 'Its history, beliefs and spread, with key events.',
     culture: 'Its history, society and legacy, with key events.', movement: 'Its aims, course and legacy, with key events.',
-    ideology: 'Its origins, ideas and legacy, with key events.', work: 'Its history, meaning and legacy, with key events.', life: 'The life, its deeds, critics and legacy, with key events.',
+    ideology: 'Its origins, ideas and legacy, with key events.', work: 'Its history, meaning and legacy, with key events.', life: 'The life, its deeds, critics and legacy, with key events.', city: 'The city through time: its rulers, its people, its sieges and its legacy, with key events.', battle: 'The two sides, the fighting, what followed and how we know, with key events.',
     government: 'How it works, its strengths and weaknesses, and examples.', language: 'Its script, speakers and spread, with key events.' };
   var offer = OFFER[isPolity ? 'polity' : emp.kind];
   if (offer && metaDesc.length + 1 + offer.length <= 160 && !/…$/.test(metaDesc)) metaDesc += ' ' + offer;
@@ -471,10 +472,14 @@ function buildPage(emp) {
       if (famL) { var famA = function (l, rel) { return '<a href="/encyclopedia/' + l[0] + '">' + esc(l[1]) + '<span>' + rel + '</span></a>'; };
         family = '<div class="profile-inv"><p class="profile-inv-k">Family in the encyclopedia</p><p class="profile-inv-l">' + (famL.f ? famA(famL.f, 'Father') : '') + (famL.m ? famA(famL.m, 'Mother') : '') +
           (famL.s || []).map(function (l) { return famA(l, 'Married'); }).join('') + (famL.c || []).map(function (l) { return famA(l, 'Child'); }).join('') + '</p></div>'; }
+      // the works behind the section (scripts/profile-section-sources.js, written by scripts/tools/profile-section-sources.js):
+      // what the Wikipedia article on the subject cites in its own matching sections, folded under the text
+      var ssAll = typeof SECTION_SOURCES !== 'undefined' && SECTION_SOURCES[name], ss = ssAll && ssAll.s[key], secSrc = '';
+      if (ss) secSrc = '<details class="sec-src"><summary>Sources for this section</summary><p class="sec-src-n">Works that Wikipedia&#8217;s article &#8220;' + esc(ssAll.t) + '&#8221; cites where it covers ' + ss.h.map(function (h) { return esc(h); }).join(', ') + ':</p><ul>' + ss.w.map(function (w) { return '<li>' + esc(w) + '</li>'; }).join('') + '</ul></details>';
       // the journeys its subject made (scripts/journey-links.js, written by scripts/tools/make-journeys.js), after the last section
       var journey = key === sectionKeys[sectionKeys.length - 1][0] && typeof JOURNEY_LINKS !== 'undefined' && JOURNEY_LINKS[name]
         ? '<div class="profile-inv"><p class="profile-inv-k">On the globe, stop by stop</p><p class="profile-inv-l">' + JOURNEY_LINKS[name].map(function (l) { return '<a href="/journeys?j=' + l[0] + '">' + esc(l[1]) + '<span>Journey</span></a>'; }).join('') + '</p></div>' : '';
-      return '<div class="profile-section-block" id="'+key+'">\n        <h2 class="profile-section-title">'+label+'</h2>\n        '+sectionFigure(name, key)+'<div class="profile-section-body">'+body+'</div>' + family + journey + ladder + rulers + inv + songs + essays + '\n      </div>';
+      return '<div class="profile-section-block" id="'+key+'">\n        <h2 class="profile-section-title">'+label+'</h2>\n        '+sectionFigure(name, key)+'<div class="profile-section-body">'+body+'</div>' + secSrc + family + journey + ladder + rulers + inv + songs + essays + '\n      </div>';
     }).join('\n      ');
   }
 
@@ -572,7 +577,7 @@ function buildPage(emp) {
 '        <div class="info-stats" style="margin-top:10px;">\n' +
 (isPolity ? '          <div class="info-stat"><span class="info-stat-label">Peak</span><span class="info-stat-val">'+peakStr+'</span></div>\n' +
 '          <div class="info-stat"><span class="info-stat-label">Duration</span><span class="info-stat-val">'+duration+' yrs</span></div>\n' : '') +
-(kindFact(name, emp, 'period') ? '' : '          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">'+period+'</span></div>\n') +
+(kindFact(name, emp, 'period') || kindFact(name, emp, 'date') ? '' : '          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">'+period+'</span></div>\n') +
 factRows(name, emp) +
 '        </div>\n' +
 (profile ? '        <p class="empire-meta">' + readingMinutes(profile, emp) + ' min read</p>\n' : '') +

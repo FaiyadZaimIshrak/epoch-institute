@@ -3864,7 +3864,7 @@ svg.map-here { cursor: crosshair; }
 .tl-row { position: relative; display: block; height: 24px; border-radius: 3px; text-decoration: none; color: var(--text); }
 .tl-row:hover, .tl-row:focus-visible { background: rgba(var(--gold-rgb), 0.08); }
 .tl-bar { position: absolute; top: 7px; height: 10px; border-radius: 5px; background: var(--gold); }
-.tl-k-culture { background: var(--cat-3); } .tl-k-religion { background: var(--cat-2); } .tl-k-language { background: var(--cat-0); } .tl-k-movement { background: var(--cat-4); } .tl-k-government { background: var(--muted); } .tl-k-ideology { background: repeating-linear-gradient(135deg, var(--muted) 0 3px, transparent 3px 5px); box-shadow: inset 0 0 0 1px var(--muted); } .tl-k-work { background: radial-gradient(circle, var(--gold) 0 1.6px, transparent 2px) 0 0 / 5px 5px; box-shadow: inset 0 0 0 1px var(--gold); } .tl-k-life { background: var(--gold-light); border-radius: 9px; }
+.tl-k-culture { background: var(--cat-3); } .tl-k-religion { background: var(--cat-2); } .tl-k-language { background: var(--cat-0); } .tl-k-movement { background: var(--cat-4); } .tl-k-government { background: var(--muted); } .tl-k-ideology { background: repeating-linear-gradient(135deg, var(--muted) 0 3px, transparent 3px 5px); box-shadow: inset 0 0 0 1px var(--muted); } .tl-k-work { background: radial-gradient(circle, var(--gold) 0 1.6px, transparent 2px) 0 0 / 5px 5px; box-shadow: inset 0 0 0 1px var(--gold); } .tl-k-life { background: var(--gold-light); border-radius: 9px; } .tl-k-city { background: var(--cat-0); box-shadow: inset 0 0 0 1px var(--gold-light); } .tl-k-battle { background: var(--error); min-width: 5px; border-radius: 2px; }
 .tl-lbl { position: absolute; top: 3px; font-family: var(--font-ui); font-size: 13px; line-height: 18px; white-space: nowrap; }
 .tl-lbl small { font-size: 11px; color: var(--muted); }
 .tl-in { text-shadow: 0 0 3px var(--bg), 0 0 3px var(--bg), 0 0 3px var(--bg); }
@@ -5835,6 +5835,17 @@ html[data-kids="1"] .jr-pick a[data-kids="0"], html[data-kids="1"] .jr-j[data-ki
 }
 @media print { .jr-page { padding-top: 0; } .jr-map, .jr-pick { display: none; } .jr-js .jr-j { display: block; } .jr-stage { display: block; } }
 .enc-journeys { margin: 18px 0 0; }
+
+/* Sources for this section (profiles, scripts/tools/profile-section-sources.js): folded under each section's text */
+.sec-src { margin: 14px 0 0; font-family: var(--font-ui); font-size: 14px; clear: both; }
+.sec-src summary { cursor: pointer; color: var(--muted); font-weight: 600; letter-spacing: 0.02em; width: fit-content; }
+.sec-src summary:hover { color: var(--gold); }
+.sec-src summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.sec-src-n { color: var(--muted); font-size: 13px; line-height: 1.5; margin: 8px 0 6px; max-width: 80ch; }
+.sec-src ul { margin: 0; padding-left: 20px; }
+.sec-src li { margin: 0 0 5px; line-height: 1.45; color: var(--text); max-width: 90ch; }
+html[data-kids="1"] .sec-src { display: none; }
+@media print { .sec-src { display: none; } }
 
 /* Family trees (scripts/tools/make-family-trees.js): a house's people by generation, left to right */
 .ft-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--border-radius-lg); background: var(--surface); padding: 10px; margin: 14px 0 6px; }

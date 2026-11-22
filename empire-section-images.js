@@ -5742,5 +5742,289 @@ var SECTION_IMAGES = {
     making:{slug:"confucius",name:"Confucius",img:"/images/encyclopedia/confucius.jpg",artist:"Anonymous Chinese painter of the Western Han period",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Confucius,_fresco_from_a_Western_Han_tomb_of_Dongping_County,_Shandong_province,_China_(cropped).jpg"},
     reception:{slug:"zhu-xi",name:"Zhu Xi",img:"/images/encyclopedia/zhu-xi.jpg",artist:"向史公哲曰",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%E5%94%AF%E4%B8%80%E5%8F%AF%E9%9D%A0%E7%9A%84%E6%9C%B1%E7%86%B9%E7%94%BB%E5%83%8F.jpg"},
     legacy:{slug:"gottfried-wilhelm-leibniz",name:"Gottfried Wilhelm Leibniz",img:"/images/encyclopedia/gottfried-wilhelm-leibniz.jpg",artist:"Christoph Bernhard Francke",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Christoph_Bernhard_Francke_-_Bildnis_des_Philosophen_Leibniz_(ca._1695).jpg"}
+  },
+  "Jerusalem": {
+    origins:{slug:"amarna-letters",name:"Amarna letters",img:"/images/encyclopedia/amarna-letters.jpg",artist:"Osama Shukir Muhammed Amin FRCP(Glasg)",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Five_Amarna_letters_on_display_at_the_British_Museum,_LondonA.jpg"},
+    growth:{slug:"temple-in-jerusalem",name:"Temple in Jerusalem",img:"/images/encyclopedia/temple-in-jerusalem.jpg",artist:"Berthold Werner",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jerusalem_Modell_BW_2.JPG"},
+    rulers:{slug:"saladin",name:"Saladin",img:"/images/encyclopedia/saladin.jpg",artist:"Classical Numismatic Group (CNG)",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Al-Nasir_I_Salah_al-Din_Yusuf_(Saladin)._AH_564-589_(1169-1193_CE)_%C3%86_Dirham_(30.1mm,_13.28_g,_6h)._Without_mint-name._Dated_AH_586_(AD_1190-91)._Sultan_sitting_facing,_cross-legged,_on_high-backed_throne_(obverse).jpg"},
+    life:{slug:"church-of-the-holy-sepulchre",name:"Church of the Holy Sepulchre",img:"/images/encyclopedia/church-of-the-holy-sepulchre.jpg",artist:"Gerd Eichmann",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Church_of_the_Holy_Sepulchre_by_Gerd_Eichmann_(cropped).jpg"},
+    crises:{slug:"sennacherib",name:"Sennacherib",img:"/images/encyclopedia/sennacherib.jpg",artist:"Timo Roller",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Sanherib-tr-4271.jpg"},
+    legacy:{slug:"dome-of-the-rock",name:"Dome of the Rock",img:"/images/encyclopedia/dome-of-the-rock.jpg",artist:"Ludvig14",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Jerusalem_DomeoftheRock_J65_(cropped).JPG"}
+  },
+  "Rome": {
+    origins:{slug:"romulus",name:"Romulus",img:"/images/encyclopedia/romulus.jpg",artist:"Carlo Brogi",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Brogi,_Carlo_(1850-1925)_-_n._8226_-_Certosa_di_Pavia_-_Medaglione_sullo_zoccolo_della_facciata.jpg"},
+    growth:{slug:"ara-pacis",name:"Ara Pacis",img:"/images/encyclopedia/ara-pacis.jpg",artist:"Rabax63",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Ara_Pacis_(SW).jpg"},
+    rulers:{slug:"diocletian",name:"Diocletian",img:"/images/encyclopedia/diocletian.jpg",artist:"Dosseman",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Istanbul_Archaeology_Museum_Bust_of_Diocletian,_from_Nikomedia,_Izmit,_end_3rd_century_AD_1536.jpg"},
+    life:{slug:"minerva",name:"Minerva",img:"/images/encyclopedia/minerva.jpg",artist:"AlMare",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Herculaneum_Collegio_degli_Augustali_Ercole_sull%27Olimpo_(cropped).jpg"},
+    crises:{slug:"gauls",name:"Gauls",img:"/images/encyclopedia/gauls.jpg",artist:"antmoose",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Dying_gaul.jpg"},
+    legacy:{slug:"colosseum",name:"Colosseum",img:"/images/encyclopedia/colosseum.jpg",artist:"FeaturedPics",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Colosseo_2020.jpg"}
+  },
+  "Constantinople": {
+    origins:{slug:"byzas",name:"Byzas",img:"/images/encyclopedia/byzas.jpg",artist:"World Imaging",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Coinage_with_Byzas_2nd_3rd_century_CE.jpg"},
+    growth:{slug:"constantine-i",name:"Constantine I",img:"/images/encyclopedia/constantine-i.jpg",artist:"Merulana",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Statua_di_Costantino_ai_musei_capitolini.jpg"},
+    rulers:{slug:"mehmed-ii",name:"Mehmed II",img:"/images/encyclopedia/mehmed-ii.jpg",artist:"Gentile Bellini",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bellini,_Gentile_-_Sultan_Mehmet_II.jpg"},
+    life:{slug:"basil-ii",name:"Basil II",img:"/images/encyclopedia/basil-ii.jpg",artist:"from the Middle Ages, unknown",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Basilios_II.jpg"},
+    crises:{slug:"greek-fire",name:"Greek fire",img:"/images/encyclopedia/greek-fire.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Greekfire-madridskylitzes1.jpg"},
+    legacy:{slug:"hagia-sophia",name:"Hagia Sophia",img:"/images/encyclopedia/hagia-sophia.jpg",artist:"Adli Wahid",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Hagia_Sophia_(228968325).jpeg"}
+  },
+  "Baghdad": {
+    origins:{slug:"nebuchadnezzar-ii",name:"Nebuchadnezzar II",img:"/images/encyclopedia/nebuchadnezzar-ii.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Nebuchadnezzar_II_crop.png"},
+    growth:{slug:"round-city-of-baghdad",name:"Round City of Baghdad",img:"/images/encyclopedia/round-city-of-baghdad.jpg",artist:"William Muir",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Baghdad_150_to_300_AH.png"},
+    rulers:{slug:"tughril",name:"Tughril",img:"/images/encyclopedia/tughril.jpg",artist:"1314 artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Seljuk_Sultan_Tugrul_Bey_sitting_on_his_throne._Topkap%C4%B1_Saray%C4%B1_M%C3%BCzesi_1653-3_(304_B).jpg"},
+    life:{slug:"house-of-wisdom",name:"House of Wisdom",img:"/images/encyclopedia/house-of-wisdom.jpg",artist:"Zereshk",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Maqamat_hariri.jpg"},
+    crises:{slug:"mongols",name:"Mongols",img:"/images/encyclopedia/mongols.jpg",artist:"Sayf al-Vâhidî. Hérât. Afghanistan",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bataille_entre_mongols_%26_chinois_(1211).jpeg"},
+    legacy:{slug:"one-thousand-and-one-nights",name:"One Thousand and One Nights",img:"/images/encyclopedia/one-thousand-and-one-nights.jpg",artist:"Al-Mubashshir ibn Fatik",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sughrat.jpg"}
+  },
+  "Cairo": {
+    origins:{slug:"diocletian",name:"Diocletian",img:"/images/encyclopedia/diocletian.jpg",artist:"Dosseman",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Istanbul_Archaeology_Museum_Bust_of_Diocletian,_from_Nikomedia,_Izmit,_end_3rd_century_AD_1536.jpg"},
+    growth:{slug:"bab-al-futuh",name:"Bab al-Futuh",img:"/images/encyclopedia/bab-al-futuh.jpg",artist:"Sailko",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Cairo,_porte_settentrionali,_01.JPG"},
+    rulers:{slug:"saladin",name:"Saladin",img:"/images/encyclopedia/saladin.jpg",artist:"Classical Numismatic Group (CNG)",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Al-Nasir_I_Salah_al-Din_Yusuf_(Saladin)._AH_564-589_(1169-1193_CE)_%C3%86_Dirham_(30.1mm,_13.28_g,_6h)._Without_mint-name._Dated_AH_586_(AD_1190-91)._Sultan_sitting_facing,_cross-legged,_on_high-backed_throne_(obverse).jpg"},
+    life:{slug:"cairo-geniza",name:"Cairo Geniza",img:"/images/encyclopedia/cairo-geniza.jpg",artist:"Paul Kahle",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bab_voc_fragment_2.jpg"},
+    crises:{slug:"mamluk",name:"Mamluk",img:"/images/encyclopedia/mamluk.jpg",artist:"Daniel Hopfer",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Three_Mamelukes_with_lances_on_horseback.jpg"},
+    legacy:{slug:"mosque-of-ibn-tulun",name:"Mosque of Ibn Tulun",img:"/images/encyclopedia/mosque-of-ibn-tulun.jpg",artist:"Berthold Werner",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Kairo_Ibn_Tulun_Moschee_BW_4.jpg"}
+  },
+  "Alexandria": {
+    origins:{slug:"alexander-romance",name:"Alexander Romance",img:"/images/encyclopedia/alexander-romance.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_romance._Armenian_illuminated_manuscript_of_XIV_century_(Venice,_San_Lazzaro,_424).jpg"},
+    growth:{slug:"ptolemy-i-soter",name:"Ptolemy I Soter",img:"/images/encyclopedia/ptolemy-i-soter.jpg",artist:"Marie-Lan Nguyen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ptolemy_I_Soter_Louvre_Ma849_A.jpg"},
+    rulers:{slug:"julius-caesar",name:"Julius Caesar",img:"/images/encyclopedia/julius-caesar.jpg",artist:"Ángel M. Felicísimo from Mérida, España",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Retrato_de_Julio_C%C3%A9sar_(26724093101)_(cropped).jpg"},
+    life:{slug:"septuagint",name:"Septuagint",img:"/images/encyclopedia/septuagint.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Codex_Vaticanus_(1_Esdras_1-55_to_2-5)_(The_S.S._Teacher%27s_Edition-The_Holy_Bible).jpg"},
+    crises:{slug:"caracalla",name:"Caracalla",img:"/images/encyclopedia/caracalla.jpg",artist:"Jean-Pol GRANDMONT",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:0_Caracalla_-_Museo_Massimo_alle_Terme.JPG"},
+    legacy:{slug:"obelisk",name:"Obelisk",img:"/images/encyclopedia/obelisk.jpg",artist:"David Monniaux",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Louxor_obelisk_Paris_dsc00780.jpg"}
+  },
+  "Babylon": {
+    origins:{slug:"shar-kali-sharri",name:"Shar-Kali-Sharri",img:"/images/encyclopedia/shar-kali-sharri.jpg",artist:"Mbzt 2011",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Impression_of_an_Akkadian_cylinder_seal_with_inscription_The_Divine_Sharkalisharri_Prince_of_Akkad_Ibni-Sharrum_the_Scribe_his_servant.jpg"},
+    growth:{slug:"hammurabi",name:"Hammurabi",img:"/images/encyclopedia/hammurabi.jpg",artist:"Mbzt",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:F0182_Louvre_Code_Hammourabi_Bas-relief_Sb8_rwk.jpg"},
+    rulers:{slug:"nebuchadnezzar-ii",name:"Nebuchadnezzar II",img:"/images/encyclopedia/nebuchadnezzar-ii.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Nebuchadnezzar_II_crop.png"},
+    life:{slug:"babylonian-astronomy",name:"Babylonian astronomy",img:"/images/encyclopedia/babylonian-astronomy.jpg",artist:"The original uploader was Linguica at English Wikipedia.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Babylonian_tablet_recording_Halley%27s_comet.jpg"},
+    crises:{slug:"sennacherib",name:"Sennacherib",img:"/images/encyclopedia/sennacherib.jpg",artist:"Timo Roller",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Sanherib-tr-4271.jpg"},
+    legacy:{slug:"ishtar-gate",name:"Ishtar Gate",img:"/images/encyclopedia/ishtar-gate.jpg",artist:"LBM1948",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Berl%C3%ADn,_Museo_de_P%C3%A9rgamo_05.jpg"}
+  },
+  "Mecca": {
+    origins:{slug:"kaaba",name:"Kaaba",img:"/images/encyclopedia/kaaba.jpg",artist:"Richard Mortel",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:The_Ka%27ba,_Great_Mosque_of_Mecca,_Saudi_Arabia_(4).jpg"},
+    growth:{slug:"suleiman-the-magnificent",name:"Suleiman the Magnificent",img:"/images/encyclopedia/suleiman-the-magnificent.jpg",artist:"Circle of Titian",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:EmperorSuleiman.jpg"},
+    rulers:{slug:"muhammad-ali-of-egypt",name:"Muhammad Ali of Egypt",img:"/images/encyclopedia/muhammad-ali-of-egypt.jpg",artist:"Auguste Couder",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:ModernEgypt,_Muhammad_Ali_by_Auguste_Couder,_BAP_17996.jpg"},
+    life:{slug:"black-stone",name:"Black Stone",img:"/images/encyclopedia/black-stone.jpg",artist:"Unknown author",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Black_stone.jpg"},
+    crises:{slug:"abraha",name:"Abraha",img:"/images/encyclopedia/abraha.jpg",artist:"Abu Ali Bal'ami",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Balami_-_Tarikhnama_-_The_miraculous_rescue_of_the_Ka%27ba_from_Abraha%27s_attack_(cropped).jpg"},
+    legacy:{slug:"masjid-al-haram",name:"Masjid al-Haram",img:"/images/encyclopedia/masjid-al-haram.jpg",artist:"Saudipics.com",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Edited_Great_Mosque_of_Mecca1_5-2019-ccsa4.0_(cropped).jpg"}
+  },
+  "Chang'an": {
+    growth:{slug:"emperor-wu-of-han",name:"Emperor Wu of Han",img:"/images/encyclopedia/emperor-wu-of-han.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E6%BC%A2%E6%AD%A6%E5%B8%9D.jpg"},
+    life:{slug:"sogdians",name:"Sogdians",img:"/images/encyclopedia/sogdians.jpg",artist:"A.Davey from Portland, Oregon, EE UU",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Sogdian_Tribute_Bearers_on_the_Apadana_Staircase_16_(Best_Viewed_Size_%22Large%22)_(4689076272).jpg"},
+    legacy:{slug:"xian",name:"Xi'an",img:"/images/encyclopedia/xian.jpg",artist:"xiquinhosilva",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:City_wall_of_Xi%27an_51550-Xian_(27959363326).jpg"}
+  },
+  "Beijing": {
+    origins:{slug:"homo-erectus",name:"Homo erectus",img:"/images/encyclopedia/homo-erectus.jpg",artist:"Luna04",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Homo_erectus_tautavelensis.jpg"},
+    growth:{slug:"lugou-bridge",name:"Lugou Bridge",img:"/images/encyclopedia/lugou-bridge.jpg",artist:"Alanba42",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Lugouqiao-2014.jpg"},
+    rulers:{slug:"kublai-khan",name:"Kublai Khan",img:"/images/encyclopedia/kublai-khan.jpg",artist:"Araniko",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumKhubilaiPortrait.jpg"},
+    life:{slug:"matteo-ricci",name:"Matteo Ricci",img:"/images/encyclopedia/matteo-ricci.jpg",artist:"Chinese brother Emmanuel Pereira (born Yu Wen-hui 游文辉)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:利玛窦像，游文辉绘.jpg"},
+    crises:{slug:"chongzhen-emperor",name:"Chongzhen Emperor",img:"/images/encyclopedia/chongzhen-emperor.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Chongzhen-Emperor.jpg"},
+    legacy:{slug:"tiananmen",name:"Tiananmen",img:"/images/encyclopedia/tiananmen.jpg",artist:"Balon Greyjoy",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:20200110_Tiananmen-3.jpg"}
+  },
+  "Kyoto": {
+    origins:{slug:"heian-kyo",name:"Heian-kyō",img:"/images/encyclopedia/heian-kyo.jpg",artist:"Wikiwikiyarou",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Daidairi_of_Heiankyo.jpg"},
+    growth:{slug:"toyotomi-hideyoshi",name:"Toyotomi Hideyoshi",img:"/images/encyclopedia/toyotomi-hideyoshi.jpg",artist:"Kanō Mitsunobu (狩野 光信, 1565–1608)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Toyotomi_Hideyoshi_c1598_Kodai-ji_Temple.png"},
+    rulers:{slug:"shogun",name:"Shōgun",img:"/images/encyclopedia/shogun.jpg",artist:"Fujiwara no Takanobu",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Minamoto_no_Yoritomo.jpg"},
+    crises:{slug:"onin-war",name:"Ōnin War",img:"/images/encyclopedia/onin-war.jpg",artist:"Utagawa Yoshitora",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Onin-War-1467-1477-The-Battle-of-Onin-by-Utagawa-Yoshitora.png"},
+    legacy:{slug:"kinkaku-ji",name:"Kinkaku-ji",img:"/images/encyclopedia/kinkaku-ji.jpg",artist:"Nacaru",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Golden_Pavilion_Kinkaku-ji_water_mirror_2024.jpg"}
+  },
+  "Delhi": {
+    origins:{slug:"lal-kot",name:"Lal Kot",img:"/images/encyclopedia/lal-kot.jpg",artist:"Roboture",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Outer_Wall_of_Lal_kot_and_Rai_Pithora.jpg"},
+    growth:{slug:"shah-jahan",name:"Shah Jahan",img:"/images/encyclopedia/shah-jahan.jpg",artist:"Bichitr",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%27Jujhar_Singh_Bundela_Kneels_in_Submission_to_Shah_Jahan%27,_painted_by_Bichitr,_c._1630,_Chester_Beatty_Library_(cropped2).jpg"},
+    rulers:{slug:"iltutmish",name:"Iltutmish",img:"/images/encyclopedia/iltutmish.jpg",artist:"CNG Coins",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Islamic_Sultanates._Delhi._Shams_al-D%C4%ABn_Iltutmish._AH_607-633_AD_1210-1235._AR_Tanka_(25mm,_11.07_g,_6h)._Sind_type.jpg"},
+    life:{slug:"amir-khusrau",name:"Amir Khusrau",img:"/images/encyclopedia/amir-khusrau.jpg",artist:"Anonymous artist from Bokhara",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Amir_Khusro.jpg"},
+    crises:{slug:"nader-shah",name:"Nader Shah",img:"/images/encyclopedia/nader-shah.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Contemporary_portrait_of_Nader_Shah._Artist_unknown,_created_in_ca._1740_in_Iran_(cropped).jpg"},
+    legacy:{slug:"red-fort",name:"Red Fort",img:"/images/encyclopedia/red-fort.jpg",artist:"PerSona77",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Delhi_fort.jpg"}
+  },
+  "Samarkand": {
+    origins:{slug:"afrasiab",name:"Afrasiab",img:"/images/encyclopedia/afrasiab.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Afrasiab_-_details_from_The_Ambassadors'_Painting.JPG"},
+    growth:{slug:"madrasa",name:"Madrasa",img:"/images/encyclopedia/madrasa.jpg",artist:"Gustavo Jeronimo from Aranjuez, Spain; derivative work by MrPanyGoff",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:RegistanSquare_Samarkand.jpg"},
+    rulers:{slug:"muhammad-shaybani",name:"Muhammad Shaybani",img:"/images/encyclopedia/muhammad-shaybani.jpg",artist:"Kamāl ud-Dīn Behzād",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Muhammad_Shaybani.jpg"},
+    life:{slug:"manichaeism",name:"Manichaeism",img:"/images/encyclopedia/manichaeism.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Manicheans.jpg"},
+    crises:{slug:"mongols",name:"Mongols",img:"/images/encyclopedia/mongols.jpg",artist:"Sayf al-Vâhidî. Hérât. Afghanistan",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bataille_entre_mongols_%26_chinois_(1211).jpeg"},
+    legacy:{slug:"ulugh-beg",name:"Ulugh Beg",img:"/images/encyclopedia/ulugh-beg.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ulugh_Beg,_Timurid_painting_1425-50.jpg"}
+  },
+  "Timbuktu": {
+    origins:{slug:"tarikh-al-sudan",name:"Tarikh al-Sudan",img:"/images/encyclopedia/tarikh-al-sudan.jpg",artist:"إيان",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE_%D8%A7%D9%84%D8%B3%D9%88%D8%AF%D8%A7%D9%86.jpg"},
+    growth:{slug:"catalan-atlas",name:"Catalan Atlas",img:"/images/encyclopedia/catalan-atlas.jpg",artist:"Cresques Abraham",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Compass_rose_from_Catalan_Atlas_(1375).jpg"},
+    rulers:{slug:"mansa-musa",name:"Mansa Musa",img:"/images/encyclopedia/mansa-musa.jpg",artist:"attributed to Abraham Cresques",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Catalan_Atlas_BNF_Sheet_6_Mansa_Musa_(cropped).jpg"},
+    life:{slug:"djinguereber-mosque",name:"Djinguereber Mosque",img:"/images/encyclopedia/djinguereber-mosque.jpg",artist:"KaTeznik",licence:"CC BY-SA 2.0 fr",source:"https://commons.wikimedia.org/wiki/File:Djingareiber_cour.jpg"},
+    legacy:{slug:"heinrich-barth",name:"Heinrich Barth",img:"/images/encyclopedia/heinrich-barth.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Barth_Unterschrift.jpg"}
+  },
+  "Venice": {
+    origins:{slug:"aquileia",name:"Aquileia",img:"/images/encyclopedia/aquileia.jpg",artist:"ThePhotografer",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Basilica_Patriarcale_(Aquileia)_-_Exterior.jpg"},
+    growth:{slug:"aldus-manutius",name:"Aldus Manutius",img:"/images/encyclopedia/aldus-manutius.jpg",artist:"Rota, Martinus Sibenicensis (1520?-1583). Graveur",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_d%27Alde_Manuce,_en_buste,_de_profil_dirig%C3%A9_%C3%A0_droite_-_estampe_-_btv1b84007044_(cropped).jpg"},
+    rulers:{slug:"francesco-foscari",name:"Francesco Foscari",img:"/images/encyclopedia/francesco-foscari.jpg",artist:"Didier Descouens",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:(Venice)_Portrait_of_the_Venecian_doge_Francesco_Foscari_by_Lazzaro_Bastiani_-_Correr_Museum.jpg"},
+    life:{slug:"titian",name:"Titian",img:"/images/encyclopedia/titian.jpg",artist:"Titian",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Titian_-_Self-portrait_(Museo_del_Prado).jpg"},
+    crises:{slug:"andrea-gritti",name:"Andrea Gritti",img:"/images/encyclopedia/andrea-gritti.jpg",artist:"Titian",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ritratto_del_Doge_Andrea_Gritti_-_Tiziano_059.jpg"},
+    legacy:{slug:"antonio-vivaldi",name:"Antonio Vivaldi",img:"/images/encyclopedia/antonio-vivaldi.jpg",artist:"Unidentified painter",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Vivaldi.jpg"}
+  },
+  "Paris": {
+    origins:{slug:"julius-caesar",name:"Julius Caesar",img:"/images/encyclopedia/julius-caesar.jpg",artist:"Ángel M. Felicísimo from Mérida, España",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Retrato_de_Julio_C%C3%A9sar_(26724093101)_(cropped).jpg"},
+    growth:{slug:"suger",name:"Suger",img:"/images/encyclopedia/suger.jpg",artist:"Uploaded by Hedning to Swedish Wikipedia",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Abbot_Suger.jpg"},
+    rulers:{slug:"louis-xiv",name:"Louis XIV",img:"/images/encyclopedia/louis-xiv.jpg",artist:"Hyacinthe Rigaud",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Louis_XIV_of_France.jpg"},
+    life:{slug:"denis-diderot",name:"Denis Diderot",img:"/images/encyclopedia/denis-diderot.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Denis_Diderot_by_Louis-Michel_van_Loo.jpg"},
+    crises:{slug:"vikings",name:"Vikings",img:"/images/encyclopedia/vikings.jpg",artist:"Abbey of Saint-Aubin",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Viking_attack_on_Gu%C3%A9rande,_from_a_Saint-Aubin_MS.jpg"},
+    legacy:{slug:"impressionism",name:"Impressionism",img:"/images/encyclopedia/impressionism.jpg",artist:"Claude Monet",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Claude_Monet,_Impression,_soleil_levant.jpg"}
+  },
+  "London": {
+    origins:{slug:"londinium",name:"Londinium",img:"/images/encyclopedia/londinium.jpg",artist:"Fremantleboy, Drallim (translation)",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Map_Londinium_400_AD-en.svg"},
+    growth:{slug:"muscovy-company",name:"Muscovy Company",img:"/images/encyclopedia/muscovy-company.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:MuscovyCompany_Seal_1555.jpg"},
+    rulers:{slug:"william-the-conqueror",name:"William the Conqueror",img:"/images/encyclopedia/william-the-conqueror.jpg",artist:"Myrabella",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:William_the_Conqueror_(TFA).jpg"},
+    life:{slug:"saeberht-of-essex",name:"Sæberht of Essex",img:"/images/encyclopedia/saeberht-of-essex.jpg",artist:"John Speed",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sebert_-_John_Speed.JPG"},
+    crises:{slug:"the-blitz",name:"The Blitz",img:"/images/encyclopedia/the-blitz.jpg",artist:"German Air Force photographer",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Heinkel_He_111_over_Wapping,_East_London.jpg"},
+    legacy:{slug:"christopher-wren",name:"Christopher Wren",img:"/images/encyclopedia/christopher-wren.jpg",artist:"Godfrey Kneller",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Christopher_Wren_by_Godfrey_Kneller_1711.jpg"}
+  },
+  "Tenochtitlan": {
+    origins:{slug:"mexica",name:"Mexica",img:"/images/encyclopedia/mexica.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aztec_drums,_Florentine_Codex..jpg"},
+    growth:{slug:"ahuitzotl",name:"Ahuitzotl",img:"/images/encyclopedia/ahuitzotl.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ahuitzotl.jpg"},
+    rulers:{slug:"moctezuma-ii",name:"Moctezuma II",img:"/images/encyclopedia/moctezuma-ii.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Moctezuma_Mendoza.jpg"},
+    life:{slug:"pochteca",name:"Pochteca",img:"/images/encyclopedia/pochteca.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pochtecas_con_su_carga.JPG"},
+    crises:{slug:"hernan-cortes",name:"Hernán Cortés",img:"/images/encyclopedia/hernan-cortes.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Retrato_de_Hern%C3%A1n_Cort%C3%A9s.jpg"},
+    legacy:{slug:"templo-mayor",name:"Templo Mayor",img:"/images/encyclopedia/templo-mayor.jpg",artist:"Gary Todd from Xinzheng, China",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Model_of_Tenochtitlan_Ceremonial_Center_Great_Temple_(9755406755).jpg"}
+  },
+  "Cusco": {
+    origins:{slug:"manco-capac",name:"Manco Capac",img:"/images/encyclopedia/manco-capac.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Manco_Capac,_First_Inca,_1_of_14_Portraits_of_Inca_Kings.jpg"},
+    growth:{slug:"pachacuti",name:"Pachacuti",img:"/images/encyclopedia/pachacuti.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_Pachacuti,_Tenth_Inca,_1_of_14_Portraits_of_Inca_Kings_(cropped).jpg"},
+    rulers:{slug:"atahualpa",name:"Atahualpa",img:"/images/encyclopedia/atahualpa.jpg",artist:"anonymous",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Atahuallpa,_Inca_XIIII_From_Berlin_Ethnologisches_Museum,_Staatliche_Museen,_Berlin,_Germany.png"},
+    life:{slug:"cusco-school",name:"Cusco School",img:"/images/encyclopedia/cusco-school.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Virgin_of_Carmel_Saving_Souls_in_Purgatory_-_Google_Art_Project.jpg"},
+    crises:{slug:"manco-inca",name:"Manco Inca",img:"/images/encyclopedia/manco-inca.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:SAHUARAURA_p108_MANCO_INCA.jpg"},
+    legacy:{slug:"sacsayhuaman",name:"Sacsayhuamán",img:"/images/encyclopedia/sacsayhuaman.jpg",artist:"Diego Delso",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Sacsayhuam%C3%A1n,_Cusco,_Per%C3%BA,_2015-07-31,_DD_27.JPG"}
+  },
+  "Isfahan": {
+    origins:{slug:"cyrus-the-great",name:"Cyrus the Great",img:"/images/encyclopedia/cyrus-the-great.jpg",artist:"Surenae",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Cyrus_II_(The_Great)_(cropped).jpg"},
+    growth:{slug:"malik-shah-i",name:"Malik-Shah I",img:"/images/encyclopedia/malik-shah-i.jpg",artist:"Rashid Al-Din",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Malik-Shah_I.jpg"},
+    rulers:{slug:"agha-mohammad-khan-qajar",name:"Agha Mohammad Khan Qajar",img:"/images/encyclopedia/agha-mohammad-khan-qajar.jpg",artist:"Sotheby's",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:A_portrait_of_Agha_Muhammad_Khan,_Persia,_Qajar,_dated_1795.jpg"},
+    life:{slug:"jean-chardin",name:"Jean Chardin",img:"/images/encyclopedia/jean-chardin.jpg",artist:"Attributed to John Michael Wright",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jean_Chardin.jpg"},
+    legacy:{slug:"naqsh-e-jahan-square",name:"Naqsh-e Jahan Square",img:"/images/encyclopedia/naqsh-e-jahan-square.jpg",artist:"احمد جمالی مقدم",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Naqsh-i_Jahan_Square,_Jan._2018.jpg"}
+  },
+  "Battle of Kadesh": {
+    background:{slug:"seti-i",name:"Seti I",img:"/images/encyclopedia/seti-i.jpg",artist:"Keith Schengili-Roberts",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:SetiI-KneelingStatueOfferingToOsiris-CloseUp_MetropolitanMuseum.png"},
+    forces:{slug:"chariot",name:"Chariot",img:"/images/encyclopedia/chariot.jpg",artist:"Sytin Military Encyclopedia, 1912",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%D0%A0%D0%B8%D1%81%D1%83%D0%BD%D0%BA%D0%B8_%D0%BA_%D1%81%D1%82%D0%B0%D1%82%D1%8C%D0%B5_%C2%AB%D0%92%D0%BE%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5_%D0%BA%D0%BE%D0%BB%D0%B5%D1%81%D0%BD%D0%B8%D1%86%D1%8B%C2%BB._%D0%92%D0%BE%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F_%D1%8D%D0%BD%D1%86%D0%B8%D0%BA%D0%BB%D0%BE%D0%BF%D0%B5%D0%B4%D0%B8%D1%8F_%D0%A1%D1%8B%D1%82%D0%B8%D0%BD%D0%B0_(%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,_1911-1915).jpg"},
+    course:{slug:"ramesses-ii",name:"Ramesses II",img:"/images/encyclopedia/ramesses-ii.jpg",artist:"Pbuergler",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Ramses_II_British_Museum.jpg"},
+    aftermath:{slug:"hattusili-iii",name:"Hattusili III",img:"/images/encyclopedia/hattusili-iii.jpg",artist:"Krähenstein",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Felsrelief_von_Firaktin_Hattusili_III_(cropped).jpg"},
+    sources:{slug:"abu-simbel",name:"Abu Simbel",img:"/images/encyclopedia/abu-simbel.jpg",artist:"youssef_alam",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Ramsis,_Aswan_Governorate,_Egypt_-_panoramio.jpg"},
+    legacy:{slug:"hattusa",name:"Hattusa",img:"/images/encyclopedia/hattusa.jpg",artist:"Carole Raddato from FRANKFURT, Germany",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Lion_Gate,_Hattusa_13_(cropped).jpg"}
+  },
+  "Battle of Marathon": {
+    background:{slug:"darius-i",name:"Darius I",img:"/images/encyclopedia/darius-i.jpg",artist:"Rumlu",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Darius_I.jpg"},
+    forces:{slug:"hoplite",name:"Hoplite",img:"/images/encyclopedia/hoplite.jpg",artist:"Vinkhuijzen collection",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Spartan_hoplite-1_from_Vinkhuijzen.jpg"},
+    course:{slug:"miltiades",name:"Miltiades",img:"/images/encyclopedia/miltiades.jpg",artist:"Petar Milošević",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Miltiades_(Roman_replica).jpg"},
+    aftermath:{slug:"xerxes-i",name:"Xerxes I",img:"/images/encyclopedia/xerxes-i.jpg",artist:"Darafsh",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:National_Museum_of_Iran_Darafsh_(785).JPG"},
+    sources:{slug:"herodotus",name:"Herodotus",img:"/images/encyclopedia/herodotus.jpg",artist:"",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Marble_bust_of_Herodotos_MET_DT11742_(cropped).jpg"},
+    legacy:{slug:"aeschylus",name:"Aeschylus",img:"/images/encyclopedia/aeschylus.jpg",artist:"Zde",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Herma_of_Aeschylus,_Klas08.jpg"}
+  },
+  "Battle of Gaugamela": {
+    background:{slug:"darius-iii",name:"Darius III",img:"/images/encyclopedia/darius-iii.jpg",artist:"Carole Raddato from FRANKFURT, Germany",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Darius_III_mosaic.jpg"},
+    forces:{slug:"companion-cavalry",name:"Companion cavalry",img:"/images/encyclopedia/companion-cavalry.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Issus_mosaic_-_Museo_Archeologico_Nazionale_-_Naples_2013-05-16_16-25-06_BW.jpg"},
+    course:{slug:"hypaspists",name:"Hypaspists",img:"/images/encyclopedia/hypaspists.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Macedonian_Army_Pezetairos.jpg"},
+    aftermath:{slug:"persepolis",name:"Persepolis",img:"/images/encyclopedia/persepolis.jpg",artist:"Laurens R. Krol",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:2018-09-21_Iran,_Persepolis,_Tachara_(from_the_southeast).jpg"},
+    sources:{slug:"aurel-stein",name:"Aurel Stein",img:"/images/encyclopedia/aurel-stein.jpg",artist:"Thompson, The Grosvenor Studios",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Aurel_Stein_1909.jpg"},
+    legacy:{slug:"alexander-the-great",name:"Alexander the Great",img:"/images/encyclopedia/alexander-the-great.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_Mosaic_detail_of_Alexander_the_Great_(3x4_cropped).jpg"}
+  },
+  "Battle of Cannae": {
+    background:{slug:"hannibal",name:"Hannibal",img:"/images/encyclopedia/hannibal.jpg",artist:"Fratelli Alinari",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hannibal_Barca_bust_from_Capua_photo.jpg"},
+    forces:{slug:"gauls",name:"Gauls",img:"/images/encyclopedia/gauls.jpg",artist:"antmoose",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Dying_gaul.jpg"},
+    aftermath:{slug:"philip-v-of-macedon",name:"Philip V of Macedon",img:"/images/encyclopedia/philip-v-of-macedon.jpg",artist:"Livioandronico2013",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Philip_V_of_Macedon_in_Palazzo_Massimo_(Rome).jpg"},
+    sources:{slug:"polybius",name:"Polybius",img:"/images/encyclopedia/polybius.jpg",artist:"Jona Lendering, Livius Onderwijs",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Stele_des_Polybios.jpg"},
+    legacy:{slug:"scipio-africanus",name:"Scipio Africanus",img:"/images/encyclopedia/scipio-africanus.jpg",artist:"José Luiz",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Sulla_(loan_from_Ny_Carlsberg_Glyptotek)_-_Glyptothek_-_Munich_-_Germany_2017.jpg"}
+  },
+  "Battle of Red Cliffs": {
+    background:{slug:"cao-cao",name:"Cao Cao",img:"/images/encyclopedia/cao-cao.jpg",artist:"Wang Qi",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Cao_Cao_scth.jpg"},
+    forces:{slug:"sun-quan",name:"Sun Quan",img:"/images/encyclopedia/sun-quan.jpg",artist:"Yan Liben",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sun_Quan_Tang.jpg"},
+    aftermath:{slug:"liu-bei",name:"Liu Bei",img:"/images/encyclopedia/liu-bei.jpg",artist:"Yan Liben (閻立本)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Liu_Bei_Tang.jpg"},
+    sources:{slug:"zhuge-liang",name:"Zhuge Liang",img:"/images/encyclopedia/zhuge-liang.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E6%98%8E%E4%BA%BA%E7%BB%98_%E3%80%8A%E8%AF%B8%E8%91%9B%E4%BA%AE%E5%83%8F%E3%80%8B%EF%BC%88%E5%8D%97%E8%96%B0%E6%AE%BF%E6%9C%AC%EF%BC%89.jpg"}
+  },
+  "Battle of Badr": {
+    forces:{slug:"ali-ibn-abi-talib",name:"Ali ibn Abi Talib",img:"/images/encyclopedia/ali-ibn-abi-talib.jpg",artist:"عبدالعزيز علي",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_ten_to_whom_Paradise_was_promised_(Ali).png"},
+    aftermath:{slug:"medina",name:"Medina",img:"/images/encyclopedia/medina.jpg",artist:"Konevi",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Al-Masjid_An-Nabawi_(Bird%27s_Eye_View).jpg"},
+    sources:{slug:"hadith",name:"Hadith",img:"/images/encyclopedia/hadith.jpg",artist:"Bakkouz at Arabic Wikipedia",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hadith_Books.jpg"}
+  },
+  "Battle of Tours": {
+    background:{slug:"charles-martel",name:"Charles Martel",img:"/images/encyclopedia/charles-martel.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Charles_Martel_divise_le_royaume_entre_P%C3%A9pin_et_Carloman.jpg"},
+    aftermath:{slug:"pepin-the-short",name:"Pepin the Short",img:"/images/encyclopedia/pepin-the-short.jpg",artist:"from the Middle Ages, unknown",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:PippinImperialChronicleCorpusChristiCollegeMS373Fol14.jpg"},
+    sources:{slug:"bede",name:"Bede",img:"/images/encyclopedia/bede.jpg",artist:"e-codices.unifr.ch",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:E-codices_bke-0047_001v_medium_(cropped).jpg"},
+    legacy:{slug:"edward-gibbon",name:"Edward Gibbon",img:"/images/encyclopedia/edward-gibbon.jpg",artist:"Henry Walton",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Edward_Gibbon_by_Henry_Walton_cleaned.jpg"}
+  },
+  "Battle of Hastings": {
+    background:{slug:"harold-godwinson",name:"Harold Godwinson",img:"/images/encyclopedia/harold-godwinson.jpg",artist:"~",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bayeux_tapestry_stitches_detail..jpg"},
+    forces:{slug:"housecarl",name:"Housecarl",img:"/images/encyclopedia/housecarl.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hexateuch_king.jpg"},
+    course:{slug:"alan-rufus",name:"Alan Rufus",img:"/images/encyclopedia/alan-rufus.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alan_Rufus.png"},
+    aftermath:{slug:"westminster-abbey",name:"Westminster Abbey",img:"/images/encyclopedia/westminster-abbey.jpg",artist:"Antiquary",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Westminster_Abbey,_Westminster.jpg"},
+    sources:{slug:"bayeux-tapestry",name:"Bayeux Tapestry",img:"/images/encyclopedia/bayeux-tapestry.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Odo_bayeux_tapestry.png"},
+    legacy:{slug:"varangian-guard",name:"Varangian Guard",img:"/images/encyclopedia/varangian-guard.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_body_of_Leo_V_is_dragged_to_the_Hippodrome_through_the_Skyla_Gate.jpg"}
+  },
+  "Battle of Hattin": {
+    background:{slug:"raynald-of-chatillon",name:"Raynald of Châtillon",img:"/images/encyclopedia/raynald-of-chatillon.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:ReynaldofChatillon%26PatriarchofAntioch.jpg"},
+    forces:{slug:"saladin",name:"Saladin",img:"/images/encyclopedia/saladin.jpg",artist:"Classical Numismatic Group (CNG)",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Al-Nasir_I_Salah_al-Din_Yusuf_(Saladin)._AH_564-589_(1169-1193_CE)_%C3%86_Dirham_(30.1mm,_13.28_g,_6h)._Without_mint-name._Dated_AH_586_(AD_1190-91)._Sultan_sitting_facing,_cross-legged,_on_high-backed_throne_(obverse).jpg"},
+    course:{slug:"muzaffar-al-din-gokbori",name:"Muzaffar al-Din Gökböri",img:"/images/encyclopedia/muzaffar-al-din-gokbori.jpg",artist:"CNG",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Begtiginids._Muzaffar_al-Din_K%C3%B6kburi._AH_563-630_(AD_1167-1233)._)Arbil_mint._Dated_AH_587_(AD_1191-2),_obverse._Bareheaded_and_draped_bust_left;_name_and_titles_of_Muzaffar_al-Din_K%C3%B6kburi_in_outer_margin.jpg"},
+    aftermath:{slug:"guy-of-lusignan",name:"Guy of Lusignan",img:"/images/encyclopedia/guy-of-lusignan.jpg",artist:"Museum of the The Order of St. John and The University of Birmingham",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Coin_issued_by_Guy_de_Lusignan_during_when_he_was_Lord_of_Cyprus_(Crop).png"},
+    legacy:{slug:"conrad-of-montferrat",name:"Conrad of Montferrat",img:"/images/encyclopedia/conrad-of-montferrat.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:IsabelaKOnrad.jpg"}
+  },
+  "Battle of Ain Jalut": {
+    background:{slug:"mongke",name:"Möngke",img:"/images/encyclopedia/mongke.jpg",artist:"1438 artist, Shiraz",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:M%C3%B6ngke_enthroned._Tarikh-i_Jahangushay-i_Juvaini,_1438,_Shiraz.jpg"},
+    forces:{slug:"mamluk",name:"Mamluk",img:"/images/encyclopedia/mamluk.jpg",artist:"Daniel Hopfer",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Three_Mamelukes_with_lances_on_horseback.jpg"},
+    course:{slug:"mongols",name:"Mongols",img:"/images/encyclopedia/mongols.jpg",artist:"Sayf al-Vâhidî. Hérât. Afghanistan",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bataille_entre_mongols_%26_chinois_(1211).jpeg"},
+    aftermath:{slug:"baybars",name:"Baybars",img:"/images/encyclopedia/baybars.jpg",artist:"14th century artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Baybars,_Medallion_IV,_Baptist%C3%A8re_de_Saint-Louis.jpg"},
+    sources:{slug:"rashid-al-din-hamadani",name:"Rashid al-Din Hamadani",img:"/images/encyclopedia/rashid-al-din-hamadani.jpg",artist:"Jami al-Tawarikh artist, 1420-1430 artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Presentation_of_the_book,_folio_6_(Biblioth%C3%A8que_nationale_de_France,_Suppl%C3%A9ment_Persan_1113).jpg"}
+  },
+  "Battle of Agincourt": {
+    background:{slug:"hundred-years-war",name:"Hundred Years' War",img:"/images/encyclopedia/hundred-years-war.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Schlacht_von_Azincourt.jpg"},
+    course:{slug:"henry-v-of-england",name:"Henry V of England",img:"/images/encyclopedia/henry-v-of-england.jpg",artist:"anonymous",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:British_School,_16th_century_-_Henry_V_(1387-1422)_-_RCIN_403443_-_Royal_Collection.jpg"},
+    legacy:{slug:"battle-of-crecy",name:"Battle of Crécy",img:"/images/encyclopedia/battle-of-crecy.jpg",artist:"Loyset Liédet",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_crecy_froissart.jpg"}
+  },
+  "Fall of Constantinople": {
+    background:{slug:"constantine-xi-palaiologos",name:"Constantine XI Palaiologos",img:"/images/encyclopedia/constantine-xi-palaiologos.jpg",artist:"ILoveHirasawaYui",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Konstantinos_XI_Palaiologos_fresco_(less_edited).jpg"},
+    forces:{slug:"janissaries",name:"Janissaries",img:"/images/encyclopedia/janissaries.jpg",artist:"Lambert Wyts",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Lambert_Wyts_-_Agha_of_the_Janissaries_and_a_B%C3%B6l%C3%BCk_of_the_Janissaries.jpg"},
+    course:{slug:"mehmed-ii",name:"Mehmed II",img:"/images/encyclopedia/mehmed-ii.jpg",artist:"Gentile Bellini",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bellini,_Gentile_-_Sultan_Mehmet_II.jpg"},
+    aftermath:{slug:"hagia-sophia",name:"Hagia Sophia",img:"/images/encyclopedia/hagia-sophia.jpg",artist:"Adli Wahid",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Hagia_Sophia_(228968325).jpeg"},
+    legacy:{slug:"pope-pius-ii",name:"Pope Pius II",img:"/images/encyclopedia/pope-pius-ii.jpg",artist:"Pinturicchio",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pintoricchio_014.jpg"}
+  },
+  "Third Battle of Panipat": {
+    background:{slug:"sadashivrao-bhau",name:"Sadashivrao Bhau",img:"/images/encyclopedia/sadashivrao-bhau.jpg",artist:"Deccani School",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bust_portrait_in_an_oval_of_the_Bhao,_Sadhashir_Rao,.jpg"},
+    forces:{slug:"ahmad-shah-abdali",name:"Ahmad Shah Abdali",img:"/images/encyclopedia/ahmad-shah-abdali.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Ahmad-Shah_Durrani._Mughal_miniature._ca._1757,_Biblioth%C3%A8que_nationale_de_France_(cropped).jpg"},
+    course:{slug:"shuja-ud-daula",name:"Shuja-ud-Daula",img:"/images/encyclopedia/shuja-ud-daula.jpg",artist:"Tilly Kettle, 1735-1786, British, active in India (from 1769 to 1776)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Shuja-ud-daula,_Nawab_of_Oudh.tif"},
+    aftermath:{slug:"jassa-singh-ahluwalia",name:"Jassa Singh Ahluwalia",img:"/images/encyclopedia/jassa-singh-ahluwalia.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Equestrian_painting_of_Jassa_Singh_Ahluwalia_on_horseback_in-front_of_his_haveli_with_a_fly-whisk_attendant,_circa_late_18th_century.jpg"},
+    legacy:{slug:"mahadji-scindia",name:"Mahadji Scindia",img:"/images/encyclopedia/mahadji-scindia.jpg",artist:"James Wales",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mahadaji_Sindhia.jpg"}
+  },
+  "Battle of Lepanto": {
+    background:{slug:"pope-pius-v",name:"Pope Pius V",img:"/images/encyclopedia/pope-pius-v.jpg",artist:"Bartolomeo Passarotti and workshop",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bartolomeo_Passarotti_-_Pius_V.jpg"},
+    forces:{slug:"galley",name:"Galley",img:"/images/encyclopedia/galley.jpg",artist:"Henri Sbonski de Passebon",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sbonski_de_Passabon-Galere_a_la_voille.jpeg"},
+    course:{slug:"john-of-austria",name:"John of Austria",img:"/images/encyclopedia/john-of-austria.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Don_Juan_d%27Austria_1.JPG"},
+    aftermath:{slug:"ottoman-venetian-war-1570-1573",name:"Ottoman–Venetian War (1570–1573)",img:"/images/encyclopedia/ottoman-venetian-war-1570-1573.jpg",artist:"Unidentified painter",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Lepanto_1571.jpg"},
+    legacy:{slug:"titian",name:"Titian",img:"/images/encyclopedia/titian.jpg",artist:"Titian",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Titian_-_Self-portrait_(Museo_del_Prado).jpg"}
+  },
+  "Battle of Sekigahara": {
+    background:{slug:"ishida-mitsunari",name:"Ishida Mitsunari",img:"/images/encyclopedia/ishida-mitsunari.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ishida_Mitsunari.jpg"},
+    forces:{slug:"tokugawa-ieyasu",name:"Tokugawa Ieyasu",img:"/images/encyclopedia/tokugawa-ieyasu.jpg",artist:"Kanō Tan'yū",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tokugawa_Ieyasu2.JPG"},
+    course:{slug:"kobayakawa-hideaki",name:"Kobayakawa Hideaki",img:"/images/encyclopedia/kobayakawa-hideaki.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kobayakawa_Hideaki_2.jpg"},
+    aftermath:{slug:"mori-terumoto",name:"Mōri Terumoto",img:"/images/encyclopedia/mori-terumoto.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mori_Terumoto.jpg"}
+  },
+  "Battle of Plassey": {
+    background:{slug:"alivardi-khan",name:"Alivardi Khan",img:"/images/encyclopedia/alivardi-khan.jpg",artist:"",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Darbar_of_Alivardi_Khan_at_Murshidabad%27s_Court_MET_DP-19635-001_(cropped).jpg"},
+    forces:{slug:"mir-jafar",name:"Mir Jafar",img:"/images/encyclopedia/mir-jafar.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mir_Jafar_(left)_and_Mir_Miran_(right).jpg"},
+    course:{slug:"robert-clive",name:"Robert Clive",img:"/images/encyclopedia/robert-clive.jpg",artist:"Nathaniel Dance, (later Sir Nathaniel Dance-Holland, Bt) (died 1811)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Robert_Clive,_1st_Baron_Clive_by_Nathaniel_Dance,_(later_Sir_Nathaniel_Dance-Holland,_Bt).jpg"},
+    legacy:{slug:"mir-qasim",name:"Mir Qasim",img:"/images/encyclopedia/mir-qasim.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mir_Qasim.jpg"}
+  },
+  "Battle of Waterloo": {
+    background:{slug:"napoleon",name:"Napoleon",img:"/images/encyclopedia/napoleon.jpg",artist:"Jacques-Louis David",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg"},
+    forces:{slug:"arthur-wellesley-1st-duke-of-wellington",name:"Arthur Wellesley, 1st Duke of Wellington",img:"/images/encyclopedia/arthur-wellesley-1st-duke-of-wellington.jpg",artist:"Thomas Lawrence",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sir_Arthur_Wellesley,_1st_Duke_of_Wellington.jpg"},
+    course:{slug:"michel-ney",name:"Michel Ney",img:"/images/encyclopedia/michel-ney.jpg",artist:"François Gérard",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Marechal_Ney.jpg"},
+    aftermath:{slug:"louis-xviii",name:"Louis XVIII",img:"/images/encyclopedia/louis-xviii.jpg",artist:"François Gérard",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:G%C3%A9rard_-_Louis_XVIII_of_France_in_Coronation_Robes.jpg"},
+    legacy:{slug:"gebhard-leberecht-von-blucher",name:"Gebhard Leberecht von Blücher",img:"/images/encyclopedia/gebhard-leberecht-von-blucher.jpg",artist:"George Dawe",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Field_Marshal_Prince_von_Blucher.jpg"}
+  },
+  "Battle of Gettysburg": {
+    background:{slug:"robert-e-lee",name:"Robert E. Lee",img:"/images/encyclopedia/robert-e-lee.jpg",artist:"Julian Vannerson",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Robert_Edward_Lee_(3x4_cropped).jpg"},
+    aftermath:{slug:"ulysses-s-grant",name:"Ulysses S. Grant",img:"/images/encyclopedia/ulysses-s-grant.jpg",artist:"Brady-Handy Photograph Collection, Library of Congress",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ulysses_S._Grant_1870-1880_(cropped).jpg"}
+  },
+  "Battle of Adwa": {
+    background:{slug:"menelik-ii",name:"Menelik II",img:"/images/encyclopedia/menelik-ii.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Menelik_II_in_coronation_garb,_Emperor_of_Ethiopia.jpg"},
+    course:{slug:"oreste-baratieri",name:"Oreste Baratieri",img:"/images/encyclopedia/oreste-baratieri.jpg",artist:"Unknown, but died more than 70 years ago",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Oreste_Baratieri.jpg"},
+    aftermath:{slug:"francesco-crispi",name:"Francesco Crispi",img:"/images/encyclopedia/francesco-crispi.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Francesco_Crispi_crop.jpg"},
+    legacy:{slug:"second-italo-ethiopian-war",name:"Second Italo-Ethiopian War",img:"/images/encyclopedia/second-italo-ethiopian-war.jpg",artist:"Unknown author",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Passo_Uarieu.jpg"}
+  },
+  "Battle of Stalingrad": {
+    background:{slug:"joseph-stalin",name:"Joseph Stalin",img:"/images/encyclopedia/joseph-stalin.jpg",artist:"Franklin D. Roosevelt Library Public Domain Photographs",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:StalinCropped1943.jpg"},
+    sources:{slug:"georgy-zhukov",name:"Georgy Zhukov",img:"/images/encyclopedia/georgy-zhukov.jpg",artist:"не указан",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Георгий_Константинович_Жуков_в_военной_форме_(cropped).jpg"},
+    legacy:{slug:"george-vi",name:"George VI",img:"/images/encyclopedia/george-vi.jpg",artist:"Matson Photo Service",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:King_George_VI_LOC_matpc.14736_A_(cropped).jpg"}
   }
 };

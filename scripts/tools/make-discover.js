@@ -34,7 +34,7 @@ for (const e of ctx.E) {
   const k = ctx.kind(e), url = ctx.url(e), hp = PICS[e.name];
   const pic = hp && hp.img ? hp.img : fs.existsSync(path.join(R, 'logos', 'thumbs', e.name + '.png')) ? '/logos/thumbs/' + encodeURIComponent(e.name) + '.png' : '';
   if (!pic) continue;
-  const cat = k === 'polity' ? 'states' : k === 'work' ? 'works' : k === 'life' ? 'people' : 'ideas';
+  const cat = k === 'polity' ? 'states' : k === 'work' ? 'works' : k === 'life' ? 'people' : k === 'city' ? 'states' : k === 'battle' ? 'works' : 'ideas';
   const y = ctx.first(e);
   items.push([cat, e.name, pic, firstSentence(ctx.I[e.name] || ''), url, era(y), ctx.R.indexOf(e.region), ctx.span(e), hp && hp.img ? credit(hp.credit) : '']);
   seen.add(e.name.toLowerCase());

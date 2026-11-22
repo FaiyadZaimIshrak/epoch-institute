@@ -2698,6 +2698,17 @@ html[data-kids="1"] .jr-pick a[data-kids="0"], html[data-kids="1"] .jr-j[data-ki
 .jr-stage { display: block; }
 }
 .enc-journeys { margin: 18px 0 0; }
+.sec-src { margin: 14px 0 0; font-family: var(--font-ui); font-size: 14px; clear: both; }
+.sec-src summary { cursor: pointer; color: var(--muted); font-weight: 600; letter-spacing: 0.02em; width: fit-content; }
+.sec-src summary:hover { color: var(--gold); }
+.sec-src summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.sec-src-n { color: var(--muted); font-size: 13px; line-height: 1.5; margin: 8px 0 6px; max-width: 80ch; }
+.sec-src ul { margin: 0; padding-left: 20px; }
+.sec-src li { margin: 0 0 5px; line-height: 1.45; color: var(--text); max-width: 90ch; }
+html[data-kids="1"] .sec-src { display: none; }
+@media print {
+.sec-src { display: none; }
+}
 .ft-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--border-radius-lg); background: var(--surface); padding: 10px; margin: 14px 0 6px; }
 .ft-wrap:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .ft-svg { display: block; max-width: none; }

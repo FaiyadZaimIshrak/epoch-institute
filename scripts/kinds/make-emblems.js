@@ -64,6 +64,8 @@ const EMBLEMS = [
   // great lives of whom no likeness is shown (22 Nov 2026): the name in its own script. Muhammad and Ali are never
   // depicted; Laozi and Zoroaster have no portrait of their own time.
   ['Muhammad', 'محمد', '"Segoe UI", Tahoma, sans-serif', 150], ['Ali ibn Abi Talib', 'علي', '"Segoe UI", Tahoma, sans-serif', 170],
+  // battles with no picture that fits (22 Nov 2026): the place's name in Arabic, as their articles give it
+  ['Battle of Badr', 'بدر', '"Segoe UI", Tahoma, sans-serif', 170], ['Battle of Ain Jalut', 'عين جالوت', '"Segoe UI", Tahoma, sans-serif', 96],
   ['Laozi', '老子', 'serif-cjk', 150], ['Zoroaster', 'Z'],
   // sacred texts (works3, 22 Nov 2026): a word or sign of each text's own script; the Pali Canon and the Avesta have a
   // letter (Pali is written in many scripts, and no system font draws Avestan)

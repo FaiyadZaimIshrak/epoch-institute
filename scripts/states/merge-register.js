@@ -10,7 +10,7 @@ const [specF] = process.argv.slice(2).filter(a => !a.startsWith('--')), WRITE = 
 const SPEC = require(path.resolve(specF));
 const PF = path.join(R, 'data', 'polities.json'), text = fs.readFileSync(PF, 'utf8'), POL = JSON.parse(text);
 const NODE = new Map(POL.nodes.map(n => [n.id, n])), NEW = new Map(SPEC.map(r => [r[0], r]));
-const TYPES = new Set(POL.nodes.map(n => n.t)), RELS = new Set(POL.links.map(l => l.r).concat(['absorbed']));
+const TYPES = new Set(POL.nodes.map(n => n.t)), RELS = new Set(POL.links.map(l => l.r).concat(['absorbed', 'followed-by']));
 const bad = [], nodes = [], links = [];
 for (const [id, n, t, s, e, c, mo, a, ls, regFrom, title] of SPEC) {
   if (NODE.has(id)) bad.push(id + ': already in the register');
@@ -26,7 +26,8 @@ for (const [id, n, t, s, e, c, mo, a, ls, regFrom, title] of SPEC) {
   for (const [r, to, y] of ls) {
     if (!RELS.has(r)) bad.push(id + ': relation ' + r);
     if (!NODE.has(to) && !NEW.has(to)) bad.push(id + ': link to unknown ' + to);
-    links.push(r === 'absorbed' ? { s: to, t: id, r: 'merged-into', f: y, u: y } : { s: id, t: to, r, f: y, u: y });
+    // "absorbed": the target merged into the new state; "followed-by": the target (an existing state) succeeded it
+    links.push(r === 'absorbed' ? { s: to, t: id, r: 'merged-into', f: y, u: y } : r === 'followed-by' ? { s: to, t: id, r: 'successor-of', f: y, u: y } : { s: id, t: to, r, f: y, u: y });
   }
 }
 if (bad.length) { console.log(bad.join('\n')); process.exit(1); }

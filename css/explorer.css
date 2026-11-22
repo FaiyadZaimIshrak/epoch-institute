@@ -1639,6 +1639,17 @@ html[data-kids="1"] .page-useful { display: none; }
 [data-theme="light"] { --fm-a: #c27a12; --fm-b: #12798f; }
 :root[data-kids="1"] { --fm-a: #ffc247; --fm-b: #7fd6ff; }
 :root[data-kids="1"][data-theme="light"] { --fm-a: #ea580c; --fm-b: #0e7490; }
+.sec-src { margin: 14px 0 0; font-family: var(--font-ui); font-size: 14px; clear: both; }
+.sec-src summary { cursor: pointer; color: var(--muted); font-weight: 600; letter-spacing: 0.02em; width: fit-content; }
+.sec-src summary:hover { color: var(--gold); }
+.sec-src summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.sec-src-n { color: var(--muted); font-size: 13px; line-height: 1.5; margin: 8px 0 6px; max-width: 80ch; }
+.sec-src ul { margin: 0; padding-left: 20px; }
+.sec-src li { margin: 0 0 5px; line-height: 1.45; color: var(--text); max-width: 90ch; }
+html[data-kids="1"] .sec-src { display: none; }
+@media print {
+.sec-src { display: none; }
+}
 .ty { max-width: 760px; min-height: 220px; }
 .ty-sheet { display: none; }
 :root { --cat-0: #3987e5; --cat-1: #c98500; --cat-2: #d55181; --cat-3: #008300; --cat-4: #8a7be8; }

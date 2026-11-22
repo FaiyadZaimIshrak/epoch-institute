@@ -3,7 +3,7 @@
 // a bracket inside a bracket in a description, an empty label after the colon.
 //   node scripts/tools/title-audit.js [--all]     exits 1 when a title is broken
 const fs = require('fs'), path = require('path'), R = path.join(__dirname, '..', '..');
-const dirs = 'empire,religion,language,culture,movement,government,ideology,work,life,encyclopedia,state,today-in-history,countries,centuries,paths,speeches,years,people,essays,teachers,societies,songs'.split(',');
+const dirs = 'empire,religion,language,culture,movement,government,ideology,work,life,city,battle,encyclopedia,state,today-in-history,countries,centuries,paths,speeches,years,people,essays,teachers,societies,songs'.split(',');
 const dec = s => s.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;|&#x27;/g, "'");
 const bal = s => { let d = 0; for (const c of s) { if (c === '(') d++; else if (c === ')') { d--; if (d < 0) return false; } } return d === 0; };
 const bad = [], odd = []; let n = 0;

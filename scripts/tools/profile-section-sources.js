@@ -5,8 +5,8 @@
 // article's matching sections (matched by heading: "Military", "Army" and "Wars" serve a state's Military section).
 //   node scripts/tools/profile-section-sources.js [--max=N] [--out=<file>] [--report] [profile names …]
 // The article: the profile's own entry (ENC_LINKS.self, else the entry of its slug or name) where scripts/entry-wikidata.tsv
-// says "same"; else the article of the profile's own name, accepted only when it is no disambiguation page and its
-// opening names the profile's first and last years (a namesake seldom does). The wikitext is cached in
+// says "same"; else the article of the profile's own name, accepted only when it is no disambiguation page and either
+// its title is the profile's name or its opening names the profile's first and last years (a namesake seldom does). The wikitext is cached in
 // %LOCALAPPDATA%\epoch-tools\refs-cache (shared with entry-sources.js; one request every 2 s).
 // Writes scripts/profile-section-sources.js: SECTION_SOURCES {profile name: {t: article title, s: {section key:
 // {h: [the article's headings], w: [up to four works]}}}}, which generator.html shows folded under each section

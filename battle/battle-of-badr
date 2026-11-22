@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Battle of Badr: The Two Sides, the Fighting and What Followed</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="On 13 March 624 CE (17 Ramadan, 2 AH) Muhammad's followers from Medina defeated a larger Qurayshi army from Mecca near Badr, killing several Meccan…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Battle of Badr: The Two Sides, the Fighting and What Followed">
+<meta property="og:description" content="On 13 March 624 CE (17 Ramadan, 2 AH) Muhammad's followers from Medina defeated a larger Qurayshi army from Mecca near Badr, killing several Meccan…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/battle/battle-of-badr">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/battle-of-badr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/battle-of-badr.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/battle/battle-of-badr">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Battles","item":"https://the-epoch-institute.org/profiles?kind=battle"},{"@type":"ListItem","position":4,"name":"Battle of Badr"}]},{"@type":"Article","headline":"Battle of Badr","description":"On 13 March 624 CE (17 Ramadan, 2 AH) Muhammad's followers from Medina defeated a larger Qurayshi army from Mecca near Badr, killing several Meccan…","url":"https://the-epoch-institute.org/battle/battle-of-badr","mainEntityOfPage":"https://the-epoch-institute.org/battle/battle-of-badr","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Battle of Badr","sameAs":["https://en.wikipedia.org/wiki/Battle_of_Badr","https://www.wikidata.org/wiki/Q486124"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/battle-of-badr.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=battle">Battles</a></li><li aria-current="page">Battle of Badr</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Battle%20of%20Badr.png" alt="Battle of Badr" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Battle · Islamic Caliphates &amp; Middle East</p>
+        <h1 class="profile-detail-name">Battle of Badr</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Date</span><span class="info-stat-val">13 March 624 CE (17 <a class="enc-link" href="/encyclopedia/ramadan">Ramadan</a>, 2 AH)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Place</span><span class="info-stat-val">Near the city of Badr, <a class="enc-link" href="/encyclopedia/medina">Medina</a> Province, in present-day Saudi <a class="enc-link" href="/encyclopedia/arabia">Arabia</a>, in a valley between sand dunes and hills</span></div>
+          <div class="info-stat"><span class="info-stat-label">The two sides</span><span class="info-stat-val">Muhammad's army of 313 to 317 men (313 is the generally accepted figure, with two horses and 70 <a class="enc-link" href="/encyclopedia/camel">camels</a>) against a Qurayshi army led by Amr ibn Hisham, given as nearly one thousand or as around 1,300 men, with 100 horses</span></div>
+          <div class="info-stat"><span class="info-stat-label">Outcome</span><span class="info-stat-val">The Medinan army broke the Meccan lines; scholars estimate about 70 Meccan dead, 14 known Muslim dead and some 70 prisoners.</span></div>
+        </div>
+        <p class="empire-meta">6 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The fighting began over a Meccan caravan from the <a class="enc-link" href="/encyclopedia/levant">Levant</a>, but the caravan escaped by another route and the two armies met at Badr anyway.</li><li>The only account of the battle is the Islamic tradition, written down some time later, and some histories doubt how much beyond it can be established.</li><li>Islamic tradition holds that angels took part and that the victory was divine; other sources attribute it to Muhammad's strategy.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The Qur'an calls the battle Yawm al-Furqan, 'The Day of the Criterion', and Ibn Ishaq's biography of Muhammad includes a complete name by name roster of the Muslim army.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#background">Background</a></li><li><a href="#forces">The Two Sides</a></li><li><a href="#course">How It Went</a></li><li><a href="#aftermath">Aftermath</a></li><li><a href="#sources">How We Know</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">622</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/hijra">Hijra</a>: Muhammad and his followers migrate to <a class="enc-link" href="/encyclopedia/medina">Medina</a>, where the community chooses him as leader</span></li><li><span class="rf-year">624</span><span class="rf-text">Early in the year Muhammad learns of a Meccan caravan returning from the <a class="enc-link" href="/encyclopedia/levant">Levant</a> and gathers a force of around 300 men to intercept it</span></li><li><span class="rf-year">624</span><span class="rf-text">Abu Sufyan sends word to <a class="enc-link" href="/encyclopedia/mecca">Mecca</a> and changes the caravan's route; the <a class="enc-link" href="/encyclopedia/quraysh">Quraysh</a> assemble an army</span></li><li><span class="rf-year">624</span><span class="rf-text">The Muslim army camps at the <a class="enc-link" href="/encyclopedia/well">wells</a> of Badr on 12 March, and the <a class="enc-link" href="/encyclopedia/quraysh">Quraysh</a> march into the valley at midnight on 13 March</span></li><li><span class="rf-year">624</span><span class="rf-text">On 13 March the battle opens with duels and then a Meccan charge, and the Muslim counter-attack breaks the Meccan lines</span></li><li><span class="rf-year">624</span><span class="rf-text">About 70 prisoners are taken and, on Abu Bakr's advice, mostly released for ransom</span></li><li><span class="rf-year">630</span><span class="rf-text">Muhammad marches into <a class="enc-link" href="/encyclopedia/mecca">Mecca</a>, whose peaceful surrender Abu Sufyan helps to negotiate</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="background">
+        <h2 class="profile-section-title">Background</h2>
+        <div class="profile-section-body"><p>After the <a class="enc-link" href="/encyclopedia/hijra">Hijra</a>, the migration to <a class="enc-link" href="/encyclopedia/medina">Medina</a> in 622 CE, the people of Medina chose Muhammad as leader of the community, and his followers decided to raid the caravans of the Meccans as they passed by Medina. In early 624 a Qurayshi caravan led by Abu Sufyan ibn Harb was returning to <a class="enc-link" href="/encyclopedia/mecca">Mecca</a> from the <a class="enc-link" href="/encyclopedia/levant">Levant</a>, possibly from Gaza, carrying merchandise worth 50,000 dinars and guarded by 70 men. It was unusually large, possibly because several smaller caravans had joined for safety, and all the leading Meccan financiers had a share in it.</p><p>Two reasons are given for Muhammad's decision to intercept it. The first was a policy of recovering wealth from the <a class="enc-link" href="/encyclopedia/quraysh">Quraysh</a>, who had confiscated Muslims' properties in Mecca after the Hijra. The second was that a successful attack would impress the Meccans and might deter a future attack on Medina. Abu Sufyan sent word to Mecca asking for reinforcements. Traditional Muslim sources say his spies had told him of the Muslim plan, a view accepted by Tariq <a class="enc-link" href="/encyclopedia/ramadan">Ramadan</a>. W. Montgomery Watt argues that since the Meccan army took a week to reach Badr, Abu Sufyan must have sent his request before the Muslim preparations began, as an astute man who anticipated an attack. A messenger, Damdam ibn Amr al-Ghifari, cried out the alarm at the Ka'bah, and Abu Sufyan rerouted the caravan toward the <a class="enc-link" href="/encyclopedia/red-sea">Red Sea</a> and escaped.</p></div><details class="sec-src"><summary>Sources for this section</summary><p class="sec-src-n">Works that Wikipedia&#8217;s article &#8220;Battle of Badr&#8221; cites where it covers Background:</p><ul><li>William Montgomery Watt, Muhammad at Medina (Clarendon Press, 1956)</li><li>Tariq Ramadan, In the Footsteps of the Prophet (Oxford University Press, 2007)</li><li>W. Montgomery Watt, Badr (E. J. Brill, 1986)</li></ul></details>
+      </div>
+      <div class="profile-section-block" id="forces">
+        <h2 class="profile-section-title">The Two Sides</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/ali-ibn-abi-talib"><img src="/images/encyclopedia/ali-ibn-abi-talib.jpg" alt="Ali ibn Abi Talib" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/ali-ibn-abi-talib">Ali ibn Abi Talib</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:The_ten_to_whom_Paradise_was_promised_(Ali).png" target="_blank" rel="noopener">عبدالعزيز علي, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Muhammad gathered 313 to 317 men; sources vary, and 313 is the generally accepted number: 82 Muhajirun, 61 men of the Aws and 170 of the Khazraj. They were not well equipped, with two horses and 70 <a class="enc-link" href="/encyclopedia/camel">camels</a>, so that one camel served two or three men in turn. The army had two divisions, the Muhajirun under a flag carried by <a class="enc-link" href="/encyclopedia/ali-ibn-abi-talib">Ali ibn Abi Talib</a> and the Ansar under Sa'd ibn Mu'adh, with Zubayr commanding the right flank and Miqdad the left. At a council of war Abu Bakr, Umar and Miqdad spoke for fighting, and Muhammad wanted the view of the Ansar, who had not pledged at 'Aqabah to fight beyond their own territory. Sa'd ibn Mu'adh pledged their obedience, and the march continued.</p><p>The <a class="enc-link" href="/encyclopedia/quraysh">Quraysh</a> assembled around 1300 men, 100 horses and many camels, though another passage of the same account puts it at nearly one thousand. At al-Juhfah a second message told them the caravan was safe. The Banu Zuhrah, around 300, turned back on al-Akhnas ibn Shurayq's advice, but Amr ibn Hisham insisted on going on to Badr and holding a feast there. The Quraysh brought no women and children, which suggests that they lacked time to prepare. Muhammad took the well nearest the Quraysh, on a suggestion from al-Hubab ibn al-Mundhir, and had the others blocked or destroyed. A Meccan scout reported about 300 men keen to fight to the last.</p></div>
+      </div>
+      <div class="profile-section-block" id="course">
+        <h2 class="profile-section-title">How It Went</h2>
+        <div class="profile-section-body"><p>The battle began with duels. Al-Aswad ibn Abd al-Asad swore to drink from the Muslims' well or destroy it, and Hamza ibn Abd al-Muttalib killed him. Utba ibn <a class="enc-link" href="/encyclopedia/rabia">Rabi'a</a>, his brother Shayba and his son al-Walid then came out, and the Meccans, who wanted to fight only the Muhajirun, rejected three Ansar. Ali killed al-Walid and Hamza killed Shayba. Ubayda ibn al-Harith, wounded, was carried back and died later of a disease. A shower of arrows followed, with several more duels, most won by the Muslims, and then the Meccans charged.</p><p>As they charged, Muhammad prayed, according to the tradition, “O <a class="enc-link" href="/encyclopedia/allah">Allah</a>! Should this group (of Muslims) be defeated today, You will no longer be worshipped.” He then gave the order to counter-attack and threw a handful of pebbles at the Meccans, probably a traditional Arabian gesture, calling “Defaced be those faces!” The Muslims rushed the Qurayshi lines, and the Meccans, understrength and unenthusiastic about fighting, broke and ran. The battle lasted a few hours and was over by early afternoon. Muslims attribute the Meccans' fear to divine intervention: the Qur'an says in chapter 8, verse 12, that God inspired angels to strengthen the believers, and Muslim sources take the accounts of angels, including Jibreel, literally. Other sources credit Muhammad's strategy.</p></div>
+      </div>
+      <div class="profile-section-block" id="aftermath">
+        <h2 class="profile-section-title">Aftermath</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/medina"><img src="/images/encyclopedia/medina.jpg" alt="Medina" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/medina">Medina</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Al-Masjid_An-Nabawi_(Bird%27s_Eye_View).jpg" target="_blank" rel="noopener">Konevi, CC0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Three days after the battle Muhammad left Badr for <a class="enc-link" href="/encyclopedia/medina">Medina</a>. About 70 prisoners were taken, among them a number of Qurayshi leaders. Abu Bakr argued for ransoming them as kin, while Umar argued that they should all be executed, each by the relative closest to him, and Muhammad accepted Abu Bakr's view. The prisoners are noted to have been treated humanely, and William Muir records one saying that the Medinans made them ride while they walked. Most were released on payment of ransom, and literate prisoners could earn release by teaching ten persons to read and write. Earlier, some Muslims had beaten two captured Meccan water-bearers into giving false answers, and Muhammad later strongly condemned this.</p><p>Scholars estimate Meccan casualties at around 70, though only the more prominent names are known: Amr ibn Hisham, Umayya ibn Khalaf, Utba, Shayba, al-Walid ibn Utba and al-Aswad. Nadr ibn al-Harith and Uqba ibn Abi Mu'ayt were also killed, but the circumstances are unclear: some sources say they fell in the fighting and were buried in a pit, while Safiur Rahman al-Mubarakpuri writes that they were captured and executed by Ali. The names of the 14 Muslims who died of the fighting or its wounds are all known.</p></div>
+      </div>
+      <div class="profile-section-block" id="sources">
+        <h2 class="profile-section-title">How We Know</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/hadith"><img src="/images/encyclopedia/hadith.jpg" alt="Hadith" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/hadith">Hadith</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Hadith_Books.jpg" target="_blank" rel="noopener">Bakkouz at Arabic Wikipedia, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>All knowledge of the battle comes from traditional Islamic accounts, recorded and compiled some time after the event, such as those of the 8th century, together with the references to it in the Qur'an. Some histories find little evidence beside these, so that the historicity and authenticity of the battle are debatable. The accounts differ on numbers: the Muslim force is given as 313 to 317 men, and the Meccan army as around 1300 in one passage and nearly one thousand in another. Little is known of the Qurayshi army's progress from <a class="enc-link" href="/encyclopedia/mecca">Mecca</a> to Badr, and the Meccan side is known only through what the Muslim tradition reports of it.</p><p>Historians also differ over how Abu Sufyan learned of the plan. Traditional Muslim sources, and Tariq <a class="enc-link" href="/encyclopedia/ramadan">Ramadan</a>, hold that his spies told him of the Muslim preparations; Watt argues that he must have sent his request for help before they began. Ibn Ishaq's biography of Muhammad includes a complete roster of the Muslim army, and many <a class="enc-link" href="/encyclopedia/hadith">hadiths</a> identify veterans of Badr as such, a sign of the battle's later standing. Several features of the account are told as what Muslims believe: the night's rain as a blessing for the believers, the army's refreshing sleep, and the angels, with Jibreel, who the Qur'an and hadith say took part. The same accounts are the source of the claim, found in Islamic history, that the victory was decisive and due to divine intervention.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Badr was the first large engagement between the Muslims and the <a class="enc-link" href="/encyclopedia/quraysh">Quraysh</a>. It transformed Muhammad from an outcast of <a class="enc-link" href="/encyclopedia/mecca">Mecca</a> into the leader of a new community and <a class="enc-link" href="/encyclopedia/city-state">city-state</a> at <a class="enc-link" href="/encyclopedia/medina">Medina</a>. Marshall Hodgson adds that it forced other <a class="enc-link" href="/encyclopedia/arabs">Arabs</a> to regard the Muslims as challengers and potential inheritors of Qurayshi prestige. Soon afterwards Muhammad expelled the Banu Qaynuqa, a Jewish tribe of Medina, said to be a penalty for assaulting a Muslim woman and breaking the peace treaty; the tribe is also described as a threat to his political position. His chief opponent in Medina, Abd <a class="enc-link" href="/encyclopedia/allah">Allah</a> ibn Ubayy, was weakened.</p><p>Abu Sufyan, safe with the caravan, became chief of the Quraysh almost by default after the deaths of so many nobles, and later helped negotiate Mecca's peaceful surrender; his son Mu'awiya founded the <a class="enc-link" href="/encyclopedia/umayyad-caliphate">Umayyad Caliphate</a>. Hamza, who fought well at Badr, was killed by an assassin at Uhud. The last of the Badr veterans died during the <a class="enc-link" href="/encyclopedia/first-fitna">First Fitna</a>. In the Qur'an the battle is Yawm al-Furqan, and Muslim armies and organisations have named operations after it, among them <a class="enc-link" href="/encyclopedia/egypt">Egypt</a>'s offensive in the 1973 war and <a class="enc-link" href="/encyclopedia/pakistan">Pakistan</a>'s actions in the 1999 <a class="enc-link" href="/encyclopedia/kargil-war">Kargil War</a>. It has appeared in films and television.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>At Badr in March 624 CE a Medinan army of about 313 under Muhammad defeated a larger Meccan force led by Amr ibn Hisham, killing several Qurayshi leaders. Islamic tradition holds the victory to be divinely aided; the battle is known almost entirely from later Islamic accounts.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>W. Montgomery Watt, Badr (E. J. Brill, 1986)</li>
+        <li>W. Montgomery Watt, Muhammad at Medina (Oxford University Press, 1956)</li>
+        <li>Patricia Crone, Meccan Trade and the Rise of Islam (Blackwell, 1987)</li>
+        <li>Marshall Hodgson, The Venture of Islam: The Classical Age of Islam (University of Chicago Press, 1974)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other battles</p>
+      <div class="related-grid"><a class="related-card" href="/battle/battle-of-tours"><img src="/logos/thumbs/Battle%20of%20Tours.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Tours</span><span class="related-card-dates">10 October 732</span></a><a class="related-card" href="/battle/battle-of-red-cliffs"><img src="/logos/thumbs/Battle%20of%20Red%20Cliffs.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Red Cliffs</span><span class="related-card-dates">winter 208–209 CE</span></a><a class="related-card" href="/battle/battle-of-hastings"><img src="/logos/thumbs/Battle%20of%20Hastings.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Hastings</span><span class="related-card-dates">14 October 1066</span></a><a class="related-card" href="/battle/battle-of-hattin"><img src="/logos/thumbs/Battle%20of%20Hattin.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Hattin</span><span class="related-card-dates">4 July 1187</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/battle/battle-of-red-cliffs"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Battle%20of%20Red%20Cliffs.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Red Cliffs</span><span class="related-card-dates">winter 208–209 CE</span></a><a class="related-card" href="/battle/battle-of-tours"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Battle%20of%20Tours.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Tours</span><span class="related-card-dates">10 October 732</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Battle of Badr",slug="battle-of-badr",url="https://the-epoch-institute.org/battle/battle-of-badr";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Battle of Badr on The Epoch Institute — the two sides, the fighting and what followed. https://the-epoch-institute.org/battle/battle-of-badr #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/battle/battle-of-badr"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Battle of Badr",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Battle of Badr",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

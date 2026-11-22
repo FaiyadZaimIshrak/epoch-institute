@@ -1,0 +1,6 @@
+Pericles, rise: "Thucydides (not the historian)" links the historian; a profile-wide exclusion would also take the right links in last and legacy. Needs a per-section rule or an entry for Thucydides son of Melesias.
+Site-wide: the lower-case pattern "armistice" links the Armistice of 11 November 1918 wherever the word stands (Garibaldi 1866, Vichy 1940, Romania's Focșani 1917, Hungary 1945, the French Third Republic 1940, German East Africa is right). Drop it (added-entries.json "drop") and rescan the profiles that link it; unlink the state texts.
+Site-wide: lower-case "ivory" links the Ivory trade entry wherever the word stands (walrus ivory of the Inuit, mammoth ivory of Clovis, grave goods at Thebes). Consider a drop; excluded per profile for now.
+Site-wide: "Herders" (capitalised at a sentence start) links Johann Gottfried Herder; "themes" links the Byzantine theme system. Check the patterns' modes (lower-case plural should not match) and consider drops.
+Site-wide: "Middle Kingdom" links Middle Francia (Jerusalem, Book of the Dead, the Great Sphinx: the Egyptian Middle Kingdom). Drop the name from middle-francia's row and, if an entry for the Middle Kingdom of Egypt exists, give it the name.
+Site-wide: bare "Inquisition" links the Portuguese Inquisition (Galileo: Roman; Isabella, Galicia: Spanish; Domesday: the Cambridge Inquisition). Drop it.

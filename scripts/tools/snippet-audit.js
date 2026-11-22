@@ -5,7 +5,7 @@
 //   node scripts/tools/snippet-audit.js [--tsv=file] [--kind=empire,encyclopedia,…]
 const fs = require('fs'), path = require('path'), R = path.join(__dirname, '..', '..'), { TELLS } = require('./style-audit.js');
 const SOFT = new Set(['one of the most', 'worth noting', 'triple list of abstractions', 'em dash']), HARD = TELLS.filter(t => !SOFT.has(t[0]));
-const dirs = (process.argv.find(a => a.startsWith('--kind=')) || '--kind=empire,religion,language,culture,movement,government,ideology,work,life,encyclopedia,state,today-in-history,countries,centuries,paths,speeches,years,people,essays,teachers,societies,songs').slice(7).split(',');
+const dirs = (process.argv.find(a => a.startsWith('--kind=')) || '--kind=empire,religion,language,culture,movement,government,ideology,work,life,city,battle,encyclopedia,state,today-in-history,countries,centuries,paths,speeches,years,people,essays,teachers,societies,songs').slice(7).split(',');
 const dec = s => s.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;|&#x27;|&#8217;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>');
 const rows = []; let n = 0, differ = 0; const by = {};
 const walk = d => { for (const f of fs.readdirSync(path.join(R, d), { withFileTypes: true })) { if (f.isDirectory()) { walk(d + '/' + f.name); continue; } if (/\.|^index$/.test(f.name) && f.name !== 'index') continue;
