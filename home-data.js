@@ -759,7 +759,19 @@ var HOME_PICS = {
   "Paul the Apostle": {"img":"/images/encyclopedia/paul-the-apostle.jpg","name":"Paul the Apostle","slug":"paul-the-apostle","credit":"Unknown author, Public domain","top":15},
   "Ali ibn Abi Talib": {"img":"/images/encyclopedia/imam-ali-shrine.jpg","name":"Imam Ali Shrine","slug":"imam-ali-shrine","credit":"U.S. Navy photo by Photographer's Mate 1st Class Arlo K. Abrahamson., Public domain"},
   "Abraham": {"img":"/images/encyclopedia/abraham.jpg","name":"Abraham","slug":"abraham","credit":"Guercino, Public domain","top":25},
-  "Mary, mother of Jesus": {"img":"/images/encyclopedia/mary-mother-of-jesus.jpg","name":"Mary, mother of Jesus","slug":"mary-mother-of-jesus","credit":"Asia, CC BY-SA 4.0","top":20}
+  "Mary, mother of Jesus": {"img":"/images/encyclopedia/mary-mother-of-jesus.jpg","name":"Mary, mother of Jesus","slug":"mary-mother-of-jesus","credit":"Asia, CC BY-SA 4.0","top":20},
+  "Hebrew Bible": {"img":"/images/encyclopedia/hebrew-bible.jpg","name":"Hebrew Bible","slug":"hebrew-bible","credit":"LGLou, CC BY-SA 4.0"},
+  "New Testament": {"img":"/images/encyclopedia/new-testament.jpg","name":"New Testament","slug":"new-testament","credit":"Unknown author, Public domain","top":30},
+  "Quran": {"img":"/images/encyclopedia/quran.jpg","name":"Quran","slug":"quran","credit":"Unknown author, Public domain"},
+  "Rigveda": {"img":"/images/encyclopedia/rigveda.jpg","name":"Rigveda","slug":"rigveda","credit":"Unknown author, Public domain","top":20},
+  "Bhagavad Gita": {"img":"/images/encyclopedia/bhagavad-gita.jpg","name":"Bhagavad Gita","slug":"bhagavad-gita","credit":"Unknown artist, Public domain"},
+  "Pali Canon": {"img":"/images/encyclopedia/pali-canon.jpg","name":"Pali Canon","slug":"pali-canon","credit":"Unknown author, CC BY-SA 2.5","top":30},
+  "Avesta": {"img":"/images/encyclopedia/avesta.jpg","name":"Avesta","slug":"avesta","credit":"Daderot, CC0"},
+  "Guru Granth Sahib": {"img":"/images/encyclopedia/guru-granth-sahib.jpg","name":"Guru Granth Sahib","slug":"guru-granth-sahib","credit":"Unknown author, Public domain","top":25},
+  "Talmud": {"img":"/images/encyclopedia/talmud.jpg","name":"Talmud","slug":"talmud","credit":"LGLou, CC BY-SA 4.0"},
+  "Upanishads": {"img":"/images/encyclopedia/upanishads.jpg","name":"Upanishads","slug":"upanishads","credit":"Unknown author, Public domain"},
+  "Lotus Sutra": {"img":"/images/encyclopedia/lotus-sutra.jpg","name":"Lotus Sutra","slug":"lotus-sutra","credit":"Text inscribed by Sugawara Mitsushige, Public domain"},
+  "I Ching": {"img":"/images/encyclopedia/i-ching.jpg","name":"I Ching","slug":"i-ching","credit":"Song era print artist, Public domain","top":20}
 };
 
 var HOME_ENTRIES = [

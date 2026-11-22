@@ -6,7 +6,7 @@ histories, centuries, glossary, reading paths) are pre-built from the data by sc
 
 ## Pages
 Root pages are **extensionless** files served as HTML by `.htaccess` (`ForceType`):
-index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · weekly · write · faiths · flashcards · race · inventions · governance · compare · new (generated) · today-card · privacy · terms · support · advent · now
+index · research · research-series · about · contributors · dataset · explorer · profiles · community · connections · atlas · quiz · contact · start · games · kids · search · timeline · passport · weekly · write · faiths · flashcards · race · inventions · governance · religions · compare · new (generated) · today-card · privacy · terms · support · advent · now
 A new root page goes into the FilesMatch list at the top of the root .htaccess as well as deploy.sh's PAGES: left out,
 it goes out with no Content-Type under nosniff and browsers will not show it (/governance, 31 Oct 2026, for a few
 hours). check-site.ps1 fails on a root page missing from either list, and on a folder page no .htaccess serves as HTML.
@@ -48,7 +48,7 @@ panel at the right. The phone menu: the Display row, Profiles, Encyclopedia, Tod
 Time / Themes & Play / Institute) and the newsletter; the footer of every page except /contact starts with "Spotted a
 mistake on this page? Suggest a correction" (/contact?topic=correction&page=<path>). Page keys for initNav / body[data-nav]: profiles, encyclopedia, states,
 today, atlas, countries, centuries, explorer, connections, paths, quiz, glossary, series, dataset, research,
-community, about, contributors, contact, start, games, kids, speeches, songs, timeline, years, people, passport, teachers, write, faiths, flashcards, race, societies, inventions, governance, dynasties, home. The header also
+community, about, contributors, contact, start, games, kids, speeches, songs, timeline, years, people, passport, teachers, write, faiths, flashcards, race, societies, inventions, governance, religions, dynasties, home. The header also
 carries the Kids mode star
 (see "Kids mode") between the shelf and the theme toggle. At ≤480 px the star and the theme toggle leave the bar (it
 holds search, shelf and the menu button; with five controls the menu button fell off a 390 px screen) and the phone
@@ -3201,6 +3201,67 @@ the globe, E6 cities through time, E7 battles as pages, E8 sources under each pr
     for as long as it is asked), while thumb.wikimedia.org's standard widths (120, 250, 330, 500, 960 …) kept coming
     the whole time. The fetch now asks for 330 px and, for a narrower original, the next standard width below it.
     When a Wikimedia tool meets 429, ask ONE address by hand and read the answer before waiting or retrying.
+
+- **E1, sacred texts as great works** (wave works3, scripts/kinds/works3/: list.tsv, wp/, out/, edit.js, refs.js,
+  refs-all.json, links.js, entry-picks.txt): the Hebrew Bible, the New Testament, the Quran, the Rigveda, the
+  Upanishads, the Bhagavad Gita, the Pali Canon, the Lotus Sutra, the Avesta, the Talmud, the Guru Granth Sahib and
+  the I Ching (52 works, 918 profiles). The Book of the Dead and the Tao Te Ching were profiles already.
+  - WORKS-GUIDE.md "Sacred texts": the tradition's account and the scholars', each attributed and never merged; dating
+    and authorship with the article's hedges; no ranking of scriptures; devotional honorifics left out; canonisation,
+    recensions, manuscripts and controversies in "reception" and "survival". Twelve writers, one saved article each;
+    every draft read in full by the editor; works3/edit.js holds the changes (three teasers that were not sentences,
+    a verdict between scholars, an event dated only by inference, "discovered" among people who had the texts all
+    along, the Catechism's "Revelation" that read as the book of that name).
+  - The Pali Canon has `span` "5th–1st century BCE" (its recitation by tradition, to its writing down). References
+    from each article's bibliography (works3/refs.js); none for the Hebrew Bible and the Guru Granth Sahib.
+  - Emblems: a word or sign of each text's script (תנ״ך, ΚΔ, القرآن, ऋ, गीता, ਗ੍ਰੰਥ, תלמוד, उ, 妙法, 易); a letter for
+    the Pali Canon and the Avesta.
+  - **The I Ching got its entry** (make-work-entries.js, which now adds only the works that have no entry, as text:
+    a re-run had rewritten three earlier ones without their pictures). "Book of Changes" had been a profile-only form
+    of the MONK Yijing on Western Zhou and the Yuan Dynasty: that row's text was made unmatchable in
+    encyclopedia-links.js ("Book of Changes by the monk Yijing"), and "Yijing" is now a form of the book's entry on
+    the four profiles where it means the book.
+  - **Names dropped site-wide** (works3/links.js): "Agni" from Karashahr (the Vedic god nearly everywhere; a form on
+    the Tocharians, where it is the city) and "Hume" from Hummay (David Hume, Wallace Hume Carothers). 18 exclusions
+    from the scans (Orthodox Jews as the Orthodox Church, the letters to the Hebrews and the Romans as the language
+    and the empire, Dayananda Saraswati, Mysore Hiriyanna, Bhai Mani Singh, Abraham Anquetil-Duperron and Abraham ibn
+    Daud, Judah ha-Nasi, the sutra's Dragon King as the king of Bhutan, Jonathan Silk, Ma Rong as the Rong people …).
+
+- **E2, Faiths Side by Side** (/religions; hand page written by scripts/tools/make-religions.js from /privacy's head,
+  run by build-pages.ps1 before /today; nav key religions; .htaccess, deploy.sh PAGES, split-css HAND, the sitemap
+  list, SEARCH_PAGES, menu Themes → Societies and ideas with a New tag, footer, llms.txt): every religion profile
+  in one table, the living faiths first and each group oldest first ("the order is by age, and says nothing of
+  rank"): Began, Founder or early teachers, Scriptures, Followers today (the profile's own facts, EMPIRE_FACTS), the
+  Great Lives and Great Works that belong to it (scripts/faiths-side.tsv: by hand, labelled "Great works", not
+  "scriptures": the Iliad is none; the tool stops on a name that is no such profile) and its faith map. Three
+  buttons filter (All / Practised today / No longer practised). Below 860 px each row is a card (cells labelled by
+  data-l) that opens on its beginnings and unfolds the rest (.fs-open, added by the page's script: without it all is
+  shown); the phone page went from 27 screens to 14. Styles fs-* before the phone bar's block.
+  scripts/tests/religions.js (10 checks on the built page). The menu line of Great Lives no longer gives a count.
+
+- **E3, Whose Life?** (/games#whose; the 18th game): one Great Life a day for everyone (UTC; #1 = 24 Nov 2026; before
+  that day the page shows #1), told in five clues, the hardest first: the life's "Did you know?", a key event, a
+  takeaway, what it is known for, and who the person was with the birth (each from the profile's own data, GLANCE and
+  EMPIRE_FACTS). Ten lives to choose among (the answer and nine others, those of the same region or age first, in
+  order of name, with their emblems); a wrong answer strikes that life out and brings the next clue; five wrong end it.
+  - **scripts/tools/make-whose-life.js** [--to=2027-10-31] [--dry] [--show=<name>] (run by build-pages.ps1 after
+    make-cipher.js): scripts/whose-life.tsv (APPEND only: a seeded choice among the lives not dealt within sixty days,
+    those never dealt first, so a new life joins at the next build), whose-data.js (WHOSE {d0, l: [[name, slug, span,
+    region, dyk, [events], [takeaways], known, who]], p: [[life, pass, [nine others]]]}; a life dealt again shows its
+    next event and takeaway) and WHOSE_SRC in /games.
+  - **Masking:** the whole name reads "this person"; so does a word of the profile's own name standing alone, unless
+    it stands inside another name ("Abu Talib", "President Lincoln", "the Isabella quarter", "king of Qin": then it is
+    boxed ▢▢▢); words grown from the name ("Napoleonic", "Elizabethan", "Bolivia", "Maoism", "Christians") and words
+    only of the person's other names ("Bonaparte") are boxed. A name's words stop at its "of" ("Elizabeth I of
+    England" must not hide England, nor "Mary, mother of Jesus" Jesus); titles are no name words (STOP); BOX lists
+    words that are a state or house on their own (Qin, Tokugawa). A clue that still names the person is left out, and
+    a life left with fewer than five kinds of clue stops the build. --show prints a life's clues: read them when a
+    life is added.
+  - games.js Whose (MODS.whose, window.epochWhose; epoch-games whose-<n> {g: the lives chosen in order, done, w},
+    whose-streak; stars 3 on the first or second clue, 2 on the third, 1 later; Share gives the squares and never the
+    name), its tab and lobby card (New until 23 Dec), a column on My Week, a row on /today, its calendar on /past-games
+    (make-past-games.js), My Passport (18 games). Styles gm-whose-*. games.js?v=23, passport.js?v=16;
+    scripts/tests/whose-life.js.
 
 ## Connections map and the states register
 - `data/polities.json` — register of every state (incl. the modern Levant: Israel, the State of Palestine, Jordan, Lebanon, Syria — added by hand Oct 2026, successor links to the mandates): nodes {id, n name, t type, b broad region, s/e years, a aka, m mode, c capital, mo modern countries, p profile url} and links {s, t, r relation, f/u years}. Successions stored one way (successor-of). Built from regional research files by the scratchpad states/merge.ps1 (dedupe, relation resolution, validation report).

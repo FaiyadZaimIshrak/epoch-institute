@@ -879,7 +879,19 @@ var GAME_IDEAS = [
 ["/work/borobudur","Borobudur","Great work",780,"c. 780 CE","/images/encyclopedia/borobudur.jpg","Heri nugroho · CC BY-SA 4.0","https://commons.wikimedia.org/wiki/File:Pradaksina.jpg",1],
 ["/work/rock-hewn-churches-of-lalibela","Rock-hewn churches of Lalibela","Great work",1181,"c. 1181 CE","/images/encyclopedia/rock-hewn-churches-of-lalibela.jpg","Sailko · CC BY 3.0","https://commons.wikimedia.org/wiki/File:Lalibela,_san_giorgio,_esterno_24.jpg",1],
 ["/work/machu-picchu","Machu Picchu","Great work",1450,"c. 1450 CE","/images/encyclopedia/machu-picchu.jpg","Draceane · CC BY-SA 4.0","https://commons.wikimedia.org/wiki/File:Machu_Picchu,_2023_(012).jpg",1],
-["/work/taj-mahal","Taj Mahal","Great work",1632,"1632 CE","/images/encyclopedia/taj-mahal.jpg","Yann; edited by Jim Carter · CC BY-SA 4.0","https://commons.wikimedia.org/wiki/File:Taj_Mahal_(Edited).jpeg",1]
+["/work/taj-mahal","Taj Mahal","Great work",1632,"1632 CE","/images/encyclopedia/taj-mahal.jpg","Yann; edited by Jim Carter · CC BY-SA 4.0","https://commons.wikimedia.org/wiki/File:Taj_Mahal_(Edited).jpeg",1],
+["/work/hebrew-bible","Hebrew Bible","Great work",-800,"c. 800 BCE","/images/encyclopedia/hebrew-bible.jpg","LGLou · CC BY-SA 4.0","https://commons.wikimedia.org/wiki/File:Tanach.jpg",1],
+["/work/new-testament","New Testament","Great work",52,"c. 52 CE","/images/encyclopedia/new-testament.jpg","Unknown author · Public domain","https://commons.wikimedia.org/wiki/File:Ann_Arbor,_University_of_Michigan_Ms_P.Mich.inv._1570_(Papyrus_37)_recto_Matt_26,_19-37.jpg",1],
+["/work/quran","Quran","Great work",610,"c. 610 CE","/images/encyclopedia/quran.jpg","Unknown author · Public domain","https://commons.wikimedia.org/wiki/File:Birmingham_Quran_manuscript_full.jpg",1],
+["/work/rigveda","Rigveda","Great work",-1500,"c. 1500 BCE","/images/encyclopedia/rigveda.jpg","Unknown author · Public domain","https://commons.wikimedia.org/wiki/File:Rigveda_MS2097.jpg",1],
+["/work/bhagavad-gita","Bhagavad Gita","Great work",-200,"c. 200 BCE","/images/encyclopedia/bhagavad-gita.jpg","Unknown artist · Public domain","https://commons.wikimedia.org/wiki/File:BhagavadGita-19th-century-Illustrated-Sanskrit-Chapter_1.20.21.jpg",1],
+["/work/pali-canon","Pali Canon","Great work",-450,"c. 450 BCE","/images/encyclopedia/pali-canon.jpg","Unknown author · CC BY-SA 2.5","https://commons.wikimedia.org/wiki/File:Tipitaka1.jpg",1],
+["/work/avesta","Avesta","Great work",-1000,"c. 1000 BCE","/images/encyclopedia/avesta.jpg","Daderot · CC0","https://commons.wikimedia.org/wiki/File:Videvdad_Sadah_(Zoroastrian_religious_code),_opened_to_first_chapter,_unknown_copyist,_Yazd,_Iran,_1647_AD_-_British_Library,_London_-_DSC00550.jpg",1],
+["/work/guru-granth-sahib","Guru Granth Sahib","Great work",1604,"1604 CE","/images/encyclopedia/guru-granth-sahib.jpg","Unknown author · Public domain","https://commons.wikimedia.org/wiki/File:Sri_Guru_Granth_Sahib_Nishan.jpg",1],
+["/work/talmud","Talmud","Great work",200,"c. 200 CE","/images/encyclopedia/talmud.jpg","LGLou · CC BY-SA 4.0","https://commons.wikimedia.org/wiki/File:Talmud-Druck_von_Daniel_Bomberg_und_Ambrosius_Froben.jpg",1],
+["/work/upanishads","Upanishads","Great work",-700,"c. 700 BCE","/images/encyclopedia/upanishads.jpg","Unknown author · Public domain","https://commons.wikimedia.org/wiki/File:Guru_and_DiscipleI.jpg",1],
+["/work/lotus-sutra","Lotus Sutra","Great work",50,"c. 50 CE","/images/encyclopedia/lotus-sutra.jpg","Text inscribed by Sugawara Mitsushige · Public domain","https://commons.wikimedia.org/wiki/File:Sugawara_Mitsushige_Lotus_Sutra,_01crop.tif",1],
+["/work/i-ching","I Ching","Great work",-800,"c. 800 BCE","/images/encyclopedia/i-ching.jpg","Song era print artist · Public domain","https://commons.wikimedia.org/wiki/File:I_Ching_Song_Dynasty_print.jpg",1]
 ];
 var GAME_SPANS = [
 ["/empire/elamite-confederation","Elamite Confederation",-2700,-539,"/logos/Elamite%20Confederation.png"],

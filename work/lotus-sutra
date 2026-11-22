@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Lotus Sutra: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Lotus Sūtra is a Mahāyāna Buddhist scripture by unknown Indian authors, composed in phases from about the 1st century CE, and the main text of the…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Lotus Sutra: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Lotus Sūtra is a Mahāyāna Buddhist scripture by unknown Indian authors, composed in phases from about the 1st century CE, and the main text of the…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/lotus-sutra">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/lotus-sutra.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/lotus-sutra.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/lotus-sutra">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Lotus Sutra"}]},{"@type":"Article","headline":"Lotus Sutra","description":"The Lotus Sūtra is a Mahāyāna Buddhist scripture by unknown Indian authors, composed in phases from about the 1st century CE, and the main text of the…","url":"https://the-epoch-institute.org/work/lotus-sutra","mainEntityOfPage":"https://the-epoch-institute.org/work/lotus-sutra","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Lotus Sutra"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/lotus-sutra.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Lotus Sutra</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Lotus%20Sutra.png" alt="Lotus Sutra" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · South &amp; Southeast Asia</p>
+        <h1 class="profile-detail-name">Lotus Sutra</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 50 CE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val">Unknown authors, likely highly educated Buddhist monks of <a class="enc-link" href="/encyclopedia/india">India</a> (Lopez); Mahāyāna Buddhists hold that it records the teaching of Shakyamuni Buddha at Vulture Peak; possibly of the Mahāsāṃghika school (Roberts)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">A Mahāyāna sūtra in prose and verse, 28 chapters in Kumārajīva's Chinese version; first written probably in a <a class="enc-link" href="/encyclopedia/prakrit">Prakrit</a> later Sanskritised; Chinese translations of 286, 406 and 601 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia/sanskrit">Sanskrit</a> <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a> survive, including Nepalese copies; the Chinese, Tibetan and other translations are read in East Asian temples and homes; <a class="enc-link" href="/encyclopedia/dunhuang">Dunhuang</a> held a thousand copies sealed in the 11th century</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">The One Vehicle; skilful means; the parable of the burning house; the immeasurable lifespan of the Buddha; the jewelled stupa; the Dragon King's daughter; the chapter on <a class="enc-link" href="/encyclopedia/avalokitesvara">Avalokiteśvara</a>; the chanted title Namu Myōhō Renge Kyō</span></div>
+        </div>
+        <p class="empire-meta">6 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The sūtra teaches that the many Buddhist paths are skilful means within a single One Vehicle that leads all beings to Buddhahood.</li><li>It presents the Buddha's lifespan as immeasurable: his death is described as a teaching device, and he is said to remain active in the world.</li><li>Little known in <a class="enc-link" href="/encyclopedia/india">India</a>, it became the main scripture of the Tiantai, <a class="enc-link" href="/encyclopedia/tendai">Tendai</a> and <a class="enc-link" href="/encyclopedia/nichiren">Nichiren</a> schools and shaped the art, poetry and devotion of <a class="enc-link" href="/encyclopedia/east-asia">East Asia</a>.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>In the Japanese poetry compendium Kanwa taisho myoho renge-kyo, drawn from more than 120 collections of the <a class="enc-link" href="/encyclopedia/heian-period">Heian period</a>, over 1360 poems refer to the Lotus Sūtra in their titles alone.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 50 CE</span><span class="rf-text">Yoisho Tamura dates the first stage of composition, chapters 2 to 9, to about this time</span></li><li><span class="rf-year">286</span><span class="rf-text">Dharmarakṣa's team completes the first Chinese translation at <a class="enc-link" href="/encyclopedia/changan">Chang'an</a></span></li><li><span class="rf-year">406</span><span class="rf-text">Kumārajīva's team completes the translation that becomes the standard one in East Asian <a class="enc-link" href="/encyclopedia/buddhism">Buddhism</a></span></li><li><span class="rf-year">601</span><span class="rf-text">Jñānagupta and Dharmagupta translate the Supplemented Lotus Sūtra, a revision of Kumārajīva's text</span></li><li><span class="rf-year">8th century</span><span class="rf-text">The Japanese emperor founds a network of provincial nunneries, the Temples for the Eradication of Sins through the Lotus</span></li><li><span class="rf-year">1603</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/matteo-ricci">Matteo Ricci</a> mentions the sūtra and denounces its teaching, one of the first mentions by a westerner</span></li><li><span class="rf-year">1884</span><span class="rf-text">Hendrik Kern publishes his English translation from Nepalese <a class="enc-link" href="/encyclopedia/sanskrit">Sanskrit</a> <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a> in the Sacred Books of the East</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The Lotus Sūtra (<a class="enc-link" href="/encyclopedia/sanskrit">Sanskrit</a> Saddharma Puṇḍarīka Sūtra, "Sūtra on the White Lotus of the True <a class="enc-link" href="/encyclopedia/dharma">Dharma</a>") is a Mahāyāna Buddhist sūtra, a discourse attributed to the Buddha. Mahāyāna Buddhists receive it as the teaching of Shakyamuni Buddha, given at a gathering on Vulture Peak. Scholars study it as a text of unknown authorship. According to Donald S. Lopez Jr., it is clearly a work of high literary quality, and its authors were likely highly educated Buddhist monks, fully at ease among the doctrines and tropes of <a class="enc-link" href="/encyclopedia/buddhism">Buddhism</a> as it existed in <a class="enc-link" href="/encyclopedia/india">India</a> at the time.</p><p>According to Peter Alan Roberts, the sūtra may have had its origin among the Mahāsāṃghika school and may have been written in a middle Indic language, a prakrit, that was later Sanskritised. That the original was in prakrit remains a contested claim among both secular and religious historians. For the first Chinese translation, it was at first held that the source was in Sanskrit, but the view that it was a <a class="enc-link" href="/encyclopedia/prakrit">Prakrit</a> text has gained widespread acceptance.</p><p>The sūtra was often cited in Indian scholarly treatises and compendiums, and the number of surviving <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a> and fragments suggests it was copied often. Jonathan Silk judges that its influence in India may have been limited, though it is a prominent scripture in East Asian Buddhism.</p></div>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/avalokitesvara"><img src="/images/encyclopedia/avalokitesvara.jpg" alt="Avalokiteśvara" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/avalokitesvara">Avalokiteśvara</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Khasarpana_Lokesvara.jpg" target="_blank" rel="noopener">Hyougushi, CC BY-SA 2.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The sūtra is presented as a drama in several mythological scenes. Sangharakshita observes that it uses the whole cosmos for its stage, employs many mythological beings as actors and speaks almost exclusively in the language of images. Gene Reeves describes three parts: the One Vehicle of the Wonderful <a class="enc-link" href="/encyclopedia/dharma">Dharma</a>, the everlasting life of the Buddha, and the activities of human beings, the bodhisattva way. Kumārajīva's Chinese version has 28 chapters.</p><p>Two teachings have been especially influential. The first is the One Vehicle (ekayāna): the three vehicles to awakening are skilful means (upāya), the many ways Buddhas adapt their teaching to their hearers, and all lead to Buddhahood. The Buddha explains this through parables, among them the burning house, in which a father coaxes his children out with the promise of toy carts and gives them one large cart instead. The second is that the Buddha's lifespan is immeasurable. In chapter 16 he says he attained Buddhahood countless aeons ago and only appears to pass into final nirvāṇa, as the doctor in a parable feigns death to bring his sons to take medicine.</p><p>The text also says that all beings can become Buddhas. Chapter 11 shows a jewelled stupa rising from the earth with the Buddha Prabhūtaratna inside, and in chapter 12 the Dragon King's daughter becomes a Buddha. Chapter 25 praises <a class="enc-link" href="/encyclopedia/avalokitesvara">Avalokiteśvara</a>, who hears the cries of the world.</p></div>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <div class="profile-section-body"><p>According to Lopez, the general scholarly consensus is that the sūtra took shape in four phases. The first layer is chapters 2 to 9, which Seishi Karashima thinks began as verses transmitted orally in a <a class="enc-link" href="/encyclopedia/prakrit">Prakrit</a> dialect; he assigns the prose of the same chapters to a second phase. In Lopez's account the third phase added chapter 1 and chapters 10 to 22, except chapter 12, and the fourth added chapters 23 to 27 and the <a class="enc-link" href="/encyclopedia/devadatta">Devadatta</a> chapter, with chapter 28 later still. Karashima divides the later layers differently.</p><p>Stephen F. Teiser and Jacqueline Stone note a consensus about the stages but not about their dates. Yoisho Tamura argues that chapters 2 to 9 were completed around 50 CE, chapters 10 to 21 added around 100 CE, and a third stage placed around 150 CE. In the <a class="enc-link" href="/encyclopedia/sanskrit">Sanskrit</a> versions and the alternative Chinese translation chapter 22 is the last; Shioiri suggests that an earlier version ended there and that chapters 23 to 28 were inserted later.</p><p>Different versions divide the text differently, and the chapter summary used by scholars follows Kumārajīva's expanded Chinese version, the most widely translated.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/nichiren"><img src="/images/encyclopedia/nichiren.jpg" alt="Nichiren" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/nichiren">Nichiren</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Nichiren_Daishonin_Hakii_Portrait.jpg" target="_blank" rel="noopener">Fujiwara-no Chikayasu, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>In <a class="enc-link" href="/encyclopedia/india">India</a> the One Vehicle was received unevenly. The Madhyamaka school embraced it, while Yogācāra thinkers read the sūtra as provisional, holding that when the Buddha called the Buddha vehicle the one vehicle he meant that it was the supreme vehicle. According to Paramārtha (499 to 569 CE) there were over fifty Indian commentaries; only one survives, in Chinese, and it is attributed to Vasubandhu, though scholars question this.</p><p>In <a class="enc-link" href="/encyclopedia/china">China</a>, Daosheng (355 to 434) wrote the oldest surviving commentary, and Daoxuan (596 to 667) called it the most important sūtra in China. Zhiyi (538 to 597), a patriarch of the Tiantai school, divided it into a trace teaching and a fundamental teaching, and wrote the Profound Meaning of the Lotus Sūtra and the Words and Phrases of the Lotus Sūtra. In <a class="enc-link" href="/encyclopedia/japan">Japan</a>, <a class="enc-link" href="/encyclopedia/saicho">Saichō</a> (767 to 822) brought Tiantai as the <a class="enc-link" href="/encyclopedia/tendai">Tendai</a> school. <a class="enc-link" href="/encyclopedia/nichiren">Nichiren</a> (1222 to 1282) held that the title is the essence of the sūtra and taught the chanting of the daimoku, Namu Myōhō Renge Kyō. He judged other schools mistaken, and his debates led to persecution. <a class="enc-link" href="/encyclopedia/dogen">Dōgen</a> (1200 to 1253) wrote that all other sūtras are its servants.</p><p>Jacqueline Stone and Stephen Teiser write that it is perhaps no exaggeration to say it has been the most influential Buddhist scripture in <a class="enc-link" href="/encyclopedia/east-asia">East Asia</a>.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/dunhuang"><img src="/images/encyclopedia/dunhuang.jpg" alt="Dunhuang" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/dunhuang">Dunhuang</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Jiucenglou_of_Mogao_Caves.jpg" target="_blank" rel="noopener">慕尼黑啤酒, CC BY-SA 3.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Three Chinese translations survive. Dharmarakṣa's team translated it at <a class="enc-link" href="/encyclopedia/changan">Chang'an</a> in 286 CE, during the Western Jin. Kumārajīva's team produced a version in seven fascicles in 406 CE, which superseded it and became the standard translation in East Asian <a class="enc-link" href="/encyclopedia/buddhism">Buddhism</a>; according to Jean-Noël Robert he relied heavily on the earlier one. His version lacked the <a class="enc-link" href="/encyclopedia/devadatta">Devadatta</a> chapter, which Dharmarakṣa's had. The third, the Supplemented Lotus Sūtra of the Wonderful <a class="enc-link" href="/encyclopedia/dharma">Dharma</a> (601 CE), by Jñānagupta and Dharmagupta, is a revision of Kumārajīva's text that restored the Devadatta chapter, various verses and the end of chapter 25. Those elements were later added back to Kumārajīva's text.</p><p>In <a class="enc-link" href="/encyclopedia/china">China</a> the core sūtra was traditionally compiled with two others, the Innumerable Meanings Sūtra and the Samantabhadra Meditation Sūtra, as the Threefold Lotus Sūtra. An Indian version was translated into Tibetan in the reign of King <a class="enc-link" href="/encyclopedia/ralpachen">Ralpachen</a> (r. 815 to 838), and it most closely matches the Chinese version of Jñānagupta and Dharmagupta and the Nepalese <a class="enc-link" href="/encyclopedia/sanskrit">Sanskrit</a> version. A thousand copies of the text were sealed in the <a class="enc-link" href="/encyclopedia/dunhuang">Dunhuang</a> caves in the 11th century. The Chinese text has also been translated into Uighur, Tangut and, more recently, colloquial Chinese, Japanese, Vietnamese and Korean.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/bodhisattva"><img src="/images/encyclopedia/bodhisattva.jpg" alt="Bodhisattva" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/bodhisattva">Bodhisattva</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Plaosan_Bodhisattva_02.jpg" target="_blank" rel="noopener">Gunawan Kartapranata, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Practice centred on the sūtra itself: receiving, reading, reciting, copying, explaining and honouring it. Memorising it became a requirement for monastic ordination at various points in Chinese history, and Huixiang's Accounts of the Propagation of the Lotus Sūtra, from about the 7th century, belongs to a popular genre of miracle stories. In the 8th century the Japanese emperor established a network of provincial nunneries, the Temples for the Eradication of Sins through the Lotus, to protect the royal family and the state. Chapter 25 fed devotion to Guanyin, while the self-immolation of <a class="enc-link" href="/encyclopedia/bodhisattva">Bodhisattva</a> Medicine King in chapter 23 inspired a controversial tradition of burning parts of the body.</p><p>The scene of Shakyamuni and Prabhūtaratna seated together became, in the fifth century, arguably the most popular theme of Chinese Buddhist art, and the sūtra figures in <a class="enc-link" href="/encyclopedia/the-tale-of-genji">The Tale of Genji</a> and The Dream of the Red Chamber. The Japanese writer Kenji Miyazawa devoted himself to it. In the West, Eugene Burnouf completed a French translation in 1839, published in 1852; an English version of one chapter appeared in 1844, and Hendrik Kern's full translation in 1884. Modern groups such as Soka Gakkai, which takes an exclusivist approach, and Risshō Kōsei Kai, which is inclusive and ecumenical, carry it worldwide.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Lotus Sūtra is a Mahāyāna scripture of unknown Indian authorship, composed in phases from about the 1st century CE. It teaches one path to Buddhahood and a Buddha of immeasurable life, and became the main text of the Tiantai, <a class="enc-link" href="/encyclopedia/tendai">Tendai</a> and <a class="enc-link" href="/encyclopedia/nichiren">Nichiren</a> schools.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="lotus-sutra"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Kumārajīva's team completes the translation that becomes the standard one in East Asian Buddhism","o":["406","1603","601","286"],"a":0,"w":"406: Kumārajīva's team completes the translation that becomes the standard one in East Asian Buddhism."},{"p":"Which came first?","q":"","o":["Kumārajīva's team completes the translation that becomes the standard one in East Asian Buddhism","Jñānagupta and Dharmagupta translate the Supplemented Lotus Sūtra, a revision of Kumārajīva's text"],"a":0,"w":"406: Kumārajīva's team completes the translation that becomes the standard one in East Asian Buddhism · 601: Jñānagupta and Dharmagupta translate the Supplemented Lotus Sūtra, a revision of Kumārajīva's text."},{"p":"In which year?","q":"Matteo Ricci mentions the sūtra and denounces its teaching, one of the first mentions by a westerner","o":["286","406","1884","1603"],"a":3,"w":"1603: Matteo Ricci mentions the sūtra and denounces its teaching, one of the first mentions by a westerner."},{"p":"Which came first?","q":"","o":["Matteo Ricci mentions the sūtra and denounces its teaching, one of the first mentions by a westerner","Dharmarakṣa's team completes the first Chinese translation at Chang'an"],"a":1,"w":"1603: Matteo Ricci mentions the sūtra and denounces its teaching, one of the first mentions by a westerner · 286: Dharmarakṣa's team completes the first Chinese translation at Chang'an."},{"p":"In which year?","q":"Jñānagupta and Dharmagupta translate the Supplemented Lotus Sūtra, a revision of Kumārajīva's text","o":["1603","286","1884","601"],"a":3,"w":"601: Jñānagupta and Dharmagupta translate the Supplemented Lotus Sūtra, a revision of Kumārajīva's text."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Donald Lopez, The Lotus Sutra: A Biography (Princeton University Press, 2016)</li>
+        <li>Donald S. Lopez, Two Buddhas Seated Side by Side: A Guide to the Lotus Sūtra (Princeton University Press, 2019)</li>
+        <li>Leon Hurvitz, Scripture of the Lotus Blossom of the Fine Dharma: The Lotus Sutra (Columbia University Press, 1976)</li>
+        <li>Gene Reeves, The Lotus Sutra: A Contemporary Translation of a Buddhist Classic (Wisdom Publications, 2008)</li>
+        <li>Tsugunari Kubo, The Lotus Sutra (Numata Center for Buddhist Translation and Research, 2007)</li>
+        <li>Hendrik Kern, Saddharma Pundarîka or the Lotus of the True Law, Sacred Books of the East, Vol. XXI (Clarendon Press, 1884)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/new-testament"><img src="/logos/thumbs/New%20Testament.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">New Testament</span><span class="related-card-dates">c. 52 CE – present</span></a><a class="related-card" href="/work/colosseum"><img src="/logos/thumbs/Colosseum.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Colosseum</span><span class="related-card-dates">c. 72 CE – present</span></a><a class="related-card" href="/work/aeneid"><img src="/logos/thumbs/Aeneid.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Aeneid</span><span class="related-card-dates">29 BCE – present</span></a><a class="related-card" href="/work/pantheon"><img src="/logos/thumbs/Pantheon.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Pantheon</span><span class="related-card-dates">c. 29 BCE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/pantheon"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Pantheon.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Pantheon</span><span class="related-card-dates">c. 29 BCE – present</span></a><a class="related-card" href="/work/new-testament"><span class="related-card-label">Later →</span><img src="/logos/thumbs/New%20Testament.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">New Testament</span><span class="related-card-dates">c. 52 CE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Lotus Sutra",slug="lotus-sutra",url="https://the-epoch-institute.org/work/lotus-sutra";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Lotus Sutra on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/lotus-sutra #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/lotus-sutra"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Lotus Sutra",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Lotus Sutra",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

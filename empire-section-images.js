@@ -5662,5 +5662,85 @@ var SECTION_IMAGES = {
     opponents:{slug:"origen",name:"Origen",img:"/images/encyclopedia/origen.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Origen3.jpg"},
     last:{slug:"pentecost",name:"Pentecost",img:"/images/encyclopedia/pentecost.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ingeborg_Psalter_02f_1200_(cropped).jpg"},
     legacy:{slug:"pope-pius-ix",name:"Pope Pius IX",img:"/images/encyclopedia/pope-pius-ix.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pius_IX,_by_Adolphe_Braun,_1875.jpg"}
+  },
+  "Hebrew Bible": {
+    origins:{slug:"hebrew",name:"Hebrew",img:"/images/encyclopedia/hebrew.jpg",artist:"Jb344tul",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:1_QIsa_example_of_damage_col_12-13.jpg"},
+    content:{slug:"torah",name:"Torah",img:"/images/encyclopedia/torah.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Тора._Нацыянальная_бібліятэка_Беларусі.jpg"},
+    making:{slug:"moses",name:"Moses",img:"/images/encyclopedia/moses.jpg",artist:"Rembrandt",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_079.jpg"},
+    reception:{slug:"talmud",name:"Talmud",img:"/images/encyclopedia/talmud.jpg",artist:"LGLou",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Talmud-Druck_von_Daniel_Bomberg_und_Ambrosius_Froben.jpg"},
+    survival:{slug:"dead-sea-scrolls",name:"Dead Sea Scrolls",img:"/images/encyclopedia/dead-sea-scrolls.jpg",artist:"Israel Museum",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Temple_Scroll.png"},
+    legacy:{slug:"bible",name:"Bible",img:"/images/encyclopedia/bible.jpg",artist:"NYC Wanderer (Kevin Eng)",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Gutenberg_Bible,_Lenox_Copy,_New_York_Public_Library,_2009._Pic_01.jpg"}
+  },
+  "New Testament": {
+    origins:{slug:"septuagint",name:"Septuagint",img:"/images/encyclopedia/septuagint.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Codex_Vaticanus_(1_Esdras_1-55_to_2-5)_(The_S.S._Teacher%27s_Edition-The_Holy_Bible).jpg"},
+    content:{slug:"paul-the-apostle",name:"Paul the Apostle",img:"/images/encyclopedia/paul-the-apostle.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Fresco_of_Saint_Paul_at_Ephesus.jpg"},
+    making:{slug:"koine-greek",name:"Koine Greek",img:"/images/encyclopedia/koine-greek.jpg",artist:"Gary Todd from Xinzheng, China",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Greek_Script_from_Rosetta_Stone_(36140196440).jpg"},
+    reception:{slug:"origen",name:"Origen",img:"/images/encyclopedia/origen.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Origen3.jpg"},
+    survival:{slug:"gospel-of-john",name:"Gospel of John",img:"/images/encyclopedia/gospel-of-john.jpg",artist:"RylandsImaging",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:JRL19060215_(cropped).jpg"},
+    legacy:{slug:"king-james-version",name:"King James Version",img:"/images/encyclopedia/king-james-version.jpg",artist:"Church of England",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:KJV-King-James-Version-Bible-first-edition-title-page-1611.jpg"}
+  },
+  "Quran": {
+    origins:{slug:"jabal-al-nour",name:"Jabal al-Nour",img:"/images/encyclopedia/jabal-al-nour.jpg",artist:"Kaliper1",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Jabbal_An-Nour_(2024).jpg"},
+    reception:{slug:"al-mamun",name:"al-Ma'mun",img:"/images/encyclopedia/al-mamun.jpg",artist:"Classical Numismatic Group; [1]",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Coin_of_the_Abbasid_Caliph_al-Ma%27mun.jpg"},
+    survival:{slug:"al-azhar",name:"Al-Azhar",img:"/images/encyclopedia/al-azhar.jpg",artist:"Wildoo78",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Mosqu%C3%A9e_Al-Azhar.jpg"},
+    legacy:{slug:"arabic-language",name:"Arabic language",img:"/images/encyclopedia/arabic-language.jpg",artist:"Aieman Khimji",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Learning_Arabic_calligraphy.jpg"}
+  },
+  "Rigveda": {
+    origins:{slug:"indra",name:"Indra",img:"/images/encyclopedia/indra.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Indra,_Chief_of_the_Gods_LACMA_M.69.13.4_(1_of_5).jpg"},
+    content:{slug:"brahmanas",name:"Brahmanas",img:"/images/encyclopedia/brahmanas.jpg",artist:"Ms Sarah Welch",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:1636_CE_Samaveda,_Sadvimsha_Brahmana_(Pa%C3%B1cavi%E1%B9%83%C5%9Babr%C4%81hma%E1%B9%87a_supplement),_Benares_Sanskrit_college,_Edward_Cowell_collection,_sample_i,_Sanskrit,_Devanagari.jpg"},
+    making:{slug:"vedas",name:"Vedas",img:"/images/encyclopedia/vedas.jpg",artist:"Ms Sarah Welch",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:1500-1200_BCE_Rigveda,_manuscript_page_sample_i,_Mandala_1,_Hymn_1_(Sukta_1),_Adhyaya_1,_lines_1.1.1_to_1.1.9,_Sanskrit,_Devanagari.jpg"},
+    reception:{slug:"sri-aurobindo",name:"Sri Aurobindo",img:"/images/encyclopedia/sri-aurobindo.jpg",artist:"Rudolf 1922",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sri_aurobindo.jpg"},
+    legacy:{slug:"bal-gangadhar-tilak",name:"Bal Gangadhar Tilak",img:"/images/encyclopedia/bal-gangadhar-tilak.jpg",artist:"Internet Archive Book Images",licence:"No restrictions",source:"https://commons.wikimedia.org/wiki/File:Young_India;_an_interpretation_and_a_history_of_the_nationalist_movement_from_within_(1916)_(14781987942).jpg"}
+  },
+  "Bhagavad Gita": {
+    origins:{slug:"mahabharata",name:"Mahabharata",img:"/images/encyclopedia/mahabharata.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kurukshetra.jpg"},
+    content:{slug:"krishna",name:"Krishna",img:"/images/encyclopedia/krishna.jpg",artist:"Miskin",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Krishna_Holds_Up_Mount_Govardhan_(MET_70694)_cropped.png"},
+    making:{slug:"ganesha",name:"Ganesha",img:"/images/encyclopedia/ganesha.jpg",artist:"anonymous",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ganesha_Basohli_miniature_circa_1730_Dubost_p73.jpg"},
+    reception:{slug:"b-r-ambedkar",name:"B. R. Ambedkar",img:"/images/encyclopedia/b-r-ambedkar.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Dr._Bhimrao_Ambedkar.jpg"},
+    survival:{slug:"warren-hastings",name:"Warren Hastings",img:"/images/encyclopedia/warren-hastings.jpg",artist:"Sir Joshua Reynolds",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Warren_Hastings_by_Sir_Joshua_Reynolds.jpg"},
+    legacy:{slug:"mahatma-gandhi",name:"Mahatma Gandhi",img:"/images/encyclopedia/mahatma-gandhi.jpg",artist:"Elliott & Fry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mahatma-Gandhi,_studio,_1931.jpg"}
+  },
+  "Pali Canon": {
+    origins:{slug:"gautama-buddha",name:"Gautama Buddha",img:"/images/encyclopedia/gautama-buddha.jpg",artist:"พระมหาเทวประภาส วชิรญาณเมธี (ผู้ถ่าย-ปล่อยสัญญาอนุญาตภาพให้นำไปใช้ได้เพื่อการศึกษาโดยอยู่ภา่ยใต้ cc-by-sa-3.0) …",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Buddha_in_Sarnath_Museum_(Dhammajak_Mutra).jpg"},
+    making:{slug:"ashoka",name:"Ashoka",img:"/images/encyclopedia/ashoka.jpg",artist:"Photo Dharma from Sadao, Thailand",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Ashoka%27s_visit_to_the_Ramagrama_stupa_Sanchi_Stupa_1_Southern_gateway.jpg"},
+    reception:{slug:"theravada-buddhism",name:"Theravada Buddhism",img:"/images/encyclopedia/theravada-buddhism.jpg",artist:"เทวประภาส มากคล้าย",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Wat_Khung_Taphao_salakabhatta_2009.jpg"},
+    legacy:{slug:"prajadhipok",name:"Prajadhipok",img:"/images/encyclopedia/prajadhipok.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:King_Prajadhipok_portrait_photograph.jpg"}
+  },
+  "Avesta": {
+    content:{slug:"fire-temple",name:"Fire temple",img:"/images/encyclopedia/fire-temple.jpg",artist:"Uploaded to Flickr by Adam Jones(Copied to Wikimedia by nagualdesign)",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Zoroastrian_Fire_Temple,_Yazd_(2).jpg"},
+    making:{slug:"khosrow-i",name:"Khosrow I",img:"/images/encyclopedia/khosrow-i.jpg",artist:"",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Plate_of_the_Sasanian_king_Khosrow_I_Anushirvan.jpg"},
+    reception:{slug:"parsis",name:"Parsis",img:"/images/encyclopedia/parsis.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Indian_-_Leaf_from_Bound_Collection_of_20_Miniatures_Depicting_Village_Life_-_Walters_35176H.jpg"}
+  },
+  "Guru Granth Sahib": {
+    origins:{slug:"guru-nanak",name:"Guru Nanak",img:"/images/encyclopedia/guru-nanak.jpg",artist:"Amritpal Singh Mann. Painted by Jaimal Singh Naqqash (1860–1916), Mehtab Singh Naqqash (1871–1940), and Hukum Singh.",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Mural_painting_of_Guru_Nanak_from_Gurdwara_Baba_Atal_Rai.jpg"},
+    content:{slug:"mul-mantar",name:"Mul Mantar",img:"/images/encyclopedia/mul-mantar.jpg",artist:"Ms Sarah Welch",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:17th_century_Mul_Mantar,_Guru_Arjan_handwriting,_Kartarpur_manuscript.jpg"},
+    making:{slug:"guru-arjan",name:"Guru Arjan",img:"/images/encyclopedia/guru-arjan.jpg",artist:"Family workshop of Purkhu of Kangra",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Guru_Arjan.jpg"},
+    reception:{slug:"guru-gobind-singh",name:"Guru Gobind Singh",img:"/images/encyclopedia/guru-gobind-singh.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Painting_of_Guru_Gobind_Singh,_found_within_the_Anandpuri_Hazuri_Bir_codex_of_the_Dasam_Granth,_ca.1690%27s%E2%80%931700%27s_(detail).jpg"},
+    legacy:{slug:"golden-temple",name:"Golden Temple",img:"/images/encyclopedia/golden-temple.jpg",artist:"Shagil Kannur",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:The_Golden_Temple_of_Amrithsar_7.jpg"}
+  },
+  "Talmud": {
+    origins:{slug:"torah",name:"Torah",img:"/images/encyclopedia/torah.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Тора._Нацыянальная_бібліятэка_Беларусі.jpg"},
+    content:{slug:"hebrew",name:"Hebrew",img:"/images/encyclopedia/hebrew.jpg",artist:"Jb344tul",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:1_QIsa_example_of_damage_col_12-13.jpg"},
+    reception:{slug:"ashkenazi-jews",name:"Ashkenazi Jews",img:"/images/encyclopedia/ashkenazi-jews.jpg",artist:"Maurycy Gottlieb",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Maurycy_Gottlieb_-_Jews_Praying_in_the_Synagogue_on_Yom_Kippur.jpg"},
+    survival:{slug:"vatican-library",name:"Vatican Library",img:"/images/encyclopedia/vatican-library.jpg",artist:"Melozzo da Forlì",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Melozzo_da_Forl%C3%AC_001.jpg"}
+  },
+  "Upanishads": {
+    origins:{slug:"vedas",name:"Vedas",img:"/images/encyclopedia/vedas.jpg",artist:"Ms Sarah Welch",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:1500-1200_BCE_Rigveda,_manuscript_page_sample_i,_Mandala_1,_Hymn_1_(Sukta_1),_Adhyaya_1,_lines_1.1.1_to_1.1.9,_Sanskrit,_Devanagari.jpg"},
+    content:{slug:"yoga",name:"Yoga",img:"/images/encyclopedia/yoga.jpg",artist:"Company School",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bharadwaja.jpg"},
+    reception:{slug:"ramanuja",name:"Ramanuja",img:"/images/encyclopedia/ramanuja.jpg",artist:"Todayindian",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Shri_Ramanujar_pics_2.jpg"},
+    legacy:{slug:"dara-shikoh",name:"Dara Shikoh",img:"/images/encyclopedia/dara-shikoh.jpg",artist:"Gurkan1526",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Dara-S.png"}
+  },
+  "Lotus Sutra": {
+    content:{slug:"avalokitesvara",name:"Avalokiteśvara",img:"/images/encyclopedia/avalokitesvara.jpg",artist:"Hyougushi",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Khasarpana_Lokesvara.jpg"},
+    reception:{slug:"nichiren",name:"Nichiren",img:"/images/encyclopedia/nichiren.jpg",artist:"Fujiwara-no Chikayasu",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Nichiren_Daishonin_Hakii_Portrait.jpg"},
+    survival:{slug:"dunhuang",name:"Dunhuang",img:"/images/encyclopedia/dunhuang.jpg",artist:"慕尼黑啤酒",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Jiucenglou_of_Mogao_Caves.jpg"},
+    legacy:{slug:"bodhisattva",name:"Bodhisattva",img:"/images/encyclopedia/bodhisattva.jpg",artist:"Gunawan Kartapranata",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Plaosan_Bodhisattva_02.jpg"}
+  },
+  "I Ching": {
+    origins:{slug:"duke-of-zhou",name:"Duke of Zhou",img:"/images/encyclopedia/duke-of-zhou.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Duke_of_Zhou.png"},
+    content:{slug:"king-wen-of-zhou",name:"King Wen of Zhou",img:"/images/encyclopedia/king-wen-of-zhou.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:King_Wen_of_Zhou_(cropped).jpg"},
+    making:{slug:"confucius",name:"Confucius",img:"/images/encyclopedia/confucius.jpg",artist:"Anonymous Chinese painter of the Western Han period",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Confucius,_fresco_from_a_Western_Han_tomb_of_Dongping_County,_Shandong_province,_China_(cropped).jpg"},
+    reception:{slug:"zhu-xi",name:"Zhu Xi",img:"/images/encyclopedia/zhu-xi.jpg",artist:"向史公哲曰",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%E5%94%AF%E4%B8%80%E5%8F%AF%E9%9D%A0%E7%9A%84%E6%9C%B1%E7%86%B9%E7%94%BB%E5%83%8F.jpg"},
+    legacy:{slug:"gottfried-wilhelm-leibniz",name:"Gottfried Wilhelm Leibniz",img:"/images/encyclopedia/gottfried-wilhelm-leibniz.jpg",artist:"Christoph Bernhard Francke",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Christoph_Bernhard_Francke_-_Bildnis_des_Philosophen_Leibniz_(ca._1695).jpg"}
   }
 };

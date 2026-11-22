@@ -1,0 +1,19 @@
+# Faiths Side by Side (/religions, scripts/tools/make-religions.js): the Great Lives and Great Works that belong to a
+# religion, by profile name, ";" between. religion <TAB> lives <TAB> works ("-" for none). A religion not listed has
+# neither. The tool stops on a name that is not a profile of that kind. The works are the texts the faith holds or
+# grew from; they are labelled "Great works", not "scriptures" (the Iliad is no scripture).
+Judaism	Abraham; Moses	Hebrew Bible; Talmud; Dead Sea Scrolls
+Christianity	Jesus; Mary, mother of Jesus; Paul the Apostle	Hebrew Bible; New Testament
+Islam	Muhammad; Ali ibn Abi Talib	Quran
+Hinduism	-	Rigveda; Upanishads; Bhagavad Gita; Mahabharata; Ramayana
+Buddhism	The Buddha; Ashoka	Pali Canon; Lotus Sutra
+Jainism	Mahavira	-
+Sikhism	Guru Nanak	Guru Granth Sahib
+Zoroastrianism	Zoroaster	Avesta
+Daoism	Laozi	Tao Te Ching
+Confucianism	Confucius	Analects; I Ching
+Chinese folk religion	-	I Ching
+Ancient Egyptian religion	-	Book of the Dead
+Ancient Greek religion	-	Iliad; Odyssey
+Mesopotamian religion	-	Epic of Gilgamesh
+Mesoamerican religion	-	Popol Vuh

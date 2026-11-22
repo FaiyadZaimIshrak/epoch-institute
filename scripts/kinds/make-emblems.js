@@ -67,7 +67,7 @@ const EMBLEMS = [
   ['Laozi', '老子', 'serif-cjk', 150], ['Zoroaster', 'Z'],
   // sacred texts (works3, 22 Nov 2026): a word or sign of each text's own script; the Pali Canon and the Avesta have a
   // letter (Pali is written in many scripts, and no system font draws Avestan)
-  ['Hebrew Bible', 'תנ״ך', '"Times New Roman", David, serif', 150], ['New Testament', 'ΚΔ'], ['Quran', 'القرآن', '"Segoe UI", Tahoma, sans-serif', 130],
+  ['Hebrew Bible', 'תנ״ך', '"Times New Roman", David, serif', 150], ['New Testament', 'ΚΔ', null, 170], ['Quran', 'القرآن', '"Segoe UI", Tahoma, sans-serif', 130],
   ['Rigveda', 'ऋ', 'Nirmala UI, Mangal, sans-serif', 230], ['Bhagavad Gita', 'गीता', 'Nirmala UI, Mangal, sans-serif', 150],
   ['Pali Canon', 'P'], ['Avesta', 'A'], ['Guru Granth Sahib', 'ਗ੍ਰੰਥ', 'Nirmala UI, Raavi, sans-serif', 140],
   ['Talmud', 'תלמוד', '"Times New Roman", David, serif', 130], ['Upanishads', 'उ', 'Nirmala UI, Mangal, sans-serif', 230],

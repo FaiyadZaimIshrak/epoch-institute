@@ -530,8 +530,8 @@ function searchThumb(r) {
   if (r.src === 's' && SEARCH_STATES[r.i][4]) return '/images/states/thumbs/' + SEARCH_STATES[r.i][0] + '.jpg';
   return '';
 }
-var SEARCH_INDEX_SRC = '/search-index.js?v=3630ca09af';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
-var SEARCH_PAGES_SRC = '/search-pages.js?v=7d49289a8b';
+var SEARCH_INDEX_SRC = '/search-index.js?v=0fb74f708c';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
+var SEARCH_PAGES_SRC = '/search-pages.js?v=bcacd66db5';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
 var searchLoading = null, searchReady = false;
@@ -731,7 +731,7 @@ function initNav(activePage) {
         ['years', '/years/', 'Year by Year', 'What happened in any year'], ['', MONTH_URL, 'This Month in History', 'Its events, festivals and people'], ['', '/today', 'Today at the Institute', 'The day in one place'], ['', '/now', 'History Now', 'In the news, coming anniversaries'], ['countries', '/countries/', 'Country Histories', 'Each land through time'],
         ['race', '/race', 'Rise and Fall Race', 'Empires racing through the years'], ['explorer', '/explorer', 'Power Curves', 'Rise and fall compared']]]]],
     ['themes', 'Themes', [
-      ['Societies and ideas', [['people', '/people/', 'People', 'Who lived when'], ['', '/profiles?kind=life', 'Great Lives', 'Sixty lives told in full', 1], ['dynasties', '/encyclopedia/dynasties', 'Ruling Houses', 'Dynasties and their members'], ['', '/encyclopedia/quotations', 'Quotations', 'In their own words, with sources'], ['governance', '/governance', 'Forms of Government', 'Who should rule, and how'], ['societies', '/societies/', 'Social Ladders', 'From emperor to enslaved'],
+      ['Societies and ideas', [['people', '/people/', 'People', 'Who lived when'], ['', '/profiles?kind=life', 'Great Lives', 'Rulers, thinkers and prophets in full', 1], ['religions', '/religions', 'Faiths Side by Side', 'Thirty religions in one table'], ['dynasties', '/encyclopedia/dynasties', 'Ruling Houses', 'Dynasties and their members'], ['', '/encyclopedia/quotations', 'Quotations', 'In their own words, with sources'], ['governance', '/governance', 'Forms of Government', 'Who should rule, and how'], ['societies', '/societies/', 'Social Ladders', 'From emperor to enslaved'],
         ['inventions', '/inventions', 'Inventions Tree', 'What led to what, and who made it first'], ['speeches', '/speeches/', 'Great Speeches', 'The words that moved history'],
         ['songs', '/songs/', 'Songs in History', 'Hymns, anthems and folk songs handed down']]],
       ['Read and discover', [['paths', '/paths/', 'Reading Paths', 'Themed routes through history', 1], ['series', '/research-series', 'Research Series', 'Essays from the Institute'],
@@ -745,7 +745,7 @@ function initNav(activePage) {
     ['teachers', '/teachers/', 'Teachers&#8217; Corner'], ['community', '/community', 'Community'], ['', '/community#submit', 'Submit an Article'],
     ['contributors', '/contributors', 'Write for Us'], ['', '/#newsletter-section', 'Newsletter'], ['support', '/support', 'Support the Institute'], ['contact', '/contact', 'Contact']];
   // New tags in the menus (Nov 2026): address -> the day the tag comes off. A release adds a line here.
-  const NEW_UNTIL = { '/discover': '2026-12-21', '/past-games': '2026-12-16', '/profiles?kind=life': '2026-12-14', '/encyclopedia/quotations': '2026-12-12', '/today': '2026-12-12', '/now': '2026-12-10', '/advent': '2026-12-08', '/today-in-history/#birthday': '2026-12-01' };
+  const NEW_UNTIL = { '/religions': '2026-12-22', '/discover': '2026-12-21', '/past-games': '2026-12-16', '/profiles?kind=life': '2026-12-14', '/encyclopedia/quotations': '2026-12-12', '/today': '2026-12-12', '/now': '2026-12-10', '/advent': '2026-12-08', '/today-in-history/#birthday': '2026-12-01' };
   const newTag = h => NEW_UNTIL[h] && Date.now() < Date.parse(NEW_UNTIL[h]) ? '<i class="new-tag">New</i>' : '';
   const inMenu = m => m[2].some(c => c[1].some(x => x[0] === activePage));
   const moreActive = MORE.some(x => x[0] && x[0] === activePage);
@@ -867,6 +867,7 @@ function initNav(activePage) {
         <a class="footer-link" href="/advent">Advent Calendar</a>
         <a class="footer-link" href="/start">Find Your Way In</a>
         <a class="footer-link" href="/compare">Compare Two Profiles</a>
+        <a class="footer-link" href="/religions">Faiths Side by Side</a>
       </div>
       <div class="footer-col">
         <span class="footer-col-title">Institute</span>

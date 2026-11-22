@@ -39410,7 +39410,13 @@
      0
     ]
    ],
-   "wave": "d1"
+   "wave": "d1",
+   "img": "/images/encyclopedia/pali-canon.jpg",
+   "credit": {
+    "artist": "Unknown author",
+    "licence": "CC BY-SA 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Tipitaka1.jpg"
+   }
   },
   {
    "slug": "roland",
@@ -45455,6 +45461,43 @@
     "licence": "Public domain",
     "source": "https://commons.wikimedia.org/wiki/File:仙佛奇蹤_卷一_尹喜.png"
    }
+  },
+  {
+   "slug": "i-ching",
+   "name": "I Ching",
+   "type": "work",
+   "subtype": "text",
+   "dates": "10th–4th century BCE",
+   "desc": "The I Ching, or Book of Changes, began as a Western Zhou divination manual of 64 hexagrams. With the Ten Wings added, it became one of the Five Classics in 136 BCE, and it has been read for centuries as divination, moral guidance and philosophy across East Asia and, since the 18th century, in the West.",
+   "links": [
+    [
+     "I Ching",
+     0
+    ],
+    [
+     "Book of Changes",
+     0
+    ],
+    [
+     "Classic of Changes",
+     0
+    ],
+    [
+     "Zhou yi",
+     0
+    ],
+    [
+     "Zhouyi",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/i-ching.jpg",
+   "credit": {
+    "artist": "Song era print artist",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:I_Ching_Song_Dynasty_print.jpg"
+   }
   }
  ],
  "patterns": [
@@ -49794,6 +49837,18 @@
    "Zhang Lu",
    "Public domain",
    "https://commons.wikimedia.org/wiki/File:Zhang_Lu-Laozi_Riding_an_Ox_(cropped).jpg"
+  ],
+  [
+   "i-ching",
+   "Song era print artist",
+   "Public domain",
+   "https://commons.wikimedia.org/wiki/File:I_Ching_Song_Dynasty_print.jpg"
+  ],
+  [
+   "pali-canon",
+   "Unknown author",
+   "CC BY-SA 2.5",
+   "https://commons.wikimedia.org/wiki/File:Tipitaka1.jpg"
   ]
  ],
  "fixes": [
@@ -51172,6 +51227,39 @@
      "summary"
     ]
    }
+  ],
+  [
+   "i-ching",
+   "Yijing",
+   0,
+   {
+    "Confucianism": [
+     "texts"
+    ],
+    "Self-Strengthening Movement": [
+     "background"
+    ],
+    "Chinese folk religion": [
+     "origins",
+     "summary"
+    ],
+    "Eastern Jin": [
+     "socioeconomy"
+    ]
+   }
+  ],
+  [
+   "karashahr",
+   "Agni",
+   0,
+   {
+    "Tocharians": [
+     "society",
+     "exchange",
+     "legacy",
+     "summary"
+    ]
+   }
   ]
  ],
  "drop": [
@@ -51248,6 +51336,16 @@
   [
    "ellice-islands",
    "Tuvalu",
+   0
+  ],
+  [
+   "karashahr",
+   "Agni",
+   0
+  ],
+  [
+   "hummay",
+   "Hume",
    0
   ]
  ],

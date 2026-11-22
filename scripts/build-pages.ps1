@@ -4831,6 +4831,7 @@ $HANDP = @(@('World Atlas', '/atlas', 'atlas|map|maps|world map|globe|historical
   @('Support the Institute', '/support', 'support|support the institute|donate|donation|ko-fi|friends of the institute|help the institute'),
   @('Privacy', '/privacy', 'privacy|cookies|cookie settings|data|gdpr|analytics'),
   @('Terms and Licences', '/terms', 'terms|licence|license|licences|copyright|reuse|cc by-sa|attribution'),
+  @('Faiths Side by Side', '/religions', 'religions compared|compare religions|world religions|faiths side by side|founders of religions|scriptures|holy books|sacred texts'),
   @('How the Institute Works', '/method', 'method|methodology|sources|editorial policy|how we work|fact checking|reliability|ai'),
   @('Corrections', '/corrections', 'corrections|errata|mistakes|errors|fact check'),
   @('Social Ladders', '/societies/', 'social ladders|social hierarchy|social hierarchies|social classes|social class|social structure|class system|caste system|feudal system|feudal pyramid|born into history|order the ranks'),
@@ -5074,12 +5075,16 @@ if ($LASTEXITCODE) { throw 'Born Where?: scripts/tools/make-born-game.js failed 
 # Discover (/discover): history in pictures, data/discover.json and the hand page, written by scripts/tools/make-discover.js
 foreach ($dcL in (& $songExe "$PSScriptRoot\tools\make-discover.js")) { Say $dcL }
 if ($LASTEXITCODE) { throw 'Discover: scripts/tools/make-discover.js failed (above)' }
+# Faiths Side by Side (/religions): every religion's facts in one table, written by scripts/tools/make-religions.js
+foreach ($rlL in (& $songExe "$PSScriptRoot\tools\make-religions.js")) { Say $rlL }
+if ($LASTEXITCODE) { throw 'Faiths Side by Side: scripts/tools/make-religions.js failed (above)' }
+
 # Today at the Institute (/today): the day's things in one place, written by scripts/tools/make-today.js
 foreach ($tdL in (& $songExe "$PSScriptRoot\tools\make-today.js")) { Say $tdL }
 if ($LASTEXITCODE) { throw 'Today: scripts/tools/make-today.js failed (above)' }
 
 # sitemaps: hand-written pages and profiles too (lastmod from their content)
-foreach ($p in @('/', '/discover', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/write', '/faiths', '/flashcards', '/race', '/inventions', '/governance', '/compare', '/privacy', '/terms', '/method', '/corrections', '/support', '/advent', '/now', '/encyclopedia/', '/state/', '/today-in-history/')) {
+foreach ($p in @('/', '/discover', '/about', '/research', '/research-series', '/profiles', '/community', '/contributors', '/dataset', '/explorer', '/connections', '/atlas', '/quiz', '/contact', '/start', '/games', '/kids', '/timeline', '/write', '/faiths', '/flashcards', '/race', '/inventions', '/governance', '/compare', '/religions', '/privacy', '/terms', '/method', '/corrections', '/support', '/advent', '/now', '/encyclopedia/', '/state/', '/today-in-history/')) {
   $file = if ($p -eq '/') { "$Repo\index" } elseif ($p.EndsWith('/')) { Join-Path $Repo ($p.Trim('/') + '\index') } else { Join-Path $Repo $p.TrimStart('/') }
   [void](Stamp $p ([IO.File]::ReadAllText($file, $U8)))
 }
