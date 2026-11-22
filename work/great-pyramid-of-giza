@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -121,6 +121,18 @@
       <div class="ty" data-ty="great-pyramid-of-giza"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The ScanPyramids project detects a large cavity above the Grand Gallery, the “Big Void”, whose purpose is unknown","o":["1356","1837","2017","1435"],"a":2,"w":"2017: The ScanPyramids project detects a large cavity above the Grand Gallery, the “Big Void”, whose purpose is unknown."},{"p":"Which came first?","q":"","o":["Cyriacus of Ancona visits Giza and refutes the medieval belief that the pyramids were the granaries of Joseph","Kamal el-Mallakh finds a sealed boat pit at the south foot of the pyramid holding the dismantled Khufu ship"],"a":0,"w":"1435: Cyriacus of Ancona visits Giza and refutes the medieval belief that the pyramids were the granaries of Joseph · 1954: Kamal el-Mallakh finds a sealed boat pit at the south foot of the pyramid holding the dismantled Khufu ship."},{"p":"In which year?","q":"Kamal el-Mallakh finds a sealed boat pit at the south foot of the pyramid holding the dismantled Khufu ship","o":["1954","1356","2017","1837"],"a":0,"w":"1954: Kamal el-Mallakh finds a sealed boat pit at the south foot of the pyramid holding the dismantled Khufu ship."},{"p":"Which came first?","q":"","o":["Kamal el-Mallakh finds a sealed boat pit at the south foot of the pyramid holding the dismantled Khufu ship","The ScanPyramids project detects a large cavity above the Grand Gallery, the “Big Void”, whose purpose is unknown"],"a":0,"w":"1954: Kamal el-Mallakh finds a sealed boat pit at the south foot of the pyramid holding the dismantled Khufu ship · 2017: The ScanPyramids project detects a large cavity above the Grand Gallery, the “Big Void”, whose purpose is unknown."},{"p":"In which year?","q":"Amid earthquakes in northern Egypt, casing stones stripped from the pyramid are said to have been carted away for use in nearby Cairo","o":["1954","1356","2017","1837"],"a":1,"w":"1356: Amid earthquakes in northern Egypt, casing stones stripped from the pyramid are said to have been carted away for use in nearby Cairo."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Mark Lehner, Giza and the Pyramids: The Definitive History (University of Chicago Press, 2017)</li>
+        <li>Mark Lehner, The Complete Pyramids (London: Thames and Hudson, 1997)</li>
+        <li>I.E.S. Edwards, The Pyramids of Egypt (Max Parrish, 1986)</li>
+        <li>John Romer, The Great Pyramid: Ancient Egypt Revisited (Cambridge University Press, 2007)</li>
+        <li>Miroslav Verner, The Pyramids: Their Archaeology and History (Atlantic Books, 2003)</li>
+        <li>William Matthew Flinders Petrie, The Pyramids and Temples of Gizeh (Field &amp; Tuer, 1883)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other great works</p>

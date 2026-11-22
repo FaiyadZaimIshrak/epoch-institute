@@ -15,7 +15,9 @@ function fields(t) { const f = {}; let d = 0, cur = ''; const parts = []; for (l
     if (!l.trim() || l[0] === '#') continue; const [slug, title] = l.split('\t');
     let wt = '';
     for (let i = 0; i < 5 && !wt; i++) { try { const r = await fetch('https://en.wikipedia.org/w/api.php?action=parse&format=json&redirects=1&prop=wikitext&page=' + encodeURIComponent(title), { headers: UA }); if (r.ok) { const j = await r.json(); wt = (j.parse && j.parse.wikitext && j.parse.wikitext['*']) || ''; } } catch (e) {} if (!wt) await sleep(8000 * (i + 1)); }
-    const secs = wt.split(/\n(?==+[^=\n]+=+\s*\n)/).filter(s => /^=+\s*(Further reading|Bibliography|Sources|Works cited|General sources|Secondary sources|Biographies|Cited sources|Books|General and cited sources|Modern sources|General references)\b/i.test(s) || /^=+\s*(Biograph|Studies|Scholarly|Monographs|General)/i.test(s));
+    const chunks = wt.split(/\n(?==+[^=\n]+=+\s*\n)/), isBib = s => /^=+\s*(Further reading|Bibliography|Sources|Works cited|General sources|Secondary sources|Biographies|Cited sources|Books|General and cited sources|Modern sources|General references)\b/i.test(s) || /^=+\s*(Biograph|Studies|Scholarly|Monographs|General)/i.test(s), lvl = s => (s.match(/^=+/) || [''])[0].length;
+    const secs = []; for (let k = 0; k < chunks.length; k++) if (isBib(chunks[k])) { secs.push(chunks[k]); const d = lvl(chunks[k]);   // with its sub-sections
+      while (k + 1 < chunks.length && lvl(chunks[k + 1]) > d) secs.push(chunks[++k]); };
     const refs = [], seen = new Set();
     for (const s of secs) for (const t of templates(s)) {
       const f = fields(t); if (!/^(cite book|citation|cite encyclopedia)$/.test(f._name) && !/^cite book/.test(f._name)) continue;
@@ -23,6 +25,15 @@ function fields(t) { const f = {}; let d = 0, cur = ''; const parts = []; for (l
       const title2 = clean(f.title), pub = clean(f.publisher), year = (clean(f.year || f.date || '').match(/\d{4}/) || [])[0];
       if (!auth || !title2 || !pub || !year || f.chapter || f.contribution || f.journal) continue;
       const line = auth + ', ' + title2 + ' (' + pub + ', ' + year + ')'; if (seen.has(title2) || line.length > 190) continue; seen.add(title2); refs.push(line);
+    }
+    // no templates: a bibliography typed as plain lines, "* Last, First. ''Title''. Place: Publisher, year." (22 Nov 2026:
+    // Marcus Aurelius, Winston Churchill); a line whose title is not the first thing after the author is a chapter or an article
+    if (!refs.length) for (const s of secs) for (const raw of s.split('\n')) {
+      if (!/^\*\s*\S/.test(raw)) continue; const l = raw.replace(/\{\{[^{}]*\}\}/g, '').replace(/\[https?:\S+\s+([^\]]*)\]/g, '$1').replace(/\[\[(?:[^\]|]*\|)?([^\]]*)\]\]/g, '$1');
+      const m = l.match(/^\*\s*([^']{3,90}?)\.?\s+''([^']{4,160})''[^.]*\.\s+(?:[^:.]{2,40}:\s*)?([^,.:]{3,70}),\s*(?:[^.]*?\b)?(1[5-9]\d\d|20\d\d)\b/); if (!m) continue;
+      let auth = m[1].trim().replace(/\s*\((?:ed|eds|trans)\.?\)$/i, ''); if (/[;&]| and /.test(auth)) auth = auth.split(/;| and |&/)[0].trim();
+      const c = auth.split(',').map(x => x.trim()); if (c.length === 2 && c[1]) auth = c[1].replace(/\.$/, '') + (/\b[A-Z]$/.test(c[1].replace(/\.$/, '')) ? '.' : '') + ' ' + c[0];
+      const title2 = clean(m[2]), line = auth + ', ' + title2 + ' (' + m[3].trim() + ', ' + m[4] + ')'; if (seen.has(title2) || line.length > 190 || /^\d|^'|^"/.test(auth)) continue; seen.add(title2); refs.push(line);
     }
     out[slug] = refs.slice(0, MAX); console.log(slug.padEnd(22) + refs.length + ' books' + (secs.length ? '' : ' (no such section)')); await sleep(2000);
   }

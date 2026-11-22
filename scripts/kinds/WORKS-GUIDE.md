@@ -17,6 +17,25 @@ sculptures, looted manuscripts) are told as the article tells them, each side's 
 people always knew is never "discovered" by a later visitor: write "brought to international attention" or what the
 article supports. Use the names the article uses, in full at first mention.
 
+## Sacred texts (round of 22 November 2026: the Hebrew Bible, the Qur'an, the Rigveda, the Pali Canon …)
+These are read by more people than any other page of the kind, and by believers and non-believers alike. So:
+- **Two voices, each attributed, never merged.** What the tradition holds ("Muslims hold that the Qur'an was revealed
+  to Muhammad by God through the angel Gabriel", "Jewish tradition ascribes the Torah to Moses") and what scholars of
+  the text conclude ("most scholars date its final form to …", "textual critics regard … as later additions"). Never
+  state a revelation, a miracle or a divine author as plain fact, and never deny one: report who holds what.
+- **Dating and authorship exactly as the article hedges them.** Where it gives a range or a dispute, give the range
+  or the dispute. `start` is where the article places the oldest part's composition; `circa` true. `end` is null:
+  these texts are read today.
+- **No ranking.** No text is called the oldest, greatest, truest or most influential of scriptures unless the article
+  says so and attributes it; never compare one faith's scripture with another's to the credit of either.
+- **Names and terms as the faith uses them**, glossed once in plain words (surah, sutta, mandala, tractate). Honorifics
+  that are devotional ("the Holy", "the Noble", "peace be upon him") are left out, as in any encyclopaedia.
+- **"reception" and "survival" carry the scholarship**: canonisation, councils, recensions, manuscripts (the oldest
+  ones named with their dates), translations, commentaries, textual criticism, and controversies, each as the article
+  tells it. Violence done in a text's name, or to its copies and readers, is told in the article's measure, attributed.
+- **Quotations** only if the article quotes the passage, in the translation the article gives, and short.
+- **No depiction of Muhammad** is described; the Qur'an's pictures will be manuscripts and calligraphy.
+
 ## The file (out/<slug>.json), UTF-8
 ```
 {

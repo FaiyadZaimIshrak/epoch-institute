@@ -18,14 +18,38 @@
  ],
  "dyk": "Barred from international competition by sanctions, the FR Yugoslav basketball team returned at the 1995 EuroBasket in Athens and won it at its first tournament, beating Lithuania 96–90 in the final.",
  "ev": [
-  ["1992", "The constitution of 27 April establishes the Federal Republic of Yugoslavia as a federation of Serbia and Montenegro"],
-  ["1992–1994", "Under international sanctions the Yugoslav dinar suffers hyperinflation reaching 313 million percent"],
-  ["1995", "Slobodan Milošević negotiates the Dayton Agreement, which ends the Yugoslav Wars and lifts the sanctions"],
-  ["1997", "Milošević, his last legal term as President of Serbia over, becomes President of Yugoslavia"],
-  ["1998", "The Kosovo War begins between Yugoslav forces and the Kosovo Liberation Army"],
-  ["1999", "NATO bombs Yugoslavia, and Security Council Resolution 1244 places Kosovo under a United Nations mission"],
-  ["2000", "The Bulldozer Revolution removes Milošević, and the country joins the United Nations as a new member"],
-  ["2003", "The Constitutional Charter turns the federation into the State Union of Serbia and Montenegro"]
+  [
+   "1992",
+   "The constitution of 27 April establishes the Federal Republic of Yugoslavia as a federation of Serbia and Montenegro"
+  ],
+  [
+   "1992–1994",
+   "Under international sanctions the Yugoslav dinar suffers hyperinflation reaching 313 million percent"
+  ],
+  [
+   "1995",
+   "Slobodan Milošević negotiates the Dayton Agreement, which ends the Yugoslav Wars and lifts the sanctions"
+  ],
+  [
+   "1997",
+   "Milošević, his last legal term as President of Serbia over, becomes President of Yugoslavia"
+  ],
+  [
+   "1998",
+   "The Kosovo War begins between Yugoslav forces and the Kosovo Liberation Army"
+  ],
+  [
+   "1999",
+   "NATO bombs Yugoslavia, and Security Council Resolution 1244 places Kosovo under a United Nations mission"
+  ],
+  [
+   "2000",
+   "The Bulldozer Revolution removes Milošević, and the country joins the United Nations as a new member"
+  ],
+  [
+   "2003",
+   "The Constitutional Charter turns the federation into the State Union of Serbia and Montenegro"
+  ]
  ],
  "sections": {
   "foundation": "<p>During the collapse of the Socialist Federal Republic of Yugoslavia, Serbia, Montenegro and the Serb rebel-held territories in Croatia agreed on 26 December 1991 to form a new “third Yugoslavia”. Efforts in 1991 to bring the Socialist Republic of Bosnia and Herzegovina into the federation, through talks between Milošević, Bosnia's Serbian Democratic Party and the Bosniak vice-president Adil Zulfikarpašić, ended by late 1991, when Izetbegović planned a referendum on independence and violence broke out between Serbs and Bosniaks.</p><p>The Federal Republic of Yugoslavia was established on 27 April 1992 as a federation of the Republic of Serbia and the Republic of Montenegro, essentially a rump state with a Serb majority. It claimed to continue the international legal personality and United Nations membership of the old federation, but Security Council Resolution 777 held that the Socialist Federal Republic had ceased to exist, and General Assembly Resolution 47/1 barred the new state from the Assembly's work. The new state abandoned the communist legacy: the red star was removed from the flag, and a coat of arms combining Serbian and Montenegrin elements replaced the communist one.</p>",
@@ -36,8 +60,48 @@
   "decline": "<p>Military defeats and the collapse of the economy made Milošević and the Socialist Party of Serbia deeply unpopular. In September 2000, amid accusations of electoral fraud, mass protests broke out, and in the Bulldozer Revolution his government was replaced by the Democratic Opposition of Serbia under Vojislav Koštunica. The new government gave up the claim to be the sole successor of the Socialist Federal Republic and joined the United Nations as a new member on 1 November 2000. Milošević was later tried at the International Criminal Tribunal for the former Yugoslavia but died in prison in 2006 before his trial ended.</p><p>Montenegro had already separated its economy from Serbia's in the Milošević era, with its own central bank and currency. The Belgrade Agreement of March 2002 led to the Constitutional Charter of 4 February 2003, which turned the federation into the State Union of Serbia and Montenegro and retired the name Yugoslavia after 74 years. The charter allowed a referendum on independence after three years: on 21 May 2006, 55.5% of Montenegrin voters chose independence, and Montenegro and Serbia declared it on 3 and 5 June 2006.</p>"
  },
  "summary": "The Federal Republic of Yugoslavia joined Serbia and Montenegro from 1992 to 2003 after the old federation broke up. Dominated by Slobodan Milošević, it backed the Serb breakaway states in the Yugoslav Wars, suffered sanctions and hyperinflation and fought the Kosovo War, before the Bulldozer Revolution of 2000 and its reconstitution as a state union in 2003.",
- "references": [],
- "points": [[1992, 10], [1993, 6], [1995, 7], [1997, 7], [1998, 6], [1999, 3], [2000, 4], [2002, 3], [2003, 2]],
+ "references": [
+  "Sima Ćirković, The Serbs (Blackwell Publishing, 2004)",
+  "Kenneth Morrison, Montenegro: A Modern History (I.B. Tauris, 2009)"
+ ],
+ "points": [
+  [
+   1992,
+   10
+  ],
+  [
+   1993,
+   6
+  ],
+  [
+   1995,
+   7
+  ],
+  [
+   1997,
+   7
+  ],
+  [
+   1998,
+   6
+  ],
+  [
+   1999,
+   3
+  ],
+  [
+   2000,
+   4
+  ],
+  [
+   2002,
+   3
+  ],
+  [
+   2003,
+   2
+  ]
+ ],
  "pointDescs": {
   "1992": "Serbia and Montenegro form the Federal Republic of Yugoslavia on 27 April, with an army built from the remnants of the Yugoslav People's Army, but the United Nations refuses its claim to continue the old federation.",
   "1993": "Sanctions over the Yugoslav Wars cripple the economy, and the hyperinflation of the dinar reaches 313 million percent.",
@@ -49,8 +113,21 @@
   "2002": "The Belgrade Agreement of March sets out the restructuring of relations between Serbia and Montenegro.",
   "2003": "The Constitutional Charter of 4 February turns the federation into the State Union of Serbia and Montenegro, retiring the name Yugoslavia."
  },
- "stats": {"militaryPower": 4, "territorialReach": 2, "economicStrength": 2, "tradeNetworks": 2, "administrativeSophistication": 4, "culturalIntellectualOutput": 3, "institutionalLongevity": 1, "historicalInfluence": 4},
- "tags": ["Federal", "Republican", "Military"],
+ "stats": {
+  "militaryPower": 4,
+  "territorialReach": 2,
+  "economicStrength": 2,
+  "tradeNetworks": 2,
+  "administrativeSophistication": 4,
+  "culturalIntellectualOutput": 3,
+  "institutionalLongevity": 1,
+  "historicalInfluence": 4
+ },
+ "tags": [
+  "Federal",
+  "Republican",
+  "Military"
+ ],
  "notes": [
   "The saved article is Serbia and Montenegro (the FRY redirects there); it covers 1992-2006, and the profile keeps to 1992-2003.",
   "The article never states the federal capital in so many words; Belgrade is given as capital of the Republic of Serbia and the largest city.",

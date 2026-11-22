@@ -79,7 +79,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Company rule in India"></div>
@@ -123,6 +123,18 @@
       <div class="ty" data-ty="company-rule-in-india"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The Saint Helena Act ended the Company's China monopoly and made it an agent for the administration of British India","o":["1757","1833","1818","1793"],"a":1,"w":"1833: The Saint Helena Act ended the Company's China monopoly and made it an agent for the administration of British India."},{"p":"Which came first?","q":"","o":["The Regulating Act 1773 made Warren Hastings Governor-General of Fort William and placed the Company under parliamentary oversight","The Saint Helena Act ended the Company's China monopoly and made it an agent for the administration of British India"],"a":0,"w":"1773: The Regulating Act 1773 made Warren Hastings Governor-General of Fort William and placed the Company under parliamentary oversight · 1833: The Saint Helena Act ended the Company's China monopoly and made it an agent for the administration of British India."},{"p":"Which city was a capital of Company rule in India?","q":"","o":["Bandar Aceh Darussalam","Calcutta","Brunei Town","Kota Batu"],"a":1,"w":"Capital: Calcutta (Fort William), seat of the Governor-General from 1773."},{"p":"In which year?","q":"The Regulating Act 1773 made Warren Hastings Governor-General of Fort William and placed the Company under parliamentary oversight","o":["1833","1773","1793","1818"],"a":1,"w":"1773: The Regulating Act 1773 made Warren Hastings Governor-General of Fort William and placed the Company under parliamentary oversight."},{"p":"Which came first?","q":"","o":["Lord Cornwallis promulgated the Permanent Settlement of land revenue in Bengal","The Anglo-Maratha wars ended, leaving no native power that threatened the Company"],"a":0,"w":"1793: Lord Cornwallis promulgated the Permanent Settlement of land revenue in Bengal · 1818: The Anglo-Maratha wars ended, leaving no native power that threatened the Company."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>C. A. Bayly, Indian Society and the Making of the British Empire (Cambridge University Press, 1987)</li>
+        <li>P. J. Marshall, Bengal: The British Bridgehead, Eastern India, 1740–1828 (Cambridge University Press, 1987)</li>
+        <li>Barbara Daly Metcalf, A Concise History of Modern India (Cambridge University Press, 2006)</li>
+        <li>Sekhara Bandyopadhyay, From Plassey to Partition: A History of Modern India (Orient Longman, 2004)</li>
+        <li>Douglas M. Peers, India under Colonial Rule: 1700–1885 (Pearson Education, 2006)</li>
+        <li>William Dalrymple, The Anarchy: The Relentless Rise of the East India Company (Bloomsbury publishing, 2019)</li>
+      </ul>
+    </div>
 
     <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
       <p class="profile-references-title" id="mini-cx-title">Connections</p>

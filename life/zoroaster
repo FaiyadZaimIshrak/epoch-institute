@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Zoroaster: Life, Deeds and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Zoroaster, or Zarathustra Spitama, was an Iranian religious reformer and poet-prophet, traditionally the author of the Gathas, who is regarded as the…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Zoroaster: Life, Deeds and Legacy — The Epoch Institute">
+<meta property="og:description" content="Zoroaster, or Zarathustra Spitama, was an Iranian religious reformer and poet-prophet, traditionally the author of the Gathas, who is regarded as the…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/life/zoroaster">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/zoroaster.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/zoroaster.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/life/zoroaster">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great lives","item":"https://the-epoch-institute.org/profiles?kind=life"},{"@type":"ListItem","position":4,"name":"Zoroaster"}]},{"@type":"Article","headline":"Zoroaster","description":"Zoroaster, or Zarathustra Spitama, was an Iranian religious reformer and poet-prophet, traditionally the author of the Gathas, who is regarded as the…","url":"https://the-epoch-institute.org/life/zoroaster","mainEntityOfPage":"https://the-epoch-institute.org/life/zoroaster","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Zoroaster"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/zoroaster.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=life">Great lives</a></li><li aria-current="page">Zoroaster</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Zoroaster.png" alt="Zoroaster" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Life · Ancient Near East</p>
+        <h1 class="profile-detail-name">Zoroaster</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">dates disputed: c. 1000 BCE, or 7th–6th century BCE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Born</span><span class="info-stat-val">Place unknown, probably in the east of Greater <a class="enc-link" href="/encyclopedia/iran">Iran</a>, possibly <a class="enc-link" href="/encyclopedia/balkh">Bactra</a>; dated by many scholars to around 1000 BCE and by Zoroastrian tradition to the 7th and 6th centuries BCE; the son of Pourushaspa of the Spitama family and Dugdōw</span></div>
+          <div class="info-stat"><span class="info-stat-label">Died</span><span class="info-stat-val">At the age of 77 years and 40 days; most commonly said to have been murdered at an altar by a priest of the old religion named Brādrēs, while other traditions name a Turanian soldier or old age</span></div>
+          <div class="info-stat"><span class="info-stat-label">Who they were</span><span class="info-stat-val">Priest, preacher and poet-prophet who, in Zoroastrian tradition, received a revelation of <a class="enc-link" href="/encyclopedia/ahura-mazda">Ahura Mazda</a>; scholars describe him as an Iranian religious reformer</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">the revelation of <a class="enc-link" href="/encyclopedia/ahura-mazda">Ahura Mazda</a>; the contrast of asha (truth, order) and druj (deception); the <a class="enc-link" href="/encyclopedia/gathas">Gathas</a>; the patronage of King <a class="enc-link" href="/encyclopedia/vishtaspa">Vishtaspa</a>; the stress on free will and on good thoughts, words and deeds; the founding of <a class="enc-link" href="/encyclopedia/zoroastrianism">Zoroastrianism</a></span></div>
+        </div>
+        <p class="empire-meta">6 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Little is known of Zoroaster beyond a few early texts, and by modern standards of historiography nothing can place him in a fixed period.</li><li>According to Zoroastrian tradition, he received a revelation at about 30, taught the choice between asha and druj, and gained the patronage of King <a class="enc-link" href="/encyclopedia/vishtaspa">Vishtaspa</a>.</li><li>His teaching stresses free will and ethical responsibility, and <a class="enc-link" href="/encyclopedia/zoroastrianism">Zoroastrianism</a> later became the most prominent religion of Greater <a class="enc-link" href="/encyclopedia/iran">Iran</a>.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Greek writers placed Zoroaster thousands of years before <a class="enc-link" href="/encyclopedia/xerxes-i">Xerxes I</a>'s <a class="enc-link" href="/encyclopedia/second-persian-invasion-of-greece">invasion of Greece</a> in 480 BCE, while <a class="enc-link" href="/encyclopedia/pliny-the-elder">Pliny the Elder</a> wrote that there had been two Zoroasters.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#early">Early Life</a></li><li><a href="#rise">Rise</a></li><li><a href="#deeds">What They Did</a></li><li><a href="#opponents">Opponents &amp; Critics</a></li><li><a href="#last">Last Years</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 1000 BCE</span><span class="rf-text">The date many scholars consider most likely for Zoroaster, against a Zoroastrian tradition of the 7th and 6th centuries BCE</span></li><li><span class="rf-year">Aged seven</span><span class="rf-text">His training as a priest probably begins, according to the tradition</span></li><li><span class="rf-year">Aged twenty</span><span class="rf-text">He leaves his parents and travels, gaining knowledge from other teachers</span></li><li><span class="rf-year">Aged thirty</span><span class="rf-text">During a spring festival he sees a shining being, Vohu Manah, who teaches him about <a class="enc-link" href="/encyclopedia/ahura-mazda">Ahura Mazda</a></span></li><li><span class="rf-year">Aged forty-two</span><span class="rf-text">He receives the patronage of Queen Hutaosa and of <a class="enc-link" href="/encyclopedia/vishtaspa">Vishtaspa</a>, an early adherent</span></li><li><span class="rf-year">Aged seventy-seven</span><span class="rf-text">He dies, most commonly said to have been murdered at an altar by Brādrēs</span></li><li><span class="rf-year">861 CE</span><span class="rf-text">The Cypress of Kashmar, said to have been planted by Zoroaster, is felled on the order of al-Mutawakkil</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="early">
+        <h2 class="profile-section-title">Early Life</h2>
+        <div class="profile-section-body"><p>Zoroaster's name in his own language, Avestan, was probably Zaraθuštra. It likely means 'he who manages <a class="enc-link" href="/encyclopedia/camel">camels</a>', though the etymology has several interpretations; the form Zoroaster comes from a later Greek adaptation. He is recorded as the son of Pourushaspa of the Spitama family and of Dugdōw, whose great-grandfather was Haēčataspa. His father's name means 'possessing gray horses' and his mother's 'milkmaid', and tradition gives him four brothers. His training for the priesthood probably began around the age of seven, he became a priest probably at about 15, and at 20 he left his parents and gained knowledge from other teachers and from travel.</p><p>Little is known about him, and most of his life is known only from a few texts. There is no consensus on his dating. Zoroastrian tradition places him in the 7th and 6th centuries BCE, a calculation of 258 years before Alexander that the priesthood made by counting back generations, which Mary Boyce considered erroneous. Many scholars today consider a date around 1000 BCE the most likely, and others hold that anything from 1500 to 500 BCE is possible.</p><p>His homeland is also unknown. He spoke Avestan, which points to the east of Greater <a class="enc-link" href="/encyclopedia/iran">Iran</a>, possibly <a class="enc-link" href="/encyclopedia/balkh">Bactra</a>, and <a class="enc-link" href="/encyclopedia/yasna">Yasna</a> 9 and 17 name the Ditya River in Airyanem Vaējah as his home. In its 2005 article, the Encyclopedia Iranica says there is general agreement that he did not live in western Iran, while attempts to place him in a specific region remain tentative.</p></div>
+      </div>
+      <div class="profile-section-block" id="rise">
+        <h2 class="profile-section-title">Rise</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/ahura-mazda"><img src="/images/encyclopedia/ahura-mazda.jpg" alt="Ahura Mazda" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/ahura-mazda">Ahura Mazda</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Naqshe_Rostam_Darafsh_Ordibehesht_93_(35).JPG" target="_blank" rel="noopener">Derfash Kaviani (درفش کاویانی), CC BY 3.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>According to Zoroastrian tradition, by the age of 30 Zoroaster experienced a revelation during a spring festival. On a river bank he saw a shining being who revealed himself as Vohu Manah (Good Purpose) and taught him about <a class="enc-link" href="/encyclopedia/ahura-mazda">Ahura Mazda</a> (Wise Lord) and five other radiant figures. He became aware of two primal spirits, the second being <a class="enc-link" href="/encyclopedia/ahriman">Angra Mainyu</a> (Destructive Spirit), and of the opposing concepts of asha (order) and druj (deception). He decided to spend his life teaching people to seek asha. Further revelations followed, including a vision of the seven <a class="enc-link" href="/encyclopedia/amesha-spenta">Amesha Spenta</a>.</p><p>At about the age of 42, the tradition holds, he received the patronage of Queen Hutaosa and of a ruler named <a class="enc-link" href="/encyclopedia/vishtaspa">Vishtaspa</a>, an early adherent of <a class="enc-link" href="/encyclopedia/zoroastrianism">Zoroastrianism</a>, who may have been from <a class="enc-link" href="/encyclopedia/bactria">Bactria</a> according to the <a class="enc-link" href="/encyclopedia/shahnameh">Shahnameh</a>.</p><p>Some scholars who favour a late date identify this Vishtaspa with the father of <a class="enc-link" href="/encyclopedia/darius-i">Darius I</a>, also named Vishtaspa, or Hystaspes in Greek. The argument has been questioned: it seems unlikely that the <a class="enc-link" href="/encyclopedia/avesta">Avesta</a> would not mention that Vishtaspa's son became ruler of the Persian Empire, or that the <a class="enc-link" href="/encyclopedia/behistun-inscription">Behistun Inscription</a> would omit it. It is also possible that Darius's father was named in honour of the Zoroastrian patron.</p></div>
+      </div>
+      <div class="profile-section-block" id="deeds">
+        <h2 class="profile-section-title">What They Did</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/gathas"><img src="/images/encyclopedia/gathas.jpg" alt="Gathas" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/gathas">Gathas</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Bodleian_J2_fol_175_Y_28_1.jpg" target="_blank" rel="noopener">Unknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Zoroaster is credited with the authorship of the <a class="enc-link" href="/encyclopedia/gathas">Gathas</a>, the oldest Zoroastrian scriptures, and of the <a class="enc-link" href="/encyclopedia/yasna">Yasna</a> Haptanghaiti, a series of hymns in Old Avestan covering core beliefs. In the Gathas he describes the human condition as a mental struggle between asha and druj. Asha, which is nuanced and difficult to translate, underlies all Zoroastrian doctrine, including that of <a class="enc-link" href="/encyclopedia/ahura-mazda">Ahura Mazda</a>, creation and the condition for free will.</p><p>The purpose of humankind, as of all creation, is to sustain and align itself with asha, through active ethical participation in life, ritual and the practice of good thoughts, words and deeds. Zoroaster emphasised the freedom of the individual to choose right or wrong and individual responsibility for one's deeds. The choice to accept asha and shun druj is one's own and not a dictate of Ahura Mazda. By such acts one increases asha in the world and in oneself and comes a step closer to Frashokereti. The system is called Mazdayasna, 'worship of Mazda'.</p><p>According to the tradition he lived for many years after <a class="enc-link" href="/encyclopedia/vishtaspa">Vishtaspa</a>'s conversion and established a faithful community. He married three times. His first two wives bore him three sons, Isat Vâstra, Urvatat Nara and Hvare Chithra, and three daughters, Freni, Thriti and Pouruchista; his third wife, Hvōvi, was childless.</p></div>
+      </div>
+      <div class="profile-section-block" id="opponents">
+        <h2 class="profile-section-title">Opponents &amp; Critics</h2>
+        <div class="profile-section-body"><p>The sources say little of opposition in his lifetime, except in the manner of his death: the most common tradition names a karapan, a priest of the old religion, called Brādrēs as his killer. The <a class="enc-link" href="/encyclopedia/gathas">Gathas</a> portray an Iranian society of warrior-herdsmen and priests, and Zoroaster is described as a religious reformer who challenged the tenets of the Ancient Iranian religion.</p><p>Most debate concerns the sources. Scholars note that the later accounts of his life are in <a class="enc-link" href="/encyclopedia/middle-persian">Pahlavi</a> and Arabic texts of the 9th to 12th centuries CE. The Encyclopedia Iranica claims that stories of his life were attributed to him from <a class="enc-link" href="/encyclopedia/christianity">Christianity</a>, <a class="enc-link" href="/encyclopedia/judaism">Judaism</a> and <a class="enc-link" href="/encyclopedia/islam">Islam</a>, and Arthur Christensen held that after the fall of the Sasanian state Zoroastrian clerics modified their religion to resemble that of the Muslims in order to keep their followers. Classical writers made him a king of <a class="enc-link" href="/encyclopedia/bactria">Bactria</a> or a Babylonian and the author of astrology and magic; Roger Beck notes that apart from his role as prophet of the Iranians, the rest was mostly fantasy. The Greek works circulating under his name are regarded as pseudepigrapha, not Zoroastrian doctrine. Armenian Christian writers reinterpreted his name in an anti-Zoroastrian sense, and al-Tabari reports a story of Zaradusht as a servant of a disciple of <a class="enc-link" href="/encyclopedia/jeremiah">Jeremiah</a>.</p></div>
+      </div>
+      <div class="profile-section-block" id="last">
+        <h2 class="profile-section-title">Last Years</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/shahnameh"><img src="/images/encyclopedia/shahnameh.jpg" alt="Shahnameh" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/shahnameh">Shahnameh</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:The_Court_of_Gayumars_(Cropped).jpg" target="_blank" rel="noopener">Attributed to Sultan Muhammad, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>According to the tradition, Zoroaster died when he was 77 years and 40 days old. The traditions conflict on the manner of his death. The most common holds that he was murdered by a karapan, a priest of the old religion, named Brādrēs, while he was performing at an altar. The Dēnkart and the epic <a class="enc-link" href="/encyclopedia/shahnameh">Shahnameh</a> ascribe his death to a Turanian soldier named Baraturish, possibly a version of the same figure. Other traditions combine the two accounts, and some hold that he died of old age.</p><p>A later tradition tells of the Cypress of Kashmar, a tree said to have sprung from a branch that Zoroaster brought from Paradise and to have been planted by him at Kashmar in north-eastern <a class="enc-link" href="/encyclopedia/iran">Iran</a>, in honour of King <a class="enc-link" href="/encyclopedia/vishtaspa">Vishtaspa</a>'s conversion. In his Wonders of Creatures and the Marvels of Creation, al-Qazwini also describes Vishtaspa as a patron of Zoroaster who planted the tree himself. According to Zakariya al-Qazwini, al-Mutawakkil had the cypress felled in 247 AH (861 CE), over the protests of the Iranians, who offered a very great sum to save it. It was carried across Iran to provide beams for his new palace at <a class="enc-link" href="/encyclopedia/samarra">Samarra</a>. Al-Mutawakkil never saw it, for he was murdered on the night it reached the banks of the <a class="enc-link" href="/encyclopedia/tigris">Tigris</a>.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/parsis"><img src="/images/encyclopedia/parsis.jpg" alt="Parsis" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/parsis">Parsis</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Indian_-_Leaf_from_Bound_Collection_of_20_Miniatures_Depicting_Village_Life_-_Walters_35176H.jpg" target="_blank" rel="noopener">Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p><a class="enc-link" href="/encyclopedia/zoroastrianism">Zoroastrianism</a> became the most prominent religion of Greater <a class="enc-link" href="/encyclopedia/iran">Iran</a> from around the 6th century BCE and enjoyed official sanction under the Sassanid Empire, until it was persecuted after the Arab-Muslim conquest in the 7th century CE. Gherardo Gnoli observed that, after the conquest and the migration of many Zoroastrians to <a class="enc-link" href="/encyclopedia/india">India</a>, exposure to Islamic and Christian arguments led many, especially the <a class="enc-link" href="/encyclopedia/parsis">Parsis</a>, to deny dualism and call themselves monotheists.</p><p>Other traditions place him in their own lines of prophets. <a class="enc-link" href="/encyclopedia/manichaeism">Manichaeism</a> saw him as one in a line that culminated in <a class="enc-link" href="/encyclopedia/mani">Mani</a>. The Bahá'í Faith counts him a Manifestation of God, and the Ahmadiyya Community views him as a prophet. Islamic tradition understood him as the founding prophet of the Magians. Some have claimed, with much scholarly controversy, to find his influence in <a class="enc-link" href="/encyclopedia/heraclitus">Heraclitus</a>, <a class="enc-link" href="/encyclopedia/plato">Plato</a> and <a class="enc-link" href="/encyclopedia/pythagoras">Pythagoras</a>, and, with less controversy, in the Abrahamic religions through ideas of cosmic dualism and personal morality.</p><p><a class="enc-link" href="/encyclopedia/friedrich-nietzsche">Friedrich Nietzsche</a> named the hero of Thus Spoke Zarathustra (1885) after him. In the 19th century he was depicted with features borrowed from portraits of <a class="enc-link" href="/encyclopedia/jesus">Jesus</a>, and a Sassanid carving at Taq-e Bostan, now identified as <a class="enc-link" href="/encyclopedia/mithra">Mithra</a>, was once mistaken for him. A sculpture of 1896 by Edward Clark Potter stands over the Appellate Division Courthouse in <a class="enc-link" href="/encyclopedia/new-york">New York</a>.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Zoroaster, or Zarathustra, is the Iranian poet-prophet whom tradition credits with the <a class="enc-link" href="/encyclopedia/gathas">Gathas</a> and with founding <a class="enc-link" href="/encyclopedia/zoroastrianism">Zoroastrianism</a>. Little is known of him, and scholars date him anywhere from about 1000 BCE to the 6th century BCE, with no consensus on the date.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Mary Boyce, A History of Zoroastrianism: Volume I: The Early Period (BRILL, 1996)</li>
+        <li>Mary Boyce, Zoroastrians: Their Religious Beliefs and Practices (Psychology Press, 2001)</li>
+        <li>A. V. Williams Jackson, Zoroaster, the prophet of ancient Iran (Columbia University Press, 1899)</li>
+        <li>Martin Litchfield West, The Hymns of Zoroaster: A New Translation of the Most Ancient Sacred Texts of Iran (I.B.Tauris, 2010)</li>
+        <li>Michael Stausberg, The Wiley-Blackwell Companion to Zoroastrianism (John Wiley &amp; Sons, 2015)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other lifes</p>
+      <div class="related-grid"><a class="related-card" href="/life/ramesses-ii"><img src="/logos/thumbs/Ramesses%20II.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ramesses II</span><span class="related-card-dates">c. 1303 BCE – 1213 BCE</span></a><a class="related-card" href="/life/moses"><img src="/logos/thumbs/Moses.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Moses</span><span class="related-card-dates">traditionally 14th–13th century BCE</span></a><a class="related-card" href="/life/cyrus-the-great"><img src="/logos/thumbs/Cyrus%20the%20Great.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Cyrus the Great</span><span class="related-card-dates">c. 600 BCE – 530 BCE</span></a><a class="related-card" href="/life/laozi"><img src="/logos/thumbs/Laozi.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Laozi</span><span class="related-card-dates">traditionally 6th century BCE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/life/ramesses-ii"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Ramesses%20II.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ramesses II</span><span class="related-card-dates">c. 1303 BCE – 1213 BCE</span></a><a class="related-card" href="/life/cyrus-the-great"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Cyrus%20the%20Great.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Cyrus the Great</span><span class="related-card-dates">c. 600 BCE – 530 BCE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Zoroaster",slug="zoroaster",url="https://the-epoch-institute.org/life/zoroaster";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Zoroaster on The Epoch Institute — life, deeds and legacy. https://the-epoch-institute.org/life/zoroaster #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/life/zoroaster"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Zoroaster",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Zoroaster",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

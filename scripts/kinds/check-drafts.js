@@ -32,7 +32,7 @@ for (const f of fs.readdirSync(dir).filter(f => f.endsWith('.json')).sort()) {
   try { s = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')); } catch (e) { console.log('== ' + slug + '\n  JSON: ' + e.message); total++; continue; }
   const wpF = path.join(wpDir, (map[slug] || slug) + '.txt'); const art = fs.existsSync(wpF) ? fold(fs.readFileSync(wpF, 'utf8')) : '';
   if (!art) out.push('no article ' + wpF);
-  if (KEYS) { for (const k of KEYS) if (!(k in s)) out.push('missing key ' + k); for (const k of Object.keys(s)) if (!KEYS.includes(k)) out.push('unknown key ' + k); }
+  if (KEYS) { for (const k of KEYS) if (!(k in s)) out.push('missing key ' + k); for (const k of Object.keys(s)) if (!KEYS.includes(k) && k !== 'span') out.push('unknown key ' + k); }
   if (s.region && !REGIONS.includes(s.region)) out.push('region ' + s.region);
   if (!Number.isInteger(s.start) || !(s.end === null || Number.isInteger(s.end))) out.push('start/end ' + s.start + '/' + s.end);
   if (s.end === null && s.endCirca) out.push('endCirca with end null');

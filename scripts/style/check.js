@@ -1,7 +1,7 @@
 // Checks a plain-prose rewrite (STYLE-GUIDE.md) against its original, field by field:
 //   node scripts/style/check.js <dir> [slug …]        <dir>/in/<slug>.json against <dir>/out/<slug>.json
 // Faults: a key missing or added; a number or a proper name of the original missing, or one added; a quotation
-// changed; a name of "keep" missing; another count of paragraphs or other HTML; a length outside 75-105%; a dash used
+// changed; a name of "keep" missing; another count of paragraphs or other HTML; a length outside 95-110% (85-115% under 800 characters); a dash used
 // as punctuation; a stock phrase left (scripts/tools/style-audit.js TELLS, but for factual "one of the largest").
 const fs = require('fs'), path = require('path');
 const TELLS = require('../tools/style-audit.js').TELLS.filter(t => t[0] !== 'one of the most' && t[0] !== 'triple list of abstractions');
@@ -26,7 +26,7 @@ function checkPair(a, b, keep) {
     for (const kp of keep || []) if (pa.includes(kp) && !pb.includes(kp)) rep.push('link name lost: ' + kp);
     if ((a.match(/<p>/g) || []).length !== (b.match(/<p>/g) || []).length) rep.push('paragraphs ' + (a.match(/<p>/g) || []).length + ' -> ' + (b.match(/<p>/g) || []).length);
     if (b.replace(/<\/?p>/g, '').match(/<[a-z/]/i) && !a.replace(/<\/?p>/g, '').match(/<[a-z/]/i)) rep.push('other HTML');
-    const r = pb.length / (pa.length || 1); if (pa.length < 400 ? r < 0.55 || r > 1.1 : r < 0.75 || r > 1.05) rep.push('length ' + Math.round(r * 100) + '%');
+    const r = pb.length / (pa.length || 1); if (pa.length < 800 ? r < 0.85 || r > 1.15 : r < 0.95 || r > 1.10) rep.push('length ' + Math.round(r * 100) + '%');   // Nov 2026: nothing is removed (it was 75-105%, 55-110% for short texts)
     if (/\s[—–]\s|[a-z]—[a-z]/i.test(pb)) rep.push('a dash as punctuation');
     for (const [lab, rx] of TELLS) { if (lab === 'em dash') continue; const m = pb.replace(/legendary|the Magnificent/g, ' ').match(rx); if (m) rep.push('stock phrase: ' + m[0]); }
     const ta = (a.match(/<[^>]+>/g) || []).join(''), tb = (b.match(/<[^>]+>/g) || []).join(''); if (ta.replace(/<\/?p>/g, '') !== tb.replace(/<\/?p>/g, '')) rep.push('HTML tags changed');

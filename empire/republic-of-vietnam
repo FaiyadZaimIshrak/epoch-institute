@@ -79,7 +79,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Republic of Vietnam"></div>
@@ -123,6 +123,18 @@
       <div class="ty" data-ty="republic-of-vietnam"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Communist forces overrun Saigon, and President Dương Văn Minh surrenders South Vietnam unconditionally on 30 April","o":["1975","1970","1963","1968"],"a":0,"w":"1975: Communist forces overrun Saigon, and President Dương Văn Minh surrenders South Vietnam unconditionally on 30 April."},{"p":"Which came first?","q":"","o":["Ngô Đình Diệm's referendum removes Bảo Đại as head of state, and on 26 October Diệm declares himself president of the Republic of Vietnam","Communist forces overrun Saigon, and President Dương Văn Minh surrenders South Vietnam unconditionally on 30 April"],"a":0,"w":"1955: Ngô Đình Diệm's referendum removes Bảo Đại as head of state, and on 26 October Diệm declares himself president of the Republic of Vietnam · 1975: Communist forces overrun Saigon, and President Dương Văn Minh surrenders South Vietnam unconditionally on 30 April."},{"p":"Which city was a capital of the Republic of Vietnam?","q":"","o":["Saigon","Brunei Town","Kota Batu","Hanoi"],"a":0,"w":"Capital: Saigon."},{"p":"Who founded the Republic of Vietnam?","q":"","o":["Hồ Chí Minh","Sukarno","Ngô Đình Diệm","Muhammad Shah"],"a":2,"w":"Founder: Ngô Đình Diệm, who declared himself president on 26 October 1955 after the referendum of 23 October."},{"p":"In which year?","q":"A new constitution creates a bicameral legislature, and Nguyễn Văn Thiệu is elected president with 34% of the vote in a widely criticised poll","o":["1974","1970","1967","1968"],"a":2,"w":"1967: A new constitution creates a bicameral legislature, and Nguyễn Văn Thiệu is elected president with 34% of the vote in a widely criticised poll."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Edward Miller, Misalliance: Ngo Dinh Diem, the United States, and the Fate of South Vietnam (Harvard University Press, 2013)</li>
+        <li>Jessica M. Chapman, Cauldron of Resistance: Ngo Dinh Diem, the United States, and 1950s Southern Vietnam (Cornell University Press, 2013)</li>
+        <li>Nu-Anh Tran, Disunion: Anticommunist Nationalism and the Making of the Republic of Vietnam (University of Hawaiʻi Press, 2022)</li>
+        <li>Van Nguyen-Marshall, Between War and the State: Civil Society in South Vietnam, 1954–1975 (Cornell University Press, 2023)</li>
+        <li>Christopher Goscha, Vietnam: A New History (Basic Books, 2016)</li>
+        <li>Heather Marie Stur, Saigon at War: South Vietnam and the Global Sixties (Cambridge University Press, 2020)</li>
+      </ul>
+    </div>
 
     <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
       <p class="profile-references-title" id="mini-cx-title">Connections</p>

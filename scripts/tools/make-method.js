@@ -42,7 +42,8 @@ const profUrl = {}; for (const e of SD.EMPIRES) if (!e.kind) profUrl[e.name] = '
 const facts = []; { let cur = ''; for (const l of read('profile-changes.md').split(/\r?\n/)) { const m = l.match(/^## (.+)$/); if (m) { cur = m[1].trim(); continue; } const f = l.match(/^- FACT: (.+)$/); if (f && cur) { let g = facts[facts.length - 1]; if (!g || g.name !== cur) facts.push(g = { name: cur, rows: [] }); g.rows.push(f[1].trim()); } } }
 const A = JSON.parse(read('scripts/added-entries.json'));
 const styleOld = {}; { const d = path.join(R, 'scripts', 'style', 'lines'); if (fs.existsSync(d)) for (const f of fs.readdirSync(d)) if (/^in-\d+\.json$/.test(f)) for (const it of JSON.parse(fs.readFileSync(path.join(d, f), 'utf8'))) if (it.id.startsWith('entry:')) styleOld[it.id.slice(6)] = it.text; }
-const fixes = A.fixes.filter(x => x && NAME[x[0]] && !(styleOld[x[0]] && styleOld[x[0]].includes(x[1])));
+// a fourth element "w" marks a fix of wording only (spelling, BCE/CE, a reworded sentence: since 22 Nov 2026)
+const fixes = A.fixes.filter(x => x && NAME[x[0]] && x[3] !== 'w' && !(styleOld[x[0]] && styleOld[x[0]].includes(x[1])));
 const nopic = (A.nopicture || []).filter(x => x && NAME[x[0]]);
 const nFacts = facts.reduce((n, g) => n + g.rows.length, 0);
 const arrow = s => esc(s).replace(/ -&gt; /g, ' <span aria-hidden="true">→</span><span class="sr-only"> became </span> ');

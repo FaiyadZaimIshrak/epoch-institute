@@ -80,7 +80,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#society">Society</a></li><li><a href="#beliefs">Beliefs &amp; Worldview</a></li><li><a href="#arts">Arts &amp; Knowledge</a></li><li><a href="#exchange">Contact &amp; Exchange</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#society">Society</a></li><li><a href="#beliefs">Beliefs &amp; Worldview</a></li><li><a href="#arts">Arts &amp; Knowledge</a></li><li><a href="#exchange">Contact &amp; Exchange</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -117,6 +117,15 @@
       </div>
 
     <p class="profile-summary" id="summary"><em>The Yangshao culture was a <a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a> farming culture of the middle <a class="enc-link" href="/encyclopedia/yellow-river">Yellow River</a> valley in <a class="enc-link" href="/encyclopedia/china">China</a>, from about 5000 to 3000 BCE. Its people grew <a class="enc-link" href="/encyclopedia/millet">millet</a> and some <a class="enc-link" href="/encyclopedia/rice">rice</a>, kept pigs and lived in villages of semi-subterranean houses, some enclosed by ditches. Its painted pottery spread west through the Majiayao culture, and its later phases show settlement hierarchies, the first rammed-earth wall in China and an early <a class="enc-link" href="/encyclopedia/chiefdom">chiefdom</a>.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Kwang-chih Chang, The Archaeology of Ancient China (Yale University Press, 1986)</li>
+        <li>Anne P. Underhill, Craft Production and Social Change in Northern China (Springer, 2002)</li>
+        <li>Li Feng, Early China: A Social and Cultural History (Cambridge University Press, 2013)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other cultures</p>

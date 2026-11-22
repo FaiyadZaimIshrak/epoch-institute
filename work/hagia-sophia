@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -123,6 +123,18 @@
       <div class="ty" data-ty="hagia-sophia"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The Council of State annuls the decision that made it a museum, and the Hagia Sophia is reclassified as a mosque","o":["1935","537","1204","2020"],"a":3,"w":"2020: The Council of State annuls the decision that made it a museum, and the Hagia Sophia is reclassified as a mosque."},{"p":"Which came first?","q":"","o":["The second church burns in the Nika Revolt, and weeks later Justinian I begins the present building","The Crusaders sack Constantinople, and the church becomes a Latin Catholic cathedral until 1261"],"a":0,"w":"532: The second church burns in the Nika Revolt, and weeks later Justinian I begins the present building · 1204: The Crusaders sack Constantinople, and the church becomes a Latin Catholic cathedral until 1261."},{"p":"In which year?","q":"The building reopens as a museum under the secular Republic of Turkey","o":["532","1935","2020","1204"],"a":1,"w":"1935: The building reopens as a museum under the secular Republic of Turkey."},{"p":"Which came first?","q":"","o":["The second church burns in the Nika Revolt, and weeks later Justinian I begins the present building","After the Ottoman conquest of Constantinople, Mehmed II orders the church converted into a mosque"],"a":0,"w":"532: The second church burns in the Nika Revolt, and weeks later Justinian I begins the present building · 1453: After the Ottoman conquest of Constantinople, Mehmed II orders the church converted into a mosque."},{"p":"In which year?","q":"The excommunication of Patriarch Michael I Cerularius is delivered in the church, an act considered the start of the East–West Schism","o":["1054","2020","1935","537"],"a":0,"w":"1054: The excommunication of Patriarch Michael I Cerularius is delivered in the church, an act considered the start of the East–West Schism."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Rowland J. Mainstone, Hagia Sophia: Architecture, Structure, and Liturgy of Justinian's Great Church (W.W. Norton &amp; Co, 1997)</li>
+        <li>Cyril A. Mango, Hagia Sophia: A Vision for Empires (Ertuğ &amp; Kocabiyik, 1997)</li>
+        <li>Robert S. Nelson, Hagia Sophia, 1850–1950: Holy Wisdom Modern Monument (University of Chicago Press, 2004)</li>
+        <li>R. Mark, Hagia Sophia from the Age of Justinian to the Present (Princeton Architectural, 1992)</li>
+        <li>Richard Krautheimer, Early Christian and Byzantine Architecture (Yale University Press, 1984)</li>
+        <li>W. Eugene Kleinbauer, Saint Sophia at Constantinople: Singulariter in Mundo (William L. Bauhan, 2000)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other great works</p>

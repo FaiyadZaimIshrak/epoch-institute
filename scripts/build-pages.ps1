@@ -1910,6 +1910,7 @@ $LOGO = @{}; foreach ($f in Get-ChildItem "$Repo\logos\thumbs" -Filter *.png) { 
 $mwRows = New-Object Collections.Generic.List[string]
 foreach ($em in $EMPS) {
   $mwN = [string]$em['name']; $mwPts = $em['points']
+  if ($em['span']) { continue }   # a life whose years are a tradition (Moses, Abraham, Laozi) is not "alive in" a year
   if ($mwPts -and @($mwPts).Count) { $mwA = [int][double]@($mwPts)[0][0]; $mwB = [int][double]@($mwPts)[@($mwPts).Count - 1][0] }
   else { $mwA = [int]$em['start']; $mwB = $(if ($null -eq $em['end']) { $YEAR } else { [int]$em['end'] }) }
   $mwW = $(if ($STATS.ContainsKey($mwN)) { [Math]::Round([double]$STATS[$mwN][1], 1) } else { 4 })
@@ -3224,7 +3225,7 @@ for ($ei = 0; $ei -lt $ESSAYS.Count; $ei++) {
     [void]$sb.Append('<section class="essay-profs"><h2 class="ref-sec-title">Profiles in this essay</h2><ul class="pcards">')
     foreach ($ps in $profs) {
       $pu = @('/empire/', '/religion/', '/language/', '/culture/', '/movement/', '/government/', '/ideology/', '/work/', '/life/') | ForEach-Object { $_ + $ps } | Where-Object { $EMPURL.ContainsKey($_) } | Select-Object -First 1; $em = if ($pu) { $EMPURL[$pu] } else { $null }; if (-not $em) { $esMiss.Add("$($ey.slug): profile $ps"); continue }
-      $pts0 = $em['points']; [void]$sb.Append((ProfCard $pu ([string]$em['name']) $(if ($pts0) { (Yr $pts0[0][0]) + ' – ' + (Yr $pts0[-1][0]) } else { (Yr $em['start']) + ' – ' + $(if ($null -eq $em['end']) { 'present' } else { Yr $em['end'] }) }) ''))
+      $pts0 = $em['points']; [void]$sb.Append((ProfCard $pu ([string]$em['name']) $(if ($em['span']) { [string]$em['span'] } elseif ($pts0) { (Yr $pts0[0][0]) + ' – ' + (Yr $pts0[-1][0]) } else { (Yr $em['start']) + ' – ' + $(if ($null -eq $em['end']) { 'present' } else { Yr $em['end'] }) }) ''))
     }
     [void]$sb.Append("</ul></section>`n")
   }
@@ -4164,7 +4165,7 @@ foreach ($c in $PCENTS) {
 if ($fcBufC.Count) { FcPeople $fcBufC.ToArray() $fcBuf.ToArray() }
 # capitals and key events, by the region of the profile, oldest first
 $FCCAP = @{}; foreach ($m in [regex]::Matches([IO.File]::ReadAllText("$Repo\empire-facts.js", $U8), '(?m)^  "([^"]+)": \{capital:"((?:[^"\\]|\\.)*)"')) { $FCCAP[$m.Groups[1].Value] = [regex]::Unescape($m.Groups[2].Value) }
-function FcSpan($em) { $sp = if ($em['points']) { @([double]$em['points'][0][0], [double]$em['points'][-1][0]) } else { @([double]$em['start'], $(if ($null -eq $em['end']) { 2025 } else { [double]$em['end'] })) }; (YearLabel ([int]$sp[0])) + '–' + $(if ($null -eq $em['end'] -and $sp[1] -ge 2025) { 'present' } else { YearLabel ([int]$sp[1]) }) }
+function FcSpan($em) { if ($em['span']) { return [string]$em['span'] }; $sp = if ($em['points']) { @([double]$em['points'][0][0], [double]$em['points'][-1][0]) } else { @([double]$em['start'], $(if ($null -eq $em['end']) { 2025 } else { [double]$em['end'] })) }; (YearLabel ([int]$sp[0])) + '–' + $(if ($null -eq $em['end'] -and $sp[1] -ge 2025) { 'present' } else { YearLabel ([int]$sp[1]) }) }
 foreach ($rr in $BREG) {
   $ems = @($EMPS | Where-Object { [string]$_['region'] -eq $rr } | Sort-Object @{ e = { if ($_['points']) { [double]$_['points'][0][0] } else { [double]$_['start'] } } }, @{ e = { [string]$_['name'] } })
   $rs = [EpochBuild.W]::ToSlug($rr)
@@ -4469,7 +4470,7 @@ foreach ($th in $kdThemes) {
     $ie = $it[0]; $isz = ImgSize $ie.img
     [void]$kdBody.Append('<li><a class="kd-card" href="/encyclopedia/' + $ie.slug + '"><span class="kd-card-img"><img src="' + $ie.img + '" alt=""' + $(if ($isz) { ' width="' + $isz[0] + '" height="' + $isz[1] + '"' } else { '' }) + ' loading="lazy"></span><span class="kd-card-b"><span class="kd-card-t">' + (Hx $ie.name) + '</span><span class="kd-card-d">' + (Hx $it[1]) + '</span></span></a></li>')
   }
-  [void]$kdBody.Append('</ul><p class="kd-more"><a class="kd-btn" href="/games#words-' + $th.k + '">Play the ' + (Hx $th.t) + ' Word Hunt &rarr;</a></p></section>')
+  [void]$kdBody.Append('</ul><p class="kd-more"><a class="kd-btn" href="/games#words-' + $th.k + '">Play the ' + (Hx ([regex]::Replace([string]$th.t, '^The ', ''))) + ' Word Hunt &rarr;</a></p></section>')   # "Play the The Silk Road Word Hunt" (found 22 Nov 2026)
 }
 SetBlock "$Repo\kids" 'kids-doors' ('<ul class="kd-doors">' + $kdNav.ToString() + '</ul>')
 SetBlock "$Repo\kids" 'kids-themes' $kdBody.ToString()

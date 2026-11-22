@@ -79,7 +79,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Gujarat Sultanate"></div>
@@ -123,6 +123,14 @@
       <div class="ty" data-ty="gujarat-sultanate"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Ahmad Shah I succeeds and moves the capital from Anhilwada Patan to his new city of Ahmedabad","o":["1411","1407","1527","1509"],"a":0,"w":"1411: Ahmad Shah I succeeds and moves the capital from Anhilwada Patan to his new city of Ahmedabad."},{"p":"Which came first?","q":"","o":["Ahmad Shah I succeeds and moves the capital from Anhilwada Patan to his new city of Ahmedabad","Bahadur Shah ascends the throne and expands the kingdom"],"a":0,"w":"1411: Ahmad Shah I succeeds and moves the capital from Anhilwada Patan to his new city of Ahmedabad · 1527: Bahadur Shah ascends the throne and expands the kingdom."},{"p":"Which city was a capital of the Gujarat Sultanate?","q":"","o":["Charaideo","Anhilwada Patan","Garhgaon","Rangpur"],"a":1,"w":"Capital: Anhilwada Patan; Ahmedabad (from 1411); Champaner in the 16th century."},{"p":"Who founded the Gujarat Sultanate?","q":"","o":["U Thong","Shamsuddin Ilyas Shah","Sukaphaa","Zafar Khan"],"a":3,"w":"Founder: Zafar Khan, titled Muzaffar Shah I."},{"p":"Which state came after the Gujarat Sultanate?","q":"","o":["Thonburi Kingdom","Bình Thuận","Mysore State","Mughal Empire"],"a":3,"w":"Succeeded by: Mughal Empire (Gujarat Subah)."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>J. Chaube, History of Gujarat Kingdom, 1458-1537 (Munshiram Manoharlal Publishers, 1975)</li>
+        <li>Georg P. Taylor, The Coins Of The Gujarat Saltanat (Royal Asiatic Society of Bombay, 1902)</li>
+      </ul>
+    </div>
 
     <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
       <p class="profile-references-title" id="mini-cx-title">Connections</p>

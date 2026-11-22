@@ -81,7 +81,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -132,6 +132,18 @@
       <div class="ty" data-ty="haitian-vodou"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"President Jean-Bertrand Aristide grants Vodou official recognition, after the constitution of 1987 enshrined freedom of religion","o":["1915","2003","1941","1805"],"a":1,"w":"2003: President Jean-Bertrand Aristide grants Vodou official recognition, after the constitution of 1987 enshrined freedom of religion."},{"p":"Which came first?","q":"","o":["The Roman Catholic Church cuts ties with Haiti until 1860, and Vodou becomes the country’s dominant religion","The government launches Operation Nettoyage, a Church-backed campaign to destroy many Vodou temples"],"a":0,"w":"1805: The Roman Catholic Church cuts ties with Haiti until 1860, and Vodou becomes the country’s dominant religion · 1941: The government launches Operation Nettoyage, a Church-backed campaign to destroy many Vodou temples."},{"p":"In which year?","q":"The French Code Noir forbids the open practice of African religions and orders that the enslaved be baptised as Roman Catholics","o":["1915","1941","1685","1805"],"a":2,"w":"1685: The French Code Noir forbids the open practice of African religions and orders that the enslaved be baptised as Roman Catholics."},{"p":"Which came first?","q":"","o":["President Jean-Bertrand Aristide grants Vodou official recognition, after the constitution of 1987 enshrined freedom of religion","The government launches Operation Nettoyage, a Church-backed campaign to destroy many Vodou temples"],"a":1,"w":"2003: President Jean-Bertrand Aristide grants Vodou official recognition, after the constitution of 1987 enshrined freedom of religion · 1941: The government launches Operation Nettoyage, a Church-backed campaign to destroy many Vodou temples."},{"p":"In which year?","q":"The government launches Operation Nettoyage, a Church-backed campaign to destroy many Vodou temples","o":["1685","1941","1791","1805"],"a":1,"w":"1941: The government launches Operation Nettoyage, a Church-backed campaign to destroy many Vodou temples."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Alfred Métraux, Voodoo in Haiti (Schocken Books, 1972)</li>
+        <li>Leslie Desmangles, The Faces of the Gods: Vodou and Roman Catholicism in Haiti (University of North Carolina Press, 1992)</li>
+        <li>Karen McCarthy Brown, Mama Lola: A Vodou Priestess in Brooklyn (University of California Press, 1991)</li>
+        <li>Maya Deren, Divine Horsemen: The Living Gods of Haiti (Thames and Hudson, 1953)</li>
+        <li>Kate Ramsey, The Spirits and the Law: Vodou and Power in Haiti (University of Chicago Press, 2011)</li>
+        <li>Benjamin Hebblethwaite, A Transatlantic History of Haitian Vodou: Rasin Figuier, Rasin Bwa Kayiman, and the Rada and Gede Rites (University Press of Mississippi, 2021)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other religions</p>

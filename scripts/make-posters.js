@@ -98,7 +98,7 @@ EMPIRES.forEach(e => {
     JOBS.profiles.push({ kind: 'profile', file: slug + '.jpg', name: e.name, kicker: region === e.region ? pk.single + ' · ' + region : region,
       sub: esc(own ? ctx.profileSpanText(e) : (period || ctx.profileSpanText(e))), tease: firstSentence(EMPIRE_INFO[e.name], 170), emblem: logo ? encodeURI(logo) : '',
       pic: pic ? { src: pic.src, w: pic.w, h: pic.h, top: pic.top } : null, points: [],
-      span: [e.start, e.end == null ? 2025 : e.end, c(e.circa) + yr(e.start), e.end == null ? 'today' : c(e.endCirca) + yr(e.end)],
+      span: e.span ? [e.start, e.end == null ? 2025 : e.end, e.span, ''] : [e.start, e.end == null ? 2025 : e.end, c(e.circa) + yr(e.start), e.end == null ? 'today' : c(e.endCirca) + yr(e.end)],
       url: 'the-epoch-institute.org' + url, credit: pic ? pic.credit : '' });
     return;
   }

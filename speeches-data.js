@@ -188,7 +188,7 @@ full:"https://en.wikisource.org/wiki/The_World%27s_Famous_Orations/Volume_3/On_t
 before:"In the summer of 1588 the Spanish Armada sailed to escort an invasion army from the Netherlands to England. With the danger not yet known to be past, Elizabeth I rode among the troops gathered at Tilbury to defend the Thames.",
 excerpt:"I know I have the body but of a weak and feeble woman; but I have the heart and stomach of a king, and of a king of England too.",
 source:"From a letter of Leonel Sharp, published in 1654; the exact wording is uncertain.",
-after:"The Armada had in fact already been driven north by English fireships and storms, and most of its ships were lost on the voyage home. The speech became a cornerstone of Elizabeth's legend as the queen who defied the greatest power of her age.",
+after:"The Armada had in fact already been driven north by English fireships and storms, and most of its ships were lost on the voyage home. The speech became central to Elizabeth's legend as the queen who defied the greatest power of her age.",
 links:["/encyclopedia/elizabeth-i|Elizabeth I","/encyclopedia/spanish-armada|Spanish Armada","/empire/habsburg-spain|Habsburg Spain"],
 led:["/encyclopedia/anglo-spanish-war-1585-1604|Anglo-Spanish War"],
 full:"https://en.wikisource.org/wiki/Speech_to_the_Troops_at_Tilbury|Wikisource"},

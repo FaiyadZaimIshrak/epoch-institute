@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -122,6 +122,18 @@
       <div class="ty" data-ty="machu-picchu"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The last of the objects taken to Yale are returned to Peru","o":["1902","1911","1983","2012"],"a":3,"w":"2012: The last of the objects taken to Yale are returned to Peru."},{"p":"Which came first?","q":"","o":["The last of the objects taken to Yale are returned to Peru","UNESCO designates Machu Picchu a World Heritage Site"],"a":1,"w":"2012: The last of the objects taken to Yale are returned to Peru · 1983: UNESCO designates Machu Picchu a World Heritage Site."},{"p":"In which year?","q":"Agustín Lizárraga reaches the citadel and leaves his name in charcoal on a temple window","o":["1911","1912","1902","1983"],"a":2,"w":"1902: Agustín Lizárraga reaches the citadel and leaves his name in charcoal on a temple window."},{"p":"Which came first?","q":"","o":["Melchor Arteaga leads Hiram Bingham to the site, which Bingham brings to international attention","UNESCO designates Machu Picchu a World Heritage Site"],"a":0,"w":"1911: Melchor Arteaga leads Hiram Bingham to the site, which Bingham brings to international attention · 1983: UNESCO designates Machu Picchu a World Heritage Site."},{"p":"In which year?","q":"Melchor Arteaga leads Hiram Bingham to the site, which Bingham brings to international attention","o":["1983","1912","1902","1911"],"a":3,"w":"1911: Melchor Arteaga leads Hiram Bingham to the site, which Bingham brings to international attention."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Johan Reinhard, Machu Picchu: Exploring an Ancient Sacred Center (The Cotsen Institute of Archaeology, University of California, Los Angeles, 2007)</li>
+        <li>Kenneth R. Wright, Machu Picchu: A Civil Engineering Marvel (ASCE Press (American Society of Civil Engineers), 2000)</li>
+        <li>Hiram Bingham, Lost City of the Incas (Weidenfeld &amp; Nicolson, 2003)</li>
+        <li>Amy Cox Hall, Framing a Lost City: Science, Photography, and the Making of Machu Picchu (University of Texas Press, 2017)</li>
+        <li>Christopher Heaney, Cradle of gold: the story of Hiram Bingham, a real-life Indiana Jones and the search for Machu Picchu (MacMillan, 2011)</li>
+        <li>Mark Rice, Making Machu Picchu: The Politics of Tourism in Twentieth-Century Peru (The University of North Carolina Press, 2018)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other great works</p>

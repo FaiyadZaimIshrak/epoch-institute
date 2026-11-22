@@ -81,7 +81,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#faith-map">Spread through the centuries</a></li><li><a href="#origins">Origins</a></li><li><a href="#beliefs">Beliefs &amp; Practice</a></li><li><a href="#texts">Texts &amp; Teachers</a></li><li><a href="#spread">Spread</a></li><li><a href="#community">Community &amp; Society</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -127,6 +127,15 @@
       </div>
 
     <p class="profile-summary" id="summary"><em>Canaanite religion was the polytheistic religion of the southern <a class="enc-link" href="/encyclopedia/levant">Levant</a> during about three millennia BCE, its pantheon headed by El and <a class="enc-link" href="/encyclopedia/asherah">Asherah</a>, with <a class="enc-link" href="/encyclopedia/baal">Baal</a>, Anat and <a class="enc-link" href="/encyclopedia/astarte">Astarte</a>. Known chiefly from the tablets of Ugarit, it honoured the dead, worshipped on high places and took in its neighbours’ gods. <a class="enc-link" href="/encyclopedia/phoenicians">Phoenicians</a> carried it west, where its Punic branch lasted until the 4th century CE.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Karel van der Toorn, Dictionary of Deities and Demons in the Bible (E.J. Brill, 1995)</li>
+        <li>Sabatino Moscatti, The World of the Phoenicians (Phoenix / Giant, 1968)</li>
+        <li>Sergio Ribichini, The Phoenicians (Rissoli, 1997)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other religions</p>

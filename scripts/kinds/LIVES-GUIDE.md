@@ -17,6 +17,31 @@ condemn in your own voice; let the attributed judgements stand. Where the source
 are described as their followers hold them and as scholars study them. Use the names the article uses, in full at
 first mention; give a person's own name beside a title or epithet where the article does.
 
+## Sacred lives (founders, prophets and saints: Jesus, Muhammad, the Buddha, Moses and the like; Nov 2026)
+Millions of readers hold these lives holy, and historians study them. Write so that both a believer and a historian
+would call the page fair.
+- **Two voices, each attributed.** What the tradition holds ("the Gospels say", "Muslim tradition holds", "the Pali
+  texts relate", "according to the Book of Exodus") and what historians assess ("most scholars date", "historians
+  generally accept", "scholars disagree whether"). Never state a miracle or a revelation as plain fact, and never deny
+  it: say who tells it. Never write "allegedly", "supposedly", "myth" or "legend" in your own voice for what a faith
+  holds; use the article's own attributed wording.
+- **Dates and existence.** Keep every hedge of the article ("c.", "traditionally", "disputed"). Where scholars doubt
+  that a figure lived as told (the article will say so), say it plainly once, attributed, and go on telling the life as
+  the tradition tells it. Set "circa" and "endCirca" true where the years are traditional or approximate.
+- **No ranking of faiths.** Do not call one religion truer, older, purer or more tolerant than another, and do not
+  compare founders in worth. Honorifics ("peace be upon him", "Lord", "Saint") are left out of running text unless they
+  are part of a name the article uses.
+- **The sections, read for a sacred life.** "rise": the call, the first teaching, the first followers. "deeds": the
+  teaching and the acts of the ministry or mission, as the sources tell them. "opponents": who opposed them in their
+  lifetime and why, as the tradition and the historians tell it, then the later debates among scholars about the
+  sources; no polemic of one faith against another, and no insult repeated. "last": the last days as each tradition
+  tells them, with the differences between traditions named (the crucifixion in the Gospels and in the Qur'an, for
+  instance, where the article gives both). "legacy": the faith and its branches, the texts, how the figure is seen in
+  other religions.
+- **facts.** "died" gives the end as the traditions tell it, attributed, where they differ. "role" says what the
+  followers hold the person to be and, in a few words, how historians describe them.
+- **Pictures are not your concern**, but do not describe a likeness or portrait of Muhammad or Ali.
+
 ## The file (out/<slug>.json), UTF-8
 ```
 {

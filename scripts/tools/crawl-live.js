@@ -1,11 +1,14 @@
 // Asks the live site for a sample of its addresses and lists what the server gets wrong: a status other than the one
 // expected, a page not sent as text/html, a script or stylesheet without its type, a missing cache header, a redirect to
 // the wrong place, and every sitemap file's URLs that answer 404 (a sample of each). Slow host: one request at a time.
-//   node scripts/tools/crawl-live.js [--per=3] [--base=https://the-epoch-institute.org]
+//   node scripts/tools/crawl-live.js [--per=3] [--gap=4] [--base=https://the-epoch-institute.org]
+// --gap: seconds between requests (default 4). The host challenges a client that asks quickly or with a new address
+// each time (15 Nov 2026), so the pass is slow, every address is a real one, and the tool is run once, never in a loop.
 const fs = require('fs'), path = require('path');
 const R = path.join(__dirname, '..', '..');
 const opt = Object.fromEntries(process.argv.slice(2).map(a => { const m = a.match(/^--([^=]+)=?(.*)$/); return m ? [m[1], m[2] || true] : [a, true]; }));
-const BASE = opt.base || 'https://the-epoch-institute.org', PER = +opt.per || 3;
+const BASE = opt.base || 'https://the-epoch-institute.org', PER = +opt.per || 3, GAP = (opt.gap === undefined ? 4 : +opt.gap) * 1000;
+const pause = () => new Promise(r => setTimeout(r, GAP));
 const UA = { 'User-Agent': 'EpochInstitute-check/1.0 (site self-check)' };
 const ROOTP = fs.readFileSync(path.join(R, 'scripts', 'deploy.sh'), 'utf8').match(/^PAGES=\(([^)]+)\)/m)[1].split(/\s+/).filter(Boolean);
 const checks = [];
@@ -21,13 +24,15 @@ for (const f of FOLDERS) {
 }
 for (const [u, t] of [['/shared.css', /text\/css/], ['/shared-nav.js', /javascript/], ['/css/pages.css', /text\/css/], ['/data/days/01-01.json', /javascript/],
   ['/sitemap.xml', /xml/], ['/feeds/today.xml', /xml/], ['/llms.txt', /text\/plain/], ['/favicon.ico', /icon/], ['/manifest.json', /json|javascript/], ['/sw.js', /javascript/]]) checks.push([u, 200, t]);
-checks.push(['/no-such-page-' + Date.now(), 404, /text\/html/]);
+checks.push(['/no-such-page-self-check', 404, /text\/html/]);   // one fixed address: never a new one each run
 checks.push(['/generator.html', 404, null]);
 checks.push(['/articles/sati-pratha', 410, null]);
 (async () => {
   const bad = [];
   for (const [u, status, type, loc] of checks) {
+    await pause();
     let r; try { r = await fetch(BASE + u, { headers: UA, redirect: 'manual' }); } catch (e) { bad.push(u + ' :: ' + e.message); continue; }
+    if (r.status === 200 && /One moment, please|being verified/i.test(r.headers.get('content-type') && /html/.test(r.headers.get('content-type')) ? await r.clone().text().then(t => t.slice(0, 600)) : '')) { console.log('STOPPED: the host answered with its bot check at ' + u + '; nothing more asked'); process.exit(2); }
     const ct = r.headers.get('content-type') || '', cc = r.headers.get('cache-control') || '';
     if (r.status !== status) bad.push(u + ' :: status ' + r.status + ', expected ' + status + (r.headers.get('location') ? ' -> ' + r.headers.get('location') : ''));
     else if (type && !type.test(ct)) bad.push(u + ' :: content-type "' + ct + '"');
@@ -38,9 +43,10 @@ checks.push(['/articles/sati-pratha', 410, null]);
   // sitemaps: a sample of each file's addresses must answer 200
   const idx = await (await fetch(BASE + '/sitemap.xml', { headers: UA })).text();
   for (const sm of [...idx.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1])) {
+    await pause();
     const xml = await (await fetch(sm, { headers: UA })).text(); const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]);
     for (let i = 0; i < Math.min(PER * 2, locs.length); i++) {
-      const u = locs[Math.floor(rnd() * locs.length)];
+      const u = locs[Math.floor(rnd() * locs.length)]; await pause();
       const r = await fetch(u, { headers: UA, redirect: 'manual' }); try { await r.arrayBuffer(); } catch (e) {}
       if (r.status !== 200) bad.push('sitemap ' + sm.replace(BASE, '') + ': ' + u.replace(BASE, '') + ' :: ' + r.status);
     }

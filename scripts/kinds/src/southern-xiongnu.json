@@ -18,13 +18,34 @@
  ],
  "dyk": "The Han court often installed southern chanyus who were partial to its interests, and in the late 2nd century the chanyu's own followers killed him for leading them into the Han's internal wars.",
  "ev": [
-  ["46", "Punu ascends the Xiongnu throne in place of Bi, the eldest son of the preceding chanyu, who refuses to attend the annual meeting at court"],
-  ["48", "Eight southern tribes secede from Punu and acclaim Bi as chanyu; their kingdom becomes known as the Southern Xiongnu"],
-  ["50", "The Southern Xiongnu enter tributary relations with Han China, and the chanyu's court is set in Meiji County, Xihe Commandery"],
-  ["89", "The Han general Dou Xian crushes the Northern Xiongnu at the Battle of the Altai Mountains"],
-  ["188", "Rebels among the southern chanyu's followers kill him after he sends his people to fight the Wuhuan for the Han"],
-  ["195", "The chanyu Yufuluo dies at Pingyang and is succeeded by his brother Huchuquan"],
-  ["216", "Cao Cao detains Huchuquan in the city of Ye and sends his uncle Qubei to manage the Xiongnu of Shanxi"]
+  [
+   "46",
+   "Punu ascends the Xiongnu throne in place of Bi, the eldest son of the preceding chanyu, who refuses to attend the annual meeting at court"
+  ],
+  [
+   "48",
+   "Eight southern tribes secede from Punu and acclaim Bi as chanyu; their kingdom becomes known as the Southern Xiongnu"
+  ],
+  [
+   "50",
+   "The Southern Xiongnu enter tributary relations with Han China, and the chanyu's court is set in Meiji County, Xihe Commandery"
+  ],
+  [
+   "89",
+   "The Han general Dou Xian crushes the Northern Xiongnu at the Battle of the Altai Mountains"
+  ],
+  [
+   "188",
+   "Rebels among the southern chanyu's followers kill him after he sends his people to fight the Wuhuan for the Han"
+  ],
+  [
+   "195",
+   "The chanyu Yufuluo dies at Pingyang and is succeeded by his brother Huchuquan"
+  ],
+  [
+   "216",
+   "Cao Cao detains Huchuquan in the city of Ye and sends his uncle Qubei to manage the Xiongnu of Shanxi"
+  ]
  ],
  "sections": {
   "foundation": "<p>The Southern Xiongnu grew out of the Xiongnu Empire founded by Modu Chanyu after 209 BCE. In the civil war of 60–53 BCE the chanyu Huhanye moved south and submitted to the Han, using Chinese support against his brother Zhizhi; the Han reduced the Xiongnu from a \"brotherly state\" to an \"outer vassal\". Tributary relations lapsed under Huduershi (18–48 CE), who took advantage of the upheavals of the Xin dynasty to regain the Western Regions and at the height of his power compared himself to Modu.</p><p>Growing regionalism undid that recovery. Against the principle of fraternal succession set by Huhanye, Huduershi named his son Punu heir. Bi (Pi), the Rizhu King of the Right and eldest son of the preceding chanyu, had the stronger claim and refused to attend the annual meeting at the chanyu's court; in 46 Punu took the throne nonetheless. In 48 a confederation of eight Xiongnu tribes in Bi's power base in the south, with a force of 40,000 to 50,000 men, seceded from Punu and acclaimed Bi as chanyu. This kingdom became known as the Southern Xiongnu, while Punu's rump state around the Orkhon, in north central Mongolia, became the Northern Xiongnu.</p>",
@@ -35,8 +56,53 @@
   "decline": "<p>After his expulsion Yufuluo travelled to Luoyang to seek aid, but the Han court was in disorder from the clash between the Grand General He Jin and the eunuchs and the intervention of the warlord Dong Zhuo. He settled with his followers around Pingyang, east of the Fen River in Shanxi, where he died in 195 and was succeeded by his brother Huchuquan. The Southern Xiongnu had effectively dissolved: many of their tribes broke away and kept their distance from the Han civil war, while Yufuluo's group and the Xiuchuge were drawn into it and later subdued by Cao Cao.</p><p>The upheaval cost the Han several frontier commanderies of Bing province, among them Shuofang and Yunzhong, which were lost to hostile tribes; Cao Cao abolished them and reduced Bing to the region of modern Shanxi. In 216 he detained Huchuquan in the city of Ye and sent Huchuquan's uncle, Qubei, to manage the remaining Xiongnu vassals in Shanxi. Huchuquan held the title of chanyu in name until his death, after which it was abolished. Brought closer to Chinese rule, the tribes could be watched for rebellion and used as cavalry auxiliaries; they were later divided into the Five Divisions around Taiyuan Commandery, each led by a local chief under the eye of a Chinese resident.</p>"
  },
  "summary": "The Southern Xiongnu were the eight Xiongnu tribes that broke away under Bi in 48 and became tributaries of the Han, resettled along the northern frontier and paid to fight the Northern Xiongnu. Weakened by Xianbei raids, Han interference and rebellion, they dissolved in the 190s, and Cao Cao ended their chanyu's court in 216.",
- "references": [],
- "points": [[48, 6], [49, 7], [50, 8], [87, 9], [89, 10], [91, 10], [94, 8], [188, 5], [195, 3], [216, 1]],
+ "references": [
+  "Thomas J. Barfield, The Perilous Frontier: Nomadic Empires and China, 221 BC to AD 1757 (Basil Blackwell, 1989)",
+  "Nicola Di Cosmo, Ancient China and its Enemies: The Rise of Nomadic Power in East Asian History (Cambridge University Press, 2002)",
+  "Rene Grousset, The Empire of the Steppes (Rutgers University Press, 1970)"
+ ],
+ "points": [
+  [
+   48,
+   6
+  ],
+  [
+   49,
+   7
+  ],
+  [
+   50,
+   8
+  ],
+  [
+   87,
+   9
+  ],
+  [
+   89,
+   10
+  ],
+  [
+   91,
+   10
+  ],
+  [
+   94,
+   8
+  ],
+  [
+   188,
+   5
+  ],
+  [
+   195,
+   3
+  ],
+  [
+   216,
+   1
+  ]
+ ],
  "pointDescs": {
   "48": "Eight Xiongnu tribes with 40,000 to 50,000 men secede from Punu and acclaim Bi as chanyu.",
   "49": "The Southern Xiongnu deal the Northern Xiongnu a heavy defeat.",
@@ -49,8 +115,21 @@
   "195": "Yufuluo dies at Pingyang and is succeeded by Huchuquan; the Southern Xiongnu have effectively dissolved.",
   "216": "Cao Cao detains Huchuquan at Ye and sends Qubei to manage the Xiongnu of Shanxi."
  },
- "stats": {"militaryPower": 3, "territorialReach": 2, "economicStrength": 2, "tradeNetworks": 3, "administrativeSophistication": 3, "culturalIntellectualOutput": 1, "institutionalLongevity": 4, "historicalInfluence": 5},
- "tags": ["Nomadic", "Tribal", "Military"],
+ "stats": {
+  "militaryPower": 3,
+  "territorialReach": 2,
+  "economicStrength": 2,
+  "tradeNetworks": 3,
+  "administrativeSophistication": 3,
+  "culturalIntellectualOutput": 1,
+  "institutionalLongevity": 4,
+  "historicalInfluence": 5
+ },
+ "tags": [
+  "Nomadic",
+  "Tribal",
+  "Military"
+ ],
  "notes": [
   "The saved article is the general Xiongnu article; the Southern Xiongnu have only a short section of it. The hierarchy, the diet and the lateral succession are told of the Xiongnu in general and are given here as such.",
   "The article names no works in its reference lists (they are empty in the saved text), so references is [].",

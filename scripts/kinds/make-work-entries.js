@@ -14,6 +14,9 @@ const WORKS = {
   'One Thousand and One Nights': ['one-thousand-and-one-nights', 'text', '8th–19th century', [['One Thousand and One Nights', 0], ['Thousand and One Nights', 0], ['Arabian Nights', 0]]],
   'The Tale of Genji': ['the-tale-of-genji', 'text', 'early 11th century', [['The Tale of Genji', 0], ['Tale of Genji', 0]]],
   'Terracotta Army': ['terracotta-army', 'artifact', 'c. 246–209 BCE', [['Terracotta Army', 0], ['terracotta army', 1]]],
+  // works3 (22 Nov 2026). "Yijing" alone stays the monk's name (the entry yijing): on the profiles where it means the
+  // book it is a profile-only form of this entry.
+  'I Ching': ['i-ching', 'text', '10th–4th century BCE', [['I Ching', 0], ['Book of Changes', 0], ['Classic of Changes', 0], ['Zhou yi', 0], ['Zhouyi', 0]]],
 };
 function lede(t) {
   const ends = [...t.matchAll(/[.!?](?=\s+[A-Z“"(])/g)].map(m => m.index + 1).filter(i => !/(\b[A-Z]|\bc|\bSt)\.$/.test(t.slice(Math.max(0, i - 4), i)));

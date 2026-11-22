@@ -747,7 +747,19 @@ var HOME_PICS = {
   "Toussaint Louverture": {"img":"/images/encyclopedia/toussaint-louverture.jpg","name":"Toussaint Louverture","slug":"toussaint-louverture","credit":"Pierre-Charles Baquoy (1759-1829), Public domain"},
   "George Washington": {"img":"/images/encyclopedia/george-washington.jpg","name":"George Washington","slug":"george-washington","credit":"Gilbert Stuart, Public domain"},
   "Pachacuti": {"img":"/images/encyclopedia/pachacuti.jpg","name":"Pachacuti","slug":"pachacuti","credit":"Public domain"},
-  "Liliʻuokalani": {"img":"/images/encyclopedia/lili-uokalani.jpg","name":"Liliʻuokalani","slug":"lili-uokalani","credit":"James J. Williams / Adam Cuerden, Public domain"}
+  "Liliʻuokalani": {"img":"/images/encyclopedia/lili-uokalani.jpg","name":"Liliʻuokalani","slug":"lili-uokalani","credit":"James J. Williams / Adam Cuerden, Public domain"},
+  "Jesus": {"img":"/images/encyclopedia/jesus.jpg","name":"Jesus","slug":"jesus","credit":"Unknown artist, Public domain","top":18},
+  "Muhammad": {"img":"/images/encyclopedia/prophets-mosque.jpg","name":"Prophet's Mosque","slug":"prophets-mosque","credit":"Bluemangoa2z at Malayalam Wikipedia, Public domain"},
+  "The Buddha": {"img":"/images/encyclopedia/gautama-buddha.jpg","name":"Gautama Buddha","slug":"gautama-buddha","credit":"พระมหาเทวประภาส วชิรญาณเมธี (ผู้ถ่าย-ปล่อยสัญญาอนุญาตภาพให้นำไปใช้ได้เพื่อการศึกษาโดยอยู่ภา่ยใต้ cc-by-sa-3.0) …, CC BY-SA 3.0","top":25},
+  "Moses": {"img":"/images/encyclopedia/moses.jpg","name":"Moses","slug":"moses","credit":"Rembrandt, Public domain","top":30},
+  "Zoroaster": {"img":"/images/encyclopedia/gathas.jpg","name":"Gathas","slug":"gathas","credit":"Unknown author, Public domain"},
+  "Guru Nanak": {"img":"/images/encyclopedia/guru-nanak.jpg","name":"Guru Nanak","slug":"guru-nanak","credit":"Amritpal Singh Mann. Painted by Jaimal Singh Naqqash (1860–1916), Mehtab Singh Naqqash (1871–1940), and Hukum Singh., CC BY-SA 4.0","top":25},
+  "Laozi": {"img":"/images/encyclopedia/laozi.jpg","name":"Laozi","slug":"laozi","credit":"Zhang Lu, Public domain","top":25},
+  "Mahavira": {"img":"/images/encyclopedia/mahavira.jpg","name":"Mahavira","slug":"mahavira","credit":"Dayodaya, CC BY-SA 3.0","top":35},
+  "Paul the Apostle": {"img":"/images/encyclopedia/paul-the-apostle.jpg","name":"Paul the Apostle","slug":"paul-the-apostle","credit":"Unknown author, Public domain","top":15},
+  "Ali ibn Abi Talib": {"img":"/images/encyclopedia/imam-ali-shrine.jpg","name":"Imam Ali Shrine","slug":"imam-ali-shrine","credit":"U.S. Navy photo by Photographer's Mate 1st Class Arlo K. Abrahamson., Public domain"},
+  "Abraham": {"img":"/images/encyclopedia/abraham.jpg","name":"Abraham","slug":"abraham","credit":"Guercino, Public domain","top":25},
+  "Mary, mother of Jesus": {"img":"/images/encyclopedia/mary-mother-of-jesus.jpg","name":"Mary, mother of Jesus","slug":"mary-mother-of-jesus","credit":"Asia, CC BY-SA 4.0","top":20}
 };
 
 var HOME_ENTRIES = [

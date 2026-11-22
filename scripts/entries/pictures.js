@@ -3,7 +3,10 @@
 // and the editor's picks copied to images/encyclopedia/<slug>.jpg with img and credit written into
 // scripts/added-entries.json. Only free licences are kept (public domain, CC0, CC BY, CC BY-SA; never NC or ND).
 //   node scripts/entries/pictures.js cands <list.tsv> <cands.json>       list: slug <TAB> Wikipedia title
-//   node scripts/entries/pictures.js fetch <cands.json> <cache dir>       320 px thumbnails + meta, 3 s apart (429: waits)
+//   node scripts/entries/pictures.js fetch <cands.json> <cache dir>       330 px thumbnails + meta, 3 s apart (429: waits)
+//        (330, not 320: Commons serves its standard widths freely, 120, 250, 330, 500, 960 …; and never an original:
+//        upload.wikimedia.org answered a script 429 for an hour after sixteen files, while thumb.wikimedia.org's standard
+//        thumbnails kept coming: 22 Nov 2026)
 //   node scripts/entries/pictures.js sheet <cands.json> <cache dir> <out.html>   numbered "<slug>.<k>"
 //   node scripts/entries/pictures.js apply <picks.txt> <cands.json> <cache dir>  picks: slug <TAB> k ("-" = none)
 // apply writes JPEGs (a PNG or GIF thumbnail is converted by PowerShell's System.Drawing on white) and needs the
@@ -49,8 +52,11 @@ if (cmd === 'cands') {
     for (const [slug, c] of Object.entries(C)) {
       for (let k = 0; k < c.files.length; k++) {
         const base = path.join(dir, slug + '.' + (k + 1)); if (fs.existsSync(base + '.json')) continue;
-        const j = await getJson('https://commons.wikimedia.org/w/api.php?action=query&format=json&formatversion=2&prop=imageinfo&iiprop=url|extmetadata|mime&iiurlwidth=320&titles=' + encodeURIComponent('File:' + c.files[k]));
-        const ii = j && j.query && j.query.pages && j.query.pages[0] && j.query.pages[0].imageinfo && j.query.pages[0].imageinfo[0];
+        const info = async w => { const j = await getJson('https://commons.wikimedia.org/w/api.php?action=query&format=json&formatversion=2&prop=imageinfo&iiprop=url|extmetadata|mime|size&iiurlwidth=' + w + '&titles=' + encodeURIComponent('File:' + c.files[k])); return j && j.query && j.query.pages && j.query.pages[0] && j.query.pages[0].imageinfo && j.query.pages[0].imageinfo[0]; };
+        let ii = await info(330);
+        // an original narrower than 330 px comes "unscaled" from upload.wikimedia.org, which answers a script 429 after a few
+        // files: ask for the next standard width below it instead (thumb.wikimedia.org)
+        if (ii && ii.width <= 330) { const w = [250, 120].find(x => x < ii.width); if (w) ii = await info(w); }
         if (!ii) { fs.writeFileSync(base + '.json', JSON.stringify({ file: c.files[k], error: 'no imageinfo' })); continue; }
         const m = ii.extmetadata || {}, lic = strip((m.LicenseShortName || {}).value), artist = strip((m.Artist || {}).value) || 'Unknown author';
         const meta = { file: c.files[k], licence: lic, artist, source: 'https://commons.wikimedia.org/wiki/File:' + c.files[k].replace(/ /g, '_'), mime: ii.mime, desc: strip((m.ImageDescription || {}).value).slice(0, 200) };

@@ -67,3 +67,40 @@ looted them in the Punitive Expedition of 1897, and they are now held in museums
 Run the checker on each file and fix what it reports:
 `node scripts/style/check.js scripts/style/empires <slug>`
 Report which fields you left unchanged, and anything the rules forced you to keep that still reads badly.
+
+# The round of November 2026: natural wording, correct phrasing, nothing removed
+The owner's instruction for this round: "Remove traces of AI and make them look natural … Don't remove anything."
+These rules come on top of everything above and win where they differ.
+
+## Nothing is removed
+- Every sentence's information stays. A sentence that only sums up or praises is NOT cut: reword it so that it states
+  the concrete thing it points at, using what the same paragraph already says. If it says nothing the paragraph does
+  not, join its plain meaning to the sentence before it.
+- Length between 95% and 110% of the original (85% to 115% for a field under 800 characters). The checker enforces it.
+- The facts are not yours to check or change in this round: no fact is corrected, added or dropped.
+
+## Habits of machine writing to take out (structure, not only words)
+- A paragraph that ends on a moral: "This shows how …", "Its legacy endures", "…, a reminder that …".
+- "Not only X but also Y", "more than just a …", "It was X that …", "Whether … or …,", "From X to Y, …" as an opener.
+- Threes by habit: three adjectives, three abstractions, three parallel clauses where the text has no instance of each.
+- Every sentence of one length and shape; every paragraph opening the same way; three sentences in a row that begin
+  with the same word (four for "He", "She", "It", "They").
+- A claim led in by a colon ("The result was clear:"), a rhetorical question, signposts ("It is worth noting",
+  "Importantly", "In short", "Ultimately", "In essence").
+- Fillers: "a variety of", "a range of", "various", "numerous" where no number is known; "significant", "notable",
+  "key", "major", "crucial" where the sentence stands without them.
+- A summary sentence that repeats the paragraph it closes.
+
+## Incorrect phrasing to set right
+- A doubled word; a missing or wrong article ("a empire", "an kingdom"); a subject and verb that disagree.
+- A tense that changes inside a sentence or a paragraph without cause. The past is told in the past tense; living
+  peoples, surviving works and present-day places in the present.
+- A sentence with no main verb; a run-on joined by commas; relative clauses stacked three deep.
+- A dangling opener: "Elected president in 1924, his victory ended …" becomes "His election as president in 1924
+  ended …".
+- A pronoun with no clear referent, above all at the start of a paragraph: name the subject.
+- A list whose items do not match in form; "between … to" (between … and), "from … and" (from … to), "comprised of"
+  (composed of, or comprised), "less" with things that are counted (fewer).
+- British spelling; day-first dates ("21 June 1788"); BCE and CE, never BC or AD; no space before a comma or full stop;
+  brackets and quotation marks that close.
+- One spelling of a name and one form of a title within a text.

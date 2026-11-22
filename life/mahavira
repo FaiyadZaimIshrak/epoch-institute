@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Mahavira: Life, Deeds and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Mahavira, born Vardhamana, was an Indian religious reformer of the 6th or 5th century BCE, whom Jains hold to be the 24th and last Tirthankara of the…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Mahavira: Life, Deeds and Legacy — The Epoch Institute">
+<meta property="og:description" content="Mahavira, born Vardhamana, was an Indian religious reformer of the 6th or 5th century BCE, whom Jains hold to be the 24th and last Tirthankara of the…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/life/mahavira">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/mahavira.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/mahavira.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/life/mahavira">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great lives","item":"https://the-epoch-institute.org/profiles?kind=life"},{"@type":"ListItem","position":4,"name":"Mahavira"}]},{"@type":"Article","headline":"Mahavira","description":"Mahavira, born Vardhamana, was an Indian religious reformer of the 6th or 5th century BCE, whom Jains hold to be the 24th and last Tirthankara of the…","url":"https://the-epoch-institute.org/life/mahavira","mainEntityOfPage":"https://the-epoch-institute.org/life/mahavira","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Mahavira"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/mahavira.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=life">Great lives</a></li><li aria-current="page">Mahavira</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Mahavira.png" alt="Mahavira" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Life · South &amp; Southeast Asia</p>
+        <h1 class="profile-detail-name">Mahavira</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">traditionally 599–527 BCE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Born</span><span class="info-stat-val">Traditionally in 599 BCE at Kundagrama in the Kingdom of the Videhas, in present-day <a class="enc-link" href="/encyclopedia/bihar">Bihar</a>, to King Siddhartha of the Nāya tribe and Queen Trishala</span></div>
+          <div class="info-stat"><span class="info-stat-label">Died</span><span class="info-stat-val">Traditionally at <a class="enc-link" href="/encyclopedia/pavapuri">Pawapuri</a> in <a class="enc-link" href="/encyclopedia/bihar">Bihar</a>, in 527 BCE according to the Śvetāmbaras and 510 BCE according to the <a class="enc-link" href="/encyclopedia/digambara">Digambaras</a>; some scholars date his death much later</span></div>
+          <div class="info-stat"><span class="info-stat-label">Who they were</span><span class="info-stat-val">Held by Jains to be the 24th and final <a class="enc-link" href="/encyclopedia/tirthankara">Tirthankara</a> of the present time cycle; described by historians as a reformer of an existing Jain community, the Niganthas</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">Teaching the five vows; ahimsa as the supreme virtue; the soul and karma; <a class="enc-link" href="/encyclopedia/anekantavada">anekantavada</a>; twelve and a half years of asceticism; the four-fold order of monks, nuns, laymen and laywomen</span></div>
+        </div>
+        <p class="empire-meta">5 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Jains hold that Mahavira, born a prince, abandoned royal life at about thirty, practised severe asceticism for twelve and a half years, attained Kevala Jnana, and then preached for thirty years.</li><li>He taught five vows, non-violence first among them, and a doctrine of many-sided reality, and Jains hold that his chief disciple Gautama Swami compiled his teachings as the Agamas.</li><li>Scholars agree that he lived, but they disagree about his dates, and they see him as a reformer of an older Jain or proto-Jain community led by <a class="enc-link" href="/encyclopedia/parshvanatha">Parshvanatha</a>, not as its founder.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>In 1974, for the 2,500th anniversary of Mahavira's nirvana, the mendicants of the Śvētāmbara, <a class="enc-link" href="/encyclopedia/digambara">Digambara</a> and Sthānakavāsī sects for the first time assembled on one platform and agreed on a common flag and emblem.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#early">Early Life</a></li><li><a href="#rise">Rise</a></li><li><a href="#deeds">What They Did</a></li><li><a href="#opponents">Opponents &amp; Critics</a></li><li><a href="#last">Last Years</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">599 BCE</span><span class="rf-text">Traditional date of Mahavira's birth at Kundagrama, as both Jain sects hold</span></li><li><span class="rf-year">At about thirty</span><span class="rf-text">He abandons royal life and becomes a naked ascetic, according to the Ācārāṅga Sūtra</span></li><li><span class="rf-year">After twelve and a half years</span><span class="rf-text">He attains Kevala Jnana under a Sāla tree on the bank of the Rijuvalika River</span></li><li><span class="rf-year">After his omniscience</span><span class="rf-text">He initiates his first disciples, the eleven Ganadharas, led by Indrabhuti Gautama</span></li><li><span class="rf-year">527 BCE</span><span class="rf-text">Śvētāmbara date of his nirvana at <a class="enc-link" href="/encyclopedia/pavapuri">Pawapuri</a>; the <a class="enc-link" href="/encyclopedia/digambara">Digambaras</a> say 510 BCE</span></li><li><span class="rf-year">1st century BCE to 2nd century CE</span><span class="rf-text">The earliest known images of him are made at <a class="enc-link" href="/encyclopedia/mathura">Mathura</a></span></li><li><span class="rf-year">c. 550 CE</span><span class="rf-text">The Akota hoard's bronze of Mahavira as Jivantasvami, the earliest known clothed Jain idol, is dated</span></li><li><span class="rf-year">1974</span><span class="rf-text">Jain sects hold a joint commemoration of the 2,500th anniversary of his nirvana</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="early">
+        <h2 class="profile-section-title">Early Life</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/parshvanatha"><img src="/images/encyclopedia/parshvanatha.jpg" alt="Parshvanatha" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/parshvanatha">Parshvanatha</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Jirawala_Parshwanath.png" target="_blank" rel="noopener">Fawks3107, CC0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Mahavira, whose birth name was Vardhamana, is placed by Jains in a long line of <a class="enc-link" href="/encyclopedia/tirthankara">Tirthankaras</a>, ford-makers who found a passage across the sea of birth and death. He is the 24th and last of the present time cycle. Jain texts describe 26 earlier births, in which he was among other things a denizen of hell, a lion, a god, and Marichi, the son of Bharata Chakravartin.</p><p>Jain tradition says he was born in 599 BCE at Kundagrama in the Kingdom of the Videhas, to King Siddhartha of the Nāya tribe and Queen Trishala. The Nāyas were kshatriyas, and the Ācārāṅga Sūtra calls Mahavira a prince of Videha. Where Kundagrama lay in <a class="enc-link" href="/encyclopedia/bihar">Bihar</a> is disputed: J. P. Sharma identified it as a suburb of <a class="enc-link" href="/encyclopedia/vaishali">Vaishali</a>, and another candidate is the village of Basu Kund, north of <a class="enc-link" href="/encyclopedia/patna">Patna</a>.</p><p>The Śvetāmbara texts tell that his embryo first formed in a Bamana woman and was moved to Trishala's womb, a story the <a class="enc-link" href="/encyclopedia/digambara">Digambaras</a> do not accept. The two traditions also differ about his marriage. The Digambaras say he refused to marry Yashoda, while the Śvetāmbaras say he married her and had a daughter, Priyadarshana. His parents were, according to the Ācārāṅga Sūtra, lay followers of <a class="enc-link" href="/encyclopedia/parshvanatha">Parshvanatha</a>.</p></div>
+      </div>
+      <div class="profile-section-block" id="rise">
+        <h2 class="profile-section-title">Rise</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/kalpa-sutra"><img src="/images/encyclopedia/kalpa-sutra.jpg" alt="Kalpa Sūtra" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/kalpa-sutra">Kalpa Sūtra</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Kalpasutra_Mahavira_Nirvana.jpg" target="_blank" rel="noopener">Unknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>At about thirty, some accounts say twenty-eight, Mahavira left his family and royal life. He undertook severe fasts and bodily mortifications, meditated under the <a class="enc-link" href="/encyclopedia/ashoka">Ashoka</a> tree and discarded his clothes. The Ācārāṅga Sūtra gives a graphic description of his hardships.</p><p>According to traditional accounts, he attained Kevala Jnana, omniscience, under a Sāla tree on the bank of the River Rijuvalika near Jrimbhikagrama, after twelve years of rigorous penance, at the age of 43. The Śvētāmbara tradition says he then travelled through <a class="enc-link" href="/encyclopedia/india">India</a> to teach for thirty years, while the <a class="enc-link" href="/encyclopedia/digambara">Digambaras</a> believe he stayed in his Samavasarana, the holy assembly, and delivered sermons there.</p><p>Jain texts name eleven <a class="enc-link" href="/encyclopedia/brahmanas">Brahmanas</a> as his first disciples, the eleven Ganadharas, led by Indrabhuti Gautama. Mahavira initiated his mendicants with the five vows. According to the <a class="enc-link" href="/encyclopedia/kalpa-sutra">Kalpa Sūtra</a>, he had 14,000 male ascetics, 36,000 female ascetics, 159,000 male lay followers and 318,000 female lay followers. Tradition names Srenika and <a class="enc-link" href="/encyclopedia/ajatashatru">Kunika</a>, popularly known as <a class="enc-link" href="/encyclopedia/bimbisara">Bimbisara</a> and Ajatashatru, and Chetaka of Videha as royal followers, and holds Chandana to be the leader of the female monastic order.</p></div>
+      </div>
+      <div class="profile-section-block" id="deeds">
+        <h2 class="profile-section-title">What They Did</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/digambara"><img src="/images/encyclopedia/digambara.jpg" alt="Digambara" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/digambara">Digambara</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Mahavir.jpg" target="_blank" rel="noopener">Dayodaya, CC BY-SA 3.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Mahavira is best remembered for teaching that ahimsa, non-violence, is the supreme moral virtue. It applies to actions, speech and thought, and extends to every living being, since injuring any being creates bad karma. The Ācārāṅga Sūtra says that he saw life in animals, plants, insects, water, fire and wind, and taught that a monk should not light a fire or wave his arms in the air, lest he injure beings in those states of matter.</p><p>With it, the Jain Agamas list four more vows that ascetics and householders observe: satya, truthfulness; asteya, non-stealing; brahmacharya, chastity for monks and faithfulness for householders; and aparigraha, non-attachment, which for mendicants means owning nothing. The <a class="enc-link" href="/encyclopedia/digambara">Digambara</a> sky-clad ascetics read nakedness as the sign of that vow.</p><p>He taught that the soul exists, is substantial and eternal, and is bound to samsara by karma, that there is no creator deity, and that liberation is reached by self-awareness, self-cultivation and restraint. He also taught <a class="enc-link" href="/encyclopedia/anekantavada">anekantavada</a>, many-sided reality: truth has many aspects, and language expresses only one perspective at a time. Jain tradition holds that his teachings were compiled by Gautama Swami in twelve parts.</p></div>
+      </div>
+      <div class="profile-section-block" id="opponents">
+        <h2 class="profile-section-title">Opponents &amp; Critics</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/gautama-buddha"><img src="/images/encyclopedia/gautama-buddha.jpg" alt="Gautama Buddha" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/gautama-buddha">Gautama Buddha</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Buddha_in_Sarnath_Museum_(Dhammajak_Mutra).jpg" target="_blank" rel="noopener">พระมหาเทวประภาส วชิรญาณเมธี (ผู้ถ่าย-ปล่อยสัญญาอนุญาตภาพให้นำไปใช้ได้เพื่อการศึกษาโดยอยู่ภา่ยใต้ cc-by-sa-3.0) …, CC BY-SA 3.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Mahavira taught among rival traditions. Early Buddhist texts mention the Niganthas, the community he is thought to have reformed, and Buddhist sources make him a contemporary of the <a class="enc-link" href="/encyclopedia/gautama-buddha">Buddha</a>, in the reigns of <a class="enc-link" href="/encyclopedia/bimbisara">Bimbisara</a> and <a class="enc-link" href="/encyclopedia/ajatashatru">Ajatashatru</a>. Each religion of the time was highly critical of the knowledge systems and ideologies of its rivals. Colonial-era Indologists took <a class="enc-link" href="/encyclopedia/jainism">Jainism</a> for a sect of <a class="enc-link" href="/encyclopedia/buddhism">Buddhism</a> because of similar iconography and ascetic practice. Later scholarship found the teachings different: Winternitz notes that Mahavira taught a very elaborate belief in the soul, which Buddhists denied.</p><p>Later debates within Jainism also look back to him. The <a class="enc-link" href="/encyclopedia/digambara">Digambaras</a> hold that a woman cannot gain liberation through asceticism and can at best be reborn as a man, while the Śvetāmbaras read him as encouraging both sexes to pursue moksha. The two sects differ on where he preached, on his marriage, and on the embryo transfer.</p><p>Historians doubt the traditional chronology. The Vira Nirvana Samvat count rests on a list of kings that Rapson calls unreliable, as it confuses rulers of <a class="enc-link" href="/encyclopedia/ujjain">Ujjain</a>, <a class="enc-link" href="/encyclopedia/magadha">Magadha</a> and other kingdoms. Paul Dundas also cautions that <a class="enc-link" href="/encyclopedia/anekantavada">anekantavada</a> has been misread as general <a class="enc-link" href="/encyclopedia/religious-tolerance">religious tolerance</a>: it concerns the nature of reality, and the five vows for monks and nuns carry no 'perhaps'.</p></div>
+      </div>
+      <div class="profile-section-block" id="last">
+        <h2 class="profile-section-title">Last Years</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/tirthankara"><img src="/images/encyclopedia/tirthankara.jpg" alt="Tirthankara" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/tirthankara">Tirthankara</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Jain_24-Tirthankaras.jpg" target="_blank" rel="noopener">Unknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Jain texts place his nirvana at <a class="enc-link" href="/encyclopedia/pavapuri">Pawapuri</a> in present-day <a class="enc-link" href="/encyclopedia/bihar">Bihar</a>. The Śvētāmbara tradition dates it to 527 BCE and the <a class="enc-link" href="/encyclopedia/digambara">Digambara</a> tradition to 510 BCE, and in both his jiva is believed to dwell in Siddhashila, the home of liberated souls. His chief disciple, Gautama, is said to have attained omniscience the night Mahavira reached nirvana.</p><p>Accounts differ. Some texts describe a simple nirvana, and others recount grand celebrations attended by gods and kings. In <a class="enc-link" href="/encyclopedia/jinasena">Jinasena</a>'s Mahapurana heavenly beings arrive to perform the funeral rites. Some texts say that at the age of 72 he gave his last preaching over six days to a large crowd, which fell asleep and woke to find him gone, leaving only his nails and hair, which his followers cremated. The Digambara Pravachanasara holds that only the nails and hair of <a class="enc-link" href="/encyclopedia/tirthankara">Tirthankaras</a> remain, and the rest of the body dissolves in the air like <a class="enc-link" href="/encyclopedia/camphor">camphor</a>.</p><p>Historians date his death differently. On the <a class="enc-link" href="/encyclopedia/gautama-buddha">Buddha</a>'s short chronology, Dundas suggests that Mahavira may have died around 425 BCE or a few years after, and Long suggests a lifespan of c. 499 to 427 BCE. Others, using <a class="enc-link" href="/encyclopedia/hemachandra">Hemachandra</a>'s chronologies, give 549 BCE for his birth and 477 or c. 468 to 467 BCE for his death.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/mahatma-gandhi"><img src="/images/encyclopedia/mahatma-gandhi.jpg" alt="Mahatma Gandhi" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/mahatma-gandhi">Mahatma Gandhi</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Mahatma-Gandhi,_studio,_1931.jpg" target="_blank" rel="noopener">Elliott &amp; Fry, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Mahavira's legacy is the codification of Jain philosophy and the four-fold order of monks, nuns, laymen and laywomen, which gave both ascetics and householders a path and let <a class="enc-link" href="/encyclopedia/jainism">Jainism</a> survive as a living tradition. Jain tradition says that the teachings were gradually lost after about 300 BCE, when a famine in <a class="enc-link" href="/encyclopedia/magadha">Magadha</a> dispersed the monks. Later efforts to gather the canon, including an attempt in the 5th century CE, did not reconcile the Śvetāmbara and <a class="enc-link" href="/encyclopedia/digambara">Digambara</a> versions, and each tradition holds a somewhat different and incomplete one. The texts were first written on palm leaf: the Ṣaṭkhaṅḍāgama, among the oldest Digambara texts, was written down under Āchārya Dharasena.</p><p>He is among the five <a class="enc-link" href="/encyclopedia/tirthankara">Tirthankaras</a> who attract the most devotional worship. His emblem is the lion, and his earliest images come from <a class="enc-link" href="/encyclopedia/mathura">Mathura</a>. Jains celebrate his birth as Mahavir Janma Kalyanak and his nirvana as <a class="enc-link" href="/encyclopedia/diwali">Diwali</a>, which marks the Jain New Year. <a class="enc-link" href="/encyclopedia/pavapuri">Pawapuri</a>, with its Jal Mandir, is the chief pilgrimage site.</p><p><a class="enc-link" href="/encyclopedia/mahatma-gandhi">Gandhi</a> called Mahavira the greatest authority on ahimsa, and <a class="enc-link" href="/encyclopedia/rabindranath-tagore">Rabindranath Tagore</a> wrote that he proclaimed that religion is a reality and not a mere social convention.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Mahavira, called Vardhamana at birth, is held by Jains to be the 24th and last <a class="enc-link" href="/encyclopedia/tirthankara">Tirthankara</a>. He taught five vows, with ahimsa first, and scholars see him as a reformer of an older Jain community, with dates that remain disputed.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Piotr Balcerowicz, Early Asceticism in India: Ājīvikism and Jainism (Routledge, 2015)</li>
+        <li>John E. Cort, Jains in the World: Religious Values and Ideology in India (Oxford University Press, 2001)</li>
+        <li>Lawrence A. Babb, Absent Lord: Ascetics and Kings in a Jain Ritual Culture (University of California Press, 1996)</li>
+        <li>Naomi Appleton, Narrating Karma and Rebirth: Buddhist and Jain Multi-Life Stories (Cambridge University Press, 2014)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other lifes</p>
+      <div class="related-grid"><a class="related-card" href="/life/cyrus-the-great"><img src="/logos/thumbs/Cyrus%20the%20Great.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Cyrus the Great</span><span class="related-card-dates">c. 600 BCE – 530 BCE</span></a><a class="related-card" href="/life/laozi"><img src="/logos/thumbs/Laozi.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Laozi</span><span class="related-card-dates">traditionally 6th century BCE</span></a><a class="related-card" href="/life/the-buddha"><img src="/logos/thumbs/The%20Buddha.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">The Buddha</span><span class="related-card-dates">6th or 5th century BCE</span></a><a class="related-card" href="/life/confucius"><img src="/logos/thumbs/Confucius.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Confucius</span><span class="related-card-dates">c. 551 BCE – c. 479 BCE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/life/laozi"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Laozi.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Laozi</span><span class="related-card-dates">traditionally 6th century BCE</span></a><a class="related-card" href="/life/the-buddha"><span class="related-card-label">Later →</span><img src="/logos/thumbs/The%20Buddha.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">The Buddha</span><span class="related-card-dates">6th or 5th century BCE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Mahavira",slug="mahavira",url="https://the-epoch-institute.org/life/mahavira";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Mahavira on The Epoch Institute — life, deeds and legacy. https://the-epoch-institute.org/life/mahavira #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/life/mahavira"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Mahavira",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Mahavira",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

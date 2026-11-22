@@ -46,8 +46,9 @@ if (bad.length) { console.error(bad.length + ' problems:\n  ' + bad.join('\n  ')
 
 // one entry of an object literal that ends "\r\n};" (or "\n};"): appended before the close, or put in place of the old one
 function put(text, name, entry, eol) {
-  const key = '\n  ' + J(name) + ': {';
+  const key = '\n  ' + J(name) + ': ';   // EMPIRE_INFO's values are strings, the others objects (": {" missed the first and wrote at the file's head)
   if (replace) {
+    if (text.indexOf(key) < 0) throw new Error('--replace: ' + name + ' not found');
     const a = text.indexOf(key) + 1; let b = text.indexOf(eol + '  "', a); const close = text.lastIndexOf(eol + '};');
     if (b < 0 || b > close) b = close;
     const old = text.slice(a, b), comma = /,\s*$/.test(old) ? ',' : '';
@@ -61,7 +62,7 @@ for (const s of srcs) {
   const n = s.name;
   // shared-data.js: the EMPIRES row on line 3, then EMPIRE_INFO
   const row = { name: n, region: s.region, kind, start: s.start, end: s.end };
-  if (s.circa) row.circa = true; if (s.endCirca) row.endCirca = true;
+  if (s.circa) row.circa = true; if (s.endCirca) row.endCirca = true; if (s.span) row.span = s.span;   // the years in words, where they are a tradition (profileSpanText)
   const rowS = '{' + Object.entries(row).map(([k, v]) => J(k) + ': ' + J(v)).join(', ') + '}';
   if (replace) files.sd = files.sd.replace(new RegExp('\\{"name": ' + J(n).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ', [^}]*\\}'), () => rowS);
   else { const i = files.sd.indexOf('];', files.sd.indexOf('const EMPIRES = [')); files.sd = files.sd.slice(0, i) + ', ' + rowS + files.sd.slice(i); }

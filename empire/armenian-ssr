@@ -79,7 +79,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Armenian SSR"></div>
@@ -123,6 +123,18 @@
       <div class="ty" data-ty="armenian-ssr"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"First Secretary Aghasi Khanjian is killed by Lavrentiy Beria in Tiflis on 9 July, beginning the Great Purge in Armenia; the TSFSR is dissolved and Armenia becomes a union republic","o":["1988","1936","1920","1922"],"a":1,"w":"1936: First Secretary Aghasi Khanjian is killed by Lavrentiy Beria in Tiflis on 9 July, beginning the Great Purge in Armenia; the TSFSR is dissolved and Armenia becomes a union republic."},{"p":"Which came first?","q":"","o":["On 29 November Soviet Armenia is established as the 11th Red Army enters and the government of the First Republic hands power to the Bolsheviks","Armenia confirms its independence by referendum on 21 September, and the Armenian SSR ceases to exist with the dissolution of the Soviet Union on 26 December"],"a":0,"w":"1920: On 29 November Soviet Armenia is established as the 11th Red Army enters and the government of the First Republic hands power to the Bolsheviks · 1991: Armenia confirms its independence by referendum on 21 September, and the Armenian SSR ceases to exist with the dissolution of the Soviet Union on 26 December."},{"p":"Which city was a capital of Armenian SSR?","q":"","o":["Ankara","Beirut","Yerevan","Riyadh"],"a":2,"w":"Capital: Yerevan."},{"p":"In which year?","q":"On 29 November Soviet Armenia is established as the 11th Red Army enters and the government of the First Republic hands power to the Bolsheviks","o":["1965","1921","1991","1920"],"a":3,"w":"1920: On 29 November Soviet Armenia is established as the 11th Red Army enters and the government of the First Republic hands power to the Bolsheviks."},{"p":"Which came first?","q":"","o":["Armenia joins Georgia and Azerbaijan in the Transcaucasian SFSR, one of the four founding republics of the Soviet Union","Armenia confirms its independence by referendum on 21 September, and the Armenian SSR ceases to exist with the dissolution of the Soviet Union on 26 December"],"a":0,"w":"1922: Armenia joins Georgia and Azerbaijan in the Transcaucasian SFSR, one of the four founding republics of the Soviet Union · 1991: Armenia confirms its independence by referendum on 21 September, and the Armenian SSR ceases to exist with the dissolution of the Soviet Union on 26 December."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Ronald Grigor Suny, Looking toward Ararat: Armenia in Modern History (Indiana University Press, 1993)</li>
+        <li>Mary Kilbourne Matossian, The Impact of Soviet Policies in Armenia (E.J. Brill, 1962)</li>
+        <li>Razmik Panossian, The Armenians: From Kings And Priests to Merchants And Commissars (Columbia University Press, 2006)</li>
+        <li>Simon Payaslian, The History of Armenia: From the Origins to the Present (Palgrave Macmillan, 2007)</li>
+        <li>Christopher J. Walker, Armenia: The Survival of a Nation (St. Martin's Press, 1990)</li>
+        <li>Claire Mouradian, De Staline à Gorbatchev. Histoire d'une république soviétique (Ramsay, 1996)</li>
+      </ul>
+    </div>
 
     <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
       <p class="profile-references-title" id="mini-cx-title">Connections</p>

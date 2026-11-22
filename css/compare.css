@@ -1494,6 +1494,7 @@ body.has-tab-bar .consent-bar { bottom: calc(68px + env(safe-area-inset-bottom, 
 .path-step img { width: 22mm; height: 22mm; }
 .path-title { font-size: 22pt; }
 }
+.cmp-f.is-a, .cmp-f.is-b { color: var(--text); }
 [data-theme="light"] .footer-col-title { opacity: 1; color: var(--gold); }
 [data-theme="light"] .footer-nl-label { opacity: 1; color: var(--gold); }
 [data-theme="light"] div[data-era] > h2 { opacity: 1; color: var(--gold); }

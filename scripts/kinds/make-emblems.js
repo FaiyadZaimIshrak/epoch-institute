@@ -61,6 +61,17 @@ const EMBLEMS = [
   ['Terracotta Army', '俑', 'serif-cjk', 220], ['Hagia Sophia', 'Σ'], ['Angkor Wat', 'អ', '"Khmer UI", "Leelawadee UI", sans-serif', 230],
   ['Borobudur', 'ꦧ', '"Javanese Text", sans-serif', 230], ['Rock-hewn churches of Lalibela', 'ላ', 'Ebrima, Nyala, sans-serif', 230],
   ['Machu Picchu', 'M'], ['Taj Mahal', 'ت', '"Segoe UI", Tahoma, sans-serif', 230],
+  // great lives of whom no likeness is shown (22 Nov 2026): the name in its own script. Muhammad and Ali are never
+  // depicted; Laozi and Zoroaster have no portrait of their own time.
+  ['Muhammad', 'محمد', '"Segoe UI", Tahoma, sans-serif', 150], ['Ali ibn Abi Talib', 'علي', '"Segoe UI", Tahoma, sans-serif', 170],
+  ['Laozi', '老子', 'serif-cjk', 150], ['Zoroaster', 'Z'],
+  // sacred texts (works3, 22 Nov 2026): a word or sign of each text's own script; the Pali Canon and the Avesta have a
+  // letter (Pali is written in many scripts, and no system font draws Avestan)
+  ['Hebrew Bible', 'תנ״ך', '"Times New Roman", David, serif', 150], ['New Testament', 'ΚΔ'], ['Quran', 'القرآن', '"Segoe UI", Tahoma, sans-serif', 130],
+  ['Rigveda', 'ऋ', 'Nirmala UI, Mangal, sans-serif', 230], ['Bhagavad Gita', 'गीता', 'Nirmala UI, Mangal, sans-serif', 150],
+  ['Pali Canon', 'P'], ['Avesta', 'A'], ['Guru Granth Sahib', 'ਗ੍ਰੰਥ', 'Nirmala UI, Raavi, sans-serif', 140],
+  ['Talmud', 'תלמוד', '"Times New Roman", David, serif', 130], ['Upanishads', 'उ', 'Nirmala UI, Mangal, sans-serif', 230],
+  ['Lotus Sutra', '妙法', 'serif-cjk', 150], ['I Ching', '易', 'serif-cjk', 220],
 ];
 const argv = process.argv.slice(2), sheet = (argv.find(a => a.startsWith('--sheet=')) || '').slice(8);
 // --initial: a name not in EMBLEMS gets the monogram of its first distinctive word (the Kingdom of Kano: K), as the

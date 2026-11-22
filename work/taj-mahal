@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -123,6 +123,15 @@
       <div class="ty" data-ty="taj-mahal"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Mumtaz Mahal dies in childbirth, and Shah Jahan commissions her tomb","o":["1908","1631","1643","1997"],"a":1,"w":"1631: Mumtaz Mahal dies in childbirth, and Shah Jahan commissions her tomb."},{"p":"Which came first?","q":"","o":["Mumtaz Mahal dies in childbirth, and Shah Jahan commissions her tomb","After directives of the Supreme Court of India, the Taj Trapezium Zone is set up to limit pollution"],"a":0,"w":"1631: Mumtaz Mahal dies in childbirth, and Shah Jahan commissions her tomb · 1997: After directives of the Supreme Court of India, the Taj Trapezium Zone is set up to limit pollution."},{"p":"In which year?","q":"The mausoleum is completed; work on the rest of the complex continues for another five years","o":["1648","1631","1666","1997"],"a":0,"w":"1648: The mausoleum is completed; work on the rest of the complex continues for another five years."},{"p":"Which came first?","q":"","o":["The mausoleum is completed; work on the rest of the complex continues for another five years","The Taj Mahal is designated a UNESCO World Heritage Site"],"a":0,"w":"1648: The mausoleum is completed; work on the rest of the complex continues for another five years · 1983: The Taj Mahal is designated a UNESCO World Heritage Site."},{"p":"In which year?","q":"The Taj Mahal is designated a UNESCO World Heritage Site","o":["1631","1908","1643","1983"],"a":3,"w":"1983: The Taj Mahal is designated a UNESCO World Heritage Site."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Ebba Koch, The Complete Taj Mahal: And the Riverfront Gardens of Agra (Thames &amp; Hudson, 2006)</li>
+        <li>G. H. R Tillotson, Taj Mahal (Harvard University Press, 2008)</li>
+        <li>Catherine B. Asher, Architecture of Mughal India (Cambridge University Press, 1992)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other great works</p>

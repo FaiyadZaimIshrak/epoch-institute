@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -124,6 +124,18 @@
       <div class="ty" data-ty="parthenon"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The architects Ictinos and Callicrates begin the present temple in the building project of Pericles","o":["1687","435","447 BCE","1975"],"a":2,"w":"447 BCE: The architects Ictinos and Callicrates begin the present temple in the building project of Pericles."},{"p":"Which came first?","q":"","o":["The emperor Basil II goes on pilgrimage to Athens for the sole purpose of worshipping at the Parthenon, then a church of the Virgin Mary","The Persians sack Athens and raze the Acropolis while the Older Parthenon is still under construction"],"a":1,"w":"1018: The emperor Basil II goes on pilgrimage to Athens for the sole purpose of worshipping at the Parthenon, then a church of the Virgin Mary · 480 BCE: The Persians sack Athens and raze the Acropolis while the Older Parthenon is still under construction."},{"p":"In which year?","q":"The emperor Basil II goes on pilgrimage to Athens for the sole purpose of worshipping at the Parthenon, then a church of the Virgin Mary","o":["435","480 BCE","1975","1018"],"a":3,"w":"1018: The emperor Basil II goes on pilgrimage to Athens for the sole purpose of worshipping at the Parthenon, then a church of the Virgin Mary."},{"p":"Which came first?","q":"","o":["The Persians sack Athens and raze the Acropolis while the Older Parthenon is still under construction","Theodosius II decrees that all pagan temples in the Eastern Roman Empire be closed"],"a":0,"w":"480 BCE: The Persians sack Athens and raze the Acropolis while the Older Parthenon is still under construction · 435: Theodosius II decrees that all pagan temples in the Eastern Roman Empire be closed."},{"p":"In which year?","q":"During the Morean War a Venetian mortar round blows up the Ottoman gunpowder magazine in the Parthenon, wrecking its central part","o":["480 BCE","435","447 BCE","1687"],"a":3,"w":"1687: During the Morean War a Venetian mortar round blows up the Ottoman gunpowder magazine in the Parthenon, wrecking its central part."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>J. Boardman, The Parthenon and Its Sculptures (Texas, 1985)</li>
+        <li>J. Neils, The Parthenon Frieze (Cambriadge, 2001)</li>
+        <li>Jeffrey M. Hurwit, The Athenian Acropolis: History, Mythology, and Archeology from the Neolithic Era to the Present (Cambridge University Press, 2000)</li>
+        <li>M. Korres, The Stones of the Parthenon (Getty, 2001)</li>
+        <li>Joan Breton Connelly, The Parthenon Enigma: A New Understanding of the West's Most Iconic Building and the People who Made It (Random House, 2014)</li>
+        <li>William St Clair, Who Saved the Parthenon?: A New History of the Acropolis Before, During and After the Greek Revolution (Open Book Publishers, 2022)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other great works</p>

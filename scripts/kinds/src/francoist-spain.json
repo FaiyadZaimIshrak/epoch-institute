@@ -18,14 +18,38 @@
  ],
  "dyk": "Under the Law of Political Responsibility of February 1939, parishes were granted policing powers equal to those of local officials and Falange leaders, and some official jobs required a statement of \"good behaviour\" from a priest.",
  "ev": [
-  ["1936", "The Junta de Defensa Nacional, governing the Nationalist-held territories, recognises Franco as Caudillo of Spain on 1 October"],
-  ["1937", "In April Franco merges the Falange Española de las JONS with the Carlist Comunión Tradicionalista to form the Falange Española Tradicionalista y de las JONS"],
-  ["1939", "The Nationalists win the Spanish Civil War, and the Falange is declared the sole legally sanctioned party"],
-  ["1940", "Franco and Hitler meet at Hendaye on 23 October, but the talks on Spain's entry into the Second World War end in failure"],
-  ["1947", "Spain is declared a kingdom on 26 July, with Franco as regent for life and the sole right to appoint his successor"],
-  ["1959", "Under pressure from the United States, the IMF and the technocrats of Opus Dei, the regime liberalises the economy"],
-  ["1969", "Franco designates Juan Carlos of Bourbon as his heir, and Spain closes its border with Gibraltar"],
-  ["1975", "Franco dies on 20 November, and Juan Carlos becomes King of Spain"]
+  [
+   "1936",
+   "The Junta de Defensa Nacional, governing the Nationalist-held territories, recognises Franco as Caudillo of Spain on 1 October"
+  ],
+  [
+   "1937",
+   "In April Franco merges the Falange Española de las JONS with the Carlist Comunión Tradicionalista to form the Falange Española Tradicionalista y de las JONS"
+  ],
+  [
+   "1939",
+   "The Nationalists win the Spanish Civil War, and the Falange is declared the sole legally sanctioned party"
+  ],
+  [
+   "1940",
+   "Franco and Hitler meet at Hendaye on 23 October, but the talks on Spain's entry into the Second World War end in failure"
+  ],
+  [
+   "1947",
+   "Spain is declared a kingdom on 26 July, with Franco as regent for life and the sole right to appoint his successor"
+  ],
+  [
+   "1959",
+   "Under pressure from the United States, the IMF and the technocrats of Opus Dei, the regime liberalises the economy"
+  ],
+  [
+   "1969",
+   "Franco designates Juan Carlos of Bourbon as his heir, and Spain closes its border with Gibraltar"
+  ],
+  [
+   "1975",
+   "Franco dies on 20 November, and Juan Carlos becomes King of Spain"
+  ]
  ],
  "sections": {
   "foundation": "<p>The regime emerged from the Nationalist side in the Spanish Civil War. On 1 October 1936 the Junta de Defensa Nacional, which governed the territories the Nationalists held, recognised Francisco Franco as Caudillo of Spain, the Spanish equivalent of the Duce and the Führer. In April 1937 Franco took control of the Falange Española de las JONS, whose founder José Antonio Primo de Rivera had been executed by the Republican government in November 1936, and merged it with the Carlist Comunión Tradicionalista into the Falange Española Tradicionalista y de las JONS, the main component of the Movimiento Nacional. The new government was a one-party dictatorship explicitly modelled on Fascist Italy and Nazi Germany, with its own Spanish characteristics.</p><p>The Nationalists took the whole of Spain through a methodical war of attrition that involved imprisoning and executing Spaniards found guilty of supporting the values of the Republic: regional autonomy, democracy, free elections and women's rights. The right called these \"enemy elements\" an \"anti-Spain\" born of Bolsheviks and a \"Judeo-Masonic conspiracy\". When the war ended in 1939, by the regime's own figures more than 270,000 people were held in prisons and some 500,000 had fled into exile; between six and seven thousand exiles died in Mauthausen.</p>",
@@ -36,9 +60,70 @@
   "decline": "<p>Ties to the Axis brought isolation after 1945: Spain was explicitly condemned in a United Nations resolution of 1946 and was not admitted until 1955. The Cold War changed this, as Franco's anti-communism tilted the regime towards the United States in the early 1950s. On 26 July 1947 Spain was declared a kingdom with the throne left vacant; Franco passed over Infante Juan, Count of Barcelona, whom he found too liberal, and in 1969 named Juan Carlos of Bourbon his heir. The Press and Print Law of 1966 ended prior censorship but kept controls, and the restrictions on languages and on women eased somewhat in the 1960s and 1970s.</p><p>In 1973 Franco resigned as Prime Minister and named Admiral Luis Carrero Blanco, who was meant to continue the regime, but ETA assassinated him the same year and Carlos Arias Navarro took his place. In 1975 Morocco took control of the former Spanish territories in the Sahara after the Green March. Franco died on 20 November 1975, and Juan Carlos, now King, began the transition that made Spain a constitutional monarchy with an elected parliament and devolved governments. The Historical Memory Law of 2007 sought official recognition of the regime's crimes against civilians and a state-supervised search for mass graves.</p>"
  },
  "summary": "Francoist Spain was the dictatorship of Francisco Franco, born in the Nationalist zone in 1936 and ruling all Spain from 1939 to 1975. Built on a single party, the Church and the army, it imprisoned and executed its opponents, repressed regional languages and women's rights, kept to the Axis side of neutrality in the Second World War, and after 1959 presided over rapid economic growth.",
- "references": [],
+ "references": [
+  "Stanley G. Payne, The Franco Regime, 1936–1975 (University of Wisconsin Press, 1987)",
+  "Paul Preston, Franco: A Biography (Basic Books, 1994)",
+  "Enrique Moradiellos, La España de Franco (1939–1975). Política y Sociedad (Síntesis, 2000)",
+  "Javier Tusell, Historia de España en el Siglo XX. 3: La Dictadura de Franco (Santillana, 1999)",
+  "Michael Richards, The Splintering of Spain: Cultural History and the Spanish Civil War, 1936–1939 (Cambridge University Press, 2005)"
+ ],
  "points": [
-  [1936, 4], [1937, 5], [1939, 7], [1940, 6], [1942, 6], [1946, 4], [1947, 5], [1954, 6], [1955, 6], [1959, 7], [1966, 9], [1969, 10], [1973, 8], [1975, 3]
+  [
+   1936,
+   4
+  ],
+  [
+   1937,
+   5
+  ],
+  [
+   1939,
+   7
+  ],
+  [
+   1940,
+   6
+  ],
+  [
+   1942,
+   6
+  ],
+  [
+   1946,
+   4
+  ],
+  [
+   1947,
+   5
+  ],
+  [
+   1954,
+   6
+  ],
+  [
+   1955,
+   6
+  ],
+  [
+   1959,
+   7
+  ],
+  [
+   1966,
+   9
+  ],
+  [
+   1969,
+   10
+  ],
+  [
+   1973,
+   8
+  ],
+  [
+   1975,
+   3
+  ]
  ],
  "pointDescs": {
   "1936": "Franco is recognised as Caudillo by the Junta de Defensa Nacional, which governs the territories the Nationalists hold.",
@@ -56,8 +141,21 @@
   "1973": "Franco hands the premiership to Luis Carrero Blanco, who is assassinated by ETA the same year.",
   "1975": "Morocco takes the Spanish Sahara after the Green March, and Franco's death on 20 November opens the transition to democracy."
  },
- "stats": {"militaryPower": 5, "territorialReach": 4, "economicStrength": 6, "tradeNetworks": 5, "administrativeSophistication": 6, "culturalIntellectualOutput": 4, "institutionalLongevity": 3, "historicalInfluence": 6},
- "tags": ["Military", "Religious", "Colonial"],
+ "stats": {
+  "militaryPower": 5,
+  "territorialReach": 4,
+  "economicStrength": 6,
+  "tradeNetworks": 5,
+  "administrativeSophistication": 6,
+  "culturalIntellectualOutput": 4,
+  "institutionalLongevity": 3,
+  "historicalInfluence": 6
+ },
+ "tags": [
+  "Military",
+  "Religious",
+  "Colonial"
+ ],
  "notes": [
   "The article names no capital; Madrid is given as the seat of the ministers and government after 1939. No wartime seat is given, so none is named.",
   "The saved article's Sources and Further reading sections are empty, so references are [].",

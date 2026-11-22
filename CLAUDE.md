@@ -3054,6 +3054,154 @@ profile's own entry, ENC_LINKS.self); menus, share, Test yourself and the prev/n
   Luxembourg 1803-1815, Palestine 1948-1988, Panama 1886-1903, Taiwan 1895-1912, Timor-Leste 1975-2002).
 - **Test:** scripts/tests/atlas-today.js.
 
+## Editorial round (22 Nov 2026; plan: one crawl, natural wording, gaps filled, twelve sacred lives, then eight features)
+The user: "Crawl the website once. Verify the wording and structure of all articles. Remove traces of AI and make them
+look natural … Don't remove anything. Find the missing pieces, and write them in. Add a few great lives like Muhammad
+and Jesus … Add relevant entries like that as well." The user's rulings: everything, in tiers; NO fact check in this
+round ("just check for AI and incorrect phrasing and fix them"); all twelve lives; the eight ideas offered are Part 2
+(E1 sacred texts as great works, E2 faiths side by side, E3 "Whose Life?" daily game, E4 family trees, E5 journeys on
+the globe, E6 cities through time, E7 battles as pages, E8 sources under each profile section), in that order.
+- **A, the crawl** (once): crawl-static, seo-audit, snippet-audit, title-audit, escape-check, crawl-browser (desktop,
+  phone, Kids), layout-audit, a11y-audit, link-colour-audit, and one slow live pass.
+  - Found and fixed: 23 picture credits of the new flags with stray spaces (clean-credits.ps1); the count beside an era
+    heading of /profiles dimmed with its heading (4.05:1, dark) and /compare's "First" / "Second" written in their
+    series colours (1.88:1, light): both in the "WCAG 2.2 AA" block; the footer's social links named only "Facebook",
+    "Instagram" while showing other words (2.5.3: the name now holds the words shown).
+  - Left as they are: the /centuries/ bar's narrow columns; map nodes whose full name is the accessible name of a
+    shortened label; what layout-audit lists (footer columns of unequal length, a country's folded timeline, the Write
+    keys, /race's screen-reader label).
+  - crawl-live.js: `--gap=<seconds>` (default 4) between requests, one fixed address for the 404 check (never a new
+    one each run), and it stops at once if the host answers with its bot check.
+- **B, wording** (no release note, as the round of 12 Nov):
+  - **scripts/tools/style-audit.js** gained two groups beside the stock phrases (`--group=words|structure|phrasing|all`):
+    STRUCT (habits of build: a paragraph's closing moral, "its legacy endures", "more than a …", "not just … but", a
+    summing-up opener, a colon-led claim, a rhetorical question, "It was X that", "Whether … or", three sentences that
+    open alike (four for a pronoun), sentences all of one length) and PHRASING (a doubled function word, a/an, a
+    lower-case sentence start, month-first dates, BC/AD, stray punctuation, American spelling, "comprised of", a
+    dangling opener, "less" with a count, brackets or quotation marks that do not close). Its first run was almost all
+    false alarms (49,000 "phrasing" hits): inline tags are now removed without a space, [[e:…|…]] links read as their
+    text, Unicode letters end a word ("García in" is not "a in"), "an der", names such as "Emperor An" and "Linear A",
+    abbreviations (Jr., Co.) and name particles (al-, de, van) are known. After that: 518 phrasing hits site-wide.
+  - **scripts/style/mech.js** [--write] [--report=] [--only=bce,dates,spelling,doubled]: the slips that need no
+    judgement, the same everywhere, never inside quotation marks, italic titles, link targets, references or credits:
+    BC/AD to BCE/CE (280 texts, mostly the profiles of 16 Nov: Thebes, the Delian League, Stonehenge, the Rosetta
+    Stone, the Cimmerians, Nubians …, their key events' year labels too), month-first dates to day-first (32),
+    American spelling to British (67; no link pattern holds an American spelling: checked), a doubled word (4).
+    A law's own words ("race, color, or previous condition of servitude"), "Gloria, laus et honor" and "plow in the
+    US" are protected; "went on on a smaller scale" is not a doubled word. Entry descriptions change through "fixes"
+    rows (25) and their preview cards. **Its first version replaced a text wherever its bare words stood**, so a short
+    text such as an event's year "404 BC" also matched inside every "404 BCE" already set right: 258 "BCEE" in
+    empire-glance.js and a preview card, found through a writer's report and mended the same hour. It now replaces
+    only whole strings (between their quotation marks, or a whole line of a text file). After a mechanical pass, grep
+    for the doubled form before anything else.
+  - **Flagged sentences** (scripts/style/lines.js `make <dir> [per batch] --all --kinds=entry,more,prof,state,day,song`):
+    with --all the hits also carry the STRUCT and PHRASING labels and the entries' longer texts are gathered
+    (more:<slug>|<section>|<paragraph>). Writers (Sonnet) work in folders outside the repository
+    (%LOCALAPPDATA%\epoch-tools\style-nov\<kind>) with LINES-GUIDE.md, whose new sections say: nothing is removed, a
+    summing-up sentence is reworded into its concrete point, no filler in a stock word's place, an interpretation stays
+    an interpretation. check.js: length 95-110% (85-115% under 800 characters; it was 75-105%).
+  - **What two pilots taught:** "one of the most …", "notably" and "X showed that …" are ordinary prose: rewording
+    them only weakened sentences ("one of the most powerful successors" became "a powerful successor") or made a
+    reading a fact. They, and "From X to Y, …", are NOT sent to writers (lines.js SOFT, NOSEND). A quotation cut out
+    for the structure checks left " ," behind and read as stray punctuation: phrasing is checked on the text as it
+    stands. What is sent: 334 profile fields (200 of them for sentences of one length), 53 state-history fields, 19
+    day events and songs, 72 entries, 1,515 paragraphs of the longer texts.
+  - **Applied:** 277 profile fields, 35 state-history fields, 5 day events and songs, 20 entries and 1,221 paragraphs
+    of the longer texts reworded (the rest left as literal or ordinary). The 413 state profiles got this targeted
+    pass, not a whole rewrite as the empires had: their rate was already low, and whole rewrites lose more than
+    they gain.
+  - **A second reading for meaning** (style-nov\review: REVIEW.md, ten readers over every rewording of a word or
+    phrase): 487 fine, 256 set right, none reverted. A stock word swapped for a near one often changed the sense
+    ("paved the way for" became "made way for", "unprecedented" became "wide"): any later round of single-sentence
+    rewordings needs the same second reading.
+  - **-ize to -ise** (mech.js `ise`; nine texts in ten were already -ise): 862 texts and 161 of the explorer's point
+    notes (point-descs.js?v=6). Lower-case words only; not size, seize, prize, capsize, maize, assize; never inside a
+    name the encyclopedia links by its own spelling ("Minoan civilization", "World Health Organization": the LINKED
+    patterns are read from encyclopedia-links.js), a quotation or a title.
+  - **The fourteen essays** read in full by five readers (style-nov\essays: ESSAYS-READ.md; fixes as exact pairs,
+    apply.js): 18 changes, among them essay 06's "Aristotle's three answers". A question the next sentence answers
+    is the essay's own device and stays.
+  - **scripts/entries/more-repairs.js:** six sentences of the longer texts that an earlier tool had cut at an
+    abbreviation ("5 p.m.", "U.S.", "(1.5)"), found as lower-case sentence starts and put back from the saved articles.
+  - **scripts/entries/relay.js** <copy before> [file]: gives added-entries.json its hand-laid lines back after a tool
+    re-serialised it (pictures.js apply, pics-into-data.js); it stops if a list lost items.
+  - merge-kinds.js --replace wrote EMPIRE_INFO at the head of shared-data.js (it looked for an object where the
+    values are strings): fixed.
+  - The Kids corner's Word Hunt links said "Play the The …": the builder drops a theme title's leading "The".
+  - **Wording-only fixes carry "w":** a "fixes" row of added-entries.json whose fourth element is "w" (spelling, BCE/CE,
+    a reworded sentence) is left off /corrections (make-method.js); mech.js and lines.js write it. 113 rows this round.
+  - **links-kept.js after the regeneration:** one link lost to the rewording. Two sentences of Rhodes had been joined
+    with a semicolon, which put "408–407 BCE" into the sentence of "the Peloponnesian War"; ENC_FN.near reads the first
+    year of such a range as CE (408), so the war was "next to a contradicting year" and lost its link. The sentences
+    were parted again. The range reading is a fault of ENC_FN.near (and its PowerShell port) still to mend: it must
+    give the first year of "408–407 BCE" the era of the second, as ENC_FN.years does.
+  - scripts/kinds/src/*.json keep the drafts as they were merged: this round's wording changes are in the data files
+    only, so a merge-kinds --replace from src would bring "BC" and the old sentences back.
+- **C, gaps:** scripts/tools/completeness.js [--tsv=] [--list=<gap>] counts what a page lacks beside its peers
+  (profiles: references, section pictures, an emblem, a home picture, key events, facts; entries: dates, a picture
+  or the longer text for the well known; states: a picture, a firm place; songs: words, a performance).
+  - **References (42 of the 50 profiles that had none):** scripts/kinds/refs1 (list.tsv, refs.json, refs2.json,
+    names.tsv, picks.tsv, picks2.tsv). article-refs.js read each profile's own article; scripts/kinds/fill-refs.js
+    `list` prints the books numbered, `write` puts the editor's picks (three to six, the works about the subject
+    itself, read by eye: a long article's list also holds travel guides, novels and school books) into
+    empire-profiles.js where the references are empty. article-refs.js now takes a bibliography's sub-sections
+    ("Bibliography" > "Modern") and books typed as plain lines ("* Birley, Anthony R. ''Marcus Aurelius''. London:
+    Routledge, 1966."). Still without: the Decembrist revolt, the environmental movement, Awadh State, Liu Song,
+    Thebes, the Chamorro people, Frederick Douglass and Winston Churchill (no book list the tool can read).
+  - Two tools reading Wikimedia at once throttle each other on the API as well (429, Retry-After 2-8 s, and both
+    crawl): run one at a time.
+  - Left for later rounds of C: section pictures of the 40 lives of 16 Nov, 49 state profiles, 20 cultures and 21
+    works; home pictures of those lives; the eight breaks in country histories; dates of 303 people and 70 events.
+- **D, twelve sacred lives** (wave lives3, scripts/kinds/lives3/): Jesus, Muhammad, the Buddha, Moses, Zoroaster,
+  Guru Nanak, Laozi, Mahavira, Paul the Apostle, Ali ibn Abi Talib, Abraham and Mary (92 lives).
+  - LIVES-GUIDE.md "Sacred lives": what the tradition holds and what historians assess, each attributed; no miracle
+    stated as plain fact and none denied; dates with the article's hedges; no ranking of faiths; no likeness of
+    Muhammad or Ali described. Twelve writers, one saved article each; check-drafts.js clean; the editor read every
+    life's facts, takeaways, events and opponents section (Muhammad in full); lives3/edit.js holds the changes.
+  - **`span`:** a life whose years are a tradition or disputed carries its years in words ("traditionally 14th–13th
+    century BCE", "dates disputed: c. 1000 BCE, or 7th–6th century BCE"): shared-data.js profileSpanText returns
+    `span` first, merge-kinds.js and check-drafts.js know the key, the posters print it as the band's one label, the
+    essays' profile cards and the flashcards use it, and "Meanwhile in the world" leaves such a life out (it is not
+    "alive in" a year). The numeric start and end only place it on timelines (Mary's start is Wikidata's).
+  - **No depiction:** Muhammad's and Ali's emblems are their names in Arabic (make-emblems.js), as are Laozi's (老子)
+    and Zoroaster's (Z): no portrait of their own time exists. The others take their entry's picture
+    (life-emblems.ps1). Section and home pictures of Muhammad and Ali are places, manuscripts and objects only.
+  - **References** from each article's own bibliography (lives3/refs.js picks lines of refs-all.json / refs-full.json;
+    article-refs.js takes a third argument, the most to keep, 12 by default: the first run's 14 were A to B of the
+    alphabet).
+  - **80 related entries** (scripts/kinds/lives3/entries.json, entry-links.js; wave lives3 of added-entries.json):
+    Paul, Peter, Pilate, Mary Magdalene, the Last Supper, the Sermon on the Mount, the Crucifixion, the Resurrection,
+    Khadija, Abu Talib, Badr, the Trench, the conquest of Mecca, the Night Journey, Ghadir Khumm, the Prophet's
+    Mosque, Hagar, Ishmael, Isaac, Sarah, the binding of Isaac, the Four Noble Truths, the Eightfold Path, the Bodhi
+    tree, Ananda, the Buddhist councils, the tirthankaras, Guru Angad, the langar, Aaron, Miriam, the burning bush,
+    the plagues, the golden calf, Mount Nebo, the Gathas, Ahriman, wu wei, the Tao … Eight writers; every entry read.
+    The Treaty of al-Hudaybiya was drafted and dropped: the site had it as treaty-of-hudaybiyyah (prepare-list.js
+    compares slugs and names, not spellings: look for the subject before the merge).
+  - **Names that mean many people get no pattern** (Isaac, Sarah, Aaron, Miriam, Joshua, Hagar, Ishmael, Ananda,
+    Rahula, Tao, Calvary, Tabernacle, "Saint Peter", "Saint Paul", "the Twelve"): they are profile-only forms on the
+    lives that mean them (lives3/forms.js writes 32 rows into "forms", as text). 15 exclusions from reading the
+    scans: Cornelis Tiele as the Turkic Tiele, "themes" as the Byzantine themes, Orthodox Jews as the Orthodox
+    Church, Luyi in Henan as the Lozi people, a Bamana woman as the Bambara, "Saul" on Paul's page as King Saul,
+    "Romans" as the Roman Empire, Sarai as the Golden Horde's capital …
+  - **Patterns read before they went live** (pattern-count.js): "langar" matches lower case only (mode 0: a Seljuk
+    officer was named Langar); Leonardo's entries say "the Last Supper mural", a name of the mural's entry, so "Last
+    Supper" there no longer goes to the event (three "w" fixes). Pictures: 64 of the 80 entries, chosen by eye; none
+    for the Islamic events and people whose candidates were miniatures showing Muhammad or Ali (Badr, the conquest of
+    Mecca, Ghadir Khumm, Abu Talib, the Ahl al-Bayt): the Trench has its map, Khadija her name in calligraphy, the
+    Night Journey its verse, the Prophet's Mosque and the Imam Ali Shrine their buildings. Laozi's entry has Zhang
+    Lu's Ming painting; Zoroaster's stays without (every candidate a 19th-century devotional portrait).
+  - **Scanning other profiles for new entries:** link-scan.js --entries over all 906 profiles takes about five minutes
+    per thirty, two and a half hours. Find first which profiles name any of the entries by a pattern (31 here: a
+    plain regex pass over the profile texts) and scan only those, five at a time.
+  - scripts/entries/reinsert-wave.js <copy before> <added-entries.json> <wave>: merge-entries.js re-serialises
+    added-entries.json; this rebuilds it from the copy saved before, inserting only the wave's entries as text.
+  - **Commons: standard thumbnails only, never an original** (pictures.js fetch): Commons answered 429 after 16
+    files and went on doing so for an hour. The file it stood at was 300 px wide, so the API handed back the
+    "unscaled" original on upload.wikimedia.org, which throttles scripts hard ("Too many requests", Retry-After 120,
+    for as long as it is asked), while thumb.wikimedia.org's standard widths (120, 250, 330, 500, 960 …) kept coming
+    the whole time. The fetch now asks for 330 px and, for a narrower original, the next standard width below it.
+    When a Wikimedia tool meets 429, ask ONE address by hand and read the answer before waiting or retrying.
+
 ## Connections map and the states register
 - `data/polities.json` — register of every state (incl. the modern Levant: Israel, the State of Palestine, Jordan, Lebanon, Syria — added by hand Oct 2026, successor links to the mandates): nodes {id, n name, t type, b broad region, s/e years, a aka, m mode, c capital, mo modern countries, p profile url} and links {s, t, r relation, f/u years}. Successions stored one way (successor-of). Built from regional research files by the scratchpad states/merge.ps1 (dedupe, relation resolution, validation report).
 - `connections` page + `connections-map.js` (no D3; radial layout, timeline, year slider, outliers). Empire pages include a lazy-loaded mini map (section #connections).

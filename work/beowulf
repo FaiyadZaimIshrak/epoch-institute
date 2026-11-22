@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -107,7 +107,7 @@
       </div>
       <div class="profile-section-block" id="legacy">
         <h2 class="profile-section-title">Legacy</h2>
-        <div class="profile-section-body"><p>Beowulf is one of the most important and most often translated works of Old English literature. Sharon Turner translated selected verses into modern English in 1805, <a class="enc-link" href="/encyclopedia/n-f-s-grundtvig">N. F. S. Grundtvig</a> made the first complete verse translation, in Danish, in 1820, and nine complete English translations appeared in the 19th century, among them John Mitchell Kemble's and that of <a class="enc-link" href="/encyclopedia/william-morris">William Morris</a> and A. J. Wyatt. By 2020 the Beowulf's Afterlives Bibliographic Database listed some 688 translations and other versions, in at least 38 languages besides English.</p><p>Modern translations include those of Edwin Morgan, Burton Raffel, Michael J. Alexander, Roy Liuzza and Seamus Heaney, whose version of 1999 was both praised and criticised. Tolkien's prose translation, edited by his son Christopher, appeared in 2014. Maria Dahvana Headley's novel The Mere Wife retold the story from the side of Grendel's mother, and her 2020 translation won the Hugo Award for Best Related Work.</p><p>The poem's digressions, with their impression of historical depth, were imitated by Tolkien in The Lord of the Rings, which embodies many other elements of the poem. It has also been adapted for stage and screen, and Gareth Hinds based a graphic novel of 2007 on Francis Barton Gummere's translation.</p></div>
+        <div class="profile-section-body"><p>Beowulf is one of the most important and most often translated works of Old English literature. Sharon Turner translated selected verses into modern English in 1805, <a class="enc-link" href="/encyclopedia/n-f-s-grundtvig">N. F. S. Grundtvig</a> made the first complete verse translation, in Danish, in 1820, and nine complete English translations appeared in the 19th century, among them John Mitchell Kemble's and that of <a class="enc-link" href="/encyclopedia/william-morris">William Morris</a> and A. J. Wyatt. By 2020 the Beowulf's Afterlives Bibliographic Database listed some 688 translations and other versions, in at least 38 languages besides English.</p><p>Modern translations include those of Edwin Morgan, Burton Raffel, Michael J. Alexander, Roy Liuzza and Seamus Heaney, whose version of 1999 was both praised and criticised. Tolkien's prose translation, edited by his son Christopher, appeared in 2014. Maria Dahvana Headley's novel The Mere Wife retold the story from the side of Grendel's mother, and her 2020 translation won the Hugo Award for Best Related Work.</p><p>The poem's digressions, with their impression of historical depth, were imitated by Tolkien in The Lord of the Rings, which also draws on many other elements of the poem. It has also been adapted for stage and screen, and Gareth Hinds based a graphic novel of 2007 on Francis Barton Gummere's translation.</p></div>
       </div>
 
     <p class="profile-summary" id="summary"><em>Beowulf is an anonymous Old English epic of 3,182 alliterative lines about a Geatish hero who kills Grendel, Grendel's mother and a dragon. Its date of composition is disputed; it survives only in the Nowell Codex of about 975–1025, scorched in the fire of 1731, and since its first transcription in 1786 it has been edited, debated and translated hundreds of times.</em></p>
@@ -118,6 +118,18 @@
       <div class="ty" data-ty="beowulf"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Seamus Heaney's verse translation is published","o":["1731","1786","1999","1563"],"a":2,"w":"1999: Seamus Heaney's verse translation is published."},{"p":"Which came first?","q":"","o":["J. R. R. Tolkien's lecture Beowulf: The Monsters and the Critics opens modern criticism","Grímur Jónsson Thorkelin makes the first transcriptions of the manuscript"],"a":1,"w":"1936: J. R. R. Tolkien's lecture Beowulf: The Monsters and the Critics opens modern criticism · 1786: Grímur Jónsson Thorkelin makes the first transcriptions of the manuscript."},{"p":"In which year?","q":"Frederick Klaeber publishes the edition that becomes the central source for study of the poem","o":["1731","1999","1922","1786"],"a":2,"w":"1922: Frederick Klaeber publishes the edition that becomes the central source for study of the poem."},{"p":"Which came first?","q":"","o":["Fire at Ashburnham House chars the manuscript's margins and destroys some readings","Grímur Jónsson Thorkelin makes the first transcriptions of the manuscript"],"a":0,"w":"1731: Fire at Ashburnham House chars the manuscript's margins and destroys some readings · 1786: Grímur Jónsson Thorkelin makes the first transcriptions of the manuscript."},{"p":"In which year?","q":"Grímur Jónsson Thorkelin makes the first transcriptions of the manuscript","o":["1922","1731","1786","1936"],"a":2,"w":"1786: Grímur Jónsson Thorkelin makes the first transcriptions of the manuscript."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Andy Orchard, A Critical Companion to Beowulf (D.S. Brewer, 2003)</li>
+        <li>Kevin Kiernan, Beowulf and the Beowulf Manuscript (University of Michigan, 1996)</li>
+        <li>John Ronald Reuel Tolkien, Beowulf: The Monsters and the Critics and other essays (HarperCollins, 1997)</li>
+        <li>Raymond Wilson Chambers, Beowulf: An Introduction to the Study of the Poem (The University Press, 1921)</li>
+        <li>Bruce Mitchell, Beowulf: an edition with relevant shorter texts (Blackwell, 1998)</li>
+        <li>Seamus Heaney, Beowulf: A New Verse Translation (W.W. Norton &amp; Company, 2000)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other great works</p>

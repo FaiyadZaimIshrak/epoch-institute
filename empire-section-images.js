@@ -5570,5 +5570,97 @@ var SECTION_IMAGES = {
     rise:{slug:"kalakaua",name:"Kalākaua",img:"/images/encyclopedia/kalakaua.jpg",artist:"James J. Williams",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kingdavidkalakaua_dust.jpg"},
     opponents:{slug:"lorrin-a-thurston",name:"Lorrin A. Thurston",img:"/images/encyclopedia/lorrin-a-thurston.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lorrin_A._Thurston,_1892.jpg"},
     last:{slug:"iolani-palace",name:"ʻIolani Palace",img:"/images/encyclopedia/iolani-palace.jpg",artist:"Gage Skidmore from Surprise, AZ, United States of America",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Iolani_Palace_(51872681413).jpg"}
+  },
+  "Jesus": {
+    early:{slug:"mary-mother-of-jesus",name:"Mary, mother of Jesus",img:"/images/encyclopedia/mary-mother-of-jesus.jpg",artist:"Asia",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Madonna_Advocata.png"},
+    rise:{slug:"john-the-baptist",name:"John the Baptist",img:"/images/encyclopedia/john-the-baptist.jpg",artist:"Titian",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Accademia_-_St_John_the_Baptist_by_Titian_Cat314.jpg"},
+    deeds:{slug:"sermon-on-the-mount",name:"Sermon on the Mount",img:"/images/encyclopedia/sermon-on-the-mount.jpg",artist:"Carl Bloch",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bloch-SermonOnTheMount.jpg"},
+    opponents:{slug:"pontius-pilate",name:"Pontius Pilate",img:"/images/encyclopedia/pontius-pilate.jpg",artist:"Antonio Ciseri",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ecce_homo_by_Antonio_Ciseri_(1).jpg"},
+    last:{slug:"last-supper",name:"Last Supper",img:"/images/encyclopedia/last-supper.jpg",artist:"Leonardo da Vinci",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg"},
+    legacy:{slug:"easter",name:"Easter",img:"/images/encyclopedia/easter.jpg",artist:"Piero della Francesca",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Resurrection.JPG"}
+  },
+  "Muhammad": {
+    early:{slug:"black-stone",name:"Black Stone",img:"/images/encyclopedia/black-stone.jpg",artist:"Unknown author",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Black_stone.jpg"},
+    rise:{slug:"jabal-al-nour",name:"Jabal al-Nour",img:"/images/encyclopedia/jabal-al-nour.jpg",artist:"Kaliper1",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Jabbal_An-Nour_(2024).jpg"},
+    deeds:{slug:"kaaba",name:"Kaaba",img:"/images/encyclopedia/kaaba.jpg",artist:"Richard Mortel",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:The_Ka%27ba,_Great_Mosque_of_Mecca,_Saudi_Arabia_(4).jpg"},
+    opponents:{slug:"battle-of-the-trench",name:"Battle of the Trench",img:"/images/encyclopedia/battle-of-the-trench.jpg",artist:"DrZubairRashid",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Trench_627_CE.png"},
+    last:{slug:"prophets-mosque",name:"Prophet's Mosque",img:"/images/encyclopedia/prophets-mosque.jpg",artist:"Bluemangoa2z at Malayalam Wikipedia",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Madeena_masjid_nabavi_12122008230.jpg"},
+    legacy:{slug:"quran",name:"Quran",img:"/images/encyclopedia/quran.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Birmingham_Quran_manuscript_full.jpg"}
+  },
+  "The Buddha": {
+    early:{slug:"maya-mother-of-the-buddha",name:"Maya (mother of the Buddha)",img:"/images/encyclopedia/maya-mother-of-the-buddha.jpg",artist:"Rama",licence:"CC BY-SA 3.0 fr",source:"https://commons.wikimedia.org/wiki/File:Maya_Devi-MA_1779-IMG_8431-gradient.jpg"},
+    rise:{slug:"bodh-gaya",name:"Bodh Gaya",img:"/images/encyclopedia/bodh-gaya.jpg",artist:"Amitabha Gupta",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Mahabodhi_temple_at_Bodhgaya_in_Bihar_21.jpg"},
+    deeds:{slug:"four-noble-truths",name:"Four Noble Truths",img:"/images/encyclopedia/four-noble-truths.jpg",artist:"Asia Society created the file. Artwork created by an anonymous ancient source.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Astasahasrika_Prajnaparamita_Dharmacakra_Discourse.jpeg"},
+    opponents:{slug:"ajatashatru",name:"Ajatashatru",img:"/images/encyclopedia/ajatashatru.jpg",artist:"Photo Dharma from Penang, Malaysia",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Indian_Museum_Sculpture_-_Ajatasattu_worships_the_Buddha_(9217704485).jpg"},
+    last:{slug:"parinirvana",name:"Parinirvana",img:"/images/encyclopedia/parinirvana.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Paranirvana.JPG"},
+    legacy:{slug:"buddhism",name:"Buddhism",img:"/images/encyclopedia/buddhism.jpg",artist:"Dirk Beyer",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Kamakura_Budda_Daibutsu_front_1885.jpg"}
+  },
+  "Moses": {
+    early:{slug:"miriam",name:"Miriam",img:"/images/encyclopedia/miriam.jpg",artist:"Window: Edward Burne-Jones 1886; Photo: Wojciech Dittwald",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:E.Burne-Jones_Miriam_St.Giles.jpg"},
+    rise:{slug:"burning-bush",name:"Burning bush",img:"/images/encyclopedia/burning-bush.jpg",artist:"Attributed to Dieric Bouts",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bouts_moses.jpg"},
+    deeds:{slug:"ten-commandments",name:"Ten Commandments",img:"/images/encyclopedia/ten-commandments.jpg",artist:"Photography by Ardon Bar Hama. Manuscript at the Bibliotheca Rosenthaliana, Amsterdam HS.ROS.PL.a-33. Colophon in the bottom right corner re",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:0001_FL9694984.jpg"},
+    opponents:{slug:"golden-calf",name:"Golden calf",img:"/images/encyclopedia/golden-calf.jpg",artist:"Sailko",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Nicolas_poussin,_adorazione_del_vitello_d'oro,_1633-34FXD.jpg"},
+    last:{slug:"mount-nebo",name:"Mount Nebo",img:"/images/encyclopedia/mount-nebo.jpg",artist:"Berthold Werner",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Mount_Nebo_BW_6.JPG"},
+    legacy:{slug:"torah",name:"Torah",img:"/images/encyclopedia/torah.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Тора._Нацыянальная_бібліятэка_Беларусі.jpg"}
+  },
+  "Zoroaster": {
+    rise:{slug:"ahura-mazda",name:"Ahura Mazda",img:"/images/encyclopedia/ahura-mazda.jpg",artist:"Derfash Kaviani (درفش کاویانی)",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Naqshe_Rostam_Darafsh_Ordibehesht_93_(35).JPG"},
+    deeds:{slug:"gathas",name:"Gathas",img:"/images/encyclopedia/gathas.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bodleian_J2_fol_175_Y_28_1.jpg"},
+    last:{slug:"shahnameh",name:"Shahnameh",img:"/images/encyclopedia/shahnameh.jpg",artist:"Attributed to Sultan Muhammad",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Court_of_Gayumars_(Cropped).jpg"},
+    legacy:{slug:"parsis",name:"Parsis",img:"/images/encyclopedia/parsis.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Indian_-_Leaf_from_Bound_Collection_of_20_Miniatures_Depicting_Village_Life_-_Walters_35176H.jpg"}
+  },
+  "Guru Nanak": {
+    early:{slug:"nankana-sahib",name:"Nankana Sahib",img:"/images/encyclopedia/nankana-sahib.jpg",artist:"Shaguftakarim",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:The_Entrance_of_Janam_Asthan-2.jpg"},
+    rise:{slug:"bhai-mardana",name:"Bhai Mardana",img:"/images/encyclopedia/bhai-mardana.jpg",artist:"Unknown artist. Published in sourced book. Page photographed by me (Wikimedia Commons user ThethPunjabi).",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Detail_of_Bhai_Mardana_from_a_Janamsakhi_series_of_painting.png"},
+    deeds:{slug:"babur",name:"Babur",img:"/images/encyclopedia/babur.jpg",artist:"c.1650",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Humayun_and_Babur_(Late_Shah_Jahan_Album)_Babur_detail.jpg"},
+    last:{slug:"guru-angad",name:"Guru Angad",img:"/images/encyclopedia/guru-angad.jpg",artist:"possibly the family workshop (or atelier) of Nainsukh of Guler",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Guru_Angad_miniature_painting.jpg"},
+    legacy:{slug:"guru-granth-sahib",name:"Guru Granth Sahib",img:"/images/encyclopedia/guru-granth-sahib.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sri_Guru_Granth_Sahib_Nishan.jpg"}
+  },
+  "Laozi": {
+    early:{slug:"sima-qian",name:"Sima Qian",img:"/images/encyclopedia/sima-qian.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Si_maqian.jpg"},
+    rise:{slug:"confucius",name:"Confucius",img:"/images/encyclopedia/confucius.jpg",artist:"Anonymous Chinese painter of the Western Han period",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Confucius,_fresco_from_a_Western_Han_tomb_of_Dongping_County,_Shandong_province,_China_(cropped).jpg"},
+    deeds:{slug:"daodejing",name:"Daodejing",img:"/images/encyclopedia/daodejing.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mawangdui_LaoTsu_Ms2.JPG"},
+    last:{slug:"yinxi",name:"Yinxi",img:"/images/encyclopedia/yinxi.jpg",artist:"Hong Zicheng",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:仙佛奇蹤_卷一_尹喜.png"},
+    legacy:{slug:"tao",name:"Tao",img:"/images/encyclopedia/tao.jpg",artist:"Cangjie6",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tao_2.svg"}
+  },
+  "Mahavira": {
+    early:{slug:"parshvanatha",name:"Parshvanatha",img:"/images/encyclopedia/parshvanatha.jpg",artist:"Fawks3107",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Jirawala_Parshwanath.png"},
+    rise:{slug:"kalpa-sutra",name:"Kalpa Sūtra",img:"/images/encyclopedia/kalpa-sutra.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kalpasutra_Mahavira_Nirvana.jpg"},
+    deeds:{slug:"digambara",name:"Digambara",img:"/images/encyclopedia/digambara.jpg",artist:"Dayodaya",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Mahavir.jpg"},
+    opponents:{slug:"gautama-buddha",name:"Gautama Buddha",img:"/images/encyclopedia/gautama-buddha.jpg",artist:"พระมหาเทวประภาส วชิรญาณเมธี (ผู้ถ่าย-ปล่อยสัญญาอนุญาตภาพให้นำไปใช้ได้เพื่อการศึกษาโดยอยู่ภา่ยใต้ cc-by-sa-3.0) …",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Buddha_in_Sarnath_Museum_(Dhammajak_Mutra).jpg"},
+    last:{slug:"tirthankara",name:"Tirthankara",img:"/images/encyclopedia/tirthankara.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jain_24-Tirthankaras.jpg"},
+    legacy:{slug:"mahatma-gandhi",name:"Mahatma Gandhi",img:"/images/encyclopedia/mahatma-gandhi.jpg",artist:"Elliott & Fry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mahatma-Gandhi,_studio,_1931.jpg"}
+  },
+  "Paul the Apostle": {
+    early:{slug:"pharisees",name:"Pharisees",img:"/images/encyclopedia/pharisees.jpg",artist:"Duccio di Buoninsegna",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Duccio_di_Buoninsegna_-_Christ_Accused_by_the_Pharisees_(detail)_-_WGA06802.jpg"},
+    rise:{slug:"saint-peter",name:"Saint Peter",img:"/images/encyclopedia/saint-peter.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Saint_Peter-Sinai_(6th_Century).jpg"},
+    deeds:{slug:"areopagus",name:"Areopagus",img:"/images/encyclopedia/areopagus.jpg",artist:"O.Mustafin",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Areopagus_hill.jpg"},
+    opponents:{slug:"antioch",name:"Antioch",img:"/images/encyclopedia/antioch.jpg",artist:"UndercoverClassicist",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Antioch_on_the_Orontes_en.svg"},
+    last:{slug:"nero",name:"Nero",img:"/images/encyclopedia/nero.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Nero_Glyptothek_Munich_321.jpg"},
+    legacy:{slug:"new-testament",name:"New Testament",img:"/images/encyclopedia/new-testament.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ann_Arbor,_University_of_Michigan_Ms_P.Mich.inv._1570_(Papyrus_37)_recto_Matt_26,_19-37.jpg"}
+  },
+  "Ali ibn Abi Talib": {
+    early:{slug:"banu-hashim",name:"Banu Hashim",img:"/images/encyclopedia/banu-hashim.jpg",artist:"Aziz911q8",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Name_of_Banu_Hashim.png"},
+    rise:{slug:"fatima",name:"Fatima",img:"/images/encyclopedia/fatima.jpg",artist:"کانون هنر شیعی",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:FatimaalZahra_(cropped).jpg"},
+    deeds:{slug:"kufa",name:"Kufa",img:"/images/encyclopedia/kufa.jpg",artist:"Ali sabih kadhim",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:%D9%85%D8%B3%D8%AC%D8%AF_%D8%A7%D9%84%D8%B3%D9%87%D9%84%D8%A9.jpg"},
+    opponents:{slug:"muawiya-i",name:"Muawiya I",img:"/images/encyclopedia/muawiya-i.jpg",artist:"LouisAragon (uploader)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Arab-Sasanian_coin_of_Muawiyah_I,_struck_at_the_Fasa_mint_in_Darabjird_(Fars).jpg"},
+    last:{slug:"najaf",name:"Najaf",img:"/images/encyclopedia/najaf.jpg",artist:"Goudarz.memar",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Shrine_of_Imam_Ali_Najaf_August_2023.jpg"},
+    legacy:{slug:"quran",name:"Quran",img:"/images/encyclopedia/quran.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Birmingham_Quran_manuscript_full.jpg"}
+  },
+  "Abraham": {
+    early:{slug:"sarah",name:"Sarah",img:"/images/encyclopedia/sarah.jpg",artist:"James Jacques Joseph Tissot (1836 - 1902) (French) Details on Google Art Project",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:James_Jacques_Joseph_Tissot_-_Abram's_Counsel_to_Sarai_-_Google_Art_Project_(cropped).jpg"},
+    rise:{slug:"shechem",name:"Shechem",img:"/images/encyclopedia/shechem.jpg",artist:"TrickyH",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Tell_Balata.jpg"},
+    deeds:{slug:"hagar",name:"Hagar",img:"/images/encyclopedia/hagar.jpg",artist:"François-Joseph Navez",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:François-Joseph_Navez_-_Agar_et_Ismaël_dans_le_désert_(cropped).jpg"},
+    opponents:{slug:"torah",name:"Torah",img:"/images/encyclopedia/torah.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Тора._Нацыянальная_бібліятэка_Беларусі.jpg"},
+    last:{slug:"cave-of-the-patriarchs",name:"Cave of the Patriarchs",img:"/images/encyclopedia/cave-of-the-patriarchs.jpg",artist:"Utilisateur:Djampa - Djampa",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Hebron_Cave_of_the_Patriarchs.jpg"},
+    legacy:{slug:"kaaba",name:"Kaaba",img:"/images/encyclopedia/kaaba.jpg",artist:"Richard Mortel",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:The_Ka%27ba,_Great_Mosque_of_Mecca,_Saudi_Arabia_(4).jpg"}
+  },
+  "Mary, mother of Jesus": {
+    early:{slug:"gospel-of-luke",name:"Gospel of Luke",img:"/images/encyclopedia/gospel-of-luke.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Luke_13.29-35_and_14.10_(CBL_BP_I,_f.15r).jpg"},
+    rise:{slug:"saint-joseph",name:"Saint Joseph",img:"/images/encyclopedia/saint-joseph.jpg",artist:"Guido Reni",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Guido_Reni_-_St_Joseph_with_the_Infant_Jesus_-_WGA19304.jpg"},
+    deeds:{slug:"jesus",name:"Jesus",img:"/images/encyclopedia/jesus.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Spas_vsederzhitel_sinay_(cropped1).jpg"},
+    opponents:{slug:"origen",name:"Origen",img:"/images/encyclopedia/origen.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Origen3.jpg"},
+    last:{slug:"pentecost",name:"Pentecost",img:"/images/encyclopedia/pentecost.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ingeborg_Psalter_02f_1200_(cropped).jpg"},
+    legacy:{slug:"pope-pius-ix",name:"Pope Pius IX",img:"/images/encyclopedia/pope-pius-ix.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pius_IX,_by_Adolphe_Braun,_1875.jpg"}
   }
 };

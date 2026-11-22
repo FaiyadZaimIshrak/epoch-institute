@@ -6897,6 +6897,11 @@ html.dc-ql-on { overflow: hidden; }
    Small text at least 4.5:1 against what is behind it: the light theme's gold and muted labels drawn at partial opacity
    fell to 2.2-4.2:1, so they are drawn whole there. Links that sit among other text are underlined, not told apart by
    colour alone (1.4.1). Picture credit links get a 24 px target (2.5.8). ── */
+/* 22 Nov 2026 (the crawl): the count beside an era heading of /profiles was dimmed with its heading (4.05:1 in the
+   dark theme), and /compare's "First" and "Second" were written in their series colours (3.85 and 1.88:1 on the light
+   page): the fields' coloured edges carry the series, the words are plain text. */
+.profile-era-title { opacity: 1; }
+.cmp-f.is-a, .cmp-f.is-b { color: var(--text); }
 [data-theme="light"] .footer-col-title { opacity: 1; color: var(--gold); }
 [data-theme="light"] .footer-nl-label { opacity: 1; color: var(--gold); }
 [data-theme="light"] .explorer-label { opacity: 1; color: var(--gold); }
