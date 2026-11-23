@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Sigiriya: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Sigiriya, or Sinhagiri, the Lion Rock, is a rock fortress and palace complex in the Matale District of Sri Lanka, developed under King Kashyapa from 477…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Sigiriya: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="Sigiriya, or Sinhagiri, the Lion Rock, is a rock fortress and palace complex in the Matale District of Sri Lanka, developed under King Kashyapa from 477…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/sigiriya">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/sigiriya.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/sigiriya.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/sigiriya">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Sigiriya"}]},{"@type":"Article","headline":"Sigiriya","description":"Sigiriya, or Sinhagiri, the Lion Rock, is a rock fortress and palace complex in the Matale District of Sri Lanka, developed under King Kashyapa from 477…","url":"https://the-epoch-institute.org/work/sigiriya","mainEntityOfPage":"https://the-epoch-institute.org/work/sigiriya","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Sigiriya"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/sigiriya.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Sigiriya</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Sigiriya.png" alt="Sigiriya" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · South &amp; Southeast Asia</p>
+        <h1 class="profile-detail-name">Sigiriya</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 477 CE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val">King Kashyapa I (reigned 477–495 CE) according to the <a class="enc-link" href="/encyclopedia/culavamsa">Cūḷavaṃsa</a>, with alternative accounts naming his father <a class="enc-link" href="/encyclopedia/dhatusena">Dhatusena</a> as the main builder or a Buddhist community as the makers</span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">A fortified city on and around a granite column about 180 metres high: an upper palace with rock-cut cisterns, a mid-level terrace with the Lion Gate and the mirror wall, lower palaces, moats, walls and three kinds of garden</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">In the northern Matale District near the town of Dambulla, Central Province, <a class="enc-link" href="/encyclopedia/sri-lanka">Sri Lanka</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">the Lion Gate; the frescoes of the western rock face; the mirror wall and its graffiti poems; the water, boulder and terraced gardens; hydraulic systems, some still working; the story of Kashyapa and Moggallana</span></div>
+        </div>
+        <p class="empire-meta">5 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>According to the <a class="enc-link" href="/encyclopedia/culavamsa">Cūḷavaṃsa</a>, Kashyapa seized the throne in 477 CE, moved his capital from <a class="enc-link" href="/encyclopedia/anuradhapura">Anuradhapura</a> to the rock of Sigiriya and built his palace on its summit.</li><li>After Kashyapa's defeat in 495 CE the capital returned to <a class="enc-link" href="/encyclopedia/anuradhapura">Anuradhapura</a> and Sigiriya became a Buddhist monastery complex that lasted until the 13th or 14th century.</li><li>Its mirror wall carries more than 1,500 poems written by visitors, the only evidence of poetry found from the <a class="enc-link" href="/encyclopedia/anuradhapura">Anuradhapura</a> period.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The mirror wall was once so reflective that the king could see himself as he walked alongside it, and one of the verses scribbled on it, deciphered by Senarath Paranavithana, reads: &quot;I am Budal. Came with hundreds of people to see Sigiriya. Since all the others wrote poems, I did not!&quot;</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 3000 BCE</span><span class="rf-text">The Aligala rock shelter east of Sigiriya shows the earliest evidence of human habitation, in the <a class="enc-link" href="/encyclopedia/mesolithic">Mesolithic</a> Period</span></li><li><span class="rf-year">3rd century BCE</span><span class="rf-text">Buddhist monastic settlements were established on the western and northern slopes of the hills around the rock</span></li><li><span class="rf-year">477</span><span class="rf-text">Kashyapa I seized the throne and moved the capital from <a class="enc-link" href="/encyclopedia/anuradhapura">Anuradhapura</a> to Sigiriya</span></li><li><span class="rf-year">495</span><span class="rf-text">Moggallana defeated Kashyapa, who died, and returned the capital to <a class="enc-link" href="/encyclopedia/anuradhapura">Anuradhapura</a></span></li><li><span class="rf-year">13th century</span><span class="rf-text">The monastery complex that followed Kashyapa's city survived until the 13th or 14th century</span></li><li><span class="rf-year">1831</span><span class="rf-text">Major Jonathan Forbes of the British Army came upon the brushwood-covered summit of the rock</span></li><li><span class="rf-year">1967</span><span class="rf-text">Paint was splashed on the frescoes in an act of vandalism, and restoration lasted until April 1968</span></li><li><span class="rf-year">1982</span><span class="rf-text">The Cultural Triangle Project began archaeological work on the entire city</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>Sigiriya lies in the northern Matale District near the town of Dambulla in the Central Province of <a class="enc-link" href="/encyclopedia/sri-lanka">Sri Lanka</a>, where a massive column of granite about 180 metres high rises abruptly from the low-lying plains that extend from the central mountain range. It is an inselberg, a hardened granite outcrop derived from a solidified magma plug of a former volcano, and Pidurangala Rock, one kilometre to the north, has a similar origin. The area was probably inhabited since prehistoric times: the Aligala rock shelter east of the rock indicates occupation around 3000 BCE, during the <a class="enc-link" href="/encyclopedia/mesolithic">Mesolithic</a> Period.</p><p>Brahmi inscriptions on the western side show that the many rock shelters and caves nearby were occupied by Buddhist monks and ascetics from as early as the 1st or 2nd century BCE. Monastic settlements were established in the 3rd century BCE on the western and northern slopes of the boulder-strewn hills. The shelters were made under large boulders, with carved drip ledges around the cave mouths, and inscriptions beside the ledges record their donation to the Buddhist monastic order as residences. These date between the 3rd century BCE and the 1st century CE.</p></div>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p>Sigiriya consists of an ancient citadel and was both a palace and a fortress. The ruins include an upper palace on the flat top of the rock, with cisterns cut into the rock, a mid-level terrace that holds the Lion Gate and the mirror wall with its frescoes, and lower palaces clinging to the slopes below. The moats, walls and gardens extended for a few hundred metres from the base of the rock. On a small plateau about halfway up the rock stood a gateway in the form of an enormous lion, from which the name Sinhagiri, the Lion Rock, derives. A sculpted lion's head once stood above the legs and paws flanking the entrance, but the head collapsed years ago.</p><p>The site plan combined symmetry and asymmetry. On the west side of the rock lay a park for the royals laid out on a symmetrical plan, with water-retaining structures and hydraulic systems, some of which work today. The south holds a man-made reservoir. The gardens fall into three linked forms: water gardens, cave and boulder gardens, and terraced gardens. Five gates were placed at the entrances, and the more elabourate western gate is thought to have been reserved for the royals.</p></div>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <div class="profile-section-body"><p>The <a class="enc-link" href="/encyclopedia/culavamsa">Cūḷavaṃsa</a>, an ancient Sri Lankan chronicle, describes the making of Sigiriya. It records that in 477 CE Kashyapa I, the son of King <a class="enc-link" href="/encyclopedia/dhatusena">Dhatusena</a> by a non-royal consort, seized the throne in a coup assisted by Migara, the king's nephew and army commander. Kashyapa murdered his father by walling him up alive and usurped a throne that rightfully belonged to his half-brother Moggallana, who fled to <a class="enc-link" href="/encyclopedia/south-india">South India</a> and vowed revenge.</p><p>Expecting Moggallana's return, Kashyapa moved his capital and residence from <a class="enc-link" href="/encyclopedia/anuradhapura">Anuradhapura</a> to the more secure summit of Sigiriya. During his reign, 477 to 495 CE, Sigiriya was developed into a complex city and fortress, and most of the elabourate constructions on the summit and around it, including defensive structures, palaces and gardens, date from this period. According to the chronicle, the area had been a large forest that became a hill after storms and landslides. Alternative stories name Dhatusena as the primary builder, with Kashyapa finishing the work in honour of his father, and still other accounts describe Kashyapa as a playboy king whose pleasure palace this was.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/ajanta-caves"><img src="/images/encyclopedia/ajanta-caves.jpg" alt="Ajanta Caves" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/ajanta-caves">Ajanta Caves</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Ajanta_(63).jpg" target="_blank" rel="noopener">Soman, CC BY 2.5</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The frescoes were praised by John Still, who wrote in 1907 that "the whole face of the hill appears to have been a gigantic picture gallery" and "the largest picture in the world perhaps". The paintings would have covered most of the western face of the rock, an area 140 metres long and 40 metres high, and graffiti refer to 500 ladies in them. Although classified as belonging to the <a class="enc-link" href="/encyclopedia/anuradhapura">Anuradhapura</a> period, their style is considered unique, with lines that enhance the sense of volume of the figures. The identity of the ladies has not been confirmed: some believe they were the ladies of the kings, others that they were women taking part in religious observances. The pictures resemble paintings in the <a class="enc-link" href="/encyclopedia/ajanta-caves">Ajanta Caves</a> in <a class="enc-link" href="/encyclopedia/india">India</a>.</p><p>Visitors from the 8th century onward scribbled verses on the mirror wall, most of them in the 9th and 10th centuries. People of all walks of life wrote there, from poets to provincial governors to housewives. Of more than 1,500 poems, most are addressed to the ladies of the frescoes: men praised their beauty and women shared their envy. Senarath Paranavithana, the Archaeological Commissioner of <a class="enc-link" href="/encyclopedia/ceylon">Ceylon</a>, deciphered 685 verses.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <div class="profile-section-body"><p>When Moggallana arrived he declared war and defeated Kashyapa in 495 CE. The <a class="enc-link" href="/encyclopedia/culavamsa">Cūḷavaṃsa</a> and folklore say that Kashyapa's army abandoned him after misreading a change of course by his <a class="enc-link" href="/encyclopedia/war-elephant">war elephant</a> as a retreat, and that he took his own life with a blade; in other versions he is assassinated by poison administered by a concubine. Moggallana returned the capital to <a class="enc-link" href="/encyclopedia/anuradhapura">Anuradhapura</a> and converted Sigiriya into a Buddhist monastery complex, which survived until the 13th or 14th century. No records are found from then until the 16th and 17th centuries, when it was used briefly as an outpost of the Kingdom of <a class="enc-link" href="/encyclopedia/kandy">Kandy</a>.</p><p>In 1831 Major Jonathan Forbes of the 78th (Highlanders) Regiment of Foot, returning on horseback from Pollonnuruwa, encountered the brushwood-covered summit. Antiquarians and later archaeologists took an interest, and work began on a small scale in the 1890s, with H.C.P. Bell the first to research the site extensively. On 14 October 1967 paint was splashed on the frescoes; Luciano Maranzi, trained in <a class="enc-link" href="/encyclopedia/rome">Rome</a>, assisted the restoration, which ended on 11 April 1968. A report presented in 2010 suggested that the 22 frescoes have been fading since 1930, and writing on the mirror wall is now banned.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Sigiriya is a <a class="enc-link" href="/encyclopedia/unesco-world-heritage-site">UNESCO World Heritage Site</a> and is regarded as one of the best preserved examples of ancient urban planning. It is considered one of the most important urban planning sites of the first millennium, with a plan described as very elabourate and imaginative. The Cultural Triangle Project, launched by the Government of <a class="enc-link" href="/encyclopedia/sri-lanka">Sri Lanka</a>, turned its attention to Sigiriya in 1982, and archaeological work began on the entire city for the first time under it.</p><p>Its gardens are counted among the oldest landscaped gardens in the world. Senake Bandaranayake identifies three traditions of landscape gardening there: the symmetrical water gardens, the asymmetrical cave and boulder gardens, and the terraced gardens at the base of the rock; he suggests that the palace garden on the summit combines all three. Interpretations of the site differ. Some regard it as the work of a Buddhist community without a military function, and it may have been important in the competition between the <a class="enc-link" href="/encyclopedia/mahayana-buddhism">Mahayana</a> and <a class="enc-link" href="/encyclopedia/theravada-buddhism">Theravada</a> Buddhist traditions in ancient Sri Lanka. Its fountains of circular limestone plates, fed by underground conduits, still work, especially in the rainy season.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Sigiriya, the Lion Rock, is a granite column in <a class="enc-link" href="/encyclopedia/sri-lanka">Sri Lanka</a> that King Kashyapa made his fortress capital from 477 CE. After his defeat in 495 it became a Buddhist monastery. Its frescoes, mirror wall poems and gardens survive and are a <a class="enc-link" href="/encyclopedia/world-heritage-site">World Heritage Site</a>.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="sigiriya"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Kashyapa I seized the throne and moved the capital from Anuradhapura to Sigiriya","o":["1831","495","477","1982"],"a":2,"w":"477: Kashyapa I seized the throne and moved the capital from Anuradhapura to Sigiriya."},{"p":"Which came first?","q":"","o":["Moggallana defeated Kashyapa, who died, and returned the capital to Anuradhapura","Major Jonathan Forbes of the British Army came upon the brushwood-covered summit of the rock"],"a":0,"w":"495: Moggallana defeated Kashyapa, who died, and returned the capital to Anuradhapura · 1831: Major Jonathan Forbes of the British Army came upon the brushwood-covered summit of the rock."},{"p":"In which year?","q":"Moggallana defeated Kashyapa, who died, and returned the capital to Anuradhapura","o":["495","1831","1967","477"],"a":0,"w":"495: Moggallana defeated Kashyapa, who died, and returned the capital to Anuradhapura."},{"p":"Which came first?","q":"","o":["Paint was splashed on the frescoes in an act of vandalism, and restoration lasted until April 1968","Major Jonathan Forbes of the British Army came upon the brushwood-covered summit of the rock"],"a":1,"w":"1967: Paint was splashed on the frescoes in an act of vandalism, and restoration lasted until April 1968 · 1831: Major Jonathan Forbes of the British Army came upon the brushwood-covered summit of the rock."},{"p":"In which year?","q":"Paint was splashed on the frescoes in an act of vandalism, and restoration lasted until April 1968","o":["1967","495","1831","477"],"a":0,"w":"1967: Paint was splashed on the frescoes in an act of vandalism, and restoration lasted until April 1968."}]</script>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/hagia-sophia"><img src="/logos/thumbs/Hagia%20Sophia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Hagia Sophia</span><span class="related-card-dates">532 CE – present</span></a><a class="related-card" href="/work/mogao-caves"><img src="/logos/thumbs/Mogao%20Caves.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mogao Caves</span><span class="related-card-dates">c. 366 CE – present</span></a><a class="related-card" href="/work/chichen-itza"><img src="/logos/thumbs/Chichen%20Itza.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Chichen Itza</span><span class="related-card-dates">c. 600 CE – present</span></a><a class="related-card" href="/work/quran"><img src="/logos/thumbs/Quran.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Quran</span><span class="related-card-dates">c. 610 CE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/mogao-caves"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Mogao%20Caves.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Mogao Caves</span><span class="related-card-dates">c. 366 CE – present</span></a><a class="related-card" href="/work/hagia-sophia"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Hagia%20Sophia.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Hagia Sophia</span><span class="related-card-dates">532 CE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Sigiriya",slug="sigiriya",url="https://the-epoch-institute.org/work/sigiriya";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Sigiriya on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/sigiriya #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/sigiriya"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Sigiriya",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Sigiriya",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

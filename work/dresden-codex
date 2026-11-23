@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Dresden Codex: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Dresden Codex is a Maya screenfold book of bark paper from the Yucatán Peninsula, probably from the Chichen Itza region, dated to the 11th or 12th…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Dresden Codex: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Dresden Codex is a Maya screenfold book of bark paper from the Yucatán Peninsula, probably from the Chichen Itza region, dated to the 11th or 12th…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/dresden-codex">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/dresden-codex.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/dresden-codex.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/dresden-codex">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Dresden Codex"}]},{"@type":"Article","headline":"Dresden Codex","description":"The Dresden Codex is a Maya screenfold book of bark paper from the Yucatán Peninsula, probably from the Chichen Itza region, dated to the 11th or 12th…","url":"https://the-epoch-institute.org/work/dresden-codex","mainEntityOfPage":"https://the-epoch-institute.org/work/dresden-codex","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Dresden Codex"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/dresden-codex.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Dresden Codex</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Dresden%20Codex.png" alt="Dresden Codex" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · Americas</p>
+        <h1 class="profile-detail-name">Dresden Codex</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 1200 CE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val">Eight different scribes, who painted with thin brushes and vegetable dyes; Maya of the <a class="enc-link" href="/encyclopedia/yucatan-peninsula">Yucatán Peninsula</a>, probably the <a class="enc-link" href="/encyclopedia/chichen-itza">Chichen Itza</a> region according to J. Eric S. Thompson, copying an original text some three or four hundred years older</span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">A screenfold book of 78 pages of amate, about 20 centimetres high, 3.7 metres long when unfolded, written in <a class="enc-link" href="/encyclopedia/maya-script">Maya hieroglyphs</a>, with decorative board covers</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">The <a class="enc-link" href="/encyclopedia/saxons">Saxon</a> State and University Library <a class="enc-link" href="/encyclopedia/dresden">Dresden</a> (SLUB Dresden), <a class="enc-link" href="/encyclopedia/germany">Germany</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">Detailed Venus tables; lunar tables with intervals correlating with eclipses; a 260-day ritual calendar; the Maya new-year ceremony; the rain god <a class="enc-link" href="/encyclopedia/chaac">Chaac</a>, shown 134 times; its role in the decipherment of <a class="enc-link" href="/encyclopedia/maya-script">Maya hieroglyphs</a>; water damage in 1945</span></div>
+        </div>
+        <p class="empire-meta">6 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The codex is a Maya screenfold book from the <a class="enc-link" href="/encyclopedia/yucatan-peninsula">Yucatán Peninsula</a>, probably from the area of <a class="enc-link" href="/encyclopedia/chichen-itza">Chichen Itza</a>, and scholars place its making between the 11th and 14th centuries.</li><li>Its pages hold accurate astronomical tables, notably for Venus and the Moon, together with ritual schedules, religious references, and information on seasons, illness and medicine.</li><li>It survived the <a class="enc-link" href="/encyclopedia/spanish-inquisition">Spanish Inquisition</a>, reached <a class="enc-link" href="/encyclopedia/dresden">Dresden</a> in 1739 and was damaged in the bombing of Dresden in 1945; it later played a key role in deciphering <a class="enc-link" href="/encyclopedia/maya-script">Maya hieroglyphs</a>.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The Dresden Codex is one of four hieroglyphic Maya codices that survived the <a class="enc-link" href="/encyclopedia/spanish-inquisition">Spanish Inquisition</a> in the New World. After it spent February 1945 in a flooded basement during the bombing of <a class="enc-link" href="/encyclopedia/dresden">Dresden</a>, the sheets 6/40, 7/39 and 8/38 were put back in reverse order when they were returned to their glass cabinet.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 1200</span><span class="rf-text">The codex is made, probably as a copy of an original text some three or four hundred years older</span></li><li><span class="rf-year">1739</span><span class="rf-text">Johann Christian Götze buys the codex from a private owner in <a class="enc-link" href="/encyclopedia/vienna">Vienna</a></span></li><li><span class="rf-year">1810</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/alexander-von-humboldt">Alexander von Humboldt</a> publishes pages 47, 48 and 50 to 52, the first reproduction of any of its pages</span></li><li><span class="rf-year">1831</span><span class="rf-text">Lord Kingsborough publishes the first copy of the codex in his Antiquities of <a class="enc-link" href="/encyclopedia/mexico">Mexico</a></span></li><li><span class="rf-year">1880</span><span class="rf-text">Ernst Wilhelm Förstemann publishes the first complete facsimile and deciphers its calendar section</span></li><li><span class="rf-year">1897</span><span class="rf-text">Paul Schellhas assigns letters to the gods named by its glyphs</span></li><li><span class="rf-year">1945</span><span class="rf-text">The codex is kept in a flooded basement during the bombing of <a class="enc-link" href="/encyclopedia/dresden">Dresden</a> and suffers serious water damage</span></li><li><span class="rf-year">1950s</span><span class="rf-text">Yuri Knorozov applies a phonetic approach based on the De Landa alphabet to decode the codex</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The Dresden Codex is a Maya book from the <a class="enc-link" href="/encyclopedia/yucatan-peninsula">Yucatán Peninsula</a> in southeastern <a class="enc-link" href="/encyclopedia/mexico">Mexico</a>. The historian J. Eric S. Thompson describes it as writings of the indigenous people of the peninsula, and the Maya historians Peter J. Schmidt, Mercedes de la Garza and Enrique Nalda confirm this. Thompson narrows its probable origin to the area of <a class="enc-link" href="/encyclopedia/chichen-itza">Chichen Itza</a>, because certain picture symbols in the codex are found only on monuments there, and he argues that its astronomical tables support the same place. He adds that the people of the Yucatán Peninsula were known to have made such studies around 1200 CE, and he notes similar ceramic designs in the Chichen Itza area that are known to have ceased in the early thirteenth century.</p><p>Its date is given in several ways. It is dated to the 11th or 12th century. The British historian Clive Ruggles, drawing on the analyses of several scholars, suggests that it is a copy, originally written between the twelfth and fourteenth centuries. Thompson narrows the date closer to 1200 to 1250, and the Maya archaeologist Linton Satterthwaite puts the date when it was made at no later than 1345. The codex also refers to an original text of some three or four hundred years earlier, describing local history and astronomical tables.</p></div><details class="sec-src"><summary>Sources for this section</summary><p class="sec-src-n">Works that Wikipedia&#8217;s article &#8220;Dresden Codex&#8221; cites where it covers History:</p><ul><li>John Eric Sidney Thompson, A Commentary on the Dresden Codex: A Maya Hieroglyphic Book (American Philosophical Society, 1972)</li><li>Clive L. N. Ruggles, Ancient Astronomy: An Encyclopedia of Cosmologies and Myth (ABC-CLIO, 2005)</li><li>Robert J. Sharer, The Ancient Maya (Stanford University Press, 2006)</li></ul></details>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p>The codex contains 78 pages, and most have writing on both sides. Each page is generally divided into three horizontal sections, which students of the codex have arbitrarily labelled a, b and c; some pages have only two, while one has four and another five. Sections with a theme of their own are generally separated by a red vertical line and divided into two to four columns. The book holds information relating to astronomical and astrological tables, religious references, the seasons of the earth, and illness and medicine, as well as conjunctions of planets and moons.</p><p>Its astronomy is recognised by students of the codex for the detailed Venus tables and lunar tables. The lunar series has intervals correlating with eclipses, and the Venus tables correlate with the movements of the planet. Ruggles shows that in the codex the Maya related their 260-day calendar to celestial bodies, especially Venus and Mars. The codex also contains astrological tables and ritual schedules. Its religious references show, in a cycle of the 260-day ritual calendar, the important Maya royal events, and it includes information on the Maya new-year ceremony tradition. The rain god <a class="enc-link" href="/encyclopedia/chaac">Chaac</a> is represented 134 times.</p></div><details class="sec-src"><summary>Sources for this section</summary><p class="sec-src-n">Works that Wikipedia&#8217;s article &#8220;Dresden Codex&#8221; cites where it covers Description:</p><ul><li>John Eric Sidney Thompson, A Commentary on the Dresden Codex: A Maya Hieroglyphic Book (American Philosophical Society, 1972)</li><li>Martyn Lyons, Books: A Living History (J. Paul Getty Museum, 2011)</li><li>Clive L. N. Ruggles, Ancient Astronomy: An Encyclopedia of Cosmologies and Myth (ABC-CLIO, 2005)</li></ul></details>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <div class="profile-section-body"><p>Like all other pre-Hispanic books from <a class="enc-link" href="/encyclopedia/mesoamerica">Mesoamerica</a>, the Dresden Codex takes the form of a screenfold. Its pages are made of amate, a paper from the pounded inner bark of a wild species of fig, Ficus cotinifolia, called hu'un in Maya, a word that became semantically equivalent to book. They are 20 centimetres high and can be folded accordion-style; unfolded, the codex is 3.7 metres long. The Maya codices all have pages of about the same size, about 20 centimetres high and 10 centimetres wide, and the Dresden Codex has decorative board covers on the front and back.</p><p>The pictures and glyphs were painted by skilled craftsmen using thin brushes and vegetable dyes. Black and red were the main colours on many pages, and some pages have detailed backgrounds in shades of yellow, green and the <a class="enc-link" href="/encyclopedia/maya-blue">Maya blue</a>. The pages have a border of red paint, although many have lost it to age. The codex was written by eight different scribes, who each had their own writing style, glyph designs and subject matter. It is written in <a class="enc-link" href="/encyclopedia/maya-script">Maya hieroglyphs</a> and is thought to copy an earlier text.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/palenque"><img src="/images/encyclopedia/palenque.jpg" alt="Palenque" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/palenque">Palenque</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:055_Palenque_Pakal_Maji_(29).JPG" target="_blank" rel="noopener">Ljuba brank at Slovenian Wikipedia, CC BY-SA 3.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Reproductions of the codex began in the early nineteenth century. <a class="enc-link" href="/encyclopedia/alexander-von-humboldt">Alexander von Humboldt</a> published pages 47, 48 and 50 to 52 in his 1810 atlas Vues des Cordillères et Monuments des Peuples Indigènes de l'Amérique, the first reproduction of any of its pages. In 1828 Constantine Samuel Rafinesque identified the book as Maya from its glyphs, which looked like those found at <a class="enc-link" href="/encyclopedia/palenque">Palenque</a>. The Italian artist Agostino Aglio began in 1826 to transcribe and illustrate the codex completely for Lord Kingsborough, who published it in the nine volumes of his Antiquities of <a class="enc-link" href="/encyclopedia/mexico">Mexico</a> in 1831 to 1848.</p><p>Later study centred on its numbers and gods. Ernst Wilhelm Förstemann, the <a class="enc-link" href="/encyclopedia/dresden">Dresden</a> librarian, published the first complete facsimile in 1880, deciphered the calendar section and its Maya numerals, and determined that the numbers, with deities and day names, related to the Maya calendar and the Long Count. The historian Cyrus Thomas connected the codex with the cycle of the Maya calendar and the 365 days of the year. In 1897 and 1904 Paul Schellhas assigned letters to the gods of particular glyphs, since they had several possible names: God D could be Hunab Ku Itzam Na among other names, and God A could be Cizin, a god of death.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/hernan-cortes"><img src="/images/encyclopedia/hernan-cortes.jpg" alt="Hernán Cortés" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/hernan-cortes">Hernán Cortés</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Retrato_de_Hern%C3%A1n_Cort%C3%A9s.jpg" target="_blank" rel="noopener">Unknown artist, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Dresden Codex is one of four hieroglyphic Maya codices that survived the <a class="enc-link" href="/encyclopedia/spanish-inquisition">Spanish Inquisition</a> in the New World. Johann Christian Götze, a German theologian and director of the Royal Library at <a class="enc-link" href="/encyclopedia/dresden">Dresden</a>, bought it from a private owner in <a class="enc-link" href="/encyclopedia/vienna">Vienna</a> in 1739 while travelling to <a class="enc-link" href="/encyclopedia/italy">Italy</a>. Thompson speculates that <a class="enc-link" href="/encyclopedia/hernan-cortes">Hernán Cortés</a> sent it as tribute to <a class="enc-link" href="/encyclopedia/charles-v-holy-roman-emperor">Charles V</a>, since examples of local writings and other Maya items were sent in 1519 to the ruler, who was then living in Vienna. It was catalogued into the Royal Library of Dresden in 1744 and remained relatively obscure until the early twentieth century.</p><p>By the time of the Kingsborough copies it had some damage from handling, sunlight and moisture. In February 1945, during the bombing of Dresden, it was kept in a flooded basement and received direct water damage that was significantly destructive. The German historian G. Zimmerman later noted that the damage was extreme on pages 2, 4, 24, 28, 34, 38, 71 and 72, and some details of the glyph images have been lost. The harm shows when the codex is compared with the Kingsborough copies and the Förstemann facsimiles of 1880 and 1892. Sheets 6/40, 7/39 and 8/38 were reversed by an error when they were returned to their protective glass cabinet after drying.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>The codex has played a key role in deciphering <a class="enc-link" href="/encyclopedia/maya-script">Maya hieroglyphs</a>. In the 1950s Yuri Knorozov used a phonetic approach based on the De Landa alphabet to decode it, and in the 1980s other scholars did further deciphering on the same concept. Schellhas's letters for the gods were meant as a noncommittal system and were adopted by later researchers of the Maya codices. Together with the <a class="enc-link" href="/encyclopedia/madrid">Madrid</a> and <a class="enc-link" href="/encyclopedia/paris">Paris</a> codices, named after the cities where they were rediscovered, and the Maya Codex of <a class="enc-link" href="/encyclopedia/mexico">Mexico</a>, it is one of the four surviving hieroglyphic Maya books.</p><p>The page numbers in use today were assigned by Aglio in 1825 to 1826, when he divided the codex into two parts and labelled them Codex A and Codex B. In 1836 the librarian K. C. Falkenstein adjusted the position of pages for what he called esthetical reasons, producing the two parts of similar length, and Förstemann corrected Aglio's assignment of the sheets 1/45 and 2/44. Historians such as Helmut Deckert and Ferdinand Anders understand that a reading should run through the complete front side, pages 1 to 24 and 46 to 74, and then the back side, pages 25 to 45. The codex is held by the <a class="enc-link" href="/encyclopedia/saxons">Saxon</a> State and University Library <a class="enc-link" href="/encyclopedia/dresden">Dresden</a>.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Dresden Codex is a Maya screenfold book of bark paper, probably made around <a class="enc-link" href="/encyclopedia/chichen-itza">Chichen Itza</a> and dated between the 11th and 14th centuries. It holds Venus and lunar tables and ritual schedules, reached <a class="enc-link" href="/encyclopedia/dresden">Dresden</a> in 1739, was damaged in 1945, and helped in deciphering <a class="enc-link" href="/encyclopedia/maya-script">Maya writing</a>.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="dresden-codex"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Johann Christian Götze buys the codex from a private owner in Vienna","o":["1897","1880","1739","1831"],"a":2,"w":"1739: Johann Christian Götze buys the codex from a private owner in Vienna."},{"p":"Which came first?","q":"","o":["Paul Schellhas assigns letters to the gods named by its glyphs","Alexander von Humboldt publishes pages 47, 48 and 50 to 52, the first reproduction of any of its pages"],"a":1,"w":"1897: Paul Schellhas assigns letters to the gods named by its glyphs · 1810: Alexander von Humboldt publishes pages 47, 48 and 50 to 52, the first reproduction of any of its pages."},{"p":"In which year?","q":"The codex is kept in a flooded basement during the bombing of Dresden and suffers serious water damage","o":["1810","1945","1831","1897"],"a":1,"w":"1945: The codex is kept in a flooded basement during the bombing of Dresden and suffers serious water damage."},{"p":"Which came first?","q":"","o":["Paul Schellhas assigns letters to the gods named by its glyphs","Lord Kingsborough publishes the first copy of the codex in his Antiquities of Mexico"],"a":1,"w":"1897: Paul Schellhas assigns letters to the gods named by its glyphs · 1831: Lord Kingsborough publishes the first copy of the codex in his Antiquities of Mexico."},{"p":"In which year?","q":"Lord Kingsborough publishes the first copy of the codex in his Antiquities of Mexico","o":["1810","1831","1739","1945"],"a":1,"w":"1831: Lord Kingsborough publishes the first copy of the codex in his Antiquities of Mexico."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>S.D. Coe, Maya Hieroglyphic Codices (Institute for Mesoamerican Studies, State University of New York at Albany, 1982)</li>
+        <li>Helmut Deckert, Die Dresdner Maya-Handschrift (Akademische Druck-u. Verlagsanstalt, 1989)</li>
+        <li>John Eric Sidney Thompson, A Commentary on the Dresden Codex: A Maya Hieroglyphic Book (American Philosophical Society, 1972)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/great-mosque-of-djenne"><img src="/logos/thumbs/Great%20Mosque%20of%20Djenn%C3%A9.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Great Mosque of Djenné</span><span class="related-card-dates">c. 1200 CE – present</span></a><a class="related-card" href="/work/magna-carta"><img src="/logos/thumbs/Magna%20Carta.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Magna Carta</span><span class="related-card-dates">1215 CE – present</span></a><a class="related-card" href="/work/rock-hewn-churches-of-lalibela"><img src="/logos/thumbs/Rock-hewn%20churches%20of%20Lalibela.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Rock-hewn churches of Lalibela</span><span class="related-card-dates">c. 1181 CE – present</span></a><a class="related-card" href="/work/notre-dame-de-paris"><img src="/logos/thumbs/Notre-Dame%20de%20Paris.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Notre-Dame de Paris</span><span class="related-card-dates">1163 CE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/rock-hewn-churches-of-lalibela"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Rock-hewn%20churches%20of%20Lalibela.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Rock-hewn churches of Lalibela</span><span class="related-card-dates">c. 1181 CE – present</span></a><a class="related-card" href="/work/great-mosque-of-djenne"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Great%20Mosque%20of%20Djenn%C3%A9.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Great Mosque of Djenné</span><span class="related-card-dates">c. 1200 CE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Dresden Codex",slug="dresden-codex",url="https://the-epoch-institute.org/work/dresden-codex";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Dresden Codex on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/dresden-codex #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/dresden-codex"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Dresden Codex",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Dresden Codex",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Muqaddimah: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Muqaddimah is a 14th-century Arabic treatise on historiography, sociology and the philosophy of history by Ibn Khaldun, written in 1377 as the…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Muqaddimah: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Muqaddimah is a 14th-century Arabic treatise on historiography, sociology and the philosophy of history by Ibn Khaldun, written in 1377 as the…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/muqaddimah">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/muqaddimah.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/muqaddimah.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/muqaddimah">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Muqaddimah"}]},{"@type":"Article","headline":"Muqaddimah","description":"The Muqaddimah is a 14th-century Arabic treatise on historiography, sociology and the philosophy of history by Ibn Khaldun, written in 1377 as the…","url":"https://the-epoch-institute.org/work/muqaddimah","mainEntityOfPage":"https://the-epoch-institute.org/work/muqaddimah","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Muqaddimah"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/muqaddimah.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Muqaddimah</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Muqaddimah.png" alt="Muqaddimah" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · Islamic Caliphates &amp; Middle East</p>
+        <h1 class="profile-detail-name">Muqaddimah</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">1377 CE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia/ibn-khaldun">Ibn Khaldun</a>, who wrote it at Qalʿat ibn Salama after withdrawing from political life, as the introduction and first book of his planned world history, the Kitab al-ʿIbar</span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">An Arabic treatise in six books on society, politics, urban life, economics and knowledge, with discussions of historiography, theology and the natural sciences; the Kitab al-ʿIbar it introduces fills seventeen volumes of 500 pages each in its modern edition</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">Read in printed editions and in translations into Ottoman Turkish, French and English; <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a> copied in <a class="enc-link" href="/encyclopedia/ibn-khaldun">Ibn Khaldun</a>'s lifetime survive, some with his own marginal notes or additions</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">The ʿasabiyyah cycle of dynasties; the new science of ʿumrān; a criticism of the errors of historians; the contrast of nomadic and sedentary life; passages on taxation and prices; the discussion of <a class="enc-link" href="/encyclopedia/alchemy">alchemy</a></span></div>
+        </div>
+        <p class="empire-meta">6 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li><a class="enc-link" href="/encyclopedia/ibn-khaldun">Ibn Khaldun</a> wrote it in 1377 as the introduction to a universal history, and it came to be regarded as an independent work in his own lifetime.</li><li>It sets out a new science of human society, ʿilm al-ʿumrān, and explains the rise and fall of dynasties through ʿasabiyyah, or group feeling.</li><li>It was received without much enthusiasm for centuries, first printed in <a class="enc-link" href="/encyclopedia/cairo">Cairo</a> in 1857, and translated into French in 1863 and English in 1958.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p><a class="enc-link" href="/encyclopedia/ibn-khaldun">Ibn Khaldun</a> wrote that when officials were questioned about armies, or the goods of the wealthy were assessed, the true figures would be found to amount to a tenth of what those people had said.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">1377</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/ibn-khaldun">Ibn Khaldun</a> completes a draft of the Muqaddimah at Qalʿat ibn Salama</span></li><li><span class="rf-year">1857</span><span class="rf-text">The Muqaddimah is printed at the Bulaq Press in <a class="enc-link" href="/encyclopedia/cairo">Cairo</a> in a standalone volume</span></li><li><span class="rf-year">1858</span><span class="rf-text">Étienne-Marc Quatremère prints the Arabic text in three volumes in <a class="enc-link" href="/encyclopedia/paris">Paris</a></span></li><li><span class="rf-year">1860</span><span class="rf-text">The complete Ottoman Turkish translation is published, in 1860 or 1861</span></li><li><span class="rf-year">1863</span><span class="rf-text">William McGuckin de Slane publishes a French translation in three volumes</span></li><li><span class="rf-year">1958</span><span class="rf-text">Franz Rosenthal publishes an English translation</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The Muqaddimah is a 14th-century Arabic treatise on historiography, sociology and the philosophy of history by <a class="enc-link" href="/encyclopedia/ibn-khaldun">Ibn Khaldun</a>. He wrote it in 1377 as the introduction and first book of a planned work of world history, the Kitab al-ʿIbar, the "Book of Lessons", whose full title promises a record of the beginnings and events in the history of the <a class="enc-link" href="/encyclopedia/arabs">Arabs</a>, the foreigners and the <a class="enc-link" href="/encyclopedia/berbers">Berbers</a> and their powerful contemporaries. The word muqaddimah means a prologue or introduction to a larger work.</p><p>Ibn Khaldun wrote the first version at Qalʿat ibn Salama, where he secluded himself for almost four years after withdrawing from political life. The Muqaddimah is the first of three parts of a project on which he worked for almost thirty years. Its starting point was a criticism of the historians before him. He named seven critical issues: that all records are liable to error, partisanship towards a creed or opinion, over-confidence in one's sources, the failure to understand what is intended, a mistaken belief in the truth, the inability to place an event in its real context, and the desire to win the favour of the highly placed by praising them. The most important, he wrote, was ignorance of the laws governing the transformation of human society, and against that point he set out his own theory of society.</p></div><details class="sec-src"><summary>Sources for this section</summary><p class="sec-src-n">Works that Wikipedia&#8217;s article &#8220;Muqaddimah&#8221; cites where it covers History of the Muqaddimah, Systemic bias, Military history:</p><ul><li>Ibn Khaldun, The Muqaddimah: An Introduction to History (Princeton University Press, 1969)</li></ul></details>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p><a class="enc-link" href="/encyclopedia/sati-practice">Sati</a>' al-Husri suggested that the Muqaddimah is essentially a sociological work, sketching over its six books a general sociology, a sociology of politics, of urban life, of economics and of knowledge. Some modern thinkers view it as the first work dealing with the social sciences of sociology, demography and cultural history. It also deals with Islamic theology, historiography, the philosophy of history, economics, political theory and ecology.</p><p>Its best known idea is ʿasabiyyah, a word for tribalism or clanism that in a modern context is rendered as group feeling, social cohesion or solidarity. <a class="enc-link" href="/encyclopedia/ibn-khaldun">Ibn Khaldun</a> argued that each dynasty carries the seeds of its own downfall. Ruling houses tend to emerge on the peripheries of great empires and use the unity of those areas to change the leadership. Once settled at the centre, the new rulers become lax and concerned with their lifestyles, and a new dynasty may emerge at the periphery and begin the cycle again. He held that civilisations have lifespans like individuals, and that injustice, such as overtaxing and the violation of property rights, ruins civilisation. His framework contrasts nomadic life (badāwa) with sedentary life (ḥaḍāra). On economics he wrote that labour is the source of value, that prices result from supply and demand, and that taxation yields a large revenue from small assessments at the beginning of a dynasty and a small revenue from large assessments at its end.</p></div>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <div class="profile-section-body"><p><a class="enc-link" href="/encyclopedia/ibn-khaldun">Ibn Khaldun</a> expounded in the Muqaddimah a "new science" about which he had maintained secrecy until his retirement to Qalʿat ibn Salama. It studies what he called ʿumrān, and he named it ʿilm al-ʿumrān. The science was based on Greco-Arab philosophy and sought to study the evolution of humankind and society throughout history by a method that was essentially historical, empirical, rational and demonstrative. He often criticised "idle superstition and uncritical acceptance of historical data", and presented the new science as something new to his age.</p><p>A draft of the Muqaddimah was completed in 1377. It stands as the first part of the Kitab al-ʿIbar, a work of universal history that fills seventeen volumes of 500 pages each in its modern edition. <a class="enc-link" href="/encyclopedia/manuscript">Manuscripts</a> of the Muqaddimah copied in Ibn Khaldun's lifetime survive, and a number of them carry marginal notes or additions in his own hand. In his own lifetime the Muqaddimah was already regarded as an independent work.</p><p>His method appears in his treatment of numbers. In the Introduction he criticised the historian al-Masudi for the report that <a class="enc-link" href="/encyclopedia/moses">Moses</a> counted an Israelite army of 600,000 or more, and asked whether <a class="enc-link" href="/encyclopedia/egypt">Egypt</a> and <a class="enc-link" href="/encyclopedia/syria">Syria</a> could have held so many soldiers, or whether such an army could march or fight as a unit. He set beside it the Sasanian army at the Battle of al-Qādisiyyah, which he put at 120,000 at most.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/ibn-hajar-al-asqalani"><img src="/images/encyclopedia/ibn-hajar-al-asqalani.jpg" alt="Ibn Hajar al-Asqalani" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/ibn-hajar-al-asqalani">Ibn Hajar al-Asqalani</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Tomb_of_al-hafidh_Ibn_Hajar_Al-Asqalani_(1)._Cairo,_Egypt_%C2%A9_Fouad_Gehad_Marei_(2009).jpg" target="_blank" rel="noopener">Fouad GM, CC BY 2.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Muqaddimah, shaped by <a class="enc-link" href="/encyclopedia/ibn-khaldun">Ibn Khaldun</a>'s characteristic moderation in politics and religion, was met without much enthusiasm or clear hostility in the first few centuries after it was written. Two Moroccan writers alluded to it. Muḥammad b. ʿAlī Ibn al-Azraq, who died in 1496, is apparently the only contemporary writer of the <a class="enc-link" href="/encyclopedia/maghreb">Maghreb</a> who clearly approved of it, and he quoted it abundantly. It was cited more often in <a class="enc-link" href="/encyclopedia/egypt">Egypt</a>, where disciples including <a class="enc-link" href="/encyclopedia/al-maqrizi">Al-Maqrizi</a> celebrated it and others such as <a class="enc-link" href="/encyclopedia/ibn-hajar-al-asqalani">Ibn Hajar al-Asqalani</a> met it with hostility. Biographical dictionaries, among them al-Maqqari's Nafḥ al-ṭīb, described Ibn Khaldun as an authority on political history, but the Muqaddimah itself remained largely absent from them.</p><p>Ottoman historians including Kâtip Çelebi and Mustafa Naima valued its social and political theories but did not apply them in the analysis of their own society. Abdesselam Cheddadi concludes that its strictly scientific contribution to the field of history and the social sciences was not fully recognised in the Muslim world until the late nineteenth century.</p><p>Its treatment of other peoples drew later criticism. Historians have challenged its classification of the scholars of the Islamic East as non-<a class="enc-link" href="/encyclopedia/arabs">Arabs</a>, and Abdelmajid Hannoum holds that de Slane's translation misread Ibn Khaldun's distinctions between <a class="enc-link" href="/encyclopedia/berbers">Berbers</a> and Arabs as a general racial ideology. His remarks on sub-Saharan Africans rest on a theory of climatic determinism, and he applied the same reasoning to explain the enslavement of peoples of the deep south.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/rifaa-al-tahtawi"><img src="/images/encyclopedia/rifaa-al-tahtawi.jpg" alt="Rifa'a al-Tahtawi" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/rifaa-al-tahtawi">Rifa'a al-Tahtawi</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Tahtawi.jpg" target="_blank" rel="noopener">Unknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Muqaddimah was copied in <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a>, and copies made in <a class="enc-link" href="/encyclopedia/ibn-khaldun">Ibn Khaldun</a>'s lifetime are extant, a number of them with autographed marginal notes or additions. It remained largely absent from the biographical dictionaries that praised its author in the following centuries. Its first <a class="enc-link" href="/encyclopedia/printing-press">printing</a> came in 1857, at the Bulaq Press in <a class="enc-link" href="/encyclopedia/cairo">Cairo</a>, in a standalone volume prepared by Naṣr al-Hūrīnī with crucial support from <a class="enc-link" href="/encyclopedia/rifaa-al-tahtawi">Rifa'a at-Tahtawi</a>. A decade later it appeared as the first volume of a seven-volume set of the Kitab al-ʿIbar.</p><p>Its route to readers in <a class="enc-link" href="/encyclopedia/france">France</a> ran partly through Turkish. The first five of its six chapters were translated into Ottoman Turkish by Mehmed Pirizade, who died in 1749, and the sixth by Ahmed Cevdet, who died in 1895; the complete translation was published in 1860 or 1861. The work was first discovered in France through Pirizade's partial Turkish translation. In 1858, the year after the Cairo printing, Étienne-Marc Quatremère printed the Arabic text in three volumes in <a class="enc-link" href="/encyclopedia/paris">Paris</a> as Les Prolégomènes d'Ebn Khaldoun. William McGuckin de Slane published a French translation in three volumes in 1863, which Aziz al-Azmeh regards as the best translation of the text. Franz Rosenthal published an English translation in 1958.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>The Muqaddimah is held to be a foundational work for historiography, cultural history and the philosophy of history. Dawood called it the earliest attempt by any historian to discover a pattern in the changes in man's political and social organisation, and an almost complete departure from traditional historiography. Franz Rosenthal wrote that Muslim historiography made a definite advance in the sociological understanding of history and the systematisation of historiography.</p><p>Modern readers have compared its ideas with later ones. Its account of ʿasabiyyah has often been compared with Keynesian economics, and its remark on taxes has been read as anticipating supply-side economics and the Laffer curve, which Laffer does not claim to have invented, noting that the idea was present in the work of <a class="enc-link" href="/encyclopedia/ibn-khaldun">Ibn Khaldun</a>. Some commentators see in a passage on the ascent from minerals to plants, animals and man an anticipation of biological evolution. Shoaib Ahmed Malik argues instead that the passage belongs to the medieval great chain of being, a graded hierarchy and not a temporal process in which one species originates from another. Ernest Gellner considered Ibn Khaldun's definition of government, an institution which prevents injustice other than such as it commits itself, the best in the history of political philosophy.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Muqaddimah is <a class="enc-link" href="/encyclopedia/ibn-khaldun">Ibn Khaldun</a>'s Arabic treatise of 1377 on history and society, written as the introduction to his Kitab al-ʿIbar. It sets out a new science of ʿumrān and the cycle of ʿasabiyyah, and reached wide readerships through <a class="enc-link" href="/encyclopedia/printing-press">printing</a> and translation from 1857.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="muqaddimah"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Franz Rosenthal publishes an English translation","o":["1860","1858","1958","1377"],"a":2,"w":"1958: Franz Rosenthal publishes an English translation."},{"p":"Which came first?","q":"","o":["The complete Ottoman Turkish translation is published, in 1860 or 1861","Franz Rosenthal publishes an English translation"],"a":0,"w":"1860: The complete Ottoman Turkish translation is published, in 1860 or 1861 · 1958: Franz Rosenthal publishes an English translation."},{"p":"In which year?","q":"The Muqaddimah is printed at the Bulaq Press in Cairo in a standalone volume","o":["1858","1857","1958","1377"],"a":1,"w":"1857: The Muqaddimah is printed at the Bulaq Press in Cairo in a standalone volume."},{"p":"Which came first?","q":"","o":["Franz Rosenthal publishes an English translation","Ibn Khaldun completes a draft of the Muqaddimah at Qalʿat ibn Salama"],"a":1,"w":"1958: Franz Rosenthal publishes an English translation · 1377: Ibn Khaldun completes a draft of the Muqaddimah at Qalʿat ibn Salama."},{"p":"In which year?","q":"Ibn Khaldun completes a draft of the Muqaddimah at Qalʿat ibn Salama","o":["1858","1958","1863","1377"],"a":3,"w":"1377: Ibn Khaldun completes a draft of the Muqaddimah at Qalʿat ibn Salama."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Franz Rosenthal, The Muqaddimah: An Introduction to History, three volumes (Princeton University Press, 1969)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/the-canterbury-tales"><img src="/logos/thumbs/The%20Canterbury%20Tales.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">The Canterbury Tales</span><span class="related-card-dates">1387 CE – present</span></a><a class="related-card" href="/work/sacsayhuaman"><img src="/logos/thumbs/Sacsayhuam%C3%A1n.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Sacsayhuamán</span><span class="related-card-dates">c. 1400 CE – present</span></a><a class="related-card" href="/work/forbidden-city"><img src="/logos/thumbs/Forbidden%20City.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Forbidden City</span><span class="related-card-dates">1406 CE – present</span></a><a class="related-card" href="/work/himeji-castle"><img src="/logos/thumbs/Himeji%20Castle.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Himeji Castle</span><span class="related-card-dates">1333 CE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/himeji-castle"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Himeji%20Castle.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Himeji Castle</span><span class="related-card-dates">1333 CE – present</span></a><a class="related-card" href="/work/the-canterbury-tales"><span class="related-card-label">Later →</span><img src="/logos/thumbs/The%20Canterbury%20Tales.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">The Canterbury Tales</span><span class="related-card-dates">1387 CE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Muqaddimah",slug="muqaddimah",url="https://the-epoch-institute.org/work/muqaddimah";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Muqaddimah on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/muqaddimah #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/muqaddimah"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Muqaddimah",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Muqaddimah",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Göbekli Tepe: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Göbekli Tepe is a Neolithic site in Upper Mesopotamia, in modern Turkey, inhabited from around 9500 BCE to at least 8000 BCE and known for circular…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Göbekli Tepe: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="Göbekli Tepe is a Neolithic site in Upper Mesopotamia, in modern Turkey, inhabited from around 9500 BCE to at least 8000 BCE and known for circular…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/gobekli-tepe">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/gobekli-tepe.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/gobekli-tepe.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/gobekli-tepe">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Göbekli Tepe"}]},{"@type":"Article","headline":"Göbekli Tepe","description":"Göbekli Tepe is a Neolithic site in Upper Mesopotamia, in modern Turkey, inhabited from around 9500 BCE to at least 8000 BCE and known for circular…","url":"https://the-epoch-institute.org/work/gobekli-tepe","mainEntityOfPage":"https://the-epoch-institute.org/work/gobekli-tepe","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Göbekli Tepe"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/gobekli-tepe.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Göbekli Tepe</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/G%C3%B6bekli%20Tepe.png" alt="Göbekli Tepe" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · Ancient Near East</p>
+        <h1 class="profile-detail-name">Göbekli Tepe</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 9500 BCE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val">Pre-Pottery <a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a> people of <a class="enc-link" href="/encyclopedia/upper-mesopotamia">Upper Mesopotamia</a>, described as hunter-gatherers who supplemented their diet with early forms of domesticated cereal; excavated from 1995 by Klaus Schmidt</span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">A tell 15 m high and 8 ha in extent on a limestone plateau, with circular enclosures of 10 to 30 m in diameter whose walls hold T-shaped limestone pillars, later rectangular rooms, domestic buildings, quarries and rock-cut cisterns</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">Near the village of Örencik in Şanliurfa Province, <a class="enc-link" href="/encyclopedia/turkey">Turkey</a>, in the Taş Tepeler, in the foothills of the <a class="enc-link" href="/encyclopedia/taurus-mountains">Taurus Mountains</a> above the <a class="enc-link" href="/encyclopedia/harran">Harran</a> plain</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">T-shaped pillars among the oldest known megaliths; carved reliefs of foxes, boars, snakes and vultures; the Lion Pillar Building; a rainwater harvesting system; the debate over settling down and farming; <a class="enc-link" href="/encyclopedia/unesco">UNESCO</a> World Heritage listing in 2018</span></div>
+        </div>
+        <p class="empire-meta">6 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The earliest exposed structures were built between 9500 and 9000 BCE and the site stayed in use until around 8000 BCE, so it belongs to the first phase of permanent settlement anywhere in the world.</li><li>Its purpose is not settled: Klaus Schmidt saw a ritual centre visited by nomadic bands, while findings published in 2019 point to a settlement with domestic buildings, cereal processing and a water supply.</li><li>Landslides damaged the enclosures during the occupation, and the site was later left, partly farmed, and misread as a graveyard before Schmidt began excavating it in 1995.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Before archaeologists documented it, local people knew the hill in Kurdish as Girê Mirazan, 'Wish Hill', and considered it a sacred place; the Turkish name Göbekli Tepe means 'Potbelly Hill'.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 9500 BCE</span><span class="rf-text">The earliest exposed structures were built, towards the end of the Pre-Pottery <a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a> A</span></li><li><span class="rf-year">Early 9th millennium BCE</span><span class="rf-text">The site was significantly expanded, with new walls that incorporated the first monolithic T-shaped pillars</span></li><li><span class="rf-year">Late 9th millennium BCE</span><span class="rf-text">A second major landslide probably led to the abandonment of enclosure D</span></li><li><span class="rf-year">c. 8000 BCE</span><span class="rf-text">The site went out of use, or perhaps slightly later, and smaller groups later lived among the ruins</span></li><li><span class="rf-year">1963</span><span class="rf-text">A survey directed by Halet Çambel and Robert John Braidwood first noted the site</span></li><li><span class="rf-year">1995</span><span class="rf-text">Klaus Schmidt began excavations and soon unearthed the first of the T-shaped pillars</span></li><li><span class="rf-year">2018</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/unesco">UNESCO</a> designated Göbekli Tepe a <a class="enc-link" href="/encyclopedia/world-heritage-site">World Heritage Site</a></span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>Göbekli Tepe was built and occupied during the earliest part of the Southwest Asian <a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a>, the Pre-Pottery Neolithic (c. 9600–7000 BCE). It began at the end of the last Ice Age and produced the earliest evidence for permanent human settlements in the world. One of the earliest known sites, Körtik Tepe, dated to 10,700–9250 BCE, may have been a predecessor of the artistic and material culture of <a class="enc-link" href="/encyclopedia/upper-mesopotamia">Upper Mesopotamia</a> that includes Göbekli Tepe and the other Taş Tepeler sites. Archaeologists have long associated these settlements with the <a class="enc-link" href="/encyclopedia/neolithic-revolution">Neolithic Revolution</a>, the transition from hunting and gathering to agriculture, but disagree on whether farming caused people to settle down or settling down caused people to adopt farming.</p><p>The site lies near the village of Örencik in Şanliurfa Province, on a flat limestone plateau in the foothills of the <a class="enc-link" href="/encyclopedia/taurus-mountains">Taurus Mountains</a>. The climate was wetter than today, and an open steppe with wild cereals, including einkorn, wheat and barley, and herds of wild sheep, wild goat, gazelle and equids surrounded the hill. The hilltop gave the builders soft limestone bedrock and the flint to work it. T-shaped pillars like those of Göbekli Tepe are unique to the <a class="enc-link" href="/encyclopedia/sanliurfa">Urfa</a> region but occur at most Pre-Pottery Neolithic sites there, including Nevalı Çori and Karahan Tepe.</p></div>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p>The first circular enclosures range from 10 to 30 m in diameter, with T-shaped limestone pillars set evenly within thick interior walls of unworked stone. Four have been unearthed, and geophysical surveys indicate 16 more, each enclosing up to eight pillars, amounting to nearly 200 in all. Two taller pillars face one another at the centre of each circle, and stone benches for sitting stand inside. Whether the circles were roofed is uncertain. Later enclosures were rectangular, with polished lime floors, and a pair of pillars carved with lions gave the Lion Pillar Building its name.</p><p>Many pillars are carved, typically in low relief and sometimes in high relief. Most carvings show animals, mostly serpents, foxes and boars, but also gazelle, mouflon, onager, ducks and vultures; insofar as they can be identified, the animals are male and often aggressive. Abstract H-shaped symbols, crescents and disks also appear. The T-shape is itself anthropomorphic, with the shaft as the body and the top as the head, and some pillars have carved arms, hands and loincloths. The central pillars of enclosure D represent humans with arms, a belt and a cloth. A reassembled 'totem pole' of the early Pre-Pottery <a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a> B is 192 centimetres tall and shows three figures with snakes carved on either side.</p></div>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <div class="profile-section-body"><p>Radiocarbon dating shows that the earliest exposed structures were built between 9500 and 9000 BCE and that the site was significantly expanded in the early 9th millennium BCE. It remained in use until around 8000 BCE, or perhaps slightly later. The revised chronology has eight phases spanning at least 1,500 years. The pillar slabs were transported from bedrock pits about 100 m from the hilltop, where workers used flint points to cut through the limestone. Domestic buildings were round-oval at first and increasingly rectangular over time.</p><p>Archaeologists disagree on how much labour was needed. Klaus Schmidt, using Thor Heyerdahl's experiments with the <a class="enc-link" href="/encyclopedia/moai">moai</a> of <a class="enc-link" href="/encyclopedia/easter-island">Rapa Nui</a> as a reference, estimated that moving the pillars alone must have involved hundreds of people. His team interpreted the site as built by a large, non-resident workforce, coerced or enticed there by a small religious elite. Others estimate that just 7–14 people could have moved the pillars using ropes and water or another lubricant. Experiments at the site itself suggested that all the exposed Pre-Pottery <a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a> B structures could have been built by 12–24 people in less than four months, a number thought to be within the capability of a single extended family or village community.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <div class="profile-section-body"><p>Schmidt, who led the excavation from 1995, thought Göbekli Tepe was a ritual centre to which small nomadic hunter-gatherer bands from across the region came for periodic building projects and great feasts before scattering again. Butchered bones of deer, gazelle, pigs and geese were identified as refuse from food prepared for the congregants, and gazelle were only seasonally present, which suggests that feasts were timed to the peak of game. Schmidt presumed shamanic practices and suggested that the pillars represent human forms, perhaps ancestors. He and the zooarchaeologist Joris Peters argued that, since many of the animals are predators, the stones may have been meant to stave off evils through magic or served as totems. Gheorghiu reads the iconography as a cosmogonic map relating the community to the landscape and the cosmos.</p><p>Since Schmidt's death in 2014 the assumption that the site was strictly cultic and uninhabited has been challenged, including by the suggestion that the structures were large communal houses. Findings published in 2019 suggest a settlement with domestic structures, extensive cereal processing and a water supply. According to Rémi <a class="enc-link" href="/encyclopedia/hadad">Hadad</a>, the view of a regional ceremonial centre is giving way to one in which ritual and profane functions coexist. No definitive purpose has been determined, and claims that the site was an astronomical observatory have been largely rejected by the team working there.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <div class="profile-section-body"><p>The enclosures lay over 10 metres below the highest areas and suffered several landslides while the site was occupied. A severe one at the end of the early Pre-Pottery <a class="enc-link" href="/encyclopedia/neolithic">Neolithic</a> B inundated enclosure D with rubble, sediments, burials and midden deposits, and led to repairs and stabilisation, including terrace walls. A second major landslide probably led to the enclosure's abandonment around the late 9th millennium BCE. It is unknown why existing pillars were buried every few decades and replaced by new stones in a smaller concentric ring inside the older one. Smaller groups returned to live among the ruins after the Neolithic structures were abandoned.</p><p>Known locally in Kurdish as Girê Mirazan or Xerabreşkê, the hill was considered a sacred place before archaeologists documented it. A 1963 survey directed by Halet Çambel and Robert John Braidwood first noted the site, and Peter Benedict mistook the tops of the T-shaped pillars for grave markers. Farmers had moved rocks into clearance piles and apparently tried to break up some pillars, mistaking them for ordinary large rocks. In October 1994 Schmidt, guided by Mahmut Yıldız, whose family owned the land, re-examined the place and began excavations the following year.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Göbekli Tepe has played a prominent role in the debate over whether farming caused settlement or the reverse, as a monumental complex on a rocky mountaintop with no clear evidence of agricultural cultivation. Its pillars are among the world's oldest known megaliths, and the structures have been popularly described as the 'world's first temple[s]'. Its architecture and iconography are similar to those of other contemporary sites nearby, such as Karahan Tepe.</p><p>After Schmidt died in 2014, work continued as a joint project of <a class="enc-link" href="/encyclopedia/istanbul">Istanbul</a> University, the <a class="enc-link" href="/encyclopedia/sanliurfa">Şanlıurfa</a> Museum and the German Archaeological Institute, under the direction of Necmi Karul, with recent excavations limited and focused on documentation and conservation. <a class="enc-link" href="/encyclopedia/unesco">UNESCO</a> designated the site a <a class="enc-link" href="/encyclopedia/world-heritage-site">World Heritage Site</a> in 2018, recognising 'one of the first manifestations of human-made monumental architecture'. Around a tenth of it has been excavated. In 2018 Çiğdem Köksal Schmidt, an archaeologist and the widow of Klaus Schmidt, said that concrete and heavy equipment used to build a walkway had damaged the site; the Ministry of Culture and Tourism responded that no concrete was used and no damage had occurred.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Göbekli Tepe, in the Taş Tepeler of modern <a class="enc-link" href="/encyclopedia/turkey">Turkey</a>, was inhabited from around 9500 BCE to at least 8000 BCE. Its circular enclosures of T-shaped, carved pillars are among the oldest known megaliths, and whether it was a ritual centre or a settlement is still debated.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Steven Mithen, After the Ice: A global human history, 20,000–5000 BC (Harvard University Press, 2004)</li>
+        <li>Klaus Schmidt, Sie bauten die ersten Tempel. Das rätselhafte Heiligtum der Steinzeitjäger (C.H. Beck, 2006)</li>
+        <li>Klaus Schmidt, Le premier temple: Göbekli Tepe (CNRS éditions, 2015)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/stonehenge"><img src="/logos/thumbs/Stonehenge.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Stonehenge</span><span class="related-card-dates">c. 3100 BCE – present</span></a><a class="related-card" href="/work/great-pyramid-of-giza"><img src="/logos/thumbs/Great%20Pyramid%20of%20Giza.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Great Pyramid of Giza</span><span class="related-card-dates">c. 2600 BCE – present</span></a><a class="related-card" href="/work/great-sphinx-of-giza"><img src="/logos/thumbs/Great%20Sphinx%20of%20Giza.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Great Sphinx of Giza</span><span class="related-card-dates">c. 2550 BCE – present</span></a><a class="related-card" href="/work/karnak"><img src="/logos/thumbs/Karnak.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Karnak</span><span class="related-card-dates">c. 1971 BCE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/lascaux"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Lascaux.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Lascaux</span><span class="related-card-dates">c. 20000 BCE – present</span></a><a class="related-card" href="/work/stonehenge"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Stonehenge.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Stonehenge</span><span class="related-card-dates">c. 3100 BCE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Göbekli Tepe",slug="gobekli-tepe",url="https://the-epoch-institute.org/work/gobekli-tepe";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Göbekli Tepe on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/gobekli-tepe #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/gobekli-tepe"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Göbekli Tepe",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Göbekli Tepe",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

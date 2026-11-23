@@ -45498,6 +45498,540 @@
     ]
    ],
    "wave": "gaps1"
+  },
+  {
+   "slug": "the-republic",
+   "name": "The Republic",
+   "type": "work",
+   "subtype": "text",
+   "dates": "c. 375 BCE",
+   "desc": "The Republic is Plato's Socratic dialogue of about 375 BCE on justice, in which Socrates and others describe a hypothetical just city ruled by philosopher-kings and compare it with the soul.",
+   "links": [
+    [
+     "Plato's Republic",
+     0
+    ],
+    [
+     "Plato’s Republic",
+     0
+    ],
+    [
+     "Republic of Plato",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/the-republic.jpg",
+   "credit": {
+    "artist": "Plato",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Politeia_beginning._Codex_Parisinus_graecus_1807.jpg"
+   }
+  },
+  {
+   "slug": "histories-of-herodotus",
+   "name": "Histories of Herodotus",
+   "type": "work",
+   "subtype": "text",
+   "dates": "c. 430 BCE",
+   "desc": "The Histories is Herodotus's Greek inquiry into the rise of the Persian Empire and the causes and course of the Greco-Persian Wars. Its reliability has been disputed since antiquity, yet it remains the primary source for much of its period and is regarded as the founding work of Western history.",
+   "links": [
+    [
+     "Histories of Herodotus",
+     0
+    ],
+    [
+     "Herodotus's Histories",
+     0
+    ],
+    [
+     "Herodotus’s Histories",
+     0
+    ],
+    [
+     "Herodotus' Histories",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/histories-of-herodotus.jpg",
+   "credit": {
+    "artist": "Unknown",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:POxy_v0017_n2099_a_01_hires.jpg"
+   }
+  },
+  {
+   "slug": "notre-dame-de-paris",
+   "name": "Notre-Dame de Paris",
+   "type": "work",
+   "subtype": "monument",
+   "dates": "1163–1260",
+   "desc": "Notre-Dame de Paris, begun in 1163 under Bishop Maurice de Sully and largely complete by 1260, is a Gothic cathedral known for its rib vaults, flying buttresses and rose windows.",
+   "links": [
+    [
+     "Notre-Dame de Paris",
+     0
+    ],
+    [
+     "Notre Dame de Paris",
+     0
+    ],
+    [
+     "Notre-Dame Cathedral",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/notre-dame-de-paris.jpg",
+   "credit": {
+    "artist": "Ali Sabbagh",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Notre-Dame_de_Paris,_4_October_2017.jpg"
+   }
+  },
+  {
+   "slug": "sistine-chapel-ceiling",
+   "name": "Sistine Chapel ceiling",
+   "type": "work",
+   "subtype": "artifact",
+   "dates": "1508–1512",
+   "desc": "Michelangelo painted the Sistine Chapel ceiling between 1508 and 1512 for Pope Julius II, with nine scenes from Genesis, prophets, sibyls and the ancestors of Christ.",
+   "links": [
+    [
+     "Sistine Chapel ceiling",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/sistine-chapel-ceiling.jpg",
+   "credit": {
+    "artist": "Michelangelo",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:CAPPELLA_SISTINA_Ceiling.jpg"
+   }
+  },
+  {
+   "slug": "mona-lisa",
+   "name": "Mona Lisa",
+   "type": "work",
+   "subtype": "artifact",
+   "dates": "c. 1503–1517",
+   "desc": "The Mona Lisa is Leonardo da Vinci's half-length oil portrait, traditionally held to show Lisa del Giocondo and begun around 1503. Leonardo may have worked on it until 1517.",
+   "links": [
+    [
+     "Mona Lisa",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/mona-lisa.jpg",
+   "credit": {
+    "artist": "Leonardo da Vinci",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg"
+   }
+  },
+  {
+   "slug": "palace-of-versailles",
+   "name": "Palace of Versailles",
+   "type": "work",
+   "subtype": "monument",
+   "dates": "1623",
+   "desc": "The Palace of Versailles grew from Louis XIII's hunting lodge of 1623 into the vast residence Louis XIV built, and the court lived there from 1682 to 1789. After the Revolution it became a history museum and a venue of state, and it has been restored since 1892.",
+   "links": [
+    [
+     "Palace of Versailles",
+     0
+    ],
+    [
+     "Château de Versailles",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/palace-of-versailles.jpg",
+   "credit": {
+    "artist": "ToucanWings",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Versailles_Palace_(FRA)_–_Equestrian_Olympic_Venue.jpg"
+   }
+  },
+  {
+   "slug": "lascaux",
+   "name": "Lascaux",
+   "type": "work",
+   "subtype": "monument",
+   "dates": "Upper Palaeolithic",
+   "desc": "Lascaux is a cave network in the Dordogne with over 600 Upper Palaeolithic paintings, mostly of large animals, usually dated to 17,000 to 22,000 years ago. Found by four teenagers in 1940 and closed to visitors in 1963 after damage, it is now protected from mould and shown through replicas.",
+   "links": [
+    [
+     "Lascaux",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/lascaux.jpg",
+   "credit": {
+    "artist": "EU",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Lascaux_painting.jpg"
+   }
+  },
+  {
+   "slug": "gutenberg-bible",
+   "name": "Gutenberg Bible",
+   "type": "work",
+   "subtype": "text",
+   "dates": "c. 1455",
+   "desc": "The Gutenberg Bible is Johannes Gutenberg's printed Latin Vulgate of the 1450s, made at Mainz with mass-produced metal type. Of a print run put at between 160 and 185 copies, 49 survive in at least substantial portion, and it marked the start of the age of printed books in the West.",
+   "links": [
+    [
+     "Gutenberg Bible",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/gutenberg-bible.jpg",
+   "credit": {
+    "artist": "NYC Wanderer (Kevin Eng)",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Gutenberg_Bible,_Lenox_Copy,_New_York_Public_Library,_2009._Pic_01.jpg"
+   }
+  },
+  {
+   "slug": "statue-of-liberty",
+   "name": "Statue of Liberty",
+   "type": "work",
+   "subtype": "monument",
+   "dates": "1886",
+   "desc": "The Statue of Liberty is a copper statue designed by Bartholdi, built over an iron framework by Gustave Eiffel, and given by the French people to the United States.",
+   "links": [
+    [
+     "Statue of Liberty",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/statue-of-liberty.jpg",
+   "credit": {
+    "artist": "AskALotl",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Front_view_of_Statue_of_Liberty_(cropped).jpg"
+   }
+  },
+  {
+   "slug": "moai",
+   "name": "Moai",
+   "type": "work",
+   "subtype": "monument",
+   "dates": "c. 1250–1500",
+   "desc": "The moai are the monolithic statues carved by the Rapa Nui on Easter Island, mostly between 1250 and 1500, chiefly as the living faces of deified ancestors. More than 900 were made, nearly half still at the Rano Raraku quarry; all the erected ones had fallen by the 19th century, and about 50 have been re-erected.",
+   "links": [
+    [
+     "moai",
+     2
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/moai.jpg",
+   "credit": {
+    "artist": "Rivi",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ahu_Tongariki.jpg"
+   }
+  },
+  {
+   "slug": "tomb-of-tutankhamun",
+   "name": "Tomb of Tutankhamun",
+   "type": "work",
+   "subtype": "monument",
+   "dates": "c. 1323 BCE",
+   "desc": "KV62, in the Valley of the Kings, was probably begun as a non-royal tomb and enlarged for Tutankhamun after his early death. Robbed twice and then buried under debris, it was found intact in 1922 by Howard Carter, and its 5,398 objects went mostly to Cairo.",
+   "links": [
+    [
+     "Tomb of Tutankhamun",
+     0
+    ],
+    [
+     "tomb of Tutankhamun",
+     0
+    ],
+    [
+     "KV62",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/tomb-of-tutankhamun.jpg",
+   "credit": {
+    "artist": "EditorfromMars",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Inside_Pharaoh_Tutankhamun's_tomb,_18th_dynasty.jpg"
+   }
+  },
+  {
+   "slug": "gobekli-tepe",
+   "name": "Göbekli Tepe",
+   "type": "work",
+   "subtype": "monument",
+   "dates": "c. 9500–8000 BCE",
+   "desc": "Göbekli Tepe, in the Taş Tepeler of modern Turkey, was inhabited from around 9500 BCE to at least 8000 BCE. Its circular enclosures of T-shaped, carved pillars are among the oldest known megaliths, and whether it was a ritual centre or a settlement is still debated.",
+   "links": [
+    [
+     "Göbekli Tepe",
+     0
+    ],
+    [
+     "Gobekli Tepe",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/gobekli-tepe.jpg",
+   "credit": {
+    "artist": "Teomancimit",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Göbekli_Tepe,_Urfa.jpg"
+   }
+  },
+  {
+   "slug": "great-mosque-of-djenne",
+   "name": "Great Mosque of Djenné",
+   "type": "work",
+   "subtype": "monument",
+   "dates": "1907",
+   "desc": "The Great Mosque of Djenné in Mali is the largest adobe brick building in the world. A first mosque stood there from about the 13th century; the present building was raised in 1907 by the town's masons and is replastered every year by the whole community.",
+   "links": [
+    [
+     "Great Mosque of Djenné",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/great-mosque-of-djenne.jpg",
+   "credit": {
+    "artist": "Ruud Zwart",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Djenne_great_mud_mosque.jpg"
+   }
+  },
+  {
+   "slug": "sanchi",
+   "name": "Sanchi",
+   "type": "work",
+   "subtype": "monument",
+   "dates": "3rd century BCE",
+   "desc": "Sanchi is a hilltop Buddhist complex in Madhya Pradesh whose Great Stupa, commissioned by Ashoka, was enlarged under the Shungas and given four carved gateways under the Satavahanas.",
+   "links": [
+    [
+     "Sanchi",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/sanchi.jpg",
+   "credit": {
+    "artist": "Bernard Gagnon",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Stupa_1,_Sanchi_02.jpg"
+   }
+  },
+  {
+   "slug": "prambanan",
+   "name": "Prambanan",
+   "type": "work",
+   "subtype": "monument",
+   "dates": "9th century",
+   "desc": "Prambanan is a Hindu temple compound in southern Java, begun by the Mataram court in the 9th century and dedicated to Brahma, Vishnu and Shiva. It was abandoned, collapsed in an earthquake and was rebuilt from the 1930s by anastylosis; it is a World Heritage Site.",
+   "links": [
+    [
+     "Prambanan",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/prambanan.jpg",
+   "credit": {
+    "artist": "CEphoto, Uwe Aranas",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Yogyakarta_Indonesia_Prambanan-temple-complex-02.jpg"
+   }
+  },
+  {
+   "slug": "bagan",
+   "name": "Bagan",
+   "type": "work",
+   "subtype": "monument",
+   "dates": "9th–13th century",
+   "desc": "Bagan, the capital of the Pagan Kingdom from 1044 to 1287, was the site of over 10,000 Buddhist monuments built mainly between the 11th and 13th centuries. Earthquakes and renovations altered it, and it was inscribed as a World Heritage Site in 2019.",
+   "links": [
+    [
+     "Bagan",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/bagan.jpg",
+   "credit": {
+    "artist": "Corto Maltese 1999",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bagan,_Burma.jpg"
+   }
+  },
+  {
+   "slug": "sigiriya",
+   "name": "Sigiriya",
+   "type": "work",
+   "subtype": "monument",
+   "dates": "5th century",
+   "desc": "Sigiriya, the Lion Rock, is a granite column in Sri Lanka that King Kashyapa made his fortress capital from 477 CE. After his defeat in 495 it became a Buddhist monastery.",
+   "links": [
+    [
+     "Sigiriya",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/sigiriya.jpg",
+   "credit": {
+    "artist": "Bernard Gagnon",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sigiriya.jpg"
+   }
+  },
+  {
+   "slug": "panchatantra",
+   "name": "Panchatantra",
+   "type": "work",
+   "subtype": "text",
+   "dates": "c. 300",
+   "desc": "The Panchatantra is an ancient Indian collection of animal fables in Sanskrit, in five treatises, by an unknown author, probably composed around 300 CE. Carried through Pahlavi, Arabic and Hebrew, it reached Europe and Southeast Asia and has been called the most frequently translated literary product of India.",
+   "links": [
+    [
+     "Panchatantra",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/panchatantra.jpg",
+   "credit": {
+    "artist": "Johannes Hertel (1915)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Panchatantra_page.jpg"
+   }
+  },
+  {
+   "slug": "the-art-of-war",
+   "name": "The Art of War",
+   "type": "work",
+   "subtype": "text",
+   "dates": "5th century BCE",
+   "desc": "The Art of War is an ancient Chinese treatise on strategy in 13 chapters, attributed to Sun Tzu and probably completed between 500 and 430 BCE. It treats war as a costly last resort, led the Seven Military Classics and has been read by commanders in East Asia and the West.",
+   "links": [
+    [
+     "The Art of War",
+     0
+    ],
+    [
+     "Art of War",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/the-art-of-war.jpg",
+   "credit": {
+    "artist": "vlasta2, bluefootedbooby on flickr.com",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bamboo_book_-_unfolded_-_UCR.jpg"
+   }
+  },
+  {
+   "slug": "dream-of-the-red-chamber",
+   "name": "Dream of the Red Chamber",
+   "type": "work",
+   "subtype": "text",
+   "dates": "18th century",
+   "desc": "Dream of the Red Chamber is Cao Xueqin's 18th-century novel of the rise and decline of the Jia clan. It circulated as 80-chapter manuscripts until a 120-chapter edition was printed in 1791 and 1792, and the authorship of its last 40 chapters is still debated.",
+   "links": [
+    [
+     "Dream of the Red Chamber",
+     0
+    ],
+    [
+     "Story of the Stone",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/dream-of-the-red-chamber.jpg",
+   "credit": {
+    "artist": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hongloumeng2.jpg"
+   }
+  },
+  {
+   "slug": "journey-to-the-west",
+   "name": "Journey to the West",
+   "type": "work",
+   "subtype": "text",
+   "dates": "16th century",
+   "desc": "Journey to the West is a Ming-dynasty Chinese novel, attributed to Wu Cheng'en, that turns the monk Xuanzang's pilgrimage to India into a fantasy led by the Monkey King.",
+   "links": [
+    [
+     "Journey to the West",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/journey-to-the-west.jpg",
+   "credit": {
+    "artist": "Unknown author Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Bai_Gu_Jing.jpg"
+   }
+  },
+  {
+   "slug": "himeji-castle",
+   "name": "Himeji Castle",
+   "type": "work",
+   "subtype": "monument",
+   "dates": "1333–1609",
+   "desc": "Himeji Castle in Hyōgo Prefecture was first fortified in 1333 and rebuilt on its present scale by Ikeda Terumasa from 1601 to 1609. It escaped demolition in the Meiji Period, the bombing of 1945 and the 1995 earthquake, and was registered as a World Heritage Site in 1993.",
+   "links": [
+    [
+     "Himeji Castle",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/himeji-castle.jpg",
+   "credit": {
+    "artist": "Nikos Kitsakis",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Himeji_castle_in_may_2015.jpg"
+   }
+  },
+  {
+   "slug": "truganini",
+   "name": "Truganini",
+   "type": "person",
+   "dates": "c. 1812–1876",
+   "desc": "Truganini (c. 1812–1876), a Nuenonne woman from Bruny Island, guided George Augustus Robinson's expeditions in the Black War and was exiled with her people. She was wrongly called the last Aboriginal Tasmanian, a claim scholars and the Aboriginal Tasmanian community reject.",
+   "links": [
+    [
+     "Truganini",
+     0
+    ]
+   ],
+   "work": true,
+   "img": "/images/encyclopedia/truganini.jpg",
+   "credit": {
+    "artist": "Charles A. Woolley",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Truganini_-_Charles_Woolley_(cropped).jpg"
+   }
   }
  ],
  "patterns": [
@@ -49886,6 +50420,144 @@
    "James King",
    "Public domain",
    "https://commons.wikimedia.org/wiki/File:KingShaka.jpg"
+  ],
+  [
+   "the-republic",
+   "Plato",
+   "Public domain",
+   "https://commons.wikimedia.org/wiki/File:Politeia_beginning._Codex_Parisinus_graecus_1807.jpg"
+  ],
+  [
+   "histories-of-herodotus",
+   "Unknown",
+   "Public domain",
+   "https://commons.wikimedia.org/wiki/File:POxy_v0017_n2099_a_01_hires.jpg"
+  ],
+  [
+   "notre-dame-de-paris",
+   "Ali Sabbagh",
+   "CC0",
+   "https://commons.wikimedia.org/wiki/File:Notre-Dame_de_Paris,_4_October_2017.jpg"
+  ],
+  [
+   "sistine-chapel-ceiling",
+   "Michelangelo",
+   "CC BY-SA 3.0",
+   "https://commons.wikimedia.org/wiki/File:CAPPELLA_SISTINA_Ceiling.jpg"
+  ],
+  [
+   "mona-lisa",
+   "Leonardo da Vinci",
+   "Public domain",
+   "https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg"
+  ],
+  [
+   "palace-of-versailles",
+   "ToucanWings",
+   "CC BY-SA 3.0",
+   "https://commons.wikimedia.org/wiki/File:Versailles_Palace_(FRA)_–_Equestrian_Olympic_Venue.jpg"
+  ],
+  [
+   "lascaux",
+   "EU",
+   "Public domain",
+   "https://commons.wikimedia.org/wiki/File:Lascaux_painting.jpg"
+  ],
+  [
+   "gutenberg-bible",
+   "NYC Wanderer (Kevin Eng)",
+   "CC BY-SA 2.0",
+   "https://commons.wikimedia.org/wiki/File:Gutenberg_Bible,_Lenox_Copy,_New_York_Public_Library,_2009._Pic_01.jpg"
+  ],
+  [
+   "statue-of-liberty",
+   "AskALotl",
+   "CC0",
+   "https://commons.wikimedia.org/wiki/File:Front_view_of_Statue_of_Liberty_(cropped).jpg"
+  ],
+  [
+   "moai",
+   "Rivi",
+   "CC BY-SA 3.0",
+   "https://commons.wikimedia.org/wiki/File:Ahu_Tongariki.jpg"
+  ],
+  [
+   "tomb-of-tutankhamun",
+   "EditorfromMars",
+   "CC BY-SA 4.0",
+   "https://commons.wikimedia.org/wiki/File:Inside_Pharaoh_Tutankhamun's_tomb,_18th_dynasty.jpg"
+  ],
+  [
+   "gobekli-tepe",
+   "Teomancimit",
+   "CC BY-SA 3.0",
+   "https://commons.wikimedia.org/wiki/File:Göbekli_Tepe,_Urfa.jpg"
+  ],
+  [
+   "great-mosque-of-djenne",
+   "Ruud Zwart",
+   "CC BY-SA 3.0",
+   "https://commons.wikimedia.org/wiki/File:Djenne_great_mud_mosque.jpg"
+  ],
+  [
+   "sanchi",
+   "Bernard Gagnon",
+   "CC BY-SA 3.0",
+   "https://commons.wikimedia.org/wiki/File:Stupa_1,_Sanchi_02.jpg"
+  ],
+  [
+   "prambanan",
+   "CEphoto, Uwe Aranas",
+   "CC BY-SA 3.0",
+   "https://commons.wikimedia.org/wiki/File:Yogyakarta_Indonesia_Prambanan-temple-complex-02.jpg"
+  ],
+  [
+   "bagan",
+   "Corto Maltese 1999",
+   "CC BY 2.0",
+   "https://commons.wikimedia.org/wiki/File:Bagan,_Burma.jpg"
+  ],
+  [
+   "sigiriya",
+   "Bernard Gagnon",
+   "CC BY-SA 3.0",
+   "https://commons.wikimedia.org/wiki/File:Sigiriya.jpg"
+  ],
+  [
+   "panchatantra",
+   "Johannes Hertel (1915)",
+   "Public domain",
+   "https://commons.wikimedia.org/wiki/File:Panchatantra_page.jpg"
+  ],
+  [
+   "the-art-of-war",
+   "vlasta2, bluefootedbooby on flickr.com",
+   "CC BY 2.0",
+   "https://commons.wikimedia.org/wiki/File:Bamboo_book_-_unfolded_-_UCR.jpg"
+  ],
+  [
+   "dream-of-the-red-chamber",
+   "Unknown author",
+   "Public domain",
+   "https://commons.wikimedia.org/wiki/File:Hongloumeng2.jpg"
+  ],
+  [
+   "journey-to-the-west",
+   "Unknown author Unknown author",
+   "Public domain",
+   "https://commons.wikimedia.org/wiki/File:Bai_Gu_Jing.jpg"
+  ],
+  [
+   "himeji-castle",
+   "Nikos Kitsakis",
+   "CC BY-SA 4.0",
+   "https://commons.wikimedia.org/wiki/File:Himeji_castle_in_may_2015.jpg"
+  ],
+  [
+   "truganini",
+   "Charles A. Woolley",
+   "Public domain",
+   "https://commons.wikimedia.org/wiki/File:Truganini_-_Charles_Woolley_(cropped).jpg"
   ]
  ],
  "fixes": [

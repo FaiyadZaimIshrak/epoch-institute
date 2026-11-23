@@ -34443,7 +34443,30 @@ var SEARCH_INDEX = [
 [0,"Yinxi","person","Yin-hsi|尹喜",4,1],
 [0,"Zipporah","person","",3,1],
 [0,"I Ching","work","",7,1],
-[0,"Thucydides, son of Melesias","person","",2]
+[0,"Thucydides, son of Melesias","person","",2],
+[0,"The Art of War","work","",1,1],
+[0,"Bagan","work","",1,1],
+[0,"Dream of the Red Chamber","work","",1,1],
+[0,"Göbekli Tepe","work","",1,1],
+[0,"Great Mosque of Djenné","work","",1,1],
+[0,"Gutenberg Bible","work","",1,1],
+[0,"Himeji Castle","work","",1,1],
+[0,"Histories of Herodotus","work","",1,1],
+[0,"Journey to the West","work","",1,1],
+[0,"Lascaux","work","",1,1],
+[0,"Moai","work","",3,1],
+[0,"Mona Lisa","work","",1,1],
+[0,"Notre-Dame de Paris","work","",3,1],
+[0,"Palace of Versailles","work","",3,1],
+[0,"Panchatantra","work","",3,1],
+[0,"Prambanan","work","",1,1],
+[0,"The Republic","work","",3,1],
+[0,"Sanchi","work","",3,1],
+[0,"Sigiriya","work","",1,1],
+[0,"Sistine Chapel ceiling","work","",3,1],
+[0,"Statue of Liberty","work","",1,1],
+[0,"Tomb of Tutankhamun","work","",1,1],
+[0,"Truganini","person","",1,1]
 ];
 (function () { for (var i = 0, r; i < SEARCH_INDEX.length; i++) { r = SEARCH_INDEX[i]; if (r[0] === 0) r[0] = r[1].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); } })();   // packed by scripts/build-pages.ps1: a slug written 0 is made from its name
 // states (register, /state/<id>): [id, name, type, aliases, 1 if it has a picture]. Generated from data/polities.json.

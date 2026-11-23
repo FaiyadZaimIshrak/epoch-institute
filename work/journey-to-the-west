@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Journey to the West: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Journey to the West is a Chinese novel of the Ming dynasty, attributed to Wu Cheng'en, that turns the monk Xuanzang's 7th-century pilgrimage to India…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Journey to the West: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="Journey to the West is a Chinese novel of the Ming dynasty, attributed to Wu Cheng'en, that turns the monk Xuanzang's 7th-century pilgrimage to India…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/journey-to-the-west">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/journey-to-the-west.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/journey-to-the-west.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/journey-to-the-west">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Journey to the West"}]},{"@type":"Article","headline":"Journey to the West","description":"Journey to the West is a Chinese novel of the Ming dynasty, attributed to Wu Cheng'en, that turns the monk Xuanzang's 7th-century pilgrimage to India…","url":"https://the-epoch-institute.org/work/journey-to-the-west","mainEntityOfPage":"https://the-epoch-institute.org/work/journey-to-the-west","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Journey to the West"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/journey-to-the-west.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Journey to the West</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Journey%20to%20the%20West.png" alt="Journey to the West" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · Central &amp; East Asia</p>
+        <h1 class="profile-detail-name">Journey to the West</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 1592 CE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val">Traditionally ascribed to Wu Cheng'en, though much of its material came from older folk tales and storytelling; Wu is generally accepted as the author of the 1592 printed version</span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">A Chinese novel of 100 chapters in four unequal parts, mixing prose with poems and songs, written in the 16th century during the <a class="enc-link" href="/encyclopedia/ming-empire">Ming dynasty</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">Read in printed editions and in translations; the earliest surviving edition was printed at <a class="enc-link" href="/encyclopedia/nanjing">Nanjing</a> in 1592</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">Sun Wukong, the Monkey King; the pilgrimage of Tang Sanzang to <a class="enc-link" href="/encyclopedia/india">India</a>; Zhu Bajie and Sha Wujing; the 81 tribulations; the Ring Tightening Mantra; Waley's Monkey</span></div>
+        </div>
+        <p class="empire-meta">5 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The novel retells the real journey of the monk <a class="enc-link" href="/encyclopedia/xuanzang">Xuanzang</a>, who left <a class="enc-link" href="/encyclopedia/changan">Chang'an</a> in 629, as a fantasy in which demons, immortals and a monkey who rebelled against Heaven escort a pilgrim to <a class="enc-link" href="/encyclopedia/india">India</a>.</li><li>Its stories circulated in oral storytelling for centuries before the 100-chapter form of the 16th century, and its authorship is still disputed, though Wu Cheng'en is traditionally named.</li><li>It has been read as a comic adventure, a satire of Chinese bureaucracy, a source of spiritual reflection and an allegory, and it reached English readers through Arthur Waley's abridgement of 1942.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Sun Wukong's staff weighs 17,550 pounds (7,960 kg) in the novel. It began as a pillar supporting the undersea palace of the <a class="enc-link" href="/encyclopedia/druk-gyalpo">Dragon King</a> of the <a class="enc-link" href="/encyclopedia/sea-of-japan">East Sea</a>, and he can shrink it to the size of a needle and keep it in his ear.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">629</span><span class="rf-text">The monk <a class="enc-link" href="/encyclopedia/xuanzang">Xuanzang</a> leaves <a class="enc-link" href="/encyclopedia/changan">Chang'an</a> for <a class="enc-link" href="/encyclopedia/india">India</a> in defiance of Emperor Taizong's ban on travel</span></li><li><span class="rf-year">12th century</span><span class="rf-text">During the Southern <a class="enc-link" href="/encyclopedia/song-dynasty">Song dynasty</a> (1127–1279), embellished stories based on <a class="enc-link" href="/encyclopedia/xuanzang">Xuanzang</a>'s journey appear in book form</span></li><li><span class="rf-year">1408</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/yongle-encyclopedia">Yongle Encyclopedia</a> is completed, holding excerpts of a version of the story in colloquial Chinese</span></li><li><span class="rf-year">1592</span><span class="rf-text">The earliest surviving edition of the novel is published at <a class="enc-link" href="/encyclopedia/nanjing">Nanjing</a></span></li><li><span class="rf-year">c. 1640</span><span class="rf-text">Dong Yue writes the satirical sequel Xiyoubu, set between chapters 61 and 62</span></li><li><span class="rf-year">1942</span><span class="rf-text">Arthur Waley publishes Monkey, an abridged English translation of 30 of the 100 chapters</span></li><li><span class="rf-year">1977</span><span class="rf-text">Anthony C. Yu begins publishing the first complete English translation to render the poems and songs, finished in 1983</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/nalanda"><img src="/images/encyclopedia/nalanda.jpg" alt="Nalanda" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/nalanda">Nalanda</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Temple_No.-_3,_Nalanda_Archaeological_Site.jpg" target="_blank" rel="noopener">Odantapuribs, CC BY-SA 4.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The novel rests on a real journey. The monk <a class="enc-link" href="/encyclopedia/xuanzang">Xuanzang</a> (602–664), of Jingtu Temple in the capital <a class="enc-link" href="/encyclopedia/changan">Chang'an</a>, left in 629, in defiance of <a class="enc-link" href="/encyclopedia/emperor-taizong-of-tang">Emperor Taizong of Tang</a>'s ban on travel, to seek Buddhist scriptures in <a class="enc-link" href="/encyclopedia/india">India</a>. Helped by sympathetic Buddhists, he went through <a class="enc-link" href="/encyclopedia/gansu">Gansu</a> and Qinghai to <a class="enc-link" href="/encyclopedia/hami">Kumul</a> and <a class="enc-link" href="/encyclopedia/turfan">Turpan</a>, then across regions that are today <a class="enc-link" href="/encyclopedia/kyrgyzstan">Kyrgyzstan</a>, <a class="enc-link" href="/encyclopedia/uzbekistan">Uzbekistan</a> and <a class="enc-link" href="/encyclopedia/afghanistan">Afghanistan</a> into Gandhara. He travelled through India for the next thirteen years, visited Buddhist pilgrimage sites and studied at the university at <a class="enc-link" href="/encyclopedia/nalanda">Nalanda</a>. He left India in 643 and reached Chang'an in 646, where Taizong welcomed him.</p><p>Embellished stories based on the journey had circulated in <a class="enc-link" href="/encyclopedia/china">China</a> through oral storytelling for centuries. They appeared in book form as early as the Southern <a class="enc-link" href="/encyclopedia/song-dynasty">Song dynasty</a> (1127–1279), and the <a class="enc-link" href="/encyclopedia/yongle-encyclopedia">Yongle Encyclopedia</a>, completed in 1408, contains excerpts of a version in colloquial Chinese. The plot was also part of folk and literary tradition as folk stories in informal language, a poetic novelette and a six-part drama series. Of an earlier text, Journey to the West as Storytelling, only fragments survive in other texts, among them the wager between the <a class="enc-link" href="/encyclopedia/druk-gyalpo">Dragon King</a> of the Jing River and the fortune teller Yuan Shoucheng.</p></div>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p>The novel has 100 chapters in four unequal parts. The first, chapters 1 to 7, is a self-contained prologue on Sun Wukong, a monkey born from a stone egg on Flower Fruit Mountain. He learns the Tao, 72 transformations and the secrets of immortality, takes the title Great Sage Equal to Heaven and rebels against Heaven, until the Buddha traps him under a mountain for 500 years. Chapters 8 to 12 introduce Tang Sanzang and how Emperor Taizong sends him west, at the Buddha's instruction to the bodhisattva Guanyin to find someone in <a class="enc-link" href="/encyclopedia/china">China</a> to bring the sutras back.</p><p>The third part, chapters 13 to 99, is an episodic adventure. Sun Wukong, Zhu Bajie, Sha Wujing and the White Dragon Horse accompany Tang Sanzang, atoning for earlier sins, and fend off demons and animal spirits, many of whom want to eat his flesh, which was believed to give immortality. The geography is almost entirely fantasy. The travellers face 81 tribulations, and at length Tang Sanzang receives the scriptures from the living Buddha at Vulture Peak. In chapter 100 they return to the Tang empire and are rewarded: Sun Wukong and Tang Sanzang reach Buddhahood, Sha Wujing becomes an arhat, the White Dragon Horse a naga, and Zhu Bajie an altar cleanser.</p></div>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/hu-shih"><img src="/images/encyclopedia/hu-shih.jpg" alt="Hu Shih" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/hu-shih">Hu Shih</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Hu_Shih_1960_color_Crop.jpg" target="_blank" rel="noopener">Unknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The modern 100-chapter form of the novel dates from the 16th century. The earliest surviving edition was published in 1592 in <a class="enc-link" href="/encyclopedia/nanjing">Nanjing</a>. Two earlier editions appeared between 1522 and 1566, but no copies of them survive. Authorship is traditionally ascribed to Wu Cheng'en, and the question is complicated because much of the material came from folk tales. Anthony C. Yu, writing in 2012, said that the dispute over authorship had see-sawed for nearly a century without resolution.</p><p><a class="enc-link" href="/encyclopedia/hu-shih">Hu Shih</a> wrote in 1942 that the people of Wu's hometown had attributed the novel to him early and kept records to that effect as early as 1625. David Lattimore replied in 1983 that the gazetteer says only that Wu wrote something called The Journey to the West, and mentions no novel. W. J. F. Jenner observed that the novel contains no political detail that a fairly well-read commoner could not have known. One interpretive tradition sees the book as the outcome of a writing game popular among Chinese literati. The cumulative authorship is acknowledged, but Wu is generally accepted as the author of the 1592 printed version, which is widely considered canonical.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <div class="profile-section-body"><p>The novel is regarded as one of the great Chinese novels and has been described as arguably the most popular literary work in <a class="enc-link" href="/encyclopedia/east-asia">East Asia</a>. It is at once a comic adventure, a satire of Chinese bureaucracy, a source of spiritual reflection and a rich allegory. In the story Sun Wukong stands for the human mind and impulse, the so-called monkey mind, Tang Sanzang for the human heart, Zhu Bajie for base human nature, Sha Wujing for obedience and conformity without thought, and the White Dragon Horse for the human will.</p><p>Interpretation has been disputed. <a class="enc-link" href="/encyclopedia/hu-shi">Hu Shi</a>, whose introduction to the 1943 edition of Waley's translation scorned the allegorical readings made popular in the <a class="enc-link" href="/encyclopedia/qing-empire">Qing dynasty</a> as old-fashioned, insisted that the stories were simply comic. Andrew H. Plaks writes that Waley's selection of episodes followed Hu Shi's lead and gave the misleading impression of a compendium of popular materials marked by folk wit and humour. Recent scholars in <a class="enc-link" href="/encyclopedia/china">China</a> and the West have shown levels of meaning and a looser allegorical framework that Hu Shi's reading does not account for.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <div class="profile-section-body"><p>The text survives in printed editions rather than in any original <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a>. The earliest surviving edition is that of 1592, published at <a class="enc-link" href="/encyclopedia/nanjing">Nanjing</a>, and the two earlier editions of 1522 to 1566 are lost. Of the earlier storytelling text only fragments are preserved in other works, and the surviving narrative threads include the wager of the <a class="enc-link" href="/encyclopedia/druk-gyalpo">Dragon King</a> of the Jing River and the contest in Cart Slow Kingdom between the pilgrims and three Taoist demons.</p><p>The work passed to English readers through translation. Arthur Waley's abridged Monkey of 1942 was for many years the best-known version. It translated 30 of the 100 chapters, roughly a sixth of the whole, and left out most of the verse, which led one recent critic to rank it as a good retelling. Others have praised it as remarkably faithful to the original spirit. Anthony C. Yu's four-volume translation of 1977 to 1983 was the first to render the poems and songs, which he argues are essential to the author's meaning, and the <a class="enc-link" href="/encyclopedia/university-of-chicago">University of Chicago</a> Press issued a revised edition in 2012. W. J. F. Jenner's four volumes of 1982 to 1984 give a readable version without scholarly apparatus. Julia Lovell's selection appeared in 2021.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>The novel has roots in Chinese folk religion, mythology, <a class="enc-link" href="/encyclopedia/buddhism">Buddhism</a>, <a class="enc-link" href="/encyclopedia/confucianism">Confucianism</a> and Taoist and Buddhist folklore, and its pantheon of Taoist immortals and Buddhist <a class="enc-link" href="/encyclopedia/bodhisattva">bodhisattvas</a> still reflects certain Chinese religious attitudes. Many of its religious references involve plays on the names of characters and places that are often lost in translation. It is a progenitor of the xianxia genre, which combines martial arts with high fantasy, and has inspired many manhwa, manhua, manga and anime series.</p><p>Sequels began to appear in the late Ming and continued into the <a class="enc-link" href="/encyclopedia/qing-empire">Qing dynasty</a> and the modern period. One of the best regarded is Dong Yue's satirical Xiyoubu of about 1640, in which Sun Wukong is trapped in a dream world created by the Qing Fish Demon, the embodiment of desire. Dong wanted an opponent that Sun could not defeat with his strength and martial skill. The story has also been adapted for television in <a class="enc-link" href="/encyclopedia/japan">Japan</a> and <a class="enc-link" href="/encyclopedia/china">China</a>, for the stage as operas by Fred Ho and Anna <a class="enc-link" href="/encyclopedia/vienna">Vienna</a> Ho, and for many other media.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Journey to the West is a Ming-dynasty Chinese novel, attributed to Wu Cheng'en, that turns the monk <a class="enc-link" href="/encyclopedia/xuanzang">Xuanzang</a>'s pilgrimage to <a class="enc-link" href="/encyclopedia/india">India</a> into a fantasy led by the Monkey King. Its earliest surviving edition dates from 1592, and its authorship is still debated.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="journey-to-the-west"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Arthur Waley publishes Monkey, an abridged English translation of 30 of the 100 chapters","o":["1942","629","1977","1408"],"a":0,"w":"1942: Arthur Waley publishes Monkey, an abridged English translation of 30 of the 100 chapters."},{"p":"Which came first?","q":"","o":["Anthony C. Yu begins publishing the first complete English translation to render the poems and songs, finished in 1983","Arthur Waley publishes Monkey, an abridged English translation of 30 of the 100 chapters"],"a":1,"w":"1977: Anthony C. Yu begins publishing the first complete English translation to render the poems and songs, finished in 1983 · 1942: Arthur Waley publishes Monkey, an abridged English translation of 30 of the 100 chapters."},{"p":"In which year?","q":"Anthony C. Yu begins publishing the first complete English translation to render the poems and songs, finished in 1983","o":["1977","629","1942","1592"],"a":0,"w":"1977: Anthony C. Yu begins publishing the first complete English translation to render the poems and songs, finished in 1983."},{"p":"Which came first?","q":"","o":["The earliest surviving edition of the novel is published at Nanjing","Anthony C. Yu begins publishing the first complete English translation to render the poems and songs, finished in 1983"],"a":0,"w":"1592: The earliest surviving edition of the novel is published at Nanjing · 1977: Anthony C. Yu begins publishing the first complete English translation to render the poems and songs, finished in 1983."},{"p":"In which year?","q":"The earliest surviving edition of the novel is published at Nanjing","o":["1942","629","1977","1592"],"a":3,"w":"1592: The earliest surviving edition of the novel is published at Nanjing."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>James S. Fu, Mythic and Comic Aspects of the Quest (Singapore University Press, 1977)</li>
+        <li>Andrew Plaks, The Four Masterworks of the Ming Novel (Princeton University Press, 1987)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/golden-temple"><img src="/logos/thumbs/Golden%20Temple.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Golden Temple</span><span class="related-card-dates">1581 CE – present</span></a><a class="related-card" href="/work/guru-granth-sahib"><img src="/logos/thumbs/Guru%20Granth%20Sahib.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Guru Granth Sahib</span><span class="related-card-dates">1604 CE – present</span></a><a class="related-card" href="/work/don-quixote"><img src="/logos/thumbs/Don%20Quixote.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Don Quixote</span><span class="related-card-dates">1605 CE – present</span></a><a class="related-card" href="/work/palace-of-versailles"><img src="/logos/thumbs/Palace%20of%20Versailles.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Palace of Versailles</span><span class="related-card-dates">1623 CE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/golden-temple"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Golden%20Temple.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Golden Temple</span><span class="related-card-dates">1581 CE – present</span></a><a class="related-card" href="/work/guru-granth-sahib"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Guru%20Granth%20Sahib.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Guru Granth Sahib</span><span class="related-card-dates">1604 CE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Journey to the West",slug="journey-to-the-west",url="https://the-epoch-institute.org/work/journey-to-the-west";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Journey to the West on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/journey-to-the-west #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/journey-to-the-west"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Journey to the West",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Journey to the West",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

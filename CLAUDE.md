@@ -3657,6 +3657,38 @@ then declutter. Answers: about 100 each; all sections; menus by subject plus hub
     Without scripts every journey is listed. journeys.tsv is in order of time. A stop's text is 12 to 50 words (the
     test checks it).
   - Kids mode leaves out 33 journeys of war, conquest, removal and enslavement (data-kids="0").
+- **The fourth wave of works and lives (23 Nov 2026; 111 works, 128 lives, 1,226 profiles; scripts/kinds/works4/ and lives4/):**
+  - **The lists** (list.tsv, names.tsv, rank.tsv): 59 works (texts from Plato's Republic and the Art of War to On the Origin
+    of Species; sites and buildings from Göbekli Tepe and Lascaux to Himeji Castle and the Statue of Liberty; the Benin
+    Bronzes, the Book of Kells, the Mona Lisa) and 36 lives (Socrates to Martin Luther King Jr., with floors by region; no
+    living people). One Sonnet writer each with JOB-WORK.md or JOB-LIFE.md from one saved article, check-drafts.js, the
+    editor's read and exact-pair fixes (edits/fix-work1.js, fix-work2.js, fix-life1.js through the battles' apply-fixes.js).
+  - **What the read found:** the Art of War's article named a first commentator "Kai Wen" (a slip of the article: the name is
+    left out); the Histories of Herodotus had been dated by the author's birth (a second saved article, the work now starts
+    c. 430 BCE); Tagore "the first non-European to win a Nobel Prize" contradicted the article's own body (now "in
+    Literature"); Akhenaten's regnal years became years BCE in the event labels. The Potala Palace is held (works4/held/):
+    two of its sections were too thin.
+  - **Entries:** 22 works and one life (Truganini) had none: make-work-entries.js (a fifth field makes the entry a person).
+    "The Republic" links only as "Plato's Republic" or "Republic of Plato". Pictures by eye (works4/pics/picks.txt);
+    pictures.js apply re-serialised added-entries.json again (relay.js restored it) and the entries, already applied, needed
+    "pictures" rows (works4/pics/pic-rows.js inserts them as text).
+  - **Links:** 99 exclusions (works4/excl1.tsv from the audits, excl2.tsv from the picture sheets, through
+    cities2/add-excl.js): fourteen modern scholars named David as King David, Indira Gandhi as Mahatma Gandhi, Martin Luther
+    King III as Luther, Jesus College, Project Gutenberg, the Counter-Reformation as the Reformation, Nana Sahib and the Akan
+    title Nana as the goddess Nanaya, "Midway through" as the battle, Mexico's and Belgium's Liberal Party as the British
+    one, Sir John Marshall the archaeologist as the American judge, Sigiriya's Lion Gate as Mycenae's, the Patio de los
+    Naranjos as the Maya city Naranjo, the Plan de la Noria as the water wheel, Ethiopia's Council of Ministers as the
+    European Union's. "Francis I" on the Mona Lisa went to a Duke of Nevers; with him excluded it goes to the French king.
+  - **Emblems:** the profile's own entry picture cropped square (emblems.txt); a letter for the Arthashastra (no picture),
+    Hadrian's Wall (a map), Chandragupta Maurya and Yaa Asantewaa (modern statues). Home pictures likewise ("-" for those four).
+  - **Section pictures:** works4/pics/wl-propose.js (the cities' proposer with the sections of works and lives, leaving out
+    excluded links; refuse.txt), three rounds on sheets: 371 pictures on 94 profiles; Göbekli Tepe has none.
+  - **Whose Life?:** make-whose-life.js ALSO and ALSOBOX: Martin Luther King's "King" (a title word by the general rule) reads
+    "this person", and "Jhansi" (after the name's "of") is boxed. Read --show for a new life whose name holds a title word or
+    whose "of" names a small place.
+  - Seen and left: the encyclopedia has two entries for Hu Shih (hu-shih and hu-shi); "Council of Ministers" links the Council
+    of the European Union and "Yale" the Welsh commote Ial wherever they stand; Victor Hugo's entry links his novel's title
+    to the cathedral.
 
 ## Connections map and the states register
 - `data/polities.json` — register of every state (incl. the modern Levant: Israel, the State of Palestine, Jordan, Lebanon, Syria — added by hand Oct 2026, successor links to the mandates): nodes {id, n name, t type, b broad region, s/e years, a aka, m mode, c capital, mo modern countries, p profile url} and links {s, t, r relation, f/u years}. Successions stored one way (successor-of). Built from regional research files by the scratchpad states/merge.ps1 (dedupe, relation resolution, validation report).

@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Nazca Lines: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Nazca lines are a group of geoglyphs, straight lines and figures of animals and plants, made in the desert of southern Peru between 500 BCE and 500…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Nazca Lines: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Nazca lines are a group of geoglyphs, straight lines and figures of animals and plants, made in the desert of southern Peru between 500 BCE and 500…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/nazca-lines">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/nazca-lines.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/nazca-lines.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/nazca-lines">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Nazca Lines"}]},{"@type":"Article","headline":"Nazca Lines","description":"The Nazca lines are a group of geoglyphs, straight lines and figures of animals and plants, made in the desert of southern Peru between 500 BCE and 500…","url":"https://the-epoch-institute.org/work/nazca-lines","mainEntityOfPage":"https://the-epoch-institute.org/work/nazca-lines","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Nazca Lines"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/nazca-lines.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Nazca Lines</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Nazca%20Lines.png" alt="Nazca Lines" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · Americas</p>
+        <h1 class="profile-detail-name">Nazca Lines</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 500 BCE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val">The people of the Paracas and Nazca phases, between 500 BCE and 500 CE, working with simple tools and surveying equipment</span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">Geoglyphs made by shallow trenches 10 to 15 cm deep in the desert floor: straight lines, geometric shapes and more than 70 zoomorphic designs, the largest about 370 m long, with a combined length of more than 1,300 km</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">The Nazca Desert on the Pampas de Jumana, a high plateau of southern <a class="enc-link" href="/encyclopedia/peru">Peru</a> between the towns of Nazca and Palpa, about 400 km south of <a class="enc-link" href="/encyclopedia/lima">Lima</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">huge animal and plant figures, among them a hummingbird, spider, condor and monkey; long straight lines; designs best seen from the air; debated purposes from astronomy to water rituals; new figures found by drones and machine learning; a <a class="enc-link" href="/encyclopedia/unesco-world-heritage-site">UNESCO World Heritage Site</a> since 1994</span></div>
+        </div>
+        <p class="empire-meta">6 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The lines were made between 500 BCE and 500 CE, in a Paracas phase (400 to 200 BCE) and a Nazca phase (200 BCE to 500 CE), by removing the reddish-brown pebbles of the desert surface to show the lighter subsoil.</li><li>Scholars differ over their purpose but in general ascribe religious significance to them; astronomical, water-related, ceremonial and calendrical explanations have each been argued, while the idea of ancient astronauts has been refuted.</li><li>Drones and machine learning have raised the number of known figures from a few dozen to hundreds in the 21st century, and archaeologists expect more to be found.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Joe Nickell reproduced the figures in the early 21st century with tools of the kind the Nazca people had, and found that a small team could recreate even the largest figures within days, without aerial assistance.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 500 BCE</span><span class="rf-text">Earliest date given for the making of the lines, which continued until about 500 CE in a Paracas and a Nazca phase</span></li><li><span class="rf-year">1553</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/pedro-cieza-de-leon">Pedro Cieza de León</a> published the first mention of the lines, describing them as trail markers</span></li><li><span class="rf-year">1927</span><span class="rf-text">Toribio Mejía Xesspe spotted the lines while hiking through the foothills</span></li><li><span class="rf-year">1940</span><span class="rf-text">Paul Kosok, in <a class="enc-link" href="/encyclopedia/peru">Peru</a> to study irrigation systems, flew over the lines and recognised a bird among them</span></li><li><span class="rf-year">1994</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/unesco">UNESCO</a> designated the area a <a class="enc-link" href="/encyclopedia/world-heritage-site">World Heritage Site</a></span></li><li><span class="rf-year">2019</span><span class="rf-text">Yamagata University and IBM <a class="enc-link" href="/encyclopedia/japan">Japan</a> announced 143 new geoglyphs, one of them found by machine learning</span></li><li><span class="rf-year">2024</span><span class="rf-text">Archaeologists from Yamagata University's Nazca Institute and IBM Research used artificial intelligence to find 303 previously unknown figurative geoglyphs</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>The Nazca lines are a group of geoglyphs made in the soil of the Nazca Desert in southern <a class="enc-link" href="/encyclopedia/peru">Peru</a>. They lie on a high, arid plateau that stretches more than 80 km between the towns of Nazca and Palpa on the Pampas de Jumana, approximately 400 km south of <a class="enc-link" href="/encyclopedia/lima">Lima</a>. The main concentration of designs is in a rectangle of 10 by 4 km south of the hamlet of San Miguel de la Pascana. The lines were created between 500 BCE and 500 CE, in two major phases: the Paracas phase, from 400 to 200 BCE, and the Nazca phase, from 200 BCE to 500 CE.</p><p>Some historians consider the Paracas culture a possible precursor that influenced the development of the lines. In 2018 archaeologists using drones revealed 25 geoglyphs in the Palpa province that are being assigned to the Paracas culture. Many of them predate the associated Nazca lines by a thousand years. The Peruvian archaeologist Luis Jaime Castillo Butters, a co-discoverer, indicates that many of these figures represent warriors. Further north along the coast, other glyphs from the Chincha culture have also been found. Markus Reindel and Johny Cuadrado Isla, who made the first systematic field study of the geoglyphs, have documented and excavated more than 650 sites since 1996 and compared the iconography with ceramics; they believe the figurative motifs were made between 600 and 200 BCE.</p></div>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p>Most of the lines run straight across the landscape, but there are also figurative designs of animals and plants. The combined length of all the lines is more than 1,300 km. Hundreds of the figures are simple lines and geometric shapes, while more than 70 are zoomorphic designs, including a hummingbird, arachnid, fish, condor, heron, monkey, lizard, dog, cat and a human. Other shapes include trees and flowers. The shapes are usually made from one continuous line.</p><p>The largest figures are about 370 m long. Some have been measured: the hummingbird is 93 m long, the condor 134 m, the monkey 93 by 58 m and the spider 47 m. Some of the shapes are best seen from the air, at around 500 m, although they are also visible from the surrounding foothills and other high places. Scholars differ in interpreting the purpose of the designs, but in general they ascribe religious significance to them.</p><p>Birds are the animals most frequently depicted. A team of Japanese researchers described in 2019 believes that some of the birds earlier researchers took for indigenous species more closely resemble exotic birds found in non-desert habitats. A 2024 paper classified the geoglyphs as geometric or figurative, and the figurative ones as line-type or relief-type. Its authors note that the main motifs of the line-type geoglyphs are wild animals, while those of the relief-type, often half the length, are humans, livestock and <a class="enc-link" href="/encyclopedia/human-sacrifice">human sacrifice</a>.</p></div>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <div class="profile-section-body"><p>The lines were made by people creating depressions or shallow incisions in the desert floor. They removed the top layer of reddish-brown pebbles, which are coated with ferric oxide, to reveal a yellow-grey subsoil. Most lines are shallow trenches between 10 and 15 cm deep, and more than half are slightly more than 33 cm wide, though in places they may be only 30 cm wide and in others reach 1.8 m. The light-coloured clay at the bottom of a trench contrasts sharply with the surrounding surface.</p><p>Determining how the lines were made has been easier than determining why. Scholars have theorised that the Nazca people could have used simple tools and surveying equipment. Archaeological surveys have found wooden stakes in the ground at the end of some lines, which supports this idea, and one such stake was carbon-dated and became the basis for establishing the age of the design complex. In the early 21st century Joe Nickell, an American investigator of folk mysteries, reproduced the figures with the tools and technology available to the Nazca people. He showed that a small team, with careful planning, could recreate even the largest figures within days. Scientific American called his work remarkable in its exactness when compared with the existing lines.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/pedro-cieza-de-leon"><img src="/images/encyclopedia/pedro-cieza-de-leon.jpg" alt="Pedro Cieza de León" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/pedro-cieza-de-leon">Pedro Cieza de León</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Pedro_Cieza_de_Le%C3%B3n.jpg" target="_blank" rel="noopener">Unknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The first published mention of the lines was by the Spanish conquistador <a class="enc-link" href="/encyclopedia/pedro-cieza-de-leon">Pedro Cieza de León</a> in his 1553 book, which described them as trail markers. In 1569 the Spanish magistrate Luis Monzón reported ancient ruins in <a class="enc-link" href="/encyclopedia/peru">Peru</a>, including the remains of "roads". In 1927 the Peruvian archaeologist Toribio Mejía Xesspe spotted the lines while hiking through the foothills, and he discussed them at a conference in <a class="enc-link" href="/encyclopedia/lima">Lima</a> in 1939. The American historian Paul Kosok, credited as the first scholar to study them in depth, flew over them in 1940 and 1941 while studying ancient irrigation systems, realised that one was in the shape of a bird, and saw how lines converged on the horizon at the <a class="enc-link" href="/encyclopedia/winter-solstice">winter solstice</a> in the Southern Hemisphere.</p><p>Kosok, Richard P. Schaedel and Maria Reiche proposed that the figures were astronomical markers showing where the sun and other celestial bodies rose on significant dates. Gerald Hawkins and Anthony Aveni concluded in 1990 that the evidence was insufficient for such an explanation. Reiche also asserted that figures represented constellations, and Phyllis Pitluga argued by 1998 that the animals were shapes of dark patches within the Milky Way and that the spider is a diagram of Orion; Aveni criticised her analysis, noting that she did not account for the other 12 lines of the figure.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <div class="profile-section-body"><p>Because of its isolation and the dry, windless, stable climate of the plateau, the lines have mostly been preserved naturally. The sub-layer exposed by the trenches contains high amounts of lime, which hardens with moisture from morning mist into a protective layer that shields the lines from winds and so prevents erosion. Extremely rare changes in weather may temporarily alter the general designs. After floods and mudslides in February 2007, <a class="enc-link" href="/encyclopedia/peru">Peru</a>'s National Institute of Culture reported no significant damage to the lines, though the nearby highway was damaged.</p><p>Human activity has caused harm. In 2012 squatters occupied land in the area, damaging a Nazca-era cemetery and letting their pigs into some of the land. In 2013 quarry machinery was reported to have destroyed a small section of a line and damaged another. In December 2014 <a class="enc-link" href="/encyclopedia/greenpeace">Greenpeace</a> activists set up a banner within the lines of one geoglyph, damaging the site; Greenpeace apologised, and one activist was convicted and fined. Off-road vehicles of the Dakar Rally damaged geoglyphs outside the World Heritage area in 2012 and 2013, and in January 2018 a truck driver left tyre marks across three geoglyphs. In 2025 the Ministry of Culture ordered a 42 per cent reduction in the reserve's land area, from about 5,600 to roughly 3,200 square kilometres, citing updated archaeological studies; it reversed the decision shortly afterwards after criticism amid concerns over informal mining.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Interpretation has remained open. Johan Reinhard argued in 1985 that the lines were sacred paths leading to places where deities associated with water could be worshipped, and David Johnson argued that some geoglyphs followed the paths of <a class="enc-link" href="/encyclopedia/aquifer">aquifers</a> from which <a class="enc-link" href="/encyclopedia/aqueduct">aqueducts</a>, or puquios, collected water. Henri Stierlin linked the lines to the weaving of textiles, a theory that is not widely accepted. Alberto Rossel Castro proposed in 1977 a multi-functional reading, and Nicola Masini and Giuseppe Orefici believe the geoglyphs at Pampa de Atarco have a spatial, functional and religious relationship with the temples of Cahuachi. The precise meanings of many geoglyphs remain unknown. Erich von Däniken's claim that the lines were landing sites for visitors from other worlds was declared absurd by scholars such as Reiche.</p><p>Research has also added to the known figures. A Japanese team from Yamagata University announced two new figures in 2011 and had found about 100 by 2012. The number of known geoglyphs amounted to 358 in 2022, and a field survey of 2022 and 2023 confirmed 303 more that AI had flagged. A cat on a steep hillside was found in 2020, and drones are revealing further sites.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Nazca lines are geoglyphs made in the Peruvian desert between 500 BCE and 500 CE by removing dark surface pebbles, forming straight lines and figures of animals and plants. Their purpose is still debated, and drones and machine learning have raised the number of known figures to hundreds.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="nazca-lines"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"UNESCO designated the area a World Heritage Site","o":["1940","1927","1994","2019"],"a":2,"w":"1994: UNESCO designated the area a World Heritage Site."},{"p":"Which came first?","q":"","o":["Yamagata University and IBM Japan announced 143 new geoglyphs, one of them found by machine learning","Toribio Mejía Xesspe spotted the lines while hiking through the foothills"],"a":1,"w":"2019: Yamagata University and IBM Japan announced 143 new geoglyphs, one of them found by machine learning · 1927: Toribio Mejía Xesspe spotted the lines while hiking through the foothills."},{"p":"In which year?","q":"Archaeologists from Yamagata University's Nazca Institute and IBM Research used artificial intelligence to find 303 previously unknown figurative geoglyphs","o":["1927","1940","2019","2024"],"a":3,"w":"2024: Archaeologists from Yamagata University's Nazca Institute and IBM Research used artificial intelligence to find 303 previously unknown figurative geoglyphs."},{"p":"Which came first?","q":"","o":["Yamagata University and IBM Japan announced 143 new geoglyphs, one of them found by machine learning","UNESCO designated the area a World Heritage Site"],"a":1,"w":"2019: Yamagata University and IBM Japan announced 143 new geoglyphs, one of them found by machine learning · 1994: UNESCO designated the area a World Heritage Site."},{"p":"In which year?","q":"Toribio Mejía Xesspe spotted the lines while hiking through the foothills","o":["2019","1553","1994","1927"],"a":3,"w":"1927: Toribio Mejía Xesspe spotted the lines while hiking through the foothills."}]</script>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/the-art-of-war"><img src="/logos/thumbs/The%20Art%20of%20War.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">The Art of War</span><span class="related-card-dates">c. 500 BCE – present</span></a><a class="related-card" href="/work/grand-canal-of-china"><img src="/logos/thumbs/Grand%20Canal%20of%20China.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Grand Canal of China</span><span class="related-card-dates">c. 486 BCE – present</span></a><a class="related-card" href="/work/behistun-inscription"><img src="/logos/thumbs/Behistun%20Inscription.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Behistun Inscription</span><span class="related-card-dates">c. 522 BCE – present</span></a><a class="related-card" href="/work/analects"><img src="/logos/thumbs/Analects.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Analects</span><span class="related-card-dates">c. 475 BCE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/behistun-inscription"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Behistun%20Inscription.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Behistun Inscription</span><span class="related-card-dates">c. 522 BCE – present</span></a><a class="related-card" href="/work/the-art-of-war"><span class="related-card-label">Later →</span><img src="/logos/thumbs/The%20Art%20of%20War.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">The Art of War</span><span class="related-card-dates">c. 500 BCE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Nazca Lines",slug="nazca-lines",url="https://the-epoch-institute.org/work/nazca-lines";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Nazca Lines on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/nazca-lines #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/nazca-lines"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Nazca Lines",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Nazca Lines",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

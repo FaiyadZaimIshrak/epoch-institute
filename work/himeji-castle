@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Himeji Castle: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Himeji Castle is a hilltop castle complex of 83 structures in Himeji, Hyōgo Prefecture, Japan, first fortified in 1333 and rebuilt on its present scale…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Himeji Castle: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="Himeji Castle is a hilltop castle complex of 83 structures in Himeji, Hyōgo Prefecture, Japan, first fortified in 1333 and rebuilt on its present scale…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/himeji-castle">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/himeji-castle.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/himeji-castle.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/himeji-castle">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Himeji Castle"}]},{"@type":"Article","headline":"Himeji Castle","description":"Himeji Castle is a hilltop castle complex of 83 structures in Himeji, Hyōgo Prefecture, Japan, first fortified in 1333 and rebuilt on its present scale…","url":"https://the-epoch-institute.org/work/himeji-castle","mainEntityOfPage":"https://the-epoch-institute.org/work/himeji-castle","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Himeji Castle"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/himeji-castle.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Himeji Castle</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Himeji%20Castle.png" alt="Himeji Castle" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · Central &amp; East Asia</p>
+        <h1 class="profile-detail-name">Himeji Castle</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">1333 CE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val">Fortified by Akamatsu Norimura in 1333, remodelled by the Kuroda clan and by <a class="enc-link" href="/encyclopedia/toyotomi-hideyoshi">Toyotomi Hideyoshi</a>, rebuilt by <a class="enc-link" href="/encyclopedia/ikeda-terumasa">Ikeda Terumasa</a> from 1601 to 1609 and extended by <a class="enc-link" href="/encyclopedia/honda-tadamasa">Honda Tadamasa</a> from 1617 to 1618</span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">A hirayama (flat hilltop) castle of stone and wood with white plaster walls: a main keep 46.4 metres high with three smaller keeps, 83 buildings, three moats and a spiral approach, on a complex of 233 hectares</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">On the hill called Himeyama, 45.6 metres above sea level, in the centre of Himeji, <a class="enc-link" href="/encyclopedia/hyogo-prefecture">Hyōgo Prefecture</a>, <a class="enc-link" href="/encyclopedia/japan">Japan</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">the white plaster exterior that gave it the names Hakuro-jō and Shirasagi-jō; the maze of paths to the keep; roughly 1,000 loopholes; five National Treasures; survival of the 1945 bombing and the 1995 Great Hanshin earthquake; registration as a <a class="enc-link" href="/encyclopedia/world-heritage-site">World Heritage Site</a> in 1993</span></div>
+        </div>
+        <p class="empire-meta">5 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The hill was first fortified in 1333, and the castle seen today was largely built by <a class="enc-link" href="/encyclopedia/ikeda-terumasa">Ikeda Terumasa</a> between 1601 and 1609, a work believed to have taken 2.5 million man-days of labour.</li><li>Its gates, baileys and walls were laid out so that an approaching force would travel in a spiral, but the castle was never attacked in this manner and the system remains untested.</li><li>It was spared demolition in the Meiji Period, survived the bombing of Himeji in 1945 and the Great Hanshin earthquake of 1995, and was registered in 1993 as one of the first <a class="enc-link" href="/encyclopedia/world-heritage-site">World Heritage Sites</a> in <a class="enc-link" href="/encyclopedia/japan">Japan</a>.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The straight distance from the Hishi Gate to the main keep is only 130 metres, but the path between them is 325 metres long.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">1333</span><span class="rf-text">Akamatsu Norimura fortified Himeyama hill during the Genkō War</span></li><li><span class="rf-year">1346</span><span class="rf-text">His son Sadanori demolished the fort and built Himeyama Castle in its place</span></li><li><span class="rf-year">1581</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/toyotomi-hideyoshi">Toyotomi Hideyoshi</a> expanded the castle and built a three-storey keep</span></li><li><span class="rf-year">1601</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/ikeda-terumasa">Ikeda Terumasa</a> began to rebuild the castle completely, work that lasted until 1609</span></li><li><span class="rf-year">1617</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/honda-tadamasa">Honda Tadamasa</a> inherited the castle and added several buildings, including the Dressing Tower for Princess Sen</span></li><li><span class="rf-year">1871</span><span class="rf-text">The castle was abandoned and the whole complex was slated for demolition, but Nakamura Shigeto spared it</span></li><li><span class="rf-year">1945</span><span class="rf-text">Himeji was heavily bombed, and the castle survived intact</span></li><li><span class="rf-year">1993</span><span class="rf-text">The castle was registered as one of the first <a class="enc-link" href="/encyclopedia/world-heritage-site">World Heritage Sites</a> in <a class="enc-link" href="/encyclopedia/japan">Japan</a></span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/kuroda-yoshitaka"><img src="/images/encyclopedia/kuroda-yoshitaka.jpg" alt="Kuroda Yoshitaka" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/kuroda-yoshitaka">Kuroda Yoshitaka</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Yoshitaka_Kuroda.jpg" target="_blank" rel="noopener">Unknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Himeyama hill, the site of present-day Himeji Castle, was first fortified in 1333 by Akamatsu Norimura, the shugo of <a class="enc-link" href="/encyclopedia/harima-province">Harima Province</a>, during the Genkō War. In 1346 his son Sadanori demolished this fort and built Himeyama Castle in its place. In 1545 the Kuroda clan was stationed here by order of the Kodera clan, and the feudal ruler Kuroda Shigetaka remodelled the castle into Himeji Castle, completing the work in 1561.</p><p>In 1580 <a class="enc-link" href="/encyclopedia/kuroda-yoshitaka">Kuroda Yoshitaka</a> presented the castle to <a class="enc-link" href="/encyclopedia/toyotomi-hideyoshi">Toyotomi Hideyoshi</a>, who in 1581 expanded it significantly and built a three-storey keep with an area of about 55 square metres. After the <a class="enc-link" href="/encyclopedia/battle-of-sekigahara">Battle of Sekigahara</a> in 1600, <a class="enc-link" href="/encyclopedia/tokugawa-ieyasu">Tokugawa Ieyasu</a> granted the castle to his son-in-law <a class="enc-link" href="/encyclopedia/ikeda-terumasa">Ikeda Terumasa</a> as a reward for his help in the battle. The complex stands on a hill called Himeyama in the centre of Himeji, and its style is hirayama, a flat hilltop castle. Matsuyama Castle (Iyo) and Tsuyama Castle were built at the same time and share many of its architectural features.</p></div>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p>The castle complex is a network of 83 buildings, among them storehouses, gates, corridors and turrets (yagura). The main keep (daitenshu) at its centre is 46.4 metres high and stands 92 metres above sea level; with three smaller subsidiary keeps it forms a cluster of towers. From outside the keep appears to have five floors, because the second and third floors from the top look like a single one, but it has six floors and a basement. As in almost all Japanese castles from the Azuchi-Momoyama period onward, the keep was used as a storehouse in peacetime and as a fortified tower in war, while the <a class="enc-link" href="/encyclopedia/daimyo">daimyo</a>'s offices and residences stood in single-storey buildings nearby.</p><p>The first floor measures 554 square metres and is often called the thousand-mat room because it holds over 330 tatami mats. Its walls carry weapon racks for <a class="enc-link" href="/encyclopedia/matchlock">matchlocks</a> and spears, and at one point the castle held as many as 280 guns and 90 spears. The third and fourth floors have stone-throwing platforms at the north and south windows and small enclosed rooms called warrior hiding places, where defenders could wait and kill attackers by surprise as they entered the keep. The principal materials are stone and wood, and feudal family crests (kamon) set throughout the buildings mark the lords who lived there.</p></div><details class="sec-src"><summary>Sources for this section</summary><p class="sec-src-n">Works that Wikipedia&#8217;s article &#8220;Himeji Castle&#8221; cites where it covers Defences:</p><ul><li>Stephen Turnbull, Japanese Castles 1540–1640 (Osprey Publishing, 2003)</li></ul></details>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/ikeda-terumasa"><img src="/images/encyclopedia/ikeda-terumasa.jpg" alt="Ikeda Terumasa" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/ikeda-terumasa">Ikeda Terumasa</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Terumasa_Ikeda.jpg" target="_blank" rel="noopener">Unknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p><a class="enc-link" href="/encyclopedia/ikeda-terumasa">Ikeda Terumasa</a> demolished the three-storey keep that Hideyoshi had built in 1581 and rebuilt and expanded the castle from 1601 to 1609. He added three moats and made it the complex seen today. The labour involved in the expansion is believed to have totalled 2.5 million man-days. Ikeda died in 1613 and passed the castle to his son, who died three years later. In 1617 <a class="enc-link" href="/encyclopedia/honda-tadamasa">Honda Tadamasa</a> and his family inherited it, and Honda added several buildings, including a special tower for his daughter-in-law, Princess Sen, called the keshō yagura (Dressing Tower).</p><p>The main keep has two pillars, one in the east and one in the west. The east pillar, with a base diameter of 97 centimetres, was originally a single fir tree but has since been mostly replaced. The west pillar is of Japanese cypress. In the Shōwa Restoration of 1956 to 1964 a cypress 26.4 metres long was brought down from the Kiso Mountains to replace the old west pillar; the tree broke in the process, so another was brought down from Mount Kasagata and the two were joined on the third floor. The legend of the master carpenter Sakurai Genbei says that he judged the keep to lean a little to the southeast and, distraught, jumped to his death from its top with a chisel in his mouth.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <div class="profile-section-body"><p>The castle is known as Hakuro-jō or Shirasagi-jō, the White Egret Castle or White Heron Castle, for its white exterior and its supposed resemblance to a bird taking flight. It is the largest castle in <a class="enc-link" href="/encyclopedia/japan">Japan</a> and is considered, with Matsumoto Castle and <a class="enc-link" href="/encyclopedia/kumamoto">Kumamoto</a> Castle, one of the country's three premier castles. It is regarded as the finest surviving example of prototypical Japanese castle architecture. Its defences were designed to let defenders fire from the keep on intruders during a long approach, but the castle was never attacked in this manner, so the system remains untested.</p><p>Local legends are attached to the castle. Banshū Sarayashiki, a variant of the ghost story Banchō Sarayashiki set in Edo, is set at Himeji, where an alleged Okiku's Well remains; the claim that the castle is the true location of the whole legend is disputed. In the tale Okiku was falsely accused of losing valuable dishes and was killed and thrown into the well, and her ghost counts the dishes at night. The yōkai Osakabehime is said to live in the keep and to avoid humans. According to the legend of the Old Widow's Stone, an old woman gave Hideyoshi her millstone when he ran short of stones, and others followed her example.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <div class="profile-section-body"><p>In the Meiji Period many Japanese castles were destroyed. Himeji Castle was abandoned in 1871, and some of its corridors and gates were destroyed to make room for army barracks. The whole complex was slated for demolition by government policy but was spared through the efforts of an army colonel, Nakamura Shigeto, who is honoured by a stone monument inside the Hishi Gate. When the han system was abolished in 1871 the castle was designated for military use in 1872, and by 1874 it briefly served as headquarters of the 10th Infantry Regiment. Efforts to preserve it began in 1877, but government funding for a comprehensive restoration came only in 1910.</p><p>Himeji was heavily bombed in 1945, and although most of the surrounding area was burned to the ground, the castle survived intact. One firebomb fell on the top floor and failed to explode. Substantial repair work began in 1956, with 250,000 man-days of labour and a cost of 550 million yen. In January 1995 the Great Hanshin earthquake substantially damaged the city, but the castle survived virtually undamaged, and even the bottle of sake on the altar of the top floor stayed in place. A further restoration began in April 2010 and ended with the reopening on 27 March 2015; it removed decades of dirt and grime and restored the formerly grey roof to its white colour.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Himeji Castle was registered on 11 December 1993 as one of the first <a class="enc-link" href="/encyclopedia/world-heritage-site">World Heritage Sites</a> in <a class="enc-link" href="/encyclopedia/japan">Japan</a>. Five of its structures are National Treasures: the main keep, the northwest, west and east small keeps, and the I, Ro, Ha and Ni corridors with the kitchen. The area within the middle moat is a Special Historic Site. Of the 83 buildings, 74 are designated Important Cultural Assets: 11 corridors, 16 turrets, 15 gates and 32 earthen walls. Matsumoto, Inuyama, <a class="enc-link" href="/encyclopedia/matsue">Matsue</a> and <a class="enc-link" href="/encyclopedia/hikone">Hikone</a> castles are also National Treasures, and Himeji's sister castles are the Château de Chantilly in <a class="enc-link" href="/encyclopedia/france">France</a> and Conwy Castle in <a class="enc-link" href="/encyclopedia/wales">Wales</a>.</p><p>Beside the castle lies Kōko-en, a Japanese garden created in 1992 to commemorate the hundredth anniversary of Himeji city. The complex has a circumference of 4,200 metres, and parts of the central moat and all of the inner moats survive, along with 21 of its original 84 gates and 13 of its 33 wells.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Himeji Castle in <a class="enc-link" href="/encyclopedia/hyogo-prefecture">Hyōgo Prefecture</a> was first fortified in 1333 and rebuilt on its present scale by <a class="enc-link" href="/encyclopedia/ikeda-terumasa">Ikeda Terumasa</a> from 1601 to 1609. It escaped demolition in the Meiji Period, the bombing of 1945 and the 1995 earthquake, and was registered as a <a class="enc-link" href="/encyclopedia/world-heritage-site">World Heritage Site</a> in 1993.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="himeji-castle"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Akamatsu Norimura fortified Himeyama hill during the Genkō War","o":["1333","1993","1945","1346"],"a":0,"w":"1333: Akamatsu Norimura fortified Himeyama hill during the Genkō War."},{"p":"Which came first?","q":"","o":["The castle was abandoned and the whole complex was slated for demolition, but Nakamura Shigeto spared it","Toyotomi Hideyoshi expanded the castle and built a three-storey keep"],"a":1,"w":"1871: The castle was abandoned and the whole complex was slated for demolition, but Nakamura Shigeto spared it · 1581: Toyotomi Hideyoshi expanded the castle and built a three-storey keep."},{"p":"In which year?","q":"Ikeda Terumasa began to rebuild the castle completely, work that lasted until 1609","o":["1871","1617","1346","1601"],"a":3,"w":"1601: Ikeda Terumasa began to rebuild the castle completely, work that lasted until 1609."},{"p":"Which came first?","q":"","o":["Honda Tadamasa inherited the castle and added several buildings, including the Dressing Tower for Princess Sen","Akamatsu Norimura fortified Himeyama hill during the Genkō War"],"a":1,"w":"1617: Honda Tadamasa inherited the castle and added several buildings, including the Dressing Tower for Princess Sen · 1333: Akamatsu Norimura fortified Himeyama hill during the Genkō War."},{"p":"In which year?","q":"The castle was registered as one of the first World Heritage Sites in Japan","o":["1581","1346","1617","1993"],"a":3,"w":"1993: The castle was registered as one of the first World Heritage Sites in Japan."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Oleg and Ran Zwigenberg Benesch, Japan's Castles: Citadels of Modernity in War and Peace (Cambridge University Press, 2019)</li>
+        <li>William De Lange, An Encyclopedia of Japanese Castles (Toyo Press, 2021)</li>
+        <li>Morton S. Schmorleitz, Castles in Japan (Charles E. Tuttle Co., 1974)</li>
+        <li>Hinago Motoo, Japanese Castles (Kodansha, 1986)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/kebra-nagast"><img src="/logos/thumbs/Kebra%20Nagast.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kebra Nagast</span><span class="related-card-dates">c. 1314 CE – present</span></a><a class="related-card" href="/work/divine-comedy"><img src="/logos/thumbs/Divine%20Comedy.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Divine Comedy</span><span class="related-card-dates">c. 1308 CE – present</span></a><a class="related-card" href="/work/benin-bronzes"><img src="/logos/thumbs/Benin%20Bronzes.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Benin Bronzes</span><span class="related-card-dates">c. 1300 CE – present</span></a><a class="related-card" href="/work/muqaddimah"><img src="/logos/thumbs/Muqaddimah.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Muqaddimah</span><span class="related-card-dates">1377 CE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/kebra-nagast"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Kebra%20Nagast.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Kebra Nagast</span><span class="related-card-dates">c. 1314 CE – present</span></a><a class="related-card" href="/work/muqaddimah"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Muqaddimah.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Muqaddimah</span><span class="related-card-dates">1377 CE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Himeji Castle",slug="himeji-castle",url="https://the-epoch-institute.org/work/himeji-castle";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Himeji Castle on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/himeji-castle #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/himeji-castle"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Himeji Castle",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Himeji Castle",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Kojiki: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Kojiki is an early Japanese chronicle of myths, genealogies and semi-historical accounts of the kami and the imperial line, which its preface says Ō…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Kojiki: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Kojiki is an early Japanese chronicle of myths, genealogies and semi-historical accounts of the kami and the imperial line, which its preface says Ō…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/kojiki">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/kojiki.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/kojiki.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/kojiki">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Kojiki"}]},{"@type":"Article","headline":"Kojiki","description":"The Kojiki is an early Japanese chronicle of myths, genealogies and semi-historical accounts of the kami and the imperial line, which its preface says Ō…","url":"https://the-epoch-institute.org/work/kojiki","mainEntityOfPage":"https://the-epoch-institute.org/work/kojiki","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Kojiki"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/kojiki.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Kojiki</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Kojiki.png" alt="Kojiki" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · Central &amp; East Asia</p>
+        <h1 class="profile-detail-name">Kojiki</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">711 CE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val">Ō no Yasumaro, a courtier, who according to the preface wrote down at Empress Genmei's order what the court attendant Hieda no Are had memorised at <a class="enc-link" href="/encyclopedia/emperor-tenmu">Emperor Tenmu</a>'s command</span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">A chronicle in three volumes, written mostly in Classical Chinese, with dozens of short songs and poems in Old Japanese transcribed phonetically in man'yōgana</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">Known from late <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a>, the oldest the Shinpukuji-bon of 1371–1372, and from printed editions and translations</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">The creation of the islands by Izanagi and Izanami; <a class="enc-link" href="/encyclopedia/amaterasu">Amaterasu</a> hiding in the Heavenly Rock Cave; Susanoo and the serpent Yamata-no-Orochi; Ōkuninushi; the descent of Ninigi; Emperor Jimmu's conquest of Yamato; the oldest extant literary work in <a class="enc-link" href="/encyclopedia/japan">Japan</a></span></div>
+        </div>
+        <p class="empire-meta">5 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The Kojiki gathers myths, genealogies, songs and early imperial history into one account that presents the Yamato line as descended from heavenly deities and as rightful heir to the land.</li><li>Its preface says it was written down by Ō no Yasumaro from what Hieda no Are had memorised, and it is usually considered the oldest extant literary work in <a class="enc-link" href="/encyclopedia/japan">Japan</a>.</li><li>Neglected in the Heian and <a class="enc-link" href="/encyclopedia/kamakura">Kamakura</a> periods, it was raised to the status of a sacred text by the nativist scholars of the <a class="enc-link" href="/encyclopedia/edo-period">Edo period</a> and, above all, by Motoori Norinaga's Kojiki-den.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Motoori Norinaga spent 34 years, from 1764 to 1798, on his 44-volume study of the Kojiki, the Kojiki-den. He valued the Kojiki over the <a class="enc-link" href="/encyclopedia/nihon-shoki">Nihon Shoki</a> because it was free of what he called Chinese mentality.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">620</span><span class="rf-text">Prince Shotoku and Soga no Umako undertake the first concerted effort at historical compilation of which a record survives</span></li><li><span class="rf-year">645</span><span class="rf-text">The Isshi incident burns Soga no Emishi's estate, and of the court's early records only the Kokki survives the fire</span></li><li><span class="rf-year">712</span><span class="rf-text">Ō no Yasumaro presents the Kojiki to Empress Genmei, having been ordered to compile it in 711</span></li><li><span class="rf-year">1371</span><span class="rf-text">The Shinpukuji-bon <a class="enc-link" href="/encyclopedia/manuscript">manuscript</a>, the oldest existing copy, is made, and copying continues to 1372</span></li><li><span class="rf-year">1644</span><span class="rf-text">The Kan'ei Kojiki, the first printed edition, is published in <a class="enc-link" href="/encyclopedia/kyoto">Kyoto</a></span></li><li><span class="rf-year">1798</span><span class="rf-text">Motoori Norinaga completes the Kojiki-den, his 44-volume study begun in 1764</span></li><li><span class="rf-year">1882</span><span class="rf-text">Basil Hall Chamberlain publishes his English translation of the Kojiki</span></li><li><span class="rf-year">1913</span><span class="rf-text">Tsuda Sōkichi argues that the Kojiki is a document created to legitimise the rule of the imperial line</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/emperor-tenmu"><img src="/images/encyclopedia/emperor-tenmu.jpg" alt="Emperor Tenmu" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/emperor-tenmu">Emperor Tenmu</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:%E5%A4%A9%E6%AD%A6%E5%A4%A9%E7%9A%87%E5%BE%A1%E5%BD%B1%E3%80%81%E9%87%91%E5%89%9B%E5%B1%B1%E5%AF%BA%E6%89%80%E8%94%B5.jpg" target="_blank" rel="noopener">Xwdgtpwga, CC0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>It is believed that the compilation of genealogical and anecdotal histories of the imperial <a class="enc-link" href="/encyclopedia/yamato-court">Yamato court</a> and of prominent clans began under Emperors Keitai and Kinmei in the 6th century. The first concerted effort at historical compilation of which a record survives was made in 620 under Prince Shotoku and Soga no Umako. According to the <a class="enc-link" href="/encyclopedia/nihon-shoki">Nihon Shoki</a>, it produced the Tennōki, or Record of the Emperors, the Kokki, or National Record, and other fundamental records concerning influential clans. Only the Kokki survived the burning of Soga no Emishi's estate, where the documents were kept, during the Isshi incident of 645, and it was apparently lost soon after.</p><p>The preface of the Kojiki says that leading families also kept their own historical and genealogical records, and gives the correction of errors that had supposedly crept into them as one reason for the work. It says that <a class="enc-link" href="/encyclopedia/emperor-tenmu">Emperor Tenmu</a>, who reigned from 673 to 686, ordered the clan documents reviewed and commissioned a court attendant of exceptional memory, Hieda no Are, to memorise the records and oral traditions of the imperial lineage. Nothing further happened until the reign of Empress Genmei, who reigned from 707 to 715.</p></div>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p>The Kojiki recounts the mythological creation of <a class="enc-link" href="/encyclopedia/japan">Japan</a>, the genealogy of the Japanese gods, the kami, and the histories of the semi-legendary early emperors. It has three parts. The Kamitsumaki, or upper volume, holds the preface and the Age of the Gods: the pair Izanagi and Izanami shape the islands, Izanami dies and Izanagi flees the land of the dead, <a class="enc-link" href="/encyclopedia/amaterasu">Amaterasu</a>, Tsukuyomi and Susanoo are born from his washing, and Amaterasu hides in a rock cave until the gods lure her out. Susanoo slays the eight-headed serpent Yamata-no-Orochi, Ōkuninushi rules the earthly land until the heavenly deities pacify it, and Ninigi, Amaterasu's grandson, descends to <a class="enc-link" href="/encyclopedia/kyushu">Kyūshū</a> as the progenitor of the imperial line.</p><p>The Nakatsumaki, or middle volume, begins with Jimmu's conquests, which make him the first emperor, and ends with the 15th emperor, Ōjin. The reigns of the second to ninth emperors are given in a minimum of detail, with only names, descendants and the locations of palaces and tombs. The Shimotsumaki, or lower volume, covers the 16th to 33rd emperors and has far fewer dealings with deities. Its narrative also holds dozens of short songs and poems, often spoken by gods, heroes or early rulers.</p></div>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/nihon-shoki"><img src="/images/encyclopedia/nihon-shoki.jpg" alt="Nihon Shoki" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/nihon-shoki">Nihon Shoki</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Nihonshoki_tanaka_version.jpg" target="_blank" rel="noopener">Unknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>According to the preface, Empress Genmei ordered the courtier Ō no Yasumaro on the 18th of the 9th month of 711 to record what Hieda no Are had learned. Yasumaro wrote the information down in Classical Chinese and presented his work to the empress on the 28th of the 1st month of 712. The preface is a dedicatory address to Genmei that opens with a poem summarising the work, and it ends with a brief explanation of the Chinese characters used to transcribe native Japanese words and of the division into three volumes.</p><p>The book is written mostly in Classical Chinese, but the songs are in Old Japanese, written in man'yōgana, a system in which Chinese characters represent the syllables of Old Japanese purely phonetically. The Kojiki is a collation of different traditions woven into a single official mythology, made to justify the rule of the <a class="enc-link" href="/encyclopedia/yamato-court">Yamato polity</a> and to give different interest groups a place in the national genealogy. Other possible factors were interest in the nation's origins after the influx of foreign culture and the need for an authoritative genealogy by which to judge the claims of noble families and reorganise them into a new system of ranks and titles. Unlike the <a class="enc-link" href="/encyclopedia/nihon-shoki">Nihon Shoki</a> of 720, which drew on varied sources including Chinese texts, the Kojiki is apparently based on sources handed down within the court.</p></div><details class="sec-src"><summary>Sources for this section</summary><p class="sec-src-n">Works that Wikipedia&#8217;s article &#8220;Kojiki&#8221; cites where it covers Composition, Purpose:</p><ul><li>Donald L. Philippi, Kojiki (Princeton University Press, 2015)</li><li>John S. Brownlee, Political thought in Japanese historical writing: from Kojiki (712) to Tokushi Yoron (1712) (Wilfrid Laurier University Press, 1991)</li></ul></details>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/prince-shotoku"><img src="/images/encyclopedia/prince-shotoku.jpg" alt="Prince Shōtoku" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/prince-shotoku">Prince Shōtoku</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Sh%C5%8Dtoku_Taishi_Sh%C5%8Dmanky%C5%8D_K%C5%8Dsan.jpg" target="_blank" rel="noopener">Unknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Because the <a class="enc-link" href="/encyclopedia/nihon-shoki">Nihon Shoki</a> was one of the six imperial histories, it was widely read and studied in the <a class="enc-link" href="/encyclopedia/heian-period">Heian period</a>, while the Kojiki was mostly treated as an ancillary text. A work known as the Sendai Kuji Hongi, claimed to be by <a class="enc-link" href="/encyclopedia/prince-shotoku">Prince Shōtoku</a> and Soga no Umako, was considered earlier and more reliable; modern scholarly consensus holds it to be a Heian period forgery based on the Kojiki and the Shoki. By the <a class="enc-link" href="/encyclopedia/kamakura">Kamakura</a> period few people had access to the Kojiki, particularly to its middle volume.</p><p>The <a class="enc-link" href="/encyclopedia/edo-period">Edo period</a>'s nativist scholars, the kokugaku, saw <a class="enc-link" href="/encyclopedia/japan">Japan</a>'s earliest writings as the repository of a uniquely superior Japanese identity, and the Kojiki gained the status of a sacred text. Kada no Azumamaro and Kamo no Mabuchi produced annotated versions. Motoori Norinaga, who met Mabuchi in 1763, regarded it as a true account of actual events that, read correctly, could reveal Japan as a community where the kami, the emperor and the people lived in harmony. Under State Shintō, the Kojiki and Nihon Shoki achieved a scriptural status and their stories were treated as orthodox national history. Scholars who questioned their veracity faced censorship, forced resignation or even trial.</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <div class="profile-section-body"><p>The Kojiki is available only in comparatively late <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a>, owing to the neglect it suffered by the <a class="enc-link" href="/encyclopedia/kamakura">Kamakura</a> period. There are two major branches, the Ise and the Urabe. The extant Urabe branch consists of 36 manuscripts, all based on the 1522 copies by Urabe Kanenaga. The Ise branch divides into the Shinpukuji-bon manuscript of 1371–1372 and the Dōka-bon manuscripts: the Dōka-bon of 1381, of which only the first half of the first volume remains, the Dōshō-bon of 1424, of which only the first volume remains with many defects, and the Shun'yu-bon of 1426.</p><p>The Shinpukuji-bon is the oldest existing manuscript. Although it is classed in the Ise branch, it is a mixture of the two. The monk Ken'yu based his copy on that of Ōnakatomi Sadayo, who in 1266 copied volumes one and three but could not obtain the second. In 1282 he gained access to the second volume through an Urabe-branch manuscript and transcribed it. With <a class="enc-link" href="/encyclopedia/printing-press">printing</a>, the Kojiki first reached a wide audience: the Kan'ei Kojiki was published in <a class="enc-link" href="/encyclopedia/kyoto">Kyoto</a> in 1644, and a second edition, the Gōtō Kojiki, was printed in 1687 by Deguchi Nobuyoshi, a priest at Ise Shrine.</p></div><details class="sec-src"><summary>Sources for this section</summary><p class="sec-src-n">Works that Wikipedia&#8217;s article &#8220;Kojiki&#8221; cites where it covers Transmission and study:</p><ul><li>Gustav Heldt, The Kojiki: An Account of Ancient Matters (Columbia University Press, 2014)</li></ul></details>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>The myths of the Kojiki and the <a class="enc-link" href="/encyclopedia/nihon-shoki">Nihon Shoki</a> are part of the inspiration behind many practices and the unified <a class="enc-link" href="/encyclopedia/shinto">Shinto</a> orthodoxy, and they were later incorporated into practices such as the misogi purification ritual. The text also finalised, and possibly formulated, the framework by which Japanese history was examined in terms of the reigns of emperors.</p><p>In the <a class="enc-link" href="/encyclopedia/meiji-era">Meiji period</a> the introduction of philology and comparative mythology brought renewed scholarly attention, and scholars recognised the Kojiki's literary value and noted that its accounts resembled ancient Greek and Roman myths. In 1913 Tsuda Sōkichi argued that, particularly in its earlier sections, it was neither history nor myth but a document created to legitimise the imperial line. His conclusions caused controversy, and later scholarship, particularly after <a class="enc-link" href="/encyclopedia/second-world-war">World War II</a>, largely develops and corrects his line of thought. Watsuji Tetsurō argued in 1920 for a literary appreciation, and Kurano Kenji proposed in 1927 that it be compared with Western epic literature and regarded as a national epic like <a class="enc-link" href="/encyclopedia/beowulf">Beowulf</a>. Editions, translations and commentaries have continued to appear, among the English translations those of Chamberlain in 1882, Philippi in 1968 and 1969, and Heldt in 2014.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Kojiki is an early Japanese chronicle of myths, genealogies and songs, which its preface says Ō no Yasumaro wrote down for Empress Genmei in 711–712. It presents the Yamato line as descended from the gods, was neglected for centuries, and was elevated by Edo nativists.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="kojiki"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Basil Hall Chamberlain publishes his English translation of the Kojiki","o":["620","1371","712","1882"],"a":3,"w":"1882: Basil Hall Chamberlain publishes his English translation of the Kojiki."},{"p":"Which came first?","q":"","o":["Prince Shotoku and Soga no Umako undertake the first concerted effort at historical compilation of which a record survives","Ō no Yasumaro presents the Kojiki to Empress Genmei, having been ordered to compile it in 711"],"a":0,"w":"620: Prince Shotoku and Soga no Umako undertake the first concerted effort at historical compilation of which a record survives · 712: Ō no Yasumaro presents the Kojiki to Empress Genmei, having been ordered to compile it in 711."},{"p":"In which year?","q":"The Kan'ei Kojiki, the first printed edition, is published in Kyoto","o":["1644","620","645","1882"],"a":0,"w":"1644: The Kan'ei Kojiki, the first printed edition, is published in Kyoto."},{"p":"Which came first?","q":"","o":["The Kan'ei Kojiki, the first printed edition, is published in Kyoto","Tsuda Sōkichi argues that the Kojiki is a document created to legitimise the rule of the imperial line"],"a":0,"w":"1644: The Kan'ei Kojiki, the first printed edition, is published in Kyoto · 1913: Tsuda Sōkichi argues that the Kojiki is a document created to legitimise the rule of the imperial line."},{"p":"In which year?","q":"The Shinpukuji-bon manuscript, the oldest existing copy, is made, and copying continues to 1372","o":["1644","620","712","1371"],"a":3,"w":"1371: The Shinpukuji-bon manuscript, the oldest existing copy, is made, and copying continues to 1372."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>John S. Brownlee, Political Thought in Japanese Historical Writing: From Kojiki (712) to Tokushi Yoron (1712) (Wilfrid Laurier University Press, 1991)</li>
+        <li>John S. Brownlee, Japanese Historians and the National Myths, 1600–1945: The Age of the Gods and Emperor Jimmu (University of British Columbia Press, 1997)</li>
+        <li>Donald L. Philippi, Kojiki (Princeton University Press and University of Tokyo Press, 1968)</li>
+        <li>Gustav Heldt, The Kojiki: An Account of Ancient Matters (Columbia University Press, 2014)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/one-thousand-and-one-nights"><img src="/logos/thumbs/One%20Thousand%20and%20One%20Nights.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">One Thousand and One Nights</span><span class="related-card-dates">c. 700 CE – present</span></a><a class="related-card" href="/work/dome-of-the-rock"><img src="/logos/thumbs/Dome%20of%20the%20Rock.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Dome of the Rock</span><span class="related-card-dates">c. 691 CE – present</span></a><a class="related-card" href="/work/todai-ji"><img src="/logos/thumbs/T%C5%8Ddai-ji.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tōdai-ji</span><span class="related-card-dates">738 CE – present</span></a><a class="related-card" href="/work/borobudur"><img src="/logos/thumbs/Borobudur.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Borobudur</span><span class="related-card-dates">c. 780 CE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/work/one-thousand-and-one-nights"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/One%20Thousand%20and%20One%20Nights.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">One Thousand and One Nights</span><span class="related-card-dates">c. 700 CE – present</span></a><a class="related-card" href="/work/todai-ji"><span class="related-card-label">Later →</span><img src="/logos/thumbs/T%C5%8Ddai-ji.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Tōdai-ji</span><span class="related-card-dates">738 CE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Kojiki",slug="kojiki",url="https://the-epoch-institute.org/work/kojiki";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Kojiki on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/kojiki #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/kojiki"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Kojiki",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Kojiki",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

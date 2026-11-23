@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Lascaux: History, Meaning and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Lascaux is a network of caves near Montignac in the Dordogne, southwestern France, whose walls and ceilings carry over 600 Upper Palaeolithic paintings…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Lascaux: History, Meaning and Legacy — The Epoch Institute">
+<meta property="og:description" content="Lascaux is a network of caves near Montignac in the Dordogne, southwestern France, whose walls and ceilings carry over 600 Upper Palaeolithic paintings…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/work/lascaux">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/lascaux.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/lascaux.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/work/lascaux">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great works","item":"https://the-epoch-institute.org/profiles?kind=work"},{"@type":"ListItem","position":4,"name":"Lascaux"}]},{"@type":"Article","headline":"Lascaux","description":"Lascaux is a network of caves near Montignac in the Dordogne, southwestern France, whose walls and ceilings carry over 600 Upper Palaeolithic paintings…","url":"https://the-epoch-institute.org/work/lascaux","mainEntityOfPage":"https://the-epoch-institute.org/work/lascaux","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Lascaux"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/lascaux.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=work">Great works</a></li><li aria-current="page">Lascaux</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Lascaux.png" alt="Lascaux" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Great work · Europe</p>
+        <h1 class="profile-detail-name">Lascaux</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 20000 BCE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Made by</span><span class="info-stat-val">Many generations of Upper Palaeolithic people, whose paintings are usually estimated at 17,000 to 22,000 years old (early Magdalenian); the debate over the date continues</span></div>
+          <div class="info-stat"><span class="info-stat-label">Form</span><span class="info-stat-val">A network of caves with galleries named the Hall of the Bulls, the Passageway, the Shaft, the Nave, the Apse and the Chamber of Felines; over 600 parietal paintings and engravings in red, yellow and black mineral pigments, some incised into softer rock</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where it is now</span><span class="info-stat-val">Near the village of Montignac, in the <a class="enc-link" href="/encyclopedia/departement">department</a> of <a class="enc-link" href="/encyclopedia/dordogne">Dordogne</a>, in the Vézère valley, southwestern <a class="enc-link" href="/encyclopedia/france">France</a>; replicas stand near the site (Lascaux II and IV), at Le Parc du Thot and in exhibitions abroad (Lascaux III)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">the Hall of the Bulls with an aurochs bull 5.2 metres long; the Crossed Bison in the Nave; the scene in the <a class="enc-link" href="/encyclopedia/well">Well</a> with a bird-headed man; the horse seen from the front; discovery by four teenagers in 1940; closure to the public in 1963; replicas; <a class="enc-link" href="/encyclopedia/unesco">UNESCO</a> listing in 1979</span></div>
+        </div>
+        <p class="empire-meta">6 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The cave walls carry over 600 paintings and nearly 6,000 figures in all, animals, human figures and abstract signs, made over many generations; horses (364) and stags (90) are the commonest animals identified, and a single human figure appears at the bottom of the <a class="enc-link" href="/encyclopedia/well">Well</a>.</li><li>Four teenagers entered it on 12 September 1940 after the dog Robot investigated a hole left by an uprooted tree; it opened to visitors in 1948 and closed in 1963 after the breath and heat of 1,200 visitors a day damaged the paintings.</li><li>Interpretation is still debated, from records of hunting success and hunting ritual to trance visions and a structured arrangement of species and signs, and replicas now carry the paintings to the public while moulds are fought in the original.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The cave contains no images of reindeer apart from one in the Apse, although reindeer were the principal source of food for the artists, and no image of fish; the paintings show no landscape or vegetation either.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 20,000 BCE</span><span class="rf-text">The paintings are made over many generations, usually estimated at 17,000 to 22,000 years old</span></li><li><span class="rf-year">1940</span><span class="rf-text">Marcel Ravidat and three friends enter the cave, and the Abbé Henri Breuil visits it nine days later</span></li><li><span class="rf-year">1948</span><span class="rf-text">The cave complex opens to the public</span></li><li><span class="rf-year">1963</span><span class="rf-text">The cave closes to visitors after lichen and crystals appear on the walls, and the paintings are restored</span></li><li><span class="rf-year">1979</span><span class="rf-text">Lascaux is inscribed on the <a class="enc-link" href="/encyclopedia/unesco">UNESCO</a> World Heritage List as part of the Prehistoric Sites and Decorated Caves of the Vézère Valley</span></li><li><span class="rf-year">1983</span><span class="rf-text">Lascaux II, a copy of the Great Hall of the Bulls and the Painted Gallery, opens near the cave</span></li><li><span class="rf-year">2001</span><span class="rf-text">A new air conditioning system is followed by an outbreak of the white mould Fusarium solani</span></li><li><span class="rf-year">2016</span><span class="rf-text">Lascaux IV, a full-scale replica of the cave, opens in the International Centre for Parietal Art</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>Lascaux lies near the village of Montignac in the <a class="enc-link" href="/encyclopedia/departement">department</a> of <a class="enc-link" href="/encyclopedia/dordogne">Dordogne</a> in southwestern <a class="enc-link" href="/encyclopedia/france">France</a>, in the drainage basin of the Vézère. That river flows south-westwards and joins the Dordogne near Limeuil. Its course in the middle is marked by meanders and high limestone cliffs, but near Montignac the land softens, the valley floor widens and the banks lose their steepness. The Lascaux valley lies some distance from the major concentrations of decorated caves and inhabited sites, most of which were found further downstream. Around Eyzies-de-Tayac Sireuil there are no fewer than 37 decorated caves and shelters, with an even greater number of Upper Palaeolithic habitation sites, the highest concentration in <a class="enc-link" href="/encyclopedia/europe">Europe</a>.</p><p>The paintings represent mainly large animals, the typical local fauna of the period, which correspond to the fossil record of the Upper Palaeolithic in the area. They are the combined effort of many generations. With continued debate, their age is now usually estimated at 17,000 to 22,000 years, in the early Magdalenian. Lascaux was inducted into the <a class="enc-link" href="/encyclopedia/unesco">UNESCO</a> World Heritage List in 1979 as an element of the Prehistoric Sites and Decorated Caves of the Vézère Valley.</p></div>
+      </div>
+      <div class="profile-section-block" id="content">
+        <h2 class="profile-section-title">What It Is</h2>
+        <div class="profile-section-body"><p>The cave contains nearly 6,000 figures, which fall into three main categories: animals, human figures and abstract signs. The paintings include no images of the surrounding landscape or vegetation. Over 900 figures can be identified as animals, and 605 of these have been precisely identified: 364 equines and 90 stags, with aurochs and bison each making up 4 to 5% of the images. A smattering of others includes seven felines, a bird, a bear and a rhinoceros. Galleries were given names such as the Hall of the Bulls, the Passageway, the Shaft, the Nave, the Apse and the Chamber of Felines.</p><p>The Hall of the Bulls is the most famous section. Its calcite walls are unsuitable for engraving, so it is decorated with paintings, some up to five metres long. Two rows of aurochs face each other, with about ten horses and a large animal of uncertain kind nicknamed the unicorn for the two straight lines on its forehead. One of the four black aurochs bulls is 5.2 metres long, the largest animal discovered so far in cave art. In the Nave, the Crossed Bison show occlusion and transparency, among the earliest uses of these in human art. The Apse holds more than a thousand engravings. At the bottom of the 9-metre-deep <a class="enc-link" href="/encyclopedia/well">Well</a> is the cave's only human figure, an ithyphallic man with a bird's head who seems to lie on the ground, perhaps knocked down by a gutted buffalo, in a strikingly different style; various interpretations of the scene have been offered.</p></div>
+      </div>
+      <div class="profile-section-block" id="making">
+        <h2 class="profile-section-title">How It Was Made</h2>
+        <div class="profile-section-body"><p>Most of the major images were painted in red, yellow and black from a complex mixture of mineral pigments: iron compounds such as iron oxide (ochre), hematite and goethite, and manganese-containing pigments. <a class="enc-link" href="/encyclopedia/charcoal">Charcoal</a> may also have been used, but seemingly to a sparing extent. On some walls the colour may have been applied as a suspension of pigment in animal fat, calcium-rich cave <a class="enc-link" href="/encyclopedia/groundwater-depletion">groundwater</a> or clay, and swabbed or blotted on rather than applied by brush. In other areas it was sprayed by blowing the mixture through a tube. Where the rock is softer, some designs were incised into the stone.</p><p>Some work required scaffolding. Some animals are painted on the ceiling of the Axial Diverticulum, where they seem to roll from one wall to the other, and a fleeing horse was brushed with a manganese pencil 2.50 metres above the ground. The ceiling of the Apse, between 1.6 and 2.7 metres high, is so completely engraved that the people who made the engravings must first have built a scaffold. Many images are too faint to discern, and others have deteriorated entirely. The paintings are the combined effort of many generations, and the debate over their age continues.</p></div>
+      </div>
+      <div class="profile-section-block" id="reception">
+        <h2 class="profile-section-title">Reception</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/pablo-picasso"><img src="/images/encyclopedia/pablo-picasso.jpg" alt="Pablo Picasso" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/pablo-picasso">Pablo Picasso</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Pablo_picasso_1.jpg" target="_blank" rel="noopener">Argentina. Revista Vea y Lea, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The interpretation of Palaeolithic art is problematic, as it can be influenced by modern prejudices and beliefs. Some anthropologists and art historians suggest that the paintings record past hunting success, or represent a ritual meant to improve future hunting. David Lewis-Williams and Jean Clottes, who studied what they take to be similar art of the <a class="enc-link" href="/encyclopedia/san-people">San people</a> of Southern <a class="enc-link" href="/encyclopedia/africa">Africa</a>, hold that this art is spiritual, relating to visions experienced in ritual trance-dancing. Nigel Spivey has proposed that the dot and lattice patterns over the animals resemble hallucinations provoked by sensory deprivation.</p><p>André Leroi-Gourhan, who studied the cave from the 1960s, developed a Structuralist theory of an organised graphic space based on a masculine and feminine duality, seen in the bison and horse and the aurochs and horse pairs. Thérèse Guiot-Houdart applied an iconographic method to try to reconstitute the myth the paintings illustrate. Julien d'Huy and Jean-Loïc Le Quellec showed that certain angular or barbed signs may be read as weapons or wounds, affecting dangerous animals more than others, and propose that the arrangement of species may reflect a belief in the real life of the animals pictured. In the mid-20th century <a class="enc-link" href="/encyclopedia/pablo-picasso">Pablo Picasso</a>, leaving the cave, is reported to have said that "we have learned nothing in twelve thousand years".</p></div>
+      </div>
+      <div class="profile-section-block" id="survival">
+        <h2 class="profile-section-title">Survival &amp; Rediscovery</h2>
+        <div class="profile-section-body"><p>On 12 September 1940, 18-year-old Marcel Ravidat found the entrance on the La Rochefoucauld-Montbel lands when his dog, Robot, investigated a hole left by an uprooted tree. He returned with Jacques <a class="enc-link" href="/encyclopedia/marsal">Marsal</a>, Georges Agnel and Simon Coencas, and they entered through a 15-metre shaft that they thought might be a legendary secret passage to the nearby Lascaux Manor. The Abbé Henri Breuil came on 21 September with Denis Peyrony, Jean Bouyssonie and Dr Cheynier; his many sketches are used today as study material because many of the paintings have since degraded. The cave opened to the public on 14 July 1948, and by 1955 the carbon dioxide, heat, humidity and other contaminants produced by 1,200 visitors a day had visibly damaged the paintings. Fungi and lichen infested the walls, and the cave closed in 1963.</p><p>A change of air conditioning in 2001 was followed by an infestation of the white mould Fusarium solani, treated with quicklime; a new fungus causing grey and black blemishes spread in 2007, and the cave closed for three months in 2008. The efforts to remove the mould left dark patches and damaged pigments. The problem was pronounced stable in 2009, and in 2011 the fungus seemed to be in retreat. Scolecobasidium lascauxense was described in 2018. The crises led to an International Scientific Committee for Lascaux.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Because the original cave closed, replicas carry the paintings to the public. Lascaux II, a copy of the Great Hall of the Bulls and the Painted Gallery, was shown at the Grand Palais in <a class="enc-link" href="/encyclopedia/paris">Paris</a> and from 1983 about 200 metres from the cave, painted with materials such as iron oxide, <a class="enc-link" href="/encyclopedia/charcoal">charcoal</a> and ochre. Lascaux III is a series of five reproductions of the Nave and Shaft that since 2012 have been exhibited in various countries. Lascaux IV, a full-scale replica of the whole cave, stands 400 metres from the original within the International Centre for Parietal Art, inaugurated in December 2016 in a museum built by Snøhetta.</p><p>The mould crises also led to a rethinking of how, and how much, human access should be permitted in caves holding prehistoric art. An international symposium on preservation in subterranean environments was held in Paris in February 2009 under Jean Clottes, with nearly three hundred participants from seventeen countries. The cave has also inspired other work. Alan Bush, who visited in 1982, wrote his fourth and last symphony, the Lascaux Symphony, and Georges Bataille wrote a book on the paintings, Lascaux; or the Birth of Art, with which Maurice Blanchot engaged in L'Amitié.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Lascaux is a cave network in the <a class="enc-link" href="/encyclopedia/dordogne">Dordogne</a> with over 600 Upper Palaeolithic paintings, mostly of large animals, usually dated to 17,000 to 22,000 years ago. Found by four teenagers in 1940 and closed to visitors in 1963 after damage, it is now protected from mould and shown through replicas.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="lascaux"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The cave closes to visitors after lichen and crystals appear on the walls, and the paintings are restored","o":["2016","1948","2001","1963"],"a":3,"w":"1963: The cave closes to visitors after lichen and crystals appear on the walls, and the paintings are restored."},{"p":"Which came first?","q":"","o":["Marcel Ravidat and three friends enter the cave, and the Abbé Henri Breuil visits it nine days later","Lascaux IV, a full-scale replica of the cave, opens in the International Centre for Parietal Art"],"a":0,"w":"1940: Marcel Ravidat and three friends enter the cave, and the Abbé Henri Breuil visits it nine days later · 2016: Lascaux IV, a full-scale replica of the cave, opens in the International Centre for Parietal Art."},{"p":"In which year?","q":"Lascaux is inscribed on the UNESCO World Heritage List as part of the Prehistoric Sites and Decorated Caves of the Vézère Valley","o":["1940","1983","1963","1979"],"a":3,"w":"1979: Lascaux is inscribed on the UNESCO World Heritage List as part of the Prehistoric Sites and Decorated Caves of the Vézère Valley."},{"p":"Which came first?","q":"","o":["Lascaux II, a copy of the Great Hall of the Bulls and the Painted Gallery, opens near the cave","The cave closes to visitors after lichen and crystals appear on the walls, and the paintings are restored"],"a":1,"w":"1983: Lascaux II, a copy of the Great Hall of the Bulls and the Painted Gallery, opens near the cave · 1963: The cave closes to visitors after lichen and crystals appear on the walls, and the paintings are restored."},{"p":"In which year?","q":"The cave complex opens to the public","o":["2001","1948","1963","1983"],"a":1,"w":"1948: The cave complex opens to the public."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Gregory Curtis, The Cave Painters: Probing the Mysteries of the World's First Artists (Knopf, 2006)</li>
+        <li>David Lewis-Williams, The Mind in the Cave: Consciousness and the Origins of Art (Thames and Hudson, 2004)</li>
+        <li>Georges Bataille, Prehistoric Painting: Lascaux; or, The Birth of Art (Skira, 1980)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other great works</p>
+      <div class="related-grid"><a class="related-card" href="/work/gobekli-tepe"><img src="/logos/thumbs/G%C3%B6bekli%20Tepe.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Göbekli Tepe</span><span class="related-card-dates">c. 9500 BCE – present</span></a><a class="related-card" href="/work/stonehenge"><img src="/logos/thumbs/Stonehenge.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Stonehenge</span><span class="related-card-dates">c. 3100 BCE – present</span></a><a class="related-card" href="/work/great-pyramid-of-giza"><img src="/logos/thumbs/Great%20Pyramid%20of%20Giza.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Great Pyramid of Giza</span><span class="related-card-dates">c. 2600 BCE – present</span></a><a class="related-card" href="/work/great-sphinx-of-giza"><img src="/logos/thumbs/Great%20Sphinx%20of%20Giza.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Great Sphinx of Giza</span><span class="related-card-dates">c. 2550 BCE – present</span></a></div>
+      <div class="related-prevnext"><span></span><a class="related-card" href="/work/gobekli-tepe"><span class="related-card-label">Later →</span><img src="/logos/thumbs/G%C3%B6bekli%20Tepe.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Göbekli Tepe</span><span class="related-card-dates">c. 9500 BCE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Lascaux",slug="lascaux",url="https://the-epoch-institute.org/work/lascaux";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Lascaux on The Epoch Institute — history, meaning and legacy. https://the-epoch-institute.org/work/lascaux #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/work/lascaux"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Lascaux",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Lascaux",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

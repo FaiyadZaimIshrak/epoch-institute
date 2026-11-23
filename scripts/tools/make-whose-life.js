@@ -25,11 +25,16 @@ const STOP = new Set(('the of and ibn abi bint bin al el de da di von van mother
   'i ii iii iv v vi vii viii ix x xi xii').split(' '));
 // words of a name that are a state or a house on their own ("king of Qin", "the Tokugawa shogunate"): always boxed
 const BOX = { 'Qin Shi Huang': ['qin'], 'Tokugawa Ieyasu': ['tokugawa'], 'Sun Yat-sen': ['sun'], 'Ho Chi Minh': ['ho', 'chi', 'minh'] };
+// words a life's name hides although the rules above would not: a surname that is also a title word reads "this person"
+// (ALSO), a place after the name's "of" that gives the answer away is boxed (ALSOBOX)
+const ALSO = { 'Martin Luther King Jr.': ['king'] }, ALSOBOX = { 'Rani of Jhansi': ['jhansi'] };
 const lives = SD.EMPIRES.filter(e => e.kind === 'life');
 function tokens(e) {
   // a name's words up to its "of": "Elizabeth I of England" and "Mary, mother of Jesus" must not hide England or Jesus
   const names = [e.name].concat(SELF[e.name] ? entry(SELF[e.name]) : []), words = new Set(), main = new Set();
   names.forEach((n, i) => { for (const w of fold(n).split(/\s+of\s+/i)[0].split(/[^\p{L}']+/u)) { const k = w.toLowerCase().replace(/^'+|'+$/g, ''); if (k.length >= 2 && !STOP.has(k)) { words.add(k); if (!i) main.add(k); } } });
+  for (const w of ALSO[e.name] || []) { words.add(w); main.add(w); }
+  for (const w of ALSOBOX[e.name] || []) words.add(w);
   for (const w of BOX[e.name] || []) main.delete(w);
   return { names: names.map(fold).sort((a, b) => b.length - a.length), words: [...words].sort((a, b) => b.length - a.length), main };
 }

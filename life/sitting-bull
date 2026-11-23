@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Sitting Bull: Life, Deeds and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Sitting Bull (Tȟatȟáŋka Íyotake) was a Hunkpapa Lakota leader who resisted United States policies from the 1860s, led his band to Canada after the Little…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Sitting Bull: Life, Deeds and Legacy — The Epoch Institute">
+<meta property="og:description" content="Sitting Bull (Tȟatȟáŋka Íyotake) was a Hunkpapa Lakota leader who resisted United States policies from the 1860s, led his band to Canada after the Little…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/life/sitting-bull">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/sitting-bull.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/sitting-bull.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/life/sitting-bull">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Great lives","item":"https://the-epoch-institute.org/profiles?kind=life"},{"@type":"ListItem","position":4,"name":"Sitting Bull"}]},{"@type":"Article","headline":"Sitting Bull","description":"Sitting Bull (Tȟatȟáŋka Íyotake) was a Hunkpapa Lakota leader who resisted United States policies from the 1860s, led his band to Canada after the Little…","url":"https://the-epoch-institute.org/life/sitting-bull","mainEntityOfPage":"https://the-epoch-institute.org/life/sitting-bull","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Sitting Bull"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/sitting-bull.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=life">Great lives</a></li><li aria-current="page">Sitting Bull</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Sitting%20Bull.png" alt="Sitting Bull" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Life · Americas</p>
+        <h1 class="profile-detail-name">Sitting Bull</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 1831 CE – 1890 CE</span></div>
+          <div class="info-stat"><span class="info-stat-label">Born</span><span class="info-stat-val">Between 1831 and 1837, on land later included in the Dakota Territory; a great-grandson asserted in 2007, from family oral tradition, that it was along the Yellowstone River south of present-day Miles City, <a class="enc-link" href="/encyclopedia/montana">Montana</a>; named Ȟoká Psíče (Jumping Badger) at birth; Hunkpapa Lakota</span></div>
+          <div class="info-stat"><span class="info-stat-label">Died</span><span class="info-stat-val">15 December 1890 at his house on the Standing Rock Reservation, shot in the chest and head by Standing Rock policemen Lieutenant Bull Head and Red Tomahawk during an attempt to arrest him</span></div>
+          <div class="info-stat"><span class="info-stat-label">Who they were</span><span class="info-stat-val">Hunkpapa Lakota leader and spiritual leader who led his people in resistance to <a class="enc-link" href="/encyclopedia/united-states">United States</a> government policies; the ostensible head of the Lakota coalition of 1876</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">resistance to the Northern Pacific Railway survey; refusal to sign or sell under the 1868 Treaty of Fort Laramie; the <a class="enc-link" href="/encyclopedia/sun-dance">Sun Dance</a> vision before the Little Bighorn; exile in <a class="enc-link" href="/encyclopedia/canada">Canada</a> (1877–1881); surrender in 1881; the Wild West show of 1885; his death during the arrest of 1890</span></div>
+        </div>
+        <p class="empire-meta">6 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>A Hunkpapa Lakota named Jumping Badger at birth, he took his father's name, Tȟatȟáŋka Íyotake, after counting coup on a Crow warrior at 14, and as a man refused any dependence on the <a class="enc-link" href="/encyclopedia/united-states">United States</a> government.</li><li>In 1876 he gathered a large camp of Lakota and Northern <a class="enc-link" href="/encyclopedia/cheyenne">Cheyenne</a>, performed the <a class="enc-link" href="/encyclopedia/sun-dance">Sun Dance</a> and had a vision of soldiers falling; the camp defeated the 7th Cavalry under Custer on 25 June 1876.</li><li>After four years in <a class="enc-link" href="/encyclopedia/canada">Canada</a> he surrendered in 1881, toured with Buffalo Bill's Wild West, and was killed on 15 December 1890 by agency police who were sent to arrest him because officials feared he would join the Ghost Dance.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>After the <a class="enc-link" href="/encyclopedia/sun-dance">Sun Dance</a> of 1876, Sitting Bull described a vision of soldiers, &quot;as thick as grasshoppers&quot;, falling upside down into the Lakota camp; about three weeks later the camp defeated Custer's 7th Cavalry.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#early">Early Life</a></li><li><a href="#rise">Rise</a></li><li><a href="#deeds">What They Did</a></li><li><a href="#opponents">Opponents &amp; Critics</a></li><li><a href="#last">Last Years</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 1831</span><span class="rf-text">Born as Ȟoká Psíče (Jumping Badger), a Hunkpapa Lakota, sometime between 1831 and 1837</span></li><li><span class="rf-year">1864</span><span class="rf-text">He is among the leaders of the defenders of a village attacked by two <a class="enc-link" href="/encyclopedia/brigade">brigades</a> under Brigadier General Alfred Sully, and is shot in the hip in September</span></li><li><span class="rf-year">1868</span><span class="rf-text">Gall and other Hunkpapa sign the Treaty of Fort Laramie; Sitting Bull does not agree to it</span></li><li><span class="rf-year">1876</span><span class="rf-text">The Lakota and Northern <a class="enc-link" href="/encyclopedia/cheyenne">Cheyenne</a> defeat Custer's 7th Cavalry at the Little Bighorn on 25 June</span></li><li><span class="rf-year">1877</span><span class="rf-text">He leads his band across the border to Wood Mountain in the North-West Territories</span></li><li><span class="rf-year">1881</span><span class="rf-text">Hunger forces him and 186 followers to return and surrender at Fort Buford on 19 July</span></li><li><span class="rf-year">1885</span><span class="rf-text">He leaves the reservation to appear with Buffalo Bill's Wild West for four months</span></li><li><span class="rf-year">1890</span><span class="rf-text">Agency police try to arrest him on 15 December; he is shot dead</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="early">
+        <h2 class="profile-section-title">Early Life</h2>
+        <div class="profile-section-body"><p>Sitting Bull was born on land later included in the Dakota Territory sometime between 1831 and 1837. In 2007 his great-grandson asserted, from family oral tradition, that he was born along the Yellowstone River, south of present-day Miles City, <a class="enc-link" href="/encyclopedia/montana">Montana</a>. He was named Ȟoká Psíče (Jumping Badger) at birth and nicknamed Húŋkešni, or "Slow", an allusion to his careful and unhurried nature.</p><p>At 14 he accompanied a party of Lakota warriors, which included his father and his uncle Four Horns, on a raid to take horses from a Crow camp. He rode forward and counted coup on one of the surprised Crow, in front of the other mounted Lakota. At a feast on their return his father gave him his own name, Tȟatȟáŋka Íyotake, which roughly translates as "Buffalo Bull Who Sits Down" and which Americans commonly render as "Sitting Bull"; his father was thereafter known as Jumping Bull. Before the whole band his father presented him with an eagle feather, a warrior's horse and a hardened buffalo hide shield, marking his passage into manhood as a Lakota warrior.</p></div><details class="sec-src"><summary>Sources for this section</summary><p class="sec-src-n">Works that Wikipedia&#8217;s article &#8220;Sitting Bull&#8221; cites where it covers Early life:</p><ul><li>Stanley Vestal, Sitting Bull, Champion of the Sioux: A Biography (University of Oklahoma Press, 1989)</li></ul></details>
+      </div>
+      <div class="profile-section-block" id="rise">
+        <h2 class="profile-section-title">Rise</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/red-cloud"><img src="/images/encyclopedia/red-cloud.jpg" alt="Red Cloud" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/red-cloud">Red Cloud</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Red_Cloud_by_John_K_Hillers_circa_1880.jpg" target="_blank" rel="noopener">John Karl Hillers, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Dakota War of 1862, in which Sitting Bull's people were not involved, saw several bands of eastern Dakota kill an estimated 300 to 800 settlers and soldiers in south-central <a class="enc-link" href="/encyclopedia/minnesota">Minnesota</a>, in response to poor treatment by the government and in an effort to drive the settlers away. The <a class="enc-link" href="/encyclopedia/united-states">United States</a> Army retaliated in 1863 and 1864, even against bands that had not been involved. In 1864 two <a class="enc-link" href="/encyclopedia/brigade">brigades</a> of about 2,200 soldiers under Brigadier General Alfred Sully attacked a village whose defenders were led by Sitting Bull, Gall and Inkpaduta. The Lakota and Dakota were driven out, and skirmishing continued into August at the Battle of the Badlands. In September, Sitting Bull and about one hundred Hunkpapa met a small party near what is now Marmarth, North Dakota; when he led an attack he was shot in the left hip, a wound that was not serious.</p><p>From 1866 to 1868 <a class="enc-link" href="/encyclopedia/red-cloud">Red Cloud</a>, an Oglala Lakota leader, fought U.S. forces to keep the Powder River Country, and in support of him Sitting Bull led war parties against Fort Berthold, Fort Stevenson and Fort Buford from 1865 to 1868. The historian Stanley Vestal, who interviewed surviving Hunkpapa in 1930, wrote that Sitting Bull was made "Supreme Chief of the whole Sioux Nation" at this time. Historians and ethnologists later refuted this, since Lakota society was highly decentralised and bands and elders decided for themselves, including whether to wage war.</p></div>
+      </div>
+      <div class="profile-section-block" id="deeds">
+        <h2 class="profile-section-title">What They Did</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/ulysses-s-grant"><img src="/images/encyclopedia/ulysses-s-grant.jpg" alt="Ulysses S. Grant" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/ulysses-s-grant">Ulysses S. Grant</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Ulysses_S._Grant_1870-1880_(cropped).jpg" target="_blank" rel="noopener">Brady-Handy Photograph Collection, Library of Congress, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Sitting Bull did not agree to the Treaty of Fort Laramie of 2 July 1868, which Gall and other Hunkpapa representatives signed at Fort <a class="enc-link" href="/encyclopedia/rice">Rice</a>. He told the <a class="enc-link" href="/encyclopedia/jesuits">Jesuit</a> missionary Pierre Jean De Smet, who sought him on behalf of the government: "I wish all to know that I do not propose to sell any part of my country." In 1872 and 1873 he and the Hunkpapa resisted the Northern Pacific Railway's survey party and its military escort, which was forced to turn back in 1872; the Panic of 1873 then bankrupted the railway's backers and halted construction.</p><p>Gold in the <a class="enc-link" href="/encyclopedia/black-hills">Black Hills</a>, announced after Custer's expedition of 1874, drew settlers, and in November 1875 President <a class="enc-link" href="/encyclopedia/ulysses-s-grant">Ulysses S. Grant</a> ordered all Sioux bands outside the <a class="enc-link" href="/encyclopedia/great-sioux-reservation">Great Sioux Reservation</a> onto it. From 1 February 1876 the Interior <a class="enc-link" href="/encyclopedia/departement">Department</a> certified those who stayed off as hostile, which let the military pursue them. Sitting Bull refused dependence on the U.S. government. He encouraged a "unity camp", sent scouts to the reservations to recruit warriors and told the Hunkpapa to share supplies with those who joined, among them Wooden Leg's Northern <a class="enc-link" href="/encyclopedia/cheyenne">Cheyenne</a>, impoverished by an attack on 17 March 1876. The camp, estimated at more than 10,000 people, was found by Custer on 25 June 1876. Sitting Bull did not fight in the battle but acted as spiritual leader; a week earlier he had performed the <a class="enc-link" href="/encyclopedia/sun-dance">Sun Dance</a>, fasting and slashing his arms over 100 times as a sacrifice.</p></div>
+      </div>
+      <div class="profile-section-block" id="opponents">
+        <h2 class="profile-section-title">Opponents &amp; Critics</h2>
+        <div class="profile-section-body"><p>Sitting Bull's opponents were the U.S. government and army, whose policies he resisted, and, among the Lakota, those who took the agencies' supplies. After the Treaty of Fort Laramie, <a class="enc-link" href="/encyclopedia/red-cloud">Red Cloud</a> and Spotted Tail moved to the reservations, largely dependent for subsistence on the Indian agencies, and Gall and other Hunkpapa lived at them at times, needing supplies while settlers encroached and the buffalo herds shrank. Sitting Bull's refusal to depend on the government meant that he and a small band sometimes lived isolated on the Plains.</p><p>Historians disagree about the war of 1876. Margot Liberty, relying on tribal oral histories, theorised that many Lakota allied with the <a class="enc-link" href="/encyclopedia/cheyenne">Cheyenne</a> because they thought the Cheyenne were under attack, and suggested it should be called "The Great Cheyenne War"; the U.S. Army had destroyed seven Cheyenne camps before 1876, more than those of any other nation. Robert M. Utley and Jerome Greene, who also use Lakota oral testimony, concluded that the Lakota coalition, of which Sitting Bull was the ostensible head, was the main target of the government's campaign. The government's own account described Sioux depredations, some encouraged by Sitting Bull, as the cause of alarm.</p><p>After 1881 his chief opponent was the Standing Rock agent James McLaughlin. Tension between them grew over several issues, including the division and sale of parts of the <a class="enc-link" href="/encyclopedia/great-sioux-reservation">Great Sioux Reservation</a>. McLaughlin also dismissed a report in The <a class="enc-link" href="/encyclopedia/new-york">New York</a> Times in 1883 that Sitting Bull had been baptised into the <a class="enc-link" href="/encyclopedia/catholic-church">Catholic Church</a>.</p></div>
+      </div>
+      <div class="profile-section-block" id="last">
+        <h2 class="profile-section-title">Last Years</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/crowfoot"><img src="/images/encyclopedia/crowfoot.jpg" alt="Crowfoot" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/crowfoot">Crowfoot</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Chief_Crowfoot.jpg" target="_blank" rel="noopener">Alex Ross, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>After the Little Bighorn the <a class="enc-link" href="/encyclopedia/departement">Department</a> of War sent thousands more soldiers, and over the next year the army pursued the Lakota and forced many to surrender. Sitting Bull refused and in May 1877 led his band across the border into the North-West Territories, where he stayed near Wood Mountain for four years and refused a pardon. James Morrow Walsh of the North-West Mounted Police told him that the Lakota were on British soil and must obey British law, and the two became friends. He made peace with <a class="enc-link" href="/encyclopedia/crowfoot">Crowfoot</a> of the Blackfeet and named a son after him. Buffalo herds were smaller in <a class="enc-link" href="/encyclopedia/canada">Canada</a> and his people were starving; hunger forced him and 186 followers to surrender at Fort Buford on 19 July 1881. He had his young son Crow Foot hand over his <a class="enc-link" href="/encyclopedia/winchester">Winchester</a> rifle, saying he wished it remembered that he was the last man of his tribe to surrender his rifle. The band was held at Fort Randall for 20 months and returned to Standing Rock in May 1883.</p><p>In 1885 he left the reservation for four months with Buffalo Bill's Wild West, earning about $50 a week. Caroline Weldon of the National Indian Defense Association joined him in 1889 as secretary, interpreter and advocate. When the Ghost Dance reached Standing Rock he allowed dancers to gather at his camp; he did not appear to dance but was viewed as a key instigator.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>On 15 December 1890 agent McLaughlin, who feared Sitting Bull was about to flee with the Ghost Dancers, sent 39 police officers and four volunteers to arrest him at dawn. Bull Head told him he was under arrest, but he refused to mount a horse and the police used force. Catch-the-Bear shot Bull Head, who fired into Sitting Bull's chest; Red Tomahawk shot him in the head. In the fight 14 men died at once and two more were fatally wounded: six policemen, two more later including Bull Head, and Sitting Bull with seven of his supporters. He was buried at Fort Yates; in 1953 Lakota family members exhumed what they believed to be his remains and reburied them near Mobridge, South Dakota.</p><p>His cabin was exhibited at the 1893 World's Columbian Exposition, and Standing Rock College was renamed Sitting Bull College in 1996. A research team led by Eske Willerslev announced in 2010 that it would sequence his genome, with his descendants' approval, from a hair sample; in 2021 it confirmed Ernie LaPointe's claim that he and his three sisters were Sitting Bull's biological great-grandchildren. Over time he has become a symbol of Native American resistance movements, and a figure celebrated also by descendants of his former enemies.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Sitting Bull (born between 1831 and 1837, died 1890) was a Hunkpapa Lakota leader who refused dependence on the <a class="enc-link" href="/encyclopedia/united-states">United States</a> government, gathered the camp that defeated Custer in 1876, spent four years in <a class="enc-link" href="/encyclopedia/canada">Canada</a>, and surrendered in 1881. He was killed by agency police in 1890.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="sitting-bull"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"He is among the leaders of the defenders of a village attacked by two brigades under Brigadier General Alfred Sully, and is shot in the hip in September","o":["1890","1864","1885","1881"],"a":1,"w":"1864: He is among the leaders of the defenders of a village attacked by two brigades under Brigadier General Alfred Sully, and is shot in the hip in September."},{"p":"Which came first?","q":"","o":["Agency police try to arrest him on 15 December; he is shot dead","Gall and other Hunkpapa sign the Treaty of Fort Laramie; Sitting Bull does not agree to it"],"a":1,"w":"1890: Agency police try to arrest him on 15 December; he is shot dead · 1868: Gall and other Hunkpapa sign the Treaty of Fort Laramie; Sitting Bull does not agree to it."},{"p":"In which year?","q":"Hunger forces him and 186 followers to return and surrender at Fort Buford on 19 July","o":["1876","1868","1881","1864"],"a":2,"w":"1881: Hunger forces him and 186 followers to return and surrender at Fort Buford on 19 July."},{"p":"Which came first?","q":"","o":["He is among the leaders of the defenders of a village attacked by two brigades under Brigadier General Alfred Sully, and is shot in the hip in September","Agency police try to arrest him on 15 December; he is shot dead"],"a":0,"w":"1864: He is among the leaders of the defenders of a village attacked by two brigades under Brigadier General Alfred Sully, and is shot in the hip in September · 1890: Agency police try to arrest him on 15 December; he is shot dead."},{"p":"In which year?","q":"Agency police try to arrest him on 15 December; he is shot dead","o":["1876","1881","1868","1890"],"a":3,"w":"1890: Agency police try to arrest him on 15 December; he is shot dead."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Dee Brown, Bury My Heart at Wounded Knee: An Indian History of the American West (Holt, 1970)</li>
+        <li>Joseph Manzione, &quot;I Am Looking to the North for My Life&quot;: Sitting Bull: 1876–1881 (University of Utah Press, 1991)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other lifes</p>
+      <div class="related-grid"><a class="related-card" href="/life/rani-of-jhansi"><img src="/logos/thumbs/Rani%20of%20Jhansi.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Rani of Jhansi</span><span class="related-card-dates">c. 1828 CE – 1858 CE</span></a><a class="related-card" href="/life/empress-dowager-cixi"><img src="/logos/thumbs/Empress%20Dowager%20Cixi.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Empress Dowager Cixi</span><span class="related-card-dates">1835 CE – 1908 CE</span></a><a class="related-card" href="/life/lili-uokalani"><img src="/logos/thumbs/Lili%CA%BBuokalani.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Liliʻuokalani</span><span class="related-card-dates">1838 CE – 1917 CE</span></a><a class="related-card" href="/life/harriet-tubman"><img src="/logos/thumbs/Harriet%20Tubman.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Harriet Tubman</span><span class="related-card-dates">c. 1822 CE – 1913 CE</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/life/rani-of-jhansi"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Rani%20of%20Jhansi.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Rani of Jhansi</span><span class="related-card-dates">c. 1828 CE – 1858 CE</span></a><a class="related-card" href="/life/empress-dowager-cixi"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Empress%20Dowager%20Cixi.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Empress Dowager Cixi</span><span class="related-card-dates">1835 CE – 1908 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Sitting Bull",slug="sitting-bull",url="https://the-epoch-institute.org/life/sitting-bull";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Sitting Bull on The Epoch Institute — life, deeds and legacy. https://the-epoch-institute.org/life/sitting-bull #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/life/sitting-bull"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Sitting Bull",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Sitting Bull",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

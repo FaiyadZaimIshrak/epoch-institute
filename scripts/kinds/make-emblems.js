@@ -86,6 +86,8 @@ const EMBLEMS = [
   // cities, second wave (23 Nov 2026): the three whose entry picture is a map take a letter (Antioch its Greek initial)
   ['Antioch', 'Α'], ['Ctesiphon', 'C'], ['Pataliputra', 'P'],
   ['Addis Ababa', 'አ', 'Nyala, Ebrima, serif', 220],   // its entry picture is a night skyline, nearly black as a seal
+  // works and lives, fourth wave (23 Nov 2026): no entry picture (Arthashastra), a map (Hadrian's Wall) or a modern statue (Chandragupta, Yaa Asantewaa)
+  ['Arthashastra', 'अ', 'Nirmala UI, Mangal, sans-serif', 220], ['Chandragupta Maurya', 'च', 'Nirmala UI, Mangal, sans-serif', 220], ["Hadrian's Wall", 'H'], ['Yaa Asantewaa', 'Y'],
 ];
 const argv = process.argv.slice(2), sheet = (argv.find(a => a.startsWith('--sheet=')) || '').slice(8);
 // --initial: a name not in EMBLEMS gets the monogram of its first distinctive word (the Kingdom of Kano: K), as the
