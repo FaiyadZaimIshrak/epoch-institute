@@ -630,6 +630,23 @@ for ($ri = 0; $ri -lt $(if ($SkipEntries) { 0 } else { $FS }); $ri++) {
 }
 Say "link patterns: $nPat (keywords $($KW.Count))"
 
+# A person's own name on their own page. $OWNRUN: the entry's names as runs of words (' Josiah Wedgwood | Wedgwood '),
+# brackets and a relation's tail ('Mary, mother of Jesus' is ' Mary ') left out. $OWNKEEP: scripts/own-name-links.tsv, the
+# pairs where such a run does mean another person. $OWNCUE: a kinship phrase just before the name ('son of the governor').
+$OWNRUN = @{}; $OWNKEEP = @{}
+if (Test-Path "$Repo\scripts\own-name-links.tsv") { foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\own-name-links.tsv", $U8)) { if ($l -and $l[0] -ne '#') { $c = $l.Split("`t"); if ($c.Count -ge 2) { $OWNKEEP[$c[0] + '|' + $c[1]] = 1 } } } }
+$OWNKIN = 'son|daughter|grandson|granddaughter|nephew|niece|father|mother|brother|sister|uncle|aunt|cousin|wife|husband|grandfather|grandmother'
+$OWNCUE = [regex]('\b(?:(?:' + $OWNKIN + '|widow|heir|successor|descendant) (?:of|to)|(?:[Hh]is|[Hh]er) (?:[a-z]+ ){0,2}(?:' + $OWNKIN + '),?)(?: [^\s.,;:]+){0,4} $')
+function OwnWords([string]$s) { return ' ' + (([regex]::Split($s, '[^\p{L}\p{N}''\u2019-]+') | Where-Object { $_ }) -join ' ') + ' ' }
+function OwnRuns([string]$slug) {
+  if (-not $OWNRUN.ContainsKey($slug)) {
+    $oe = $BY[$slug]; $on = New-Object System.Collections.Generic.List[string]
+    foreach ($nm in (@($oe.name) + @($oe.aka))) { if ($nm) { $on.Add((OwnWords (([string]$nm -replace '\s*\([^)]*\)', '') -creplace ',? (?:son|daughter|mother|father|wife|husband|brother|sister|widow|consort) of .*$', ''))) } }
+    $OWNRUN[$slug] = ($on -join '|')
+  }
+  return [string]$OWNRUN[$slug]
+}
+
 # the encyclopedia page's linkify(): a name several entries share goes to the one that fits the year in the sentence
 # or this entry's dates; undecided or a dated event next to a wrong year -> the text is claimed, not linked
 function LinkDesc([string]$text, [string]$self, $ctx) {
@@ -656,7 +673,11 @@ function LinkDesc([string]$text, [string]$self, $ctx) {
     if (-not $c.slug) { [void]$sb.Append((Hx $text.Substring($pos, $c.e - $pos))); $pos = $c.e; continue }
     # a name already linked (or without a page) still claims its text, so no shorter name inside it links
     if ($used.ContainsKey($c.slug) -or -not $BY.ContainsKey($c.slug)) { [void]$sb.Append((Hx $text.Substring($pos, $c.e - $pos))); $pos = $c.e; continue }
-    if ($ownSp.Count -gt 0 -and $BY[$c.slug].type -eq 'person') { $inOwn = $false; foreach ($osp in $ownSp) { if ($c.s -ge $osp[0] -and $c.e -le $osp[1]) { $inOwn = $true } }; if ($inOwn) { [void]$sb.Append((Hx $text.Substring($pos, $c.e - $pos))); $pos = $c.e; continue } }
+    if ($ownSp.Count -gt 0 -and $BY[$c.slug].type -eq 'person') { $inOwn = $false; foreach ($osp in $ownSp) { if ($c.s -ge $osp[0] -and $c.e -le $osp[1]) { $inOwn = $true } }; if ($inOwn -and $text.Substring([Math]::Max(0, $c.s - 16), [Math]::Min(16, $c.s)) -match '\b(?:son|daughter|mother|father|wife|husband|brother|sister|widow|consort) of $') { $inOwn = $false }; if ($inOwn) { [void]$sb.Append((Hx $text.Substring($pos, $c.e - $pos))); $pos = $c.e; continue } }
+    if ($ownP -and $BY[$c.slug].type -eq 'person' -and -not $OWNKEEP.ContainsKey($self + '|' + $c.slug)) {
+      $otx = OwnWords ($text.Substring($c.s, $c.e - $c.s) -replace '[''\u2019]s$', '')
+      if ($otx.Length -gt 2 -and (OwnRuns $self).Contains($otx) -and -not $OWNCUE.IsMatch($text.Substring([Math]::Max(0, $c.s - 90), [Math]::Min(90, $c.s)))) { [void]$sb.Append((Hx $text.Substring($pos, $c.e - $pos))); $pos = $c.e; continue }
+    }
     $used[$c.slug] = 1
     $tx = $text.Substring($c.s, $c.e - $c.s); $tail = ''
     $pm = [regex]::Match($tx, '([''\u2019]s)$'); if ($pm.Success) { $tail = $pm.Groups[1].Value; $tx = $tx.Substring(0, $tx.Length - $tail.Length) }

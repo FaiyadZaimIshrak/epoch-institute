@@ -3400,8 +3400,36 @@ the globe, E6 cities through time, E7 battles as pages, E8 sources under each pr
     On his own entry page the bare "Thucydides" of his name linked the historian (an entry's own row is skipped on
     its page). build-pages.ps1 LinkDesc now keeps the spans of a PERSON's own name on their own page and links no
     other person inside them ("Henry IV of France" no longer links another Henry IV); places inside an event's name
-    still link (Hastings on the Battle of Hastings). The rule first runs in the next full build: the one page was set
-    by hand to what it will write. Read a sample of person entries' first sentences after that build.
+    still link (Hastings on the Battle of Hastings).
+  - **A person's own name on their own page (23 Nov 2026; build-pages.ps1 LinkDesc, two parts):**
+    - the span rule: inside a match of the entry's own name no other person is linked, unless a relation word stands
+      before it ("Mary, mother of [Jesus]"). It took 272 namesake links off descriptions (Abraham Lincoln and Abraham
+      Kuyper to Abraham, Caspar David Friedrich and David Livingstone to King David, Afonso I of Portugal to Afonso I
+      of Kongo, Ulysses S. Grant to Odysseus).
+    - the word-run rule: a link to another person whose text is a run of words of the page's own name or other names
+      (brackets and a relation's tail left out: OwnRuns, $OWNRUN) is not made. So a bare "Josiah" on Josiah Wedgwood
+      is not King Josiah, "Henry" on Henry VIII not Henry the Navigator, "[Leopold II] was born" on the Grand Duke of
+      Tuscany not the King of the Belgians (names several entries share are picked with the page's own entry left
+      out, so they went to the namesake). 109 more links off descriptions and 107 off the longer texts.
+    - kept all the same: a name with a kinship phrase directly before it ($OWNCUE: "son of the governor [John
+      Winthrop]", "his father [Maharero]"; 48 links) and the pairs of scripts/own-name-links.tsv (host, the person
+      meant, why; 21 pairs read by eye: Caligula's Germanicus, Anita Garibaldi's Garibaldi, Tupac Amaru II's Tupac
+      Amaru).
+    - a name the rule leaves plain does not count as the entry's first mention, so a later full mention of the real
+      namesake still links.
+    - The first build with the span rule alone had made about ten NEW wrong links in longer texts (a bare first name
+      further on, no longer claimed): read the diff of a build that changes LinkDesc, in descriptions and in
+      section.enc-more, before committing it.
+    - Six Degrees #74 (Neoplatonism to Romulus, due 18 January 2027) ran through one of the removed links and no
+      longer solved: its target is now Jerusalem. A change to what descriptions link can break a puzzle; the build
+      stops on it.
+    - Known wrong and still linked, as the kinship phrase stands before them: "Dietrich von [Galen]" and "Heinrich
+      von [Galen]" (the physician), "her son [David]" and "her nephew [David]" on the Georgian Davids, "Count [Otto
+      I] of Guelders", "grandson Cardinal [Alessandro Farnese]" (the duke), "that [Rurik]'s monastic vows", "the
+      young [Duke of Bouillon]", "Lopo de [Albuquerque]", "descendant of [Heraclius] of Edessa", and in a description
+      "father of the reformers [Tiberius]" (the emperor).
+    - /journeys' JR_GLOBE_SRC follows /atlas's stamp of maps/globe-land.js one build late (make-journeys.js runs
+      before the atlas is stamped): a second build after the globe's outlines change sets it right.
   - issues.txt lists what was seen and left: lower-case "ivory" links the ivory trade; "Herders" at a sentence's
     start links Herder.
   - Not gaps: completeness.js lists 74 profiles with "a fact missing"; nearly all are a founder or capital that the
