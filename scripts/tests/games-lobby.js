@@ -51,7 +51,7 @@ let fails = 0; const ok = (n, c, x) => { console.log((c ? 'ok   ' : 'FAIL ') + n
   const ctx = await b.newContext({ viewport: { width: 1400, height: 900 } }); await ctx.addInitScript("try{localStorage.setItem('epoch-consent','no');localStorage.setItem('epoch-skin','classic');localStorage.setItem('epoch-advent',JSON.stringify({2026:[1,2,3]}));localStorage.setItem('epoch-games',JSON.stringify({'first-lasted':12,pairs:30}))}catch(e){}");
   const p = await ctx.newPage(); p.on('pageerror', e => errs.push(String(e)));
   await p.goto(base + '/about'); await p.waitForTimeout(1000); await p.click('#nav-play-btn'); await p.waitForTimeout(400);
-  const menu = await p.$$eval('#nav-play-menu a', a => a.map(x => [x.getAttribute('href'), x.querySelector('b') ? x.querySelector('b').textContent : '']));
+  const menu = await p.$$eval('#nav-play-menu a:not(.nav-all)', a => a.map(x => [x.getAttribute('href'), x.querySelector('b') ? x.querySelector('b').textContent : '']));
   ok('Play menu: the games, the quiz and Today at the Institute, eight items at most', menu.some(m => m[0] === '/games') && menu.some(m => m[0] === '/quiz') && menu.some(m => m[0] === '/today') && menu.filter(m => m[0] !== '#').length <= 8, menu);
   await p.screenshot({ path: path.join(out, 'menu-new.png') });
   await p.goto(base + '/'); await p.waitForTimeout(1500); const by = await p.evaluate(() => { const a = document.querySelector('.born-yours a'); a.scrollIntoView({ block: 'center', behavior: 'instant' }); return a.getAttribute('href'); }); ok('home: your birthday line', by === '/today-in-history/#birthday'); await p.waitForTimeout(600); await p.screenshot({ path: path.join(out, 'home-born.png') });

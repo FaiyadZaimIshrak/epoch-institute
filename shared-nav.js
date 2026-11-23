@@ -772,7 +772,7 @@ function initNav(activePage) {
     <div class="nav-group-wrap" id="nav-${m[0]}-wrap">
       <button class="nav-parent-btn${inMenu(m) ? ' active-group' : ''}" id="nav-${m[0]}-btn" aria-haspopup="true" aria-expanded="false">${m[1]} ▾</button>
       <div class="nav-group-menu nav-mega" id="nav-${m[0]}-menu">
-        ${m[2].map(c => `<div class="nav-col">${c[0] ? `<span class="nav-col-h">${c[0]}</span>` : ''}${c[1].map(x => `<a href="${x[1]}"${activeStyle(x[0])}><b>${x[2]}${newTag(x[1])}${x[4] ? '<i class="start-tag">Start here</i>' : ''}</b><span>${x[3]}</span></a>`).join('')}${m[0] === 'play' ? surprise : ''}</div>`).join('\n        ')}
+        ${m[2].map(c => `<div class="nav-col">${c[0] ? `<span class="nav-col-h">${c[0]}</span>` : ''}${c[1].map(x => `<a href="${x[1]}"${activeStyle(x[0])}><b>${x[2]}${newTag(x[1])}${x[4] ? '<i class="start-tag">Start here</i>' : ''}</b><span>${x[3]}</span></a>`).join('')}${m[0] === 'play' ? surprise : ''}${m[0] === 'more' ? '' : `<a class="nav-all" href="/research#hub-${m[0]}">Everything in ${m[1]} &rarr;</a>`}</div>`).join('\n        ')}
       </div>
     </div>`;
   const ddSec = (label, open, links) => `<details class="nav-dd-sec"${open ? ' open' : ''}><summary class="nav-dd-sum">${label}</summary><div class="nav-dd-list">${links}</div></details>`;
@@ -806,104 +806,50 @@ ${MENUS.map(menuHtml).join('')}
   const fixHtml = location.pathname === '/contact' ? '' :
     `<p class="footer-fix">Spotted a mistake on this page? <a href="/contact?topic=correction&amp;page=${encodeURIComponent(location.pathname)}">Suggest a correction &rarr;</a></p>`;
 
+  // the footer follows the menus: a column for each subject, then what to read and the Institute; pages that are in no
+  // menu (the games' week and archive, the birthday picker, article submissions) stand at the foot of their column
+  const FOOT_MORE = { events: [['/today-in-history/#birthday', 'Your Birthday in History']], play: [['/race', 'Rise and Fall Race'], ['/advent', 'Advent Calendar'], ['/weekly', 'My Week of Games'], ['/past-games', 'Past Games']],
+    'The Institute': [['/community#submit', 'Submit an Article']] };
+  const footCol = (title, links, key) => { const seen = {}; return `<div class="footer-col"><span class="footer-col-title">${title}</span>${links.concat(FOOT_MORE[key] || []).filter(x => x[0].charAt(0) !== '/' || x[0].charAt(1) !== '#').filter(x => seen[x[0]] ? 0 : (seen[x[0]] = 1))
+    .map(x => `<a class="footer-link" href="${x[0]}"${x[0] === '/support' ? ' data-ga="support_click" data-ga-src="footer"' : ''}>${x[1]}</a>`).join('')}</div>`; };
+  const footCols = MENUS.map(m => m[0] === 'more'
+    ? m[2].map(c => footCol(c[0], (c[0] === 'Read' ? [['/discover', 'Discover'], ['/encyclopedia/', 'Encyclopedia']] : []).concat(c[1].map(x => [x[1], x[2]])), c[0])).join('\n      ')
+    : footCol(m[1], m[2].reduce((l, c) => l.concat(c[1].map(x => [x[1], x[2]])), []), m[0])).join('\n      ');
+
   const footerHtml = `
 <footer id="site-footer">
   ${fixHtml}
   <div class="footer-inner">
-    <div class="footer-brand">
-      <span class="footer-logo">THE EPOCH INSTITUTE</span>
-      <span class="footer-brand-tag" data-i18n="brand_tag">Historical &amp; Societal Research</span>
-      <div class="footer-social">
-        <a class="footer-social-link" href="https://www.facebook.com/the.epoch.institute" target="_blank" rel="noopener" aria-label="The Epoch Institute on Facebook">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          <span class="footer-social-text">The Epoch Institute</span>
-        </a>
-        <a class="footer-social-link" href="https://www.instagram.com/the.epoch.institute/" target="_blank" rel="noopener" aria-label="@the.epoch.institute on Instagram">
-          <svg width="22" height="22" viewBox="0 0 24 24"><defs><radialGradient id="ig-grad" cx="30%" cy="107%" r="150%"><stop offset="0%" stop-color="#fdf497"/><stop offset="45%" stop-color="#fd5949"/><stop offset="60%" stop-color="#d6249f"/><stop offset="90%" stop-color="#285AEB"/></radialGradient></defs><path fill="url(#ig-grad)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-          <span class="footer-social-text">@the.epoch.institute</span>
-        </a>
-        <a class="footer-social-link" href="https://x.com/Epoch_Institute" target="_blank" rel="noopener" aria-label="@Epoch_Institute on X (Twitter)">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          <span class="footer-social-text">@Epoch_Institute</span>
-        </a>
-      </div>
-    </div>
     <div class="footer-links">
-      <div class="footer-col">
-        <span class="footer-col-title">Collections</span>
-        <a class="footer-link" href="/discover">Discover</a>
-        <a class="footer-link" href="/profiles">Profiles</a>
-        <a class="footer-link" href="/encyclopedia/">Encyclopedia</a>
-        <a class="footer-link" href="/state/">States Register</a>
-        <a class="footer-link" href="/countries/">Country Histories</a>
-        <a class="footer-link" href="/people/">People</a>
-        <a class="footer-link" href="/encyclopedia/dynasties">Ruling Houses</a>
-        <a class="footer-link" href="/encyclopedia/wars">Wars and Battles</a>
-        <a class="footer-link" href="/encyclopedia/quotations">Quotations</a>
-        <a class="footer-link" href="/today-in-history/">Today in History</a>
-        <a class="footer-link" href="/encyclopedia/glossary">Glossary</a>
-      </div>
-      <div class="footer-col">
-        <span class="footer-col-title">Maps &amp; Time</span>
-        <a class="footer-link" href="/atlas">Atlas</a>
-        <a class="footer-link" href="/timeline">World Timeline</a>
-        <a class="footer-link" href="/faiths">Faith Maps</a>
-        <a class="footer-link" href="/journeys">Journeys on the Globe</a>
-        <a class="footer-link" href="/centuries/">Centuries</a>
-        <a class="footer-link" href="/years/">Year by Year</a>
-        <a class="footer-link" href="${MONTH_URL}">This Month in History</a>
-        <a class="footer-link" href="/today">Today at the Institute</a>
-        <a class="footer-link" href="/now">History Now</a>
-        <a class="footer-link" href="/race">Rise and Fall Race</a>
-        <a class="footer-link" href="/explorer">Power Curves</a>
-        <a class="footer-link" href="/connections">Connections</a>
-      </div>
-      <div class="footer-col">
-        <span class="footer-col-title">Themes &amp; Play</span>
-        <a class="footer-link" href="/governance">Forms of Government</a>
-        <a class="footer-link" href="/societies/">Social Ladders</a>
-        <a class="footer-link" href="/inventions">Inventions Tree</a>
-        <a class="footer-link" href="/speeches/">Great Speeches</a>
-        <a class="footer-link" href="/songs/">Songs in History</a>
-        <a class="footer-link" href="/paths/">Reading Paths</a>
-        <a class="footer-link" href="/research-series">Research Series</a>
-        <a class="footer-link" href="/quiz">History Quiz</a>
-        <a class="footer-link" href="/games">History Games</a>
-        <a class="footer-link" href="/flashcards">Flashcards</a>
-        <a class="footer-link" href="/write">Write in Ancient Scripts</a>
-        <a class="footer-link" href="/kids">Kids Corner</a>
-        <a class="footer-link" href="/passport">My Passport</a>
-        <a class="footer-link" href="/weekly">My Week of Games</a>
-        <a class="footer-link" href="/past-games">Past Games</a>
-        <a class="footer-link" href="/advent">Advent Calendar</a>
-        <a class="footer-link" href="/start">Find Your Way In</a>
-        <a class="footer-link" href="/compare">Compare Two Profiles</a>
-        <a class="footer-link" href="/religions">Faiths Side by Side</a>
-      </div>
-      <div class="footer-col">
-        <span class="footer-col-title">Institute</span>
-        <a class="footer-link" href="/about">About the Institute</a>
-        <a class="footer-link" href="/support" data-ga="support_click" data-ga-src="footer">Support the Institute</a>
-        <a class="footer-link" href="/about#methodology">Methodology</a>
-        <a class="footer-link" href="/new">What&#8217;s New</a>
-        <a class="footer-link" href="/research">Explore Everything</a>
-        <a class="footer-link" href="/dataset">Open Data</a>
-        <a class="footer-link" href="/teachers/">Teachers&#8217; Corner</a>
-        <a class="footer-link" href="/contributors">Write for Us</a>
-        <a class="footer-link" href="/community">Community</a>
-        <a class="footer-link" href="/community#submit">Submit an Article</a>
-        <a class="footer-link" href="/contact">Contact</a>
-      </div>
-      <div class="footer-col">
-        <div class="footer-newsletter">
-          <span class="footer-nl-label">Newsletter</span>
-          <form class="footer-nl-form" id="footer-nl-form">
-            <input type="email" id="footer-nl-email" placeholder="your@email.com" required aria-label="Email for newsletter">
-            <button type="submit">→</button>
-          </form>
-          <p id="footer-nl-msg" style="display:none; font-size:11px; color:var(--success); margin-top:6px; font-family:'Crimson Pro',serif;"></p>
-          <a class="footer-link footer-feed" href="/feeds/today.xml" type="application/rss+xml">Today in History by RSS</a>
+      ${footCols}
+    </div>
+    <div class="footer-base">
+      <div class="footer-brand">
+        <span class="footer-logo">THE EPOCH INSTITUTE</span>
+        <span class="footer-brand-tag" data-i18n="brand_tag">Historical &amp; Societal Research</span>
+        <div class="footer-social">
+          <a class="footer-social-link" href="https://www.facebook.com/the.epoch.institute" target="_blank" rel="noopener" aria-label="The Epoch Institute on Facebook">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#1877F2"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            <span class="footer-social-text">The Epoch Institute</span>
+          </a>
+          <a class="footer-social-link" href="https://www.instagram.com/the.epoch.institute/" target="_blank" rel="noopener" aria-label="@the.epoch.institute on Instagram">
+            <svg width="22" height="22" viewBox="0 0 24 24"><defs><radialGradient id="ig-grad" cx="30%" cy="107%" r="150%"><stop offset="0%" stop-color="#fdf497"/><stop offset="45%" stop-color="#fd5949"/><stop offset="60%" stop-color="#d6249f"/><stop offset="90%" stop-color="#285AEB"/></radialGradient></defs><path fill="url(#ig-grad)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span class="footer-social-text">@the.epoch.institute</span>
+          </a>
+          <a class="footer-social-link" href="https://x.com/Epoch_Institute" target="_blank" rel="noopener" aria-label="@Epoch_Institute on X (Twitter)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            <span class="footer-social-text">@Epoch_Institute</span>
+          </a>
         </div>
+      </div>
+      <div class="footer-newsletter">
+        <span class="footer-nl-label">Newsletter</span>
+        <form class="footer-nl-form" id="footer-nl-form">
+          <input type="email" id="footer-nl-email" placeholder="your@email.com" required aria-label="Email for newsletter">
+          <button type="submit">→</button>
+        </form>
+        <p id="footer-nl-msg" style="display:none; font-size:11px; color:var(--success); margin-top:6px; font-family:'Crimson Pro',serif;"></p>
+        <a class="footer-link footer-feed" href="/feeds/today.xml" type="application/rss+xml">Today in History by RSS</a>
       </div>
     </div>
   </div>

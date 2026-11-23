@@ -36,8 +36,23 @@ structuring issue?"): Discover · Encyclopedia · People ▾ · Places ▾ · Ev
 - Out of the menus, still linked where they belong: My Week and Past Games (the games lobby, /today, the footer),
   Your Birthday (Today in History, the home page), Submit an Article (/community). "Profiles" left the bar (More → All
   Profiles; the phone menu keeps it at its head). MORE is gone: More is one of MENUS.
-- Still to come from the plan: the footer by the same subjects, a hub page for each subject (/explore/<subject>) and an
-  index page for each kind of profile.
+- **The footer follows the menus** (shared-nav.js footCols, written from MENUS itself, so the two cannot drift): a
+  column for People, Places, Events, Ideas, Play, Read and The Institute; Read opens with Discover and Encyclopedia;
+  FOOT_MORE adds the pages that are in no menu at the foot of their column (Your Birthday in History; Rise and Fall
+  Race or the Advent Calendar, My Week of Games, Past Games; Submit an Article). The columns are a grid
+  (.footer-links: seven across from 1240 px, as many as fit below, two on phones); the name, the social links and the
+  newsletter stand on one row under them (.footer-base). The paragraphs below that speak of four footer columns
+  describe the footer before this.
+- **Each subject's menu ends with "Everything in <subject> →"** (a.nav-all, inside the menu's column, not counted
+  among the eight) to its group on Explore Everything: /research#hub-people, -places, -events, -ideas, -play.
+  build-pages.ps1 $HUBGROUPS has the same subjects, then Read and The Institute; each group's section has the id
+  hub-<name>. $SECTIONS gained cards for great lives, cities, battles, cultures, Faiths Side by Side, great works,
+  ideologies, movements, journeys, ruling houses, quotations, wars, Discover, Today at the Institute and History Now.
+  scripts/tests/menus.js checks the foot links, the hub's ids, and the footer's columns at 1366 and 390 px.
+- A patch script that holds backslashes is written with the Write tool, never through a shell heredoc (a quoted
+  heredoc turned `'\\n'` into a line break again on 23 Nov 2026).
+- Still to come from the plan: a hub page of its own for each subject (/explore/<subject>; the groups of Explore
+  Everything stand in for them now) and an index page for each kind of profile.
 The paragraphs below describe the earlier menus.
 Regrouped by theme on 31 Oct 2026 (the user: Explore had grown to 22 items and looked cramped):
 Since 21 Nov 2026: Discover · Encyclopedia · Profiles · Maps & Time ▾ · Themes ▾ · Play ▾ · More ▾ (Today in History

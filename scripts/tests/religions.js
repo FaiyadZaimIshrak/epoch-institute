@@ -21,5 +21,5 @@ ok('the sacred texts are linked', ['/work/hebrew-bible', '/work/new-testament', 
 const desc = (page.match(/<meta name="description" content="([^"]*)"/) || [])[1] || '';
 ok('title, description, canonical and its own stylesheet', /<title>Faiths Side by Side: \d+ Religions Compared — The Epoch Institute<\/title>/.test(page) && desc.length >= 70 && desc.length <= 160 && page.includes('rel="canonical" href="https://the-epoch-institute.org/religions"') && page.includes('href="/css/religions.css"') && fs.existsSync(path.join(R, 'css', 'religions.css')), desc.length);
 ok('no rank is claimed and no index is refused', !/noindex/.test(page) && /says nothing of rank/.test(page));
-ok('served, deployed and in the menu', /\|religions\|/.test(read('.htaccess')) && /\breligions\b/.test(read('scripts/deploy.sh')) && read('shared-nav.js').includes("'/religions', 'Faiths Side by Side'") && read('shared-nav.js').includes('href="/religions"'));
+ok('served, deployed and in the menu', /\|religions\|/.test(read('.htaccess')) && /\breligions\b/.test(read('scripts/deploy.sh')) && read('shared-nav.js').includes("'/religions', 'Faiths Side by Side'") && read('shared-nav.js').includes('footCols'));   // the footer's columns are written from the menus (footCols)
 console.log(fails ? fails + ' FAILED' : 'all passed'); process.exit(fails ? 1 : 0);
