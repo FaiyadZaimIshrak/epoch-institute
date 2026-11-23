@@ -109,6 +109,7 @@ var SEARCH_PAGES = [
 ["Djibouti","/countries/djibouti","country","history of Djibouti"],
 ["Dominica","/countries/dominica","country","history of Dominica"],
 ["Dominican Republic","/countries/dominican-republic","country","history of Dominican Republic"],
+["East Timor","/countries/east-timor","country","history of East Timor"],
 ["Ecuador","/countries/ecuador","country","history of Ecuador"],
 ["Egypt","/countries/egypt","country","history of Egypt"],
 ["El Salvador","/countries/el-salvador","country","history of El Salvador"],

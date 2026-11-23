@@ -638,8 +638,10 @@ function LinkDesc([string]$text, [string]$self, $ctx) {
   foreach ($c in $ALWAYS) { if ($seen.Add($c.id)) { $list.Add($c) } }
   if ($list.Count -eq 0) { return (Hx $text) }
   $cands = New-Object System.Collections.Generic.List[object]; $q = 0
+  # a person's own name on their own page: its spans, inside which no other person is linked (a namesake)
+  $ownP = [bool]($self -and $BY.ContainsKey($self) -and $BY[$self].type -eq 'person'); $ownSp = New-Object System.Collections.Generic.List[object]
   foreach ($c in ($list | Sort-Object id)) {
-    if (-not $c.grp -and $c.slug -eq $self) { continue }
+    if (-not $c.grp -and $c.slug -eq $self) { if ($ownP) { foreach ($m in $c.rx.Matches($text)) { if ($m.Length -gt 0) { $ownSp.Add(@($m.Index, ($m.Index + $m.Length))) } } }; continue }
     foreach ($m in $c.rx.Matches($text)) {
       if ($m.Length -eq 0) { continue }
       $s0 = $m.Index; $e0 = $s0 + $m.Length
@@ -654,6 +656,7 @@ function LinkDesc([string]$text, [string]$self, $ctx) {
     if (-not $c.slug) { [void]$sb.Append((Hx $text.Substring($pos, $c.e - $pos))); $pos = $c.e; continue }
     # a name already linked (or without a page) still claims its text, so no shorter name inside it links
     if ($used.ContainsKey($c.slug) -or -not $BY.ContainsKey($c.slug)) { [void]$sb.Append((Hx $text.Substring($pos, $c.e - $pos))); $pos = $c.e; continue }
+    if ($ownSp.Count -gt 0 -and $BY[$c.slug].type -eq 'person') { $inOwn = $false; foreach ($osp in $ownSp) { if ($c.s -ge $osp[0] -and $c.e -le $osp[1]) { $inOwn = $true } }; if ($inOwn) { [void]$sb.Append((Hx $text.Substring($pos, $c.e - $pos))); $pos = $c.e; continue } }
     $used[$c.slug] = 1
     $tx = $text.Substring($c.s, $c.e - $c.s); $tail = ''
     $pm = [regex]::Match($tx, '([''\u2019]s)$'); if ($pm.Success) { $tail = $pm.Groups[1].Value; $tx = $tx.Substring(0, $tx.Length - $tail.Length) }

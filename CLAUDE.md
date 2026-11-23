@@ -3378,6 +3378,54 @@ the globe, E6 cities through time, E7 battles as pages, E8 sources under each pr
     gives them, slips included (a misspelt author stays until Wikipedia mends it).
   - Run the tool, then regen-profiles.ps1, after profiles are added. The works at a profile's foot are unchanged.
 
+- **C, the gaps left (22 Nov 2026; scripts/kinds/gaps1/: links.js, picks.txt, excl.tsv, self.tsv, issues.txt):**
+  - **Section pictures for 125 of the 130 profiles that had none** (40 lives, 49 state profiles, 20 cultures, 21
+    works): link-scan reports without --write, a contact sheet per profile, chosen by eye (pick.txt "C gaps" block).
+    None fits Apache, the Hongshan, Linear Pottery and Vinča cultures and the Tlingit (flags, maps and crops only).
+  - **A contact sheet shows the wrong links too**, since every candidate is an entry its section links: 150 exclusions
+    (excl.tsv: Jahangir Mirza as the emperor, Mustafa Rumi the gunner as the poet, Edward Oxford as the city, Lord
+    Melbourne as the city, Wilhelm Marx as Karl Marx, Peter Behrens the linguist as the architect, the Ruhr Red Army
+    as the Soviet one, Cecil Rhodes as Rhodes, the Alabama people as the state, walrus ivory as the ivory trade …) and
+    12 profiles whose own entry was linked in their own text (self.tsv: the Chola Empire seventeen times).
+  - **Four names dropped site-wide** (added-entries.json "drop"), each kept as a profile-only form where it does mean
+    the entry: "armistice" (the Armistice of 11 November 1918; it had linked 1796, 1866, 1940, 1943, 1944 and 1953;
+    kept on the German Empire, the Weimar Republic and German East Africa), "Middle Kingdom" (Middle Francia; kept on
+    Hainaut and the Carolingian Empire, and now a form of the Middle Kingdom of Egypt on eight Egyptian and Levantine
+    profiles), "Inquisition" (the Portuguese; now the Spanish, Roman or medieval Inquisition by profile, the Portuguese
+    on Colonial Brazil) and "themes" (the Byzantine theme system; kept on the Byzantine Empire). 13 state histories
+    unlinked or moved to the Spanish Inquisition, data/enc-states.json recounted. 190 profiles scanned again.
+  - **Thucydides, son of Melesias** has an entry (gaps1/thuc: one saved article, the A7 pipeline, wave gaps1; its
+    patterns are the full name only). Pericles's profile said "Thucydides (not the historian)" and linked the
+    historian: it now names him in full, and the longer name claims the text.
+    On his own entry page the bare "Thucydides" of his name linked the historian (an entry's own row is skipped on
+    its page). build-pages.ps1 LinkDesc now keeps the spans of a PERSON's own name on their own page and links no
+    other person inside them ("Henry IV of France" no longer links another Henry IV); places inside an event's name
+    still link (Hastings on the Battle of Hastings). The rule first runs in the next full build: the one page was set
+    by hand to what it will write. Read a sample of person entries' first sentences after that build.
+  - issues.txt lists what was seen and left: lower-case "ivory" links the ivory trade; "Herders" at a sentence's
+    start links Herder.
+  - Not gaps: completeness.js lists 74 profiles with "a fact missing"; nearly all are a founder or capital that the
+    subject does not have (Teotihuacan, the Saxons, Uruk, Cahokia, the British Empire). Never fill those in.
+  - **Home pictures for 125 profiles** (home-pictures.tsv; home-data.js?v=35): a life or a work takes its own entry's
+    picture, the state profiles and cultures the editor's choice from their sections; "-" where nothing fits; the
+    Independent State of Croatia, Vichy France and Francoist Spain hidden from the featured rotation.
+  - **Entry pictures for Augustus and Shaka** (the Prima Porta statue; the sketch of 1825 attributed to James King),
+    which had none, and portrait emblems for both lives. Avicenna, Sejong and Sundiata stay without: no likeness of
+    their time.
+  - **The First French Empire** (1804–1815; scripts/states/ms2/) was missing from the register, so France, Belgium,
+    Luxembourg and the Netherlands had nothing on record for those years. merge-register.js takes a "followed-by"
+    relation (an existing state that succeeded the new one). ms2/apply.js also names Panama among Colombia's
+    present-day countries, Bangladesh among Pakistan's, East Timor among Indonesia's and Palestine among Jordan's, so
+    those countries' histories show who ruled between their states; and it gives 131 country entries of wave ms1 the
+    link to their state page (data/enc-states.json "p"), which they had lacked. Sudan likewise names South Sudan.
+    modern-states.js now counts a state that began earlier and outlived the present state's start, or still lives,
+    as covering the years between, and reads a country under any of data/land.json's names ("Micronesia" for the
+    Federated States): it had listed ten breaks that the country pages did not have, and now lists none.
+    Its text links were made by relink-states.js --entries=<every slug> --only=first-french-empire; "First Consul"
+    linked the Roman consul and is in state-link-exclusions.tsv. polities.json?v=12, connections-map.js?v=15 (the
+    register's ?v= had not been raised for wave ms1, so a reader's copy could be a week old).
+  - life-emblems.ps1 cannot overwrite an emblem that exists (GDI+ "generic error" on Save): move the old file away first.
+
 ## Connections map and the states register
 - `data/polities.json` — register of every state (incl. the modern Levant: Israel, the State of Palestine, Jordan, Lebanon, Syria — added by hand Oct 2026, successor links to the mandates): nodes {id, n name, t type, b broad region, s/e years, a aka, m mode, c capital, mo modern countries, p profile url} and links {s, t, r relation, f/u years}. Successions stored one way (successor-of). Built from regional research files by the scratchpad states/merge.ps1 (dedupe, relation resolution, validation report).
 - `connections` page + `connections-map.js` (no D3; radial layout, timeline, year slider, outliers). Empire pages include a lazy-loaded mini map (section #connections).

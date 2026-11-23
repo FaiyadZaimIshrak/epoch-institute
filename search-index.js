@@ -302,7 +302,7 @@ var SEARCH_INDEX = [
 [0,"Audiencia","institution","audiencias",7],
 [0,"Augsburg","place","",7,1],
 [0,"Auguste Comte","person","",3,1],
-[0,"Augustus (Roman emperor)","person","Octavian",5],
+[0,"Augustus (Roman emperor)","person","Octavian",5,1],
 [0,"Augustus II the Strong","person","Augustus II",4,1],
 [0,"Augustus III","person","",5,1],
 [0,"Aurangzeb","person","",8,1],
@@ -3031,7 +3031,7 @@ var SEARCH_INDEX = [
 [0,"Shahrbaraz","person","",5,1],
 [0,"Shahrokh Shah","person","",3,1],
 [0,"Shajar al-Durr","person","",3,1],
-[0,"Shaka (Zulu king)","person","",5],
+[0,"Shaka (Zulu king)","person","",5,1],
 [0,"Shalmaneser I","person","",3,1],
 [0,"Shamanism","idea","shamanist",3,1],
 [0,"Shamshi-Adad I","person","",7,1],
@@ -34443,7 +34443,8 @@ var SEARCH_INDEX = [
 [0,"Yaśodharā","person","Yashodhara|Bhaddakaccānā|Bhadrakātyāyani",3,1],
 [0,"Yinxi","person","Yin-hsi|尹喜",4,1],
 [0,"Zipporah","person","",3,1],
-[0,"I Ching","work","",7,1]
+[0,"I Ching","work","",7,1],
+[0,"Thucydides, son of Melesias","person","",2]
 ];
 (function () { for (var i = 0, r; i < SEARCH_INDEX.length; i++) { r = SEARCH_INDEX[i]; if (r[0] === 0) r[0] = r[1].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); } })();   // packed by scripts/build-pages.ps1: a slug written 0 is made from its name
 // states (register, /state/<id>): [id, name, type, aliases, 1 if it has a picture]. Generated from data/polities.json.
@@ -39566,5 +39567,6 @@ var SEARCH_STATES = [
 ["madagascar","Madagascar","republic","Republic of Madagascar|Malagasy Republic",1],
 ["comoros","Comoros","republic","Union of the Comoros",1],
 ["mauritius","Mauritius","republic","Republic of Mauritius",1],
-["seychelles","Seychelles","republic","Republic of Seychelles",1]
+["seychelles","Seychelles","republic","Republic of Seychelles",1],
+["first-french-empire","First French Empire","empire","Napoleonic Empire|French Empire (1804–1815)",1]
 ];

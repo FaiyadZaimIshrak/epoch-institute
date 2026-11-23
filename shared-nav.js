@@ -530,8 +530,8 @@ function searchThumb(r) {
   if (r.src === 's' && SEARCH_STATES[r.i][4]) return '/images/states/thumbs/' + SEARCH_STATES[r.i][0] + '.jpg';
   return '';
 }
-var SEARCH_INDEX_SRC = '/search-index.js?v=0fb74f708c';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
-var SEARCH_PAGES_SRC = '/search-pages.js?v=afc89e4a0e';
+var SEARCH_INDEX_SRC = '/search-index.js?v=57c0bc8a90';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
+var SEARCH_PAGES_SRC = '/search-pages.js?v=ee32ceb167';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
 var searchLoading = null, searchReady = false;

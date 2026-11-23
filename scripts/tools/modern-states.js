@@ -97,8 +97,12 @@ async function wikidata() {
     if (miss.length) faults.push(s.label + ': ' + miss.join(', '));
     // the years before the present state with nothing on record in the country (by the register's present-day countries)
     if (n && country) {
-      const before = P.nodes.filter(x => x.id !== n.id && (x.mo || []).includes(country) && x.e != null && x.e <= n.s + 1);
-      const last = before.reduce((a, x) => Math.max(a, x.e), -1e9);
+      // a state that began earlier covers the years up to its own end, or up to the present state's start when it
+      // outlived it or still lives (Colombia held Panama until 1903, the United Netherlands Belgium until 1830)
+      // the register writes a country under any of data/land.json's names ("Micronesia" for the Federated States)
+      const land = LAND.find(c => (MO[c.n] || c.n) === country), cn = new Set([country].concat(land ? land.names || [] : []));
+      const before = P.nodes.filter(x => x.id !== n.id && (x.mo || []).some(c => cn.has(c)) && x.s < n.s);
+      const last = before.reduce((a, x) => Math.max(a, x.e == null ? n.s : Math.min(x.e, n.s)), -1e9);
       if (last > -1e9 && n.s - last > 10) gaps.push(s.label + ': ' + last + '-' + n.s + ' (' + (n.s - last) + ' years)');
     }
     rows.push([s.label, s.q, s.title, s.iso, country, reg, ent, s.inc.join('|'), s.cap.join('|'), s.flag, miss.join('; ')].join('\t'));
