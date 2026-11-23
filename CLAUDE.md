@@ -3423,11 +3423,13 @@ the globe, E6 cities through time, E7 battles as pages, E8 sources under each pr
     - Six Degrees #74 (Neoplatonism to Romulus, due 18 January 2027) ran through one of the removed links and no
       longer solved: its target is now Jerusalem. A change to what descriptions link can break a puzzle; the build
       stops on it.
-    - Known wrong and still linked, as the kinship phrase stands before them: "Dietrich von [Galen]" and "Heinrich
-      von [Galen]" (the physician), "her son [David]" and "her nephew [David]" on the Georgian Davids, "Count [Otto
-      I] of Guelders", "grandson Cardinal [Alessandro Farnese]" (the duke), "that [Rurik]'s monastic vows", "the
-      young [Duke of Bouillon]", "Lopo de [Albuquerque]", "descendant of [Heraclius] of Edessa", and in a description
-      "father of the reformers [Tiberius]" (the emperor).
+    - Wrong links the kinship phrase kept, taken off the same day: eight pairs in scripts/entry-more-nolink.tsv
+      ("Dietrich von [Galen]" the physician, "her son [David]" on the Georgian Davids, "Count [Otto I] of Guelders",
+      "grandson Cardinal [Alessandro Farnese]" the duke, "that [Rurik]'s monastic vows", "Lopo de [Albuquerque]",
+      "descendant of [Heraclius] of Edessa"; a pair takes off EVERY link host→target in the longer text, so check
+      first that none of them is right), and a "w" fix naming "Tiberius Gracchus" in his father's description, where
+      the bare "Tiberius" went to the emperor. Still wrong: "the young [Duke of Bouillon]" on Godefroy Maurice's page
+      links his father, whom an earlier paragraph of the same text links rightly.
     - /journeys' JR_GLOBE_SRC follows /atlas's stamp of maps/globe-land.js one build late (make-journeys.js runs
       before the atlas is stamped): a second build after the globe's outlines change sets it right.
   - issues.txt lists what was seen and left: lower-case "ivory" links the ivory trade; "Herders" at a sentence's
