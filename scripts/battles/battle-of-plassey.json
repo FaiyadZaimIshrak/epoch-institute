@@ -1,0 +1,582 @@
+{
+ "slug": "battle-of-plassey",
+ "name": "Battle of Plassey",
+ "article": "battles1/wp/battle-of-plassey",
+ "field": {
+  "north": null
+ },
+ "note": "The accounts give no compass directions, so the plan is laid out with the river at the left and the Nawab's entrenchments at the top; distances are not to scale. The turning of the entrenchment, the two tanks, the lodge and the hill are placed from the distances the accounts give. The accounts do not say in which direction the French and the Nawab's other troops retreated; the retreats are drawn towards the entrenchment and away from the British.",
+ "terrain": [
+  {
+   "k": "river",
+   "name": "Bhagirathi River",
+   "at": [
+    [
+     5,
+     4
+    ],
+    [
+     5,
+     20
+    ],
+    [
+     6,
+     40
+    ],
+    [
+     5,
+     58
+    ]
+   ],
+   "lab": [
+    9,
+    5
+   ],
+   "quote": "Its length was angled diagonally to the Bhagirathi River."
+  },
+  {
+   "k": "wood",
+   "name": "Laksha Bagh",
+   "at": [
+    [
+     8,
+     49
+    ],
+    [
+     38,
+     47
+    ],
+    [
+     40,
+     55
+    ],
+    [
+     14,
+     58
+    ]
+   ],
+   "lab": [
+    27,
+    56
+   ],
+   "quote": "They quickly occupied the adjoining mango grove, called Laksha Bagh"
+  },
+  {
+   "k": "point",
+   "name": "Hunting lodge",
+   "at": [
+    8,
+    45
+   ],
+   "lab": [
+    14,
+    45
+   ],
+   "quote": "a hunting lodge enclosed by a masonry wall where Clive took up his quarters"
+  },
+  {
+   "k": "ditch",
+   "name": "Nawab's entrenchments",
+   "at": [
+    [
+     5,
+     8
+    ],
+    [
+     16,
+     8
+    ],
+    [
+     40,
+     5
+    ],
+    [
+     70,
+     4
+    ]
+   ],
+   "lab": [
+    48,
+    7
+   ],
+   "quote": "Their army lay behind earthen entrenchments running at right angles to the river for 200 yards"
+  },
+  {
+   "k": "fort",
+   "name": "Redoubt",
+   "at": [
+    16,
+    8
+   ],
+   "lab": [
+    12,
+    4.5
+   ],
+   "quote": "There was a redoubt mounted by cannon at this turning along the entrenchment."
+  },
+  {
+   "k": "hill",
+   "name": "Small hill",
+   "at": [
+    [
+     21,
+     4
+    ],
+    [
+     28,
+     4
+    ],
+    [
+     30,
+     8
+    ],
+    [
+     24,
+     10
+    ],
+    [
+     20,
+     8
+    ]
+   ],
+   "lab": [
+    34,
+    12
+   ],
+   "quote": "There was a small hill covered by trees 300 yards (270 m) east of the redoubt."
+  },
+  {
+   "k": "point",
+   "name": "Small tank",
+   "at": [
+    16,
+    21
+   ],
+   "lab": [
+    8,
+    21
+   ],
+   "quote": "800 yards (730 m) towards the British position was a small tank (reservoir), and 100 yards (91 m) further south was a larger tank"
+  },
+  {
+   "k": "point",
+   "name": "Larger tank",
+   "at": [
+    16,
+    27
+   ],
+   "lab": [
+    8,
+    27
+   ],
+   "quote": "800 yards (730 m) towards the British position was a small tank (reservoir), and 100 yards (91 m) further south was a larger tank"
+  }
+ ],
+ "sides": [
+  {
+   "id": "b",
+   "name": "British East India Company"
+  },
+  {
+   "id": "n",
+   "name": "Army of the Nawab"
+  }
+ ],
+ "units": [
+  {
+   "id": "sepl",
+   "side": "b",
+   "k": "infantry",
+   "name": "British left sepoys",
+   "short": "L sepoys",
+   "w": 8,
+   "quote": "The sepoys were placed on the right and left in equal divisions."
+  },
+  {
+   "id": "euro",
+   "side": "b",
+   "k": "infantry",
+   "name": "British Europeans, centre",
+   "short": "Europeans",
+   "leader": "Clive",
+   "w": 10,
+   "quote": "The Europeans and Topasses were placed in the centre of the line in four divisions",
+   "leaderEntry": "robert-clive"
+  },
+  {
+   "id": "sepr",
+   "side": "b",
+   "k": "infantry",
+   "name": "British right sepoys",
+   "short": "R sepoys",
+   "w": 8,
+   "quote": "The sepoys were placed on the right and left in equal divisions."
+  },
+  {
+   "id": "guns",
+   "side": "b",
+   "k": "artillery",
+   "name": "British guns at the kilns",
+   "short": "Guns",
+   "w": 5,
+   "quote": "Clive posted two 6-pounders and two howitzers behind some brick kilns 200 yards (180 m) north of the left division of his army to oppose the French fire."
+  },
+  {
+   "id": "kilp",
+   "side": "b",
+   "k": "infantry",
+   "name": "Kilpatrick's detachment",
+   "short": "Kilpatrick",
+   "leader": "Major Kilpatrick",
+   "w": 5,
+   "quote": "he took two companies of the 39th Regiment and two field pieces and advanced towards St. Frais' position"
+  },
+  {
+   "id": "grant",
+   "side": "b",
+   "k": "infantry",
+   "name": "Grant's three platoons",
+   "short": "Grant",
+   "leader": "Captain Grant",
+   "w": 4,
+   "quote": "sent three platoons under Captain Grant and Lieutenant Rumbold and a field piece under John Johnstone"
+  },
+  {
+   "id": "coote",
+   "side": "b",
+   "k": "infantry",
+   "name": "Coote's grenadiers",
+   "short": "Coote",
+   "leader": "Major Coote",
+   "w": 6,
+   "quote": "Two companies of grenadiers of the 39th Regiment, under Major Coote, took the hill at 16:30",
+   "leaderEntry": "eyre-coote"
+  },
+  {
+   "id": "french",
+   "side": "n",
+   "k": "artillery",
+   "name": "French artillery",
+   "short": "French",
+   "leader": "de St. Frais",
+   "w": 5,
+   "quote": "The French took up positions at the larger tank with four light pieces advanced by two larger pieces"
+  },
+  {
+   "id": "madan",
+   "side": "n",
+   "k": "cavalry",
+   "name": "Mir Madan Khan's body",
+   "short": "Madan",
+   "leader": "Mir Madan Khan",
+   "w": 9,
+   "quote": "Behind them was a body of 5,000 cavalry and 7,000 infantry commanded by the Nawab's faithful general Mir Madan Khan"
+  },
+  {
+   "id": "rd",
+   "side": "n",
+   "k": "cavalry",
+   "name": "Nawab's right, Rai Durlabh",
+   "short": "R Durlabh",
+   "leader": "Rai Durlabh",
+   "w": 9,
+   "quote": "The right arm of their army was commanded by Rai Durlabh, the centre by Yar Lutuf Khan and the left arm closest to the British by Mir Jafar."
+  },
+  {
+   "id": "ylk",
+   "side": "n",
+   "k": "cavalry",
+   "name": "Nawab's centre, Yar Lutuf",
+   "short": "Y Lutuf",
+   "leader": "Yar Lutuf Khan",
+   "w": 10,
+   "quote": "The right arm of their army was commanded by Rai Durlabh, the centre by Yar Lutuf Khan and the left arm closest to the British by Mir Jafar."
+  },
+  {
+   "id": "mj",
+   "side": "n",
+   "k": "cavalry",
+   "name": "Nawab's left, Mir Jafar",
+   "short": "Mir Jafar",
+   "leader": "Mir Jafar",
+   "w": 10,
+   "quote": "The right arm of their army was commanded by Rai Durlabh, the centre by Yar Lutuf Khan and the left arm closest to the British by Mir Jafar.",
+   "leaderEntry": "mir-jafar"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The two armies take their ground",
+   "when": "Morning of 23 June 1757",
+   "text": "The Nawab's army formed an arc with the French guns at the larger tank in front. Clive lined up the Europeans in the centre with a sepoy division on each side, and posted four guns at the kilns to answer the French.",
+   "quote": "The Europeans and Topasses were placed in the centre of the line in four divisions, flanked on both sides by three 6-pounders.",
+   "at": {
+    "sepl": [
+     14,
+     40,
+     0
+    ],
+    "euro": [
+     30,
+     40,
+     0
+    ],
+    "sepr": [
+     46,
+     40,
+     0
+    ],
+    "guns": [
+     14,
+     33,
+     0
+    ],
+    "french": [
+     27,
+     27,
+     180
+    ],
+    "madan": [
+     40,
+     20,
+     180
+    ],
+    "rd": [
+     46,
+     14,
+     180
+    ],
+    "ylk": [
+     62,
+     26,
+     270
+    ],
+    "mj": [
+     64,
+     38,
+     270
+    ]
+   }
+  },
+  {
+   "title": "The guns open and Clive withdraws to the grove",
+   "when": "From 8:00",
+   "text": "The French guns fired the first shot and the rest of the Nawab's artillery followed. The British lost 10 Europeans and 20 sepoys by 8:30, and Clive left the advanced guns at the kilns and drew the army back into the grove.",
+   "quote": "Leaving the advanced artillery at the brick kilns, Clive ordered the army to retreat to the relative shelter of the grove.",
+   "at": {
+    "sepl": [
+     11,
+     54,
+     0
+    ],
+    "euro": [
+     22,
+     52,
+     0
+    ],
+    "sepr": [
+     33,
+     52,
+     0
+    ]
+   },
+   "how": {
+    "sepl": "retreat",
+    "euro": "retreat",
+    "sepr": "retreat"
+   },
+   "hits": [
+    [
+     "french",
+     "guns"
+    ],
+    [
+     "guns",
+     "french",
+     -0.3
+    ]
+   ]
+  },
+  {
+   "title": "Rain, and Mir Madan Khan's charge is driven back",
+   "text": "A rainstorm drenched the Nawab's gunpowder, while the British covered theirs. Mir Madan Khan led his cavalry in a charge, but British grapeshot mortally wounded him and drove his men back.",
+   "quote": "As the rain began to subside, Mir Madan Khan, assuming that the British guns were rendered ineffective by the rain, led his cavalry to a charge.",
+   "at": {
+    "madan": [
+     24,
+     39,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "madan",
+     "euro"
+    ],
+    [
+     "euro",
+     "madan",
+     0.3
+    ]
+   ]
+  },
+  {
+   "title": "The Nawab's army turns back to its entrenchments",
+   "when": "About 14:00",
+   "text": "The Nawab's army stopped its cannonade and began turning back north to its entrenchments. This left St. Frais and his artillery without support.",
+   "quote": "At about 14:00, the Nawab's army ceased the cannonade and began turning back north to their entrenchments, leaving St. Frais and his artillery without support.",
+   "at": {
+    "madan": [
+     38,
+     18,
+     0
+    ],
+    "rd": [
+     48,
+     12,
+     0
+    ],
+    "ylk": [
+     60,
+     16,
+     0
+    ]
+   },
+   "how": {
+    "madan": "retreat",
+    "rd": "retreat",
+    "ylk": "retreat"
+   }
+  },
+  {
+   "title": "Kilpatrick advances and the British take the larger tank",
+   "when": "About 15:00",
+   "text": "Major Kilpatrick advanced on his own with two companies and two field pieces towards the French position. Clive brought up the rest of the army behind him, and the French artillery retreated to the redoubt.",
+   "quote": "Clive himself then led the army against St. Frais' position, which was taken at 15:00 when the French artillery retreated to the redoubt of the entrenchment",
+   "at": {
+    "kilp": [
+     34,
+     30,
+     0
+    ],
+    "euro": [
+     20,
+     40,
+     0
+    ],
+    "sepl": [
+     10,
+     44,
+     0
+    ],
+    "sepr": [
+     46,
+     41,
+     0
+    ],
+    "french": [
+     20,
+     15,
+     0
+    ]
+   },
+   "how": {
+    "french": "retreat"
+   },
+   "hits": [
+    [
+     "kilp",
+     "french"
+    ],
+    [
+     "euro",
+     "french",
+     0.25
+    ]
+   ]
+  },
+  {
+   "title": "Mir Jafar's division turns towards the grove and is halted",
+   "text": "The Nawab's left arm, which had lingered behind the rest, turned and marched towards the grove. Clive took it for a threat to his baggage and sent three platoons and a field piece, whose fire halted it.",
+   "quote": "The fire of the field piece halted the advance of the division, which remained isolated from the rest of the Nawab's army.",
+   "at": {
+    "mj": [
+     60,
+     44,
+     270
+    ],
+    "grant": [
+     44,
+     51,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "grant",
+     "mj"
+    ]
+   ]
+  },
+  {
+   "title": "The British take the hill and the redoubt",
+   "when": "16:30 to 17:00",
+   "text": "Clive ordered a three-pronged attack on the redoubt and the hill east of it. Major Coote's grenadiers took the hill at 16:30, the redoubt fell after St. Frais retreated, and by 17:00 the British held the entrenchment and the camp.",
+   "quote": "Clive ordered a three-pronged attack with simultaneous attacks by two detachments on the redoubt and the hill supported by the main force in the centre.",
+   "at": {
+    "coote": [
+     25,
+     8,
+     0
+    ],
+    "euro": [
+     22,
+     24,
+     0
+    ],
+    "french": [
+     10,
+     12,
+     0
+    ],
+    "madan": [
+     54,
+     22,
+     90
+    ],
+    "rd": [
+     76,
+     10,
+     90
+    ],
+    "ylk": [
+     80,
+     26,
+     90
+    ]
+   },
+   "how": {
+    "french": "retreat",
+    "madan": "rout",
+    "rd": "rout",
+    "ylk": "rout"
+   },
+   "state": {
+    "madan": "routed",
+    "rd": "routed",
+    "ylk": "routed"
+   },
+   "hits": [
+    [
+     "coote",
+     "french"
+    ],
+    [
+     "euro",
+     "french",
+     0.25
+    ]
+   ]
+  }
+ ]
+}

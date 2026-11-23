@@ -1,0 +1,424 @@
+{
+ "slug": "battle-of-agincourt",
+ "name": "Battle of Agincourt",
+ "article": "battles1/wp/battle-of-agincourt",
+ "field": {
+  "north": null
+ },
+ "note": "The precise location of the battle is not known, and the directions are not given. The woods stand either side of the narrow open land; the accounts do not say exactly where they lay. The English stood across about 750 yards of the defile, so the plan is not to scale. The English account places the baggage attack at the start of the battle and some accounts place it near the end; it is left off the plan. The plan shows the English archers 'left' and 'right' as drawn here: the accounts do not say which of the two wings each stood on.",
+ "terrain": [
+  {
+   "k": "wood",
+   "name": "Woods of Tramecourt",
+   "at": [
+    [
+     4,
+     6
+    ],
+    [
+     16,
+     6
+    ],
+    [
+     20,
+     16
+    ],
+    [
+     20,
+     44
+    ],
+    [
+     16,
+     58
+    ],
+    [
+     4,
+     58
+    ]
+   ],
+   "lab": [
+    9,
+    32
+   ],
+   "quote": "between the woods of Tramecourt and Azincourt"
+  },
+  {
+   "k": "wood",
+   "name": "Woodland",
+   "unnamed": true,
+   "at": [
+    [
+     84,
+     6
+    ],
+    [
+     96,
+     6
+    ],
+    [
+     96,
+     58
+    ],
+    [
+     84,
+     58
+    ],
+    [
+     80,
+     44
+    ],
+    [
+     80,
+     16
+    ]
+   ],
+   "lab": [
+    89,
+    32
+   ],
+   "quote": "The recently ploughed land hemmed in by dense woodland favoured the English"
+  }
+ ],
+ "sides": [
+  {
+   "id": "e",
+   "name": "English"
+  },
+  {
+   "id": "f",
+   "name": "French"
+  }
+ ],
+ "units": [
+  {
+   "id": "ela",
+   "side": "e",
+   "k": "archers",
+   "name": "English archers, left",
+   "short": "E archers",
+   "w": 10,
+   "leader": "Thomas Erpingham",
+   "quote": "The archers were commanded by Sir Thomas Erpingham, another elderly veteran."
+  },
+  {
+   "id": "era",
+   "side": "e",
+   "k": "archers",
+   "name": "English archers, right",
+   "short": "E archers",
+   "w": 10,
+   "quote": "the English adopted their usual battle line of longbowmen on either flank, with men-at-arms and knights in the centre"
+  },
+  {
+   "id": "emd",
+   "side": "e",
+   "k": "infantry",
+   "name": "English men-at-arms",
+   "short": "E men",
+   "w": 16,
+   "leader": "Henry V",
+   "quote": "the centre led by the king himself",
+   "leaderEntry": "henry-v-of-england"
+  },
+  {
+   "id": "fv",
+   "side": "f",
+   "k": "infantry",
+   "name": "French vanguard",
+   "short": "Vanguard",
+   "w": 14,
+   "leader": "Charles I d'Albret",
+   "quote": "a vanguard up front and a main battle behind, both composed principally of men-at-arms fighting on foot"
+  },
+  {
+   "id": "fm",
+   "side": "f",
+   "k": "infantry",
+   "name": "French main battle",
+   "short": "Main",
+   "w": 12,
+   "leader": "Alençon and Bar",
+   "quote": "The dukes of Alençon and Bar led the main battle."
+  },
+  {
+   "id": "flw",
+   "side": "f",
+   "k": "infantry",
+   "name": "French dismounted left wing",
+   "short": "Left wing",
+   "w": 7,
+   "leader": "Count of Vendôme",
+   "quote": "A further 600 dismounted men-at-arms stood in each wing, the left under the Count of Vendôme"
+  },
+  {
+   "id": "frw",
+   "side": "f",
+   "k": "infantry",
+   "name": "French dismounted right wing",
+   "short": "Right wing",
+   "w": 7,
+   "leader": "Count of Richemont",
+   "quote": "the right under the Count of Richemont"
+  },
+  {
+   "id": "fcl",
+   "side": "f",
+   "k": "cavalry",
+   "name": "French cavalry, left horn",
+   "short": "Cav left",
+   "w": 6,
+   "quote": "a cavalry force of 800–1,200 picked men-at-arms"
+  },
+  {
+   "id": "fcr",
+   "side": "f",
+   "k": "cavalry",
+   "name": "French cavalry, right horn",
+   "short": "Cav right",
+   "w": 6,
+   "quote": "distributed evenly between both flanks of the vanguard (standing slightly forward, like horns)"
+  },
+  {
+   "id": "frg",
+   "side": "f",
+   "k": "guard",
+   "name": "French mounted rearguard",
+   "short": "Rearguard",
+   "w": 10,
+   "quote": "the French drew up a third battle, the rearguard, which was on horseback"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The two armies are drawn up",
+   "when": "25 October 1415",
+   "text": "The English stood in three groups across the defile, with archers on the flanks and men-at-arms in the centre. The French stood in a vanguard and a main battle behind it, with dismounted men-at-arms in the wings, cavalry on the flanks of the vanguard and a mounted rearguard.",
+   "quote": "Early on 25 October, Henry deployed his army (approximately 1,500 men-at-arms and 7,000 longbowmen) across a 750-yard (690 m) part of the defile.",
+   "at": {
+    "ela": [
+     34,
+     12,
+     180
+    ],
+    "era": [
+     66,
+     12,
+     180
+    ],
+    "emd": [
+     50,
+     12,
+     180
+    ],
+    "fv": [
+     50,
+     34,
+     0
+    ],
+    "flw": [
+     30,
+     34,
+     0
+    ],
+    "frw": [
+     70,
+     34,
+     0
+    ],
+    "fcl": [
+     38,
+     29,
+     0
+    ],
+    "fcr": [
+     62,
+     29,
+     0
+    ],
+    "fm": [
+     50,
+     46,
+     0
+    ],
+    "frg": [
+     50,
+     57,
+     0
+    ]
+   }
+  },
+  {
+   "title": "The English move up and shoot first",
+   "text": "Henry ordered his army forward and the stakes were pulled up and set again in the new position. The English longbowmen then shot from extreme range, and the French cavalry charged only after this first volley.",
+   "quote": "Henry ordered his army to advance and to start a battle that, given the state of his army, he would have preferred to avoid",
+   "at": {
+    "ela": [
+     34,
+     17,
+     180
+    ],
+    "era": [
+     66,
+     17,
+     180
+    ],
+    "emd": [
+     50,
+     17,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "ela",
+     "fv",
+     0.1
+    ],
+    [
+     "era",
+     "fv",
+     -0.1
+    ]
+   ]
+  },
+  {
+   "title": "The French cavalry charge the archers",
+   "text": "The French cavalry, disorganised and not at full numbers, charged towards the longbowmen. They could not outflank the archers because of the woodland, and could not charge through the stakes.",
+   "quote": "The French cavalry, despite being disorganised and not at full numbers, charged towards the longbowmen.",
+   "at": {
+    "fcl": [
+     30,
+     23,
+     180
+    ],
+    "fcr": [
+     70,
+     23,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "fcl",
+     "ela"
+    ],
+    [
+     "fcr",
+     "era"
+    ]
+   ]
+  },
+  {
+   "title": "The wounded horses break back through the French",
+   "text": "The charge failed and the cavalry fell back. Wounded and panicking horses galloped through the advancing infantry, scattering and trampling it, while the vanguard walked on through the mud.",
+   "quote": "the wounded and panicking horses galloped through the advancing infantry, scattering them and trampling them down in their headlong flight from the battlefield.",
+   "at": {
+    "fcl": [
+     28,
+     44,
+     0
+    ],
+    "fcr": [
+     72,
+     44,
+     0
+    ],
+    "fv": [
+     50,
+     28,
+     0
+    ],
+    "flw": [
+     30,
+     29,
+     0
+    ],
+    "frw": [
+     70,
+     29,
+     0
+    ]
+   },
+   "how": {
+    "fcl": "rout",
+    "fcr": "rout"
+   },
+   "state": {
+    "fcl": "routed",
+    "fcr": "routed"
+   }
+  },
+  {
+   "title": "The French men-at-arms reach the English line",
+   "text": "The surviving French men-at-arms reached the front of the English line and pushed it back, while the longbowmen on the flanks went on shooting at close range. When their arrows ran out the archers attacked the French with hatchets, swords, spears and mallets.",
+   "quote": "The surviving French men-at-arms reached the front of the English line and pushed it back, while the longbowmen on the flanks continued to shoot, now at close range.",
+   "at": {
+    "fv": [
+     50,
+     22,
+     0
+    ],
+    "flw": [
+     30,
+     25,
+     0
+    ],
+    "frw": [
+     70,
+     25,
+     0
+    ],
+    "emd": [
+     50,
+     14,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "fv",
+     "emd"
+    ],
+    [
+     "ela",
+     "fv",
+     0.2
+    ],
+    [
+     "era",
+     "fv",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "The second line joins and the fight is lost in the press",
+   "text": "The French second line joined the attack but was swallowed up, the narrow ground hampering it. The fighting lasted about three hours, until the leaders of the second line were killed or captured, as those of the first line had been.",
+   "quote": "As the melee developed, the French second line also joined the attack, but they too were swallowed up, the narrow terrain hampering their effectiveness.",
+   "at": {
+    "fm": [
+     50,
+     35,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "fm",
+     "emd",
+     0.25
+    ],
+    [
+     "ela",
+     "fm",
+     0.2
+    ],
+    [
+     "era",
+     "fm",
+     -0.2
+    ]
+   ]
+  }
+ ]
+}

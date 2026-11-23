@@ -1,0 +1,343 @@
+{
+ "slug": "third-battle-of-panipat",
+ "name": "Third Battle of Panipat",
+ "article": "battles1/wp/third-battle-of-panipat",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "to Delhi ↓",
+    "at": [
+     80,
+     59
+    ]
+   }
+  ]
+ },
+ "note": "The Marathas blocked the Afghans' northward path and were themselves blocked from going south, so they are drawn to the north and the Afghans to the south. The Maratha left is then the east and the Afghan left the west. The accounts differ in places: Pasand Khan is placed both on the Afghan left wing and against the Maratha left, and which Rohillas fell back first is not clear, so the Rohillas of the Afghan right centre are shown. The kind of troops of Holkar and Sindhia and the route of the contingent that escaped are not given, and the positions of the cavalry under Vinchurkar and Gaikwad are placed by judgement. The line is drawn short; the accounts give the Maratha line as some 12 km across.",
+ "terrain": [
+  {
+   "k": "road",
+   "name": "Sanauli Road",
+   "at": [
+    [
+     6,
+     31
+    ],
+    [
+     30,
+     31.5
+    ],
+    [
+     60,
+     30.5
+    ],
+    [
+     94,
+     31
+    ]
+   ],
+   "lab": [
+    63,
+    33.5
+   ],
+   "quote": "a few metres to the south of today's Sanauli Road"
+  }
+ ],
+ "sides": [
+  {
+   "id": "m",
+   "name": "Marathas"
+  },
+  {
+   "id": "a",
+   "name": "Afghans and their allies"
+  }
+ ],
+ "units": [
+  {
+   "id": "bhau",
+   "side": "m",
+   "k": "guard",
+   "name": "Maratha centre and royal guard",
+   "short": "Bhau",
+   "leader": "Sadashivrao Bhau",
+   "w": 14,
+   "quote": "Bhau, with the Peshwa's son and the royal guard (Huzurat), was in the centre.",
+   "leaderEntry": "sadashivrao-bhau"
+  },
+  {
+   "id": "gardis",
+   "side": "m",
+   "k": "infantry",
+   "name": "Maratha left wing, the Gardis",
+   "short": "Gardis",
+   "leader": "Ibrahim Khan",
+   "w": 10,
+   "quote": "The left wing consisted of the Gardis under Ibrahim Khan."
+  },
+  {
+   "id": "mright",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Maratha right wing",
+   "short": "Right",
+   "leader": "Holkar",
+   "w": 10,
+   "quote": "Holkar and Sindhia were on the extreme right.",
+   "leaderEntry": "malhar-rao-holkar"
+  },
+  {
+   "id": "vinch",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Cavalry guarding the Gardis",
+   "short": "Cavalry",
+   "leader": "Vitthal Vinchurkar",
+   "w": 6,
+   "quote": "Bhausaheb had ordered Vitthal Vinchurkar (with 1500 cavalry) and Damaji Gaikwad (with 2500 cavalry) to protect the Gardis."
+  },
+  {
+   "id": "najib",
+   "side": "a",
+   "k": "infantry",
+   "name": "Afghan left, Najib's Rohillas",
+   "short": "Najib",
+   "leader": "Najib",
+   "w": 10,
+   "quote": "Their left was being formed by Najib and their right by two brigades of troops."
+  },
+  {
+   "id": "wali",
+   "side": "a",
+   "k": "cavalry",
+   "name": "Shah Wali's mailed horsemen",
+   "short": "Shah Wali",
+   "leader": "Shah Wali",
+   "w": 12,
+   "quote": "Ahmad Shah's Vizier Shah Wali with a choice body of 19,000 mailed Afghan horsemen"
+  },
+  {
+   "id": "shuja",
+   "side": "a",
+   "k": "infantry",
+   "name": "Shuja-ud-daulah's troops",
+   "short": "Shuja",
+   "leader": "Shuja-ud-daulah",
+   "w": 6,
+   "quote": "Shuja-ud-daulah with 3,000 soldiers and 50–60 cannons"
+  },
+  {
+   "id": "rohilla",
+   "side": "a",
+   "k": "infantry",
+   "name": "Afghan right centre, Rohillas",
+   "short": "Rohillas",
+   "leader": "Hafiz Rahmat",
+   "w": 10,
+   "quote": "The right centre consisted of 15,000 Rohillas under Hafiz Rahmat and other chiefs of the Rohilla Pathans.",
+   "leaderEntry": "hafiz-rahmat-khan"
+  },
+  {
+   "id": "reserve",
+   "side": "a",
+   "k": "guard",
+   "name": "Afghan reserve",
+   "short": "Reserve",
+   "w": 10,
+   "quote": "He sent his bodyguards to call up his 15,000 reserve troops from his camp"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The two lines face each other",
+   "text": "The Maratha lines stood a little north of Kala Amb with Bhau and the royal guard in the centre, the Gardis on the left and Holkar and Sindhia on the right. The Afghan line stood to the south with Najib on its left and the Rohillas on its right centre.",
+   "quote": "The Maratha lines began a little to the north of Kala Amb.",
+   "at": {
+    "mright": [
+     20,
+     20,
+     180
+    ],
+    "bhau": [
+     46,
+     20,
+     180
+    ],
+    "gardis": [
+     76,
+     20,
+     180
+    ],
+    "vinch": [
+     90,
+     20,
+     180
+    ],
+    "najib": [
+     18,
+     38,
+     0
+    ],
+    "wali": [
+     40,
+     38,
+     0
+    ],
+    "shuja": [
+     54,
+     38,
+     0
+    ],
+    "rohilla": [
+     76,
+     38,
+     0
+    ]
+   }
+  },
+  {
+   "title": "The Gardis advance and the Rohillas fall back",
+   "text": "The Maratha left, under Ibrahim Khan, advanced its infantry against the Rohillas. Point-blank salvos sent the Rohillas reeling back to their lines, and the Gardi musketeers held the field for three hours.",
+   "quote": "The resulting carnage sent the Rohillas reeling back to their lines, leaving the battlefield in the hands of Ibrahim for the next three hours",
+   "at": {
+    "gardis": [
+     76,
+     27,
+     180
+    ],
+    "rohilla": [
+     78,
+     43,
+     0
+    ]
+   },
+   "how": {
+    "rohilla": "retreat"
+   },
+   "hits": [
+    [
+     "gardis",
+     "rohilla"
+    ]
+   ]
+  },
+  {
+   "title": "Bhau charges the Afghan left centre",
+   "text": "Bhau led a charge against the forces under Shah Wali. The attack nearly broke the Afghan lines, but Shuja-ud-Daulah did not move from his position and the Maratha mounts were exhausted.",
+   "quote": "The sheer force of the attack nearly broke the Afghan lines, and the Afghan soldiers started to desert their positions in the confusion.",
+   "at": {
+    "bhau": [
+     44,
+     27,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "bhau",
+     "wali"
+    ]
+   ]
+  },
+  {
+   "title": "Scindia attacks Najib and the Afghan reserve is called up",
+   "when": "By noon",
+   "text": "The Marathas under Scindia attacked Najib, who fought a defensive action and kept them at bay. Meanwhile Ahmad Shah called up his 15,000 reserve troops from his camp.",
+   "quote": "The Marathas, under Scindia, attacked Najib. Najib successfully fought a defensive action, however, keeping Scindia's forces at bay.",
+   "at": {
+    "mright": [
+     20,
+     28,
+     180
+    ],
+    "reserve": [
+     40,
+     52,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "mright",
+     "najib"
+    ]
+   ]
+  },
+  {
+   "title": "The Afghan reserves charge",
+   "when": "About 14:00",
+   "text": "Fresh reserves went to support Shah Wali against Bhau in the centre. Some 7,000 Maratha cavalry and infantry were killed before the hand-to-hand fighting began.",
+   "quote": "Some 7,000 Maratha cavalry and infantry were killed before the hand-to-hand fighting began at around 14:00 hrs.",
+   "at": {
+    "reserve": [
+     40,
+     45,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "reserve",
+     "bhau",
+     0.3
+    ],
+    [
+     "wali",
+     "bhau"
+    ]
+   ]
+  },
+  {
+   "title": "The Gardis are encircled",
+   "text": "The Maratha cavalry guarding the Gardis broke its position and went out against the Rohillas. The Rohilla riflemen fired on it, then encircled the Gardis and outflanked the Maratha centre while Shah Wali pressed the front.",
+   "quote": "This gave the Rohillas the opportunity to encircle the Gardis and outflank the Maratha centre while Shah Wali pressed on attacking the front.",
+   "at": {
+    "vinch": [
+     90,
+     29,
+     180
+    ],
+    "rohilla": [
+     74,
+     37,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "vinch",
+     "rohilla"
+    ],
+    [
+     "rohilla",
+     "vinch",
+     -0.2
+    ],
+    [
+     "rohilla",
+     "gardis"
+    ],
+    [
+     "wali",
+     "bhau"
+    ]
+   ]
+  },
+  {
+   "title": "Holkar and Scindia leave the field",
+   "text": "Realising the battle was lost, Holkar's and Scindia's contingents merged, and one broke from the Maratha right and escaped south through an opening in the Durrani lines. Bhau and the royal forces fought on.",
+   "quote": "one contingent breaking from the Maratha right flank and escaped from the opening in the Durrani lines southwards",
+   "at": {
+    "mright": [
+     29,
+     55,
+     180
+    ]
+   },
+   "how": {
+    "mright": "retreat"
+   }
+  }
+ ]
+}

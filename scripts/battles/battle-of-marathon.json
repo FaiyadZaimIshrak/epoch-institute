@@ -1,0 +1,389 @@
+{
+ "slug": "battle-of-marathon",
+ "name": "Battle of Marathon",
+ "article": "battles1/wp/battle-of-marathon",
+ "field": {
+  "north": null,
+  "edges": [
+   {
+    "name": "Persian ships ↓",
+    "at": [
+     50,
+     59
+    ]
+   }
+  ]
+ },
+ "note": "The accounts give no compass directions, so the sides are drawn with the Athenians at the top and the sea at the bottom, and wings are named by their place on the plan. The accounts do not say on which wing the Plataeans stood, or where the line lay in relation to the camp; Mount Agrieliki and the swamps are placed on the sides the story needs. The Persian cavalry is not drawn. The accounts do not say where the Persian wings fled.",
+ "terrain": [
+  {
+   "k": "hill",
+   "name": "Mount Agrieliki",
+   "at": [
+    [
+     0,
+     0
+    ],
+    [
+     18,
+     0
+    ],
+    [
+     20,
+     6
+    ],
+    [
+     14,
+     11
+    ],
+    [
+     0,
+     12
+    ]
+   ],
+   "lab": [
+    11,
+    14
+   ],
+   "quote": "The camp of the Athenians was located on a spur of mount Agrieliki next to the plain of Marathon"
+  },
+  {
+   "k": "marsh",
+   "name": "Swamps",
+   "unnamed": true,
+   "at": [
+    [
+     26,
+     44
+    ],
+    [
+     34,
+     42
+    ],
+    [
+     44,
+     43
+    ],
+    [
+     46,
+     49
+    ],
+    [
+     36,
+     52
+    ],
+    [
+     27,
+     50
+    ]
+   ],
+   "lab": [
+    30,
+    46.5
+   ],
+   "quote": "ran towards the swamps where unknown numbers drowned"
+  },
+  {
+   "k": "sea",
+   "name": "Sea",
+   "at": [
+    [
+     0,
+     57
+    ],
+    [
+     30,
+     56
+    ],
+    [
+     60,
+     57
+    ],
+    [
+     100,
+     56
+    ],
+    [
+     100,
+     62
+    ],
+    [
+     0,
+     62
+    ]
+   ],
+   "lab": [
+    8,
+    59.5
+   ],
+   "quote": "broke in panic towards their ships, pursued by the Greeks"
+  }
+ ],
+ "sides": [
+  {
+   "id": "a",
+   "name": "Athenians and Plataeans"
+  },
+  {
+   "id": "p",
+   "name": "Persians"
+  }
+ ],
+ "units": [
+  {
+   "id": "al",
+   "side": "a",
+   "k": "spears",
+   "name": "Athenian left wing",
+   "short": "Left",
+   "w": 12,
+   "quote": "while the rest of the tribes at their flanks were in ranks of eight"
+  },
+  {
+   "id": "ac",
+   "side": "a",
+   "k": "spears",
+   "name": "Athenian centre, four ranks",
+   "short": "Centre",
+   "w": 10,
+   "quote": "Miltiades ordered the two tribes forming the center of the Greek formation"
+  },
+  {
+   "id": "ar",
+   "side": "a",
+   "k": "spears",
+   "name": "Athenian right wing",
+   "short": "Right",
+   "w": 12,
+   "quote": "while the rest of the tribes at their flanks were in ranks of eight"
+  },
+  {
+   "id": "pl",
+   "side": "p",
+   "k": "light",
+   "name": "Persian left-wing levies",
+   "short": "P. left",
+   "w": 12,
+   "quote": "routed the inferior Persian levies on the flanks"
+  },
+  {
+   "id": "pc",
+   "side": "p",
+   "k": "archers",
+   "name": "Persians and Sacae, centre",
+   "short": "P. centre",
+   "w": 14,
+   "quote": "where the Persians and Sacae were arrayed"
+  },
+  {
+   "id": "pr",
+   "side": "p",
+   "k": "light",
+   "name": "Persian right-wing levies",
+   "short": "P. right",
+   "w": 12,
+   "quote": "routed the inferior Persian levies on the flanks"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The two armies form their lines",
+   "text": "The two tribes in the Greek centre were drawn up four ranks deep and the tribes on their flanks eight deep. One explanation is that this made the Athenian line as long as the Persian line.",
+   "quote": "It is therefore possible that this arrangement was made, perhaps at the last moment, so that the Athenian line was as long as the Persian line",
+   "at": {
+    "al": [
+     24,
+     14,
+     180
+    ],
+    "ac": [
+     50,
+     14,
+     180
+    ],
+    "ar": [
+     76,
+     14,
+     180
+    ],
+    "pl": [
+     24,
+     36,
+     0
+    ],
+    "pc": [
+     50,
+     36,
+     0
+    ],
+    "pr": [
+     76,
+     36,
+     0
+    ]
+   }
+  },
+  {
+   "title": "The Greeks advance and the lines meet",
+   "text": "On a signal from Miltiades the Athenians advanced and probably broke into a run at the limit of the archers' effectiveness. They went through the Persian arrows, protected for the most part by their armour, and met the enemy line.",
+   "quote": "Passing through the hail of arrows launched by the Persian army, protected for the most part by their armour, the Greek line finally made contact with the enemy army.",
+   "at": {
+    "al": [
+     24,
+     27,
+     180
+    ],
+    "ac": [
+     50,
+     27,
+     180
+    ],
+    "ar": [
+     76,
+     27,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "al",
+     "pl"
+    ],
+    [
+     "ac",
+     "pc"
+    ],
+    [
+     "ar",
+     "pr"
+    ]
+   ]
+  },
+  {
+   "title": "The Greek centre is pushed back",
+   "text": "The fighting lasted a long time. In the centre the Persians and Sacae prevailed and broke through in pursuit inland, while on each wing the Athenians and Plataeans prevailed.",
+   "quote": "In the center of the line the foreigners prevailed, where the Persians and Sacae were arrayed.",
+   "at": {
+    "ac": [
+     50,
+     9,
+     180
+    ],
+    "pc": [
+     50,
+     19,
+     0
+    ]
+   },
+   "how": {
+    "ac": "retreat"
+   },
+   "hits": [
+    [
+     "pc",
+     "ac"
+    ],
+    [
+     "al",
+     "pl"
+    ],
+    [
+     "ar",
+     "pr"
+    ]
+   ]
+  },
+  {
+   "title": "The Persian wings collapse and the Greek wings turn in",
+   "text": "The Athenian wings quickly routed the Persian levies on the flanks. They then turned inwards to surround the Persian centre, which had been more successful against the thin Greek centre.",
+   "quote": "The Athenian wings quickly routed the inferior Persian levies on the flanks, before turning inwards to surround the Persian centre",
+   "at": {
+    "pl": [
+     14,
+     46,
+     180
+    ],
+    "pr": [
+     86,
+     46,
+     180
+    ],
+    "al": [
+     31,
+     19,
+     90
+    ],
+    "ar": [
+     69,
+     19,
+     270
+    ]
+   },
+   "how": {
+    "pl": "rout",
+    "pr": "rout"
+   },
+   "state": {
+    "pl": "routed",
+    "pr": "routed"
+   },
+   "hits": [
+    [
+     "al",
+     "pc"
+    ],
+    [
+     "ar",
+     "pc"
+    ]
+   ]
+  },
+  {
+   "title": "The Persian centre breaks and flees to the ships",
+   "text": "The Persian centre broke in panic towards its ships, pursued by the Greeks. Some, unaware of the local terrain, ran towards the swamps, where unknown numbers drowned.",
+   "quote": "The battle ended when the Persian centre then broke in panic towards their ships, pursued by the Greeks.",
+   "at": {
+    "pc": [
+     64,
+     48,
+     180
+    ],
+    "ac": [
+     50,
+     25,
+     180
+    ],
+    "al": [
+     38,
+     33,
+     180
+    ],
+    "ar": [
+     62,
+     33,
+     180
+    ]
+   },
+   "how": {
+    "pc": "rout"
+   },
+   "state": {
+    "pc": "routed"
+   },
+   "hits": [
+    [
+     "al",
+     "pc"
+    ],
+    [
+     "ar",
+     "pc"
+    ],
+    [
+     "ac",
+     "pc"
+    ]
+   ]
+  }
+ ]
+}

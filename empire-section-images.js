@@ -5929,22 +5929,10 @@ var SECTION_IMAGES = {
     sources:{slug:"polybius",name:"Polybius",img:"/images/encyclopedia/polybius.jpg",artist:"Jona Lendering, Livius Onderwijs",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Stele_des_Polybios.jpg"},
     legacy:{slug:"scipio-africanus",name:"Scipio Africanus",img:"/images/encyclopedia/scipio-africanus.jpg",artist:"José Luiz",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Sulla_(loan_from_Ny_Carlsberg_Glyptotek)_-_Glyptothek_-_Munich_-_Germany_2017.jpg"}
   },
-  "Battle of Red Cliffs": {
-    background:{slug:"cao-cao",name:"Cao Cao",img:"/images/encyclopedia/cao-cao.jpg",artist:"Wang Qi",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Cao_Cao_scth.jpg"},
-    forces:{slug:"sun-quan",name:"Sun Quan",img:"/images/encyclopedia/sun-quan.jpg",artist:"Yan Liben",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sun_Quan_Tang.jpg"},
-    aftermath:{slug:"liu-bei",name:"Liu Bei",img:"/images/encyclopedia/liu-bei.jpg",artist:"Yan Liben (閻立本)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Liu_Bei_Tang.jpg"},
-    sources:{slug:"zhuge-liang",name:"Zhuge Liang",img:"/images/encyclopedia/zhuge-liang.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E6%98%8E%E4%BA%BA%E7%BB%98_%E3%80%8A%E8%AF%B8%E8%91%9B%E4%BA%AE%E5%83%8F%E3%80%8B%EF%BC%88%E5%8D%97%E8%96%B0%E6%AE%BF%E6%9C%AC%EF%BC%89.jpg"}
-  },
   "Battle of Badr": {
     forces:{slug:"ali-ibn-abi-talib",name:"Ali ibn Abi Talib",img:"/images/encyclopedia/ali-ibn-abi-talib.jpg",artist:"عبدالعزيز علي",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_ten_to_whom_Paradise_was_promised_(Ali).png"},
     aftermath:{slug:"medina",name:"Medina",img:"/images/encyclopedia/medina.jpg",artist:"Konevi",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Al-Masjid_An-Nabawi_(Bird%27s_Eye_View).jpg"},
     sources:{slug:"hadith",name:"Hadith",img:"/images/encyclopedia/hadith.jpg",artist:"Bakkouz at Arabic Wikipedia",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hadith_Books.jpg"}
-  },
-  "Battle of Tours": {
-    background:{slug:"charles-martel",name:"Charles Martel",img:"/images/encyclopedia/charles-martel.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Charles_Martel_divise_le_royaume_entre_P%C3%A9pin_et_Carloman.jpg"},
-    aftermath:{slug:"pepin-the-short",name:"Pepin the Short",img:"/images/encyclopedia/pepin-the-short.jpg",artist:"from the Middle Ages, unknown",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:PippinImperialChronicleCorpusChristiCollegeMS373Fol14.jpg"},
-    sources:{slug:"bede",name:"Bede",img:"/images/encyclopedia/bede.jpg",artist:"e-codices.unifr.ch",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:E-codices_bke-0047_001v_medium_(cropped).jpg"},
-    legacy:{slug:"edward-gibbon",name:"Edward Gibbon",img:"/images/encyclopedia/edward-gibbon.jpg",artist:"Henry Walton",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Edward_Gibbon_by_Henry_Walton_cleaned.jpg"}
   },
   "Battle of Hastings": {
     background:{slug:"harold-godwinson",name:"Harold Godwinson",img:"/images/encyclopedia/harold-godwinson.jpg",artist:"~",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bayeux_tapestry_stitches_detail..jpg"},

@@ -1,0 +1,318 @@
+{
+ "slug": "battle-of-badr",
+ "name": "Battle of Badr",
+ "article": "battles1/wp/battle-of-badr",
+ "field": {
+  "north": 0
+ },
+ "note": "The accounts do not say where each Muslim battalion stood or how the Meccan army was drawn up, so the two Muslim battalions are placed side by side and the Meccans as one body. The sizes of the blocks are by judgement. The Meccan army is given as around 1300 men, and also as nearly one thousand strong. The Muslim tradition holds that angels were sent to strengthen the Muslims and terrify the Quraysh, as the Qur'an states; the plan shows only the movements of the men.",
+ "terrain": [
+  {
+   "k": "mountain",
+   "name": "al-Asfal Mountain",
+   "at": [
+    [
+     4,
+     8
+    ],
+    [
+     14,
+     6
+    ],
+    [
+     20,
+     16
+    ],
+    [
+     19,
+     40
+    ],
+    [
+     14,
+     54
+    ],
+    [
+     4,
+     54
+    ]
+   ],
+   "quote": "The west of the valley was covered by the al-Asfal Mountain"
+  },
+  {
+   "k": "hill",
+   "name": "Sand dunes",
+   "unnamed": true,
+   "at": [
+    [
+     88,
+     8
+    ],
+    [
+     96,
+     10
+    ],
+    [
+     98,
+     30
+    ],
+    [
+     96,
+     50
+    ],
+    [
+     88,
+     50
+    ],
+    [
+     86,
+     30
+    ]
+   ],
+   "quote": "The valley of Badr is surrounded by two large sand dunes to the east"
+  },
+  {
+   "k": "wood",
+   "name": "Date-palms",
+   "at": [
+    [
+     38,
+     5
+    ],
+    [
+     50,
+     4
+    ],
+    [
+     58,
+     8
+    ],
+    [
+     56,
+     13
+    ],
+    [
+     44,
+     13
+    ],
+    [
+     38,
+     10
+    ]
+   ],
+   "quote": "Muhammad and his army had encamped at some date-palms in the north"
+  },
+  {
+   "k": "point",
+   "name": "Well",
+   "unnamed": true,
+   "at": [
+    84,
+    30
+   ],
+   "quote": "They had taken a well near the center of the western margin of al-'Udwatul Dunya"
+  },
+  {
+   "k": "road",
+   "name": "Road from Mecca",
+   "unnamed": true,
+   "at": [
+    [
+     96,
+     58
+    ],
+    [
+     88,
+     58
+    ],
+    [
+     78,
+     59
+    ]
+   ],
+   "lab": [
+    76,
+    56.5
+   ],
+   "quote": "which was the primary route from Mecca"
+  }
+ ],
+ "sides": [
+  {
+   "id": "m",
+   "name": "Muslims"
+  },
+  {
+   "id": "q",
+   "name": "Quraysh of Mecca"
+  }
+ ],
+ "units": [
+  {
+   "id": "muh",
+   "side": "m",
+   "k": "infantry",
+   "name": "Muhajirun battalion",
+   "short": "Muhajirun",
+   "w": 8,
+   "quote": "one of the 82 Muhajirun and the other of the 231 Ansar"
+  },
+  {
+   "id": "ansar",
+   "side": "m",
+   "k": "infantry",
+   "name": "Ansar battalion",
+   "short": "Ansar",
+   "w": 12,
+   "quote": "one of the 82 Muhajirun and the other of the 231 Ansar"
+  },
+  {
+   "id": "mduel",
+   "side": "m",
+   "k": "infantry",
+   "name": "Muslim duellists",
+   "short": "Duellists",
+   "leader": "Hamza ibn Abd al-Muttalib",
+   "w": 4,
+   "quote": "Hamza approached and called on Ubayda ibn al-Harith and Ali ibn Abi Talib to join him"
+  },
+  {
+   "id": "quray",
+   "side": "q",
+   "k": "infantry",
+   "name": "Meccan army",
+   "short": "Meccans",
+   "w": 16,
+   "quote": "an excited army of around 1300 men, 100 horses and a large number of camels"
+  },
+  {
+   "id": "qduel",
+   "side": "q",
+   "k": "infantry",
+   "name": "Meccan duellists",
+   "short": "Duellists",
+   "leader": "Utba ibn Rabi'a",
+   "w": 4,
+   "quote": "Utba ibn Rabi'a, alongside his brother, Shayba ibn Rabi'a and son, al-Walid ibn Utba, emerged from the Meccan ranks"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The armies face each other across the valley",
+   "when": "13 March 624 CE",
+   "text": "The Quraysh were encamped in the south-eastern part of the valley near the road from Mecca. The Muslims had come from the north and held the well nearest the Meccans.",
+   "quote": "The Quraysh had encamped in the south-eastern portion of the valley near the road to Mecca, while Muhammad and his army had encamped at some date-palms in the north.",
+   "at": {
+    "muh": [
+     56,
+     20,
+     180
+    ],
+    "ansar": [
+     72,
+     20,
+     180
+    ],
+    "quray": [
+     66,
+     46,
+     0
+    ]
+   }
+  },
+  {
+   "title": "Duels before the lines meet",
+   "text": "Men came out from each side to fight singly. Hamza, Ubayda and Ali met three Meccans who came out of the Quraysh ranks. Ali and Hamza each killed an opponent quickly.",
+   "quote": "The first two duels between Ali and al-Walid and Hamza and Shayba were quick with both managing to kill their opponents swiftly.",
+   "at": {
+    "mduel": [
+     66,
+     29,
+     180
+    ],
+    "qduel": [
+     66,
+     37,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "mduel",
+     "qduel"
+    ]
+   ]
+  },
+  {
+   "title": "The Meccans charge",
+   "text": "A shower of arrows from both sides followed the duels. The Meccans then took the offensive and charged upon the Muslim lines, and the Muslim duellists were carried back into the lines.",
+   "quote": "A shower of arrows from both sides followed these duels and this was followed by several other duels, most of which were won by the Muslims. The Meccans now took the offensive and charged upon the Muslim lines.",
+   "at": {
+    "quray": [
+     66,
+     36,
+     0
+    ]
+   },
+   "state": {
+    "mduel": "gone",
+    "qduel": "gone"
+   },
+   "hits": [
+    [
+     "quray",
+     "ansar"
+    ],
+    [
+     "quray",
+     "muh",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "The Muslims counter-attack",
+   "text": "Muhammad gave the order for a counter-attack and the Muslim army rushed the Quraysh lines. Both Muslim battalions moved forward against the Meccan body.",
+   "quote": "Muhammad gave the order to carry out a counterattack against the enemy now",
+   "at": {
+    "muh": [
+     58,
+     28,
+     180
+    ],
+    "ansar": [
+     74,
+     28,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "muh",
+     "quray"
+    ],
+    [
+     "ansar",
+     "quray"
+    ]
+   ]
+  },
+  {
+   "title": "The Meccan lines break",
+   "text": "The Meccans broke and ran. The fighting lasted a few hours and was over by early afternoon, after the Meccan army had scattered.",
+   "quote": "The Meccans, understrength and unenthusiastic about fighting, promptly broke and ran.",
+   "at": {
+    "quray": [
+     66,
+     52,
+     180
+    ]
+   },
+   "how": {
+    "quray": "rout"
+   },
+   "state": {
+    "quray": "routed"
+   }
+  }
+ ]
+}

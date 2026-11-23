@@ -47,6 +47,9 @@ AddType font/woff2 .woff2
   RewriteRule ^articles/sati-pratha$ - [G,L]
   # an encyclopedia entry folded into its twin (Nov 2026): the old address goes to the page that was kept
   RewriteRule ^encyclopedia/lady-hyegyong$ /encyclopedia/lady-hyegyeong [R=301,L]
+  # profiles taken off the site: the old address goes to the entry (scripts/kinds/remove-profile.js)
+  RewriteRule ^battle/battle-of-red-cliffs$ /encyclopedia/battle-of-red-cliffs [R=301,L]
+  RewriteRule ^battle/battle-of-tours$ /encyclopedia/battle-of-tours [R=301,L]
   # the profile folders have no index page: their kind's list on /profiles
   RewriteRule ^(religion|language|culture|movement|government|ideology|work|life|city|battle)/?$ /profiles?kind=$1 [R=301,L]
   RewriteRule ^empire/?$ /profiles [R=301,L]
@@ -92,7 +95,7 @@ AddType font/woff2 .woff2
   Header set X-Frame-Options "SAMEORIGIN"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Strict-Transport-Security "max-age=31536000"
-  <FilesMatch "^(shared\.css|shared-data\.js|shared-nav\.js|enc-page\.js|scribe\.js|faith-map\.js|test-yourself\.js)$">
+  <FilesMatch "^(shared\.css|shared-data\.js|shared-nav\.js|enc-page\.js|scribe\.js|faith-map\.js|battle-map\.js|test-yourself\.js)$">
     # checked with Cloudflare on every use (a 304): until 15 Nov 2026 browsers used them for 10 minutes and then for a
     # day while checking behind, so after a deploy new pages were drawn with the old stylesheet and scripts
     Header set Cache-Control "no-cache"

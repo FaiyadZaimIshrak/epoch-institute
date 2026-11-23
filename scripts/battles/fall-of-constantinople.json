@@ -1,0 +1,562 @@
+{
+ "slug": "fall-of-constantinople",
+ "name": "Fall of Constantinople",
+ "article": "battles1/wp/fall-of-constantinople",
+ "field": {
+  "north": 0
+ },
+ "note": "This plan shows the whole siege, not a single field: the land walls face west, the Golden Horn lies to the north and the Sea of Marmara to the south. The accounts place the Ottoman troops by their position along the walls and the defenders by sector, so the blocks stand in those places only roughly. Giustiniani is drawn at his first post, the Charisian Gate; the accounts say he was later shifted to the Mesoteichion but not when. Zagan Pasha's troops north of the Horn, the Ottoman mining of mid-May, the Byzantine reserves, the four Christian ships that entered the Horn on 20 April and the sectors of the sea walls are not drawn. Where the Ottoman ships stood outside the chain is a judgement; the accounts do not say. They also give another account of the end of Constantine, so his fate is not drawn.",
+ "terrain": [
+  {
+   "k": "land",
+   "name": "Constantinople",
+   "at": [
+    [
+     42,
+     25
+    ],
+    [
+     60,
+     26
+    ],
+    [
+     100,
+     24
+    ],
+    [
+     100,
+     53
+    ],
+    [
+     60,
+     54
+    ],
+    [
+     34,
+     55
+    ]
+   ],
+   "lab": [
+    78,
+    40
+   ],
+   "quote": "the capital city of the Byzantine Empire"
+  },
+  {
+   "k": "sea",
+   "name": "Golden Horn",
+   "at": [
+    [
+     48,
+     22
+    ],
+    [
+     60,
+     16
+    ],
+    [
+     80,
+     14
+    ],
+    [
+     100,
+     13
+    ],
+    [
+     100,
+     25
+    ],
+    [
+     80,
+     26
+    ],
+    [
+     62,
+     25
+    ]
+   ],
+   "lab": [
+    70,
+    11.5
+   ],
+   "quote": "sea walls along the Golden Horn"
+  },
+  {
+   "k": "sea",
+   "name": "Sea of Marmara",
+   "at": [
+    [
+     34,
+     55
+    ],
+    [
+     60,
+     54
+    ],
+    [
+     100,
+     53
+    ],
+    [
+     100,
+     62
+    ],
+    [
+     34,
+     62
+    ]
+   ],
+   "lab": [
+    70,
+    58
+   ],
+   "quote": "sea walls along the Sea of Marmara"
+  },
+  {
+   "k": "wall",
+   "name": "Theodosian walls",
+   "at": [
+    [
+     42,
+     25
+    ],
+    [
+     40,
+     33
+    ],
+    [
+     37.5,
+     43
+    ],
+    [
+     34,
+     55
+    ]
+   ],
+   "lab": [
+    45,
+    56
+   ],
+   "quote": "encircled by the fifth-century Theodosian walls"
+  },
+  {
+   "k": "wall",
+   "name": "Chain",
+   "at": [
+    [
+     90,
+     14.5
+    ],
+    [
+     90,
+     19
+    ],
+    [
+     90,
+     23.5
+    ]
+   ],
+   "lab": [
+    90,
+    28
+   ],
+   "quote": "ordered that a defensive chain be placed at the mouth of the harbour"
+  },
+  {
+   "k": "river",
+   "name": "Lycus",
+   "at": [
+    [
+     18,
+     41
+    ],
+    [
+     30,
+     41.5
+    ],
+    [
+     37.5,
+     43
+    ],
+    [
+     50,
+     46
+    ]
+   ],
+   "lab": [
+    12,
+    40
+   ],
+   "quote": "where they were crossed by the river Lycus"
+  },
+  {
+   "k": "road",
+   "name": "Road of greased logs",
+   "at": [
+    [
+     90,
+     6
+    ],
+    [
+     80,
+     7
+    ],
+    [
+     68,
+     11
+    ],
+    [
+     62,
+     18
+    ]
+   ],
+   "lab": [
+    78,
+    3.5
+   ],
+   "quote": "construction of a road of greased logs across Galata on the north side of the Golden Horn"
+  }
+ ],
+ "sides": [
+  {
+   "id": "o",
+   "name": "Ottomans"
+  },
+  {
+   "id": "b",
+   "name": "Byzantines and their allies"
+  }
+ ],
+ "units": [
+  {
+   "id": "euro",
+   "side": "o",
+   "k": "infantry",
+   "name": "Ottoman European regulars",
+   "short": "Europeans",
+   "leader": "Karadja Pasha",
+   "w": 10,
+   "quote": "The regular European troops, stretched out along the entire length of the walls, were commanded by Karadja Pasha."
+  },
+  {
+   "id": "guns",
+   "side": "o",
+   "k": "artillery",
+   "name": "Ottoman guns",
+   "short": "Guns",
+   "w": 6,
+   "quote": "where the guns and the elite Janissary regiments were positioned"
+  },
+  {
+   "id": "ana",
+   "side": "o",
+   "k": "infantry",
+   "name": "Ottoman Anatolian regulars",
+   "short": "Anatolians",
+   "leader": "Ishak Pasha",
+   "w": 7,
+   "quote": "The regular troops from Anatolia under Ishak Pasha were stationed south of the Lycus down to the Sea of Marmara."
+  },
+  {
+   "id": "jan",
+   "side": "o",
+   "k": "guard",
+   "name": "Janissary regiments",
+   "short": "Janissary",
+   "w": 5,
+   "quote": "where the guns and the elite Janissary regiments were positioned"
+  },
+  {
+   "id": "fleet",
+   "side": "o",
+   "k": "ships",
+   "name": "Ottoman fleet",
+   "short": "Fleet",
+   "leader": "Baltoghlu",
+   "w": 8,
+   "quote": "Despite some probing attacks, the Ottoman fleet under Baltoghlu could not enter the Golden Horn due to the chain across the entrance."
+  },
+  {
+   "id": "ships",
+   "side": "o",
+   "k": "ships",
+   "name": "Ships hauled into the Horn",
+   "short": "Hauled",
+   "w": 6,
+   "quote": "dragged his ships over the hill, directly into the Golden Horn on 22 April, bypassing the chain barrier"
+  },
+  {
+   "id": "waves",
+   "side": "o",
+   "k": "light",
+   "name": "Ottoman first waves",
+   "short": "1st waves",
+   "w": 7,
+   "quote": "The Christian troops of the Ottoman Empire attacked first, followed by successive waves of the irregular azaps"
+  },
+  {
+   "id": "const",
+   "side": "b",
+   "k": "infantry",
+   "name": "Constantine and Greek troops",
+   "short": "Emperor",
+   "leader": "Constantine XI Palaiologos",
+   "w": 7,
+   "quote": "Constantine and his Greek troops guarded the Mesoteichion, the middle section of the land walls",
+   "leaderEntry": "constantine-xi-palaiologos"
+  },
+  {
+   "id": "giust",
+   "side": "b",
+   "k": "infantry",
+   "name": "Giustiniani's Genoese",
+   "short": "Genoese",
+   "leader": "Giovanni Giustiniani",
+   "w": 6,
+   "quote": "Giustiniani was stationed to the north of the emperor, at the Charisian Gate (Myriandrion)",
+   "leaderEntry": "giovanni-giustiniani-longo"
+  },
+  {
+   "id": "ven",
+   "side": "b",
+   "k": "infantry",
+   "name": "Venetians at Blachernae",
+   "short": "Venetians",
+   "leader": "Girolamo Minotto",
+   "w": 6,
+   "quote": "Girolamo Minotto and his Venetians were stationed in the Blachernae Palace"
+  },
+  {
+   "id": "south",
+   "side": "b",
+   "k": "infantry",
+   "name": "Southern land-wall defenders",
+   "short": "S. walls",
+   "leader": "Filippo Contarini",
+   "w": 6,
+   "quote": "The section of the land walls from the Pegae Gate to the Golden Gate (itself guarded by a Genoese called Manuel) was defended by the Venetian Filippo Contarini"
+  },
+  {
+   "id": "bfleet",
+   "side": "b",
+   "k": "ships",
+   "name": "Byzantine and allied ships",
+   "short": "Ships",
+   "leader": "Alviso Diedo",
+   "w": 8,
+   "quote": "The Venetian Alviso Diedo commanded the ships in the harbour."
+  }
+ ],
+ "phases": [
+  {
+   "title": "The armies take their positions",
+   "when": "2 April 1453",
+   "text": "The Ottoman army camped outside the land walls. The European regulars lay along the walls, the troops from Anatolia south of the Lycus, and the guns and Janissaries near the Mesoteichion. Constantine held the Mesoteichion and Giustiniani the Charisian Gate to the north.",
+   "quote": "His army encamped outside the city on 2 April 1453, the Monday after Easter.",
+   "at": {
+    "euro": [
+     26,
+     33,
+     90
+    ],
+    "guns": [
+     26,
+     43.5,
+     90
+    ],
+    "ana": [
+     26,
+     52,
+     90
+    ],
+    "jan": [
+     14,
+     43.5,
+     90
+    ],
+    "fleet": [
+     94,
+     19,
+     270
+    ],
+    "const": [
+     45,
+     43.5,
+     270
+    ],
+    "giust": [
+     46,
+     35.5,
+     270
+    ],
+    "ven": [
+     50,
+     28.5,
+     270
+    ],
+    "south": [
+     46,
+     51,
+     270
+    ],
+    "bfleet": [
+     78,
+     20,
+     90
+    ]
+   }
+  },
+  {
+   "title": "The guns open fire and the chain holds the fleet out",
+   "text": "Mehmed's cannons fired on the walls for weeks, but the Byzantines repaired most of the damage after each shot. The Ottoman fleet made probing attacks but could not enter the Golden Horn because of the chain.",
+   "quote": "Despite some probing attacks, the Ottoman fleet under Baltoghlu could not enter the Golden Horn due to the chain across the entrance.",
+   "at": {
+    "fleet": [
+     92.5,
+     19,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "guns",
+     "const"
+    ],
+    [
+     "fleet",
+     "bfleet",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "Ships are hauled over the hill into the Horn",
+   "when": "22 April",
+   "text": "Mehmed had a road of greased logs laid across Galata and dragged his ships over the hill into the Golden Horn, bypassing the chain. This threatened the supply ships from Pera and demoralised the defenders.",
+   "quote": "dragged his ships over the hill, directly into the Golden Horn on 22 April, bypassing the chain barrier",
+   "at": {
+    "ships": [
+     62,
+     20,
+     90
+    ]
+   }
+  },
+  {
+   "title": "The fire-ship attack on the hauled ships fails",
+   "when": "Night of 28 April",
+   "text": "The defenders tried to destroy the Ottoman ships in the Golden Horn with fire ships. The Ottomans forced the Christians to retreat with many casualties.",
+   "quote": "an attempt was made to destroy the Ottoman ships already in the Golden Horn using fire ships but the Ottomans forced the Christians to retreat with many casualties",
+   "at": {
+    "bfleet": [
+     84,
+     21,
+     90
+    ]
+   },
+   "how": {
+    "bfleet": "retreat"
+   },
+   "hits": [
+    [
+     "ships",
+     "bfleet",
+     0.15
+    ]
+   ]
+  },
+  {
+   "title": "The final assault begins at the Blachernae walls",
+   "when": "Shortly after midnight, 29 May",
+   "text": "The Christian troops of the Ottoman Empire attacked first, followed by irregular azaps and Anatolian Turkmen, who focused on a damaged section of the Blachernae walls. The Turkmen breached it and entered the city but were quickly pushed back.",
+   "quote": "The Christian troops of the Ottoman Empire attacked first, followed by successive waves of the irregular azaps, who were poorly trained and equipped and Anatolian Turkmen beylik forces who focused on a section of the damaged Blachernae walls in the north-west part of the city.",
+   "at": {
+    "waves": [
+     35,
+     27,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "waves",
+     "ven"
+    ],
+    [
+     "ven",
+     "waves",
+     0.25
+    ]
+   ]
+  },
+  {
+   "title": "The Janissaries attack and the Genoese give way",
+   "text": "The last wave, the elite Janissaries, attacked the walls. Giustiniani was grievously wounded and his evacuation caused panic among the defenders. His Genoese retreated into the city and towards the harbour, while Constantine's men held their ground.",
+   "quote": "Finally, the last wave consisting of elite Janissaries, attacked the city walls. The Genoese general in charge of the defenders on land, Giovanni Giustiniani, was grievously wounded during the attack, and his evacuation from the ramparts caused a panic in the ranks of the defenders.",
+   "at": {
+    "jan": [
+     34,
+     43.5,
+     90
+    ],
+    "giust": [
+     64,
+     38,
+     90
+    ]
+   },
+   "how": {
+    "giust": "retreat"
+   },
+   "hits": [
+    [
+     "jan",
+     "const"
+    ]
+   ]
+  },
+  {
+   "title": "The Ottomans enter the city",
+   "text": "The defenders were overwhelmed at several points along the wall, and the Janissaries pressed forward. The Venetians retreated to their ships, which left the Horn, and the Ottoman navy held the Golden Horn by midday.",
+   "quote": "Constantine's men eventually could not prevent the Ottomans from entering the city and the defenders were overwhelmed at several points along the wall. Janissaries, led by Ulubatlı Hasan, pressed forward. Many Greek soldiers ran back home to protect their families, the Venetians retreated to their ships and a few of the Genoese escaped to Galata.",
+   "at": {
+    "jan": [
+     46,
+     36.5,
+     90
+    ],
+    "waves": [
+     44,
+     29.5,
+     90
+    ],
+    "ven": [
+     67,
+     31,
+     90
+    ],
+    "fleet": [
+     80,
+     20,
+     270
+    ]
+   },
+   "how": {
+    "ven": "retreat"
+   },
+   "state": {
+    "bfleet": "gone"
+   },
+   "hits": [
+    [
+     "jan",
+     "const"
+    ],
+    [
+     "waves",
+     "ven"
+    ]
+   ]
+  }
+ ]
+}

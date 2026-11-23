@@ -1,0 +1,382 @@
+{
+ "slug": "battle-of-gaugamela",
+ "name": "Battle of Gaugamela",
+ "article": "battles1/wp/battle-of-gaugamela",
+ "field": {
+  "north": null
+ },
+ "note": "The accounts do not give the compass directions or the lie of the ground, so the plan shows only the two lines facing each other, Persians at the top. The Persian right-wing cavalry is drawn as the force sent against Parmenion, though the accounts only say that Darius sent a large part of his cavalry and some infantry against him. The accounts do not say where the Macedonian camp lay; it is placed behind the left. Modern scholars treat the ancient accounts of the later phases with caution.",
+ "terrain": [],
+ "sides": [
+  {
+   "id": "m",
+   "name": "Macedonians and Greek allies"
+  },
+  {
+   "id": "p",
+   "name": "Persian army"
+  }
+ ],
+ "units": [
+  {
+   "id": "mazaeus",
+   "side": "p",
+   "k": "cavalry",
+   "name": "Persian right-wing cavalry",
+   "short": "Mazaeus",
+   "leader": "Mazaeus",
+   "w": 12,
+   "quote": "Mazaeus commanded the right flank with the Syrian, Median, Mesopotamian, Parthian, Sacian, Tapurian, Hyrcanian, Caucasian Albanian, Sacesinian, Cappadocian and Armenian cavalry."
+  },
+  {
+   "id": "darius",
+   "side": "p",
+   "k": "guard",
+   "name": "Darius and the Persian centre",
+   "short": "Darius",
+   "leader": "Darius",
+   "w": 14,
+   "quote": "Darius placed himself in the center with his best infantry",
+   "leaderEntry": "darius-iii"
+  },
+  {
+   "id": "bessus",
+   "side": "p",
+   "k": "cavalry",
+   "name": "Persian left-wing cavalry",
+   "short": "Bessus",
+   "leader": "Bessus",
+   "w": 12,
+   "quote": "Bessus commanded the left flank with the Bactrians, Dahae cavalry, Arachosian cavalry, Persian cavalry, Susian cavalry, Cadusian cavalry and Scythians.",
+   "leaderEntry": "bessus"
+  },
+  {
+   "id": "chariots",
+   "side": "p",
+   "k": "chariots",
+   "name": "Scythed chariots",
+   "short": "Chariots",
+   "w": 6,
+   "quote": "Chariots were placed in front with a small group of Bactrians."
+  },
+  {
+   "id": "raiders",
+   "side": "p",
+   "k": "cavalry",
+   "name": "Persian and Indian raiders",
+   "short": "Raiders",
+   "w": 5,
+   "quote": "The Persian and Indian cavalry in the center with Darius broke through."
+  },
+  {
+   "id": "parm",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Macedonian left wing",
+   "short": "Left",
+   "leader": "Parmenion",
+   "w": 12,
+   "quote": "Parmenion was stationed on the left with the Thessalians, Greek mercenaries and Thracian cavalry."
+  },
+  {
+   "id": "phalanx",
+   "side": "m",
+   "k": "pikes",
+   "name": "Macedonian phalanx",
+   "short": "Phalanx",
+   "w": 14,
+   "quote": "From there came the phalanx, in a double line."
+  },
+  {
+   "id": "reserve",
+   "side": "m",
+   "k": "infantry",
+   "name": "Second line of the phalanx",
+   "short": "2nd line",
+   "w": 10,
+   "quote": "The second line was given orders to deal with any flanking units should the situation arise."
+  },
+  {
+   "id": "agri",
+   "side": "m",
+   "k": "light",
+   "name": "Agrianes and javelin-throwers",
+   "short": "Agrianes",
+   "w": 6,
+   "quote": "the Agrianes and Greek archers, who were stationed next to the phalanx"
+  },
+  {
+   "id": "alex",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Alexander's Companion cavalry",
+   "short": "Alexander",
+   "leader": "Alexander",
+   "w": 10,
+   "quote": "Alexander fought with his Companion cavalry.",
+   "leaderEntry": "alexander-the-great"
+  },
+  {
+   "id": "camp",
+   "side": "m",
+   "k": "camp",
+   "name": "Macedonian camp",
+   "short": "Camp",
+   "quote": "they continued towards the camp to loot"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The two armies stand drawn up",
+   "text": "The Persians were already on the field. Darius stood in the centre, Bessus commanded the left wing and Mazaeus the right, with chariots in front. Alexander held the right of the Macedonians and Parmenion the left, with the phalanx between them in a double line.",
+   "quote": "The Macedonians were divided into two, with the right side under the direct command of Alexander and the left of Parmenion.",
+   "at": {
+    "mazaeus": [
+     18,
+     14,
+     180
+    ],
+    "darius": [
+     50,
+     14,
+     180
+    ],
+    "bessus": [
+     82,
+     14,
+     180
+    ],
+    "chariots": [
+     76,
+     25,
+     180
+    ],
+    "parm": [
+     18,
+     40,
+     0
+    ],
+    "phalanx": [
+     46,
+     40,
+     0
+    ],
+    "reserve": [
+     46,
+     50,
+     0
+    ],
+    "agri": [
+     84,
+     34,
+     0
+    ],
+    "alex": [
+     84,
+     42,
+     0
+    ],
+    "camp": [
+     30,
+     57,
+     0
+    ]
+   }
+  },
+  {
+   "title": "The phalanx advances and Alexander rides to the right",
+   "text": "Alexander ordered the infantry to march towards the centre of the enemy line, with the wings echeloned back. He himself rode towards the edge of the right flank with the Companions, to draw the Persian cavalry outwards.",
+   "quote": "Alexander began by ordering his infantry to march in phalanx formation towards the center of the enemy line.",
+   "at": {
+    "phalanx": [
+     46,
+     34,
+     0
+    ],
+    "reserve": [
+     46,
+     44,
+     0
+    ],
+    "agri": [
+     93,
+     31,
+     0
+    ],
+    "alex": [
+     93,
+     38,
+     0
+    ]
+   }
+  },
+  {
+   "title": "The Persian wings attack",
+   "text": "The Scythian cavalry of the Persian left tried to get round Alexander's extreme right, and a long cavalry fight followed there. Darius also sent a large part of his cavalry against Parmenion on the left.",
+   "quote": "The Scythian cavalry from the Persian left wing opened the battle by attempting to flank Alexander's extreme right.",
+   "at": {
+    "bessus": [
+     88,
+     27,
+     180
+    ],
+    "mazaeus": [
+     18,
+     30,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "bessus",
+     "alex"
+    ],
+    [
+     "mazaeus",
+     "parm"
+    ]
+   ]
+  },
+  {
+   "title": "The chariots charge",
+   "text": "Darius launched his chariots at the troops under Alexander. Javelin-throwers stopped many, and the Macedonian ranks opened to let the rest pass harmlessly. Those that got through were then killed.",
+   "quote": "Darius now launched his chariots at those troops under Alexander's personal command",
+   "at": {
+    "chariots": [
+     80,
+     34,
+     180
+    ]
+   },
+   "state": {
+    "chariots": "destroyed"
+   },
+   "hits": [
+    [
+     "agri",
+     "chariots"
+    ]
+   ]
+  },
+  {
+   "title": "Alexander's wedge strikes the Persian centre",
+   "text": "Alexander drew his Companions out of the fight, formed a large wedge with other units and led it into the Persian centre, while the phalanx kept the Persian infantry engaged. By the widely held view, Darius then broke and fled.",
+   "quote": "the widely held modern view is that he now broke and ran, with the rest of his army following him",
+   "at": {
+    "alex": [
+     64,
+     24,
+     300
+    ],
+    "phalanx": [
+     46,
+     26,
+     0
+    ],
+    "darius": [
+     50,
+     6,
+     0
+    ]
+   },
+   "how": {
+    "darius": "rout"
+   },
+   "state": {
+    "darius": "routed"
+   },
+   "hits": [
+    [
+     "alex",
+     "darius"
+    ],
+    [
+     "phalanx",
+     "darius"
+    ]
+   ]
+  },
+  {
+   "title": "Parmenion is hard pressed and a gap opens",
+   "text": "Parmenion's wing was apparently encircled and sent desperate messages, and Alexander turned back to help instead of pursuing Darius. A gap had opened in the phalanx, and Persian and Indian cavalry broke through towards the camp.",
+   "quote": "Parmenion's wing was apparently encircled by the cavalry of the Persian right wing; being attacked from all sides, it was in a state of confusion.",
+   "at": {
+    "mazaeus": [
+     8,
+     53,
+     0
+    ],
+    "alex": [
+     21,
+     28,
+     270
+    ],
+    "raiders": [
+     34,
+     42,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "mazaeus",
+     "parm"
+    ],
+    [
+     "raiders",
+     "camp"
+    ]
+   ]
+  },
+  {
+   "title": "The raiders are dispersed and the Persian right gives way",
+   "text": "The rear reserve phalanx attacked and dispersed the raiders as they looted. Alexander fought the Persian right-wing cavalry and Mazaeus began to pull his forces back, and they fell into disorder under the Thessalian charge.",
+   "quote": "These raiders were in turn attacked and dispersed by the rear reserve phalanx as they were looting.",
+   "at": {
+    "raiders": [
+     33,
+     53,
+     180
+    ],
+    "alex": [
+     30,
+     33,
+     270
+    ],
+    "mazaeus": [
+     10,
+     30,
+     0
+    ],
+    "bessus": [
+     88,
+     12,
+     0
+    ]
+   },
+   "how": {
+    "raiders": "rout",
+    "mazaeus": "retreat",
+    "bessus": "retreat"
+   },
+   "state": {
+    "raiders": "routed",
+    "mazaeus": "routed"
+   },
+   "hits": [
+    [
+     "reserve",
+     "raiders"
+    ],
+    [
+     "alex",
+     "mazaeus"
+    ],
+    [
+     "parm",
+     "mazaeus"
+    ]
+   ]
+  }
+ ]
+}

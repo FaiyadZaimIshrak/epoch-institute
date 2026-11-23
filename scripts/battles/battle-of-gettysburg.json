@@ -1,0 +1,681 @@
+{
+ "slug": "battle-of-gettysburg",
+ "name": "Battle of Gettysburg",
+ "article": "battles1/wp/battle-of-gettysburg",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "← to Cashtown",
+    "at": [
+     5,
+     8
+    ]
+   }
+  ]
+ },
+ "note": "The battle lasted three days (1 to 3 July 1863) and the plan draws it at the scale of corps on one plan, so distances are not to scale: the accounts put the two ridges about a mile apart. Positions on the town side and the lie of the hills are placed by judgement from the directions the accounts give. Ewell's attacks on Culp's Hill and East Cemetery Hill on 2 July, Hood's fight at Little Round Top and the cavalry action southwest of town are left out. The accounts do not say what became of Buford's cavalry after the first morning, so it is taken off the plan once the I Corps has fallen back.",
+ "terrain": [
+  {
+   "k": "town",
+   "name": "Gettysburg",
+   "at": [
+    54,
+    13
+   ],
+   "lab": [
+    54,
+    18
+   ],
+   "quote": "in and around Gettysburg, Pennsylvania"
+  },
+  {
+   "k": "road",
+   "name": "Chambersburg Pike",
+   "at": [
+    [
+     4,
+     20
+    ],
+    [
+     24,
+     18
+    ],
+    [
+     40,
+     17
+    ],
+    [
+     52,
+     14
+    ]
+   ],
+   "lab": [
+    16,
+    24.5
+   ],
+   "quote": "They proceeded easterly in columns along the Chambersburg Pike."
+  },
+  {
+   "k": "ridge",
+   "name": "McPherson Ridge",
+   "at": [
+    [
+     20,
+     10
+    ],
+    [
+     24,
+     8
+    ],
+    [
+     26,
+     18
+    ],
+    [
+     25,
+     28
+    ],
+    [
+     21,
+     26
+    ],
+    [
+     19,
+     16
+    ]
+   ],
+   "lab": [
+    21,
+    4
+   ],
+   "quote": "Buford laid out his defenses on three ridges west of the town: Herr Ridge, McPherson Ridge and Seminary Ridge."
+  },
+  {
+   "k": "ridge",
+   "name": "Seminary Ridge",
+   "at": [
+    [
+     32,
+     8
+    ],
+    [
+     36,
+     10
+    ],
+    [
+     37,
+     24
+    ],
+    [
+     38,
+     40
+    ],
+    [
+     34,
+     46
+    ],
+    [
+     31,
+     30
+    ],
+    [
+     30,
+     16
+    ]
+   ],
+   "lab": [
+    34,
+    5
+   ],
+   "quote": "The Confederate line paralleled the Union line about one mile (1,600 m) to the west on Seminary Ridge"
+  },
+  {
+   "k": "hill",
+   "name": "Cemetery Hill",
+   "at": [
+    [
+     50,
+     22
+    ],
+    [
+     56,
+     21
+    ],
+    [
+     60,
+     25
+    ],
+    [
+     58,
+     29
+    ],
+    [
+     52,
+     28
+    ],
+    [
+     49,
+     25
+    ]
+   ],
+   "lab": [
+    46,
+    20
+   ],
+   "quote": "northwest to Cemetery Hill just south of town, then south for nearly two miles"
+  },
+  {
+   "k": "hill",
+   "name": "Culp's Hill",
+   "at": [
+    [
+     66,
+     18
+    ],
+    [
+     72,
+     17
+    ],
+    [
+     77,
+     21
+    ],
+    [
+     76,
+     27
+    ],
+    [
+     70,
+     29
+    ],
+    [
+     65,
+     25
+    ]
+   ],
+   "lab": [
+    80,
+    29
+   ],
+   "quote": "The Union line ran from Culp's Hill southeast of the town"
+  },
+  {
+   "k": "ridge",
+   "name": "Cemetery Ridge",
+   "at": [
+    [
+     60,
+     31
+    ],
+    [
+     64,
+     31
+    ],
+    [
+     65,
+     41
+    ],
+    [
+     64,
+     50
+    ],
+    [
+     60,
+     50
+    ],
+    [
+     59,
+     41
+    ]
+   ],
+   "lab": [
+    72,
+    43
+   ],
+   "quote": "then south for nearly two miles (3 km) along Cemetery Ridge, terminating just north of Little Round Top"
+  },
+  {
+   "k": "hill",
+   "name": "Little Round Top",
+   "at": [
+    [
+     60,
+     53
+    ],
+    [
+     65,
+     52
+    ],
+    [
+     68,
+     56
+    ],
+    [
+     64,
+     59
+    ],
+    [
+     60,
+     58
+    ]
+   ],
+   "lab": [
+    73,
+    56
+   ],
+   "quote": "terminating just north of Little Round Top"
+  },
+  {
+   "k": "road",
+   "name": "Emmitsburg Road",
+   "at": [
+    [
+     52,
+     27
+    ],
+    [
+     49,
+     36
+    ],
+    [
+     46,
+     44
+    ],
+    [
+     43,
+     54
+    ]
+   ],
+   "lab": [
+    40,
+    31
+   ],
+   "quote": "then northeast along the Emmitsburg Road to south of the Codori farm"
+  },
+  {
+   "k": "point",
+   "name": "Peach Orchard",
+   "at": [
+    44,
+    50
+   ],
+   "lab": [
+    38,
+    54
+   ],
+   "quote": "The new line ran from Devil's Den, northwest to the Peach Orchard, then northeast along the Emmitsburg Road"
+  },
+  {
+   "k": "point",
+   "name": "Devil's Den",
+   "at": [
+    53,
+    55
+   ],
+   "lab": [
+    53,
+    58.5
+   ],
+   "quote": "The new line ran from Devil's Den, northwest to the Peach Orchard, then northeast along the Emmitsburg Road"
+  }
+ ],
+ "sides": [
+  {
+   "id": "u",
+   "name": "Union, Army of the Potomac"
+  },
+  {
+   "id": "c",
+   "name": "Confederate, Army of Northern Virginia"
+  }
+ ],
+ "units": [
+  {
+   "id": "buford",
+   "side": "u",
+   "k": "cavalry",
+   "name": "Union cavalry division",
+   "short": "Buford",
+   "leader": "Buford",
+   "w": 8,
+   "quote": "Buford laid out his defenses on three ridges west of the town: Herr Ridge, McPherson Ridge and Seminary Ridge."
+  },
+  {
+   "id": "i",
+   "side": "u",
+   "k": "infantry",
+   "name": "Union I Corps",
+   "short": "I Corps",
+   "w": 9,
+   "quote": "the vanguard of the I Corps (Major General John F. Reynolds) finally arrived"
+  },
+  {
+   "id": "xi",
+   "side": "u",
+   "k": "infantry",
+   "name": "Union XI Corps",
+   "short": "XI Corps",
+   "leader": "Oliver O. Howard",
+   "w": 8,
+   "quote": "the Union XI Corps (Major General Oliver O. Howard) raced north on the Baltimore Pike and Taneytown Road"
+  },
+  {
+   "id": "ii",
+   "side": "u",
+   "k": "infantry",
+   "name": "Union II Corps",
+   "short": "II Corps",
+   "leader": "Hancock",
+   "w": 8,
+   "quote": "II Corps covered most of the northern half of Cemetery Ridge"
+  },
+  {
+   "id": "iii",
+   "side": "u",
+   "k": "infantry",
+   "name": "Union III Corps",
+   "short": "III Corps",
+   "leader": "Sickles",
+   "w": 8,
+   "quote": "III Corps was ordered to take up a position to its flank"
+  },
+  {
+   "id": "xii",
+   "side": "u",
+   "k": "infantry",
+   "name": "Union XII Corps",
+   "short": "XII Corps",
+   "w": 8,
+   "quote": "Most of the XII Corps was on Culp's Hill"
+  },
+  {
+   "id": "gregg",
+   "side": "u",
+   "k": "cavalry",
+   "name": "Union cavalry (Gregg, Custer)",
+   "short": "Gregg",
+   "leader": "David McMurtrie Gregg",
+   "w": 8,
+   "quote": "Brigadier General David McMurtrie Gregg's division and Custer's brigade from Kilpatrick's division"
+  },
+  {
+   "id": "hill",
+   "side": "c",
+   "k": "infantry",
+   "name": "Confederate Third Corps",
+   "short": "Hill",
+   "leader": "A. P. Hill",
+   "w": 12,
+   "quote": "Third Corps, commanded by Lt. Gen. A. P. Hill, with divisions commanded by Maj. Gens. Richard H. Anderson, Henry Heth, and W. Dorsey Pender."
+  },
+  {
+   "id": "ewell",
+   "side": "c",
+   "k": "infantry",
+   "name": "Confederate Second Corps",
+   "short": "Ewell",
+   "leader": "Richard S. Ewell",
+   "w": 12,
+   "quote": "Second Corps, commanded by Lt. Gen. Richard S. Ewell, with divisions commanded by Maj. Gens. Jubal A. Early"
+  },
+  {
+   "id": "longstreet",
+   "side": "c",
+   "k": "infantry",
+   "name": "Confederate First Corps",
+   "short": "Longstreet",
+   "leader": "James Longstreet",
+   "w": 12,
+   "quote": "First Corps, commanded by Lt. Gen. James Longstreet, with divisions commanded by Maj. Gens. Lafayette McLaws"
+  },
+  {
+   "id": "pickett",
+   "side": "c",
+   "k": "infantry",
+   "name": "Pickett's assault force",
+   "short": "Pickett",
+   "leader": "Pickett",
+   "w": 10,
+   "quote": "Longstreet would command Pickett's Virginia division of his own First Corps, plus six brigades from Hill's Corps"
+  },
+  {
+   "id": "stuart",
+   "side": "c",
+   "k": "cavalry",
+   "name": "Confederate cavalry (Stuart)",
+   "short": "Stuart",
+   "leader": "J. E. B. Stuart",
+   "w": 8,
+   "quote": "Stuart's cavalry division (three brigades), with the assistance of Jenkins' brigade, was sent to guard the Confederate left flank"
+  }
+ ],
+ "phases": [
+  {
+   "title": "Heth's brigades meet Buford's cavalry west of town",
+   "when": "About 7:30 a.m., 1 July 1863",
+   "text": "Buford's cavalry held the ridges west of the town to delay the Confederates. Two of Heth's brigades, part of Hill's corps, came east along the Chambersburg Pike and met his dismounted troopers.",
+   "quote": "Heth's division advanced with two brigades forward, commanded by brigadier generals James J. Archer and Joseph R. Davis.",
+   "at": {
+    "buford": [
+     24,
+     17,
+     270
+    ],
+    "hill": [
+     12,
+     17,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "hill",
+     "buford"
+    ]
+   ]
+  },
+  {
+   "title": "The I Corps arrives as the cavalry falls back",
+   "when": "By 10:20 a.m.",
+   "text": "The Confederates pushed the Union cavalry east to McPherson Ridge. The vanguard of the I Corps then arrived and took up the fight beside it.",
+   "quote": "by 10:20 am, the Confederates had pushed the Union cavalrymen east to McPherson Ridge, when the vanguard of the I Corps (Major General John F. Reynolds) finally arrived",
+   "at": {
+    "hill": [
+     15,
+     19,
+     90
+    ],
+    "buford": [
+     26,
+     12,
+     270
+    ],
+    "i": [
+     28,
+     26,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "hill",
+     "i"
+    ],
+    [
+     "hill",
+     "buford",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "Ewell's corps and the XI Corps come up from the north",
+   "when": "About 2:00 p.m.",
+   "text": "Two divisions of Ewell's corps came down on the town from the north while the XI Corps hurried up. Rodes's and Early's divisions then assaulted and outflanked the I and XI Corps north and northwest of the town.",
+   "quote": "Around 2:00 p.m., the Confederate Second Corps divisions of major generals Robert E. Rodes and Jubal Early assaulted and out-flanked the Union I and XI corps' positions north and northwest of town.",
+   "at": {
+    "ewell": [
+     64,
+     8,
+     225
+    ],
+    "xi": [
+     44,
+     7,
+     0
+    ],
+    "hill": [
+     22,
+     20,
+     90
+    ],
+    "i": [
+     30,
+     26,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "ewell",
+     "xi"
+    ],
+    [
+     "hill",
+     "i"
+    ]
+   ]
+  },
+  {
+   "title": "The Union line falls back to Cemetery Hill",
+   "text": "Howard ordered a retreat to Cemetery Hill, and the I Corps was driven back through the Seminary grounds and the streets of Gettysburg.",
+   "quote": "As Union positions collapsed both north and west of town, Howard ordered a retreat to the high ground south of town at Cemetery Hill",
+   "at": {
+    "xi": [
+     50,
+     26,
+     0
+    ],
+    "i": [
+     60,
+     26,
+     0
+    ],
+    "hill": [
+     36,
+     22,
+     90
+    ]
+   },
+   "how": {
+    "xi": "retreat",
+    "i": "retreat"
+   },
+   "state": {
+    "buford": "gone"
+   },
+   "hits": [
+    [
+     "hill",
+     "i",
+     0.25
+    ],
+    [
+     "ewell",
+     "xi"
+    ]
+   ]
+  },
+  {
+   "title": "The Union line forms a fishhook",
+   "when": "Evening of 1 July to the morning of 2 July",
+   "text": "Most of the Union infantry reached the field. The XII Corps stood on Culp's Hill, the remnants of the I and XI Corps on Cemetery Hill and the II Corps on Cemetery Ridge. Longstreet's corps came up to attack the Union left.",
+   "quote": "Most of the XII Corps was on Culp's Hill; the remnants of I and XI Corps defended Cemetery Hill; II Corps covered most of the northern half of Cemetery Ridge; and III Corps was ordered to take up a position to its flank.",
+   "at": {
+    "xii": [
+     71,
+     23,
+     0
+    ],
+    "ii": [
+     62,
+     34,
+     270
+    ],
+    "iii": [
+     62,
+     47,
+     270
+    ],
+    "ewell": [
+     70,
+     9,
+     180
+    ],
+    "longstreet": [
+     37,
+     46,
+     60
+    ]
+   }
+  },
+  {
+   "title": "Sickles's corps meets Longstreet's attack",
+   "when": "From about 4:00 p.m., 2 July",
+   "text": "Sickles had advanced the III Corps west to the Emmitsburg Road, away from Cemetery Ridge. Longstreet's divisions came forward and found it directly in their path.",
+   "quote": "As Longstreet's left division, under Major General Lafayette McLaws, advanced, they unexpectedly found Major General Daniel Sickles's III Corps directly in their path.",
+   "at": {
+    "iii": [
+     49,
+     45,
+     270
+    ],
+    "longstreet": [
+     40,
+     47,
+     70
+    ]
+   },
+   "hits": [
+    [
+     "longstreet",
+     "iii"
+    ]
+   ]
+  },
+  {
+   "title": "Pickett's Charge crosses the open ground",
+   "when": "Around 3 p.m., 3 July",
+   "text": "After a long bombardment, Pickett's division and brigades from Hill's corps stepped off the ridge and advanced to Cemetery Ridge. To the northeast Stuart's cavalry met Gregg's division and Custer's brigade, who stopped it reaching the rear of the Union infantry.",
+   "quote": "Around 3 p.m., the cannon fire subsided, and between 10,500 and 12,500 Confederate soldiers stepped from the ridgeline and advanced the three-quarters of a mile (1,200 m) to Cemetery Ridge.",
+   "at": {
+    "pickett": [
+     52,
+     38,
+     90
+    ],
+    "stuart": [
+     88,
+     9,
+     225
+    ],
+    "gregg": [
+     79,
+     14,
+     45
+    ]
+   },
+   "hits": [
+    [
+     "pickett",
+     "ii"
+    ],
+    [
+     "stuart",
+     "gregg"
+    ]
+   ]
+  }
+ ]
+}

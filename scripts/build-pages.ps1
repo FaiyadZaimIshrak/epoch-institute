@@ -1174,6 +1174,12 @@ if (Test-Path "$Repo\scripts\entry-family.tsv") {
   }
   if (Test-Path "$Repo\scripts\family-trees.tsv") { foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\family-trees.tsv", $U8)) { if ($l -and $l[0] -ne '#') { $fmf = $l.Split("`t"); if ($fmf.Length -ge 3 -and $BY.ContainsKey($fmf[0])) { $FAMTREE[$fmf[0]] = @($fmf[1], $fmf[2]) } } } }
 }
+# How it was fought (the battle profiles' plans, 23 Nov 2026): scripts/tools/make-battle-maps.js writes data/battles and
+# scripts/battle-maps.js (read by generator.html) from scripts/battles. The profiles are regenerated after a plan changes.
+if (Test-Path "$Repo\scripts\battles") {
+  foreach ($bfL in (& $emExe "$PSScriptRoot\tools\make-battle-maps.js")) { Say $bfL }
+  if ($LASTEXITCODE) { throw 'How it was fought: scripts/tools/make-battle-maps.js failed (above)' }
+}
 # Journeys on the Globe (/journeys, 22 Nov 2026): scripts/tools/make-journeys.js writes the page from scripts/journeys
 # and scripts/journey-entries.tsv (entry, journey, title): those entries link their journey. Names start with JRN / jr.
 $JRNENT = @{}
@@ -1335,6 +1341,7 @@ function MoreUnlink([string]$html, [string]$hostSlug) {
 }
 function WdLabel([string]$key) {
   $wl = $WDDESC[$key]; if (-not $wl) { return $null }
+  $wl = $wl -creplace '\bBC\b', 'BCE'   # Wikidata's descriptions say BC; the site says BCE
   return $wl.Substring(0, 1).ToUpperInvariant() + $wl.Substring(1)
 }
 function WordsIn([string]$html) { ([regex]::Matches(([regex]::Replace($html, '<[^>]+>', ' ')), '[A-Za-z][^\s]*')).Count }

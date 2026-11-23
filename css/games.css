@@ -1944,6 +1944,9 @@ body.has-tab-bar .consent-bar { bottom: calc(68px + env(safe-area-inset-bottom, 
 .start-tag { display: inline-block; margin-left: 8px; vertical-align: 2px; font-family: var(--font-ui); font-size: 10px; font-weight: 700;
   font-style: normal; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1; padding: 3px 6px; border-radius: 3px;
   color: var(--gold); border: 1px solid var(--gold); }
+.battle-field { --bf-a: #3f8ae6; --bf-b: #e2604e; --bf-c: #c98500; --bf-d: #2f9e44; --bf-ground: #171a16; --bf-water: #1f3d5c; --bf-hill: #2a2a22; --bf-wood: #1d3323; --bf-marsh: #23332f; --bf-line: #6d6a5c; --bf-ink: #0b0c10; }
+[data-theme="light"] .battle-field { --bf-a: #2466c2; --bf-b: #c23b2a; --bf-c: #8a5a00; --bf-d: #1f7a34; --bf-ground: #ece5d2; --bf-water: #a9c8e2; --bf-hill: #d9cfb4; --bf-wood: #bcd1a7; --bf-marsh: #cbd8c6; --bf-line: #8d8266; --bf-ink: #fffaf0; }
+.battle-field { margin: 0 0 36px; }
 :root[data-skin="winter"]:not([data-kids="1"]) {
   --bg: #0a1320; --surface: #101c2c; --border: #24384e; --field-border: #5f7a94; --text: #e6edf3; --muted: #94a6b8;
   --gold: #d4b55c; --gold-light: #efd48c; --gold-rgb: 212,181,92; --gold-light-rgb: 239,212,140;

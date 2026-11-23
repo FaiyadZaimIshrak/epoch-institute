@@ -84,7 +84,7 @@
 
 <script src="/shared-nav.js"></script>
 <script>initNav('today');</script>
-<script>var TODAY_DAYS_V = 'e71d6f6893', NOW_SRC = '/data/now.json?v=c153a29d28';</script>
+<script>var TODAY_DAYS_V = 'e71d6f6893', NOW_SRC = '/data/now.json?v=87aa5df57f';</script>
 <script src="/today.js?v=d2e6b01684"></script>
 <script src="/now.js?v=c2dd4fc8be"></script>
 </body>

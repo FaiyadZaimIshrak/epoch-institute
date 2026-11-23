@@ -1,0 +1,438 @@
+{
+ "slug": "battle-of-adwa",
+ "name": "Battle of Adwa",
+ "article": "battles1/wp/battle-of-adwa",
+ "field": {
+  "north": null,
+  "edges": [
+   {
+    "name": "retreat towards Adi Ugri and Adi Keyh ↓",
+    "at": [
+     14,
+     58
+    ]
+   }
+  ]
+ },
+ "note": "The accounts give the order of the Italian columns, which Ethiopian units struck which, and a few named places, but no map of the ground. The Ethiopian positions at the start, the places of Adwa, Mount Belah and the valley of Mariam Shewito, and all distances are placed by judgement. The accounts do not name the Ethiopian units of the second column that attacked the Italian left, so the plan shows the units that had fought Albertone, and they do not say exactly which units entered the valley against Dabormida, so the plan shows Menelik's reserve. Albertone's column veered off its route; the plan only shows that it left its line.",
+ "terrain": [
+  {
+   "k": "town",
+   "name": "Adwa",
+   "at": [
+    52,
+    5
+   ],
+   "quote": "near the town of Adwa between the Ethiopian Empire under Emperor Menelik II"
+  },
+  {
+   "k": "hill",
+   "name": "Mount Belah",
+   "at": [
+    [
+     54,
+     36
+    ],
+    [
+     61,
+     34
+    ],
+    [
+     66,
+     39
+    ],
+    [
+     65,
+     46
+    ],
+    [
+     57,
+     47
+    ]
+   ],
+   "lab": [
+    60,
+    31
+   ],
+   "quote": "attacking Mount Belah on the Italian right, held by Colonel Francesco Stevani's Bersaglieri"
+  },
+  {
+   "k": "point",
+   "name": "Mariam Shewito valley",
+   "at": [
+    92,
+    47
+   ],
+   "lab": [
+    86,
+    50
+   ],
+   "quote": "pushed his brigade into the deep valley of Mariam Shewito"
+  }
+ ],
+ "sides": [
+  {
+   "id": "i",
+   "name": "Italian force under Baratieri"
+  },
+  {
+   "id": "e",
+   "name": "Ethiopian army under Menelik II"
+  }
+ ],
+ "units": [
+  {
+   "id": "albertone",
+   "side": "i",
+   "k": "infantry",
+   "name": "Albertone's left column",
+   "short": "Albertone",
+   "leader": "Matteo Albertone",
+   "w": 12,
+   "quote": "General Matteo Albertone's left column comprised four indigenous battalions and four artillery batteries."
+  },
+  {
+   "id": "arimondi",
+   "side": "i",
+   "k": "infantry",
+   "name": "Arimondi's centre column",
+   "short": "Arimondi",
+   "leader": "Giuseppe Arimondi",
+   "w": 12,
+   "quote": "General Giuseppe Arimondi's centre column consisted of five white battalions, one indigenous battalion and two batteries."
+  },
+  {
+   "id": "dabormida",
+   "side": "i",
+   "k": "infantry",
+   "name": "Dabormida's right column",
+   "short": "Dabormida",
+   "leader": "Vittorio Dabormida",
+   "w": 12,
+   "quote": "General Vittorio Dabormida's right column included six white battalions, four militia battalions and two batteries."
+  },
+  {
+   "id": "ellena",
+   "side": "i",
+   "k": "guard",
+   "name": "Ellena's reserve column",
+   "short": "Ellena",
+   "leader": "Giuseppe Ellena",
+   "w": 10,
+   "quote": "In reserve, General Giuseppe Ellena commanded six white battalions, one indigenous battalion and two rapid-fire batteries."
+  },
+  {
+   "id": "galliano",
+   "side": "i",
+   "k": "infantry",
+   "name": "3rd Native Battalion",
+   "short": "3rd Nat.",
+   "leader": "Giuseppe Galliano",
+   "w": 5,
+   "quote": "held by Colonel Giuseppe Galliano's III Native Battalion, which had been detached from the Ellena brigade"
+  },
+  {
+   "id": "front",
+   "side": "e",
+   "k": "infantry",
+   "name": "Ethiopian forward units",
+   "short": "Forward",
+   "w": 12,
+   "quote": "ferociously charged by Ethiopian units coming from the Enda Garima and Gessoso mountains"
+  },
+  {
+   "id": "makonnen",
+   "side": "e",
+   "k": "infantry",
+   "name": "Ras Makonnen's men",
+   "short": "Makonnen",
+   "leader": "Ras Makonnen",
+   "w": 10,
+   "quote": "Ras Makonnen lunged forward into the opening, cutting off Dabormida's brigade"
+  },
+  {
+   "id": "reserve",
+   "side": "e",
+   "k": "guard",
+   "name": "Menelik's guard and reserve",
+   "short": "Menelik",
+   "leader": "Emperor Menelik",
+   "w": 12,
+   "quote": "convinced him to unleash his reserve of 25,000 men",
+   "leaderEntry": "menelik-ii"
+  },
+  {
+   "id": "taytu",
+   "side": "e",
+   "k": "infantry",
+   "name": "Empress Taytu's troops",
+   "short": "Taytu",
+   "leader": "Empress Taytu",
+   "w": 8,
+   "quote": "Taytu's troops attacked the right"
+  },
+  {
+   "id": "mikael",
+   "side": "e",
+   "k": "cavalry",
+   "name": "Ras Mikael's troops",
+   "short": "Mikael",
+   "leader": "Ras Mikael",
+   "w": 8,
+   "quote": "the Oromo cavalry under Ras Mikael charged forward, cutting down the retreating Italians"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The Italian columns march out in parallel",
+   "text": "Baratieri's columns advanced towards the Ethiopian positions to reach the crests of three mountains, Albertone on the left, Arimondi in the centre and Dabormida on the right, with Ellena's reserve following behind Arimondi.",
+   "quote": "Dabormida commanding on the right, Albertone on the left, and Arimondi in the center",
+   "at": {
+    "albertone": [
+     22,
+     36,
+     0
+    ],
+    "arimondi": [
+     48,
+     40,
+     0
+    ],
+    "dabormida": [
+     78,
+     40,
+     0
+    ],
+    "ellena": [
+     48,
+     53,
+     0
+    ],
+    "front": [
+     22,
+     18,
+     180
+    ],
+    "makonnen": [
+     78,
+     16,
+     180
+    ]
+   }
+  },
+  {
+   "title": "Albertone loses his line and is charged",
+   "when": "Around 6:00 a.m.",
+   "text": "Albertone's column went astray and he found himself cut off from the rest of the army. His vanguard was then ferociously charged by Ethiopian units coming down from the mountains.",
+   "quote": "When he became aware of this confusion, Albertone found himself cut off from the rest of the Italian army.",
+   "at": {
+    "albertone": [
+     22,
+     30,
+     0
+    ],
+    "front": [
+     22,
+     23,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "front",
+     "albertone"
+    ]
+   ]
+  },
+  {
+   "title": "Dabormida is cut off in the valley",
+   "text": "Dabormida pushed his brigade into the valley of Mariam Shewito to relieve Albertone, away from where it was meant to go. A gap of about two miles opened, and Ras Makonnen advanced into it.",
+   "quote": "and a gap of about two miles opened between it and the rest of the army. Ras Makonnen lunged forward into the opening, cutting off Dabormida's brigade from the rest of the Italian army.",
+   "at": {
+    "dabormida": [
+     86,
+     36,
+     90
+    ],
+    "makonnen": [
+     70,
+     30,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "makonnen",
+     "dabormida"
+    ]
+   ]
+  },
+  {
+   "title": "Menelik's reserve falls on Albertone, who is routed",
+   "when": "8:30 a.m.",
+   "text": "Menelik sent his guard against Albertone's front while Taytu's troops and Ras Mikael's troops attacked the flanks. The brigade, outflanked, began a fighting retreat that turned into a rout.",
+   "quote": "Menelik ordered his guard to attack the Italians frontally while Taytu's troops attacked the right and Ras Mikael's troops attacked on the left. At 8:30 a.m. Albertone's brigade, now being outflanked, began a fighting retreat that soon turned into a rout.",
+   "at": {
+    "reserve": [
+     38,
+     20,
+     180
+    ],
+    "taytu": [
+     36,
+     30,
+     270
+    ],
+    "mikael": [
+     8,
+     22,
+     180
+    ],
+    "albertone": [
+     20,
+     48,
+     180
+    ]
+   },
+   "how": {
+    "albertone": "rout"
+   },
+   "state": {
+    "albertone": "routed"
+   },
+   "hits": [
+    [
+     "reserve",
+     "albertone",
+     0.25
+    ],
+    [
+     "taytu",
+     "albertone"
+    ],
+    [
+     "mikael",
+     "albertone",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "The Ethiopians split and fall on Arimondi",
+   "text": "After the rout the Ethiopian columns came down on Arimondi's position in two parts. One struck Mount Belah on the Italian right, and the other the junction on the Italian left, held by the 3rd Native Battalion, detached from Ellena.",
+   "quote": "After the rout of Albertone's brigade, the Ethiopian columns descended on Arimondi's position, immediately engaging the Italians in fierce fighting. The Ethiopians split into two columns, one attacking Mount Belah on the Italian right, held by Colonel Francesco Stevani's Bersaglieri, while the other attacked the junction between Mount Rajo and the Chidane Meret on the Italian left",
+   "at": {
+    "galliano": [
+     34,
+     40,
+     0
+    ],
+    "reserve": [
+     58,
+     24,
+     180
+    ],
+    "front": [
+     26,
+     31,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "reserve",
+     "arimondi"
+    ],
+    [
+     "front",
+     "galliano"
+    ]
+   ]
+  },
+  {
+   "title": "The centre gives way and Baratieri orders a retreat",
+   "when": "Around 12:00",
+   "text": "Pressed at the front and outflanked on both sides, Arimondi's brigade gave way. Baratieri ordered a general retreat towards Adi Ugri and Adi Keyh, and Ras Mikael's Oromo cavalry cut down the retreating Italians.",
+   "quote": "Pressed at the front and outflanked on both flanks, the Arimondi brigade gave way at around 12:00. Baratieri then ordered a general retreat in the direction of Adi Ugri and Adi Keyh.",
+   "at": {
+    "arimondi": [
+     64,
+     54,
+     180
+    ],
+    "ellena": [
+     44,
+     57,
+     180
+    ],
+    "galliano": [
+     34,
+     47,
+     180
+    ],
+    "mikael": [
+     48,
+     42,
+     180
+    ]
+   },
+   "how": {
+    "arimondi": "retreat",
+    "ellena": "retreat",
+    "galliano": "rout"
+   },
+   "state": {
+    "arimondi": "routed",
+    "galliano": "routed"
+   },
+   "hits": [
+    [
+     "mikael",
+     "arimondi",
+     -0.2
+    ],
+    [
+     "mikael",
+     "ellena"
+    ]
+   ]
+  },
+  {
+   "title": "Dabormida's brigade is encircled",
+   "text": "Ethiopian troops that had beaten the other brigades moved into the valley. Dabormida's final attack was repulsed with heavy losses, and as the brigade tried to withdraw it found itself effectively encircled.",
+   "quote": "the brigade then launched its final assault. Although some Ethiopian units gave ground, the Italian charge was repulsed with heavy losses and Airaghi was mortally wounded during the fighting. A retreat was ordered, with instructions to maintain discipline and cohesion. However, as the troops attempted to withdraw toward the mouth of the valley, they encountered large numbers of Ethiopian forces occupying the surrounding plain. The brigade found itself effectively encircled.",
+   "at": {
+    "dabormida": [
+     84,
+     36,
+     270
+    ],
+    "makonnen": [
+     76,
+     36,
+     90
+    ],
+    "reserve": [
+     78,
+     22,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "dabormida",
+     "makonnen"
+    ],
+    [
+     "reserve",
+     "dabormida"
+    ],
+    [
+     "makonnen",
+     "dabormida",
+     0.2
+    ]
+   ]
+  }
+ ]
+}

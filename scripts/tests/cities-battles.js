@@ -8,7 +8,7 @@ const read = f => fs.readFileSync(path.join(R, f), 'utf8');
 (async () => {
   const SD = new Function(read('shared-data.js').replace(/^\s*const /gm, 'var ').replace(/\nif \(typeof module[\s\S]*$/, '') + '\n;return {EMPIRES, PROFILE_KINDS, profileUrl, profileSpanText, toSlug}')();
   const cities = SD.EMPIRES.filter(e => e.kind === 'city'), battles = SD.EMPIRES.filter(e => e.kind === 'battle');
-  ok('the kinds exist with six sections and four facts each', ['city', 'battle'].every(k => SD.PROFILE_KINDS[k] && SD.PROFILE_KINDS[k].sections.length === 6 && SD.PROFILE_KINDS[k].facts.length === 4) && cities.length >= 20 && battles.length >= 20, [cities.length, battles.length]);
+  ok('the kinds exist with six sections and four facts each', ['city', 'battle'].every(k => SD.PROFILE_KINDS[k] && SD.PROFILE_KINDS[k].sections.length === 6 && SD.PROFILE_KINDS[k].facts.length === 4) && cities.length >= 20 && battles.length >= 18, [cities.length, battles.length]);
   const bad = [];
   for (const e of cities.concat(battles)) { const u = SD.profileUrl(e), f = path.join(R, u);
     if (!fs.existsSync(f)) { bad.push('no page ' + u); continue; } const h = fs.readFileSync(f, 'utf8');
@@ -29,7 +29,7 @@ const read = f => fs.readFileSync(path.join(R, f), 'utf8');
     const p = await ctx.newPage(); p.on('pageerror', e => errs.push(String(e))); const V = vp.width + ': ';
     for (const k of ['city', 'battle']) { await p.goto(base + '/profiles?kind=' + k, { waitUntil: 'domcontentloaded' }); await p.waitForTimeout(1500);
       const n = await p.evaluate(() => ({ cards: document.querySelectorAll('a.empire-thumb').length, wide: document.documentElement.scrollWidth - innerWidth, txt: document.body.innerText.length }));
-      ok(V + '/profiles?kind=' + k + ' lists the profiles', n.cards >= 20 && n.wide <= 0, n); }
+      ok(V + '/profiles?kind=' + k + ' lists the profiles', n.cards >= (k === 'battle' ? battles.length : 20) && n.wide <= 0, n); }
     await p.goto(base + '/city/baghdad', { waitUntil: 'domcontentloaded' }); await p.waitForTimeout(1200);
     const c = await p.evaluate(() => ({ h1: (document.querySelector('h1') || {}).textContent, secs: document.querySelectorAll('.profile-section-block').length, wide: document.documentElement.scrollWidth - innerWidth, facts: document.querySelectorAll('.key-facts dt, .facts-box dt, .info-facts dt').length }));
     ok(V + 'a city page: title, six sections, nothing wider than the screen', /Baghdad/.test(c.h1) && c.secs === 6 && c.wide <= 0, c);

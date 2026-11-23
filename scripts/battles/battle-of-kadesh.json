@@ -1,0 +1,381 @@
+{
+ "slug": "battle-of-kadesh",
+ "name": "Battle of Kadesh",
+ "article": "battles1/wp/battle-of-kadesh",
+ "field": {
+  "north": 0
+ },
+ "note": "The Egyptians came from the south and Kadesh lay to the north, so the plan puts the Hittites north of the Orontes and the Egyptian camp south of it. The Orontes, the ford and the places of the divisions are set by judgement: the accounts name the divisions' positions only against towns (Shabtuna, Arnaim) that the plan does not draw, and do not say exactly where the camp lay. The Egyptian division of Set was marching on the road and is not drawn, as the account does not place it in the fighting. The Egyptian accounts are the main source, and a Hittite account of the outcome differs: it has Ramesses leaving in defeat.",
+ "terrain": [
+  {
+   "k": "river",
+   "name": "Orontes River",
+   "at": [
+    [
+     4,
+     27
+    ],
+    [
+     26,
+     25
+    ],
+    [
+     50,
+     26
+    ],
+    [
+     74,
+     25
+    ],
+    [
+     96,
+     27
+    ]
+   ],
+   "lab": [
+    86,
+    22
+   ],
+   "quote": "the Hittite chariots crossed the river and charged the middle of the Ra division"
+  },
+  {
+   "k": "town",
+   "name": "Kadesh",
+   "at": [
+    60,
+    17
+   ],
+   "lab": [
+    60,
+    12.5
+   ],
+   "quote": "Muwatalli II still commanded a large force of reserve chariotry and infantry, as well as the walls of the town"
+  }
+ ],
+ "sides": [
+  {
+   "id": "e",
+   "name": "Egyptians"
+  },
+  {
+   "id": "h",
+   "name": "Hittites and allies"
+  }
+ ],
+ "units": [
+  {
+   "id": "amun",
+   "side": "e",
+   "k": "infantry",
+   "name": "Amun division",
+   "short": "Amun",
+   "w": 10,
+   "quote": "Ramesses was alone with his bodyguard and the Amun division."
+  },
+  {
+   "id": "guard",
+   "side": "e",
+   "k": "guard",
+   "name": "Ramesses and his bodyguard",
+   "short": "Guard",
+   "leader": "Ramesses II",
+   "w": 6,
+   "quote": "Ramesses II personally led several charges into the Hittite ranks along with his personal guard",
+   "leaderEntry": "ramesses-ii"
+  },
+  {
+   "id": "camp",
+   "side": "e",
+   "k": "camp",
+   "name": "Egyptian camp",
+   "short": "Camp",
+   "quote": "the Hittite chariotry rounded north and attacked the Egyptian camp through the Amun shield wall"
+  },
+  {
+   "id": "re",
+   "side": "e",
+   "k": "infantry",
+   "name": "Re division",
+   "short": "Re",
+   "w": 10,
+   "quote": "The Ra division had almost arrived at the camp."
+  },
+  {
+   "id": "ptah",
+   "side": "e",
+   "k": "infantry",
+   "name": "Ptah division",
+   "short": "Ptah",
+   "w": 10,
+   "quote": "Finally, the Ptah division arrived from the south, threatening the Hittite rear."
+  },
+  {
+   "id": "nearin",
+   "side": "e",
+   "k": "light",
+   "name": "Ne'arin from Amurru",
+   "short": "Ne'arin",
+   "w": 6,
+   "quote": "the Ne'arin troop contingent from Amurru suddenly arrived, surprising the Hittites"
+  },
+  {
+   "id": "hchar",
+   "side": "h",
+   "k": "chariots",
+   "name": "Hittite chariotry",
+   "short": "Chariots",
+   "w": 14,
+   "quote": "the Hittite chariots crossed the river and charged the middle of the Ra division"
+  },
+  {
+   "id": "hres",
+   "side": "h",
+   "k": "guard",
+   "name": "Hittite reserve",
+   "short": "Reserve",
+   "leader": "Muwatalli II",
+   "w": 10,
+   "quote": "Muwatalli II still commanded a large force of reserve chariotry and infantry",
+   "leaderEntry": "muwatalli-ii"
+  },
+  {
+   "id": "hcount",
+   "side": "h",
+   "k": "chariots",
+   "name": "Hittite counter-attack force",
+   "short": "Counter",
+   "w": 10,
+   "quote": "he ordered another thousand chariots to counter-attack, led by high nobles close to the king"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The Hittites wait behind Kadesh",
+   "when": "9 day of the third month of Shemu, Year 5",
+   "text": "Muwatalli had placed his troops behind Old Kadesh. Ramesses had been told that the Hittite army was far off, so he was with the Amun division and his bodyguard while the Re division was still coming up to the camp.",
+   "quote": "Muwatalli had positioned his troops behind \"Old Kadesh\".",
+   "at": {
+    "hchar": [
+     38,
+     11,
+     180
+    ],
+    "hres": [
+     78,
+     10,
+     180
+    ],
+    "amun": [
+     62,
+     42,
+     0
+    ],
+    "guard": [
+     80,
+     44,
+     0
+    ],
+    "camp": [
+     50,
+     46,
+     0
+    ],
+    "re": [
+     22,
+     50,
+     90
+    ]
+   }
+  },
+  {
+   "title": "Hittite chariots cross the river and scatter the Re division",
+   "text": "The Hittite chariots crossed the river and charged the middle of the Re division as it marched towards Ramesses. Caught in the open, the division scattered in all directions.",
+   "quote": "The Ra division was caught in the open and scattered in all directions.",
+   "at": {
+    "hchar": [
+     24,
+     38,
+     180
+    ],
+    "re": [
+     36,
+     52,
+     45
+    ]
+   },
+   "how": {
+    "re": "rout"
+   },
+   "state": {
+    "re": "routed"
+   },
+   "hits": [
+    [
+     "hchar",
+     "re"
+    ]
+   ]
+  },
+  {
+   "title": "The chariots attack the camp",
+   "text": "The Hittite chariotry rounded to the north and attacked the Egyptian camp through the Amun shield wall, and panic spread among the Amun division. Some of the Re division fled north to the camp, pursued by Hittite chariots.",
+   "quote": "The Hittite chariotry rounded north and attacked the Egyptian camp through the Amun shield wall, creating panic among the Amun division.",
+   "at": {
+    "hchar": [
+     42,
+     36,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "hchar",
+     "camp"
+    ],
+    [
+     "hchar",
+     "amun",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "Ramesses charges into the Hittite ranks",
+   "text": "The momentum of the Hittite attack waned as chariots were impeded by obstacles in the camp. Ramesses defeated the first attackers and personally led several charges with his guard, some Amun chariots and survivors of the Re division.",
+   "quote": "Ramesses II personally led several charges into the Hittite ranks along with his personal guard, some chariots from his Amun division, and survivors from the routed Ra division.",
+   "at": {
+    "guard": [
+     53,
+     38,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "guard",
+     "hchar"
+    ]
+   ]
+  },
+  {
+   "title": "The Egyptian counter-attack drives them to the river",
+   "text": "The Hittites, believing their enemies routed, stopped to plunder the camp. An Egyptian counter-attack then drove them back towards the Orontes and away from the camp, and in the pursuit lighter Egyptian chariots overtook Hittite chariots.",
+   "quote": "They were subsequently driven back towards the Orontes River and away from the camp by an Egyptian counterattack.",
+   "at": {
+    "hchar": [
+     18,
+     30,
+     0
+    ],
+    "guard": [
+     44,
+     36,
+     270
+    ],
+    "amun": [
+     58,
+     38,
+     270
+    ]
+   },
+   "how": {
+    "hchar": "retreat"
+   },
+   "hits": [
+    [
+     "guard",
+     "hchar"
+    ],
+    [
+     "amun",
+     "hchar",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "A second Hittite counter-attack meets new arrivals",
+   "text": "As the retreat reached the river, Muwatalli ordered another thousand chariots to counter-attack towards the camp. The Ne'arin from Amurru arrived and surprised them, and the Ptah division arrived from the south and threatened the Hittite rear.",
+   "quote": "As the Hittite forces approached the same Egyptian camp again, the Ne'arin troop contingent from Amurru suddenly arrived, surprising the Hittites.",
+   "at": {
+    "hcount": [
+     38,
+     32,
+     180
+    ],
+    "guard": [
+     48,
+     38,
+     270
+    ],
+    "nearin": [
+     80,
+     34,
+     270
+    ],
+    "ptah": [
+     66,
+     56,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "hcount",
+     "camp"
+    ],
+    [
+     "nearin",
+     "hcount",
+     0.2
+    ],
+    [
+     "ptah",
+     "hcount",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "The Hittites are pinned against the Orontes",
+   "text": "After six unsuccessful charges the Hittite forces were almost surrounded and the survivors were pinned against the Orontes. They abandoned their chariots and tried to swim the river, and many drowned. The Hittites held on to Kadesh.",
+   "quote": "After six unsuccessful Hittite charges, their forces were almost surrounded and the survivors were pinned against the Orontes.",
+   "at": {
+    "hcount": [
+     44,
+     22,
+     0
+    ],
+    "hchar": [
+     18,
+     22,
+     0
+    ]
+   },
+   "how": {
+    "hcount": "rout",
+    "hchar": "rout"
+   },
+   "state": {
+    "hcount": "routed",
+    "hchar": "routed"
+   },
+   "hits": [
+    [
+     "ptah",
+     "hcount",
+     -0.2
+    ],
+    [
+     "nearin",
+     "hcount",
+     0.2
+    ],
+    [
+     "amun",
+     "hchar"
+    ]
+   ]
+  }
+ ]
+}

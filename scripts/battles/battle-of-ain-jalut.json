@@ -1,0 +1,527 @@
+{
+ "slug": "battle-of-ain-jalut",
+ "name": "Battle of Ain Jalut",
+ "article": "battles1/wp/battle-of-ain-jalut",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "to Baysan →",
+    "at": [
+     97,
+     58
+    ]
+   },
+   {
+    "name": "← from Acre",
+    "at": [
+     3,
+     6
+    ]
+   }
+  ]
+ },
+ "note": "The highlands where the Mamluks hid are placed on their side of the field; the accounts do not say exactly where they lay.",
+ "terrain": [
+  {
+   "k": "mountain",
+   "name": "Mount Gilboa",
+   "at": [
+    [
+     38,
+     50
+    ],
+    [
+     52,
+     45
+    ],
+    [
+     70,
+     46
+    ],
+    [
+     88,
+     50
+    ],
+    [
+     100,
+     56
+    ],
+    [
+     100,
+     62
+    ],
+    [
+     34,
+     62
+    ]
+   ],
+   "quote": "the slopes of Gilboa secured a flank and supplied commanding observation points"
+  },
+  {
+   "k": "stream",
+   "name": "Wadi Jalut",
+   "unnamed": true,
+   "at": [
+    [
+     40,
+     44.5
+    ],
+    [
+     55,
+     41.5
+    ],
+    [
+     72,
+     42
+    ],
+    [
+     88,
+     45.5
+    ],
+    [
+     100,
+     49
+    ]
+   ],
+   "lab": [
+    78,
+    40.4
+   ],
+   "quote": "Wadi (Nahr) Jalut runs along the northern base of Gilboa, providing ample water for the horses"
+  },
+  {
+   "k": "spring",
+   "name": "Ain Jalut",
+   "at": [
+    41,
+    45.5
+   ],
+   "lab": [
+    41,
+    49
+   ],
+   "quote": "Ayn Jalut is a perennial spring at the northwestern foot of Mount Gilboa"
+  },
+  {
+   "k": "hill",
+   "name": "Highlands",
+   "unnamed": true,
+   "at": [
+    [
+     0,
+     10
+    ],
+    [
+     14,
+     7
+    ],
+    [
+     26,
+     12
+    ],
+    [
+     30,
+     26
+    ],
+    [
+     27,
+     42
+    ],
+    [
+     18,
+     52
+    ],
+    [
+     0,
+     54
+    ]
+   ],
+   "lab": [
+    8,
+    12.5
+   ],
+   "quote": "hiding the bulk of his force in the highlands"
+  },
+  {
+   "k": "wood",
+   "at": [
+    [
+     5,
+     19
+    ],
+    [
+     16,
+     16
+    ],
+    [
+     24,
+     22
+    ],
+    [
+     25,
+     36
+    ],
+    [
+     17,
+     45
+    ],
+    [
+     5,
+     44
+    ]
+   ],
+   "quote": "the rest of the Mamluk forces concealed among the trees"
+  }
+ ],
+ "sides": [
+  {
+   "id": "m",
+   "name": "Mamluk Sultanate"
+  },
+  {
+   "id": "k",
+   "name": "Mongols of the Ilkhanate and their vassals"
+  }
+ ],
+ "units": [
+  {
+   "id": "baibars",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Mamluk vanguard",
+   "short": "Baibars",
+   "leader": "Baibars",
+   "leaderEntry": "baybars",
+   "w": 9,
+   "quote": "hoping to bait the Mongols with a smaller force, under Baibars"
+  },
+  {
+   "id": "left",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Mamluk left wing",
+   "short": "Left",
+   "w": 11,
+   "quote": "the left wing of the Mamluk army almost destroyed by the Mongol attack"
+  },
+  {
+   "id": "right",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Mamluk right wing",
+   "short": "Right",
+   "w": 11,
+   "quote": "Mamluk forces emerged from hiding and began to fire arrows and attack with their cavalry"
+  },
+  {
+   "id": "qutuz",
+   "side": "m",
+   "k": "guard",
+   "name": "Qutuz’s own unit",
+   "short": "Qutuz",
+   "leader": "Sultan Qutuz",
+   "leaderEntry": "qutuz",
+   "w": 8,
+   "quote": "Some distance away, Qutuz watched with his private legion."
+  },
+  {
+   "id": "mongols",
+   "side": "k",
+   "k": "cavalry",
+   "name": "Mongol army",
+   "short": "Mongols",
+   "leader": "Kitbuqa",
+   "leaderEntry": "kitbuqa",
+   "w": 14,
+   "d": 3.4,
+   "quote": "approximately 10,000 troops west of the Euphrates under the command of Kitbuqa"
+  },
+  {
+   "id": "vassals",
+   "side": "k",
+   "k": "cavalry",
+   "name": "Georgian and Armenian troops",
+   "short": "Vassals",
+   "w": 8,
+   "quote": "troops from the Kingdom of Georgia and about 500 troops from the Armenian Kingdom of Cilicia"
+  },
+  {
+   "id": "syrians",
+   "side": "k",
+   "k": "cavalry",
+   "name": "Syrian contingents",
+   "short": "Syrians",
+   "w": 8,
+   "quote": "contingents of two Ayyubid princes, al-Ashraf Musa and al-Said Hasan"
+  },
+  {
+   "id": "camp",
+   "side": "k",
+   "k": "camp",
+   "name": "Mongol camp",
+   "short": "Camp",
+   "quote": "he found their camp already in place"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The Mongols hold the spring",
+   "when": "3 September 1260",
+   "text": "Kitbuqa reached Ain Jalut first and camped by the spring, with Mount Gilboa covering one flank. Baibars, leading the Mamluk vanguard, sighted the camp from a height, while Qutuz hid the bulk of his army in the highlands.",
+   "quote": "The evidence strongly indicates the Mongols arrived first and took up their positions: when Baybars reached a nearby height, he found their camp already in place.",
+   "at": {
+    "camp": [
+     64,
+     31,
+     0
+    ],
+    "mongols": [
+     55,
+     29,
+     270
+    ],
+    "vassals": [
+     56,
+     15.5,
+     270
+    ],
+    "syrians": [
+     59,
+     38,
+     270
+    ],
+    "baibars": [
+     35,
+     28,
+     90
+    ],
+    "left": [
+     15,
+     37,
+     90
+    ],
+    "right": [
+     15,
+     23,
+     90
+    ],
+    "qutuz": [
+     8,
+     30,
+     90
+    ]
+   },
+   "state": {
+    "left": "hidden",
+    "right": "hidden",
+    "qutuz": "hidden"
+   }
+  },
+  {
+   "title": "The Mongols advance and Baibars strikes and runs",
+   "text": "The Mongols moved first. For many hours Baibars provoked them with hit-and-run attacks and kept most of his men out of the fight.",
+   "quote": "Both armies fought for many hours, with Baibars usually implementing hit-and-run tactics to provoke the Mongol troops and to preserve the bulk of his troops intact.",
+   "at": {
+    "mongols": [
+     46,
+     29,
+     270
+    ],
+    "vassals": [
+     47,
+     15.5,
+     270
+    ],
+    "syrians": [
+     50,
+     38,
+     270
+    ],
+    "baibars": [
+     38,
+     28,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "baibars",
+     "mongols"
+    ],
+    [
+     "mongols",
+     "baibars",
+     -0.3
+    ]
+   ]
+  },
+  {
+   "title": "The feigned retreat",
+   "text": "After another heavy Mongol assault Baibars and his men pretended to break and rode for the highlands. Kitbuqa did not suspect a trick and followed with all his troops.",
+   "quote": "his men feigned a final retreat to draw the Mongols into the highlands to be ambushed by the rest of the Mamluk forces concealed among the trees",
+   "at": {
+    "baibars": [
+     23,
+     29.5,
+     270
+    ],
+    "mongols": [
+     33,
+     29.5,
+     270
+    ],
+    "vassals": [
+     35,
+     15.5,
+     270
+    ],
+    "syrians": [
+     37,
+     39,
+     270
+    ]
+   },
+   "how": {
+    "baibars": "feint"
+   }
+  },
+  {
+   "title": "The trap closes",
+   "text": "When the Mongols reached the highlands the hidden Mamluks came out, shooting arrows and charging with their cavalry. The Mongols found themselves surrounded.",
+   "quote": "When the Mongols reached the highlands, Mamluk forces emerged from hiding and began to fire arrows and attack with their cavalry. The Mongols then found themselves surrounded on all sides.",
+   "at": {
+    "baibars": [
+     22,
+     29.5,
+     90
+    ],
+    "left": [
+     29,
+     46,
+     60
+    ],
+    "right": [
+     28,
+     10,
+     110
+    ]
+   },
+   "state": {
+    "left": "shown",
+    "right": "shown"
+   },
+   "hits": [
+    [
+     "left",
+     "syrians"
+    ],
+    [
+     "right",
+     "vassals"
+    ],
+    [
+     "baibars",
+     "mongols"
+    ]
+   ]
+  },
+  {
+   "title": "The Mongols break the left, and Qutuz charges",
+   "text": "The Mongols fought hard to break out and nearly destroyed the Mamluk left wing. Qutuz threw off his helmet so that his men could see him and led his own unit towards the weakened side.",
+   "quote": "When Qutuz saw the left wing of the Mamluk army almost destroyed by the Mongol attack, he threw away his combat helmet",
+   "at": {
+    "mongols": [
+     33,
+     35.5,
+     210
+    ],
+    "syrians": [
+     44,
+     41,
+     250
+    ],
+    "left": [
+     25,
+     48,
+     60
+    ],
+    "qutuz": [
+     16,
+     41,
+     80
+    ]
+   },
+   "how": {
+    "left": "retreat"
+   },
+   "state": {
+    "left": "routed",
+    "qutuz": "shown"
+   },
+   "hits": [
+    [
+     "mongols",
+     "left"
+    ],
+    [
+     "qutuz",
+     "mongols"
+    ]
+   ]
+  },
+  {
+   "title": "Flight towards Baysan",
+   "text": "The Mongols were pushed back and fled towards Baysan with Qutuz’s men behind them. They rallied and counter-attacked, but the fight turned against them and Kitbuqa was killed with most of his army.",
+   "quote": "The Mongols were pushed back and fled to a vicinity of Beisan, followed by Qutuz's forces, but they managed to reorganize and to return to the battlefield, making a successful counterattack.",
+   "at": {
+    "mongols": [
+     79,
+     31,
+     90
+    ],
+    "vassals": [
+     83,
+     19,
+     90
+    ],
+    "syrians": [
+     86,
+     39.5,
+     90
+    ],
+    "qutuz": [
+     67,
+     31,
+     90
+    ],
+    "right": [
+     62,
+     18,
+     90
+    ],
+    "baibars": [
+     58,
+     28,
+     90
+    ]
+   },
+   "how": {
+    "mongols": "rout",
+    "vassals": "rout",
+    "syrians": "rout"
+   },
+   "state": {
+    "mongols": "routed",
+    "vassals": "routed",
+    "syrians": "routed"
+   },
+   "hits": [
+    [
+     "qutuz",
+     "mongols"
+    ]
+   ]
+  }
+ ]
+}

@@ -50,6 +50,7 @@
 <script src="scripts/state-rulers.js"></script>
 <script src="scripts/life-family.js"></script>
 <script src="scripts/journey-links.js"></script>
+<script src="scripts/battle-maps.js"></script>
 <script src="scripts/profile-section-sources.js"></script>
 <script src="scripts/essay-links.js"></script>
 <script src="scripts/kids-stories.js"></script>
@@ -315,6 +316,20 @@ function faithMapHtml(emp) {
     '      <p class="fm-lede">Where it began, how it spread, and where it was a main faith (a bright glow) or held communities (a faint one), century by century' + (emp.end == null ? ' to today' : ' to its last places') + '. Press Play or move the slider, turn the globe, and tap a glow or a mark to read about it.</p>\n' +
     '      <div class="faith-map" data-faith="' + slug + '"><p class="fm-loading">The map opens here once the page has loaded.</p></div>\n' +
     '      <p class="fm-more"><a href="/faiths?faith=' + slug + '">Compare it with another faith &rarr;</a></p>\n' +
+    '    </section>';
+}
+
+// "How it was fought" (battle-map.js, data/battles/<slug>.json written by scripts/tools/make-battle-maps.js from
+// scripts/battles/<slug>.json): the battles whose accounts give their formations. The phases stand in the page as a list
+// (read without scripts, by screen readers and in print); the player takes its place on screen.
+function hasBattleMap(emp) { return profileKind(emp) === 'battle' && typeof BATTLE_MAPS !== 'undefined' && !!BATTLE_MAPS[emp.name]; }
+function battleMapHtml(emp) {
+  if (!hasBattleMap(emp)) return '';
+  var b = BATTLE_MAPS[emp.name];
+  return '<section class="battle-field" id="how-it-was-fought" data-battle="' + b[0] + '" data-v="' + b[1] + '" aria-labelledby="battle-field-title">\n' +
+    '      <h2 class="profile-section-title" id="battle-field-title">How it was fought</h2>\n' +
+    '      <p class="bf-lede">The field and the armies, phase by phase. Press Play, or step through with Next and Back.</p>\n' +
+    '      <ol class="bf-phases">' + b[2].map(function (p) { return '<li><b>' + esc(p[0]) + '</b> ' + esc(p[1]) + '</li>'; }).join('') + '</ol>\n' +
     '    </section>';
 }
 
@@ -585,10 +600,11 @@ factRows(name, emp) +
 '    </div>\n\n' +
 (kidTaleHtml(name) ? '    ' + kidTaleHtml(name) + '\n\n' : '') +
 (glanceOf(name) ? '    ' + glanceHtml(name) + '\n\n' : '') +
-'    ' + tocHtml(sectionKeys, profile, [].concat(glanceOf(name) ? [['at-a-glance', 'At a glance']] : [], isPolity ? [['empire-stats-panel', 'Historical analysis'], ['timeline', 'Rise &amp; fall']] : (glanceOf(name) ? [['timeline', 'Timeline']] : []), hasFaithMap(emp) ? [['faith-map', 'Spread through the centuries']] : [], hasScribe(emp) ? [['write', 'Write in ' + esc(name)]] : []), tyHtml ? [['test-yourself', 'Test yourself']] : []) + '\n\n' +
+'    ' + tocHtml(sectionKeys, profile, [].concat(glanceOf(name) ? [['at-a-glance', 'At a glance']] : [], isPolity ? [['empire-stats-panel', 'Historical analysis'], ['timeline', 'Rise &amp; fall']] : (glanceOf(name) ? [['timeline', 'Timeline']] : []), hasFaithMap(emp) ? [['faith-map', 'Spread through the centuries']] : [], hasBattleMap(emp) ? [['how-it-was-fought', 'How it was fought']] : [], hasScribe(emp) ? [['write', 'Write in ' + esc(name)]] : []), tyHtml ? [['test-yourself', 'Test yourself']] : []) + '\n\n' +
 (isPolity ? '    <div id="empire-stats-panel" data-empire="'+esc(name)+'"></div>\n\n' : '') +
 '    ' + riseFallHtml(emp, name, isPolity) + '\n\n' +
 (hasFaithMap(emp) ? '    ' + faithMapHtml(emp) + '\n\n' : '') +
+(hasBattleMap(emp) ? '    ' + battleMapHtml(emp) + '\n\n' : '') +
 (hasScribe(emp) ? '    ' + scribeHtml(emp) + '\n\n' : '') +
 noProfileNote + '\n' +
 (sectionsHtml ? '    ' + sectionsHtml + '\n' : '') +
@@ -614,6 +630,7 @@ noProfileNote + '\n' +
 '<script src="/connections-map.js?v=15" defer>\x3C/script>\n' +
 '<script>window.addEventListener("load",function(){var el=document.getElementById("mini-cx"),sec=document.getElementById("connections");if(!el||!window.ConnectionsMap||!("IntersectionObserver" in window))return;sec.hidden=false;var io=new IntersectionObserver(function(es){if(!es[0].isIntersecting)return;io.disconnect();ConnectionsMap.load().then(function(){if(!ConnectionsMap.degree(el.dataset.id)){sec.hidden=true;return;}ConnectionsMap.render(el,el.dataset.id,{compact:true,onSelect:function(id){location.href="/connections#"+id;}});});},{rootMargin:"600px"});io.observe(sec);});\x3C/script>\n' : '') +
 (hasFaithMap(emp) ? '<script>(function(){var el=document.querySelector(".faith-map[data-faith]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/faith-map.js";s.onload=function(){FaithMap.mount(el,el.getAttribute("data-faith"));};document.head.appendChild(s);};if(location.hash==="#faith-map"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();\x3C/script>\n' : '') +
+(hasBattleMap(emp) ? '<script>(function(){var el=document.querySelector(".battle-field[data-battle]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/battle-map.js";s.onload=function(){fetch("/data/battles/"+el.getAttribute("data-battle")+".json?v="+el.getAttribute("data-v")).then(function(r){return r.json();}).then(function(d){BattleMap.mount(el,d);}).catch(function(){});};document.head.appendChild(s);};if(location.hash==="#how-it-was-fought"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();\x3C/script>\n' : '') +
 (tyHtml ? '<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();\x3C/script>\n' : '') +
 (hasScribe(emp) ? '<script>(function(){var el=document.querySelector(".scribe[data-lang]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/scribe.js";s.onload=function(){Scribe.mount(el,el.getAttribute("data-lang"));};document.head.appendChild(s);};if(location.hash==="#write"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();\x3C/script>\n' : '') +
 '<script>\n' +

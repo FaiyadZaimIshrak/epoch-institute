@@ -1,0 +1,414 @@
+{
+ "slug": "battle-of-hattin",
+ "name": "Battle of Hattin",
+ "article": "battles1/wp/battle-of-hattin",
+ "field": {
+  "north": null,
+  "edges": [
+   {
+    "name": "← from Acre",
+    "at": [
+     4,
+     30
+    ]
+   }
+  ]
+ },
+ "note": "The accounts do not give a map of the field. The Springs of Kafr Hattin, the Horns of Hattin and the lake are placed by judgement so that the march runs from left to right towards the water; the positions of the Frankish divisions in the march are not stated beyond the vanguard and rearguard, and the main body is placed between them.",
+ "terrain": [
+  {
+   "k": "lake",
+   "name": "Lake Tiberias",
+   "at": [
+    [
+     60,
+     62
+    ],
+    [
+     66,
+     57
+    ],
+    [
+     80,
+     53
+    ],
+    [
+     96,
+     51
+    ],
+    [
+     100,
+     56
+    ],
+    [
+     100,
+     62
+    ]
+   ],
+   "lab": [
+    80,
+    58.5
+   ],
+   "quote": "a caravan of camels bring goatskins of water up from Lake Tiberias"
+  },
+  {
+   "k": "town",
+   "name": "Tiberias",
+   "at": [
+    92,
+    47
+   ],
+   "lab": [
+    92,
+    44
+   ],
+   "quote": "Saladin laid siege to Tiberias, where Raymond III's wife, Eschiva of Bures, was trapped"
+  },
+  {
+   "k": "spring",
+   "name": "Springs of Kafr Hattin",
+   "at": [
+    52,
+    30
+   ],
+   "lab": [
+    52,
+    33
+   ],
+   "quote": "veer to the left in the direction of the Springs of Kafr Hattin, only 6 miles (9.7 km) away"
+  },
+  {
+   "k": "village",
+   "name": "Meskenah",
+   "at": [
+    30,
+    8
+   ],
+   "lab": [
+    30,
+    5
+   ],
+   "quote": "forced to pitch camp overnight on the arid plateau near the village of Meskenah"
+  },
+  {
+   "k": "hill",
+   "name": "Horns of Hattin",
+   "at": [
+    [
+     56,
+     4
+    ],
+    [
+     66,
+     3
+    ],
+    [
+     78,
+     4
+    ],
+    [
+     88,
+     7
+    ],
+    [
+     90,
+     14
+    ],
+    [
+     78,
+     17
+    ],
+    [
+     64,
+     18
+    ],
+    [
+     56,
+     12
+    ]
+   ],
+   "lab": [
+    78,
+    5
+   ],
+   "quote": "Most of the Christian infantry had effectively deserted by fleeing en masse onto the Horns of Hattin"
+  }
+ ],
+ "sides": [
+  {
+   "id": "a",
+   "name": "Ayyubid army under Saladin"
+  },
+  {
+   "id": "f",
+   "name": "Crusader army"
+  }
+ ],
+ "units": [
+  {
+   "id": "left",
+   "side": "a",
+   "k": "horse-archers",
+   "name": "Muslim left wing",
+   "short": "Left",
+   "leader": "Gökböri",
+   "w": 10,
+   "quote": "Gökböri commanded the left of the army, Saladin himself commanded the centre and his nephew, Al-Muzaffar Umar (Taki ad-Din), the right.",
+   "leaderEntry": "muzaffar-al-din-gokbori"
+  },
+  {
+   "id": "centre",
+   "side": "a",
+   "k": "cavalry",
+   "name": "Muslim centre",
+   "short": "Centre",
+   "leader": "Saladin",
+   "w": 12,
+   "quote": "Gökböri commanded the left of the army, Saladin himself commanded the centre and his nephew, Al-Muzaffar Umar (Taki ad-Din), the right.",
+   "leaderEntry": "saladin"
+  },
+  {
+   "id": "right",
+   "side": "a",
+   "k": "cavalry",
+   "name": "Muslim right wing",
+   "short": "Right",
+   "leader": "Al-Muzaffar Umar",
+   "w": 10,
+   "quote": "Gökböri commanded the left of the army, Saladin himself commanded the centre and his nephew, Al-Muzaffar Umar (Taki ad-Din), the right."
+  },
+  {
+   "id": "van",
+   "side": "f",
+   "k": "cavalry",
+   "name": "Crusader first division",
+   "short": "Vanguard",
+   "leader": "Raymond of Tripoli",
+   "w": 10,
+   "quote": "Raymond led the first division with Raymond of Antioch",
+   "leaderEntry": "raymond-iii-of-tripoli"
+  },
+  {
+   "id": "main",
+   "side": "f",
+   "k": "cavalry",
+   "name": "Crusader main body",
+   "short": "Main body",
+   "leader": "Amalric",
+   "w": 12,
+   "quote": "Gerard and Raynald advised Guy to form battle lines and attack, which was done by Guy's brother Amalric."
+  },
+  {
+   "id": "rear",
+   "side": "f",
+   "k": "cavalry",
+   "name": "Crusader rearguard",
+   "short": "Rearguard",
+   "leader": "Balian",
+   "w": 9,
+   "quote": "while Balian and Joscelin III of Edessa formed the rearguard.",
+   "leaderEntry": "balian-of-ibelin"
+  },
+  {
+   "id": "inf",
+   "side": "f",
+   "k": "infantry",
+   "name": "Crusader infantry",
+   "short": "Infantry",
+   "w": 8,
+   "quote": "Most of the Christian infantry had effectively deserted by fleeing en masse onto the Horns of Hattin"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The Crusaders camp on the dry plateau",
+   "when": "Night of 3 July 1187",
+   "text": "The Frankish army could not reach Tiberias by nightfall and turned towards the springs of Kafr Hattin. The Muslims placed themselves between the Franks and the water, so the Franks camped on the arid plateau, closely surrounded.",
+   "quote": "The Muslims positioned themselves between the Frankish army and the water",
+   "at": {
+    "van": [
+     40,
+     24,
+     90
+    ],
+    "main": [
+     32,
+     34,
+     90
+    ],
+    "rear": [
+     25,
+     44,
+     90
+    ],
+    "inf": [
+     18,
+     32,
+     90
+    ],
+    "left": [
+     66,
+     44,
+     270
+    ],
+    "centre": [
+     68,
+     30,
+     270
+    ],
+    "right": [
+     66,
+     16,
+     270
+    ]
+   }
+  },
+  {
+   "title": "Archers harass the Franks and the line advances",
+   "when": "Morning of 4 July",
+   "text": "Gökböri's mounted archers shot at the Franks, who were blinded by smoke. Guy's brother Amalric formed the battle lines, and the army set out for the springs of Hattin, where Saladin's army blocked the way forward and any retreat.",
+   "quote": "The Franks came under fire from Muslim mounted archers from the division commanded by Gökböri",
+   "at": {
+    "van": [
+     48,
+     24,
+     90
+    ],
+    "main": [
+     40,
+     34,
+     90
+    ],
+    "rear": [
+     33,
+     44,
+     90
+    ],
+    "inf": [
+     26,
+     32,
+     90
+    ],
+    "left": [
+     58,
+     44,
+     270
+    ],
+    "centre": [
+     62,
+     30,
+     270
+    ],
+    "right": [
+     58,
+     16,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "left",
+     "van"
+    ],
+    [
+     "centre",
+     "main",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "Raymond charges twice towards the lake",
+   "text": "Count Raymond charged twice to break through to the water at Lake Tiberias. The second charge took him to the lake and he made his way to Tyre.",
+   "quote": "Count Raymond launched two charges in an attempt to break through to the water supply at Lake Tiberias.",
+   "at": {
+    "van": [
+     86,
+     38,
+     120
+    ]
+   },
+   "hits": [
+    [
+     "van",
+     "left",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "The infantry flee to the Horns and Guy pitches tents",
+   "text": "After Raymond escaped, most of the Christian infantry fled onto the Horns of Hattin and took no further part. Guy tried to pitch the tents again to block the Muslim cavalry, while the knights and mounted serjeants fought on.",
+   "quote": "Guy attempted to pitch the tents again to block the Muslim cavalry.",
+   "at": {
+    "inf": [
+     84,
+     9,
+     0
+    ],
+    "main": [
+     50,
+     20,
+     90
+    ],
+    "rear": [
+     42,
+     36,
+     90
+    ]
+   },
+   "state": {
+    "van": "gone"
+   },
+   "hits": [
+    [
+     "centre",
+     "main",
+     0.2
+    ],
+    [
+     "right",
+     "main",
+     -0.1
+    ]
+   ]
+  },
+  {
+   "title": "Three charges and the fall of Guy's tent",
+   "text": "The Crusaders, surrounded, made three charges on Saladin's position. The Muslims rallied each time and drove them back to the hill, and then Guy's tent fell.",
+   "quote": "Now the crusaders were surrounded and, despite three desperate charges on Saladin's position, were broken up and defeated.",
+   "at": {
+    "main": [
+     58,
+     27,
+     90
+    ],
+    "centre": [
+     74,
+     28,
+     270
+    ],
+    "right": [
+     66,
+     13,
+     270
+    ]
+   },
+   "state": {
+    "main": "destroyed"
+   },
+   "hits": [
+    [
+     "centre",
+     "main",
+     -0.2
+    ],
+    [
+     "right",
+     "main",
+     -0.1
+    ]
+   ]
+  }
+ ]
+}
