@@ -1,0 +1,266 @@
+{
+ "slug": "drake",
+ "title": "Francis Drake's Voyage Round the World",
+ "years": "1577–1580",
+ "traveller": "Francis Drake",
+ "intro": "Francis Drake sailed from Plymouth in December 1577 with five ships, secretly commissioned by Queen Elizabeth I to raid the Spanish colonies on the Pacific coast of the Americas. He told his crew they were bound on a trading voyage to the Levant.",
+ "ending": "Drake reached Plymouth on 26 September 1580 in the Golden Hind with 59 crew, a cargo of spices and Spanish treasure, the second leader of a circumnavigation with his ship intact and the first Englishman to complete one. Elizabeth knighted him aboard the ship in 1581.",
+ "legs": [
+  {
+   "title": "Across the Atlantic and round South America",
+   "stops": [
+    {
+     "place": "Plymouth",
+     "entry": null,
+     "wp": "Plymouth",
+     "date": "13 December 1577",
+     "year": 1577,
+     "by": "sea",
+     "text": "Drake's fleet had first set out in November but a storm in the Channel damaged two ships and forced it back for repairs lasting nearly a month. It finally left Plymouth on 13 December and sailed south into the Atlantic.",
+     "quote": "They finally left Plymouth on 13 December heading South into the Atlantic, but poor winds led them to their first port of call two weeks later at Mogador off Morocco.",
+     "ll": [
+      50.371,
+      -4.142
+     ],
+     "psrc": "wikidata:Plymouth"
+    },
+    {
+     "place": "Mogador",
+     "entry": "essaouira",
+     "wp": "Essaouira",
+     "date": "late December 1577",
+     "year": 1577,
+     "by": "sea",
+     "text": "Poor winds brought the fleet to Mogador, off Morocco, about two weeks after leaving Plymouth. While a pinnace was being assembled there, Moorish raiders took one of Drake's men.",
+     "quote": "Whilst assembling a Pinnace there Drake lost a man to Moorish raiders.",
+     "ll": [
+      31.513,
+      -9.769
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Praia",
+     "entry": "praia",
+     "wp": "Praia",
+     "date": "January 1578",
+     "year": 1578,
+     "by": "sea",
+     "text": "At Santiago, in the Cape Verde Islands, Drake captured the Spanish merchant ship Santa Maria under fire from a fort's guns just off Praia. He took on its Portuguese navigator, Nuno da Silva, and gave Doughty command of the Pelican.",
+     "quote": "Stopping at Santiago island he encountered the Santa Maria, a Spanish merchant ship which he captured despite coming under fire from a fort's guns just off Praia.",
+     "ll": [
+      14.918,
+      -23.509
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "San Julian",
+     "entry": null,
+     "wp": "Puerto San Julián",
+     "date": null,
+     "year": null,
+     "by": "sea",
+     "text": "The fleet wintered in this Patagonian harbour, where Magellan had put mutineers to death half a century earlier. Drake tried Thomas Doughty for treachery and incitement to mutiny, and on 2 July had him beheaded.",
+     "quote": "Whilst in San Julian Drake finally made the decision to try Doughty with treachery and an incitement to mutiny.",
+     "ll": [
+      -49.307,
+      -67.73
+     ],
+     "psrc": "wikidata:Puerto San Julián"
+    },
+    {
+     "place": "Strait of Magellan",
+     "entry": null,
+     "wp": "Strait of Magellan",
+     "date": "August 1578",
+     "year": 1578,
+     "by": "sea",
+     "text": "On 20 August 1578 Drake renamed the Pelican the Golden Hind, after his patron Christopher Hatton's crest. He passed through the strait in 16 days. Storms in the Pacific then lost the Marigold, and the Elizabeth turned back for England.",
+     "quote": "Drake renamed the Pelican as the Golden Hind on 20 August 1578 to honour his patron, Sir Christopher Hatton, whose family crest was a golden hind (female red deer).  Drake passed through the Strait of Magellan in just 16 days.",
+     "ll": [
+      -54,
+      -71
+     ],
+     "psrc": "wikidata:Strait of Magellan"
+    }
+   ]
+  },
+  {
+   "title": "Raids on the Pacific coast and the claim to Nova Albion",
+   "stops": [
+    {
+     "place": "Mocha Island",
+     "entry": null,
+     "wp": "Isla Mocha",
+     "date": null,
+     "year": null,
+     "by": "sea",
+     "text": "Drake's first Pacific stop for food and water. The Mapuche brought sheep, chickens and wheat on the first day. On the second, a landing party was attacked: two men were killed and two captured, and Drake and Diego were wounded by arrows.",
+     "quote": "His first port of call was Mocha Island to get food and water. They encountered the Native Mapuche and greeted them with pleasantries, the feelings of which were mutual.",
+     "ll": [
+      -38.365,
+      -73.915
+     ],
+     "psrc": "wikidata:Mocha Island"
+    },
+    {
+     "place": "Valparaíso",
+     "entry": "valparaiso",
+     "wp": "Valparaíso",
+     "date": "5 December 1578",
+     "year": 1578,
+     "by": "sea",
+     "text": "Drake assaulted the small Spanish settlement and plundered what he could find, including the church silver. A ship in the harbour carried Chilean wine, 25,000 pesos in gold and charts of the South American coast.",
+     "quote": "On 5 December he viewed the small Spanish settlement of Valparaíso, a coastal town with a number of houses and a church.",
+     "ll": [
+      -33.046,
+      -71.62
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Callao",
+     "entry": "callao",
+     "wp": "Callao",
+     "date": "13 February 1579",
+     "year": 1579,
+     "by": "sea",
+     "text": "Drake took the harbour of Lima with ease and had a dozen vessels there ransacked and run aground. He learned that the treasure galleon Nuestra Señora de la Concepción had sailed north-west, and set off after her the next day.",
+     "quote": "As a result, Drake entered Callao which was the harbour for Lima on 13 February. The English took the town with ease and in the harbour lay a dozen vessels which Drake ordered ransacked and run aground.",
+     "ll": [
+      -12.052,
+      -77.139
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Caño Island",
+     "entry": null,
+     "wp": "Caño Island Biological Reserve",
+     "date": "March 1579",
+     "year": 1579,
+     "by": "sea",
+     "text": "After taking the Concepción and her treasure, Drake captured a frigate here and had the Golden Hind repaired and careened at a nearby bay. Part of the silver was moved to the frigate, and the crew felt an earthquake.",
+     "quote": "Meanwhile, Drake went further north along the South American coast. Coming across Caño Island, Drake captured a frigate carrying a cargo of maize, honey and sarsaparilla.",
+     "ll": [
+      8.706,
+      -83.879
+     ],
+     "psrc": "wikidata:Isla del Caño"
+    },
+    {
+     "place": "Guatulco",
+     "entry": null,
+     "wp": "Huatulco",
+     "date": "late March 1579",
+     "year": 1579,
+     "by": "sea",
+     "text": "The English went ashore against little resistance and sacked the town, taking a gold chain, 7,000 pesos in silver, provisions, silks and maps of the Manila galleon route. Drake released the Spanish captives and Nuno da Silva.",
+     "quote": "At Guatulco the English went ashore against little resistance and promptly sacked the place.",
+     "ll": [
+      15.759,
+      -96.123
+     ],
+     "psrc": "wikidata:Huatulco"
+    },
+    {
+     "place": "Nova Albion (Drakes Bay)",
+     "entry": null,
+     "wp": "Drakes Bay",
+     "date": null,
+     "year": null,
+     "by": "sea",
+     "text": "Drake met the Coast Miwok, who honoured him with a crown of feathers, and claimed the land for England as Nova Albion. The exact landing place is disputed, and writers have placed it from Alaska to northern Mexico. Drakes Bay is the officially recognised site.",
+     "quote": "Now a National Historic Landmark, the officially recognised location of Drake's New Albion is Drakes Bay, California.",
+     "ll": [
+      38.012,
+      -122.919
+     ],
+     "psrc": "wikidata:Drakes Bay"
+    },
+    {
+     "place": "Farallon Islands",
+     "entry": null,
+     "wp": "Farallon Islands",
+     "date": "24 July 1579",
+     "year": 1579,
+     "by": "sea",
+     "text": "Drake left New Albion on 23 July 1579 and paused the next day at these islands, where the crew hunted seals for meat before the Pacific crossing.",
+     "quote": "Drake paused his journey the next day when anchoring his ship at the Farallon Islands where the crew hunted seal meat.",
+     "ll": [
+      37.739,
+      -123.067
+     ],
+     "psrc": "wikidata:Farallon Islands"
+    }
+   ]
+  },
+  {
+   "title": "Across the Pacific and home",
+   "stops": [
+    {
+     "place": "Ternate",
+     "entry": null,
+     "wp": "Ternate",
+     "date": "November 1579",
+     "year": 1579,
+     "by": "sea",
+     "text": "Sultan Babullah welcomed the crew in an old Portuguese castle. Drake traded English linen, gold and silver for about ten tonnes of spices, mostly cloves, and declined to join a campaign against the Portuguese fort at Tidore.",
+     "quote": "They led him to the island of Ternate – its volcanic peak Gamalama dominating the skyline. There Drake was able to dock and the crew were warmly welcomed by Sultan Babullah in a ceremonious courtesy in an old Portuguese castle.",
+     "ll": [
+      0.783,
+      127.367
+     ],
+     "psrc": "wikidata:Ternate"
+    },
+    {
+     "place": "Tjilatjap, Java",
+     "entry": null,
+     "wp": "Cilacap",
+     "date": "11 March 1580",
+     "year": 1580,
+     "by": "sea",
+     "text": "The crew were well received on Java's south coast. Drake exchanged courtesies and silks with the rajahs, and in two weeks the ship took on rice, chickens, yams and dried beef for part of the journey home.",
+     "quote": "On 11 March they eventually touched down at Tjilatjap on Java having anchored a safe distance from land.",
+     "ll": [
+      -7.733,
+      109
+     ],
+     "psrc": "wikidata:Cilacap Regency"
+    },
+    {
+     "place": "Cape of Good Hope",
+     "entry": "cape-of-good-hope",
+     "wp": "Cape of Good Hope",
+     "date": "15 June 1580",
+     "year": 1580,
+     "by": "sea",
+     "text": "Drake sailed from Java on 24 March into the Indian Ocean and rounded the Cape, where the crew, expecting severe storms from Portuguese and Spanish accounts, found good weather and a decent wind.",
+     "quote": "They rounded the Cape of Good Hope on 15 June where they feared severe storms after reading from accounts by Portuguese and Spanish sailors but were surprised on encountering good weather and a decent wind.",
+     "ll": [
+      -34.358,
+      18.472
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Plymouth",
+     "entry": null,
+     "wp": "Plymouth",
+     "date": "26 September 1580",
+     "year": 1580,
+     "by": "sea",
+     "text": "Drake entered the English Channel on 26 September and asked fishermen who was on the throne and whether England was at peace. He sailed into Plymouth with 59 remaining crew and his cargo of spices and Spanish treasure.",
+     "quote": "Drake arrived in the English Channel on 26 September and soon came across some fishermen, asking them about who was on the throne and if England was at peace.",
+     "ll": [
+      50.371,
+      -4.142
+     ],
+     "psrc": "wikidata:Plymouth"
+    }
+   ]
+  }
+ ],
+ "notes": "Dates: the article gives the start as 13 December in the body but 15 December in the lead (and 15 November for the first false start); the body's 13 December is used. Years of Mogador, Praia, San Julian, Valparaiso, Callao, Caño, Guatulco are inferred from the narrative (the article gives day and month only, or none). Mocha Island has no date in the article; the Pacific was entered in October 1578 (lead). Guatulco 'late March 1579' follows the article's 'last week of March' departure from Caño. Nova Albion is told with the article's doubt; Drakes Bay is the officially recognised site, other writers say Alaska to northern Mexico; the June 1579 landfalls at South Cove/Whale Cove (5 June) and the 17 June cove are left out. Left out: Santa Cruz-type coast stops without names; the capture of the Concepcion on 1 March 1579 (no named place, only off the Quito coast); Yap or Palau on 13 October 1579 (article unsure which; hostile encounter killing or wounding about twenty); the Celebes reef of 8 January 1580 (no named place); Sierra Leone (a country, not a point; landed 22 July 1580). Caño Island: the wp title is the reserve's article, check the point."
+}

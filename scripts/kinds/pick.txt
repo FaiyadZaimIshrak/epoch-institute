@@ -2931,3 +2931,374 @@ Siege of Baghdad (1258)	aftermath	louis-ix-of-france
 Siege of Jerusalem (1099)	background	pope-urban-ii
 Siege of Jerusalem (1099)	aftermath	dome-of-the-rock
 Siege of Jerusalem (1099)	legacy	first-crusade
+# Cities, second wave (23 Nov 2026): proposed per section (a monument, a site or an object the section links, else a
+# person, a text or an event) and looked at on sheets, five rounds: no maps, flags, arms, logos, modern city views, modern
+# statues and busts, later imagined portraits, generic terms, or pictures of another place than the one meant
+Moscow	growth	alexander-nevsky
+Moscow	rulers	ivan-iii
+Moscow	crises	napoleon
+Moscow	legacy	saint-basils-cathedral
+Berlin	origins	albert-the-bear
+Berlin	growth	frederick-william-elector-of-brandenburg
+Berlin	rulers	frederick-ii-elector-of-brandenburg
+Berlin	life	frederick-the-great
+Berlin	crises	rosa-luxemburg
+Berlin	legacy	berlin-wall
+Vienna	origins	marcus-aurelius
+Vienna	growth	university-of-vienna
+Vienna	rulers	ottokar-ii-of-bohemia
+Vienna	life	anton-bruckner
+Vienna	crises	anschluss
+Vienna	legacy	red-vienna
+Madrid	growth	lope-de-vega
+Madrid	rulers	alfonso-vi-of-castile
+Madrid	legacy	alfonso-xiii
+Lisbon	origins	odysseus
+Lisbon	growth	jeronimos-monastery
+Lisbon	rulers	afonso-i-of-portugal
+Lisbon	life	denis-of-portugal
+Lisbon	crises	john-i-of-castile
+Lisbon	legacy	voltaire
+Amsterdam	growth	bank-of-amsterdam
+Amsterdam	rulers	philip-ii-of-spain
+Amsterdam	life	rembrandt
+Amsterdam	crises	anne-frank
+Prague	origins	prague-castle
+Prague	growth	tycho-brahe
+Prague	rulers	vratislaus-ii-of-bohemia
+Prague	life	franz-kafka
+Prague	crises	jan-hus
+Prague	legacy	st-vitus-cathedral
+Kyiv	origins	kyi-shchek-and-khoryv
+Kyiv	growth	yaroslav-the-wise
+Kyiv	rulers	oleg-of-novgorod
+Kyiv	life	sigismund-ii-augustus
+Kyiv	crises	batu-khan
+Kyiv	legacy	taras-shevchenko
+Saint Petersburg	origins	peter-the-great
+Saint Petersburg	growth	burkhard-christoph-von-munnich
+Saint Petersburg	rulers	catherine-the-great
+Saint Petersburg	life	pyotr-ilyich-tchaikovsky
+Florence	origins	sulla
+Florence	growth	michelangelo
+Florence	rulers	odoacer
+Florence	life	giano-della-bella
+Florence	crises	dante-alighieri
+Florence	legacy	florence-cathedral
+Naples	origins	odysseus
+Naples	growth	claudius
+Naples	rulers	romulus-augustulus
+Naples	life	teatro-di-san-carlo
+Naples	crises	belisarius
+Naples	legacy	castel-nuovo
+Milan	growth	maximian
+Milan	rulers	diocletian
+Milan	life	la-scala
+Milan	legacy	santa-maria-delle-grazie-milan
+Seville	growth	giralda
+Seville	rulers	gunderic
+Seville	life	casa-de-contratacion
+Granada	growth	ibn-al-khatib
+Granada	rulers	muhammad-i-of-granada
+Granada	life	alhambra
+Granada	crises	francisco-jimenez-de-cisneros
+Granada	legacy	comares-palace
+Barcelona	origins	hannibal
+Barcelona	growth	via-augusta
+Barcelona	rulers	alaric-ii
+Barcelona	life	diocletian
+Barcelona	legacy	antoni-gaudi
+Kraków	origins	wawel-hill
+Kraków	growth	boleslaw-v-the-chaste
+Kraków	rulers	sigismund-ii-augustus
+Kraków	life	nicolaus-copernicus
+Kraków	crises	george-ii-rakoczi
+Kraków	legacy	veit-stoss
+Warsaw	growth	sigismund-iii-vasa
+Warsaw	rulers	augustus-ii-the-strong
+Warsaw	life	warsaw-confederation
+Warsaw	legacy	pope-john-paul-ii
+Dublin	growth	wide-streets-commission
+Dublin	rulers	diarmait-mac-murchada
+Dublin	life	elizabeth-i
+Dublin	crises	robert-emmet
+Dublin	legacy	dublin-castle
+Thessaloniki	origins	cassander
+Thessaloniki	growth	galerius
+Thessaloniki	rulers	mark-antony
+Thessaloniki	life	paul-the-apostle
+Thessaloniki	crises	theodosius-i
+Pompeii	origins	stabiae
+Pompeii	growth	hannibal
+Pompeii	rulers	sulla
+Pompeii	legacy	titus
+Damascus	origins	thutmose-iii
+Damascus	rulers	necho-ii
+Damascus	life	mimar-sinan
+Damascus	crises	umayyad-mosque
+Damascus	legacy	saladin
+Aleppo	growth	hammurabi
+Aleppo	rulers	seleucus-i-nicator
+Aleppo	crises	khosrow-i
+Medina	origins	nabonidus
+Medina	growth	prophets-mosque
+Medina	rulers	saladin
+Medina	life	kaaba
+Medina	crises	abd-allah-ibn-al-zubayr
+Medina	legacy	quran
+Bukhara	origins	siyavash
+Bukhara	growth	eucratides-i
+Bukhara	rulers	alexander-the-great
+Bukhara	life	narshakhi
+Bukhara	crises	genghis-khan
+Herat	origins	darius-i
+Herat	growth	shah-rukh
+Herat	rulers	yaqub-ibn-al-layth-al-saffar
+Herat	life	ali-shir-navai
+Herat	legacy	husayn-bayqara
+Merv	origins	darius-i
+Merv	growth	abu-muslim
+Merv	rulers	ardashir-i
+Merv	crises	genghis-khan
+Merv	legacy	george-curzon
+Kabul	origins	xuanzang
+Kabul	growth	darius-i
+Kabul	rulers	sabuktigin
+Kabul	life	babur
+Kabul	crises	genghis-khan
+Kabul	legacy	amanullah-khan
+Shiraz	growth	istakhr
+Shiraz	rulers	imad-al-dawla
+Shiraz	crises	nader-shah
+Shiraz	legacy	vakil-mosque
+Antioch	origins	alalakh
+Antioch	growth	seleucus-ii-callinicus
+Antioch	rulers	seleucus-i-nicator
+Antioch	life	john-chrysostom
+Antioch	crises	trajan
+Persepolis	origins	cyrus-the-great
+Persepolis	growth	apadana
+Persepolis	rulers	naqsh-e-rostam
+Persepolis	life	xerxes-i
+Persepolis	crises	alexander-the-great
+Persepolis	legacy	mohammad-reza-pahlavi
+Nineveh	origins	max-mallowan
+Nineveh	growth	shalmaneser-i
+Nineveh	rulers	cyrus-cylinder
+Nineveh	life	sennacherib
+Nineveh	crises	ashurbanipal
+Nineveh	legacy	austen-henry-layard
+Palmyra	growth	zenobia
+Palmyra	rulers	pompey
+Palmyra	life	nero
+Palmyra	crises	diocletian
+Susa	growth	darius-i
+Susa	rulers	sargon-of-akkad
+Susa	life	chogha-zanbil
+Susa	crises	shutruk-nahhunte
+Susa	legacy	xerxes-i
+Ctesiphon	origins	mithridates-i-of-parthia
+Ctesiphon	growth	khosrow-i
+Ctesiphon	rulers	trajan
+Ctesiphon	crises	septimius-severus
+Ctesiphon	legacy	one-thousand-and-one-nights
+Jericho	rulers	alexander-the-great
+Jericho	life	jesus
+Jericho	legacy	charles-warren
+Kairouan	growth	ibrahim-i-ibn-al-aghlab
+Kairouan	rulers	raqqada
+Kairouan	legacy	great-mosque-of-kairouan
+Fustat	origins	alexander-the-great
+Fustat	crises	amalric-i-of-jerusalem
+Fustat	legacy	saladin
+Lahore	origins	xuanzang
+Lahore	growth	qutb-ud-din-aibak
+Lahore	rulers	jalal-al-din-mangburni
+Lahore	life	akbar
+Lahore	crises	babur
+Lahore	legacy	ranjit-singh
+Agra	origins	akbar
+Agra	growth	sikandar-lodi
+Agra	rulers	babur
+Agra	life	taj-mahal
+Agra	crises	mahmud-of-ghazni
+Agra	legacy	islam-shah-suri
+Varanasi	origins	gautama-buddha
+Varanasi	growth	xuanzang
+Varanasi	rulers	vibhuti-narayan-singh
+Varanasi	life	sarnath
+Varanasi	crises	gangeyadeva
+Varanasi	legacy	ranjit-singh
+Pataliputra	origins	ajatashatru
+Pataliputra	growth	ashoka
+Pataliputra	life	geography-ptolemy
+Pataliputra	crises	xuanzang
+Kolkata	rulers	siraj-ud-daulah
+Kolkata	life	rabindranath-tagore
+Kolkata	legacy	subhas-chandra-bose
+Mumbai	origins	ashoka
+Mumbai	growth	jawaharlal-nehru
+Mumbai	rulers	bahadur-shah-of-gujarat
+Mumbai	crises	aurangzeb
+Mumbai	legacy	elephanta-caves
+Kathmandu	rulers	birendra-of-nepal
+Kathmandu	life	pashupatinath-temple
+Kathmandu	crises	hanuman-dhoka
+Kathmandu	legacy	pratap-malla
+Madurai	growth	meenakshi-temple
+Madurai	rulers	kumara-kampana
+Madurai	legacy	mahatma-gandhi
+Taxila	origins	bhir-mound
+Taxila	growth	sirkap
+Taxila	rulers	alexander-the-great
+Taxila	life	bimbisara
+Taxila	crises	skandagupta
+Taxila	legacy	xuanzang
+Mohenjo-daro	origins	harappa
+Mohenjo-daro	rulers	priest-king
+Mohenjo-daro	life	mortimer-wheeler
+Hanoi	growth	paul-doumer
+Huế	rulers	bao-dai
+Huế	legacy	khai-dinh
+Angkor	growth	angkor-wat
+Angkor	rulers	pre-rup
+Angkor	life	ta-prohm
+Angkor	crises	bayon
+Manila	origins	laguna-copperplate-inscription
+Manila	life	philippine-revolution
+Manila	crises	ferdinand-marcos
+Manila	legacy	jose-rizal
+Malacca	origins	malay-annals
+Malacca	growth	ma-huan
+Malacca	life	stadthuys
+Malacca	crises	a-famosa
+Malacca	legacy	tunku-abdul-rahman
+Bangkok	origins	wat-arun
+Bangkok	growth	mongkut
+Bangkok	rulers	grand-palace
+Bangkok	crises	phetracha
+Bangkok	legacy	chulalongkorn
+Nanjing	growth	sun-quan
+Nanjing	rulers	emperor-yuan-of-jin
+Nanjing	life	matteo-ricci
+Nanjing	legacy	sun-yat-sen
+Luoyang	growth	longmen-grottoes
+Luoyang	rulers	emperor-guangwu-of-han
+Luoyang	life	emperor-yang-of-sui
+Luoyang	crises	cao-pi
+Kaifeng	crises	emperor-gaozong-of-song
+Hangzhou	origins	grand-canal
+Hangzhou	life	odoric-of-pordenone
+Hangzhou	crises	kublai-khan
+Hangzhou	legacy	baochu-pagoda
+Guangzhou	growth	odoric-of-pordenone
+Guangzhou	rulers	zhao-mo
+Guangzhou	legacy	sun-yat-sen
+Shanghai	growth	kangxi-emperor
+Shanghai	life	the-bund
+Shanghai	crises	battle-of-shanghai
+Shanghai	legacy	deng-xiaoping
+Seoul	origins	wiryeseong
+Seoul	rulers	taejo-of-joseon
+Gyeongju	growth	samguk-yusa
+Gyeongju	life	bulguksa
+Gyeongju	legacy	seokguram
+Lhasa	origins	jokhang
+Lhasa	growth	potala-palace
+Lhasa	rulers	5th-dalai-lama
+Lhasa	crises	14th-dalai-lama
+Lhasa	legacy	zhol-pillar
+Karakorum	origins	ordu-baliq
+Karakorum	growth	mongke
+Karakorum	rulers	yaroslav-ii-of-vladimir
+Karakorum	crises	ariq-boke
+Karakorum	legacy	erdene-zuu
+Hong Kong	rulers	deng-xiaoping
+Hong Kong	life	sun-yat-sen
+Hong Kong	legacy	margaret-thatcher
+Gao	origins	tarikh-al-sudan
+Gao	growth	leo-africanus
+Gao	crises	heinrich-barth
+Djenné	rulers	louis-archinard
+Djenné	life	leo-africanus
+Benin City	rulers	harry-rawson
+Benin City	life	benin-bronzes
+Benin City	legacy	idia
+Ife	rulers	oranmiyan
+Ife	legacy	obafemi-awolowo
+Addis Ababa	origins	menelik-ii
+Addis Ababa	growth	haile-selassie
+Addis Ababa	life	ethiopian-orthodox-church
+Addis Ababa	crises	rodolfo-graziani
+Cape Town	origins	john-ii-of-portugal
+Cape Town	growth	simon-van-der-stel
+Cape Town	rulers	cecil-rhodes
+Cape Town	crises	group-areas-act
+Cape Town	legacy	nelson-mandela
+Kumasi	rulers	prempeh-i
+Kumasi	crises	golden-stool
+Kumasi	legacy	prempeh-ii
+Meroë	origins	psamtik-ii
+Meroë	rulers	kandake
+Meroë	life	herodotus
+Meroë	crises	nero
+Gondar	origins	amda-seyon-i
+Gondar	rulers	mikael-sehul
+Harar	origins	richard-francis-burton
+Harar	growth	nur-ibn-mujahid
+Harar	rulers	menelik-ii
+Harar	crises	charles-george-gordon
+Harar	legacy	jugol
+Khartoum	origins	muhammad-ali-of-egypt
+Khartoum	growth	samuel-baker
+Khartoum	rulers	muhammad-ahmad
+Khartoum	crises	charles-george-gordon
+Mexico City	origins	carlos-de-siguenza-y-gongora
+Mexico City	growth	axayacatl
+Mexico City	rulers	charles-v-holy-roman-emperor
+Mexico City	life	bernardino-de-sahagun
+Mexico City	crises	pedro-de-alvarado
+Copán	origins	kinich-yax-kuk-mo
+Copán	growth	waxaklajuun-ubaah-kawiil
+Copán	rulers	quirigua
+Copán	crises	kak-tiliw-chan-yopaat
+Lima	origins	pachacamac
+Lima	rulers	francisco-pizarro
+Lima	life	rose-of-lima
+Lima	crises	manco-inca
+Potosí	origins	huayna-capac
+Potosí	rulers	manuel-belgrano
+Potosí	legacy	don-quixote
+Havana	origins	bartolome-de-las-casas
+Havana	rulers	christopher-columbus
+Havana	crises	luis-vicente-de-velasco
+Buenos Aires	origins	juan-de-garay
+Buenos Aires	growth	charles-iii-of-spain
+Buenos Aires	rulers	santiago-de-liniers
+Rio de Janeiro	origins	nicolas-durand-de-villegaignon
+Rio de Janeiro	rulers	juscelino-kubitschek
+Boston	origins	john-winthrop
+Boston	rulers	edmund-andros
+Boston	life	john-wheelwright
+Boston	legacy	american-revolution
+New Orleans	origins	jean-baptiste-le-moyne-de-bienville
+New Orleans	rulers	napoleon
+New Orleans	life	code-noir
+Chan Chan	rulers	francisco-pizarro
+Palenque	growth	kinich-janaab-pakal
+Palenque	rulers	sak-k-uk
+Palenque	crises	temple-of-the-inscriptions
+Santo Domingo	origins	christopher-columbus
+Santo Domingo	growth	hernan-cortes
+Santo Domingo	rulers	jose-nunez-de-caceres
+Santo Domingo	life	encomienda
+Santo Domingo	crises	francis-drake
+Sydney	origins	james-cook
+Sydney	growth	arthur-phillip
+Sydney	rulers	william-bligh
+Sydney	life	university-of-sydney
+Sydney	legacy	queen-victoria
+Honolulu	growth	iolani-palace
+Honolulu	rulers	kamehameha-i
+Honolulu	crises	lili-uokalani
+Honolulu	legacy	attack-on-pearl-harbor

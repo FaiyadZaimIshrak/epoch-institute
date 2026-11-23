@@ -1,0 +1,296 @@
+{
+ "slug": "first-crusade",
+ "title": "The First Crusade: From Clermont to Jerusalem",
+ "years": "1095–1099",
+ "traveller": "The crusader armies",
+ "intro": "Pope Urban II called for an armed pilgrimage to Jerusalem at the Council of Clermont in 1095, in answer to a request from the Byzantine emperor Alexios I Komnenos for help against the Seljuk-led Turks. Bands of poor Christians set out first, followed in August 1096 by armies led by princes.",
+ "ending": "The crusaders stormed Jerusalem on 15 July 1099, and a large fraction of its residents were massacred. A Fatimid counterattack was repulsed at Ascalon, and most of the crusaders then went home.",
+ "legs": [
+  {
+   "title": "The call, and the Rhineland massacres",
+   "stops": [
+    {
+     "place": "Clermont",
+     "entry": "clermont-ferrand",
+     "wp": "Clermont-Ferrand",
+     "date": "27 November 1095",
+     "year": 1095,
+     "by": "land",
+     "text": "Urban II toured France from July 1095. At the ten-day Council of Clermont he preached to a large audience of French nobles and clergy, and the crowd answered, according to one version of the speech, with cries of Deus lo volt.",
+     "quote": "In July 1095, Urban turned to his homeland of France to recruit men for the expedition. His travels there culminated in the ten-day Council of Clermont, where on 27 November he gave an impassioned sermon to a large audience of French nobles and clergy.",
+     "ll": [
+      45.78,
+      3.087
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Speyer",
+     "entry": null,
+     "wp": "Speyer",
+     "date": "May 1096",
+     "year": 1096,
+     "by": "land",
+     "text": "Months before the official departure, Emicho of Flonheim and his followers attacked the Jews at Speyer and Worms. The Bishop of Speyer had given the city's Jews a walled quarter a decade earlier to protect them from Christian violence.",
+     "quote": "In May 1096, Emicho of Flonheim (sometimes incorrectly known as Emicho of Leiningen) attacked the Jews at Speyer and Worms.",
+     "ll": [
+      49.317,
+      8.434
+     ],
+     "psrc": "wikidata:Speyer"
+    },
+    {
+     "place": "Mainz",
+     "entry": "mainz",
+     "wp": "Mainz",
+     "date": "End of May 1096",
+     "year": 1096,
+     "by": "land",
+     "text": "Emicho was joined by other crusaders and many locals in destroying the Jewish community of Mainz. One Jewish woman killed her children rather than let the crusaders do it, and the chief rabbi Kalonymus Ben Meshullam killed himself in anticipation of being killed.",
+     "quote": "Other unofficial crusaders from Swabia, led by Hartmann of Dillingen, along with French, English, Lotharingian and Flemish volunteers, led by Drogo of Nesle and William the Carpenter, as well as many locals, joined Emicho in the destruction of the Jewish community of Mainz at the end of May.",
+     "ll": [
+      49.999,
+      8.274
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Cologne",
+     "entry": "cologne",
+     "wp": "Cologne",
+     "date": "1096",
+     "year": 1096,
+     "by": "land",
+     "text": "Emicho's company went on to Cologne, and others continued to Trier, Metz and other cities. Church leaders did not sanction the violence, and the Archbishop of Cologne did his best to protect the Jews, though some took money in return.",
+     "quote": "Emicho's company then went on to Cologne, and others continued on to Trier, Metz, and other cities.",
+     "ll": [
+      50.942,
+      6.958
+     ],
+     "psrc": "entry"
+    }
+   ]
+  },
+  {
+   "title": "To Constantinople and across Anatolia",
+   "stops": [
+    {
+     "place": "Constantinople",
+     "entry": "constantinople",
+     "wp": "Constantinople",
+     "date": "August 1096",
+     "year": 1096,
+     "by": "land",
+     "text": "Peter the Hermit's army reached Constantinople in August and joined the force of Walter Sans Avoir. Their pillaging outside the city led Alexios to ferry them across the Bosporus within a week.",
+     "quote": "Peter arrived at Constantinople in August, where his army joined with the one led by Walter, which had already arrived, as well as separate bands of crusaders from France, Germany, and Italy.",
+     "ll": [
+      41.012,
+      28.976
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Civetot",
+     "entry": null,
+     "wp": "Civetot",
+     "date": "October 1096",
+     "year": 1096,
+     "by": "land",
+     "text": "Across the Bosporus the crusaders split up and plundered the countryside near Nicaea. Walter's and Peter's followers, led by about 50 knights, met the Turks at Civetot, where Turkish archers destroyed the army and killed Walter.",
+     "quote": "Meanwhile, Walter and Peter's followers, who, although for the most part untrained in battle but led by about 50 knights, fought the Turks at the Battle of Civetot in October 1096. The Turkish archers destroyed the crusader army, and Walter was among the dead.",
+     "ll": [
+      40.72,
+      29.5
+     ],
+     "psrc": "wikidata:Helenopolis (Bithynia)"
+    },
+    {
+     "place": "Constantinople",
+     "entry": "constantinople",
+     "wp": "Constantinople",
+     "date": "November 1096 to April 1097",
+     "year": 1097,
+     "by": "land",
+     "text": "The four main armies took different routes, some through the Balkans and some across the Adriatic, and gathered outside the walls. Alexios asked their leaders to swear fealty to him; Godfrey took the oath first, and Raymond alone only promised to do no harm.",
+     "quote": "They gathered outside the Roman-era Walls of Constantinople between November 1096 and April 1097. Hugh of Vermandois arrived first, followed by Godfrey, Raymond, and Bohemond.",
+     "ll": [
+      41.012,
+      28.976
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Nicaea",
+     "entry": "nicaea",
+     "wp": "İznik",
+     "date": "14 May 1097",
+     "year": 1097,
+     "by": "land",
+     "text": "The crusaders besieged the Seljuk capital while Kilij Arslan was away, and drove him back when he returned. After Alexios had ships rolled overland to the lake, the Turkish garrison surrendered on 18 June, and the crusaders were forbidden to loot.",
+     "quote": "Upon the Crusaders' arrival on 14 May 1097, the city was subjected to siege, and when Arslan had word of it he rushed back to Nicaea and attacked the crusader army on 16 May.",
+     "ll": [
+      40.429,
+      29.72
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Dorylaeum",
+     "entry": "dorylaeum",
+     "wp": "Dorylaeum",
+     "date": "1 July 1097",
+     "year": 1097,
+     "by": "land",
+     "text": "The army marched in two groups. Kilij Arslan's mounted archers surrounded the Normans, who formed a tight defensive ring; the French came up, Godfrey broke the Turkish line, and the Turks fled.",
+     "quote": "The two groups intended to meet again at Dorylaeum, but on 1 July the Normans, who had marched ahead of the French, were attacked by Kilij Arslan.",
+     "ll": [
+      39.775,
+      30.517
+     ],
+     "psrc": "entry"
+    }
+   ]
+  },
+  {
+   "title": "Antioch and the road to Jerusalem",
+   "stops": [
+    {
+     "place": "Antioch",
+     "entry": "antioch",
+     "wp": "Antioch",
+     "date": "2 June 1098",
+     "year": 1098,
+     "by": "land",
+     "text": "The siege began on 20 October 1097 and lasted eight months, with many crusaders dying of starvation. An Armenian, Firouz, helped Bohemond enter the city, and in the sack the crusaders killed most of the Muslim inhabitants and many Christians.",
+     "quote": "The Armenian Firouz helped Bohemond and a small party enter the city on 2 June and open a gate, at which point horns were sounded, the city's Christian majority opened the other gates and the crusaders entered. In the sack, they killed most of the Muslim inhabitants and many Christian Greeks, Syrians and Armenians in the confusion.",
+     "ll": [
+      36.2,
+      36.15
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Ma'arrat al-Numan",
+     "entry": null,
+     "wp": "Maarat al-Numan",
+     "date": "January 1099",
+     "year": 1099,
+     "by": "land",
+     "text": "In December, following the siege of the town, some historians describe cannibalism among the crusaders, although no contemporary Muslim chronicle mentions it. In January Raymond dismantled its walls and began the march south, barefoot and dressed as a pilgrim.",
+     "quote": "In January, Raymond dismantled the walls of Ma'arrat al-Numan and he began the march south to Jerusalem, barefoot and dressed as a pilgrim, followed by Robert and Tancred and their respective armies.",
+     "ll": [
+      35.643,
+      36.668
+     ],
+     "psrc": "wikidata:Maarat al-Numan"
+    },
+    {
+     "place": "Arqa",
+     "entry": null,
+     "wp": "Arqa",
+     "date": "14 February 1099",
+     "year": 1099,
+     "by": "land",
+     "text": "Raymond planned to take Tripoli but first besieged Arqa. The siege lasted until 13 May, and the crusaders left having captured nothing. The ordeal by fire of Peter Bartholomew, who died of his burns, discredited the Holy Lance.",
+     "quote": "Raymond planned to take Tripoli to set up a state equivalent to Antioch, but first initiated a siege of Arqa, a city in northern Lebanon, on 14 February 1099.",
+     "ll": [
+      34.53,
+      36.04
+     ],
+     "psrc": "wikidata:Arqa"
+    },
+    {
+     "place": "Tripoli",
+     "entry": null,
+     "wp": "Tripoli, Lebanon",
+     "date": "13 May 1099",
+     "year": 1099,
+     "by": "land",
+     "text": "The emir Jalal al-Mulk Abu'l Hasan supplied the crusader army with horses and vowed to convert to Christianity if the crusaders defeated the Fatimids. The army then passed Beirut on 19 May and Tyre on 23 May.",
+     "quote": "On 13 May, the Crusaders came to Tripoli, where the emir Jalal al-Mulk Abu'l Hasan provided the Crusader army with horses and vowed to convert to Christianity if the Crusaders defeated the Fatimids.",
+     "ll": [
+      34.437,
+      35.834
+     ],
+     "psrc": "wikidata:Tripoli, Lebanon"
+    },
+    {
+     "place": "Ramla",
+     "entry": "ramla",
+     "wp": "Ramla",
+     "date": "3 June 1099",
+     "year": 1099,
+     "by": "land",
+     "text": "Turning inland at Jaffa, the crusaders reached Ramla, which its inhabitants had abandoned. They set up a bishopric at the Church of St George before continuing to Jerusalem.",
+     "quote": "Turning inland at Jaffa, on 3 June they reached Ramla, which had been abandoned by its inhabitants.",
+     "ll": [
+      31.927,
+      34.862
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Bethlehem",
+     "entry": "bethlehem",
+     "wp": "Bethlehem",
+     "date": "6 June 1099",
+     "year": 1099,
+     "by": "land",
+     "text": "Godfrey sent Tancred and Gaston of Béarn to capture Bethlehem, where Tancred flew his banner over the Church of the Nativity.",
+     "quote": "On 6 June, Godfrey sent Tancred and Gaston to capture Bethlehem, where Tancred flew his banner over the Church of the Nativity.",
+     "ll": [
+      31.704,
+      35.206
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Jerusalem",
+     "entry": null,
+     "wp": "Jerusalem",
+     "date": "7 June 1099",
+     "year": 1099,
+     "by": "land",
+     "text": "Many crusaders wept at the sight of the city. The Fatimid governor had expelled its Christian inhabitants and poisoned wells nearby. An estimated 12,000 men remained, and a first assault on 13 June was repulsed at the inner wall.",
+     "quote": "On 7 June, the Crusaders reached Jerusalem. Many Crusaders wept upon seeing the city they had journeyed so long to reach.",
+     "ll": [
+      31.777,
+      35.234
+     ],
+     "psrc": "wikidata:Jerusalem"
+    },
+    {
+     "place": "Jerusalem",
+     "entry": null,
+     "wp": "Jerusalem",
+     "date": "15 July 1099",
+     "year": 1099,
+     "by": "land",
+     "text": "The crusaders stormed the city. Muslims were indiscriminately killed, and Jews who had taken refuge in their synagogue died when it was burnt down. Tancred's prisoners in the mosque were killed the next day. Some historians think later sources exaggerate the scale.",
+     "quote": "Jerusalem, then ruled by the Fatimids, was reached in June 1099, and the ensuing Siege of Jerusalem culminated in the Crusader armies storming and capturing the city on 15 July 1099, during which assault a large fraction of the residents were massacred.",
+     "ll": [
+      31.777,
+      35.234
+     ],
+     "psrc": "wikidata:Jerusalem"
+    },
+    {
+     "place": "Ascalon",
+     "entry": null,
+     "wp": "Ascalon",
+     "date": "9 August 1099",
+     "year": 1099,
+     "by": "land",
+     "text": "A Fatimid force of 20,000 landed at Ascalon. A crusader force of 1,200 knights and 9,000 foot soldiers attacked at dawn and routed it, but the city stayed in Muslim hands. Most crusaders then returned home.",
+     "quote": "In August 1099, Fatimid vizier al-Afdal Shahanshah landed a force of 20,000 North Africans at Ascalon. Geoffrey and Raymond marched out to meet this force on 9 August at the Battle of Ascalon with a force of only 1,200 knights and 9,000 foot soldiers.",
+     "ll": [
+      31.662,
+      34.546
+     ],
+     "psrc": "wikidata:Ascalon"
+    }
+   ]
+  }
+ ],
+ "notes": "Left out: the Balkan stops of the People's Crusade (Belgrade, Zemun, Niš: no dates), Hungary (a country), Durrës (no date in the same passage), Baldwin's and Tancred's detachment to Tarsus, Mamistra and Edessa (a separate march, dated March 1098, between the siege and fall of Antioch), Trier and Metz (named only in passing), Latakia, Beirut and Tyre (passed, no events). Constantinople appears twice: People's Crusade (August 1096) and the princes (Nov 1096 to Apr 1097); the stop has the later year. Antioch is one stop at the fall (2 June 1098); the siege start 20 October 1097 is in the text. Years not printed beside several days in the article are taken from the surrounding narrative (1 July 1097, 2 June 1098, 27 November 1095 is in the quote, Ma'arra January 1099). Ma'arra: the article gives only the siege, the cannibalism claim and the dismantling of the walls; it tells no massacre there, so none is written. The article's Ascalon sentence says 'Geoffrey' (probably Godfrey); the text avoids naming him. Civetot: wp title may redirect to the battle article; the editor should check its point. Nicaea wp is İznik. Maarat al-Numan wp title: check spelling."
+}

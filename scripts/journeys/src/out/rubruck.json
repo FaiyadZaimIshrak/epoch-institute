@@ -1,0 +1,81 @@
+{
+ "slug": "rubruck",
+ "title": "William of Rubruck's Mission to the Mongols",
+ "years": "1253–1255",
+ "traveller": "William of Rubruck",
+ "intro": "William of Rubruck was a Franciscan friar who, with the support of Louis IX of France, undertook a mission to the Great Khan Möngke of the Mongol Empire. He set out on 7 May 1253 to convert the Tatars to Christianity, and on his return wrote an account addressed to the king.",
+ "ending": "William reached the County of Tripoli on 15 August 1255. Unable to meet the king in person, he wrote him a long letter in Latin, the Itinerarium, describing his journey.",
+ "legs": [
+  {
+   "title": "To the court of the Great Khan",
+   "stops": [
+    {
+     "place": "Constantinople",
+     "entry": "constantinople",
+     "wp": "Constantinople",
+     "date": "7 May 1253",
+     "year": 1253,
+     "by": "sea",
+     "text": "William set out on Louis IX's orders on 7 May 1253. He stopped in Constantinople to confer with Baldwin of Hainaut, who had recently returned from Karakorum, and received letters from the emperor to some of the Tatar chiefs.",
+     "quote": "On 7 May 1253, on Louis' orders, he set out on a missionary journey to convert the Tatars to Christianity. He first stopped in Constantinople to confer with Baldwin of Hainaut"
+    },
+    {
+     "place": "Sudak",
+     "entry": "sudak",
+     "wp": "Sudak",
+     "date": "1253",
+     "year": 1253,
+     "by": "sea",
+     "text": "After reaching the Crimean town of Sudak, William continued with oxen and carts. According to William, merchants from Turkey and from Russia met at Sudak, carrying cloth and spices one way and furs the other.",
+     "quote": "After reaching the Crimean town of Sudak, William continued his trek with oxen and carts."
+    },
+    {
+     "place": "Sarai",
+     "entry": null,
+     "wp": "Selitrennoye",
+     "date": "1253",
+     "year": 1253,
+     "by": "land",
+     "text": "Nine days after crossing the Don he met Sartaq, who sent him on to Sartaq's father Batu Khan at Sarai near the Volga. William is said to have threatened Batu with eternal damnation if he did not convert. Batu refused, and sent the party on to Möngke.",
+     "quote": "The Khan sent William on to his father, Batu Khan, at Sarai near the Volga River."
+    },
+    {
+     "place": "Karakorum",
+     "entry": "karakorum",
+     "wp": "Karakorum",
+     "date": "4 January 1254",
+     "year": 1254,
+     "by": "land",
+     "text": "The party arrived in late December, a journey of 9,000 kilometres, and were received courteously. William had an audience with the Great Khan on 4 January 1254 and described the city's walls, markets and temples, and its quarters for Muslim and Chinese craftsmen.",
+     "quote": "Arriving in late December they were received courteously, and he was given an audience on 4 January 1254."
+    }
+   ]
+  },
+  {
+   "title": "The return",
+   "stops": [
+    {
+     "place": "Nakhchivan",
+     "entry": null,
+     "wp": "Nakhchivan (city)",
+     "date": "December 1254",
+     "year": 1254,
+     "by": "land",
+     "text": "William and his companions spent Christmas of 1254 at Nakhchivan, in present-day Azerbaijan, on the way back towards the Mediterranean coast.",
+     "quote": "and Christmas at Nakhchivan in present-day Azerbaijan"
+    },
+    {
+     "place": "County of Tripoli",
+     "entry": null,
+     "wp": "Tripoli, Lebanon",
+     "date": "15 August 1255",
+     "year": 1255,
+     "by": "land",
+     "text": "William and his companions reached the County of Tripoli on 15 August 1255, ending the journey.",
+     "quote": "he and his companions reached the County of Tripoli on 15 August 1255."
+    }
+   ]
+  }
+ ],
+ "notes": "Only eight stops: the article names few places. Talas: article gives no date or order; placed between Sarai and Karakorum because it lies on the route to Mongolia; wp Taraz (Talas's present-day city, by my knowledge, not the article); entry left null for that reason though places.tsv has taraz. Sarai: wp 'Sarai Batu' is the editor's to confirm; the article only says Sarai near the Volga. Sudak and Sarai (outbound) dates are '1253' only; the article says Batu was reached five weeks after leaving Sudak. County of Tripoli is a state; wp points to the city Tripoli, Lebanon. Left out: Sartaq's meeting (no place), the Nicaean court of Vastacius (no place or order), the 1254 debate at the Mongol court (held at Karakorum, but no place named). Sudak text's merchants line is from the article's quotation in its Account section. Checker flag on the return Sarai is a false alarm: the article does not name Sarai for the return, only Batu Khan; the place is inferred from his outward encampment, doubtful."
+}

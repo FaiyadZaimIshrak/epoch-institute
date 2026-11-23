@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Hanoi: History, Rulers and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Hanoi is a city on the Red River in northern Vietnam, established as the capital Thăng Long by the Lý dynasty in 1010, later the capital of French…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Hanoi: History, Rulers and Legacy — The Epoch Institute">
+<meta property="og:description" content="Hanoi is a city on the Red River in northern Vietnam, established as the capital Thăng Long by the Lý dynasty in 1010, later the capital of French…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/city/hanoi">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/hanoi.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/hanoi.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/city/hanoi">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Cities","item":"https://the-epoch-institute.org/profiles?kind=city"},{"@type":"ListItem","position":4,"name":"Hanoi"}]},{"@type":"Article","headline":"Hanoi","description":"Hanoi is a city on the Red River in northern Vietnam, established as the capital Thăng Long by the Lý dynasty in 1010, later the capital of French…","url":"https://the-epoch-institute.org/city/hanoi","mainEntityOfPage":"https://the-epoch-institute.org/city/hanoi","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Hanoi"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/hanoi.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=city">Cities</a></li><li aria-current="page">Hanoi</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Hanoi.png" alt="Hanoi" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">City · South &amp; Southeast Asia</p>
+        <h1 class="profile-detail-name">Hanoi</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">1010 CE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Founded</span><span class="info-stat-val">In 1010 the first Lý emperor, <a class="enc-link" href="/encyclopedia/ly-thai-to">Lý Thái Tổ</a>, moved the capital of Đại Việt to the site of the <a class="enc-link" href="/encyclopedia/dai-la">Đại La</a> Citadel and named the city <a class="enc-link" href="/encyclopedia/thang-long">Thăng Long</a>; a fortified settlement had stood at the centre of what later became Hanoi since the middle of the fifth century CE.</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where</span><span class="info-stat-val">On the Red River in northern <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a>, in a region of <a class="enc-link" href="/encyclopedia/monsoon">monsoon</a>-influenced humid subtropical climate with four seasons.</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia/thang-long">Thăng Long</a>, capital of Đại Việt from 1010; the Temple of Literature; the Old Quarter and its 36 streets; the capital of <a class="enc-link" href="/encyclopedia/indochina">French Indochina</a> from 1902; the capital of the Democratic Republic of <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a>; the capital of unified Vietnam from 1976</span></div>
+          <div class="info-stat"><span class="info-stat-label">Today</span><span class="info-stat-val">Hanoi is the capital of <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a> and its second most populous centrally governed city.</span></div>
+        </div>
+        <p class="empire-meta">6 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>A fortified settlement stood at the centre of what later became Hanoi from the middle of the fifth century CE, under the names Tống Bình, <a class="enc-link" href="/encyclopedia/dai-la">Đại La</a> and later <a class="enc-link" href="/encyclopedia/thang-long">Thăng Long</a>, and <a class="enc-link" href="/encyclopedia/ly-thai-to">Lý Thái Tổ</a> made it the capital of Đại Việt in 1010.</li><li>The city kept its status under the Lý and the Lê, lost it to Huế in 1802, was renamed Hà Nội in 1831, and became the capital of <a class="enc-link" href="/encyclopedia/indochina">French Indochina</a> in 1902.</li><li>It was the capital of the Democratic Republic of <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a> from 1945 and of North Vietnam from 1954, and in 1976 it became the capital of the unified Socialist Republic of Vietnam.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p><a class="enc-link" href="/encyclopedia/ly-thai-to">Lý Thái Tổ</a> named his new capital <a class="enc-link" href="/encyclopedia/thang-long">Thăng Long</a>, 'ascending dragon', after claiming to have seen a dragon ascending the Red River, and Hanoi's older names such as <a class="enc-link" href="/encyclopedia/long-bien">Long Biên</a> and Long Đỗ also featured the dragon.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#growth">Growth &amp; Great Ages</a></li><li><a href="#rulers">Who Ruled It</a></li><li><a href="#life">Life in the City</a></li><li><a href="#crises">Sieges &amp; Disasters</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">3rd century BCE</span><span class="rf-text">A fortified citadel, later named Cổ Loa, is built in what later became Hanoi</span></li><li><span class="rf-year">40</span><span class="rf-text">The Trưng sisters lead a rebellion against the <a class="enc-link" href="/encyclopedia/han-dynasty">Han dynasty</a></span></li><li><span class="rf-year">866</span><span class="rf-text">The Tang general <a class="enc-link" href="/encyclopedia/gao-pian">Gao Pian</a> recaptures the city and renames it <a class="enc-link" href="/encyclopedia/dai-la">Đại La</a></span></li><li><span class="rf-year">1010</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/ly-thai-to">Lý Thái Tổ</a> moves the capital of Đại Việt to the site and names it <a class="enc-link" href="/encyclopedia/thang-long">Thăng Long</a></span></li><li><span class="rf-year">1428</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/le-loi">Lê Lợi</a> overthrows Ming rule and renames the city Đông Kinh</span></li><li><span class="rf-year">1831</span><span class="rf-text">The Nguyễn king Minh Mạng renames the city Hà Nội</span></li><li><span class="rf-year">1902</span><span class="rf-text">Hanoi becomes the capital of <a class="enc-link" href="/encyclopedia/indochina">French Indochina</a></span></li><li><span class="rf-year">1976</span><span class="rf-text">Hanoi becomes the capital of the unified Socialist Republic of <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a></span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>Hanoi stands on the Red River in northern <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a>. Archaeologists working in Ba Vì and Đông Anh in 1971 and 1972 found pebbles with traces of carving that are relics of the Sơn Vi culture, dating from 10,000 to 20,000 years ago, and a study in 1998 and 1999 north of Đồng Mô Lake in Sơn Tây found Sơn Vi relics of about 20,000 years ago. Geological data show that during the Holocene transgression the sea rose and immersed low-lying areas, so that from about 10,000 to about 4,000 years ago Hanoi in general was completely underwater. It is believed that the region has been continuously inhabited for the last 4,000 years.</p><p>In around the third century BCE a fortified citadel, later named Cổ Loa, was built in what later became Hanoi. It was the first political centre of the Vietnamese civilisation of the pre-Sinitic era, and its outer embankment covered 600 hectares. In 179 BCE <a class="enc-link" href="/encyclopedia/nanyue">Nanyue</a> annexed the area, and <a class="enc-link" href="/encyclopedia/zhao-tuo">Zhao Tuo</a> left the indigenous chiefs in control of the population; for the first time the region formed part of a polity headed by a Chinese ruler. By the middle of the fifth century CE the Chinese Liu Song dynasty had founded a fortified settlement at the centre of what later was Hanoi, as the seat of a new district called Tống Bình (Songping) within <a class="enc-link" href="/encyclopedia/jiaozhi">Giao Chỉ</a> commandery. The name refers to the pacification of the area by the dynasty.</p></div>
+      </div>
+      <div class="profile-section-block" id="growth">
+        <h2 class="profile-section-title">Growth &amp; Great Ages</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/paul-doumer"><img src="/images/encyclopedia/paul-doumer.jpg" alt="Paul Doumer" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/paul-doumer">Paul Doumer</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Paul-Doumer_(cropped).jpg" target="_blank" rel="noopener">Anonymous, National Library of France, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Tang governor Zhang Boyi rebuilt the citadel of Songping around 767 as La Thành, after he defeated a Javanese raid, and it was expanded in the first half of the ninth century. After <a class="enc-link" href="/encyclopedia/gao-pian">Gao Pian</a> recaptured the city in 866 he built a wall around it measuring 6,344 metres, with some sections more than eight metres high. <a class="enc-link" href="/encyclopedia/dai-la">Đại La</a> then had approximately 25,000 residents, among them Persian, Arab, Indian, <a class="enc-link" href="/encyclopedia/cham">Cham</a> and Javanese communities and <a class="enc-link" href="/encyclopedia/church-of-the-east">Nestorian Christians</a>. Medieval Muslim sources between the 9th and 12th centuries called the city Luqin.</p><p>In 1010 <a class="enc-link" href="/encyclopedia/ly-thai-to">Lý Thái Tổ</a> made the site the capital of Đại Việt as <a class="enc-link" href="/encyclopedia/thang-long">Thăng Long</a>. The Temple of Literature, site of the oldest university in <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a>, was started in 1010, and the One Pillar Pagoda was built in 1049, based on a dream of King Lý Thái Tông. In the 17th century, when the city was called Đông Kinh, Western diplomats estimated its population at about 100,000. The Old Quarter near <a class="enc-link" href="/encyclopedia/hoan-kiem-lake">Hoàn Kiếm Lake</a> kept its street layout: at the beginning of the 20th century Hanoi consisted of the 36 streets, the citadel and some newer French buildings south of the lake, and each street had merchants and households specialising in a trade such as <a class="enc-link" href="/encyclopedia/silk">silk</a>, jewellery or bamboo.</p><p>After the French took control in 1888 they built boulevards, villas and government buildings. <a class="enc-link" href="/encyclopedia/paul-doumer">Paul Doumer</a>, governor-general from 1898 to 1902, played a role in the city's planning, and Ernest Hébrard designed a master plan in 1924 that was partially implemented.</p></div>
+      </div>
+      <div class="profile-section-block" id="rulers">
+        <h2 class="profile-section-title">Who Ruled It</h2>
+        <div class="profile-section-body"><p>Han rule followed the Han conquest of <a class="enc-link" href="/encyclopedia/nanyue">Nanyue</a> in 111 BCE. The Liu Song seat of Tống Bình was the capital of Annam under the Tang from 679, and Chinese control in northern <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a> ended de facto in 880, when the Tang army in Annam mutinied and took <a class="enc-link" href="/encyclopedia/dai-la">Đại La</a>. In 1010 <a class="enc-link" href="/encyclopedia/ly-thai-to">Lý Thái Tổ</a>, the first ruler of the Lý dynasty, moved the capital of Đại Việt there. <a class="enc-link" href="/encyclopedia/thang-long">Thăng Long</a> remained the capital until 1397, when the capital moved to Thanh Hóa, and the city became Đông Đô, the Eastern Capital.</p><p>The <a class="enc-link" href="/encyclopedia/ming-empire">Ming dynasty</a> invaded and occupied Đại Việt in 1408 and renamed the city Dongguan. In 1428 the <a class="enc-link" href="/encyclopedia/lam-son-uprising">Lam Sơn uprising</a> under <a class="enc-link" href="/encyclopedia/le-loi">Lê Lợi</a> overthrew Chinese rule, and he founded the Lê dynasty and renamed the city Đông Kinh, the source of the Western name Tonkin. When the Nguyễn dynasty was established in 1802, <a class="enc-link" href="/encyclopedia/gia-long">Gia Long</a> moved the capital to Huế. In 1831 Minh Mạng renamed the city Hà Nội. The French military occupied Hanoi in 1873 and it passed to them ten years later; it was in the <a class="enc-link" href="/encyclopedia/protectorate">protectorate</a> of Tonkin and became the capital of <a class="enc-link" href="/encyclopedia/indochina">French Indochina</a> in 1902.</p><p><a class="enc-link" href="/encyclopedia/japan">Japan</a> occupied French Indochina in September 1940, and on 2 September 1945 Hồ Chí Minh proclaimed the independence of Vietnam, with Hanoi as the capital of the Democratic Republic of Vietnam. The French reoccupied the city in February 1947. From 1949 to 1954 Hanoi was under the <a class="enc-link" href="/encyclopedia/state-of-vietnam">State of Vietnam</a>, and in 1954 it became the capital of North Vietnam. In 1976 it became the capital of the Socialist Republic of Vietnam.</p></div>
+      </div>
+      <div class="profile-section-block" id="life">
+        <h2 class="profile-section-title">Life in the City</h2>
+        <div class="profile-section-body"><p>The city's names record its changing peoples and rulers. Several of the older ones, such as <a class="enc-link" href="/encyclopedia/long-bien">Long Biên</a> and Long Đỗ, feature the dragon, linked to the curved formation of the Red River around the city. Under the Tang, <a class="enc-link" href="/encyclopedia/dai-la">Đại La</a> had Persian, Arab, Indian, <a class="enc-link" href="/encyclopedia/cham">Cham</a> and Javanese communities and <a class="enc-link" href="/encyclopedia/church-of-the-east">Nestorian Christians</a>, and Muslim traders knew the city as Luqin.</p><p>In the Old Quarter commerce started hundreds of years ago and consisted mostly of family businesses. The street names reflected the trades, and some streets remained exclusively in their original commerce. Over six decades of French colonisation and centuries of cultural influence from <a class="enc-link" href="/encyclopedia/china">China</a> shaped the designs of the old houses: the fronts of some combine French-style columns, Confucian scrolls, the Taoist yin-yang sign and the Buddhist lotus. The French colonial style became dominant elsewhere, in tree-lined boulevards such as Phan Đình Phùng, Hoàng Diệu and Trần Phú and in villas, mansions and government buildings, and some colonial structures mixed French and Vietnamese styles.</p><p>During the colonial period Hanoi, as the capital of <a class="enc-link" href="/encyclopedia/indochina">French Indochina</a>, attracted French, Chinese and Vietnamese people from the surrounding areas. The population was 132,145 in the 1940s. In the 2019 <a class="enc-link" href="/encyclopedia/census">census</a> the Viet (Kinh) accounted for 98.66 per cent of the population, followed by the Mường at 0.77 per cent and the Tày at 0.24 per cent, and more than 50 ethnic groups lived in the city.</p></div>
+      </div>
+      <div class="profile-section-block" id="crises">
+        <h2 class="profile-section-title">Sieges &amp; Disasters</h2>
+        <div class="profile-section-body"><p>In March 40 CE Trưng Trắc and Trưng Nhị, daughters of an aristocratic Lạc family of the Mê Linh district, led a rebellion against the Han that gained the support of about 65 towns and settlements. In 42 the Han emperor sent the general Ma Yuan with 32,000 men to suppress it. The rebellion was defeated the next year, and Ma Yuan captured and decapitated the two sisters and sent their heads to the Han court at <a class="enc-link" href="/encyclopedia/luoyang">Luoyang</a>.</p><p>In 863 Nanzhao and local rebels besieged Jincheng and overran the Tang garrisons, and in 866 <a class="enc-link" href="/encyclopedia/gao-pian">Gao Pian</a> recaptured the city and drove them out. The Ming invasion and occupation of Đại Việt began in 1408 and lasted until the uprising of <a class="enc-link" href="/encyclopedia/le-loi">Lê Lợi</a> in 1428.</p><p>The Japanese occupation of <a class="enc-link" href="/encyclopedia/indochina">French Indochina</a> began in September 1940, and in March 1945 <a class="enc-link" href="/encyclopedia/japan">Japan</a> overthrew French rule in Hanoi. After the French returned in February 1947, eight years of fighting between French and Democratic Republic forces followed, and the <a class="enc-link" href="/encyclopedia/peoples-army-of-vietnam">People's Army of Vietnam</a> and the International Control Commission occupied the city on 10 October 1954 under the 1954 <a class="enc-link" href="/encyclopedia/geneva">Geneva</a> Conference. The city had 53 thousand inhabitants in 1954. During the <a class="enc-link" href="/encyclopedia/vietnam-war">Vietnam War</a>, from 1955 to 1975, North <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a>, Hanoi included, was attacked by <a class="enc-link" href="/encyclopedia/united-states">United States</a> and South Vietnamese air forces.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>The Temple of Literature, the One Pillar Pagoda and the Flag Tower of Hanoi are among the sites that survive from the imperial period, and in 2004 part of the 900-year-old Hanoi Citadel was discovered in central Hanoi, near Ba Đình Square. The Old Quarter keeps most of its original street layout, and the French colonial buildings include the National Museum of Vietnamese History, the <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a> National Museum of Fine Arts and the old <a class="enc-link" href="/encyclopedia/indochina">Indochina</a> Medical College.</p><p>Hanoi's area changed several times. By 1961 it covered 584 square kilometres and had a population of 91,000, and in 1978 the <a class="enc-link" href="/encyclopedia/national-assembly-of-france">National Assembly</a> enlarged it to 2,136 square kilometres with a population of 2.5 million. On 1 August 2008 Hà Tây Province, Mê Linh District and four communes of Lương Sơn District were merged into it, bringing the population to about 6.2 million. After public protest against the redevelopment of culturally significant areas the national government introduced a low-rise policy around <a class="enc-link" href="/encyclopedia/hoan-kiem-lake">Hoàn Kiếm Lake</a>, and Ba Đình District is also protected from commercial redevelopment.</p><p>Hanoi is today the capital of Vietnam and its second most populous centrally governed city, with about 8.7 million people. It hosts the Imperial Citadel of <a class="enc-link" href="/encyclopedia/thang-long">Thăng Long</a>, the Hồ Chí Minh Mausoleum, Hoàn Kiếm Lake and West Lake.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Hanoi, on the Red River in northern <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a>, grew from a fortified settlement of the fifth century CE into <a class="enc-link" href="/encyclopedia/thang-long">Thăng Long</a>, the capital of Đại Việt from 1010. It was the capital of <a class="enc-link" href="/encyclopedia/indochina">French Indochina</a> and of North Vietnam, and since 1976 it has been the capital of Vietnam.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="hanoi"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Lê Lợi overthrows Ming rule and renames the city Đông Kinh","o":["1010","1428","1831","1976"],"a":1,"w":"1428: Lê Lợi overthrows Ming rule and renames the city Đông Kinh."},{"p":"Which came first?","q":"","o":["The Trưng sisters lead a rebellion against the Han dynasty","The Nguyễn king Minh Mạng renames the city Hà Nội"],"a":0,"w":"40: The Trưng sisters lead a rebellion against the Han dynasty · 1831: The Nguyễn king Minh Mạng renames the city Hà Nội."},{"p":"In which year?","q":"Hanoi becomes the capital of French Indochina","o":["40","1428","1902","1831"],"a":2,"w":"1902: Hanoi becomes the capital of French Indochina."},{"p":"Which came first?","q":"","o":["Hanoi becomes the capital of the unified Socialist Republic of Vietnam","The Trưng sisters lead a rebellion against the Han dynasty"],"a":1,"w":"1976: Hanoi becomes the capital of the unified Socialist Republic of Vietnam · 40: The Trưng sisters lead a rebellion against the Han dynasty."},{"p":"In which year?","q":"The Tang general Gao Pian recaptures the city and renames it Đại La","o":["1428","1010","866","1976"],"a":2,"w":"866: The Tang general Gao Pian recaptures the city and renames it Đại La."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Georges Boudarel, Hanoi: City Of The Rising Dragon (Rowman &amp; Littlefield Publishers, Inc., 2002)</li>
+        <li>Quoc Vuong Tran, Hanoi: From the Origins to the 19th Century (Xunhasaba, 1977)</li>
+        <li>William S. Logan, Hanoi: Biography of a City (University of Washington Press, 2000)</li>
+        <li>Michael G. Vann, The Great Hanoi Rat Hunt: Empire, Disease, and Modernity in French Colonial Vietnam (Oxford University Press, 2018)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other citys</p>
+      <div class="related-grid"><a class="related-card" href="/city/honolulu"><img src="/logos/thumbs/Honolulu.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Honolulu</span><span class="related-card-dates">c. 1000 CE – present</span></a><a class="related-card" href="/city/lahore"><img src="/logos/thumbs/Lahore.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Lahore</span><span class="related-card-dates">c. 982 CE – present</span></a><a class="related-card" href="/city/cairo"><img src="/logos/thumbs/Cairo.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Cairo</span><span class="related-card-dates">969 CE – present</span></a><a class="related-card" href="/city/delhi"><img src="/logos/thumbs/Delhi.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Delhi</span><span class="related-card-dates">1052 CE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/city/honolulu"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Honolulu.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Honolulu</span><span class="related-card-dates">c. 1000 CE – present</span></a><a class="related-card" href="/city/delhi"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Delhi.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Delhi</span><span class="related-card-dates">1052 CE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Hanoi",slug="hanoi",url="https://the-epoch-institute.org/city/hanoi";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Hanoi on The Epoch Institute — history, rulers and legacy. https://the-epoch-institute.org/city/hanoi #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/city/hanoi"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Hanoi",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Hanoi",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

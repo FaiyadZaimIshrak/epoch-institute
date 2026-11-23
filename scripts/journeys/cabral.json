@@ -1,0 +1,316 @@
+{
+ "slug": "cabral",
+ "title": "Cabral's Fleet to Brazil and India",
+ "years": "1500–1501",
+ "traveller": "Pedro Álvares Cabral",
+ "intro": "King Manuel I of Portugal sent a fleet of 13 ships and 1500 men under Pedro Álvares Cabral to India to secure a treaty with Calicut, find Sofala and bring back spices. On the way the fleet reached the coast of Brazil, where the Tupiniquim lived.",
+ "ending": "Cabral reached Lisbon on 21 July 1501 with the treaty with Calicut unmade and the war with it begun. Of the 13 ships, five were lost, and Portugal gained a factory in Cochin and a claim to Brazil.",
+ "legs": [
+  {
+   "title": "Lisbon to the coast of Brazil",
+   "stops": [
+    {
+     "place": "Lisbon",
+     "entry": "lisbon",
+     "wp": "Lisbon",
+     "date": "9 March 1500",
+     "year": 1500,
+     "by": "sea",
+     "text": "The fleet set out from the Tagus, the river of Lisbon. It was a large, well-armed armada of 13 ships and 1500 men, carrying gifts and letters for the rulers of the east.",
+     "quote": "On March 9, Cabral's expedition set out from the Tagus.",
+     "ll": [
+      38.708,
+      -9.139
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "São Nicolau",
+     "entry": null,
+     "wp": "São Nicolau, Cape Verde",
+     "date": "22 March 1500",
+     "year": 1500,
+     "by": "sea",
+     "text": "The fleet reached the island in the middle of a storm. The ship of Luís Pires was too damaged by the tempest to go on and returned to Lisbon.",
+     "quote": "Thirteen days later, on March 22, Cabral's armada reached the island of São Nicolau in the middle of a storm.",
+     "ll": [
+      16.615,
+      -24.271
+     ],
+     "psrc": "wikidata:São Nicolau, Cape Verde"
+    },
+    {
+     "place": "Monte Pascoal",
+     "entry": null,
+     "wp": "Monte Pascoal",
+     "date": "22 April 1500",
+     "year": 1500,
+     "by": "sea",
+     "text": "After 44 days from departure the fleet sighted the coast of Brazil and named a hill Monte Pascoal. Tupiniquim people gathered on the beach, but the surf was too strong for a landing.",
+     "quote": "The next day, the armada caught sight of the Brazilian coast, seeing the outlines of a hill they named Monte Pascoal.",
+     "ll": [
+      -16.917,
+      -39.267
+     ],
+     "psrc": "wikidata:Monte Pascoal"
+    },
+    {
+     "place": "Cabrália Bay",
+     "entry": null,
+     "wp": "Santa Cruz Cabrália",
+     "date": "April 1500",
+     "year": 1500,
+     "by": "sea",
+     "text": "The fleet sheltered behind the reef at Cabrália Bay, near Porto Seguro. Friar Henrique Soares held a mass before 200 Tupiniquim on 26 April. On 1 May Cabral claimed the land for Portugal as the Ilha de Vera Cruz and left a couple of convicts with the Tupiniquim.",
+     "quote": "Strong overnight winds prompted the armada to lift anchor and sail some 10 leagues (45 km) north, finding harbor behind the reef at Cabrália Bay, just north of Porto Seguro.",
+     "ll": [
+      -16.278,
+      -39.025
+     ],
+     "psrc": "wikidata:Santa Cruz Cabrália"
+    }
+   ]
+  },
+  {
+   "title": "Round the Cape and up the East African coast",
+   "stops": [
+    {
+     "place": "Cape of Good Hope",
+     "entry": "cape-of-good-hope",
+     "wp": "Cape of Good Hope",
+     "date": "late May 1500",
+     "year": 1500,
+     "by": "sea",
+     "text": "The fleet met headlong winds for six days at the Cape. Four ships, among them that of Bartolomeu Dias, were lost at sea, which left seven.",
+     "quote": "After crossing the Atlantic Ocean, Cabral's armada reached the Cape of Good Hope in late May.",
+     "ll": [
+      -34.358,
+      18.472
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Primeiras Islands",
+     "entry": null,
+     "wp": "Primeiras and Segundas Archipelago",
+     "date": "16 June 1500",
+     "year": 1500,
+     "by": "sea",
+     "text": "Cabral's three-ship squadron chased two merchant ships. One ran aground and the other was captured, then released when it proved to belong to a cousin of the sultan of Malindi.",
+     "quote": "On June 16, 1500, Cabral's three-ship squadron reached the Primeiras Islands several leagues north of Sofala.",
+     "ll": [
+      -17.09,
+      39.121
+     ],
+     "psrc": "wikidata:Primeiras and Segundas Archipelago"
+    },
+    {
+     "place": "Mozambique Island",
+     "entry": "mozambique-island",
+     "wp": "Mozambique Island",
+     "date": "22 June 1500",
+     "year": 1500,
+     "by": "sea",
+     "text": "The Sultan of Mozambique gave Cabral a warm reception and let him collect water and supplies. Three more ships joined him here, and the fleet went on with six ships.",
+     "quote": "The three ships landed on Mozambique Island on June 22.",
+     "ll": [
+      -15.037,
+      40.733
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Kilwa",
+     "entry": "kilwa-kisiwani",
+     "wp": "Kilwa Kisiwani",
+     "date": "26 July 1500",
+     "year": 1500,
+     "by": "sea",
+     "text": "Cabral met Emir Ibrahim in rowboats in the harbour and offered a treaty from King Manuel I. Ibrahim was suspicious, and Cabral, worried about missing the monsoon, broke off the talks and sailed on.",
+     "quote": "More than a month later, on July 26, Cabral's armada reached Kilwa, the dominant city-state of the East African coast and which Gama had never visited.",
+     "ll": [
+      -8.982,
+      39.517
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Malindi",
+     "entry": null,
+     "wp": "Malindi",
+     "date": "2 August 1500",
+     "year": 1500,
+     "by": "sea",
+     "text": "After avoiding hostile Mombasa, the fleet was well received by the Sultan of Malindi. Cabral landed the Malindi ambassador, took on two Gujarati pilots and crossed the Indian Ocean from 7 August.",
+     "quote": "Pressing north, the Cabral fleet avoided the hostile Mombassa (Mombaça) and finally reached friendly Malindi (Melinde) on August 2.",
+     "ll": [
+      -3.219,
+      40.117
+     ],
+     "psrc": "wikidata:Malindi"
+    }
+   ]
+  },
+  {
+   "title": "India: Calicut, war and Cochin",
+   "stops": [
+    {
+     "place": "Anjediva Island",
+     "entry": null,
+     "wp": "Anjediva Island",
+     "date": "22 August 1500",
+     "year": 1500,
+     "by": "sea",
+     "text": "After an uneventful crossing the six ships rested, and were repaired and repainted.",
+     "quote": "After an uneventful ocean crossing, Cabral's six ships landed on Anjediva Island (Angediva, Anjadip) on August 22, where they rested and repaired and repainted the ships.",
+     "ll": [
+      14.757,
+      74.112
+     ],
+     "psrc": "wikidata:Anjediva Island"
+    },
+    {
+     "place": "Calicut",
+     "entry": null,
+     "wp": "Kozhikode",
+     "date": "13 September 1500",
+     "year": 1500,
+     "by": "sea",
+     "text": "Cabral went ashore only after hostages were exchanged, and met the Zamorin. A trade treaty was agreed and the Portuguese were allowed a factory, where Aires Correia landed with around 70 men.",
+     "quote": "Sailing down the Indian coast, Cabral's expedition finally reached Calicut on September 13.",
+     "ll": [
+      11.248,
+      75.78
+     ],
+     "psrc": "wikidata:Kozhikode"
+    },
+    {
+     "place": "Calicut",
+     "entry": null,
+     "wp": "Kozhikode",
+     "date": "17 December 1500",
+     "year": 1500,
+     "by": "sea",
+     "text": "Cabral seized an Arab merchant ship, and a mob attacked the factory. 53 Portuguese were killed (some sources say 70). Cabral then seized about ten Arab ships, killed their crews, burned them and bombarded the city for a day, with casualties of up to 600.",
+     "quote": "Incensed, the Arab merchants around the quay immediately raised a riot in Calicut and direct mobs to attack the Portuguese factory.",
+     "ll": [
+      11.248,
+      75.78
+     ],
+     "psrc": "wikidata:Kozhikode"
+    },
+    {
+     "place": "Cochin",
+     "entry": "kochi",
+     "wp": "Kochi",
+     "date": "24 December 1500",
+     "year": 1500,
+     "by": "sea",
+     "text": "On the advice of Gaspar da Gama, Cabral sailed to Cochin, a rival of Calicut. He made an alliance with its raja against Calicut, and a Portuguese factory was set up under Gonçalo Gil Barbosa.",
+     "quote": "At the suggestion of Gaspar da Gama, the Goese Jew who had been accompanying the expedition, Cabral set sail south along the coast toward Cochin kingdom",
+     "ll": [
+      9.967,
+      76.283
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Cranganore",
+     "entry": "kodungallur",
+     "wp": "Kodungallur",
+     "date": "January 1501",
+     "year": 1501,
+     "by": "sea",
+     "text": "Cabral loaded cargo at the declining city and met its Malabari Jewish and Syrian Christian communities. Two Syrian Christian priests asked for passage to Europe.",
+     "quote": "Finding the supply in Cochin running low, Cabral took up the offer to load some cargo at Cranganore.",
+     "ll": [
+      10.22,
+      76.22
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Cannanore",
+     "entry": "kannur",
+     "wp": "Kannur",
+     "date": "January 1501",
+     "year": 1501,
+     "by": "sea",
+     "text": "After leaving Cochin when news came of a Calicut fleet of around 80 boats, Cabral swung wide of Calicut and was received by the Kolathiri Raja, who sold spices on credit. Cabral paid him all the same.",
+     "quote": "Heading north, Cabral's armada took a wide sweep to avoid Calicut, and paid a quick visit to Cannanore.",
+     "ll": [
+      11.869,
+      75.356
+     ],
+     "psrc": "entry"
+    }
+   ]
+  },
+  {
+   "title": "The way home",
+   "stops": [
+    {
+     "place": "Malindi",
+     "entry": null,
+     "wp": "Malindi",
+     "date": "February 1501",
+     "year": 1501,
+     "by": "sea",
+     "text": "Vice-admiral Sancho de Tovar ran the spice-laden El Rei aground on the Malindi coast. The ship could not be repaired, so its crew and cargo were reallocated and it was burnt for its iron fittings.",
+     "quote": "As Cabral's expedition approached Malindi in February, vice-admiral Sancho de Tovar, sailing at the front, ran his spice-laden ship, the El Rei, aground on the Malindi coast.",
+     "ll": [
+      -3.219,
+      40.117
+     ],
+     "psrc": "wikidata:Malindi"
+    },
+    {
+     "place": "Mozambique Island",
+     "entry": "mozambique-island",
+     "wp": "Mozambique Island",
+     "date": "spring 1501",
+     "year": 1501,
+     "by": "sea",
+     "text": "With five ships left and no news of Diogo Dias, Cabral sent the fast Anunciada ahead under Nicolau Coelho and sent Tovar in the São Pedro to find Sofala.",
+     "quote": "Cabral's fleet, reduced to just five ships, reached Mozambique Island in the spring.",
+     "ll": [
+      -15.037,
+      40.733
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Bezeguiche",
+     "entry": null,
+     "wp": "Dakar",
+     "date": "June 1501",
+     "year": 1501,
+     "by": "sea",
+     "text": "At the bay of Dakar, called Bezeguiche, Cabral found Diogo Dias and Nicolau Coelho waiting. Pêro de Ataíde and Tovar arrived by the end of June.",
+     "quote": "Shortly after, Cabral and Simão de Miranda themselves reached Bezeguiche, where they find Diogo Dias and Nicolau Coelho awaiting them.",
+     "ll": [
+      14.673,
+      -17.432
+     ],
+     "psrc": "wikidata:Dakar"
+    },
+    {
+     "place": "Lisbon",
+     "entry": "lisbon",
+     "wp": "Lisbon",
+     "date": "21 July 1501",
+     "year": 1501,
+     "by": "sea",
+     "text": "Cabral and Miranda arrived in Lisbon a month after Coelho. Tovar and Ataíde followed on 25 July and Dias, with his empty caravel, on 27 July.",
+     "quote": "One month after Coelho's arrival, on July 21, Cabral and Miranda, captaining the two larger ships, finally arrived in Lisbon.",
+     "ll": [
+      38.708,
+      -9.139
+     ],
+     "psrc": "entry"
+    }
+   ]
+  }
+ ],
+ "notes": "Calicut appears twice because the fleet stayed there from September to December (not a return). The Cabrália Bay date is only April 1500 (article gives days for events around it, not the move); the 26 April mass and 1 May claim are from lines beside the quote. Wp for Cabrália Bay is Santa Cruz Cabrália (municipality); Primeiras Islands wp is the archipelago; Bezeguiche is Dakar's bay per the article. The Frade river anchorage (23 April) was left out as a river. The article says the Zamorin 'new' vs Gama; casualties at Calicut 53 (some say 70), up to 600 from the bombardment. Left out: Cochin departure 16 January (leaving only), Diogo Dias's separate voyage, Sofala (seen from afar only). Article uses 'discovered' for Brazil; text says sighted. Tupiniquim named as in article. Mozambique Island 'spring' and Malindi 'February' dates from 1501."
+}

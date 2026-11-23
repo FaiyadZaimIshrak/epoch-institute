@@ -188,10 +188,17 @@
     if (!on) return; if (S.i >= S.j.stops.length - 1) go(0);
     (function tick() { S.timer = setTimeout(function () { if (!S.playing) return; if (S.i >= S.j.stops.length - 1) { play(false); return; } go(S.i + 1); tick(); }, 2600); })();
   }
+  // the picker offers one age at a time (make-journeys.js gives each journey's button its data-era)
+  function eraOf(slug) { var a = $('.jr-pick a[data-j="' + slug + '"]'); return a ? +a.getAttribute('data-era') : 0; }
+  function setEra(n) { S.era = n;
+    $$('.jr-eras button').forEach(function (b) { var on = +b.getAttribute('data-era') === n; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+    $$('.jr-pick a').forEach(function (a) { a.classList.toggle('jr-off', +a.getAttribute('data-era') !== n); });
+    var p = $('.jr-pick'), cur = $('.jr-pick a.is-on:not(.jr-off)'); if (p) p.scrollLeft = cur ? Math.max(0, cur.offsetLeft - 12) : 0; }
   function show(slug, i, quick) {
     var j = J.filter(function (x) { return x.slug === slug; })[0] || J[0]; play(false); S.j = j; S.i = Math.max(0, Math.min(j.stops.length - 1, i || 0));
     arts.forEach(function (a) { a.classList.toggle('is-on', a === j.el); });
     $$('.jr-pick a').forEach(function (a) { var on = a.getAttribute('data-j') === j.slug; a.classList.toggle('is-on', on); if (on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current'); });
+    setEra(eraOf(j.slug));
     cv.setAttribute('aria-label', 'Globe: the route of ' + j.title + '. The stops are listed beside it.');
     paintNow(); address(); setView(S.view, true);
   }
@@ -200,6 +207,7 @@
     var li = t.closest('.jr-stops > li'); if (li && !t.closest('a') && S.j && li.closest('.jr-j') === S.j.el) { go(+li.getAttribute('data-i'), true); if (window.matchMedia('(max-width: 900px)').matches) $('.jr-map').scrollIntoView({ behavior: 'instant', block: 'start' }); return; }
     var b = t.closest('button'); if (!b) return;
     if (b.id === 'jr-prev') go(S.i - 1, true); else if (b.id === 'jr-next') go(S.i + 1, true); else if (b.id === 'jr-play') play(!S.playing);
+    else if (b.getAttribute('data-era') !== null && b.closest('.jr-eras')) setEra(+b.getAttribute('data-era'));
     else if (b.getAttribute('data-v')) setView(b.getAttribute('data-v'));
     else if (b.classList.contains('jr-zoom') && G) { G.anim = null; G.k = Math.max(0.8, Math.min(12, G.k * (b.getAttribute('data-z') === 'in' ? 1.4 : 1 / 1.4))); kick(); }
   });

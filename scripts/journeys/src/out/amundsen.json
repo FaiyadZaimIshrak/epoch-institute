@@ -1,0 +1,106 @@
+{
+ "slug": "amundsen",
+ "title": "Amundsen's South Pole Expedition",
+ "years": "1910–1912",
+ "traveller": "Roald Amundsen",
+ "intro": "The Norwegian explorer Roald Amundsen had planned an Arctic drift in Nansen's ship Fram. After Cook and Peary each claimed the North Pole in 1909, he changed his plan to the South Pole and kept the new aim secret, revealing it to his crew at Madeira.",
+ "ending": "Amundsen and four companions reached the Geographic South Pole on 14 December 1911, five weeks ahead of Scott's party, and returned safely to Framheim. Fram carried the news to Hobart, from where Amundsen sent his telegrams.",
+ "legs": [
+  {
+   "title": "From Norway to the Great Ice Barrier",
+   "stops": [
+    {
+     "place": "Kristiansand",
+     "entry": null,
+     "wp": "Kristiansand",
+     "date": "late July 1910",
+     "year": 1910,
+     "by": "sea",
+     "text": "Fram took the dogs on board and made final preparations here. Just before sailing on 9 August, Amundsen told only the two junior officers, Prestrud and Gjertsen, the true destination.",
+     "quote": "After a month's trial cruise in the northern Atlantic, Fram sailed to Kristiansand in late July 1910 to take the dogs on board and to make final preparations for departure."
+    },
+    {
+     "place": "Funchal",
+     "entry": null,
+     "wp": "Funchal",
+     "date": "6 September 1910",
+     "year": 1910,
+     "by": "sea",
+     "text": "Three days after arriving at Madeira, Amundsen told the crew he meant to make a detour to the South Pole. Each man was asked if he would go on, and all said yes. He cabled Scott before leaving on 9 September.",
+     "quote": "Fram reached Funchal on 6 September. Three days later Amundsen informed the crew of the revised plan."
+    },
+    {
+     "place": "Bay of Whales",
+     "entry": null,
+     "wp": "Bay of Whales",
+     "date": "14 January 1911",
+     "year": 1911,
+     "by": "sea",
+     "text": "Fram sailed south for four months. The first icebergs were sighted on New Year's Day 1911, the Barrier came into view on 11 January, and the ship was in the Bay of Whales on 14 January.",
+     "quote": "The first icebergs were sighted on New Year's Day 1911; the Barrier itself came into view on 11 January, and on 14 January Fram was in the Bay of Whales."
+    }
+   ]
+  },
+  {
+   "title": "The base and the march to the pole",
+   "stops": [
+    {
+     "place": "Framheim",
+     "entry": null,
+     "wp": "Framheim",
+     "date": null,
+     "year": null,
+     "by": "land",
+     "text": "The main hut stood 2.2 nautical miles from the ship, with its door facing west away from the prevailing wind. The base was named Framheim, the home of Fram. Depot journeys and the winter were spent here.",
+     "quote": "The base was dubbed Framheim, \"the home of Fram\"."
+    },
+    {
+     "place": "Axel Heiberg Glacier",
+     "entry": null,
+     "wp": "Axel Heiberg Glacier",
+     "date": "21 November 1911",
+     "year": 1911,
+     "by": "land",
+     "text": "The five men left Framheim on 19 October with four sledges and fifty-two dogs. Having found a steep glacier about 30 nautical miles long, Amundsen named it after one of his backers. On 21 November they climbed 5,000 feet.",
+     "quote": "Amundsen named this the Axel Heiberg Glacier, after one of his chief financial backers."
+    },
+    {
+     "place": "South Pole",
+     "entry": null,
+     "wp": "South Pole",
+     "date": "14 December 1911",
+     "year": 1911,
+     "by": "land",
+     "text": "At around 3 pm the party reached the vicinity of the pole and planted the Norwegian flag. They spent three days fixing the position and pitched a tent, Polheim, leaving equipment and a letter for Scott.",
+     "quote": "On the following day, 14 December 1911, with the concurrence of his comrades Amundsen travelled in front of the sledges, and at around 3 pm the party reached the vicinity of the South Pole."
+    }
+   ]
+  },
+  {
+   "title": "Home to Framheim and on to Hobart",
+   "stops": [
+    {
+     "place": "Framheim",
+     "entry": null,
+     "wp": "Framheim",
+     "date": "25 January 1912",
+     "year": 1912,
+     "by": "land",
+     "text": "The party left the pole on 18 December and reached Framheim at 4 am on 25 January. Eleven of the 52 dogs that started had survived. The round trip took 99 days and covered about 1,860 nautical miles.",
+     "quote": "Under this regime they covered around 30 nautical miles (56 km) a day, and on 25 January, at 4 am, they reached Framheim."
+    },
+    {
+     "place": "Hobart",
+     "entry": "hobart",
+     "wp": "Hobart",
+     "date": "7 March 1912",
+     "year": 1912,
+     "by": "sea",
+     "text": "Fram left the Bay of Whales late on 30 January. At Hobart Amundsen telegraphed his brother Leon, Nansen and King Haakon, and the next day cabled the first full account to the Daily Chronicle.",
+     "quote": "On 7 March, Fram reached Hobart, where Amundsen quickly learned there was as yet no news from Scott."
+    }
+   ]
+  }
+ ],
+ "notes": "Framheim (first visit): the article gives no date for the base's founding, so date and year are null (the roof was in place by 21 January and the hut complete six days later, year not stated beside it). Axel Heiberg Glacier: 21 November is given without a year; 1911 comes from the surrounding section (19 October 1911). The 25 January 1912 year is inferred from 4 January 1912 earlier in the same section. Left out: the Butchers' Shop at the glacier summit, the Devil's Ballroom and Polheim (no Wikipedia articles with points; Polheim is at the pole), the Barrier edge, depots at 80, 81, 82 degrees S (latitudes only), King Edward VII Land (Eastern party, a separate journey). Funchal: the entry list has Madeira (the island), left null for the town. The Framheim article's existence on English Wikipedia is not confirmed by the saved text; check wp."
+}

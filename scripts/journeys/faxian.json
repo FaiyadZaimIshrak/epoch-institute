@@ -1,0 +1,126 @@
+{
+ "slug": "faxian",
+ "title": "Faxian's Pilgrimage to India",
+ "years": "399–412",
+ "traveller": "Faxian",
+ "intro": "Faxian, a Chinese Buddhist monk, set out from Chang'an in 399 at about the age of 60 with four companions, to find sacred Buddhist texts in India. He travelled west along the overland Silk Road, spent 10 years in India and came home by sea.",
+ "ending": "Faxian settled in Nanjing in 412 and wrote a book on his travels around 414. He spent the rest of his life translating the Buddhist texts he had brought back.",
+ "legs": [
+  {
+   "title": "From China to India",
+   "stops": [
+    {
+     "place": "Chang'an",
+     "entry": "changan",
+     "wp": "Chang'an",
+     "date": "399",
+     "year": 399,
+     "by": "land",
+     "text": "Faxian set out from Chang'an, the capital of the Buddhist Later Qin dynasty, with four others, to look for sacred Buddhist texts.",
+     "quote": "In 399 CE, about age 60, Faxian was among the earliest attested pilgrims to India. He set out from Chang'an, the capital of the Buddhist Later Qin dynasty, along with four others to locate sacred Buddhist texts",
+     "ll": [
+      34.308,
+      108.858
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Zhangye",
+     "entry": "zhangye",
+     "wp": "Zhangye",
+     "date": "c. 399",
+     "year": 399,
+     "by": "land",
+     "text": "At Zhangye five more pilgrims joined the party, which then travelled on across the desert and mountain passes towards India.",
+     "quote": "and was later joined by five more pilgrims at Zhangye.",
+     "ll": [
+      38.935,
+      100.455
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Pataliputra",
+     "entry": "pataliputra",
+     "wp": "Pataliputra",
+     "date": null,
+     "year": null,
+     "by": "land",
+     "text": "Faxian entered India from the northwest and reached Pataliputra, which he declared a prosperous city. He collected Indian literature here and learned Sanskrit.",
+     "quote": "He entered India from the northwest and reached Pataliputra.",
+     "ll": [
+      25.611,
+      85.144
+     ],
+     "psrc": "entry"
+    }
+   ]
+  },
+  {
+   "title": "The return by sea",
+   "stops": [
+    {
+     "place": "Tamralipti",
+     "entry": null,
+     "wp": "Tamluk",
+     "date": "c. 409",
+     "year": 409,
+     "by": "land",
+     "text": "Faxian left India from Tamralipti, a port he states to be on the eastern coast. Some of his Chinese companions chose to stay in India.",
+     "quote": "He left India about 409 from Tamralipti, a port he states to be on its eastern coast.",
+     "ll": [
+      22.3,
+      87.917
+     ],
+     "psrc": "wikidata:Tamluk"
+    },
+    {
+     "place": "Java",
+     "entry": "java",
+     "wp": "Java",
+     "date": null,
+     "year": null,
+     "by": "sea",
+     "text": "After two years in Sri Lanka, a violent storm drove his ship onto an island, probably Java. Faxian stayed there five months before taking another ship for southern China.",
+     "quote": "after a two-year stay in Sri Lanka, a violent storm drove his ship onto an island, probably Java. After five months there, Faxian took another ship for southern China",
+     "ll": [
+      -7.312,
+      109.418
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Mount Lao",
+     "entry": null,
+     "wp": "Mount Lao",
+     "date": "c. 412",
+     "year": 412,
+     "by": "sea",
+     "text": "The second ship was also blown off course. It landed at Mount Lao in what is now Shandong, 30 kilometres east of Qingdao, after seventy days of dark skies and dwindling water.",
+     "quote": "again it was blown off course and he ended up landing at Mount Lao in what is now Shandong in northern China, 30 kilometres (19 mi) east of the city of Qingdao.",
+     "ll": [
+      36.192,
+      120.592
+     ],
+     "psrc": "wikidata:Mount Lao"
+    },
+    {
+     "place": "Nanjing",
+     "entry": "nanjing",
+     "wp": "Nanjing",
+     "date": "412",
+     "year": 412,
+     "by": "land",
+     "text": "Faxian settled in what is now Nanjing. He wrote his book on the journey there around 414, then spent the following decade translating the sutras he had brought from India.",
+     "quote": "Faxian returned in 412 and settled in what is now Nanjing.",
+     "ll": [
+      32.061,
+      118.779
+     ],
+     "psrc": "entry"
+    }
+   ]
+  }
+ ],
+ "notes": "Seven stops; the minimum is six. The article gives no place for the two years in Sri Lanka, so they are mentioned in the Java stop's text and not drawn as a stop. The article's other Indian sites (Kapilvastu, Bodh Gaya, Benares, Shravasti, Kushinagar, Taxila, Oddiyana) are listed with no order, so they are left out. Pataliputra has no date in the article beyond 'early fifth century'; year 400 is a placeholder for ordering. Java is hedged by the article ('probably Java'); the dates after 409 for Java and 412 for Mount Lao are inferred from the article's 409 departure and 412 return. 'Seventy days' comes from the Legge passage on the sea voyage from Java. Mount Lao's wp title may need the editor's check (Laoshan, Qingdao). Tamralipti's wp title 'Tamralipta' is the ancient port's article."
+}

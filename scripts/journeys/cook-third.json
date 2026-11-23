@@ -1,0 +1,381 @@
+{
+ "slug": "cook-third",
+ "title": "James Cook's Third Voyage",
+ "years": "1776–1780",
+ "traveller": "James Cook",
+ "intro": "James Cook sailed from Plymouth in 1776 in HMS Resolution, with HMS Discovery under Charles Clerke, on a British attempt to find the Northwest Passage. The stated purpose was to return Omai, a young man from Raiatea, to his homeland.",
+ "ending": "Cook was killed at Kealakekua Bay on 14 February 1779 in a violent exchange with Hawaiians. Clerke took command and died of tuberculosis, and under John Gore the crews reached the Nore in October 1780 without having found a passage.",
+ "legs": [
+  {
+   "title": "From Plymouth to New Zealand",
+   "stops": [
+    {
+     "place": "Plymouth",
+     "entry": null,
+     "wp": "Plymouth",
+     "date": "1776",
+     "year": 1776,
+     "by": "sea",
+     "text": "The Resolution under Cook and the Discovery under Clerke were prepared for the voyage, which started from Plymouth. Clerke was in prison for debt until the end of July and joined the ships afterwards.",
+     "quote": "HMS Resolution, to be commanded by Cook, and HMS Discovery, commanded by Charles Clerke, were prepared for the voyage which started from Plymouth in 1776.",
+     "ll": [
+      50.371,
+      -4.142
+     ],
+     "psrc": "wikidata:Plymouth"
+    },
+    {
+     "place": "Tenerife",
+     "entry": null,
+     "wp": "Tenerife",
+     "date": "4 August 1776",
+     "year": 1776,
+     "by": "sea",
+     "text": "Cook stopped here rather than at Madeira to obtain better feed for the livestock. He met French and Spanish naval officers, and left on 4 August after three days.",
+     "quote": "After three days, Cook departed Tenerife on 4 August",
+     "ll": [
+      28.269,
+      -16.606
+     ],
+     "psrc": "wikidata:Tenerife"
+    },
+    {
+     "place": "Cape of Good Hope",
+     "entry": "cape-of-good-hope",
+     "wp": "Cape of Good Hope",
+     "date": "17 October 1776",
+     "year": 1776,
+     "by": "sea",
+     "text": "Cook reached the Cape and anchored in Table Bay the next day, arriving twelve days sooner than on his previous voyage. The Discovery arrived on 10 November, and the ships sailed together on 1 December.",
+     "quote": "Cook reached the Cape of Good Hope on 17 October and anchored in Table Bay the following day.",
+     "ll": [
+      -34.358,
+      18.472
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Van Diemen's Land",
+     "entry": null,
+     "wp": "Tasmania",
+     "date": "26 January 1777",
+     "year": 1777,
+     "by": "sea",
+     "text": "Driven by strong westerly winds, the ships reached the island now called Tasmania. They took on water and wood and had brief contact with the Aboriginal people living there.",
+     "quote": "they reached Van Diemen's Land (current island of Tasmania) on 26 January 1777, where they took on water and wood and became cursorily acquainted with the aborigines living there.",
+     "ll": [
+      -42,
+      147
+     ],
+     "psrc": "wikidata:Tasmania"
+    },
+    {
+     "place": "Queen Charlotte Sound",
+     "entry": null,
+     "wp": "Queen Charlotte Sound / Tōtaranui",
+     "date": "12 February 1777",
+     "year": 1777,
+     "by": "sea",
+     "text": "Cook kept armed guards with shore parties after earlier violence at Grass Cove. The local people expected utu, or revenge, for Grass Cove, but Cook refused to act, saying he would remain a friend unless provoked again.",
+     "quote": "The ships reached Queen Charlotte Sound, New Zealand, on 12 February. The area provided ample resources, including fresh water, vegetables from past plantings, grass, and fish.",
+     "ll": [
+      -41.25,
+      174.016
+     ],
+     "psrc": "wikidata:Queen Charlotte Sound / Tōtaranui"
+    }
+   ]
+  },
+  {
+   "title": "The Society Islands and Christmas Island",
+   "stops": [
+    {
+     "place": "Tahiti",
+     "entry": null,
+     "wp": "Tahiti",
+     "date": "12 August 1777",
+     "year": 1777,
+     "by": "sea",
+     "text": "After weeks at Tonga and a sighting of Tubuai, where he chose not to land, Cook reached Tahiti. Omai's return created a difficult situation, as his countrymen showed more interest in his treasures than in him.",
+     "quote": "In early August, he discovered Tubuai, an island in the Austral group. After encountering canoes, he chose not to land and instead continued to Tahiti, reaching it on the 12th.",
+     "ll": [
+      -17.667,
+      -149.467
+     ],
+     "psrc": "wikidata:Tahiti"
+    },
+    {
+     "place": "Moorea",
+     "entry": "moorea",
+     "wp": "Moorea",
+     "date": null,
+     "year": null,
+     "by": "sea",
+     "text": "After a goat was stolen, Cook led an armed group across the island, burning homes, canoes and crops. Cook wrote that the affair was regretted by the islanders no more than by himself, and some officers were uncomfortable at what they saw.",
+     "quote": "Instead, he led an armed group on a destructive rampage across the island, burning homes, canoes, and local crops, terrorising the inhabitants.",
+     "ll": [
+      -17.535,
+      -149.835
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Huahine",
+     "entry": "huahine",
+     "wp": "Huahine",
+     "date": "October 1777",
+     "year": 1777,
+     "by": "sea",
+     "text": "Omai wished to reclaim his father's land on Raiatea, but Cook arranged with the Huahine chiefs for land on which to build him a house instead. Cook left Omai livestock and some powder for his firearms.",
+     "quote": "However, Cook brokered a deal with Huahine chiefs for land to build Omai a residence instead.",
+     "ll": [
+      -16.733,
+      -151.033
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Raiatea",
+     "entry": null,
+     "wp": "Raiatea",
+     "date": "3 November 1777",
+     "year": 1777,
+     "by": "sea",
+     "text": "Chief Orio and his family greeted the ships. Two groups of men deserted during the stay and were recovered; Shaw was flogged and Mouat punished and imprisoned.",
+     "quote": "Cook reached Raiatea on 3 November and anchored near Haamanino harbour.",
+     "ll": [
+      -16.82,
+      -151.44
+     ],
+     "psrc": "wikidata:Raʻiātea"
+    },
+    {
+     "place": "Christmas Island",
+     "entry": null,
+     "wp": "Kiritimati",
+     "date": "24 December 1777",
+     "year": 1777,
+     "by": "sea",
+     "text": "The ships sighted an atoll and anchored. The men fished and took 300 turtles, observed a solar eclipse on 30 December, and left on 2 January 1778. Cook left a sealed bottle claiming the island for Britain.",
+     "quote": "By dawn on the 24th, they sighted land to the northeast. This proved to be Christmas Island, a vast atoll with an opening in the reef that allowed entry to a shallow lagoon.",
+     "ll": [
+      1.85,
+      -157.4
+     ],
+     "psrc": "wikidata:Kiritimati"
+    }
+   ]
+  },
+  {
+   "title": "Hawaii and the North Pacific coast",
+   "stops": [
+    {
+     "place": "Waimea Bay, Kauai",
+     "entry": null,
+     "wp": "Waimea, Kauai",
+     "date": "19 January 1778",
+     "year": 1778,
+     "by": "sea",
+     "text": "The ships approached Kauai on 19 January. During a scouting mission a local man was shot and killed, which was not at once reported to Cook. At Waimea Bay the islanders greeted him by prostrating themselves. The ships left the group on 2 February.",
+     "quote": "The ships anchored in Waimea Bay, where Cook and his men were received with marked respect.",
+     "ll": [
+      21.957,
+      -159.669
+     ],
+     "psrc": "wikidata:Waimea, Kauaʻi County, Hawaii"
+    },
+    {
+     "place": "Cape Foulweather",
+     "entry": null,
+     "wp": "Cape Foulweather",
+     "date": "7 March 1778",
+     "year": 1778,
+     "by": "sea",
+     "text": "Cook sighted the coast of present-day Oregon and named this promontory for the severe weather. Storms then drove the ships south, costing over two degrees of latitude by 13 March.",
+     "quote": "On 7 March 1778, Cook sighted the American coast, specifically present-day Oregon, naming the promontory Cape Foulweather due to the severe weather conditions.",
+     "ll": [
+      44.772,
+      -124.076
+     ],
+     "psrc": "wikidata:Cape Foulweather"
+    },
+    {
+     "place": "Nootka Sound",
+     "entry": null,
+     "wp": "Nootka Sound",
+     "date": "29 March 1778",
+     "year": 1778,
+     "by": "sea",
+     "text": "The ships found an inlet suitable for repairs on the western coast of what is now Vancouver Island. Local people eager to trade greeted them with song. The ships left on 26 April and a five-day hurricane followed.",
+     "quote": "Eventually, he reached the western coast of what is now Vancouver Island, noting land again at Nootka Sound on 29 March.",
+     "ll": [
+      49.783,
+      -126.633
+     ],
+     "psrc": "wikidata:Nootka Sound"
+    },
+    {
+     "place": "Prince William Sound",
+     "entry": null,
+     "wp": "Prince William Sound",
+     "date": "20 May 1778",
+     "year": 1778,
+     "by": "sea",
+     "text": "Against his orders to avoid inlets until 65°N, Cook turned into the Gulf of Alaska at 61°N to examine a bay. He met people marked with tattoos and piercings, then left the inlet doubting a passage existed.",
+     "quote": "On 20 May, as another storm approached, Captain Cook decided to repair the leaky ship while assessing whether the current location was an inlet or the sought-after Passage. Bligh dismissed the potential of further exploration, while Gore remained hopeful. Ultimately, Cook opted to leave the inlet, doubting the existence of a Passage, which he later named Prince William Sound.",
+     "ll": [
+      60.615,
+      -147.168
+     ],
+     "psrc": "wikidata:Prince William Sound"
+    },
+    {
+     "place": "Cape Prince of Wales",
+     "entry": null,
+     "wp": "Cape Prince of Wales",
+     "date": "9 August 1778",
+     "year": 1778,
+     "by": "sea",
+     "text": "The fog lifted at 65°N. Cook anchored in Lawrence Bay to trade with the Chukchi people, crossed the Bering Strait two days later, and on 17 August met ice at 70°N that ended the search.",
+     "quote": "On 9 August, the fog lifted, revealing the target location of 65°N, where the explorers encountered the prominent Cape Prince of Wales and open water.",
+     "ll": [
+      65.64,
+      -168.12
+     ],
+     "psrc": "wikidata:Cape Prince of Wales"
+    },
+    {
+     "place": "Unalaska",
+     "entry": null,
+     "wp": "Unalaska, Alaska",
+     "date": "27 October 1778",
+     "year": 1778,
+     "by": "sea",
+     "text": "Cook spent his fiftieth birthday at sea near Unalaska. He corrected Russian maps, replenished supplies and met Russian officials, and planned to winter at the Sandwich Islands rather than in Kamchatka.",
+     "quote": "On 27 October 1778, Cook marked his fiftieth birthday quietly at sea near Unalaska.",
+     "ll": [
+      53.874,
+      -166.537
+     ],
+     "psrc": "wikidata:Unalaska, Alaska"
+    }
+   ]
+  },
+  {
+   "title": "Kealakekua Bay and Cook's death",
+   "stops": [
+    {
+     "place": "Kealakekua Bay",
+     "entry": "kealakekua-bay",
+     "wp": "Kealakekua Bay",
+     "date": "17 January 1779",
+     "year": 1779,
+     "by": "sea",
+     "text": "After sailing round Hawaii island, Cook brought both ships into the bay, unaware that his arrival coincided with the Makahiki, a harvest festival of worship of the god Lono. The ships stayed about a month.",
+     "quote": "On 17 January, Cook brought both ships into Kealakekua Bay, ending their long search for a suitable haven.",
+     "ll": [
+      19.475,
+      -155.929
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Kaawaloa",
+     "entry": "kealakekua-bay",
+     "wp": "Kealakekua Bay",
+     "date": null,
+     "year": null,
+     "by": "sea",
+     "text": "After thefts and quarrels, including the theft of the Discovery's cutter, Cook went ashore to take King Terreeoboo hostage until it was returned. A chief, Kalimu, was killed by fire from the ships, a crowd attacked, and Cook was killed. At least seventeen Hawaiians died, and several marines.",
+     "quote": "He landed at Kaawaloa with Lieutenant Phillips, nine marines, and two boats waiting near shore.",
+     "ll": [
+      19.475,
+      -155.929
+     ],
+     "psrc": "entry"
+    }
+   ]
+  },
+  {
+   "title": "The voyage home",
+   "stops": [
+    {
+     "place": "Awatska Bay",
+     "entry": null,
+     "wp": "Avacha Bay",
+     "date": "29 April 1779",
+     "year": 1779,
+     "by": "sea",
+     "text": "The ships entered the bay to deliver letters and buy supplies. A party under Gore, King and Webber travelled to Bolcheretsk, where Major Behm promised help, and the English doctors treated local people for scurvy.",
+     "quote": "On 29 April, they entered Awatska Bay, to deliver letters and buy supplies.",
+     "ll": [
+      52.933,
+      158.6
+     ],
+     "psrc": "wikidata:Avacha Bay"
+    },
+    {
+     "place": "Awatska Bay",
+     "entry": null,
+     "wp": "Avacha Bay",
+     "date": "22 August 1779",
+     "year": 1779,
+     "by": "sea",
+     "text": "After a second failed attempt through the ice, Clerke, gravely ill, died just before the ships reached the harbour. Gore took command of the Resolution and King of the Discovery.",
+     "quote": "Clerke died on 22 August, just before reaching the harbour, and was buried on 29 August with honours from both crews and the Russian garrison.",
+     "ll": [
+      52.933,
+      158.6
+     ],
+     "psrc": "wikidata:Avacha Bay"
+    },
+    {
+     "place": "Macao",
+     "entry": "macau",
+     "wp": "Macau",
+     "date": "1 December 1779",
+     "year": 1779,
+     "by": "sea",
+     "text": "The ships left the bay on 9 October and reached Macao. The crew sold furs, earning about £2,000 in goods and money, and many sailors wanted to return to collect more.",
+     "quote": "Forced away by weather, they sailed to Macao, arriving 1 December.",
+     "ll": [
+      22.19,
+      113.538
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Simon's Bay",
+     "entry": null,
+     "wp": "Simon's Town",
+     "date": "11 April 1780",
+     "year": 1780,
+     "by": "sea",
+     "text": "After leaving Macao on 13 January 1780, the ships stopped at Prince's Island for water and then anchored in Simon's Bay, leaving on 9 May with fresh supplies.",
+     "quote": "They reached Simon’s Bay at the Cape of Good Hope on 11 April.",
+     "ll": [
+      -34.193,
+      18.436
+     ],
+     "psrc": "wikidata:Simon's Town"
+    },
+    {
+     "place": "The Nore",
+     "entry": null,
+     "wp": "The Nore",
+     "date": "4 October 1780",
+     "year": 1780,
+     "by": "sea",
+     "text": "Ireland was sighted on 12 August, but weather forced the ships north to Stromness. They reached the Nore after an absence of over four years.",
+     "quote": "The ships reached the Nore on 4 October",
+     "ll": [
+      51.496,
+      0.882
+     ],
+     "psrc": "wikidata:Nore"
+    }
+   ]
+  }
+ ],
+ "notes": "Left out: Tonga (eleven weeks, but the article names no island or place), Mangaia and Atiu (sighted, no events), Prince Edward and Kerguelen Islands (one line each), Maui (26 Nov 1778, sighting only), Cook Inlet (the article's account is muddled), the Bering Strait and the ice (no point), Borabora, Stromness. Years for 1776-1777 stops with only day and month are inferred from the surrounding narrative; Plymouth is given only as 1776 and Moorea as 1777 because the article gives no day. Kaawaloa has no wp article name I could confirm from the text, so it takes Kealakekua Bay's point. The article says Cook 'discovered' Tubuai; the text says he reached Tahiti after sighting it. Death toll: the Hawaiians lost 'at least seventeen people, including chiefs'; 'several marines' were killed. Cook's year 1779 for the Awatska Bay arrival and later stops is inferred from the death date and 'January 1780'. Kiritimati is the modern name of Christmas Island."
+}

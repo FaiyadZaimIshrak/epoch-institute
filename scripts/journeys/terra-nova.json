@@ -1,0 +1,171 @@
+{
+ "slug": "terra-nova",
+ "title": "Scott's Terra Nova Expedition to the South Pole",
+ "years": "1910–1913",
+ "traveller": "Robert Falcon Scott",
+ "intro": "Captain Robert Falcon Scott led the Terra Nova Expedition to Antarctica with scientific and geographical aims, and wanted to be the first to reach the geographic South Pole. The expedition was named after its supply ship and was a private venture financed by public contributions and a government grant.",
+ "ending": "Scott and four companions reached the Pole on 17 January 1912 and found that a Norwegian team led by Roald Amundsen had preceded them by 34 days. All five died on the return journey, and a search party found some of their bodies, journals and photographs eight months later.",
+ "legs": [
+  {
+   "title": "The voyage out and the base",
+   "stops": [
+    {
+     "place": "Cardiff",
+     "entry": "cardiff",
+     "wp": "Cardiff",
+     "date": "15 June 1910",
+     "year": 1910,
+     "by": "sea",
+     "text": "Terra Nova sailed from Cardiff. Scott, detained by expedition business, sailed later on a faster passenger liner and joined the ship in South Africa.",
+     "quote": "Terra Nova sailed from Cardiff on 15 June 1910.",
+     "ll": [
+      51.482,
+      -3.179
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Port Chalmers",
+     "entry": null,
+     "wp": "Port Chalmers",
+     "date": "29 November 1910",
+     "year": 1910,
+     "by": "sea",
+     "text": "Scott rejoined the ship in New Zealand, where 34 dogs, 19 Siberian ponies and three motorised sledges were taken aboard. The heavily overloaded ship finally left Port Chalmers on this day.",
+     "quote": "The ship, heavily overloaded, finally left Port Chalmers on 29 November.",
+     "ll": [
+      -45.818,
+      170.619
+     ],
+     "psrc": "wikidata:Port Chalmers"
+    },
+    {
+     "place": "Cape Evans",
+     "entry": null,
+     "wp": "Cape Evans",
+     "date": "4 January 1911",
+     "year": 1911,
+     "by": "sea",
+     "text": "Terra Nova arrived off Ross Island and Scott chose a cape about 15 miles north of his 1902 base at Hut Point, renaming it Cape Evans after his second-in-command. A prefabricated hut was erected there and made habitable by 18 January.",
+     "quote": "Arriving off Ross Island on 4 January 1911, Terra Nova scouted for possible landing sites around Cape Crozier at the eastern point of the island, before proceeding to McMurdo Sound to its west, where both Discovery and Nimrod had previously landed.",
+     "ll": [
+      -77.633,
+      166.4
+     ],
+     "psrc": "wikidata:Cape Evans"
+    },
+    {
+     "place": "One Ton Depot",
+     "entry": null,
+     "wp": "Ross Ice Shelf",
+     "date": null,
+     "year": null,
+     "by": "land",
+     "text": "A party of 12 men laid depots across the Barrier for the polar journey. Scott, worried that the ponies would not get back, laid the largest depot at 79°29′S, more than 30 miles short of its intended place.",
+     "quote": "Scott decided to lay One Ton Depot at 79°29′S, more than 30 miles (48 km) short of its intended location.",
+     "ll": [
+      -81.5,
+      -175
+     ],
+     "psrc": "wikidata:Ross Ice Shelf"
+    }
+   ]
+  },
+  {
+   "title": "To the Pole and back",
+   "stops": [
+    {
+     "place": "Cape Evans",
+     "entry": null,
+     "wp": "Cape Evans",
+     "date": "1 November 1911",
+     "year": 1911,
+     "by": "land",
+     "text": "Scott's main party left the base with the dogs and ponies. A motor party had set out on 24 October, but both its motor sledges failed after little more than 50 miles.",
+     "quote": "Scott's main party, which had left Cape Evans on 1 November with the dogs and ponies, caught up with them on 21 November.",
+     "ll": [
+      -77.633,
+      166.4
+     ],
+     "psrc": "wikidata:Cape Evans"
+    },
+    {
+     "place": "Beardmore Glacier",
+     "entry": null,
+     "wp": "Beardmore Glacier",
+     "date": "4 December 1911",
+     "year": 1911,
+     "by": "land",
+     "text": "The expedition reached the Gateway, the route from the Barrier on to the Beardmore Glacier. A blizzard kept the men in camp until 9 December, after which the remaining ponies were shot and the dogs turned back on 11 December.",
+     "quote": "On 4 December, the expedition had reached the Gateway, the name given by Shackleton to the route from the Barrier on to the Beardmore Glacier.",
+     "ll": [
+      -83.75,
+      171
+     ],
+     "psrc": "wikidata:Beardmore Glacier"
+    },
+    {
+     "place": "South Pole",
+     "entry": null,
+     "wp": "Amundsen–Scott South Pole Station",
+     "date": "17 January 1912",
+     "year": 1912,
+     "by": "land",
+     "text": "Scott, Wilson, Oates, Bowers and Edgar Evans spotted Amundsen's black flag some 15 miles from the Pole and knew they had been forestalled. They reached the Pole on 17 January, and found Amundsen's tent the next day.",
+     "quote": "They reached the Pole the next day, 17 January",
+     "ll": [
+      -89.998,
+      139.273
+     ],
+     "psrc": "wikidata:Amundsen–Scott South Pole Station"
+    },
+    {
+     "place": "Beardmore Glacier",
+     "entry": null,
+     "wp": "Beardmore Glacier",
+     "date": "7 February 1912",
+     "year": 1912,
+     "by": "land",
+     "text": "On the way home the party began its descent on 7 February and had serious difficulty finding a depot. Edgar Evans, badly frostbitten and weakened by falls, collapsed near the bottom of the glacier and died on 17 February.",
+     "quote": "The condition of Oates's feet became an increasing anxiety as the group approached the summit of the Beardmore Glacier and prepared for the descent to the Barrier. On 7 February, they began their descent and had serious difficulty locating a depot.",
+     "ll": [
+      -83.75,
+      171
+     ],
+     "psrc": "wikidata:Beardmore Glacier"
+    },
+    {
+     "place": "One Ton Depot",
+     "entry": null,
+     "wp": "Ross Ice Shelf",
+     "date": "29 March 1912",
+     "year": 1912,
+     "by": "land",
+     "text": "The dog teams did not come, and temperatures fell sharply. On 16 March Oates left the tent and walked to his death. Scott, Wilson and Bowers were halted by a blizzard 11 miles south of One Ton Depot on 20 March, and Scott's last diary entry is dated 29 March.",
+     "quote": "Scott, Wilson and Bowers struggled on to a point 11 miles (18 km) south of One Ton Depot, but were halted on 20 March, by a fierce blizzard.",
+     "ll": [
+      -81.5,
+      -175
+     ],
+     "psrc": "wikidata:Ross Ice Shelf"
+    },
+    {
+     "place": "One Ton Depot",
+     "entry": null,
+     "wp": "Ross Ice Shelf",
+     "date": "12 November 1912",
+     "year": 1912,
+     "by": "land",
+     "text": "A search party under Atkinson found the tent with the frozen bodies of Scott, Wilson and Bowers, 11 miles south of One Ton Depot. Atkinson read Scott's diaries, and the party raised a cairn of snow over the tent.",
+     "quote": "On 12 November the party found the tent containing the frozen bodies of Scott, Wilson and Bowers, 11 miles (18 km) south of One Ton Depot.",
+     "ll": [
+      -81.5,
+      -175
+     ],
+     "psrc": "wikidata:Ross Ice Shelf"
+    }
+   ]
+  }
+ ],
+ "notes": "Years: where the article gives no year beside the date, the year is taken from its section (29 November 1910, 1 November and 4 December 1911, 7 February and 12 November 1912); the checker needs a number. Oates's death (16 March) is given in the article as 'March 16' for Scott's letter; text says 16 March from 'On the same day'. South Pole: wp uses the station's article because the geographic pole has no point-bearing article of its own; the editor may prefer South Pole. Left out: Hut Point, Corner Camp and Cape Crozier winter journey (separate side journeys, Crozier 15 July 1911), the Northern Party (Cape Adare, Inexpressible Island), the geological parties, Atkinson's and Cherry-Garrard's relief journeys (Cherry-Garrard reached One Ton Depot on 4 March), Melbourne and South Africa (no event with a date). The article gives the last diary entry date as the presumed date of death. The pole stop quote is partial."
+}

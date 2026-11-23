@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Luoyang: History, Rulers and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Luoyang is a city in western Henan province, China, at the confluence of the Luo and Yellow rivers, founded as Chengzhou in 1036 BCE and later the…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Luoyang: History, Rulers and Legacy — The Epoch Institute">
+<meta property="og:description" content="Luoyang is a city in western Henan province, China, at the confluence of the Luo and Yellow rivers, founded as Chengzhou in 1036 BCE and later the…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/city/luoyang">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/luoyang.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/luoyang.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/city/luoyang">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Cities","item":"https://the-epoch-institute.org/profiles?kind=city"},{"@type":"ListItem","position":4,"name":"Luoyang"}]},{"@type":"Article","headline":"Luoyang","description":"Luoyang is a city in western Henan province, China, at the confluence of the Luo and Yellow rivers, founded as Chengzhou in 1036 BCE and later the…","url":"https://the-epoch-institute.org/city/luoyang","mainEntityOfPage":"https://the-epoch-institute.org/city/luoyang","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Luoyang"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/luoyang.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=city">Cities</a></li><li aria-current="page">Luoyang</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Luoyang.png" alt="Luoyang" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">City · Central &amp; East Asia</p>
+        <h1 class="profile-detail-name">Luoyang</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">1036 BCE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Founded</span><span class="info-stat-val">A settlement named <a class="enc-link" href="/encyclopedia/chengzhou">Chengzhou</a> was constructed in 1036 BCE by the <a class="enc-link" href="/encyclopedia/duke-of-zhou">Duke of Zhou</a> for the remnants of the captured Shang nobility.</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where</span><span class="info-stat-val">At the confluence of the Luo River and the <a class="enc-link" href="/encyclopedia/yellow-river">Yellow River</a> in the west of <a class="enc-link" href="/encyclopedia/henan">Henan</a> province, on the central plain of <a class="enc-link" href="/encyclopedia/china">China</a>.</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia/chengzhou">Chengzhou</a> and <a class="enc-link" href="/encyclopedia/wangcheng">Wangcheng</a> of the Zhou; the capital of the <a class="enc-link" href="/encyclopedia/han-dynasty">Eastern Han</a>, Wei, Jin and Northern Wei; the <a class="enc-link" href="/encyclopedia/longmen-grottoes">Longmen Grottoes</a>; the Yongning Temple pagoda; Dongdu of the Tang; Shendu under <a class="enc-link" href="/encyclopedia/wu-zetian">Wu Zetian</a>; the burnings and sackings of 189, 190, 311 and 534</span></div>
+          <div class="info-stat"><span class="info-stat-label">Today</span><span class="info-stat-val">Luoyang is a prefecture-level city in <a class="enc-link" href="/encyclopedia/henan">Henan</a> province, <a class="enc-link" href="/encyclopedia/china">China</a>, with about seven million people in its municipality.</span></div>
+        </div>
+        <p class="empire-meta">5 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>A settlement called <a class="enc-link" href="/encyclopedia/chengzhou">Chengzhou</a> was built in 1036 BCE for captured Shang nobles, and the Eastern Zhou later made <a class="enc-link" href="/encyclopedia/wangcheng">Wangcheng</a>, 15 km to its west, and then Chengzhou itself their capital.</li><li>Luoyang was the capital of the <a class="enc-link" href="/encyclopedia/han-dynasty">Eastern Han</a> from 25 CE and was burned, ransacked or sacked in 189, 190, 311 and 534, each time recovering or being rebuilt, as under the Wei in 220 and the <a class="enc-link" href="/encyclopedia/sui-dynasty">Sui</a> in 604.</li><li>Under the Northern Wei, <a class="enc-link" href="/encyclopedia/sui-dynasty">Sui</a>, Tang and <a class="enc-link" href="/encyclopedia/song-dynasty">Song</a> it was successively a capital, the Eastern Capital and the Western Capital, with populations of 600,000 under the Jin and the Northern Wei and around one million under the Tang.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>In 166 CE the first Roman mission, sent by the king of Da <a class="enc-link" href="/encyclopedia/qin-dynasty">Qin</a>, Andun, reached Luoyang after arriving by sea in what later became central <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a>. Andun is identified as <a class="enc-link" href="/encyclopedia/marcus-aurelius">Marcus Aurelius</a> Antoninus, who reigned from 161 to 180.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#growth">Growth &amp; Great Ages</a></li><li><a href="#rulers">Who Ruled It</a></li><li><a href="#life">Life in the City</a></li><li><a href="#crises">Sieges &amp; Disasters</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">1036 BCE</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/duke-of-zhou">Duke of Zhou</a> builds <a class="enc-link" href="/encyclopedia/chengzhou">Chengzhou</a> for the remnants of the captured Shang nobility</span></li><li><span class="rf-year">771 BCE</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/wangcheng">Wangcheng</a> becomes the capital of the Eastern Zhou</span></li><li><span class="rf-year">25</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/emperor-guangwu-of-han">Emperor Guangwu</a> declares Luoyang the capital of the <a class="enc-link" href="/encyclopedia/han-dynasty">Eastern Han</a></span></li><li><span class="rf-year">189</span><span class="rf-text">The Han capital is burned in the civil war that followed the Yellow Turban rebellion</span></li><li><span class="rf-year">311</span><span class="rf-text">Han-Zhao forces sack and raze the city in the Disaster of Yongjia</span></li><li><span class="rf-year">493</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/emperor-xiaowen-of-northern-wei">Emperor Xiaowen of Northern Wei</a> moves his capital from <a class="enc-link" href="/encyclopedia/datong">Datong</a> to Luoyang</span></li><li><span class="rf-year">534</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/gao-huan">Gao Huan</a> destroys the city and moves its population to Ye</span></li><li><span class="rf-year">604</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/emperor-yang-of-sui">Emperor Yang of Sui</a> founds a new Luoyang on the site of the existing city</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>Luoyang lies in the west of <a class="enc-link" href="/encyclopedia/henan">Henan</a> province, in the confluence area of the Luo River and the <a class="enc-link" href="/encyclopedia/yellow-river">Yellow River</a>, on the central plain of <a class="enc-link" href="/encyclopedia/china">China</a>. Its name comes from its position on the north, or sunny ("yang"), side of the Luo River: the river flows from west to east and the sun stands to its south, so the sun always shines on the north bank. Among its earlier names were <a class="enc-link" href="/encyclopedia/chengzhou">Luoyi</a> and Luozhou.</p><p>In 1036 BCE a settlement named Chengzhou was constructed by the <a class="enc-link" href="/encyclopedia/duke-of-zhou">Duke of Zhou</a> for the remnants of the captured Shang nobility. The Duke also moved the Nine Tripod Cauldrons to Chengzhou from the Zhou capital at <a class="enc-link" href="/encyclopedia/haojing">Haojing</a>. A second Western Zhou capital, <a class="enc-link" href="/encyclopedia/wangcheng">Wangcheng</a>, also called Luoyi, was built 15 km west of Chengzhou. The <a class="enc-link" href="/encyclopedia/han-dynasty">Eastern Han</a> capital of Luoyang was later built over Chengzhou, while the modern city is built over the ruins of Wangcheng, which are visible at Wangcheng Park.</p></div>
+      </div>
+      <div class="profile-section-block" id="growth">
+        <h2 class="profile-section-title">Growth &amp; Great Ages</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/longmen-grottoes"><img src="/images/encyclopedia/longmen-grottoes.jpg" alt="Longmen Grottoes" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/longmen-grottoes">Longmen Grottoes</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:27427-Luoyang_(49067744628).jpg" target="_blank" rel="noopener">xiquinhosilva, CC BY 2.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p><a class="enc-link" href="/encyclopedia/wangcheng">Wangcheng</a> became the capital of the Eastern <a class="enc-link" href="/encyclopedia/zhou-dynasty">Zhou dynasty</a> in 771 BCE, and in 510 BCE the Eastern Zhou capital was moved to <a class="enc-link" href="/encyclopedia/chengzhou">Chengzhou</a>. <a class="enc-link" href="/encyclopedia/qin-shi-huang">Qin Shi Huang</a>'s chief minister, Lu Buwei, was given Luoyang and began programmes to develop and beautify it.</p><p>The city rose again after the Han. The Jin dynasty was established in Luoyang, and at the height of Jin rule it had a population of 600,000 and was probably the second largest city in the world after <a class="enc-link" href="/encyclopedia/rome">Rome</a>. Under the Northern Wei it reached a population of 600,000 at its height. Emperor Xiaowen moved more than 150,000 people to the site by 495 and began the rock-cut <a class="enc-link" href="/encyclopedia/longmen-grottoes">Longmen Grottoes</a>, in which more than 30,000 Buddhist statues from the dynasty's time have been found. The Yongning Temple, the tallest pagoda in <a class="enc-link" href="/encyclopedia/china">China</a>, was also built there, and the Shaolin Temple was built by the emperor to accommodate an Indian monk on Mount <a class="enc-link" href="/encyclopedia/song-dynasty">Song</a> next to the city.</p><p>Under the Tang, as Dongdu, the Eastern Capital, Luoyang had a population of around one million at its height, second only to <a class="enc-link" href="/encyclopedia/changan">Chang'an</a>, then the largest city in the world.</p></div>
+      </div>
+      <div class="profile-section-block" id="rulers">
+        <h2 class="profile-section-title">Who Ruled It</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/emperor-guangwu-of-han"><img src="/images/encyclopedia/emperor-guangwu-of-han.jpg" alt="Emperor Guangwu of Han" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/emperor-guangwu-of-han">Emperor Guangwu of Han</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Han_Guangwu_Di.jpg" target="_blank" rel="noopener">Yan Li-pen, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>It is said that <a class="enc-link" href="/encyclopedia/liu-bang">Liu Bang</a> visited Luoyang and considered making it his capital but was persuaded by his ministers to choose <a class="enc-link" href="/encyclopedia/changan">Chang'an</a>. On 27 November 25 CE <a class="enc-link" href="/encyclopedia/emperor-guangwu-of-han">Emperor Guangwu of Han</a> declared Luoyang the capital of the Eastern <a class="enc-link" href="/encyclopedia/han-dynasty">Han dynasty</a>. After the court moved west to Chang'an and the warlord <a class="enc-link" href="/encyclopedia/cao-cao">Cao Cao</a> held the last Han emperor, Xian, at Xuchang from 196 to 220, <a class="enc-link" href="/encyclopedia/cao-pi">Cao Pi</a>, Emperor Wen of the <a class="enc-link" href="/encyclopedia/cao-wei">Wei dynasty</a>, declared Luoyang his capital in 220. The Jin dynasty, successor to Wei, was also established there.</p><p>For the next two centuries Luoyang was a contested region. In 328 it was the site of a battle between the Han-Zhao and Later Zhao dynasties that established the latter as a hegemonic power in the north. In the winter of 416 the Jin general Tan Daoji took it during Liu Yu's northern expedition against the Later <a class="enc-link" href="/encyclopedia/qin-dynasty">Qin</a>. The Xianbei-led Northern Wei captured it in 422, the Liu <a class="enc-link" href="/encyclopedia/song-dynasty">Song</a> recovered it in 430, and by the 460s it was definitively under Wei control.</p><p><a class="enc-link" href="/encyclopedia/emperor-yang-of-sui">Emperor Yang of Sui</a> took control in 604. Under the Tang the city was Dongdu, and for a time Empress Wu moved the capital of her <a class="enc-link" href="/encyclopedia/zhou-dynasty">Zhou dynasty</a> there and named it Shendu, the divine capital. Under the Northern Song it was the Western Capital, Xijing, and the birthplace of <a class="enc-link" href="/encyclopedia/emperor-taizu-of-song">Zhao Kuangyin</a>, the founder of the Song dynasty. It was later renamed Henanfu and regained its former name in 1912.</p></div>
+      </div>
+      <div class="profile-section-block" id="life">
+        <h2 class="profile-section-title">Life in the City</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/emperor-yang-of-sui"><img src="/images/encyclopedia/emperor-yang-of-sui.jpg" alt="Emperor Yang of Sui" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/emperor-yang-of-sui">Emperor Yang of Sui</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Sui_Yangdi_Tang.jpg" target="_blank" rel="noopener">Yan Liben, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The <a class="enc-link" href="/encyclopedia/han-dynasty">Eastern Han</a> walls formed a rectangle 4 km from south to north and 2.5 km from west to east, with the Gu River, a tributary of the Luo, just outside the northern and eastern walls. The rectangular Southern Palace and Northern Palace stood 3 km apart and were connected by the Covered Way. In 26 CE the Altar of the Gods of the Soils and Grains, the Altar of Heaven and the Temple of the Founder, Emperor Gao of Former Han, were inaugurated, the Imperial University was restored in 29, the Yang Canal linked the capital to the Luo in 48, and the main imperial observatory, the Spiritual Terrace, was built in 56. When <a class="enc-link" href="/encyclopedia/emperor-yang-of-sui">Emperor Yang of Sui</a> founded the new Luoyang in 604 he used a layout inspired by his father Emperor Wen's work in rebuilding <a class="enc-link" href="/encyclopedia/changan">Chang'an</a>.</p><p>Under the Tang the city had Christians among its people. Epitaphs record Lady An, a <a class="enc-link" href="/encyclopedia/church-of-the-east">Nestorian Christian</a> Sogdian woman who died in 821, and her <a class="enc-link" href="/encyclopedia/han-chinese">Han Chinese</a> husband Hua Xian, who died in 827, and another Sogdian woman, also surnamed An, buried by her military officer son on 22 January 815. The sons of such marriages became civil officials and military officers, and neither their mixed ancestry nor their faith was a barrier to their careers. During the <a class="enc-link" href="/encyclopedia/song-dynasty">Northern Song</a> the city served as a cultural centre that housed some philosophers.</p></div>
+      </div>
+      <div class="profile-section-block" id="crises">
+        <h2 class="profile-section-title">Sieges &amp; Disasters</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/cao-pi"><img src="/images/encyclopedia/cao-pi.jpg" alt="Cao Pi" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/cao-pi">Cao Pi</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Cao_Pi_Tang.jpg" target="_blank" rel="noopener">Yan Li-pen, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Yellow Turban rebellion, defeated by imperial troops in 184, weakened the Han state until rebellions turned into civil war. The Han capital of Luoyang was burned on 24 September 189. On 4 April 190 Chancellor <a class="enc-link" href="/encyclopedia/dong-zhuo">Dong Zhuo</a> ordered his soldiers to ransack, pillage and raze the city as he retreated from a coalition of regional lords, and the court was moved to the more defensible <a class="enc-link" href="/encyclopedia/changan">Chang'an</a>. Luoyang was restored to prominence when <a class="enc-link" href="/encyclopedia/cao-pi">Cao Pi</a> made it his capital in 220.</p><p>At the start of the 4th century the city suffered repeated attacks during the <a class="enc-link" href="/encyclopedia/war-of-the-eight-princes">War of the Eight Princes</a> and the Upheaval of the Five Barbarians under the Jin. In 311 rebel forces of the Xiongnu-led Han-Zhao dynasty sacked and razed it in the event known as the Disaster of Yongjia.</p><p>The Northern Wei city was destroyed in 534 by the warlord <a class="enc-link" href="/encyclopedia/gao-huan">Gao Huan</a>, who captured it and forced its population to move to his capital at Ye. Under the Tang, Luoyang was damaged during the <a class="enc-link" href="/encyclopedia/an-lushan-rebellion">An Lushan Rebellion</a>.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Luoyang is among the oldest cities in <a class="enc-link" href="/encyclopedia/china">China</a> and one of the cradles of Chinese civilisation, and it is the earliest of the Four Great Ancient Capitals of China. The <a class="enc-link" href="/encyclopedia/longmen-grottoes">Longmen Grottoes</a> were added to the <a class="enc-link" href="/encyclopedia/unesco">UNESCO</a> World Heritage List in 2000. In 2014 UNESCO also listed three sites at Luoyang under the <a class="enc-link" href="/encyclopedia/silk-road">Silk Roads</a>, the Han Wei Luoyang City Site, the Dingding Gate Site of <a class="enc-link" href="/encyclopedia/sui-dynasty">Sui</a> Tang Luoyang City and the Xin'an Hangu Guan Site, and two sites of the <a class="enc-link" href="/encyclopedia/grand-canal">Grand Canal</a>, the Huiluo Barn and the Hanjia Barn. The Luoyang Museum, established in 1958, displays relics from the Xia, Shang and Zhou dynasties.</p><p>Luoyang today is governed as a prefecture-level city bordering the provincial capital of <a class="enc-link" href="/encyclopedia/zhengzhou">Zhengzhou</a> to the east. The built-up area was held in the 2010 <a class="enc-link" href="/encyclopedia/census">census</a> to have 1,857,003 people, and the whole municipality 6,549,941. In 2021 Yanshi City became an urban district and Jili District and Mengjin County were merged into Mengjin District, which effectively doubled the urban area. The city's peonies and a 24-course dish, the Luoyang Water Banquet, are among the traditions associated with it.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Luoyang, on the Luo and Yellow rivers in <a class="enc-link" href="/encyclopedia/henan">Henan</a>, began as <a class="enc-link" href="/encyclopedia/chengzhou">Chengzhou</a> in 1036 BCE and was a capital of the Eastern Zhou, <a class="enc-link" href="/encyclopedia/han-dynasty">Eastern Han</a>, Wei, Jin and Northern Wei, and the Eastern Capital of the Tang. It was repeatedly burned and rebuilt, and is now a city of about seven million people.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="luoyang"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Gao Huan destroys the city and moves its population to Ye","o":["189","534","771 BCE","604"],"a":1,"w":"534: Gao Huan destroys the city and moves its population to Ye."},{"p":"Which came first?","q":"","o":["Emperor Yang of Sui founds a new Luoyang on the site of the existing city","Wangcheng becomes the capital of the Eastern Zhou"],"a":1,"w":"604: Emperor Yang of Sui founds a new Luoyang on the site of the existing city · 771 BCE: Wangcheng becomes the capital of the Eastern Zhou."},{"p":"In which year?","q":"Emperor Guangwu declares Luoyang the capital of the Eastern Han","o":["771 BCE","25","493","534"],"a":1,"w":"25: Emperor Guangwu declares Luoyang the capital of the Eastern Han."},{"p":"Which came first?","q":"","o":["The Duke of Zhou builds Chengzhou for the remnants of the captured Shang nobility","The Han capital is burned in the civil war that followed the Yellow Turban rebellion"],"a":0,"w":"1036 BCE: The Duke of Zhou builds Chengzhou for the remnants of the captured Shang nobility · 189: The Han capital is burned in the civil war that followed the Yellow Turban rebellion."},{"p":"In which year?","q":"Emperor Xiaowen of Northern Wei moves his capital from Datong to Luoyang","o":["493","1036 BCE","604","771 BCE"],"a":0,"w":"493: Emperor Xiaowen of Northern Wei moves his capital from Datong to Luoyang."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Arthur Cotterell, The Imperial Capitals of China: An Inside View of the Celestial Empire (Pimlico, 2008)</li>
+        <li>W. J. Jenner, Memories of Loyang (Clarendon Press, 1981)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other citys</p>
+      <div class="related-grid"><a class="related-card" href="/city/beijing"><img src="/logos/thumbs/Beijing.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Beijing</span><span class="related-card-dates">c. 1045 BCE – present</span></a><a class="related-card" href="/city/ife"><img src="/logos/thumbs/Ife.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ife</span><span class="related-card-dates">c. 1000 BCE – present</span></a><a class="related-card" href="/city/taxila"><img src="/logos/thumbs/Taxila.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Taxila</span><span class="related-card-dates">c. 1000 BCE – present</span></a><a class="related-card" href="/city/anuradhapura"><img src="/logos/thumbs/Anuradhapura.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Anuradhapura</span><span class="related-card-dates">c. 900 BCE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/city/beijing"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Beijing.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Beijing</span><span class="related-card-dates">c. 1045 BCE – present</span></a><a class="related-card" href="/city/ife"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Ife.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ife</span><span class="related-card-dates">c. 1000 BCE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Luoyang",slug="luoyang",url="https://the-epoch-institute.org/city/luoyang";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Luoyang on The Epoch Institute — history, rulers and legacy. https://the-epoch-institute.org/city/luoyang #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/city/luoyang"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Luoyang",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Luoyang",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

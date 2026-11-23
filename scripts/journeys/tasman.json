@@ -1,0 +1,191 @@
+{
+ "slug": "tasman",
+ "title": "Abel Tasman's Voyage of 1642 to 1643",
+ "years": "1642–1643",
+ "traveller": "Abel Tasman",
+ "intro": "In August 1642 the Council of the Indies at Batavia sent the Dutch East India Company's skipper Abel Tasman and the cartographer Frans Jacobszoon Visscher to explore little-charted waters east of the Cape of Good Hope. They sailed with two small ships, the Heemskerck and the Zeehaen.",
+ "ending": "The ships came back to Batavia on 15 June 1643. The Company was disappointed that Tasman had found neither a promising area for trade nor a useful new shipping route, and for over a century Tasmania and New Zealand were not visited by Europeans.",
+ "legs": [
+  {
+   "title": "From Batavia to Tasmania",
+   "stops": [
+    {
+     "place": "Batavia",
+     "entry": "jakarta",
+     "wp": "Jakarta",
+     "date": "14 August 1642",
+     "year": 1642,
+     "by": "sea",
+     "text": "The Heemskerck and the Zeehaen left Batavia, the Company's base on Java, on a voyage meant to explore the little-charted regions of the south. One aim was to learn about the Provinces of Beach, a phantom island said to hold plentiful gold.",
+     "quote": "Tasman sailed from Batavia on 14 August 1642",
+     "ll": [
+      -6.175,
+      106.827
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Mauritius",
+     "entry": "mauritius",
+     "wp": "Mauritius",
+     "date": "5 September 1642",
+     "year": 1642,
+     "by": "sea",
+     "text": "The ships reached the island after 22 days, according to the captain's journal. There was fresh water and timber for repairs, and the governor, Adriaan van der Stel, helped Tasman. They left on 8 October for the Roaring Forties.",
+     "quote": "Tasman sailed from Batavia on 14 August 1642 and reached Mauritius 22 days later, on 5 September 1642, according to the captain's journal.",
+     "ll": [
+      -20.2,
+      57.5
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "west coast of Tasmania",
+     "entry": null,
+     "wp": "Macquarie Harbour",
+     "date": "24 November 1642",
+     "year": 1642,
+     "by": "sea",
+     "text": "After snow and hail on 7 November turned the ships north-east, Tasman sighted the west coast of Tasmania north of Macquarie Harbour. He named it Van Diemen's Land after Antonio van Diemen, Governor-General of the Dutch East Indies.",
+     "quote": "On 24 November 1642, Tasman reached and sighted the west coast of Tasmania, north of Macquarie Harbour.",
+     "ll": [
+      -42.294,
+      145.359
+     ],
+     "psrc": "wikidata:Macquarie Harbour"
+    },
+    {
+     "place": "Storm Bay",
+     "entry": null,
+     "wp": "Storm Bay",
+     "date": "late November 1642",
+     "year": 1642,
+     "by": "sea",
+     "text": "Tasman tried to work the two ships into Adventure Bay on South Bruny Island but a storm blew him out to sea. He named the area Storm Bay.",
+     "quote": "He tried to work his two ships into Adventure Bay on the east coast of South Bruny Island, but he was blown out to sea by a storm. This area he named Storm Bay.",
+     "ll": [
+      -43.14,
+      147.53
+     ],
+     "psrc": "wikidata:Storm Bay"
+    },
+    {
+     "place": "Frederick Hendrik Bay",
+     "entry": null,
+     "wp": "Blackman Bay (Tasmania)",
+     "date": "1 December 1642",
+     "year": 1642,
+     "by": "sea",
+     "text": "Tasman anchored north of Cape Frederick Hendrick. On 2 December two boats under the pilot Visscher rowed into Blackman Bay and gathered edible greens, and on 3 December Tasman formally claimed the land.",
+     "quote": "Two days later, on 1 December, Tasman anchored to the north of Cape Frederick Hendrick just north of the Forestier Peninsula.",
+     "ll": [
+      -42.86,
+      147.861
+     ],
+     "psrc": "wikidata:Blackman Bay, Tasmania"
+    },
+    {
+     "place": "Eddystone Point",
+     "entry": null,
+     "wp": "Eddystone Point",
+     "date": "December 1642",
+     "year": 1642,
+     "by": "sea",
+     "text": "Tasman followed the east coast northward for two more days. Where the land turned north-west at Eddystone Point the Roaring Forties struck the ships, and he turned east to continue his search for the Southern Continent.",
+     "quote": "When the land veered to the north-west at Eddystone Point, he tried to follow the coast line but his ships were suddenly hit by the Roaring Forties howling through Bass Strait.",
+     "ll": [
+      -40.994,
+      148.349
+     ],
+     "psrc": "wikidata:Eddystone Point"
+    }
+   ]
+  },
+  {
+   "title": "New Zealand",
+   "stops": [
+    {
+     "place": "Cape Foulwind",
+     "entry": null,
+     "wp": "Cape Foulwind",
+     "date": "14 December 1642",
+     "year": 1642,
+     "by": "sea",
+     "text": "On 13 December the ships sighted the north-west coast of the South Island. Tasman named it Staten Landt and thought it the coast of the unknown Southland. On 14 December they anchored off the coast, and Māori who saw them named a place Tiropahi.",
+     "quote": "On 14 December 1642, Tasman's ships anchored 7 km offshore c. 20km south of Cape Foulwind near Greymouth.",
+     "ll": [
+      -41.746,
+      171.468
+     ],
+     "psrc": "wikidata:Cape Foulwind"
+    },
+    {
+     "place": "Golden Bay",
+     "entry": null,
+     "wp": "Golden Bay / Mohua",
+     "date": "December 1642",
+     "year": 1642,
+     "by": "sea",
+     "text": "Māori paddled out in a waka and attacked sailors rowing between the ships, clubbing four to death with patu. As the ships left, the Zeehaen fired on approaching waka. Tasman named the area Murderers' Bay.",
+     "quote": "After sailing north then east for five days, the expedition anchored about 7 kilometres (4.3 mi) from the coast off what is now Golden Bay.",
+     "ll": [
+      -40.667,
+      172.833
+     ],
+     "psrc": "wikidata:Golden Bay / Mohua"
+    },
+    {
+     "place": "Cook Strait",
+     "entry": null,
+     "wp": "Cook Strait",
+     "date": "December 1642",
+     "year": 1642,
+     "by": "sea",
+     "text": "The expedition sailed north and sighted Cook Strait, which it mistook for a bight and named Zeehaen's Bight. In the far north it named Cape Maria van Diemen and the Three Kings Islands, names that still stand.",
+     "quote": "Two names that the expedition gave to landmarks in the far north of New Zealand still endure: Cape Maria van Diemen and Three Kings Islands.",
+     "ll": [
+      -41.229,
+      174.483
+     ],
+     "psrc": "wikidata:Cook Strait"
+    }
+   ]
+  },
+  {
+   "title": "Fiji and the return to Batavia",
+   "stops": [
+    {
+     "place": "Vanua Levu",
+     "entry": "vanua-levu",
+     "wp": "Vanua Levu",
+     "date": "January 1643",
+     "year": 1643,
+     "by": "sea",
+     "text": "After coming across the Tongan archipelago on 20 January 1643, the ships nearly wrecked on the reefs of north-eastern Fiji. Tasman charted the eastern tip of Vanua Levu before reaching open sea again.",
+     "quote": "He charted the eastern tip of Vanua Levu and Cikobia-i-Lau before making his way back into the open sea.",
+     "ll": [
+      -16.583,
+      179.183
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Batavia",
+     "entry": "jakarta",
+     "wp": "Jakarta",
+     "date": "15 June 1643",
+     "year": 1643,
+     "by": "sea",
+     "text": "The expedition turned north-west towards New Guinea and arrived back in Batavia. It had made no significant contact with the native inhabitants and set up no trade.",
+     "quote": "The expedition turned north-west towards New Guinea and arrived back in Batavia on 15 June 1643.",
+     "ll": [
+      -6.175,
+      106.827
+     ],
+     "psrc": "entry"
+    }
+   ]
+  }
+ ],
+ "notes": "Second voyage (1644) left out: the article names only Batavia, the south coast of New Guinea, the Gulf of Carpentaria and the north Australian coast, with no dated stop or event at any of them. Tonga (20 January 1643) left out as a stop: the article names only the archipelago, no island. Fiji year/date: article gives no day; 'January 1643' is inferred from Tonga on 20 January. Dates for Storm Bay, Eddystone Point, Golden Bay, Cook Strait are inferred from the order of the narrative; Golden Bay is 'five days' after the 14 December anchorage. The departure from Golden Bay (22 waka, a man with a white flag hit, Ian Barber's tapu suggestion) is folded into one stop. West coast of Tasmania: wp is Macquarie Harbour because the article places the sighting north of it; entry left null since the stop is not the harbour itself. Cook Strait stop uses Cape Maria van Diemen as the mapped point, since the strait is not a point; the editor may prefer to drop it. Cape Frederick Hendrick wp title unchecked. Article says Tasman 'discovered' Tasmania and was 'first European' to reach New Zealand; texts say sighted/reached. Batavia is today's Jakarta. Article says the Māori attack killed four men; Seram fight (1634) not part of this journey."
+}

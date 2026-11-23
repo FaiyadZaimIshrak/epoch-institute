@@ -13,7 +13,7 @@ let fails = 0; const ok = (n, c, x) => { console.log((c ? 'ok   ' : 'FAIL ') + n
     for (const l of j.legs) for (const s of l.stops) { stops++; const w = String(s.text || '').split(/\s+/).filter(Boolean).length;
       if (!Array.isArray(s.ll) || Math.abs(s.ll[0]) > 90 || Math.abs(s.ll[1]) > 180 || w < 10 || w > 50 || /\barticle\b/i.test(s.text) || (s.entry && !ent.has(s.entry)) || !s.quote || /\b(BC|AD)\b/.test(s.text + ' ' + (s.date || ''))) bad.push(slug + ' ' + s.place); } }
   ok('data: ' + rows.length + ' journeys, ' + stops + ' stops, each with a point, a text of its own and a quotation from its article', rows.length >= 12 && stops > 200 && !bad.length, bad.slice(0, 5));
-  const page = fs.readFileSync(path.join(R, 'journeys'), 'utf8'), arts = [...page.matchAll(/<article class="jr-j" id="([a-z-]+)" data-kids="([01])">/g)].map(m => m[1]);
+  const page = fs.readFileSync(path.join(R, 'journeys'), 'utf8'), arts = [...page.matchAll(/<article class="jr-j" id="([a-z0-9-]+)" data-kids="([01])">/g)].map(m => m[1]);
   ok('the page holds every journey in the file’s order, and is served, deployed and in the menu', arts.join() === rows.map(r => r[0]).join() && /\|journeys\|/.test(fs.readFileSync(path.join(R, '.htaccess'), 'utf8')) && /\bjourneys\b/.test(fs.readFileSync(path.join(R, 'scripts/deploy.sh'), 'utf8')) && fs.readFileSync(path.join(R, 'shared-nav.js'), 'utf8').includes("'/journeys', 'Journeys on the Globe'") && fs.existsSync(path.join(R, 'css/journeys.css')), arts.length);
   const hrefs = [...new Set([...page.slice(page.indexOf('<main'), page.indexOf('</main>')).matchAll(/href="\/((?:encyclopedia|life|empire)\/[a-z0-9-]+)"/g)].map(m => m[1]))], gone = hrefs.filter(h => !fs.existsSync(path.join(R, h)));
   ok('every entry and life the page links exists', hrefs.length > 80 && !gone.length, gone.slice(0, 5));
@@ -45,6 +45,9 @@ let fails = 0; const ok = (n, c, x) => { console.log((c ? 'ok   ' : 'FAIL ') + n
     await p.evaluate(() => document.querySelector('#jr-flat circle[data-i="2"]').dispatchEvent(new MouseEvent('click', { bubbles: true }))); await p.waitForTimeout(300); s = await st();
     ok(V + 'a dot of the flat map chooses its stop', s.s.i === 2 && s.s.view === 'flat', s.s.i);
     await p.click('.jr-views [data-v="globe"]'); await p.waitForTimeout(600);
+    const er = await p.evaluate(() => ({ ages: document.querySelectorAll('.jr-eras button').length, on: [...document.querySelectorAll('.jr-eras button.is-on')].map(b => b.getAttribute('data-era')).join(), offered: [...document.querySelectorAll('.jr-pick a')].filter(a => a.offsetParent).map(a => a.getAttribute('data-era')), all: document.querySelectorAll('.jr-pick a').length, h: Math.round(document.querySelector('.jr-pick').getBoundingClientRect().height) }));
+    ok(V + 'the picker offers one age at a time (Magellan: 1500 to 1699), and stays low', er.ages === 5 && er.on === '1' && er.offered.length >= 3 && er.offered.every(e => e === '1') && er.all >= 60 && er.h < (vp.width < 700 ? 90 : 240), er);
+    await p.click('.jr-eras button[data-era="0"]'); await p.waitForTimeout(300);
     await p.click('.jr-pick a[data-j="xuanzang"]'); await p.waitForTimeout(1200); s = await st();
     ok(V + 'the picker changes the journey', s.s.j === 'xuanzang' && s.s.i === 0 && s.shown.join() === 'xuanzang' && s.ink > 200 && s.wide <= 0, [s.shown, s.ink]);
     await p.goto(base + '/journeys?j=ibn-battuta&s=5', { waitUntil: 'domcontentloaded' }); await p.waitForFunction(() => window.epochJourneys && epochJourneys.state().ready, null, { timeout: 15000 }); s = await st();

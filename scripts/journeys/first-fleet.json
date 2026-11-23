@@ -1,0 +1,111 @@
+{
+ "slug": "first-fleet",
+ "title": "The First Fleet to Botany Bay and Sydney Cove",
+ "years": "1787–1788",
+ "traveller": "Arthur Phillip and the First Fleet",
+ "intro": "The First Fleet was eleven British ships under Captain Arthur Phillip, carrying over 1,400 convicts, marines, sailors and colonial officials. Britain sent it to found a penal colony in New South Wales, after the end of transportation of criminals to North America following the American Revolution.",
+ "ending": "The Fleet reached Botany Bay on 18 January 1788 and moved to Port Jackson, where Phillip named Sydney Cove on 26 January 1788. The Cadigal and Eora people were already living in the area, and conflict began soon after, with Pemulwuy of the Bidjigal clan leading attacks on the colonists between 1790 and 1810.",
+ "legs": [
+  {
+   "title": "From England to the Cape",
+   "stops": [
+    {
+     "place": "Portsmouth",
+     "entry": null,
+     "wp": "Portsmouth",
+     "date": "13 May 1787",
+     "year": 1787,
+     "by": "sea",
+     "text": "Phillip tried to sail on 10 May, but sailors of the Fishburn refused to leave until a dispute about pay was settled. The fleet left on 13 May, and the convicts were allowed on deck in fine weather.",
+     "quote": "The fleet finally left Portsmouth, England on 13 May 1787.",
+     "ll": [
+      50.806,
+      -1.087
+     ],
+     "psrc": "wikidata:Portsmouth"
+    },
+    {
+     "place": "Santa Cruz, Tenerife",
+     "entry": null,
+     "wp": "Santa Cruz de Tenerife",
+     "date": "3 June 1787",
+     "year": 1787,
+     "by": "sea",
+     "text": "The fleet anchored here, and fresh water, vegetables and meat were brought on board. The local governor entertained Phillip and the chief officers, and one convict tried unsuccessfully to escape.",
+     "quote": "On 3 June 1787, the fleet anchored at Santa Cruz at Tenerife.",
+     "ll": [
+      28.467,
+      -16.25
+     ],
+     "psrc": "wikidata:Santa Cruz de Tenerife"
+    },
+    {
+     "place": "Rio de Janeiro",
+     "entry": "rio-de-janeiro",
+     "wp": "Rio de Janeiro",
+     "date": "5 August 1787",
+     "year": 1787,
+     "by": "sea",
+     "text": "The fleet stayed for a month. The ships were cleaned and repaired, water was taken on board, and Phillip ordered large quantities of food. The women convicts' infested clothing was burnt and they were given new clothes made from rice sacks.",
+     "quote": "The Fleet reached Rio de Janeiro on 5 August and stayed for a month.",
+     "ll": [
+      -22.911,
+      -43.206
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Table Bay",
+     "entry": "table-bay",
+     "wp": "Table Bay",
+     "date": "13 October 1787",
+     "year": 1787,
+     "by": "sea",
+     "text": "Leaving Rio on 4 September, the fleet reached Table Bay, its last port of call. There it took on plants, seeds and livestock for the new colony, including seven cows, 44 sheep and 32 pigs.",
+     "quote": "The Fleet left Rio de Janeiro on 4 September to run before the westerlies to the Table Bay in southern Africa, which it reached on 13 October.",
+     "ll": [
+      -33.85,
+      18.45
+     ],
+     "psrc": "entry"
+    }
+   ]
+  },
+  {
+   "title": "Botany Bay and Sydney Cove",
+   "stops": [
+    {
+     "place": "Botany Bay",
+     "entry": null,
+     "wp": "Botany Bay",
+     "date": "18 January 1788",
+     "year": 1788,
+     "by": "sea",
+     "text": "Supply arrived first and the other ships within two days. The bay was open, the water shallow and the soil poor. The Cadigal people witnessed the arrival, and the Eora, first met here, seemed curious but suspicious.",
+     "quote": "Supply reached Botany Bay on 18 January 1788; the three fastest transports in the advance group arrived on 19 January; slower ships, including Sirius, arrived on 20 January.",
+     "ll": [
+      -33.983,
+      151.183
+     ],
+     "psrc": "wikidata:Botany Bay"
+    },
+    {
+     "place": "Sydney Cove",
+     "entry": "sydney-cove",
+     "wp": "Sydney Cove",
+     "date": "26 January 1788",
+     "year": 1788,
+     "by": "sea",
+     "text": "Phillip had found Port Jackson a better site and moved the Fleet there. The anchorage had deep water, shelter and a small stream, and he named it Sydney Cove after Lord Sydney. The British flag was hoisted that day. Conflict with the Eora, including the Bidjigal clan, followed.",
+     "quote": "On 26 January 1788, the Fleet weighed anchor and sailed to Port Jackson. The site selected for the anchorage had deep water close to the shore, was sheltered, and had a small stream flowing into it. Phillip named it Sydney Cove, after Lord Sydney, the British Home Secretary.",
+     "ll": [
+      -33.859,
+      151.212
+     ],
+     "psrc": "entry"
+    }
+   ]
+  }
+ ],
+ "notes": "Van Diemen's Land sighted 4 January 1788: left out (region, no event). Phillip's 21 to 23 January boat trip to Port Jackson and the French ships on 24 January are not stops; the Port Jackson survey is folded into Sydney Cove. Mother Bank year 1787 is from the surrounding narrative. Santa Cruz wp is Santa Cruz de Tenerife; places.tsv has no Portsmouth in England, Tenerife or Botany Bay, so entry is null. Sydney Cove text on conflict draws on the First contact section; the quote for it is in the first-contact paragraph, not the stop quote. The smallpox question (disputed among historians) is not told as a stop."
+}

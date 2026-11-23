@@ -1,0 +1,201 @@
+{
+ "slug": "mungo-park",
+ "title": "Mungo Park's Journeys to the Niger",
+ "years": "1795–1806",
+ "traveller": "Mungo Park",
+ "intro": "Mungo Park, a Scottish surgeon, went to West Africa for the African Association to find the course of the Niger River. He made two journeys there, the first in 1795 to 1797 and the second, for the government, from 1805.",
+ "ending": "Park died in 1806 at the Bussa rapids, near Bussa in present-day Nigeria, while travelling down the Niger. His journal was never recovered, and the mystery of the Niger's course was solved in 1830 by Richard Lander and his brother.",
+ "legs": [
+  {
+   "title": "First journey, 1795 to 1797",
+   "stops": [
+    {
+     "place": "Portsmouth",
+     "entry": null,
+     "wp": "Portsmouth",
+     "date": "22 May 1795",
+     "year": 1795,
+     "by": "sea",
+     "text": "Park left England on the brig Endeavour, a vessel bound for the Gambia to trade for beeswax and ivory.",
+     "quote": "On 22 May 1795, Park left Portsmouth, England, on the brig Endeavour, a vessel travelling to Gambia to trade for beeswax and ivory.",
+     "ll": [
+      50.806,
+      -1.087
+     ],
+     "psrc": "wikidata:Portsmouth"
+    },
+    {
+     "place": "Pisania",
+     "entry": null,
+     "wp": "Karantaba Tenda",
+     "date": "2 December 1795",
+     "year": 1795,
+     "by": "sea",
+     "text": "Park reached the Gambia River on 21 June and ascended it 200 miles to the British trading station of Pisania. On 2 December he set out for the interior with two local guides.",
+     "quote": "On 21 June 1795, he reached the Gambia River and ascended it 200 miles (300 km) to a British trading station named Pisania. On 2 December, accompanied by two local guides, he started for the unknown interior.",
+     "ll": [
+      13.567,
+      -14.567
+     ],
+     "psrc": "wikidata:Karantaba Tenda"
+    },
+    {
+     "place": "Ségou",
+     "entry": "segou",
+     "wp": "Ségou",
+     "date": "21 July 1796",
+     "year": 1796,
+     "by": "land",
+     "text": "Park had been held for four months by a Moorish chief at Ludamar. He escaped alone on 1 July with his horse and a pocket compass, and reached the Niger at Ségou.",
+     "quote": "On 1 July 1796, he escaped, alone and with nothing but his horse and a pocket compass, and on the 21st reached the long-sought Niger River at Ségou, being the first European to do so.",
+     "ll": [
+      13.45,
+      -6.267
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Bamako",
+     "entry": "bamako",
+     "wp": "Bamako",
+     "date": "29 July 1796",
+     "year": 1796,
+     "by": "land",
+     "text": "Park began the return on 29 July by a route further south, keeping close to the Niger as far as Bamako. He traced the river's course for some 300 miles.",
+     "quote": "On his return journey, begun on 29 July, he took a route more to the south than that originally followed, keeping close to the Niger River as far as Bamako, thus tracing its course for some 300 miles (500 km).",
+     "ll": [
+      12.646,
+      -7.992
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Pisania",
+     "entry": null,
+     "wp": "Karantaba Tenda",
+     "date": "10 June 1797",
+     "year": 1797,
+     "by": "land",
+     "text": "Park came back to the trading station on the Gambia, where he had set out.",
+     "quote": "Eventually he reached Pisania again on 10 June 1797.",
+     "ll": [
+      13.567,
+      -14.567
+     ],
+     "psrc": "wikidata:Karantaba Tenda"
+    },
+    {
+     "place": "Antigua",
+     "entry": null,
+     "wp": "Antigua",
+     "date": null,
+     "year": null,
+     "by": "sea",
+     "text": "Unable to book a passage to England from Bathurst, Park boarded a slave ship bound for Charleston and served as doctor to the enslaved people aboard, many of whom died on the way. The ship was forced to dock in Antigua, and he returned to Britain on 22 December.",
+     "quote": "Unable to book passage directly to England from Bathurst, he boarded a slave ship bound for Charleston. Having learned the Mandinka language during his travels, he served as doctor to the slaves, many of whom died en route.  The ship was eventually forced to dock in Antigua, from which he returned to Britain on 22 December.",
+     "ll": [
+      17.085,
+      -61.8
+     ],
+     "psrc": "wikidata:Antigua"
+    }
+   ]
+  },
+  {
+   "title": "Second journey, 1805 to 1806",
+   "stops": [
+    {
+     "place": "Portsmouth",
+     "entry": null,
+     "wp": "Portsmouth",
+     "date": "31 January 1805",
+     "year": 1805,
+     "by": "sea",
+     "text": "Park sailed for the Gambia as a captain, head of a government expedition. His brother-in-law Alexander Anderson was second-in-command.",
+     "quote": "On 31 January 1805, he sailed from Portsmouth for Gambia, having been given a captain's commission as head of the government expedition.",
+     "ll": [
+      50.806,
+      -1.087
+     ],
+     "psrc": "wikidata:Portsmouth"
+    },
+    {
+     "place": "Gorée",
+     "entry": null,
+     "wp": "Gorée",
+     "date": null,
+     "year": null,
+     "by": "sea",
+     "text": "At Gorée, then in British occupation, Park was joined by Lieutenant Martyn, thirty-five privates and two seamen.",
+     "quote": "At Gorée (then in British occupation) Park was joined by Lieutenant Martyn, R.A., thirty-five privates and two seamen.",
+     "ll": [
+      14.667,
+      -17.398
+     ],
+     "psrc": "wikidata:Gorée"
+    },
+    {
+     "place": "Bamako",
+     "entry": "bamako",
+     "wp": "Bamako",
+     "date": "mid-August 1805",
+     "year": 1805,
+     "by": "land",
+     "text": "The party started late into the rainy season and did not reach the Niger until mid-August. Only eleven Europeans were then alive; the rest had died of fever or dysentery. From Bamako they went on to Ségou by canoe.",
+     "quote": "The expedition got a late start into the rainy season and did not reach the Niger until mid-August, when only eleven Europeans were left alive; the rest had succumbed to fever or dysentery. From Bamako the journey to Ségou was made by canoe.",
+     "ll": [
+      12.646,
+      -7.992
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Sansanding",
+     "entry": null,
+     "wp": "Sansanding",
+     "date": "19 November 1805",
+     "year": 1805,
+     "by": "land",
+     "text": "Mansong Diarra, the local ruler, gave permission to proceed. Anderson died at Sansanding on 28 October. Park turned two canoes into one boat, named it the Joliba, and set sail downstream on 19 November.",
+     "quote": "Having received permission from the local ruler, Mansong Diarra, to proceed, at Sansanding, a little below Ségou, Park made ready for his journey down the still unknown part of the river.",
+     "ll": [
+      13.725,
+      -6.004
+     ],
+     "psrc": "wikidata:Sansanding"
+    },
+    {
+     "place": "Yauri",
+     "entry": null,
+     "wp": "Yauri, Nigeria",
+     "date": null,
+     "year": null,
+     "by": "sea",
+     "text": "According to Amadi Fatouma, the guide who went downstream with Park, canoes chased them at several places and Park's party drove them off with firearms, killing many people. At Yauri Amadi landed.",
+     "quote": "They passed the army \"being all Moors\" and entered Haoussa, finally arriving at Yauri (which Amadi calls Yaour), where he (Fatouma) landed.",
+     "ll": [
+      11.396,
+      5.486
+     ],
+     "psrc": "wikidata:Yauri, Nigeria"
+    },
+    {
+     "place": "Bussa",
+     "entry": null,
+     "wp": "Bussa, Nigeria",
+     "date": null,
+     "year": null,
+     "by": "sea",
+     "text": "At the Bussa rapids the boat stuck on a rock. Hostile people on the bank attacked with bows and spears, and Park, Martyn and the two remaining soldiers jumped into the river and drowned. One of the slaves survived.",
+     "quote": "But at the Bussa rapids, not far below Yauri, Park's boat became stuck on a rock and remained fast.",
+     "ll": [
+      10.317,
+      4.6
+     ],
+     "psrc": "wikidata:Bussa, Nigeria"
+    }
+   ]
+  }
+ ],
+ "notes": "Left out: Ludamar (a region; the four months' imprisonment is in the Ségou text), Gorée's date, Timbuktu and Djenne (named only as lying along the river), Sibby, Cabbara and other places of the chases (no fuller event), Haoussa. Pisania has no article of its own that I can confirm; wp 'Karantaba' is from memory of the modern site and must be checked by the editor (the article does not say). Entry 'new-bussa' may be a different town from the Bussa of 1806 (the rapids are now under Kainji Lake near it); the editor should decide, else null. Years of the second journey after 1805 are not stated in the article, so Sansanding's year is null; Bussa's year 1806 comes from the introduction (he died in 1806). Antigua and Silla have no date in the article; the return to Britain on 22 December has no year there. The article says Park shot first and killed many people on the river; the stop texts keep this attributed to Amadi Fatouma's account."
+}

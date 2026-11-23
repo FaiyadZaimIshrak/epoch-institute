@@ -1,0 +1,156 @@
+{
+ "slug": "caillie",
+ "title": "René Caillié to Djenné, Timbuktu and Morocco",
+ "years": "1827–1828",
+ "traveller": "René Caillié",
+ "intro": "René Caillié, a Frenchman who had spent months among the Brakna Moors learning Arabic and the customs of Islam, set out alone dressed as a Muslim. He wished to reach Timbuktu and describe it for a prize of 9,000 francs offered by the Société de Géographie in Paris.",
+ "ending": "Caillié was the first European to return alive from Timbuktu. The Société de Géographie awarded him the prize, and in 1830 its gold medal.",
+ "legs": [
+  {
+   "title": "From the Rio Nuñez to Djenné",
+   "stops": [
+    {
+     "place": "Kakondy",
+     "entry": null,
+     "wp": "Boké",
+     "date": "19 April 1827",
+     "year": 1827,
+     "by": "sea",
+     "text": "Caillié had come by ship from Sierra Leone to Boké on the Rio Nuñez. From Kakondy, near Boké, he set off east along the hills of Fouta Djallon.",
+     "quote": "Starting from Kakondy near Boké on the Rio Nuñez on 19 April 1827, Caillié travelled east along the hills of Fouta Djallon",
+     "ll": [
+      10.931,
+      -14.289
+     ],
+     "psrc": "wikidata:Boké"
+    },
+    {
+     "place": "Kouroussa",
+     "entry": null,
+     "wp": "Kouroussa",
+     "date": null,
+     "year": null,
+     "by": "land",
+     "text": "Beyond the head streams of the Senegal River, Caillié crossed the Upper Niger at Kurussa, now Kouroussa.",
+     "quote": "passing the head streams of the Senegal River and crossing the Upper Niger at Kurussa (now Kouroussa).",
+     "ll": [
+      10.65,
+      -9.883
+     ],
+     "psrc": "wikidata:Kouroussa"
+    },
+    {
+     "place": "Kankan",
+     "entry": null,
+     "wp": "Kankan",
+     "date": "17 June 1827",
+     "year": 1827,
+     "by": "land",
+     "text": "He arrived with a caravan carrying kola nuts and stayed a month in this commercial centre. Warned against going north because Kankan was fighting for the Bouré gold area, he left eastwards.",
+     "quote": "Caillié reached Kankan in present-day Guinea on 17 June 1827 travelling with a caravan transporting kola nuts.",
+     "ll": [
+      10.383,
+      -9.3
+     ],
+     "psrc": "wikidata:Kankan"
+    },
+    {
+     "place": "Tiémé",
+     "entry": null,
+     "wp": "Tiémé",
+     "date": "3 August 1827",
+     "year": 1827,
+     "by": "land",
+     "text": "In the Kong highlands Caillié was held at the village of Tiémé by illness for five months. He resumed his journey in January 1828 and went north-east.",
+     "quote": "where at the village of Tiémé in present-day Ivory Coast, he was detained for five months (3 August 1827 – 9 January 1828) by illness.",
+     "ll": [
+      9.533,
+      -7.333
+     ],
+     "psrc": "wikidata:Tiémé"
+    },
+    {
+     "place": "Djenné",
+     "entry": "djenne",
+     "wp": "Djenné",
+     "date": "11 March 1828",
+     "year": 1828,
+     "by": "land",
+     "text": "Caillié stayed in Djenné from 11 to 23 March. He confused the Bani River with the Niger, which he called the Dhioliba, and left for Timbuktu on a boat carrying merchandise.",
+     "quote": "reached the city of Djenné, where he stayed 11–23 March.",
+     "ll": [
+      13.9,
+      -4.55
+     ],
+     "psrc": "entry"
+    }
+   ]
+  },
+  {
+   "title": "Timbuktu and across the Sahara",
+   "stops": [
+    {
+     "place": "Timbuktu",
+     "entry": "timbuktu",
+     "wp": "Timbuktu",
+     "date": "20 April 1828",
+     "year": 1828,
+     "by": "land",
+     "text": "Caillié arrived by river and stayed about two weeks. He found the city a mass of earth houses, smaller and less busy than he had expected, and less commercial than Djenné.",
+     "quote": "He arrived in Timbuktu on 20 April 1828.",
+     "ll": [
+      16.773,
+      -3.007
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Araouane",
+     "entry": null,
+     "wp": "Araouane",
+     "date": "19 May 1828",
+     "year": 1828,
+     "by": "land",
+     "text": "Caillié left Timbuktu on 4 May with a caravan of 600 camels. After six days it reached Araouane, a village that served the trans-Saharan trade. On 19 May it left with 1,400 camels and 400 men.",
+     "quote": "When the caravan left Araouane on 19 May it included 1,400 camels and 400 men.",
+     "ll": [
+      18.905,
+      -3.528
+     ],
+     "psrc": "wikidata:Araouane"
+    },
+    {
+     "place": "Fez",
+     "entry": null,
+     "wp": "Fez, Morocco",
+     "date": "12 August 1828",
+     "year": 1828,
+     "by": "land",
+     "text": "The caravan carried slaves, gold, ivory, gum, ostrich feathers and cloth across the Sahara. Caillié reached Fez on 12 August.",
+     "quote": "Caillie reached Fez on 12 August.",
+     "ll": [
+      34.043,
+      -5.003
+     ],
+     "psrc": "wikidata:Fez, Morocco"
+    },
+    {
+     "place": "Tangier",
+     "entry": "tangier",
+     "wp": "Tangier",
+     "date": null,
+     "year": null,
+     "by": "land",
+     "text": "From Tangier, Caillié returned to France by frigate, landing at Toulon. Back in France he was awarded the prize of 9,000 francs by the Société de Géographie.",
+     "quote": "From Tangier he returned by frigate to Toulon in France.",
+     "ll": [
+      35.769,
+      -5.804
+     ],
+     "psrc": "entry"
+    }
+   ]
+  }
+ ],
+ "notes": "Dates not stated are null: Kouroussa and Tangier. The Araouane date is the caravan's departure on 19 May; the arrival (six days after 4 May) is not dated. Caillié's text names Kakondy; wp points at Boké, which the article names beside it. Entry for Fez left null (places.tsv has only Fezzan). Left out: Kouna, Lac Débo, Sa, Mopti/Isaca (named in passing or only as river or lake stages; Sa has no date or event beyond joining a flotilla), Saint-Louis and Sierra Leone (earlier stages, undated). The article's 'a year later' for Timbuktu and the 20 April 1828 date agree. 'By' for Kakondy is sea: he travelled by ship to Boké."
+}

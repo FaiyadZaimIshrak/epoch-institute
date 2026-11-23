@@ -1,0 +1,111 @@
+{
+ "slug": "long-walk",
+ "title": "The Long Walk of the Navajo",
+ "years": "1864–1868",
+ "traveller": "The Navajo (Diné)",
+ "intro": "The United States Army removed the Navajo from their homeland in what is now Arizona and New Mexico to Bosque Redondo, Hwéeldi in Navajo, at Fort Sumner. It has been called a deportation and an ethnic cleansing, and it was carried out in some 53 forced marches between August 1864 and the end of 1866.",
+ "ending": "In 1868 the Navajo were allowed to return to their ancestral homeland under the Treaty of Bosque Redondo. Up to 3,500 people died from starvation, disease and executions over the four years.",
+ "legs": [
+  {
+   "title": "The homeland, the forts and the campaign",
+   "stops": [
+    {
+     "place": "Fort Defiance",
+     "entry": null,
+     "wp": "Fort Defiance, Arizona",
+     "date": "August 1851",
+     "year": 1851,
+     "by": "land",
+     "text": "Colonel Edwin Vose Sumner set up the fort for the United States government on Navajo land. In April 1860 Manuelito and Barboncito led about 1,000 Navajo warriors against it and almost took control.",
+     "quote": "In August 1851, Colonel Edwin Vose Sumner established Fort Defiance for the U.S. government (near present-day Window Rock, Arizona)",
+     "ll": [
+      35.742,
+      -109.067
+     ],
+     "psrc": "wikidata:Fort Defiance, Arizona"
+    },
+    {
+     "place": "Fort Fauntleroy",
+     "entry": null,
+     "wp": "Fort Wingate",
+     "date": "9 August 1861",
+     "year": 1861,
+     "by": "land",
+     "text": "Lt. Col. Manuel Antonio Chaves took command of the garrison here. After a disputed horse race with Manuelito in September, soldiers killed 15 Navajos, mostly women and children, and wounded or captured many more.",
+     "quote": "On August 9, 1861, Lt. Col. Manuel Antonio Chaves of the New Mexico Volunteer Militia took command of a garrison of three companies numbering 8 officers and 206 men at Fort Fauntleroy.",
+     "ll": [
+      35.468,
+      -108.541
+     ],
+     "psrc": "wikidata:Fort Wingate"
+    },
+    {
+     "place": "Cubero",
+     "entry": null,
+     "wp": "Cubero, New Mexico",
+     "date": null,
+     "year": null,
+     "by": "land",
+     "text": "With Confederate troops moving into southern New Mexico, General Canby sent an agent to persuade friendly Navajo to gather at a central encampment near Cubero. Those who refused were to be treated as enemies, and many came.",
+     "quote": "Canby sent Agent John Ward into Navajo lands to persuade any who might be friendly to move to a central encampment near the village of Cubero.",
+     "ll": [
+      35.085,
+      -107.518
+     ],
+     "psrc": "wikidata:Cubero, New Mexico"
+    },
+    {
+     "place": "Fort Canby",
+     "entry": null,
+     "wp": "Fort Defiance, Arizona",
+     "date": "January 1864",
+     "year": 1864,
+     "by": "land",
+     "text": "Kit Carson, with Ute allies, burned hogans, killed livestock and destroyed irrigated fields. Navajo who surrendered were taken to Fort Canby, and those who resisted were killed. Some Navajo escaped to places such as Navajo Mountain and the Grand Canyon.",
+     "quote": "Carson launched his full-scale assault on the Navajo population in January 1864. He destroyed everything in his path, eradicating the way of life of the Navajo people. Hogans were burned to the ground, livestock was killed off, and irrigated fields were destroyed. Navajos who surrendered were taken to Fort Canby and those who resisted were murdered.",
+     "ll": [
+      35.742,
+      -109.067
+     ],
+     "psrc": "wikidata:Fort Defiance, Arizona"
+    }
+   ]
+  },
+  {
+   "title": "To Bosque Redondo and back",
+   "stops": [
+    {
+     "place": "Fort Sumner (Bosque Redondo)",
+     "entry": null,
+     "wp": "Fort Sumner",
+     "date": "spring 1864",
+     "year": 1864,
+     "by": "land",
+     "text": "Bands led by the Army were marched to Bosque Redondo in the Pecos River valley, told nothing of where they were going or why. At least 200 died on the trek, and the camp held 9,022 people by spring 1865.",
+     "quote": "The \"Long Walk\" started at the beginning of spring 1864. Bands of Navajo led by the Army were relocated from their traditional lands in eastern Arizona Territory and western New Mexico Territory to Fort Sumner (in an area called the Bosque Redondo or Hwéeldi by the Navajo) in the Pecos River valley",
+     "ll": [
+      34.402,
+      -104.195
+     ],
+     "psrc": "wikidata:Fort Sumner"
+    },
+    {
+     "place": "Fort Sumner (Treaty of Bosque Redondo)",
+     "entry": null,
+     "wp": "Fort Sumner",
+     "date": "1 June 1868",
+     "year": 1868,
+     "by": "land",
+     "text": "Barboncito, Manuelito, Ganado Mucho and other Navajo leaders signed the treaty with General Sherman. It set up a reservation and arranged the return of the Navajo to it, ending the experiment at Bosque Redondo.",
+     "quote": "The Treaty of Bosque Redondo between the United States and many of the Navajo leaders was concluded at Fort Sumner on June 1, 1868.",
+     "ll": [
+      34.402,
+      -104.195
+     ],
+     "psrc": "wikidata:Fort Sumner"
+    }
+   ]
+  }
+ ],
+ "notes": "Borderline test: the article names the Walk's route only as from the homeland to Fort Sumner, so the stops are the forts and places it ties to the removal, in order of events, not a marked road. Five stops are in the homeland or its forts, one at Bosque Redondo twice. Dates null where the article gives none: Cubero (Canby's letter is 1 December, no year stated). The Fort Fauntleroy stop dates the command (9 August 1861); the massacre is in September, year implied. Fort Fauntleroy is 'originally' Fort Wingate near Gallup per the article. Fort Canby: the article never says where it was; wp points to Fort Defiance, Arizona from outside knowledge, editor must verify or drop. Fort Sumner's return march to the homeland has no place named, so no return stop. Death figures: up to 3,500 (starvation, disease, executions, over four years), at least 200 on the 18-day, 300-mile trek; 10,000 Navajo and 500 Mescalero Apache interned. Slavery by New Mexican and Ute slavers, Comanche raids and crop failures left out of stops."
+}

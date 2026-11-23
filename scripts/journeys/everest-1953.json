@@ -1,0 +1,176 @@
+{
+ "slug": "everest-1953",
+ "title": "The First Ascent of Mount Everest",
+ "years": "1953",
+ "traveller": "John Hunt's British expedition, with Tenzing Norgay and Edmund Hillary",
+ "intro": "The ninth expedition to attempt Mount Everest, led by Colonel John Hunt, was organised and financed by the Joint Himalayan Committee. Twenty Sherpas led by their Sirdar, Tenzing Norgay, joined the climbers and carried loads for the route from the Nepalese side.",
+ "ending": "Tenzing Norgay and Edmund Hillary reached the summit on 29 May 1953 at 11:30 a.m. News of the success reached London in time to be released on the morning of Queen Elizabeth II's coronation, on 2 June.",
+ "legs": [
+  {
+   "title": "From Kathmandu to Base Camp",
+   "stops": [
+    {
+     "place": "Kathmandu",
+     "entry": "kathmandu",
+     "wp": "Kathmandu",
+     "date": "10 March 1953",
+     "year": 1953,
+     "by": "land",
+     "text": "The party was looked after by the British ambassador, Christopher Summerhayes. In early March twenty Sherpas, led by Tenzing Norgay, arrived to help carry loads. The first party left with 150 porters on 10 March, and the second followed on 11 March with 200.",
+     "quote": "The first party, together with 150 porters, left Kathmandu for Mount Everest on 10 March, followed by the second party and 200 porters on 11 March.",
+     "ll": [
+      27.71,
+      85.32
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Thyangboche",
+     "entry": null,
+     "wp": "Tengboche",
+     "date": "26 March 1953",
+     "year": 1953,
+     "by": "land",
+     "text": "The first party reached Thyangboche on 26 March and the second on 27 March. Between 26 March and 17 April the climbers spent time getting used to the altitude.",
+     "quote": "They reached Thyangboche on 26 and 27 March respectively, and between 26 March and 17 April engaged in altitude acclimation.",
+     "ll": [
+      27.836,
+      86.764
+     ],
+     "psrc": "wikidata:Tengboche"
+    },
+    {
+     "place": "Base Camp",
+     "entry": null,
+     "wp": "Khumbu Glacier",
+     "date": "12 April 1953",
+     "year": 1953,
+     "by": "land",
+     "text": "The Icefall party reached Base Camp at 17,900 ft (5455 m). A few days then went on establishing a route, and Sherpa teams moved tonnes of supplies up to Base.",
+     "quote": "The \"Icefall party\" reached Base Camp at 17,900 ft (5455 m) on 12 April 1953.",
+     "ll": [
+      27.959,
+      86.825
+     ],
+     "psrc": "wikidata:Khumbu Glacier"
+    }
+   ]
+  },
+  {
+   "title": "Up the mountain to the summit",
+   "stops": [
+    {
+     "place": "Khumbu Icefall",
+     "entry": null,
+     "wp": "Khumbu Icefall",
+     "date": null,
+     "year": null,
+     "by": "land",
+     "text": "A route through the Khumbu Icefall was established as planned, and once it was open, teams of Sherpas carried tonnes of supplies up to Base Camp. Camp III was later set at the head of the Icefall, at 20,200 feet.",
+     "quote": "A few days were then taken up, as planned, in establishing a route through the Khumbu Icefall, and once this had been opened teams of Sherpas moved tonnes of supplies up to Base.",
+     "ll": [
+      27.996,
+      86.873
+     ],
+     "psrc": "wikidata:Khumbu Icefall"
+    },
+    {
+     "place": "South Col",
+     "entry": null,
+     "wp": "South Col",
+     "date": "21 May 1953",
+     "year": 1953,
+     "by": "land",
+     "text": "Wilfrid Noyce and the Sherpa Annullu, younger brother of Da Tenzing, had reached the South Col by 21 May, just under 26,000 feet. Hillary and Tenzing later set out from Camp IX, higher on the Col.",
+     "quote": "By 21 May, Noyce and the Sherpa Annullu (the younger brother of Da Tenzing) had reached the South Col, just under 26,000 feet (7,900 m).",
+     "ll": [
+      27.975,
+      86.932
+     ],
+     "psrc": "wikidata:South Col"
+    },
+    {
+     "place": "South Summit",
+     "entry": null,
+     "wp": "South Summit (Mount Everest)",
+     "date": "29 May 1953",
+     "year": 1953,
+     "by": "land",
+     "text": "Hillary and Tenzing left Camp IX at 6.30 am and reached the South Summit at 9 am. Bourdillon and Evans had reached it on 26 May but turned back after trouble with their oxygen sets.",
+     "quote": "They left Camp IX at 6.30 am, reached the South Summit at 9 am, and reached the summit at 11:30 am on 29 May 1953, climbing the South Col route.",
+     "ll": [
+      27.985,
+      86.926
+     ],
+     "psrc": "wikidata:South Summit"
+    },
+    {
+     "place": "Hillary Step",
+     "entry": null,
+     "wp": "Hillary Step",
+     "date": null,
+     "year": null,
+     "by": "land",
+     "text": "Hillary wrote that he climbed the 40-foot Hillary Step, just below the summit, and went on cutting steps along the ridge, bump after bump and cornice after cornice, with Tenzing holding the rope.",
+     "quote": "After this Hillary himself wrote that following his ascent of the 40-foot Hillary Step, lying just below the summit:",
+     "ll": [
+      27.987,
+      86.925
+     ],
+     "psrc": "wikidata:Hillary Step"
+    },
+    {
+     "place": "The summit",
+     "entry": "mount-everest",
+     "wp": "Mount Everest",
+     "date": "29 May 1953",
+     "year": 1953,
+     "by": "land",
+     "text": "Hillary and Tenzing reached the summit at 11:30 a.m. They stayed to take photographs and to bury some sweets and a small cross in the snow. Tenzing later wrote that Hillary was first.",
+     "quote": "reached the summit at 11:30 am on 29 May 1953, climbing the South Col route. Before descending, they remained at the summit long enough to take photographs and to bury some sweets and a small cross in the snow.",
+     "ll": [
+      27.988,
+      86.925
+     ],
+     "psrc": "entry"
+    }
+   ]
+  },
+  {
+   "title": "The news and the return",
+   "stops": [
+    {
+     "place": "Namche Bazaar",
+     "entry": null,
+     "wp": "Namche Bazaar",
+     "date": "30 May 1953",
+     "year": 1953,
+     "by": "land",
+     "text": "Jan Morris of The Times heard the news at Base Camp and sent a coded message by runner to Namche Bazaar. A wireless transmitter there forwarded it as a telegram to the British Embassy in Kathmandu.",
+     "quote": "Jan Morris, the correspondent on the spot of The Times newspaper, heard the news at Base Camp on 30 May and sent a coded message by runner to Namche Bazaar",
+     "ll": [
+      27.804,
+      86.71
+     ],
+     "psrc": "wikidata:Namche Bazaar"
+    },
+    {
+     "place": "Kathmandu",
+     "entry": "kathmandu",
+     "wp": "Kathmandu",
+     "date": null,
+     "year": null,
+     "by": "land",
+     "text": "Returning a few days later, the expedition learned that Hillary had been appointed a Knight Commander of the Order of the British Empire and Hunt a Knight Bachelor.",
+     "quote": "Returning to Kathmandu a few days later, the expedition learned that Hillary had already been appointed a Knight Commander of the Order of British Empire and Hunt a Knight Bachelor for their efforts.",
+     "ll": [
+      27.71,
+      85.32
+     ],
+     "psrc": "entry"
+    }
+   ]
+  }
+ ],
+ "notes": "The article gives days without years for the march-in; 1953 is taken from the expedition's name. Western Cwm left out: named only as where the Sherpas would carry loads, with no event or date. Numbered camps are not stops. Hillary Step and Khumbu Icefall have no date in the article, so null. The article says the second assault left on 27 May but gives the summit on 29 May; the South Summit stop uses the article's 'reached the summit ... 29 May' sentence. The South Summit text mentions Bourdillon and Evans's 26 May attempt. Namche Bazaar: Morris heard the news on 30 May; the article gives no date for the runner's arrival. Sherpas named: Tenzing Norgay (Sirdar), Annullu, Da Tenzing."
+}

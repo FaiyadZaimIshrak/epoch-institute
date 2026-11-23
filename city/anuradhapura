@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Anuradhapura: History, Rulers and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Anuradhapura is a city in the north central plain of Sri Lanka, on the Malwathu Oya, settled from about the 10th century BCE, the long-serving ancient…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Anuradhapura: History, Rulers and Legacy — The Epoch Institute">
+<meta property="og:description" content="Anuradhapura is a city in the north central plain of Sri Lanka, on the Malwathu Oya, settled from about the 10th century BCE, the long-serving ancient…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/city/anuradhapura">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/anuradhapura.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/anuradhapura.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/city/anuradhapura">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Cities","item":"https://the-epoch-institute.org/profiles?kind=city"},{"@type":"ListItem","position":4,"name":"Anuradhapura"}]},{"@type":"Article","headline":"Anuradhapura","description":"Anuradhapura is a city in the north central plain of Sri Lanka, on the Malwathu Oya, settled from about the 10th century BCE, the long-serving ancient…","url":"https://the-epoch-institute.org/city/anuradhapura","mainEntityOfPage":"https://the-epoch-institute.org/city/anuradhapura","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Anuradhapura"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/anuradhapura.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=city">Cities</a></li><li aria-current="page">Anuradhapura</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Anuradhapura.png" alt="Anuradhapura" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">City · South &amp; Southeast Asia</p>
+        <h1 class="profile-detail-name">Anuradhapura</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 900 BCE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Founded</span><span class="info-stat-val">The Mahāvaṃsa places the founding of the city in 437 BCE and tells that a minister named Anuradha founded a village near the Kadamba river, which King <a class="enc-link" href="/encyclopedia/pandukabhaya">Pandukabhaya</a> later made the capital; excavations date human settlement on the site to the 10th century BCE.</span></div>
+          <div class="info-stat"><span class="info-stat-label">Where</span><span class="info-stat-val">On the banks of the Malwathu Oya in the north central plain of <a class="enc-link" href="/encyclopedia/sri-lanka">Sri Lanka</a>, 205 km north of <a class="enc-link" href="/encyclopedia/colombo">Colombo</a>, in the North Central Province.</span></div>
+          <div class="info-stat"><span class="info-stat-label">Known for</span><span class="info-stat-val">The ancient capital of the Sinhalese kingdom for about 1,500 years; a centre of <a class="enc-link" href="/encyclopedia/theravada-buddhism">Theravada Buddhism</a>; the Maha Viharaya and the Jaya Sri Maha Bodhi; the stupas and monasteries of its sacred city; the <a class="enc-link" href="/encyclopedia/chola-empire">Chola</a> invasion of 993 and its abandonment</span></div>
+          <div class="info-stat"><span class="info-stat-label">Today</span><span class="info-stat-val">Anuradhapura is the capital of the North Central Province and of Anuradhapura District, with a <a class="enc-link" href="/encyclopedia/world-heritage-site">World Heritage Site</a> of ancient ruins beside a planned New Town.</span></div>
+        </div>
+        <p class="empire-meta">5 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>Excavations show settlement on the site from the 10th century BCE, while the Mahāvaṃsa places the founding of the city in 437 BCE and tells that <a class="enc-link" href="/encyclopedia/pandukabhaya">Pandukabhaya</a> made it the capital of the Sinhalese kingdom.</li><li>Anuradhapura was the Sinhalese capital for about 1,500 years and a centre of <a class="enc-link" href="/encyclopedia/theravada-buddhism">Theravada Buddhism</a>, with a network of temples and monasteries that now covers over 100 square kilometres.</li><li>After the <a class="enc-link" href="/encyclopedia/chola-empire">Chola</a> invasions of 993 and 1014 the city was largely deserted and the capital moved to <a class="enc-link" href="/encyclopedia/polonnaruwa">Polonnaruwa</a>, but it stayed a pilgrimage site and was revived under British rule from the 1870s.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The Jaya Sri Maha Bodhi, a tree at Anuradhapura, is held to be the oldest still-living, documented, planted tree in the world and is believed to have originated from the <a class="enc-link" href="/encyclopedia/bodhi-tree">Bodhi tree</a> at <a class="enc-link" href="/encyclopedia/bodh-gaya">Bodh Gaya</a>, under which the Buddha attained enlightenment.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#growth">Growth &amp; Great Ages</a></li><li><a href="#rulers">Who Ruled It</a></li><li><a href="#life">Life in the City</a></li><li><a href="#crises">Sieges &amp; Disasters</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">c. 900 BCE</span><span class="rf-text">Excavations date human settlement on the site of the city to about this time</span></li><li><span class="rf-year">437 BCE</span><span class="rf-text">The Mahāvaṃsa places the founding of the city in this year</span></li><li><span class="rf-year">377 BCE</span><span class="rf-text">King <a class="enc-link" href="/encyclopedia/pandukabhaya">Pandukabhaya</a> establishes the village of Anuradhagama as the capital of the Sinhalese kingdom</span></li><li><span class="rf-year">455</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/dhatusena">Dhatusena</a> begins a reign in which the <a class="enc-link" href="/encyclopedia/theravada-buddhism">Theravada</a> canon is redacted and 18 new vihara are built</span></li><li><span class="rf-year">993</span><span class="rf-text">The <a class="enc-link" href="/encyclopedia/chola-empire">Chola</a> king <a class="enc-link" href="/encyclopedia/rajaraja-i">Rajaraja I</a> invades, and the city is largely deserted afterwards</span></li><li><span class="rf-year">1904</span><span class="rf-text">The Northern Railway line and Anuradhapura Railway Station open</span></li><li><span class="rf-year">1949</span><span class="rf-text">The Anuradhapura Preservation Plan creates a planned New Town to the east to protect the ancient city</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <div class="profile-section-body"><p>Anuradhapura lies on the banks of the Malwathu Oya, known in the Mahāvaṃsa as the Kadamba river, in the north central plain of <a class="enc-link" href="/encyclopedia/sri-lanka">Sri Lanka</a>. The land around it was irrigable and fertile, major ports lay to the north-west and north-east of the island, and the dense jungle around the city gave it a natural defence.</p><p>According to the Mahāvaṃsa, Vijaya's ministers founded villages here and there, and a minister named Anuradha built Anuradhagama near the Kadamba river; gama means village. The chronicle places the founding of the city in 437 BCE and tells that King <a class="enc-link" href="/encyclopedia/pandukabhaya">Pandukabhaya</a>, whose reign is given as 474 to 367 BCE, laid out the city of Anuradhapura and established it as the capital in 377 BCE. As the settlement became an urban centre its name changed to Anuradhapura, pura meaning city. Archaeological evidence from the citadel area puts human settlement on the site as far back as the 10th century BCE. The protohistoric <a class="enc-link" href="/encyclopedia/iron-age">Iron Age</a> of the city spans 900 to 600 BCE, with <a class="enc-link" href="/encyclopedia/iron-technology">iron technology</a>, pottery, the horse, domestic <a class="enc-link" href="/encyclopedia/cattle">cattle</a> and paddy cultivation, and between 700 and 600 BCE the settlement grew over an area of at least 50 hectares. Plain Grey Ware of 600 to 500 BCE shows connections with <a class="enc-link" href="/encyclopedia/north-india">North India</a>.</p></div>
+      </div>
+      <div class="profile-section-block" id="growth">
+        <h2 class="profile-section-title">Growth &amp; Great Ages</h2>
+        <div class="profile-section-body"><p>The Sinhalese chronicles are the source for the city's development between 500 and 250 BCE. According to these records, <a class="enc-link" href="/encyclopedia/pandukabhaya">Pandukabhaya</a> planned the city formally, with gates and quarters for traders. It then covered an area of one square kilometre, which made it one of the largest cities in <a class="enc-link" href="/encyclopedia/asia-roman-province">Asia</a> at the time.</p><p>Anuradhapura became the centre of <a class="enc-link" href="/encyclopedia/theravada-buddhism">Theravada Buddhism</a> for many centuries and a major pilgrimage site. It was home to Buddhist philosophers, among them Buddhaghosa. During the reign of <a class="enc-link" href="/encyclopedia/dhatusena">Dhatusena</a>, 455 to 473, a redaction of the Theravada canon took place, 18 new vihara were built and a statue was erected for Mahinda, the Indian prince-monk who introduced <a class="enc-link" href="/encyclopedia/buddhism">Buddhism</a> to the island. In the late Anuradhapura period the royal family and the nobility supported Buddhism strongly and commissioned works of art, which they donated to temples; in return the temples and the local Buddhist community supported the king's rule. Depictions of Avalokitesvara, the <a class="enc-link" href="/encyclopedia/bodhisattva">Bodhisattva</a> of Mercy and Compassion, became increasingly popular. The temples and monasteries now cover over 100 square kilometres.</p></div>
+      </div>
+      <div class="profile-section-block" id="rulers">
+        <h2 class="profile-section-title">Who Ruled It</h2>
+        <div class="profile-section-body"><p>Anuradhapura was the first capital of the Sinhala Kingdom of Rajarata, which followed the kingdoms of Tambapanni and Upatissa Nuwara. Its history as a royal city runs from the reign of <a class="enc-link" href="/encyclopedia/pandukabhaya">Pandukabhaya</a> to the abandonment of the city by the last of the Anuradhapura kings at the end of the 10th century CE. It served from 437 BCE to 1017 CE, about 1,500 years, which made it the longest-serving ancient capital of the Sinhalese.</p><p>The <a class="enc-link" href="/encyclopedia/chola-empire">Chola</a> king <a class="enc-link" href="/encyclopedia/rajaraja-i">Rajaraja I</a> invaded in 993, and his son Rajendra I followed in 1014. After the first invasion the political centre shifted to <a class="enc-link" href="/encyclopedia/polonnaruwa">Polonnaruwa</a>. Later Sinhalese kings tried to return the capital to Anuradhapura, and the city was briefly reoccupied in the 11th century. Some of its major monuments were restored in the late 13th century by Vijayabahu IV, who reigned from 1267 to 1270. Under British colonial rule Anuradhapura became an administrative centre, and by the early 20th century it was designated the administrative centre of the North Central Province.</p></div>
+      </div>
+      <div class="profile-section-block" id="life">
+        <h2 class="profile-section-title">Life in the City</h2>
+        <div class="profile-section-body"><p>Anuradhapura was an intellectual centre of early <a class="enc-link" href="/encyclopedia/theravada-buddhism">Theravada Buddhism</a>, and its monasteries stood at the centre of its religious life. The Maha Viharaya and the Jaya Sri Maha Bodhi were its best-known places of worship, and the Jaya Sri Maha Bodhi was believed to have grown from the original <a class="enc-link" href="/encyclopedia/bodhi-tree">Bodhi tree</a> at <a class="enc-link" href="/encyclopedia/bodh-gaya">Bodh Gaya</a>. Other places of veneration included the <a class="enc-link" href="/encyclopedia/ruwanwelisaya">Ruwanwelisaya</a>, the Thuparamaya, the Lovamahapaya, the Abhayagiri Dagaba, the Jetavanarama, the Mirisaveti Stupa and the Lankarama.</p><p>When the city was planned under <a class="enc-link" href="/encyclopedia/pandukabhaya">Pandukabhaya</a> it was given gates and quarters for traders. Excavation shows connections with <a class="enc-link" href="/encyclopedia/north-india">North India</a> as early as 600 to 500 BCE, and <a class="enc-link" href="/encyclopedia/claudius-ptolemy">Claudius Ptolemy</a>, writing in the 2nd century CE, named a place called Anourogrammoi among the cities of <a class="enc-link" href="/encyclopedia/taprobane">Taprobane</a>, which scholars widely read as Anuradhagama or Anuradhapura. Among the other structures of the ancient city are the Isurumuniya, the Kuttam Pokuna, the Ranmasu Uyana and the Rathna Prasadaya.</p></div>
+      </div>
+      <div class="profile-section-block" id="crises">
+        <h2 class="profile-section-title">Sieges &amp; Disasters</h2>
+        <div class="profile-section-body"><p>The city was mostly destroyed and largely deserted after the <a class="enc-link" href="/encyclopedia/chola-empire">Chola</a> invasion of 993, which <a class="enc-link" href="/encyclopedia/rajaraja-i">Rajaraja I</a> led, and his son Rajendra I invaded again in 1014. According to the <a class="enc-link" href="/encyclopedia/culavamsa">Culavamsa</a>, Anuradhapura was utterly destroyed in every way by the Chola army. The place was nevertheless continuously inhabited afterwards, as the records of visitors such as Robert Knox show. The Cholas' invasions ended its time as the main population centre of the island, and it was not re-established as one until the British colonial era in the 19th century.</p><p>The area was sparsely inhabited for many centuries. Robert Knox wrote in 1681 that a watch was kept at the city, beyond which were no more people who obeyed the King of <a class="enc-link" href="/encyclopedia/kandy">Kandy</a>. In 1821 John Davy described Anuradhapura, so long the capital of <a class="enc-link" href="/encyclopedia/ceylon">Ceylon</a>, as a small mean village in the midst of a desert, with a large tank, numerous stone pillars and two or three immense mounds, probably old dagobas, as its principal remains; he added that it was still considered a sacred spot and a place of pilgrimage.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Anuradhapura remained a vital pilgrimage site for Buddhists throughout the <a class="enc-link" href="/encyclopedia/middle-ages">medieval period</a> and continues to be one. Its revival began in the 1870s under British colonial rule, with infrastructure and urban planning meant to support administration and to receive pilgrims, and in the late 19th century the British authorities began archaeological surveys and restoration. The opening of the Northern Railway line and the railway station in 1904 made the town a transport hub.</p><p>In 1949 the Government of <a class="enc-link" href="/encyclopedia/ceylon">Ceylon</a> began the Anuradhapura Preservation Plan, drawn up by Oliver Weerasinghe, to protect the ancient city by building a separate planned township, the New Town, to the east. Government offices and law courts were moved there and the Anuradhapura Preservation Board was set up. From 1958 to 1962 Nissanka Wijeyeratne served as Government Agent and chairman of the board during the move of the old city's residents. Anuradhapura was designated a <a class="enc-link" href="/encyclopedia/unesco-world-heritage-site">UNESCO World Heritage Site</a> in 1982. It is the capital of the North Central Province and of Anuradhapura District, and the headquarters of <a class="enc-link" href="/encyclopedia/sri-lanka">Sri Lanka</a>'s archaeological survey.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Anuradhapura, on the Malwathu Oya in northern <a class="enc-link" href="/encyclopedia/sri-lanka">Sri Lanka</a>, was settled from about the 10th century BCE and was the Sinhalese capital for about 1,500 years and a centre of <a class="enc-link" href="/encyclopedia/theravada-buddhism">Theravada Buddhism</a>. It was largely deserted after the <a class="enc-link" href="/encyclopedia/chola-empire">Chola</a> invasion of 993 and was revived under British rule.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="anuradhapura"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The Northern Railway line and Anuradhapura Railway Station open","o":["377 BCE","1904","993","1949"],"a":1,"w":"1904: The Northern Railway line and Anuradhapura Railway Station open."},{"p":"Which came first?","q":"","o":["Dhatusena begins a reign in which the Theravada canon is redacted and 18 new vihara are built","King Pandukabhaya establishes the village of Anuradhagama as the capital of the Sinhalese kingdom"],"a":1,"w":"455: Dhatusena begins a reign in which the Theravada canon is redacted and 18 new vihara are built · 377 BCE: King Pandukabhaya establishes the village of Anuradhagama as the capital of the Sinhalese kingdom."},{"p":"In which year?","q":"King Pandukabhaya establishes the village of Anuradhagama as the capital of the Sinhalese kingdom","o":["1949","1904","377 BCE","455"],"a":2,"w":"377 BCE: King Pandukabhaya establishes the village of Anuradhagama as the capital of the Sinhalese kingdom."},{"p":"Which came first?","q":"","o":["Dhatusena begins a reign in which the Theravada canon is redacted and 18 new vihara are built","The Chola king Rajaraja I invades, and the city is largely deserted afterwards"],"a":0,"w":"455: Dhatusena begins a reign in which the Theravada canon is redacted and 18 new vihara are built · 993: The Chola king Rajaraja I invades, and the city is largely deserted afterwards."},{"p":"In which year?","q":"The Chola king Rajaraja I invades, and the city is largely deserted afterwards","o":["993","1949","437 BCE","377 BCE"],"a":0,"w":"993: The Chola king Rajaraja I invades, and the city is largely deserted afterwards."}]</script>
+    </section>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other citys</p>
+      <div class="related-grid"><a class="related-card" href="/city/copan"><img src="/logos/thumbs/Cop%C3%A1n.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Copán</span><span class="related-card-dates">c. 900 BCE – c. 900 CE</span></a><a class="related-card" href="/city/medina"><img src="/logos/thumbs/Medina.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Medina</span><span class="related-card-dates">c. 850 BCE – present</span></a><a class="related-card" href="/city/ife"><img src="/logos/thumbs/Ife.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ife</span><span class="related-card-dates">c. 1000 BCE – present</span></a><a class="related-card" href="/city/lisbon"><img src="/logos/thumbs/Lisbon.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Lisbon</span><span class="related-card-dates">c. 800 BCE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/city/taxila"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Taxila.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Taxila</span><span class="related-card-dates">c. 1000 BCE – present</span></a><a class="related-card" href="/city/copan"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Cop%C3%A1n.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Copán</span><span class="related-card-dates">c. 900 BCE – c. 900 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Anuradhapura",slug="anuradhapura",url="https://the-epoch-institute.org/city/anuradhapura";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Anuradhapura on The Epoch Institute — history, rulers and legacy. https://the-epoch-institute.org/city/anuradhapura #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/city/anuradhapura"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Anuradhapura",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Anuradhapura",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

@@ -4,7 +4,7 @@
 // MWJS_V likewise, of data/meanwhile.json and /meanwhile.js.
 (function () {
   var IDX_V = 'd310347be4';
-  var MW_V = '8c0f671f', MWJS_V = 'b31422fb';
+  var MW_V = '3971a716', MWJS_V = 'b31422fb';
   if (typeof initNav === 'function') initNav(document.body.getAttribute('data-nav') || '');
 
   // today's date in citations ("Accessed 23 October 2026")

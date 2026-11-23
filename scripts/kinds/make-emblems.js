@@ -83,6 +83,9 @@ const EMBLEMS = [
   ['Pali Canon', 'P'], ['Avesta', 'A'], ['Guru Granth Sahib', 'ਗ੍ਰੰਥ', 'Nirmala UI, Raavi, sans-serif', 140],
   ['Talmud', 'תלמוד', '"Times New Roman", David, serif', 130], ['Upanishads', 'उ', 'Nirmala UI, Mangal, sans-serif', 230],
   ['Lotus Sutra', '妙法', 'serif-cjk', 150], ['I Ching', '易', 'serif-cjk', 220],
+  // cities, second wave (23 Nov 2026): the three whose entry picture is a map take a letter (Antioch its Greek initial)
+  ['Antioch', 'Α'], ['Ctesiphon', 'C'], ['Pataliputra', 'P'],
+  ['Addis Ababa', 'አ', 'Nyala, Ebrima, serif', 220],   // its entry picture is a night skyline, nearly black as a seal
 ];
 const argv = process.argv.slice(2), sheet = (argv.find(a => a.startsWith('--sheet=')) || '').slice(8);
 // --initial: a name not in EMBLEMS gets the monogram of its first distinctive word (the Kingdom of Kano: K), as the

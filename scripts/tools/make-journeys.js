@@ -17,6 +17,9 @@ const E = new Function(read('encyclopedia-data.js') + ';return ENCYCLOPEDIA')(),
 // the page a name stands for: a profile's name, or "e:<entry slug>"
 const pageOf = (ref, what) => { ref = ref.trim(); if (ref.startsWith('e:')) { const s = ref.slice(2); if (!ent[s]) throw new Error(what + ': no entry ' + s); return { href: '/encyclopedia/' + s, name: ent[s].name, entry: s }; }
   if (!byName[ref]) throw new Error(what + ': no profile ' + ref); return { href: SD.profileUrl(byName[ref]), name: ref, profile: ref }; };
+// the age a journey belongs to, by the first year of its "years" (the picker offers one age at a time)
+const ERAS = ['Before 1500', '1500 to 1699', '1700 to 1799', '1800 to 1899', 'Since 1900'];
+const eraOf = y => { const m = /(\d{1,4})/.exec(String(y)); let v = m ? +m[1] : 0; if (/BCE/.test(y) && !/\d\s*CE/.test(y)) v = -v; return v < 1500 ? 0 : v < 1700 ? 1 : v < 1800 ? 2 : v < 1900 ? 3 : 4; };
 const rows = read('scripts/journeys/journeys.tsv').split(/\r?\n/).filter(l => l.trim() && l[0] !== '#').map(l => l.split('\t'));
 const J = rows.map(([slug, short, traveller, links, kids, article]) => {
   const f = 'scripts/journeys/' + slug + '.json'; if (!fs.existsSync(path.join(R, f))) throw new Error('journeys.tsv: no ' + f);
@@ -29,7 +32,7 @@ const J = rows.map(([slug, short, traveller, links, kids, article]) => {
     if (/\barticle\b/i.test(s.text)) throw new Error(id + ': the text speaks of its source');
     if (s.entry && !ent[s.entry]) throw new Error(id + ': no entry ' + s.entry); }
   if (n < 3) throw new Error(slug + ': fewer than three stops');
-  return { slug, short: short || j.title, j, who, n, kids: kids !== 'no', article, links: (links || '').split(';').map(x => x.trim()).filter(x => x && x !== '-').map(x => pageOf(x, slug)) };
+  return { slug, short: short || j.title, j, who, n, era: eraOf(j.years), kids: kids !== 'no', article, links: (links || '').split(';').map(x => x.trim()).filter(x => x && x !== '-').map(x => pageOf(x, slug)) };
 });
 for (const f of fs.readdirSync(path.join(R, 'scripts', 'journeys')).filter(f => f.endsWith('.json'))) if (!J.some(x => x.slug === f.slice(0, -5))) throw new Error('scripts/journeys/' + f + ' has no row in journeys.tsv');
 
@@ -73,8 +76,9 @@ const main = `<main id="main" class="ref-page jr-page" data-no-toc>
 <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li aria-current="page">Journeys on the Globe</li></ol></nav>
 <header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Journeys on the Globe</h1>
 <p class="ref-lede">${cnt} journeys that crossed the known world of their day, drawn stop by stop: pilgrims, merchants, fleets, armies and naturalists, ${stops} stops in all. Choose a journey, then press Play or step through it; each stop says what happened there.</p></header>
+<div class="jr-eras" role="group" aria-label="Ages">${ERAS.map((e, i) => '<button type="button" data-era="' + i + '" aria-pressed="false">' + e + ' <span>' + J.filter(x => x.era === i).length + '</span></button>').join('')}</div>
 <nav class="jr-pick" aria-label="Journeys">
-${J.map(x => '<a href="#' + x.slug + '" data-j="' + x.slug + '" data-kids="' + (x.kids ? 1 : 0) + '"><b>' + esc(x.short) + '</b><span>' + esc(x.j.years) + '</span></a>').join('\n')}
+${J.map(x => '<a href="#' + x.slug + '" data-j="' + x.slug + '" data-era="' + x.era + '" data-kids="' + (x.kids ? 1 : 0) + '"><b>' + esc(x.short) + '</b><span>' + esc(x.j.years) + '</span></a>').join('\n')}
 </nav>
 <div class="jr-stage">
 <div class="jr-map">
@@ -88,7 +92,7 @@ ${J.map(x => '<a href="#' + x.slug + '" data-j="' + x.slug + '" data-kids="' + (
 ${J.map(art).join('\n')}
 </div>
 </div>
-<script>(function(){var d=document,k=d.documentElement.getAttribute('data-kids')==='1',a=[].slice.call(d.querySelectorAll('.jr-j')),m=/[?&]j=([a-z0-9-]+)/.exec(location.search),w=m?m[1]:(location.hash||'').slice(1),c=null;a.forEach(function(x){if(x.id===w&&(!k||x.getAttribute('data-kids')==='1'))c=x});if(!c)c=a.filter(function(x){return !k||x.getAttribute('data-kids')==='1'})[0]||a[0];d.documentElement.classList.add('jr-js');c.classList.add('is-on')})()</script>
+<script>(function(){var d=document,k=d.documentElement.getAttribute('data-kids')==='1',a=[].slice.call(d.querySelectorAll('.jr-j')),m=/[?&]j=([a-z0-9-]+)/.exec(location.search),w=m?m[1]:(location.hash||'').slice(1),c=null;a.forEach(function(x){if(x.id===w&&(!k||x.getAttribute('data-kids')==='1'))c=x});if(!c)c=a.filter(function(x){return !k||x.getAttribute('data-kids')==='1'})[0]||a[0];d.documentElement.classList.add('jr-js');c.classList.add('is-on');var pa=d.querySelector('.jr-pick a[data-j="'+c.id+'"]'),er=pa?pa.getAttribute('data-era'):'0';[].forEach.call(d.querySelectorAll('.jr-pick a'),function(x){if(x.getAttribute('data-era')!==er)x.classList.add('jr-off')});[].forEach.call(d.querySelectorAll('.jr-eras button'),function(x){var on=x.getAttribute('data-era')===er;if(on)x.classList.add('is-on');x.setAttribute('aria-pressed',on?'true':'false')})})()</script>
 <section class="jr-about"><h2>How the journeys are told</h2>
 <p>Each journey follows one Wikipedia article, named under it: the stops are the places that article treats as stages of the route, in its order, with its dates and its doubts. Where scholars question whether a traveller reached a place, the stop says so. A stop's point on the globe is the place's own, from its encyclopedia entry or from Wikidata; the lines between stops are the shortest paths on the globe, not the roads and sea lanes actually taken. Some journeys have a few more stops in their sources than are drawn here: a stage is left out when no point for the place itself could be found.</p>
 <p>More to explore: <a href="/atlas">the Atlas</a>, <a href="/faiths">Faith Maps</a>, <a href="/profiles?kind=life">Great Lives</a>, <a href="/paths/">Reading Paths</a>.</p></section>

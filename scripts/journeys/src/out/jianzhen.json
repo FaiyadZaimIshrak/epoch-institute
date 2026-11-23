@@ -1,0 +1,91 @@
+{
+ "slug": "jianzhen",
+ "title": "Jianzhen's Voyages to Japan",
+ "years": "748–754",
+ "traveller": "Jianzhen",
+ "intro": "Jianzhen, a Tang Chinese monk also known as Ganjin, was invited by an emissary from Japan to lecture there. Between 743 and 754 he attempted the crossing some six times, and arrived on the sixth attempt.",
+ "ending": "Jianzhen reached Nara in the spring of 754, blind, and was welcomed by the Emperor. He founded Tōshōdai-ji and died in Japan in 763.",
+ "legs": [
+  {
+   "title": "The fifth attempt and the road back",
+   "stops": [
+    {
+     "place": "Yangzhou",
+     "entry": "yangzhou",
+     "wp": "Yangzhou",
+     "date": "summer 748",
+     "year": 748,
+     "by": "sea",
+     "text": "Jianzhen left Yangzhou by ship on his fifth attempt to reach Japan. He had lived in the area since birth and had become a monk there at fourteen.",
+     "quote": "In summer 748, Jianzhen made his fifth attempt to reach Japan. Leaving from Yangzhou,"
+    },
+    {
+     "place": "Zhoushan Archipelago",
+     "entry": null,
+     "wp": "Zhoushan",
+     "date": "748",
+     "year": 748,
+     "by": "sea",
+     "text": "The ship made it to the Zhoushan Archipelago, off the coast of modern Zhejiang, before it was blown off course.",
+     "quote": "he made it to the Zhoushan Archipelago off the coast of modern Zhejiang. But the ship was blown off course"
+    },
+    {
+     "place": "Hainan Island",
+     "entry": "hainan",
+     "wp": "Hainan",
+     "date": "748",
+     "year": 748,
+     "by": "sea",
+     "text": "The ship ended up in the Yande commandery on Hainan Island. Jianzhen was forced to make his way back to Yangzhou by land.",
+     "quote": "ended up in the Yande (延德) commandery on Hainan Island. Jianzhen was then forced to make his way back to Yangzhou by land,"
+    },
+    {
+     "place": "Jiujiang",
+     "entry": null,
+     "wp": "Jiujiang",
+     "date": "after 748",
+     "year": 748,
+     "by": "land",
+     "text": "On the way back he lectured at a number of monasteries. He went along the Gan River to Jiujiang, and from there down the Yangtze River.",
+     "quote": "lecturing at a number of monasteries on the way. Jianzhen travelled along the Gan River to Jiujiang, and then down the Yangtze River."
+    },
+    {
+     "place": "Yangzhou",
+     "entry": "yangzhou",
+     "wp": "Yangzhou",
+     "date": "close to three years after 748",
+     "year": 748,
+     "by": "land",
+     "text": "The failed attempt took him close to three years. By the time he came back to Yangzhou he was blind from an infection.",
+     "quote": "The entire failed enterprise took him close to three years. By the time Jianzhen returned to Yangzhou, he was blind from an infection."
+    }
+   ]
+  },
+  {
+   "title": "The successful crossing",
+   "stops": [
+    {
+     "place": "Kagoshima",
+     "entry": "kagoshima",
+     "wp": "Kagoshima",
+     "date": "20 December 753",
+     "year": 753,
+     "by": "sea",
+     "text": "In autumn 753 the blind Jianzhen joined a Japanese emissary ship returning home. After a sea journey of several months the group landed at Kagoshima, on Kyūshū.",
+     "quote": "In the autumn of 753, the blind Jianzhen decided to join a Japanese emissary ship returning to its home country. After an eventful sea journey of several months, the group finally landed at Kagoshima, Kyūshū, on December 20."
+    },
+    {
+     "place": "Nara",
+     "entry": null,
+     "wp": "Nara, Nara",
+     "date": null,
+     "year": null,
+     "by": "land",
+     "text": "The group reached Nara in the spring of the next year and was welcomed by the Emperor. Jianzhen presided over Tōdai-ji and later founded Tōshōdai-ji in the western part of the city.",
+     "quote": "They reached Nara in the spring of the next year and were welcomed by the Emperor. At Nara, Jianzhen presided over Tōdai-ji."
+    }
+   ]
+  }
+ ],
+ "notes": "The article gives the fifth attempt (748) and the final arrival (753-754); the earlier attempts have no places. Jiujiang is a place on the road back, with no event of its own beyond the passage; the return has no date in the article, so both return stops carry 748 as the start of the attempt. Hainan: wp is the island's article (the Yande commandery has none). Nara: places.tsv has only Yoshino, Nara, so entry is null. The article gives no departure port for 753. Spring 754 follows 'the spring of the next year' after December 753. Tōshōdai-ji (759) is mentioned in the Nara text, not a separate stop."
+}

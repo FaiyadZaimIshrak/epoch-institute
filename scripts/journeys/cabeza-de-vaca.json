@@ -1,0 +1,141 @@
+{
+ "slug": "cabeza-de-vaca",
+ "title": "Cabeza de Vaca's Journey from Florida to Mexico City",
+ "years": "1527–1536",
+ "traveller": "Álvar Núñez Cabeza de Vaca",
+ "intro": "Álvar Núñez Cabeza de Vaca sailed in 1527 as royal treasurer of Pánfilo de Narváez's expedition to La Florida. After the expedition broke up he was one of four survivors, with Andrés Dorantes de Carranza, Alonso del Castillo Maldonado and Estevanico, an African enslaved by Dorantes. They crossed the Gulf coast and northern Mexico on foot over about eight years.",
+ "ending": "The four men reached Mexico City, and Cabeza de Vaca sailed back to Europe in 1537. He wrote his account in Spain, and it was first published in 1542.",
+ "legs": [
+  {
+   "title": "The Narváez expedition",
+   "stops": [
+    {
+     "place": "Hispaniola",
+     "entry": "hispaniola",
+     "wp": "Hispaniola",
+     "date": "1527",
+     "year": 1527,
+     "by": "sea",
+     "text": "The fleet of five ships, which had sailed from Spain on 17 June 1527 with 600 soldiers and colonists, stopped here for supplies. Narváez lost more than 140 men who chose to stay, and the expedition spent forty-five days on the island.",
+     "quote": "When they stopped in Hispaniola for supplies, Narváez lost more than 140 of his men, who chose to stay behind rather than continue with the expedition. They spent forty-five days on the island re-provisioning the fleet, and bought a sixth ship.",
+     "ll": [
+      19,
+      -71
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Santiago de Cuba",
+     "entry": null,
+     "wp": "Santiago de Cuba",
+     "date": "1527",
+     "year": 1527,
+     "by": "sea",
+     "text": "The expedition went on to Cuba hoping to recruit men and buy horses. Narváez anchored here and sent Cabeza de Vaca with two ships further up the coast for provisions.",
+     "quote": "Narváez anchored at Santiago de Cuba and ordered Cabeza de Vaca to take two ships and proceed further up the coast to pick up additional provisions at Trinidad.",
+     "ll": [
+      20.022,
+      -75.829
+     ],
+     "psrc": "wikidata:Santiago de Cuba"
+    },
+    {
+     "place": "Trinidad",
+     "entry": null,
+     "wp": "Trinidad, Cuba",
+     "date": "October 1527",
+     "year": 1527,
+     "by": "sea",
+     "text": "While Cabeza de Vaca was ashore negotiating for supplies, a hurricane hit the coast. Both of his ships were destroyed, with the loss of sixty men and twenty horses.",
+     "quote": "In October, while Cabeza de Vaca was ashore negotiating for supplies, a hurricane hit the coast, resulting in the destruction of both ships and the loss of sixty men and twenty horses.",
+     "ll": [
+      21.8,
+      -79.967
+     ],
+     "psrc": "wikidata:Trinidad, Cuba"
+    },
+    {
+     "place": "Bay of Jagua",
+     "entry": null,
+     "wp": "Cienfuegos Bay",
+     "date": "November 1527",
+     "year": 1527,
+     "by": "sea",
+     "text": "Narváez decided to overwinter in Cuba for fear of another storm. The four remaining ships anchored in the Bay of Jagua under Cabeza de Vaca's command until February 1528.",
+     "quote": "The four remaining ships anchored in the Bay of Jagua under the command of Cabeza de Vaca.",
+     "ll": [
+      22.134,
+      -80.481
+     ],
+     "psrc": "wikidata:Cienfuegos Bay"
+    },
+    {
+     "place": "Tampa Bay",
+     "entry": null,
+     "wp": "Tampa Bay",
+     "date": "April 1528",
+     "year": 1528,
+     "by": "sea",
+     "text": "After a storm blew the ships into the Gulf of Mexico, the expedition sighted land and went ashore, probably near Tampa Bay. Narváez then decided to march inland with some 300 men and 42 horses.",
+     "quote": "In April they sighted land, anchored and went ashore. Although the location of their landing has been much debated, more recent opinion leans toward the vicinity of Tampa Bay.",
+     "ll": [
+      27.762,
+      -82.546
+     ],
+     "psrc": "wikidata:Tampa Bay"
+    }
+   ]
+  },
+  {
+   "title": "Wreck on the Texas coast and the walk to Mexico City",
+   "stops": [
+    {
+     "place": "Galveston Island",
+     "entry": null,
+     "wp": "Galveston Island",
+     "date": "November 1528",
+     "year": 1528,
+     "by": "sea",
+     "text": "After the rafts built in Florida were scattered, two crafts with about 40 survivors each wrecked on or near Galveston Island. Only 15 of about 80 lived past the winter, and they named the island Malhado.",
+     "quote": "In November 1528, two crafts with about 40 survivors each, including Cabeza de Vaca, wrecked on or near Galveston Island (now part of Texas). Of the 80 or so survivors, only 15 lived past that winter.",
+     "ll": [
+      29.222,
+      -94.909
+     ],
+     "psrc": "wikidata:Galveston Island"
+    },
+    {
+     "place": "Culiacán",
+     "entry": null,
+     "wp": "Culiacán",
+     "date": null,
+     "year": null,
+     "by": "land",
+     "text": "After four years enslaved by nomadic peoples of the upper Gulf coast, four men escaped and walked south and west across Texas and northern Mexico. Near Culiacán Cabeza de Vaca first met other Spaniards.",
+     "quote": "After finally reaching the colonized lands of New Spain, where he first encountered fellow Spaniards near modern-day Culiacán, Cabeza de Vaca and the three other men reached Mexico City.",
+     "ll": [
+      24.79,
+      -107.388
+     ],
+     "psrc": "wikidata:Culiacán"
+    },
+    {
+     "place": "Mexico City",
+     "entry": "mexico-city",
+     "wp": "Mexico City",
+     "date": null,
+     "year": null,
+     "by": "land",
+     "text": "Cabeza de Vaca and the three other men reached Mexico City, nearly eight years after the wreck on Galveston Island. From there he sailed back to Europe in 1537.",
+     "quote": "They travelled through the American Southwest and ultimately reached Mexico City, nearly eight years after being wrecked on the island.",
+     "ll": [
+      19.354,
+      -99.136
+     ],
+     "psrc": "entry"
+    }
+   ]
+  }
+ ],
+ "notes": "The article gives only year-level dates after the Florida landing, and says his recollection has errors in chronology and geography and that historians dispute his route. Left out: Apalachee and Aute (named, but regions or villages with no certain place or article), the Withlacoochee crossing and the Mississippi mouth (rivers), and the peoples' territories (Han, Capoque, Avavare, Arbadao and others; no places given). Culiacán and Mexico City dated 'c. 1536' from the intro's 'Mexico in 1536'. Trinidad entry in places.tsv left null in case it is not the Cuban town. Hispaniola is an island, not a town."
+}

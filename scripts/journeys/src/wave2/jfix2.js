@@ -1,0 +1,42 @@
+// The stops that got no map point: the Wikipedia article that holds the place (titles tested with titles-test.js;
+// the coordinates are Wikidata's, never typed), or the stop taken out where no article places it.  node jfix.js jfix2.js
+module.exports = {
+ // Mabila's site is not known, so it cannot be a stop on the map: its fight is told in the ending
+ 'de-soto': [['De Soto died of a fever on 21 May 1542,', 'At the fortified town of Mabila in 1540 the Spaniards, who had taken the paramount chief Tuskaloosa hostage, burned the town in nine hours of fighting: about 200 Spaniards died, according to Elvas, and an estimated 2,000 to 6,000 Native Americans. De Soto died of a fever on 21 May 1542,']],
+ _drop: {
+  'de-soto': [[2, 'Cofitachequi'], [2, 'Mabila'], [3, 'Sunflower Landing']],
+  'emin-relief': [[2, 'Ibwiri (Fort Bodo)'], [2, 'Fort Bodo'], [3, 'Usambiro']],
+  'great-trek': [[2, 'Mosega']],
+  'hasekura': [[1, 'Zacatula']],
+  'livingstone': [[1, 'Linyanti'], [1, 'Linyanti'], [2, 'Murchison Cataracts']],
+  'mungo-park': [[1, 'Silla']],
+  'salt-march': [[1, 'Aslali'], [1, 'Kareli']],
+  'first-fleet': [[1, 'Mother Bank']],
+  'tibet-1904': [[2, 'Karo La']],
+ },
+ _wp: {
+  'bounty': [['Adventure Bay', 'Adventure Bay, Tasmania'], ['Cape York', 'Cape York (Queensland)']],
+  'burke-wills': [['Cooper Creek', 'Burke and Wills Dig Tree'], ['Camp 65, the Dig Tree', 'Burke and Wills Dig Tree'], ['Cooper Creek, the Dig Tree', 'Burke and Wills Dig Tree']],
+  'cartier': [['Îles aux Oiseaux', 'Brion Island']],
+  'cook-second': [['Ship Cove', 'Meretoto / Ship Cove'], ['Grass Cove', 'Queen Charlotte Sound / Tōtaranui']],
+  'cook-third': [['Queen Charlotte Sound', 'Queen Charlotte Sound / Tōtaranui']],
+  'cortes': [['Potonchán', 'Frontera, Tabasco'], ['Tlacopan', 'Tacuba, Mexico City']],
+  'endurance': [['Cape Wild', 'Point Wild']],
+  'everest-1953': [['Base Camp', 'Khumbu Glacier']],
+  'faxian': [['Tamralipti', 'Tamluk']],
+  'fram': [['Vardø', 'Vardø (town)']],
+  'franklin': [['Greenhithe', 'Greenhithe, Kent'], ['Whalefish Islands', 'Disko Bay'], ['Victory Point', 'King William Island'], ['Starvation Cove', 'Adelaide Peninsula']],
+  'hokulea': [['Ala Wai Harbor', 'Ala Wai Harbor'], ['Lāʻau Point', 'Molokai'], ['Kualoa', 'Kualoa Regional Park'], ['Magic Island', 'Magic Island (Hawaii)']],
+  'livingstone': [["Chitambo's village, Chipundu", 'Livingstone Memorial']],
+  'macartney': [['Dagu', 'Taku Forts']],
+  'mungo-park': [['Pisania', 'Karantaba Tenda'], ['Yauri', 'Yauri, Nigeria'], ['Bussa', 'Bussa, Nigeria']],
+  'napoleon-russia': [['Borodino', 'Battle of Borodino'], ['Krasny', 'Battle of Krasnoi']],
+  'nez-perce': [['Lolo Pass', 'Lolo Pass (Idaho–Montana)'], ['Fort Fizzle', 'Fort Fizzle (Montana)'], ['Camas Meadows', 'Battle of Camas Creek'], ["Bear's Paw Mountains", 'Battle of Bear Paw'], ['Bears Paw Mountains (surrender)', 'Battle of Bear Paw']],
+  'rubruck': [['Sarai', 'Selitrennoye']],
+  'salt-march': [['Jalalpur', 'Jalalpore']],
+  'selma': [['Brown Chapel A.M.E. Church, Selma', 'Brown Chapel A.M.E. Church (Selma, Alabama)']],
+  'tasman': [['Frederick Hendrik Bay', 'Blackman Bay (Tasmania)'], ['Golden Bay', 'Golden Bay / Mohua']],
+  'tibet-1904': [['Tuna', 'Yadong County'], ['Guru (Chumik Shenko)', 'Kangmar County'], ['Nakartse', 'Nagarzê County']],
+  'trail-of-tears': [['Mantle Rock', 'Mantle Rock Archeological District']],
+ },
+};

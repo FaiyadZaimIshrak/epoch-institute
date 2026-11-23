@@ -1,0 +1,156 @@
+{
+ "slug": "dias",
+ "title": "Bartolomeu Dias Round the Southern Tip of Africa",
+ "years": "1487–1488",
+ "traveller": "Bartolomeu Dias",
+ "intro": "A Portuguese mariner, Bartolomeu Dias left Lisbon in or around July 1487 with two caravels and a supply ship, to carry on the exploration of the African coast begun by Diogo Cão. He was also charged with searching for Prester John.",
+ "ending": "Dias returned to Lisbon in December 1488 after an absence of 16 months. He had rounded the southern tip of Africa and shown that ships bound south should sail well to the west of the coast.",
+ "legs": [
+  {
+   "title": "Down the coast to the southern cape",
+   "stops": [
+    {
+     "place": "Lisbon",
+     "entry": "lisbon",
+     "wp": "Lisbon",
+     "date": "c. July 1487",
+     "year": 1487,
+     "by": "sea",
+     "text": "Dias set out with two caravels, the São Cristóvão and São Pantaleão, and a supply ship captained by his brother Diogo. Six Africans kidnapped earlier by Cão were aboard, to be set down along the coast.",
+     "quote": "The small fleet left Lisbon in or around July 1487.",
+     "ll": [
+      38.708,
+      -9.139
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Porto Alexandre",
+     "entry": null,
+     "wp": "Tombwa",
+     "date": "1487",
+     "year": 1487,
+     "by": "sea",
+     "text": "The ships had sailed directly to the Congo and then moved down the coast more carefully. Dias left the supply ship behind here, so that it could re-provision them on their return.",
+     "quote": "When they weighed anchor at what today is Porto Alexandre, Angola, Dias left the supply ship behind so that it could re-provision them later on their return voyage.",
+     "ll": [
+      -15.8,
+      11.85
+     ],
+     "psrc": "wikidata:Tômbua"
+    },
+    {
+     "place": "Golfo da Conceição (Walvis Bay)",
+     "entry": "walvis-bay",
+     "wp": "Walvis Bay",
+     "date": "8 December 1487",
+     "year": 1487,
+     "by": "sea",
+     "text": "By December Dias had passed the farthest point reached by Cão. He arrived at the bay he named the Golfo da Conceição, today Walvis Bay in Namibia.",
+     "quote": "On 8 December 1487, he arrived at the Golfo da Conceição, modern-day Walvis Bay, Namibia.",
+     "ll": [
+      -22.949,
+      14.507
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Mossel Bay",
+     "entry": null,
+     "wp": "Mossel Bay",
+     "date": "4 February 1488",
+     "year": 1488,
+     "by": "sea",
+     "text": "After progressing along the Namibian coast the two ships turned southwest, away from land, and spent 30 days on the open ocean. They then reached the southern cape of Africa and entered the bay later called Mossel Bay.",
+     "quote": "On 4 February 1488, after 30 days on the open ocean, they reached Africa's southern cape and entered what would later become known as Mossel Bay.",
+     "ll": [
+      -34.183,
+      22.133
+     ],
+     "psrc": "wikidata:Mossel Bay"
+    },
+    {
+     "place": "Kwaaihoek",
+     "entry": null,
+     "wp": "Kwaaihoek",
+     "date": "12 March 1488",
+     "year": 1488,
+     "by": "sea",
+     "text": "Having found that the coast trended northeast, Dias anchored near the mouth of the Boesmans River and set up the Padrão de São Gregório. The crew were restless and urged him to turn back, and the officers unanimously favoured returning.",
+     "quote": "Dias's expedition reached its furthest point on 12 March 1488, when it anchored at Kwaaihoek, near the mouth of the Boesmans River—where they erected the Padrão de São Gregório.",
+     "ll": [
+      -33.718,
+      26.624
+     ],
+     "psrc": "wikidata:Kwaaihoek"
+    }
+   ]
+  },
+  {
+   "title": "The return",
+   "stops": [
+    {
+     "place": "Cape of Good Hope",
+     "entry": "cape-of-good-hope",
+     "wp": "Cape of Good Hope",
+     "date": "May 1488",
+     "year": 1488,
+     "by": "sea",
+     "text": "Sailing back close to Africa's southwestern coast, the ships met the Cape of Good Hope for the first time. Dias raised the last of their padrões there. Tradition says he named it the Cape of Storms.",
+     "quote": "On their return voyage, they sailed close enough to Africa's southwestern coast to encounter the Cape of Good Hope for the first time in May 1488.",
+     "ll": [
+      -34.358,
+      18.472
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Príncipe",
+     "entry": null,
+     "wp": "Príncipe",
+     "date": "1488",
+     "year": 1488,
+     "by": "sea",
+     "text": "After rejoining the supply ship in July, Dias found that six of its nine crew had died in skirmishes with the local people. The worm-eaten ship was burnt on the beach. The fleet then stopped at Príncipe.",
+     "quote": "The ships made stops at Príncipe, the Rio do Resgate, in present-day Liberia, and the Portuguese trading post of São Jorge da Mina.",
+     "ll": [
+      1.617,
+      7.4
+     ],
+     "psrc": "wikidata:Príncipe"
+    },
+    {
+     "place": "São Jorge da Mina",
+     "entry": "elmina",
+     "wp": "Elmina",
+     "date": "1488",
+     "year": 1488,
+     "by": "sea",
+     "text": "The ships called at the Portuguese trading post of São Jorge da Mina, built in the Gulf of Guinea by Diogo de Azambuja's expedition of 1481, in which Dias had taken part.",
+     "quote": "In 1481, Dias accompanied an expedition, led by Diogo de Azambuja, to construct a fortress and trading post called São Jorge da Mina in the Gulf of Guinea.",
+     "ll": [
+      5.083,
+      -1.35
+     ],
+     "psrc": "entry"
+    },
+    {
+     "place": "Lisbon",
+     "entry": "lisbon",
+     "wp": "Lisbon",
+     "date": "December 1488",
+     "year": 1488,
+     "by": "sea",
+     "text": "Dias returned after an absence of 16 months. His reception at court was muted, with no official proclamations and little recognition.",
+     "quote": "Dias returned to Lisbon in December 1488 after an absence of 16 months.",
+     "ll": [
+      38.708,
+      -9.139
+     ],
+     "psrc": "entry"
+    }
+   ]
+  }
+ ],
+ "notes": "One voyage in two legs. Left out: the Congo (a river; the article says only that the fleet sailed directly there), the Rio do Resgate in present-day Liberia (named in passing, no point, no event), the beach where the supply ship was burnt (no place named; folded into Príncipe, so the Príncipe text holds events the quote does not: the quote is the stops list, the supply-ship facts are from the paragraph just before it). Dates: the article says 'probably about July or August 1487, rather than July 1486, the traditional date'; Porto Alexandre and the Príncipe and Mina stops have no date beyond the year (the supply ship was reached in July). Porto Alexandre is Tombwa today (wp). Príncipe: the island; the entry in places.tsv is the country, so null. Elmina as the entry for São Jorge da Mina: same trading post (Elmina Castle). Historians debate whether the turn southwest was a storm or deliberate; the text says only that the ships turned. Lisbon quotes: the article says Dias 'accompanied' Azambuja, not that he knew the post on return."
+}
