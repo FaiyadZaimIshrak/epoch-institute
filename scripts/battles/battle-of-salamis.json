@@ -1,0 +1,523 @@
+{
+ "slug": "battle-of-salamis",
+ "name": "Battle of Salamis",
+ "article": "battles2/wp/battle-of-salamis",
+ "field": {
+  "north": 0,
+  "ground": "sea",
+  "edges": [
+   {
+    "name": "to Phalerum →",
+    "at": [
+     95,
+     58
+    ]
+   }
+  ]
+ },
+ "note": "The accounts do not say which shore lay on which side. Salamis is drawn on the west and the mainland with Mount Aigaleo on the east, which fits a Greek line running north to south with the Persian Phoenicians on the right next to Mount Aigaleo. The accounts give the fleets as lines, not as separate squadrons, so each block stands for a wing or the centre. One ancient account puts the Allied line north to south, another east to west, which is thought unlikely. The Allied right is probably the Spartans, though another account names the Megareans and Aeginetans. The Persians may have entered the straits at nightfall or only at dawn. Where the Aeginetans stood and where the detachment of Aristides set out from are not given, so they are placed by judgement. The Egyptian squadron sent round Salamis is left out, as only one account has it. The wedge that split the Persian centre is shown by the Allied centre pressing into it; the accounts do not place it more closely.",
+ "terrain": [
+  {
+   "k": "land",
+   "name": "Salamis",
+   "at": [
+    [
+     0,
+     0
+    ],
+    [
+     22,
+     0
+    ],
+    [
+     24,
+     14
+    ],
+    [
+     22,
+     30
+    ],
+    [
+     26,
+     42
+    ],
+    [
+     30,
+     50
+    ],
+    [
+     24,
+     52
+    ],
+    [
+     0,
+     52
+    ]
+   ],
+   "lab": [
+    8,
+    30
+   ],
+   "quote": "The battle was fought in the straits between the mainland and Salamis, an island in the Saronic Gulf near Athens"
+  },
+  {
+   "k": "land",
+   "name": "Mainland",
+   "at": [
+    [
+     100,
+     0
+    ],
+    [
+     82,
+     0
+    ],
+    [
+     80,
+     12
+    ],
+    [
+     82,
+     28
+    ],
+    [
+     86,
+     44
+    ],
+    [
+     100,
+     50
+    ]
+   ],
+   "lab": [
+    92,
+    34
+   ],
+   "quote": "The battle was fought in the straits between the mainland and Salamis, an island in the Saronic Gulf near Athens"
+  },
+  {
+   "k": "mountain",
+   "name": "Mount Aigaleo",
+   "at": [
+    [
+     84,
+     2
+    ],
+    [
+     94,
+     2
+    ],
+    [
+     98,
+     10
+    ],
+    [
+     94,
+     18
+    ],
+    [
+     86,
+     18
+    ],
+    [
+     82,
+     10
+    ]
+   ],
+   "lab": [
+    90,
+    10
+   ],
+   "quote": "with the powerful Phoenician fleet on the right flank next to Mount Aigaleo"
+  },
+  {
+   "k": "point",
+   "name": "Cape Vavari",
+   "at": [
+    29,
+    50
+   ],
+   "lab": [
+    14,
+    49
+   ],
+   "quote": "the southern flank off the coast of Cape Vavari (part of Salamis)"
+  },
+  {
+   "k": "land",
+   "name": "Psyttaleia",
+   "at": [
+    [
+     41.5,
+     46
+    ],
+    [
+     44,
+     44
+    ],
+    [
+     48.5,
+     44
+    ],
+    [
+     51,
+     46.5
+    ],
+    [
+     49,
+     49.5
+    ],
+    [
+     43,
+     49.5
+    ]
+   ],
+   "lab": [
+    46,
+    42.8
+   ],
+   "quote": "on the island known as Psyttaleia, in the middle of the exit from the straits"
+  }
+ ],
+ "sides": [
+  {
+   "id": "g",
+   "name": "Allied Greek fleet"
+  },
+  {
+   "id": "p",
+   "name": "Achaemenid fleet"
+  }
+ ],
+ "units": [
+  {
+   "id": "athens",
+   "side": "g",
+   "k": "ships",
+   "name": "Athenian ships, Allied left",
+   "short": "Athenians",
+   "w": 10,
+   "quote": "In the Allied fleet, the Athenians were on the left"
+  },
+  {
+   "id": "gcentre",
+   "side": "g",
+   "k": "ships",
+   "name": "Other Allied contingents",
+   "short": "Centre",
+   "w": 12,
+   "quote": "the other contingents were in the center"
+  },
+  {
+   "id": "sparta",
+   "side": "g",
+   "k": "ships",
+   "name": "Spartan ships, Allied right",
+   "short": "Spartans",
+   "w": 10,
+   "quote": "on the right were probably the Spartans"
+  },
+  {
+   "id": "aegin",
+   "side": "g",
+   "k": "ships",
+   "name": "Aeginetan ships",
+   "short": "Aeginetans",
+   "w": 5,
+   "quote": "the Aeginetans ambushed them as they tried to leave the Straits"
+  },
+  {
+   "id": "arist",
+   "side": "g",
+   "k": "infantry",
+   "name": "Detachment of Aristides",
+   "short": "Aristides",
+   "leader": "Aristides",
+   "w": 4,
+   "quote": "The Athenian general Aristides then took a detachment of men across to Psyttaleia",
+   "leaderEntry": "aristides"
+  },
+  {
+   "id": "phoen",
+   "side": "p",
+   "k": "ships",
+   "name": "Phoenician ships, right",
+   "short": "Phoenician",
+   "w": 10,
+   "quote": "with the powerful Phoenician fleet on the right flank next to Mount Aigaleo"
+  },
+  {
+   "id": "pcentre",
+   "side": "p",
+   "k": "ships",
+   "name": "Persian centre contingents",
+   "short": "P. centre",
+   "w": 12,
+   "quote": "the Ionian contingent on the left flank and the other contingents in the centre"
+  },
+  {
+   "id": "ionian",
+   "side": "p",
+   "k": "ships",
+   "name": "Ionian ships, Persian left",
+   "short": "Ionians",
+   "w": 8,
+   "quote": "the Ionian contingent on the left flank and the other contingents in the centre"
+  },
+  {
+   "id": "garrison",
+   "side": "p",
+   "k": "infantry",
+   "name": "Persian troops on Psyttaleia",
+   "short": "Psyttaleia",
+   "w": 5,
+   "quote": "Xerxes had also positioned around 400 troops on the island known as Psyttaleia"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The Persians block the southern exit",
+   "text": "The Allied fleet lay off Salamis, the Athenians on the left and the Spartans probably on the right. The Persian fleet was sent out to block the exit from the straits, and about 400 troops stood on Psyttaleia.",
+   "quote": "It seems relatively certain that the Persian fleet was sent out to block the exit from the Straits the evening before the battle.",
+   "at": {
+    "athens": [
+     38,
+     14,
+     90
+    ],
+    "gcentre": [
+     38,
+     30,
+     90
+    ],
+    "sparta": [
+     38,
+     46,
+     90
+    ],
+    "ionian": [
+     40,
+     55,
+     0
+    ],
+    "pcentre": [
+     56,
+     55,
+     0
+    ],
+    "phoen": [
+     72,
+     55,
+     0
+    ],
+    "garrison": [
+     46,
+     47,
+     0
+    ]
+   }
+  },
+  {
+   "title": "The Persians pivot into the straits",
+   "text": "The Persians seem to have swung their fleet round off Cape Vavari, from a line across the exit to a line running north to south. The Phoenicians were on the right by Mount Aigaleo and the Ionians on the left.",
+   "quote": "Regardless of when they attempted it, it seems likely that the Persians pivoted their fleet off the tip of Cape Vavari",
+   "at": {
+    "ionian": [
+     58,
+     46,
+     270
+    ],
+    "pcentre": [
+     60,
+     32,
+     270
+    ],
+    "phoen": [
+     62,
+     16,
+     270
+    ]
+   }
+  },
+  {
+   "title": "The Allies back their ships away",
+   "text": "As the Persians came on, cramped and disordered in the narrow water, the Allies seemed to back away as if in fear. Plutarch gave the reason as a better position and time to wait for the early morning wind.",
+   "quote": "However, rather than attacking immediately, the Allies initially appeared to back their ships away as if in fear.",
+   "at": {
+    "athens": [
+     34,
+     14,
+     90
+    ],
+    "gcentre": [
+     34,
+     30,
+     90
+    ],
+    "sparta": [
+     34,
+     46,
+     90
+    ]
+   },
+   "how": {
+    "athens": "feint",
+    "gcentre": "feint",
+    "sparta": "feint"
+   }
+  },
+  {
+   "title": "One ship rams and the whole line follows",
+   "text": "A single ship shot forward to ram the nearest Persian vessel, and the whole Greek line followed it towards the disordered Persian line. The Athenians and the Aeginetans each claimed the first ship as theirs.",
+   "quote": "The whole Greek line then followed suit and made straight for the disordered Persian battle line.",
+   "at": {
+    "athens": [
+     50,
+     14,
+     90
+    ],
+    "gcentre": [
+     50,
+     30,
+     90
+    ],
+    "sparta": [
+     52,
+     44,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "athens",
+     "phoen"
+    ],
+    [
+     "gcentre",
+     "pcentre"
+    ],
+    [
+     "sparta",
+     "ionian"
+    ]
+   ]
+  },
+  {
+   "title": "The Phoenicians are pushed back and the centre is split",
+   "text": "The first Persian line fouled the second and third behind it. The leaderless Phoenician squadrons were pushed back against the coast, many running aground, and in the centre a wedge of Greek ships split the Persian fleet in two.",
+   "quote": "In the centre, a wedge of Greek ships pushed through the Persians' lines, splitting the fleet in two.",
+   "at": {
+    "athens": [
+     58,
+     14,
+     90
+    ],
+    "gcentre": [
+     56,
+     30,
+     90
+    ],
+    "sparta": [
+     54,
+     44,
+     90
+    ],
+    "phoen": [
+     72,
+     12,
+     90
+    ],
+    "pcentre": [
+     64,
+     32,
+     270
+    ]
+   },
+   "how": {
+    "phoen": "retreat"
+   },
+   "hits": [
+    [
+     "athens",
+     "phoen"
+    ],
+    [
+     "gcentre",
+     "pcentre"
+    ],
+    [
+     "sparta",
+     "ionian"
+    ]
+   ]
+  },
+  {
+   "title": "The Persian fleet retreats towards Phalerum",
+   "text": "The Persian fleet began to retreat towards Phalerum, and the Aeginetans ambushed it as it tried to leave the straits. The remaining ships limped back to the harbour and the shelter of the Persian army.",
+   "quote": "The Persian fleet began to retreat towards Phalerum, but according to Herodotus, the Aeginetans ambushed them as they tried to leave the Straits.",
+   "at": {
+    "pcentre": [
+     76,
+     38,
+     90
+    ],
+    "ionian": [
+     80,
+     54,
+     90
+    ],
+    "gcentre": [
+     66,
+     30,
+     90
+    ],
+    "sparta": [
+     62,
+     42,
+     90
+    ],
+    "aegin": [
+     64,
+     55,
+     90
+    ]
+   },
+   "how": {
+    "pcentre": "retreat",
+    "ionian": "retreat"
+   },
+   "hits": [
+    [
+     "aegin",
+     "ionian"
+    ],
+    [
+     "sparta",
+     "pcentre",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "Aristides destroys the garrison on Psyttaleia",
+   "text": "After the Persian fleet had limped back, the Athenian general Aristides took a detachment across to Psyttaleia to slaughter the garrison that Xerxes had left there.",
+   "quote": "The Athenian general Aristides then took a detachment of men across to Psyttaleia to slaughter the garrison that Xerxes had left there.",
+   "at": {
+    "arist": [
+     38,
+     47,
+     90
+    ]
+   },
+   "state": {
+    "garrison": "destroyed"
+   },
+   "hits": [
+    [
+     "arist",
+     "garrison"
+    ]
+   ]
+  }
+ ]
+}

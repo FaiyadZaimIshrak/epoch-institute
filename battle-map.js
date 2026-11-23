@@ -10,7 +10,7 @@ var BattleMap = (function () {
   'use strict';
   var NS = 'http://www.w3.org/2000/svg', XL = 'http://www.w3.org/1999/xlink', W = 1000, H = 620, U = 10, SEQ = 0;
   var KIND = { infantry: 'Foot', spears: 'Spearmen', pikes: 'Pikemen', cavalry: 'Horse', 'horse-archers': 'Horse archers', archers: 'Archers', light: 'Light troops',
-    elephants: 'Elephants', chariots: 'Chariots', artillery: 'Guns', ships: 'Ships', guard: 'Guard or reserve', camp: 'Camp', wagons: 'Baggage' };
+    elephants: 'Elephants', chariots: 'Chariots', artillery: 'Guns', armour: 'Armour', ships: 'Ships', guard: 'Guard or reserve', camp: 'Camp', wagons: 'Baggage' };
   function el(n, a, kids) { var e = document.createElementNS(NS, n); for (var k in a) if (a[k] != null) e.setAttribute(k, a[k]); (kids || []).forEach(function (c) { e.appendChild(c); }); return e; }
   function tx(s) { return document.createTextNode(s); }
   function h(n, a, t) { var e = document.createElement(n); for (var k in a) if (a[k] != null) e.setAttribute(k, a[k]); if (t != null) e.textContent = t; return e; }
@@ -36,6 +36,7 @@ var BattleMap = (function () {
       case 'horse-archers': return [ln('M' + (-x) + ' ' + y + 'L' + x + ' ' + (-y)), el('circle', { cx: -x * 0.45, cy: -y * 0.35, r: m * 0.24, 'class': 'bf-mk-f' })];
       case 'archers': return [ln('M' + (-m * 0.9) + ' ' + (y * 0.55) + 'Q0 ' + (-y * 1.5) + ' ' + (m * 0.9) + ' ' + (y * 0.55) + 'M0 ' + (y * 0.7) + 'V' + (-y * 0.75))];
       case 'artillery': return [el('circle', { cx: 0, cy: 0, r: m * 0.42, 'class': 'bf-mk-f' })];
+      case 'armour': return [el('ellipse', { cx: 0, cy: 0, rx: x * 0.62, ry: y * 0.52, 'class': 'bf-mk', fill: 'none' })];
       case 'elephants': return [el('path', { d: 'M' + (-m * 1.1) + ' ' + (y * 0.7) + 'Q' + (-m * 1.1) + ' ' + (-y * 0.9) + ' 0 ' + (-y * 0.9) + 'Q' + (m * 1.1) + ' ' + (-y * 0.9) + ' ' + (m * 1.1) + ' ' + (y * 0.7) + 'Z', 'class': 'bf-mk-f' })];
       case 'chariots': return [el('circle', { cx: 0, cy: 0, r: m * 0.6, 'class': 'bf-mk', fill: 'none' }), ln('M' + (-m * 0.6) + ' 0H' + (m * 0.6) + 'M0 ' + (-m * 0.6) + 'V' + (m * 0.6))];
       case 'guard': return [el('path', { d: 'M' + (-m * 0.5) + ' ' + (y * 0.75) + 'V' + (-y * 0.75) + 'L' + (m * 0.8) + ' ' + (-y * 0.2) + 'L' + (-m * 0.5) + ' ' + (y * 0.2), 'class': 'bf-mk-f' })];
@@ -141,7 +142,7 @@ var BattleMap = (function () {
     root.insertBefore(box, list || null); root.classList.add('bf-on');
 
     // ---- names: behind each formation, then moved clear of one another and of the blocks
-    function half(u, f) { var r = f * Math.PI / 180, c = Math.abs(Math.cos(r)), s = Math.abs(Math.sin(r)); return [(c * u.w + s * u.d) * U / 2, (s * u.w + c * u.d) * U / 2]; }
+    function half(u, f) { var r = (u.k === 'camp' ? 0 : f) * Math.PI / 180, c = Math.abs(Math.cos(r)), s = Math.abs(Math.sin(r)); return [(c * u.w + s * u.d) * U / 2, (s * u.w + c * u.d) * U / 2]; }
     function layout(i) {
       var L = {}, boxes = [], fixed = [];
       units.forEach(function (u) {
@@ -170,7 +171,7 @@ var BattleMap = (function () {
     function lay(i) { return LAY[i] || (LAY[i] = layout(i)); }
     function place(id, v) {
       var n = node[id]; n.x = v.x; n.y = v.y; n.f = v.f; n.o = v.o; n.lx = v.lx; n.ly = v.ly;
-      n.g.setAttribute('transform', 'translate(' + (v.x * U).toFixed(1) + ' ' + (v.y * U).toFixed(1) + ')'); n.inner.setAttribute('transform', 'rotate(' + v.f.toFixed(1) + ')');
+      n.g.setAttribute('transform', 'translate(' + (v.x * U).toFixed(1) + ' ' + (v.y * U).toFixed(1) + ')'); n.inner.setAttribute('transform', 'rotate(' + (U_BY[id].k === 'camp' ? 0 : v.f).toFixed(1) + ')');   // a camp is a sign, not a line: it never turns
       n.g.style.opacity = v.o; n.lg.style.opacity = v.o < 0.2 ? 0 : Math.min(1, v.o * 1.8);
       var two = n.lead && !small, pr = n.pic && !small ? F * 1.25 : 0, x0 = v.lx - n.bw / 2, tx0 = pr ? x0 + pr * 2 + 6 : v.lx, y1 = v.ly + (two ? -F * 0.16 : F * 0.34);
       n.lab.setAttribute('x', tx0.toFixed(1)); n.lab.setAttribute('y', y1.toFixed(1)); n.lab.setAttribute('text-anchor', pr ? 'start' : 'middle');
@@ -248,6 +249,11 @@ var BattleMap = (function () {
         n.tw = Math.max(tw, lw) || u.name.length * F * 0.5; n.bw = n.tw + (pr ? pr * 2 + 6 : 0); n.bh = Math.max(pr * 2, (n.lead && !small ? 2.15 : 1.1) * F);
       });
       LAY = []; for (var id in node) { var t = target(cur, id); if (t) place(id, t); }
+      Array.prototype.forEach.call(gT.querySelectorAll('text'), function (tx_) {   // a ground's name stays inside the plan
+        if (tx_.getAttribute('data-x') == null) tx_.setAttribute('data-x', tx_.getAttribute('x')); tx_.setAttribute('x', tx_.getAttribute('data-x'));
+        if (!tx_.getBBox || (tx_.parentNode.getAttribute('class') || '').indexOf('bf-n') >= 0) return; var bb = tx_.getBBox(), x0 = +tx_.getAttribute('x');
+        if (bb.x < 6) tx_.setAttribute('x', (x0 + 6 - bb.x).toFixed(1)); else if (bb.x + bb.width > W - 6) tx_.setAttribute('x', (x0 - (bb.x + bb.width - W + 6)).toFixed(1));
+      });
     }
     go(0, false); sizes();
     var rz; window.addEventListener('resize', function () { clearTimeout(rz); rz = setTimeout(sizes, 150); });

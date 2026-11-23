@@ -1,0 +1,456 @@
+{
+ "slug": "battle-of-jena-auerstedt",
+ "name": "Battle of Jena–Auerstedt",
+ "article": "battles2/wp/battle-of-jena-auerstedt",
+ "field": {
+  "north": null,
+  "edges": [
+   {
+    "name": "from Naumburg ↓",
+    "at": [
+     14,
+     58
+    ]
+   }
+  ]
+ },
+ "note": "The plan shows the fight at Auerstedt only, around Hassenhausen. The accounts of Jena do not say how the two armies stood. The accounts give no compass directions, so the French are drawn at the foot and the Prussians at the head, with right and left taken from each side's own point of view. The hill behind which the French cavalry waited, and the exact spots of the Lissbach Stream and of the French and Prussian arrivals, are placed by judgement; the accounts do not say exactly where they lay. Oswald's infantry arrived with the Prince of Orange but is not drawn apart.",
+ "terrain": [
+  {
+   "k": "village",
+   "name": "Hassenhausen",
+   "at": [
+    50,
+    44
+   ],
+   "lab": [
+    62,
+    45
+   ],
+   "quote": "he ordered Gudin to deploy his force at Hassenhausen"
+  },
+  {
+   "k": "stream",
+   "name": "Lissbach Stream",
+   "at": [
+    [
+     4,
+     13
+    ],
+    [
+     30,
+     11
+    ],
+    [
+     60,
+     12
+    ],
+    [
+     96,
+     10
+    ]
+   ],
+   "lab": [
+    78,
+    8
+   ],
+   "quote": "forced back over the Lissbach Stream"
+  },
+  {
+   "k": "hill",
+   "name": "Hill",
+   "unnamed": true,
+   "at": [
+    [
+     20,
+     50
+    ],
+    [
+     24,
+     44
+    ],
+    [
+     32,
+     42
+    ],
+    [
+     40,
+     45
+    ],
+    [
+     40,
+     52
+    ],
+    [
+     30,
+     54
+    ]
+   ],
+   "lab": [
+    30,
+    57
+   ],
+   "quote": "hiding his chasseurs à cheval behind a hill"
+  }
+ ],
+ "sides": [
+  {
+   "id": "f",
+   "name": "French (III Corps)"
+  },
+  {
+   "id": "p",
+   "name": "Prussians"
+  }
+ ],
+ "units": [
+  {
+   "id": "gudin",
+   "side": "f",
+   "k": "infantry",
+   "name": "Gudin's Division",
+   "short": "Gudin",
+   "leader": "Gudin",
+   "w": 10,
+   "quote": "he ordered Gudin to deploy his force at Hassenhausen"
+  },
+  {
+   "id": "fcav",
+   "side": "f",
+   "k": "cavalry",
+   "name": "French cavalry",
+   "short": "Cavalry",
+   "w": 8,
+   "quote": "The rest of the French cavalry arrived at 9 a.m. and was placed on Gudin's left."
+  },
+  {
+   "id": "friant",
+   "side": "f",
+   "k": "infantry",
+   "name": "Friant's Division",
+   "short": "Friant",
+   "leader": "Friant",
+   "w": 10,
+   "quote": "General Louis Friant's Division and the 12-pound artillery arrived at 9:30 a.m. and moved in squares on Gudin's right."
+  },
+  {
+   "id": "morand",
+   "side": "f",
+   "k": "infantry",
+   "name": "Morand's Division",
+   "short": "Morand",
+   "leader": "Morand",
+   "w": 10,
+   "quote": "Morand's Division arrived and was sent to secure Gudin's left."
+  },
+  {
+   "id": "schm",
+   "side": "p",
+   "k": "infantry",
+   "name": "Schmettau's Division",
+   "short": "Schmettau",
+   "leader": "Schmettau",
+   "w": 12,
+   "quote": "While Schmettau's troops were deploying to attack Hassenhausen"
+  },
+  {
+   "id": "bluch",
+   "side": "p",
+   "k": "cavalry",
+   "name": "Blücher's cavalry",
+   "short": "Blücher",
+   "leader": "Blücher",
+   "w": 10,
+   "quote": "Blücher arrived with his cavalry and deployed on his left.",
+   "leaderEntry": "gebhard-leberecht-von-blucher"
+  },
+  {
+   "id": "wart",
+   "side": "p",
+   "k": "infantry",
+   "name": "Wartensleben's troops",
+   "short": "Wartens.",
+   "leader": "Wartensleben",
+   "w": 8,
+   "quote": "Wartensleben arrived at 8:30 a.m. with the Duke of Brunswick, who ordered his infantry to the left flank"
+  },
+  {
+   "id": "orr",
+   "side": "p",
+   "k": "infantry",
+   "name": "Orange's command, right half",
+   "short": "Orange R",
+   "leader": "Prince of Orange",
+   "w": 6,
+   "quote": "to split Orange's command in two, half to each flank"
+  },
+  {
+   "id": "orl",
+   "side": "p",
+   "k": "infantry",
+   "name": "Orange's command, left half",
+   "short": "Orange L",
+   "leader": "Prince of Orange",
+   "w": 6,
+   "quote": "to split Orange's command in two, half to each flank"
+  }
+ ],
+ "phases": [
+  {
+   "title": "Gudin deploys at Hassenhausen",
+   "when": "About 7 am",
+   "text": "Gudin's Division was stopped outside Poppel by Prussian cavalry and artillery. Davout ordered it to deploy at Hassenhausen, while Schmettau's division and Blücher's cavalry formed to attack.",
+   "quote": "Once Davout became aware of the Prussian force, he ordered Gudin to deploy his force at Hassenhausen.",
+   "at": {
+    "gudin": [
+     50,
+     36,
+     0
+    ],
+    "schm": [
+     40,
+     16,
+     180
+    ],
+    "bluch": [
+     60,
+     16,
+     180
+    ]
+   }
+  },
+  {
+   "title": "Schmettau and Blücher push Gudin back",
+   "text": "Schmettau's troops and Blücher's cavalry attacked together. They pushed Gudin's troops back to the village of Hassenhausen.",
+   "quote": "Together, they attacked Gudin's troops and pushed them back to the village.",
+   "at": {
+    "gudin": [
+     50,
+     41,
+     0
+    ],
+    "schm": [
+     41,
+     28,
+     180
+    ],
+    "bluch": [
+     60,
+     27,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "schm",
+     "gudin"
+    ],
+    [
+     "bluch",
+     "gudin",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "Both sides bring up more troops",
+   "when": "8:30 to 9:30 am",
+   "text": "Wartensleben arrived with the Duke of Brunswick, who sent infantry to the Prussian left. The rest of the French cavalry came up on Gudin's left, and Friant's Division with the 12-pound artillery moved up on his right.",
+   "quote": "The rest of the French cavalry arrived at 9 a.m. and was placed on Gudin's left.",
+   "at": {
+    "wart": [
+     76,
+     22,
+     180
+    ],
+    "fcav": [
+     30,
+     47,
+     0
+    ],
+    "friant": [
+     70,
+     47,
+     0
+    ]
+   },
+   "state": {
+    "fcav": "hidden"
+   }
+  },
+  {
+   "title": "Friant's squares advance and Hassenhausen is attacked",
+   "when": "About 9:30 am",
+   "text": "The advance of the French squares forced Blücher's cavalry back, and Blücher ordered his cavalry to attack. At that moment two of Wartensleben's regiments attacked Hassenhausen.",
+   "quote": "The advance of the French squares forced Blücher's cavalry back.",
+   "at": {
+    "friant": [
+     67,
+     38,
+     0
+    ],
+    "bluch": [
+     62,
+     27,
+     180
+    ],
+    "wart": [
+     78,
+     32,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "friant",
+     "bluch"
+    ],
+    [
+     "bluch",
+     "friant",
+     0.2
+    ],
+    [
+     "wart",
+     "gudin",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "The French cavalry strike from behind the hill",
+   "when": "Shortly before 10 am",
+   "text": "Davout hid his chasseurs à cheval behind a hill and released them at a crucial moment, putting Blücher's cavalry to flight. Brunswick then ordered a full assault on Hassenhausen.",
+   "quote": "Everything failed: three Prussian cavalry regiments were routed and the infantry fell back.",
+   "at": {
+    "fcav": [
+     52,
+     33,
+     0
+    ],
+    "bluch": [
+     64,
+     14,
+     0
+    ]
+   },
+   "how": {
+    "bluch": "rout"
+   },
+   "state": {
+    "fcav": "shown",
+    "bluch": "routed"
+   },
+   "hits": [
+    [
+     "fcav",
+     "bluch",
+     0.2
+    ],
+    [
+     "schm",
+     "gudin"
+    ],
+    [
+     "wart",
+     "gudin",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "The French counter-attack",
+   "when": "10:30 to 11 am",
+   "text": "With Brunswick and Schmettau wounded, the Prussian command broke down. The Prince of Orange arrived and his command was split between the flanks, while Morand's Division secured Gudin's left. At 11 am Davout ordered his infantry to counter-attack.",
+   "quote": "Davout could now see that the Prussians were wavering and so at 11 a.m. he ordered his infantry to counter-attack.",
+   "at": {
+    "orr": [
+     20,
+     22,
+     180
+    ],
+    "orl": [
+     90,
+     26,
+     180
+    ],
+    "morand": [
+     16,
+     44,
+     0
+    ],
+    "gudin": [
+     50,
+     38,
+     0
+    ],
+    "friant": [
+     66,
+     35,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "gudin",
+     "schm"
+    ]
+   ]
+  },
+  {
+   "title": "The Prussian centre breaks and the King orders a withdrawal",
+   "when": "By noon",
+   "text": "Schmettau's centre was broken and forced back over the Lissbach Stream. Blücher's cavalry was blown, Wartensleben was trying to reposition his troops, and the King ordered a withdrawal.",
+   "quote": "By noon Schmettau's center was broken and forced back over the Lissbach Stream",
+   "at": {
+    "schm": [
+     41,
+     6,
+     0
+    ],
+    "wart": [
+     78,
+     18,
+     0
+    ],
+    "orr": [
+     20,
+     12,
+     0
+    ],
+    "orl": [
+     90,
+     16,
+     0
+    ],
+    "gudin": [
+     50,
+     35,
+     0
+    ],
+    "fcav": [
+     52,
+     27,
+     0
+    ],
+    "friant": [
+     67,
+     28,
+     0
+    ]
+   },
+   "how": {
+    "schm": "retreat",
+    "wart": "retreat",
+    "orr": "retreat",
+    "orl": "retreat"
+   },
+   "hits": [
+    [
+     "gudin",
+     "schm"
+    ]
+   ]
+  }
+ ]
+}

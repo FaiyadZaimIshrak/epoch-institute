@@ -1,0 +1,353 @@
+{
+ "slug": "battle-of-grunwald",
+ "name": "Battle of Grunwald",
+ "article": "battles2/wp/battle-of-grunwald",
+ "field": {
+  "north": null,
+  "edges": []
+ },
+ "note": "The armies formed opposing lines along a northeast-southwest axis; the plan turns that axis across the page and shows no compass. The three villages are placed only as corners of the field, and the accounts do not say exactly where each lay. Later research put the main battlefield elsewhere than the traditional site. The Order's army is shown as two bodies, one under Wallenrode against the Lithuanians and one under Kuno von Lichtenstein; the accounts do not say how the rest stood. The accounts call the fight against Kuno's force one on the Polish right flank; it is drawn against the Polish centre, the part of the Polish troops nearest the Lithuanians. Jan Długosz described the Lithuanian retreat as a rout of their whole army and the Order as pursuing it; modern historians take it as a planned manoeuvre, and Stephen Turnbull doubts that it was a feigned retreat in the usual sense. The plan follows the Cronica conflictus, which has the Lithuanians returning. Where the Polish reserves, the Grand Master's banners and the Lithuanians stood when they came in is not stated; they are placed by judgement.",
+ "terrain": [
+  {
+   "k": "village",
+   "name": "Grünfelde",
+   "at": [
+    6,
+    30
+   ],
+   "quote": "between the villages of Grünfelde (Grunwald), Tannenberg (Stębark) and Ludwigsdorf (Łodwigowo)"
+  },
+  {
+   "k": "village",
+   "name": "Tannenberg",
+   "at": [
+    93,
+    57
+   ],
+   "quote": "between the villages of Grünfelde (Grunwald), Tannenberg (Stębark) and Ludwigsdorf (Łodwigowo)"
+  },
+  {
+   "k": "village",
+   "name": "Ludwigsdorf",
+   "at": [
+    8,
+    57
+   ],
+   "quote": "between the villages of Grünfelde (Grunwald), Tannenberg (Stębark) and Ludwigsdorf (Łodwigowo)"
+  }
+ ],
+ "sides": [
+  {
+   "id": "p",
+   "name": "Polish-Lithuanian army"
+  },
+  {
+   "id": "t",
+   "name": "Teutonic Order"
+  }
+ ],
+ "units": [
+  {
+   "id": "polL",
+   "side": "p",
+   "k": "cavalry",
+   "name": "Polish heavy cavalry",
+   "short": "Poles",
+   "w": 12,
+   "quote": "Polish heavy cavalry formed the left flank, Lithuanian light cavalry the right flank and various mercenary troops made up the center."
+  },
+  {
+   "id": "polM",
+   "side": "p",
+   "k": "infantry",
+   "name": "Mercenary troops in the centre",
+   "short": "Mercenary",
+   "w": 10,
+   "quote": "various mercenary troops made up the center"
+  },
+  {
+   "id": "lit",
+   "side": "p",
+   "k": "cavalry",
+   "name": "Lithuanian light cavalry",
+   "short": "Lithuan.",
+   "leader": "Vytautas",
+   "w": 12,
+   "quote": "Lithuanian light cavalry the right flank",
+   "leaderEntry": "vytautas-the-great"
+  },
+  {
+   "id": "pol2",
+   "side": "p",
+   "k": "guard",
+   "name": "Polish second line",
+   "short": "2nd line",
+   "w": 8,
+   "quote": "Władysław II Jagiełło deployed his reserves — the second line of his army."
+  },
+  {
+   "id": "pol3",
+   "side": "p",
+   "k": "guard",
+   "name": "Polish third line",
+   "short": "3rd line",
+   "w": 8,
+   "quote": "Władysław II Jagiełło deployed his last reserves, the third line of his army."
+  },
+  {
+   "id": "tevW",
+   "side": "t",
+   "k": "cavalry",
+   "name": "Teutonic heavy cavalry",
+   "short": "Wallenrode",
+   "leader": "Frederic von Wallenrode",
+   "w": 10,
+   "quote": "The Teutonic forces concentrated their elite heavy cavalry, commanded by Grand Marshal Frederic von Wallenrode, against the Lithuanians."
+  },
+  {
+   "id": "tevC",
+   "side": "t",
+   "k": "cavalry",
+   "name": "Teutonic force under Kuno",
+   "short": "Kuno",
+   "leader": "Kuno von Lichtenstein",
+   "w": 12,
+   "quote": "Commanded by Grand Komtur Kuno von Lichtenstein, the Teutonic forces concentrated on the Polish right flank."
+  },
+  {
+   "id": "tev6",
+   "side": "t",
+   "k": "cavalry",
+   "name": "Six of Wallenrode's banners",
+   "short": "6 banners",
+   "w": 5,
+   "quote": "Six of von Walenrode's banners did not pursue the retreating Lithuanians, instead joining the attack on the right flank."
+  },
+  {
+   "id": "tevG",
+   "side": "t",
+   "k": "cavalry",
+   "name": "Grand Master's 16 banners",
+   "short": "Grand M.",
+   "leader": "Ulrich von Jungingen",
+   "w": 9,
+   "quote": "Grand Master Ulrich von Jungingen then personally led 16 banners, almost a third of the original Teutonic strength, to the right Polish flank",
+   "leaderEntry": "ulrich-von-jungingen"
+  },
+  {
+   "id": "camp",
+   "side": "t",
+   "k": "camp",
+   "name": "Teutonic camp",
+   "short": "Camp",
+   "w": 8,
+   "quote": "the camp was surrounded by wagons serving as an improvised fortification."
+  }
+ ],
+ "phases": [
+  {
+   "title": "The two armies form opposing lines",
+   "when": "Early morning, 15 July 1410",
+   "text": "The Polish-Lithuanian army stood with Polish heavy cavalry on its left, Lithuanian light cavalry on its right and mercenaries in the centre. The Order set its heavy cavalry against the Lithuanians and waited to be attacked.",
+   "quote": "The armies formed opposing lines along a northeast–southwest axis.",
+   "at": {
+    "polL": [
+     22,
+     46,
+     0
+    ],
+    "polM": [
+     46,
+     46,
+     0
+    ],
+    "lit": [
+     80,
+     46,
+     0
+    ],
+    "tevC": [
+     44,
+     24,
+     180
+    ],
+    "tevW": [
+     80,
+     24,
+     180
+    ],
+    "camp": [
+     14,
+     10,
+     180
+    ]
+   }
+  },
+  {
+   "title": "Vytautas attacks the Order's left flank",
+   "text": "The Order had hoped the other side would attack first. Vytautas, supported by the Polish banners, went in against the Order's left flank, and the Lithuanian cavalry fought more than an hour.",
+   "quote": "Vytautas, supported by the Polish banners, started an assault on the left flank of the Teutonic forces.",
+   "at": {
+    "lit": [
+     80,
+     34,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "lit",
+     "tevW"
+    ]
+   ]
+  },
+  {
+   "title": "The Lithuanians retreat and the Poles are attacked",
+   "text": "After more than an hour the Lithuanian light cavalry began a full retreat. Six of Wallenrode's banners did not pursue but joined Kuno's attack on the Polish side, and the second Polish line came up.",
+   "quote": "After more than an hour of heavy fighting, the Lithuanian light cavalry began a full retreat.",
+   "at": {
+    "lit": [
+     80,
+     54,
+     180
+    ],
+    "tev6": [
+     58,
+     34,
+     180
+    ],
+    "tevC": [
+     44,
+     32,
+     180
+    ],
+    "polM": [
+     46,
+     40,
+     0
+    ],
+    "pol2": [
+     36,
+     50,
+     0
+    ]
+   },
+   "how": {
+    "lit": "retreat"
+   },
+   "hits": [
+    [
+     "tevC",
+     "polM"
+    ],
+    [
+     "tev6",
+     "polM",
+     0.2
+    ],
+    [
+     "pol2",
+     "tevC",
+     -0.25
+    ]
+   ]
+  },
+  {
+   "title": "The Grand Master's 16 banners and the last reserves",
+   "text": "The royal banner of Kraków was lost and recaptured. Von Jungingen led 16 banners to the Polish side and the king committed his third line, and the fighting reached the Polish command.",
+   "quote": "The melee reached the Polish command",
+   "at": {
+    "tevG": [
+     62,
+     24,
+     180
+    ],
+    "pol3": [
+     60,
+     50,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "tevG",
+     "polM",
+     0.3
+    ],
+    [
+     "pol3",
+     "tev6"
+    ]
+   ]
+  },
+  {
+   "title": "The Lithuanians return and strike from behind",
+   "text": "The reorganised Lithuanians came back and attacked von Jungingen from the rear. The Order was by then outnumbered by the mass of Polish knights and the advancing Lithuanian cavalry.",
+   "quote": "At that time, the reorganised Lithuanians returned to the battle, attacking von Jungingen from the rear.",
+   "at": {
+    "lit": [
+     62,
+     8,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "lit",
+     "tevG"
+    ],
+    [
+     "polM",
+     "tevC"
+    ]
+   ]
+  },
+  {
+   "title": "Von Jungingen is killed and the Order retreats",
+   "text": "Von Jungingen tried to break through the Lithuanian lines and was killed. Surrounded and leaderless, the Order began to retreat, and part of the routed units made for their camp.",
+   "quote": "Surrounded and leaderless, the Teutonic Order began to retreat.",
+   "at": {
+    "tevC": [
+     28,
+     14,
+     270
+    ],
+    "tev6": [
+     36,
+     22,
+     270
+    ],
+    "tevG": [
+     46,
+     12,
+     270
+    ]
+   },
+   "how": {
+    "tevC": "rout",
+    "tev6": "rout",
+    "tevG": "rout"
+   },
+   "state": {
+    "tevC": "routed",
+    "tev6": "routed",
+    "tevG": "routed"
+   },
+   "hits": [
+    [
+     "lit",
+     "tevG"
+    ]
+   ]
+  },
+  {
+   "title": "The camp is broken",
+   "text": "The knights tried to make a wagon fort of the camp, but the camp followers turned against them and joined the pursuit. The defence was soon broken and the camp ravaged; by one account more knights died there than on the field.",
+   "quote": "However, the defense was soon broken and the camp was ravaged.",
+   "at": {},
+   "state": {
+    "camp": "destroyed"
+   }
+  }
+ ]
+}

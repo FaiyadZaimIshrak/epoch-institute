@@ -1,0 +1,371 @@
+{
+ "slug": "battle-of-pydna",
+ "name": "Battle of Pydna",
+ "article": "battles2/wp/battle-of-pydna",
+ "field": {
+  "north": null
+ },
+ "note": "The accounts do not give the compass directions, so none is drawn. The foothills of Mount Olocrus are placed on the Roman side of the field; the accounts do not say exactly where they lay. The Roman camp is placed in them. Other accounts say the Macedonian cavalry did not fight, or that a corps of 10,000 Macedonians was cut off; the plan follows the main account. The accounts do not say where the Macedonian left-wing cavalry stood or how the Roman allies were divided between the wings.",
+ "terrain": [
+  {
+   "k": "hill",
+   "name": "Foothills of Mount Olocrus",
+   "unnamed": false,
+   "at": [
+    [
+     0,
+     6
+    ],
+    [
+     18,
+     4
+    ],
+    [
+     30,
+     14
+    ],
+    [
+     31,
+     34
+    ],
+    [
+     27,
+     52
+    ],
+    [
+     16,
+     58
+    ],
+    [
+     0,
+     58
+    ]
+   ],
+   "lab": [
+    6,
+    8
+   ],
+   "quote": "they encamped to the west in the foothills of Mount Olocrus"
+  }
+ ],
+ "sides": [
+  {
+   "id": "r",
+   "name": "Romans and their allies"
+  },
+  {
+   "id": "m",
+   "name": "Macedonians and their allies"
+  }
+ ],
+ "units": [
+  {
+   "id": "rlc",
+   "side": "r",
+   "k": "cavalry",
+   "name": "Roman left-wing cavalry",
+   "short": "L. horse",
+   "w": 8,
+   "quote": "The cavalry was placed on the wings"
+  },
+  {
+   "id": "rla",
+   "side": "r",
+   "k": "infantry",
+   "name": "Allied infantry, left",
+   "short": "Allies L",
+   "w": 8,
+   "quote": "with the allied Latin, Italian, and Greek infantry on their flanks"
+  },
+  {
+   "id": "leg",
+   "side": "r",
+   "k": "infantry",
+   "name": "Roman legions",
+   "short": "Legions",
+   "leader": "Paullus",
+   "w": 12,
+   "quote": "The Romans had placed the two legions in the middle",
+   "leaderEntry": "lucius-aemilius-paullus-macedonicus"
+  },
+  {
+   "id": "rra",
+   "side": "r",
+   "k": "infantry",
+   "name": "Allied infantry, right",
+   "short": "Allies R",
+   "w": 8,
+   "quote": "with the allied Latin, Italian, and Greek infantry on their flanks"
+  },
+  {
+   "id": "rrc",
+   "side": "r",
+   "k": "cavalry",
+   "name": "Roman right cavalry, elephants",
+   "short": "R. horse",
+   "w": 8,
+   "quote": "with the Roman right being supplemented by 22 war elephants"
+  },
+  {
+   "id": "camp",
+   "side": "r",
+   "k": "camp",
+   "name": "Roman camp",
+   "short": "Camp",
+   "quote": "a short distance from the Roman camp"
+  },
+  {
+   "id": "mrc",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Macedonian right cavalry",
+   "short": "Perseus",
+   "leader": "Perseus",
+   "w": 8,
+   "quote": "where Perseus commanded the heavy cavalry",
+   "leaderEntry": "perseus-of-macedon"
+  },
+  {
+   "id": "mrl",
+   "side": "m",
+   "k": "light",
+   "name": "Peltasts and Thracians, right",
+   "short": "Light R",
+   "w": 8,
+   "quote": "Lighter peltasts, mercenaries, and Thracian infantry guarded the two flanks of the phalanx"
+  },
+  {
+   "id": "pha",
+   "side": "m",
+   "k": "pikes",
+   "name": "Macedonian phalanx",
+   "short": "Phalanx",
+   "w": 12,
+   "quote": "The phalanx took up the center of the Macedonian line"
+  },
+  {
+   "id": "grd",
+   "side": "m",
+   "k": "guard",
+   "name": "Macedonian Guard",
+   "short": "Guard",
+   "w": 8,
+   "quote": "with the elite 3,000-strong Guard formed to the left of the phalanx"
+  },
+  {
+   "id": "mll",
+   "side": "m",
+   "k": "light",
+   "name": "Peltasts and mercenaries, left",
+   "short": "Light L",
+   "w": 8,
+   "quote": "Lighter peltasts, mercenaries, and Thracian infantry guarded the two flanks of the phalanx"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The armies stand drawn up",
+   "when": "22 June 168 BCE",
+   "text": "The Romans put their two legions in the middle with allied infantry on the flanks and cavalry on the wings. The Macedonian phalanx held the centre, with the Guard on its left, light troops on both flanks and Perseus with the cavalry on the right.",
+   "quote": "The two armies were drawn up in their usual fashion.",
+   "at": {
+    "camp": [
+     10,
+     30,
+     90
+    ],
+    "rlc": [
+     34,
+     9,
+     90
+    ],
+    "rla": [
+     34,
+     19,
+     90
+    ],
+    "leg": [
+     34,
+     31,
+     90
+    ],
+    "rra": [
+     34,
+     43,
+     90
+    ],
+    "rrc": [
+     34,
+     53,
+     90
+    ],
+    "mrc": [
+     54,
+     9,
+     270
+    ],
+    "mrl": [
+     54,
+     19,
+     270
+    ],
+    "pha": [
+     54,
+     30,
+     270
+    ],
+    "grd": [
+     54,
+     41,
+     270
+    ],
+    "mll": [
+     54,
+     51,
+     270
+    ]
+   }
+  },
+  {
+   "title": "The two centres engage",
+   "when": "About 3 PM",
+   "text": "The Macedonians advanced on the Romans a short distance from the Roman camp. The Roman allies tried to beat down the pikes or hack off their points, but with little success.",
+   "quote": "The two centers engaged at about 3 PM, with the Macedonians advancing on the Romans a short distance from the Roman camp.",
+   "at": {
+    "pha": [
+     43,
+     30,
+     270
+    ],
+    "grd": [
+     43,
+     41,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "pha",
+     "rra",
+     0.2
+    ],
+    [
+     "pha",
+     "rla",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "The allies retreat and the phalanx loses its line",
+   "text": "Unable to get under the thick bristle of pikes, the Romans used a planned retreat over the rough ground. As the phalanx pushed on into the foothills the ground became uneven and its line lost cohesion.",
+   "quote": "But as the phalanx pushed forward, the ground became more uneven as it moved into the foothills, and the line lost its cohesion, being forced over the rough terrain.",
+   "at": {
+    "rla": [
+     27,
+     19,
+     90
+    ],
+    "rra": [
+     27,
+     43,
+     90
+    ],
+    "pha": [
+     39,
+     30,
+     270
+    ],
+    "grd": [
+     39,
+     41,
+     270
+    ]
+   },
+   "how": {
+    "rla": "retreat",
+    "rra": "retreat"
+   }
+  },
+  {
+   "title": "Paullus sends the legions into the gaps",
+   "text": "Paullus ordered the legions into the gaps and they attacked the phalangites on their exposed flanks. At close quarters the longer Roman sword and heavier shield prevailed over the lighter Macedonian arms.",
+   "quote": "Paullus now ordered the legions into the gaps, attacking the phalangites on their exposed flanks.",
+   "at": {
+    "leg": [
+     34,
+     31,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "leg",
+     "pha"
+    ]
+   ]
+  },
+  {
+   "title": "The Roman right routs the Macedonian left",
+   "text": "The Roman right joined the legions after it had routed the Macedonian left. Seeing the battle turn, Perseus fled with the cavalry on the Macedonian right.",
+   "quote": "They were soon joined by the Roman right, which had succeeded in routing the Macedonian left.",
+   "at": {
+    "rrc": [
+     41,
+     53,
+     90
+    ],
+    "mll": [
+     66,
+     53,
+     90
+    ],
+    "mrc": [
+     78,
+     9,
+     90
+    ]
+   },
+   "how": {
+    "mll": "rout",
+    "mrc": "rout"
+   },
+   "state": {
+    "mll": "routed",
+    "mrc": "routed"
+   },
+   "hits": [
+    [
+     "rrc",
+     "mll"
+    ]
+   ]
+  },
+  {
+   "title": "The Guard fights to the death",
+   "text": "The 3,000-strong Guard fought to the death. Nearly 11,000 Macedonians were captured, and the pursuit lasted until nightfall, though the battle itself lasted about an hour.",
+   "quote": "However, the 3,000 strong guard fought to the death, nearly 11,000 Macedonians were captured",
+   "at": {
+    "rra": [
+     34,
+     43,
+     90
+    ]
+   },
+   "state": {
+    "grd": "destroyed"
+   },
+   "hits": [
+    [
+     "leg",
+     "grd"
+    ],
+    [
+     "rra",
+     "grd",
+     0.2
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,503 @@
+{
+ "slug": "normandy-landings",
+ "name": "Normandy landings",
+ "article": "battles2/wp/normandy-landings",
+ "field": {
+  "north": 0,
+  "ground": "sea"
+ },
+ "note": "The plan shows the whole operation of 6 June 1944, not a single field: the blocks are fleets, divisions and airborne forces. The accounts give the sectors in order from west to east (Utah, Omaha, Gold, Juno, Sword) but not distances, so the places of the beaches, towns and German units are set by judgement. Pointe du Hoc and the French Resistance's sabotage are left off the plan.",
+ "terrain": [
+  {
+   "k": "land",
+   "name": "Normandy coast",
+   "unnamed": true,
+   "at": [
+    [
+     0,
+     27
+    ],
+    [
+     25,
+     25
+    ],
+    [
+     50,
+     26
+    ],
+    [
+     75,
+     25
+    ],
+    [
+     100,
+     26
+    ],
+    [
+     100,
+     62
+    ],
+    [
+     0,
+     62
+    ]
+   ],
+   "lab": [
+    14,
+    59
+   ],
+   "quote": "The target 80-kilometre (50 mi) stretch of the Normandy coast was divided into five sectors: Utah, Omaha, Gold, Juno, and Sword."
+  },
+  {
+   "k": "town",
+   "name": "Sainte-Mère-Église",
+   "at": [
+    22,
+    45
+   ],
+   "lab": [
+    27,
+    42
+   ],
+   "quote": "they captured the important crossroads at Sainte-Mère-Église"
+  },
+  {
+   "k": "town",
+   "name": "Carentan",
+   "at": [
+    32,
+    52
+   ],
+   "lab": [
+    32,
+    55
+   ],
+   "quote": "but Carentan, Saint-Lô, and Bayeux remained in German hands"
+  },
+  {
+   "k": "town",
+   "name": "Bayeux",
+   "at": [
+    48,
+    46
+   ],
+   "lab": [
+    48,
+    49
+   ],
+   "quote": "Bayeux was not captured the first day because of stiff resistance from the 352nd Infantry Division"
+  },
+  {
+   "k": "town",
+   "name": "Caen",
+   "at": [
+    64,
+    48
+   ],
+   "lab": [
+    64,
+    51
+   ],
+   "quote": "Caen, a major objective, was still in German hands at the end of D-Day"
+  },
+  {
+   "k": "bridge",
+   "name": "Pegasus Bridge",
+   "at": [
+    88,
+    41
+   ],
+   "lab": [
+    84,
+    47
+   ],
+   "quote": "The first Allied action of D-Day was the capture of the Caen canal and Orne river bridges via a glider assault at 00:16"
+  }
+ ],
+ "sides": [
+  {
+   "id": "a",
+   "name": "Allies"
+  },
+  {
+   "id": "g",
+   "name": "Germans"
+  }
+ ],
+ "units": [
+  {
+   "id": "fleet",
+   "side": "a",
+   "k": "ships",
+   "name": "Allied invasion fleet",
+   "short": "Fleet",
+   "w": 16,
+   "quote": "The invasion fleet, which was drawn from eight different navies, comprised 6,939 vessels"
+  },
+  {
+   "id": "usair",
+   "side": "a",
+   "k": "infantry",
+   "name": "US 82nd and 101st Airborne",
+   "short": "US air",
+   "w": 10,
+   "quote": "Paratroopers of the 82nd and 101st Airborne Divisions, numbering over 13,000 men, were delivered by Douglas C-47 Skytrains"
+  },
+  {
+   "id": "ukair",
+   "side": "a",
+   "k": "infantry",
+   "name": "British 6th Airborne Division",
+   "short": "UK air",
+   "leader": "Richard Gale",
+   "w": 8,
+   "quote": "The British 6th Airborne Division, on the eastern flank, was assigned to capture intact the bridges over the Caen Canal and River Orne"
+  },
+  {
+   "id": "utah",
+   "side": "a",
+   "k": "infantry",
+   "name": "US 4th Infantry Division",
+   "short": "Utah",
+   "leader": "Raymond O. Barton",
+   "w": 8,
+   "quote": "Members of the 8th Infantry Regiment of the 4th Infantry Division were the first to land, arriving at 06:30."
+  },
+  {
+   "id": "omaha",
+   "side": "a",
+   "k": "infantry",
+   "name": "US 1st and 29th Divisions",
+   "short": "Omaha",
+   "w": 10,
+   "quote": "Omaha, the most heavily defended beach, was assigned to the 1st Infantry Division and 29th Infantry Division."
+  },
+  {
+   "id": "gold",
+   "side": "a",
+   "k": "infantry",
+   "name": "British 50th Division",
+   "short": "Gold",
+   "leader": "Douglas Graham",
+   "w": 8,
+   "quote": "The first landings on Gold Beach were set for 07:25 because of the differences in the tide between there and the US beaches."
+  },
+  {
+   "id": "juno",
+   "side": "a",
+   "k": "infantry",
+   "name": "3rd Canadian Division",
+   "short": "Juno",
+   "leader": "Rod Keller",
+   "w": 8,
+   "quote": "The landing at Juno Beach was delayed because of choppy seas, and the men arrived ahead of their supporting armour"
+  },
+  {
+   "id": "sword",
+   "side": "a",
+   "k": "infantry",
+   "name": "British 3rd Division",
+   "short": "Sword",
+   "leader": "Tom Rennie",
+   "w": 8,
+   "quote": "On Sword Beach, 21 of 25 DD tanks of the first wave were successful in getting safely ashore to provide cover for the infantry, who began disembarking at 07:30."
+  },
+  {
+   "id": "g919",
+   "side": "g",
+   "k": "infantry",
+   "name": "919th Grenadier Regiment",
+   "short": "919th",
+   "w": 8,
+   "quote": "Utah Beach was in the area defended by two battalions of the 919th Grenadier Regiment."
+  },
+  {
+   "id": "g352",
+   "side": "g",
+   "k": "infantry",
+   "name": "352nd Infantry Division",
+   "short": "352nd",
+   "leader": "Dietrich Kraiss",
+   "w": 12,
+   "quote": "They faced the 352nd Infantry Division rather than the expected single regiment."
+  },
+  {
+   "id": "g716",
+   "side": "g",
+   "k": "infantry",
+   "name": "716th Static Infantry Division",
+   "short": "716th",
+   "leader": "Wilhelm Richter",
+   "w": 14,
+   "quote": "Allied forces attacking Gold, Juno, and Sword Beaches faced the following German units"
+  },
+  {
+   "id": "g21",
+   "side": "g",
+   "k": "cavalry",
+   "name": "21st Panzer Division",
+   "short": "21st Pz",
+   "leader": "Edgar Feuchtinger",
+   "w": 10,
+   "quote": "21st Panzer Division, (south of Caen)"
+  }
+ ],
+ "phases": [
+  {
+   "title": "Airborne troops land behind the beaches",
+   "when": "From 00:15, 6 June 1944",
+   "text": "Pathfinders of the US airborne divisions arrived at 00:15, and British glider troops took the Caen canal and Orne bridges at 00:16. Many paratroopers landed far from their drop zones.",
+   "quote": "The US airborne landings began with the arrival of pathfinders at 00:15.",
+   "at": {
+    "fleet": [
+     50,
+     10,
+     180
+    ],
+    "usair": [
+     9,
+     40,
+     0
+    ],
+    "ukair": [
+     94,
+     35,
+     0
+    ],
+    "g919": [
+     28,
+     31,
+     0
+    ],
+    "g352": [
+     42,
+     32,
+     0
+    ],
+    "g716": [
+     70,
+     32,
+     0
+    ],
+    "g21": [
+     72,
+     55,
+     0
+    ]
+   }
+  },
+  {
+   "title": "The flanks are taken",
+   "text": "On the western side the 82nd Airborne captured the crossroads at Sainte-Mère-Église within two hours of landing. On the eastern side the 6th Airborne held the bridges over the Caen canal and the Orne.",
+   "quote": "Both bridges were quickly captured intact, with light casualties by the Oxfordshire and Buckinghamshire Light Infantry Regiment.",
+   "at": {
+    "usair": [
+     11,
+     47,
+     0
+    ],
+    "ukair": [
+     94,
+     44,
+     0
+    ]
+   }
+  },
+  {
+   "title": "The fleet shells the coast",
+   "when": "From 05:45",
+   "text": "Warships bombarded the ground behind the beaches in the dark and, from 05:50, pre-assigned targets on the beaches themselves. The assault divisions crossed in landing craft, which strong winds blew east of their intended positions.",
+   "quote": "Naval bombardment of areas behind the beach commenced at 05:45, while it was still dark",
+   "at": {
+    "utah": [
+     26,
+     18,
+     180
+    ],
+    "omaha": [
+     42,
+     18,
+     180
+    ],
+    "gold": [
+     57,
+     18,
+     180
+    ],
+    "juno": [
+     70,
+     18,
+     180
+    ],
+    "sword": [
+     83,
+     18,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "fleet",
+     "g919",
+     0.15
+    ],
+    [
+     "fleet",
+     "g352"
+    ],
+    [
+     "fleet",
+     "g716",
+     -0.15
+    ]
+   ]
+  },
+  {
+   "title": "The five beaches are landed on",
+   "when": "06:30 to 07:30",
+   "text": "The 4th Division landed at Utah at 06:30, south of its intended place. Omaha's obstacles were largely undamaged and its fire from the cliffs was heavy. Gold was landed from 07:25, Sword from 07:30, and Juno after a delay.",
+   "quote": "Members of the 8th Infantry Regiment of the 4th Infantry Division were the first to land, arriving at 06:30.",
+   "at": {
+    "utah": [
+     26,
+     24.5,
+     180
+    ],
+    "omaha": [
+     42,
+     24.5,
+     180
+    ],
+    "gold": [
+     57,
+     24.5,
+     180
+    ],
+    "juno": [
+     70,
+     24.5,
+     180
+    ],
+    "sword": [
+     83,
+     24.5,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "utah",
+     "g919"
+    ],
+    [
+     "omaha",
+     "g352"
+    ],
+    [
+     "g352",
+     "omaha",
+     0.3
+    ],
+    [
+     "gold",
+     "g716"
+    ],
+    [
+     "juno",
+     "g716"
+    ],
+    [
+     "sword",
+     "g716",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The beachheads push inland",
+   "when": "Through the day",
+   "text": "Combat teams left Utah from about 09:00 and met the airborne troops. At Omaha barely 600 men had reached the higher ground by late morning. At Gold, Juno and Sword fortified towns were cleared house by house and one battalion came within a few kilometres of Caen.",
+   "quote": "Exit from the beach was possible only via five heavily defended gullies, and by late morning barely 600 men had reached the higher ground.",
+   "at": {
+    "utah": [
+     12,
+     36,
+     180
+    ],
+    "omaha": [
+     42,
+     27.5,
+     180
+    ],
+    "gold": [
+     57,
+     27.5,
+     180
+    ],
+    "juno": [
+     70,
+     27.5,
+     180
+    ],
+    "sword": [
+     82,
+     37,
+     180
+    ],
+    "usair": [
+     11,
+     43,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "utah",
+     "g919",
+     0.2
+    ],
+    [
+     "omaha",
+     "g352"
+    ],
+    [
+     "g352",
+     "omaha",
+     0.3
+    ],
+    [
+     "gold",
+     "g716"
+    ],
+    [
+     "juno",
+     "g716"
+    ]
+   ]
+  },
+  {
+   "title": "The 21st Panzer Division counter-attacks",
+   "when": "16:00",
+   "text": "The 21st Panzer Division attacked between Sword and Juno and nearly reached the Channel. It met stiff resistance from the British 3rd Division and was soon recalled to the area between Caen and Bayeux.",
+   "quote": "At 16:00, the 21st Panzer Division mounted a counter-attack between Sword and Juno and nearly succeeded in reaching the Channel.",
+   "at": {
+    "g21": [
+     76,
+     43,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "g21",
+     "sword"
+    ],
+    [
+     "sword",
+     "g21",
+     0.3
+    ]
+   ]
+  }
+ ]
+}

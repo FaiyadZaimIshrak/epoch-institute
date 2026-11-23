@@ -1,0 +1,553 @@
+{
+ "slug": "battle-of-al-qadisiyyah",
+ "name": "Battle of al-Qadisiyyah",
+ "article": "battles2/wp/battle-of-al-qadisiyyah",
+ "field": {
+  "north": null
+ },
+ "note": "The plan shows the fighting of 16 and 19 November 636; the fighting of 17 and 18 November is not drawn. The Rashidun army faced north-east and the Sasanian army south-west with the river at its back, here turned to left and right. The Sasanian rear guard under Piruzan is drawn but not followed, the Syrian reinforcements are not drawn, and the elephants, said to number about 33 and to stand eight with each division, are drawn as one body. The accounts of Rustam's death differ, and the plan does not show it.",
+ "terrain": [
+  {
+   "k": "river",
+   "name": "Ateeq",
+   "at": [
+    [
+     88,
+     4
+    ],
+    [
+     90,
+     20
+    ],
+    [
+     90,
+     40
+    ],
+    [
+     88,
+     58
+    ]
+   ],
+   "lab": [
+    92,
+    50
+   ],
+   "quote": "while the Sasanian army was deployed facing southwest and had the river at its rear"
+  },
+  {
+   "k": "bridge",
+   "name": "Bridge",
+   "at": [
+    90,
+    31
+   ],
+   "lab": [
+    93,
+    31
+   ],
+   "quote": "There was a bridge over the Ateeq river, the only crossing to the main Sasanian camps"
+  },
+  {
+   "k": "town",
+   "name": "Qadisiyyah",
+   "at": [
+    10,
+    56
+   ],
+   "lab": [
+    10,
+    59
+   ],
+   "quote": "Qadisiyyah was a small town on the west bank of the river Ateeq"
+  }
+ ],
+ "sides": [
+  {
+   "id": "r",
+   "name": "Rashidun Caliphate"
+  },
+  {
+   "id": "s",
+   "name": "Sasanian Empire"
+  }
+ ],
+ "units": [
+  {
+   "id": "ml",
+   "side": "r",
+   "k": "infantry",
+   "name": "Rashidun left wing",
+   "short": "Left",
+   "w": 9,
+   "quote": "The Muslim left wing and left centre were first subjected to intense archery"
+  },
+  {
+   "id": "mlc",
+   "side": "r",
+   "k": "infantry",
+   "name": "Rashidun left centre",
+   "short": "L centre",
+   "leader": "Asim ibn 'Amr",
+   "w": 9,
+   "quote": "Asim ibn 'Amr, commander of the left centre"
+  },
+  {
+   "id": "mrc",
+   "side": "r",
+   "k": "infantry",
+   "name": "Rashidun right centre",
+   "short": "R centre",
+   "leader": "Zuhra ibn Al-Hawiyya",
+   "w": 9,
+   "quote": "Zuhra ibn Al-Hawiyya, commander of the Muslim right centre"
+  },
+  {
+   "id": "mr",
+   "side": "r",
+   "k": "infantry",
+   "name": "Rashidun right wing",
+   "short": "Right",
+   "leader": "Abdullah ibn Al-Mutim",
+   "w": 10,
+   "quote": "Abdullah ibn Al-Mutim, the Muslim commander of the right-wing"
+  },
+  {
+   "id": "jar",
+   "side": "r",
+   "k": "cavalry",
+   "name": "Right-wing cavalry",
+   "short": "R cavalry",
+   "leader": "Jareer ibn Abdullah",
+   "w": 8,
+   "quote": "Jareer ibn Abdullah (cavalry commander of the right-wing)"
+  },
+  {
+   "id": "ash",
+   "side": "r",
+   "k": "cavalry",
+   "name": "Al-Ash'ath's cavalry",
+   "short": "Ash'ath",
+   "leader": "Al-Ash'ath ibn Qays",
+   "w": 5,
+   "quote": "Al-Ash'ath ibn Qays, commander of the centre-right cavalry"
+  },
+  {
+   "id": "ham",
+   "side": "r",
+   "k": "infantry",
+   "name": "Hammal's infantry regiment",
+   "short": "Hammal",
+   "leader": "Hammal ibn Malik",
+   "w": 5,
+   "quote": "An infantry regiment was sent under Hammal ibn Malik"
+  },
+  {
+   "id": "pr",
+   "side": "s",
+   "k": "infantry",
+   "name": "Sasanian right wing",
+   "short": "Right",
+   "leader": "Hormuzan",
+   "w": 9,
+   "quote": "right wing was commanded by Hormuzan"
+  },
+  {
+   "id": "prc",
+   "side": "s",
+   "k": "infantry",
+   "name": "Sasanian right centre",
+   "short": "R centre",
+   "leader": "Jalinus",
+   "w": 9,
+   "quote": "the right centre by Jalinus, the rear guard by Piruzan"
+  },
+  {
+   "id": "pg",
+   "side": "s",
+   "k": "infantry",
+   "name": "Sasanian rear guard",
+   "short": "Rear",
+   "leader": "Piruzan",
+   "w": 9,
+   "quote": "the rear guard by Piruzan, and the left wing by Mihran"
+  },
+  {
+   "id": "pl",
+   "side": "s",
+   "k": "infantry",
+   "name": "Sasanian left wing",
+   "short": "Left",
+   "leader": "Mihran",
+   "w": 10,
+   "quote": "the rear guard by Piruzan, and the left wing by Mihran"
+  },
+  {
+   "id": "ele",
+   "side": "s",
+   "k": "elephants",
+   "name": "Sasanian elephant corps",
+   "short": "Elephants",
+   "w": 8,
+   "quote": "about 33 elephants were present, eight with each of the four divisions of the army"
+  }
+ ],
+ "phases": [
+  {
+   "title": "Both armies form up in four divisions",
+   "when": "16 November 636",
+   "text": "The Sasanian army crossed the canal before dawn and drew up in four divisions with the river at its back. The Rashidun army stood in four corps about 500 metres away, with Muslim cavalry at the rear of each.",
+   "quote": "Rustam deployed his 45,000 infantry in four divisions, each about 150 meters apart from the other.",
+   "at": {
+    "ml": [
+     36,
+     10,
+     90
+    ],
+    "mlc": [
+     36,
+     22,
+     90
+    ],
+    "mrc": [
+     36,
+     34,
+     90
+    ],
+    "mr": [
+     36,
+     46,
+     90
+    ],
+    "jar": [
+     26,
+     48,
+     90
+    ],
+    "pr": [
+     58,
+     10,
+     270
+    ],
+    "prc": [
+     58,
+     22,
+     270
+    ],
+    "pg": [
+     72,
+     34,
+     270
+    ],
+    "pl": [
+     58,
+     46,
+     270
+    ],
+    "ele": [
+     49,
+     46,
+     270
+    ]
+   }
+  },
+  {
+   "title": "Elephants and archers press the Muslim right",
+   "text": "The Persian left wing attacked the Muslim right wing with heavy arrow fire, and the elephants led the charge. Jareer's cavalry was stopped by the Sasanian heavy cavalry, and the Muslim infantry began to fall back.",
+   "quote": "The elephants continued to advance, and the Muslim infantry began to fall back.",
+   "at": {
+    "ele": [
+     45,
+     44,
+     270
+    ],
+    "pl": [
+     52,
+     46,
+     270
+    ],
+    "mr": [
+     32,
+     46,
+     90
+    ]
+   },
+   "how": {
+    "mr": "retreat"
+   },
+   "hits": [
+    [
+     "ele",
+     "mr",
+     0.2
+    ],
+    [
+     "pl",
+     "jar",
+     0.3
+    ]
+   ]
+  },
+  {
+   "title": "The Muslim right counterattacks",
+   "text": "Reinforcing infantry from the right centre and a cavalry regiment under Al-Ash'ath joined the right wing. The infantry attacked from the front and the cavalry from the flank, and the Sasanian left wing retreated.",
+   "quote": "The Sasanian left wing retreated under the frontal attack by the infantry of the Muslims' right-wing reinforced by infantry regiments from the right centre",
+   "at": {
+    "mr": [
+     38,
+     46,
+     90
+    ],
+    "ham": [
+     41,
+     37,
+     90
+    ],
+    "ash": [
+     44,
+     55,
+     90
+    ],
+    "pl": [
+     62,
+     46,
+     270
+    ]
+   },
+   "how": {
+    "pl": "retreat"
+   },
+   "hits": [
+    [
+     "mr",
+     "pl",
+     0.3
+    ],
+    [
+     "ham",
+     "pl"
+    ],
+    [
+     "ash",
+     "pl",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "The Persian right and its elephants drive back the left",
+   "text": "Rustam then sent his right centre and right wing forward after heavy arrow fire, with the elephants in the lead. The Muslim cavalry on the left, already in panic at the elephants, was driven back.",
+   "quote": "The Muslim cavalry on the left wing and left centre, already in panic due to the charge of the elephants, were driven back by the combined charge of the Sasanian heavy cavalry and the elephants.",
+   "at": {
+    "pr": [
+     52,
+     10,
+     270
+    ],
+    "prc": [
+     52,
+     22,
+     270
+    ],
+    "ele": [
+     45,
+     16,
+     270
+    ],
+    "ml": [
+     30,
+     10,
+     90
+    ],
+    "mlc": [
+     30,
+     22,
+     90
+    ]
+   },
+   "how": {
+    "ml": "retreat",
+    "mlc": "retreat"
+   },
+   "hits": [
+    [
+     "ele",
+     "mlc"
+    ],
+    [
+     "pr",
+     "ml"
+    ],
+    [
+     "prc",
+     "mlc",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The elephants are turned back",
+   "text": "Asim's archers shot the men on the elephants and his infantry cut the saddle girths. The elephants were withdrawn, the Persian right centre and right wing retreated, and the Muslims counterattacked.",
+   "quote": "The tactic worked, and as the Persians retired the elephants, the Muslims counterattacked.",
+   "at": {
+    "ele": [
+     64,
+     16,
+     270
+    ],
+    "pr": [
+     56,
+     10,
+     270
+    ],
+    "prc": [
+     56,
+     22,
+     270
+    ],
+    "ml": [
+     36,
+     10,
+     90
+    ],
+    "mlc": [
+     38,
+     22,
+     90
+    ]
+   },
+   "how": {
+    "ele": "retreat",
+    "pr": "retreat",
+    "prc": "retreat"
+   },
+   "hits": [
+    [
+     "mlc",
+     "prc"
+    ],
+    [
+     "ml",
+     "pr"
+    ]
+   ]
+  },
+  {
+   "title": "Qa'qa leads the left centre forward",
+   "when": "19 November 636",
+   "text": "The elephants had been driven from the field on 18 November. On the fourth day the Muslim left centre surged forward and the other corps followed. By noon Qa'qa and his men had pierced the Sasanian centre but could not break the army.",
+   "quote": "surged forward and attacked the Sasanian right centre, followed by the general attack of the Muslim corps",
+   "at": {
+    "mlc": [
+     51,
+     22,
+     90
+    ],
+    "ml": [
+     44,
+     10,
+     90
+    ],
+    "mr": [
+     46,
+     46,
+     90
+    ],
+    "prc": [
+     58,
+     22,
+     270
+    ]
+   },
+   "state": {
+    "ele": "gone"
+   },
+   "hits": [
+    [
+     "mlc",
+     "prc"
+    ],
+    [
+     "ml",
+     "pr"
+    ],
+    [
+     "mr",
+     "pl",
+     0.3
+    ]
+   ]
+  },
+  {
+   "title": "The Sasanian front collapses",
+   "text": "After a last stand the Sasanian front gave way. Part of the army retreated in order and the rest in panic towards the river, while Jalinus held the bridgehead and brought the bulk across. The Muslim cavalry pursued.",
+   "quote": "part of the Sasanian army retreated in an organized manner while the rest retreated in panic towards the river",
+   "at": {
+    "mlc": [
+     58,
+     22,
+     90
+    ],
+    "ml": [
+     52,
+     10,
+     90
+    ],
+    "mrc": [
+     58,
+     34,
+     90
+    ],
+    "mr": [
+     58,
+     46,
+     90
+    ],
+    "jar": [
+     66,
+     53,
+     90
+    ],
+    "ash": [
+     66,
+     40,
+     90
+    ],
+    "pr": [
+     78,
+     10,
+     90
+    ],
+    "pl": [
+     78,
+     46,
+     90
+    ],
+    "prc": [
+     82,
+     26,
+     90
+    ]
+   },
+   "how": {
+    "pr": "rout",
+    "pl": "rout",
+    "prc": "retreat"
+   },
+   "state": {
+    "pr": "routed",
+    "pl": "routed"
+   },
+   "hits": [
+    [
+     "jar",
+     "pl"
+    ],
+    [
+     "ash",
+     "pl",
+     -0.2
+    ]
+   ]
+  }
+ ]
+}

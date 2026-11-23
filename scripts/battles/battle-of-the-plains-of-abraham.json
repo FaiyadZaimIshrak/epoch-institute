@@ -1,0 +1,458 @@
+{
+ "slug": "battle-of-the-plains-of-abraham",
+ "name": "Battle of the Plains of Abraham",
+ "article": "battles2/wp/battle-of-the-plains-of-abraham",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "to Quebec →",
+    "at": [
+     95,
+     30
+    ]
+   }
+  ]
+ },
+ "note": "The directions follow from the line's two ends: the right on the St Lawrence bluff and the left above the St Charles, so the British faced the city. The accounts do not say exactly where the wood, the houses and the bridge lay, so they are placed on the side the story needs. The plan does not show the British light infantry in the rear, and it treats the 'two battalions facing north' and the left wing as one block.",
+ "terrain": [
+  {
+   "k": "ridge",
+   "name": "Bluff above the St Lawrence",
+   "unnamed": true,
+   "at": [
+    [
+     4,
+     55
+    ],
+    [
+     30,
+     54
+    ],
+    [
+     60,
+     55
+    ],
+    [
+     96,
+     54
+    ],
+    [
+     96,
+     60
+    ],
+    [
+     4,
+     60
+    ]
+   ],
+   "lab": [
+    20,
+    58
+   ],
+   "quote": "with its right anchored by the bluff along the St. Lawrence"
+  },
+  {
+   "k": "wood",
+   "name": "Thick wood",
+   "unnamed": true,
+   "at": [
+    [
+     28,
+     5
+    ],
+    [
+     40,
+     4
+    ],
+    [
+     54,
+     5
+    ],
+    [
+     62,
+     8
+    ],
+    [
+     50,
+     10
+    ],
+    [
+     32,
+     10
+    ]
+   ],
+   "lab": [
+    40,
+    7
+   ],
+   "quote": "its left by a bluff and thick wood above the St. Charles River"
+  },
+  {
+   "k": "river",
+   "name": "St. Charles River",
+   "at": [
+    [
+     4,
+     2
+    ],
+    [
+     30,
+     2
+    ],
+    [
+     60,
+     2
+    ],
+    [
+     90,
+     3
+    ]
+   ],
+   "lab": [
+    18,
+    2
+   ],
+   "quote": "its left by a bluff and thick wood above the St. Charles River"
+  },
+  {
+   "k": "bridge",
+   "name": "Bridge",
+   "unnamed": true,
+   "at": [
+    86,
+    3
+   ],
+   "lab": [
+    86,
+    7
+   ],
+   "quote": "eventually holding the bridge over the St. Charles River"
+  },
+  {
+   "k": "village",
+   "name": "Houses and gristmill",
+   "unnamed": true,
+   "at": [
+    48,
+    17
+   ],
+   "lab": [
+    48,
+    21
+   ],
+   "quote": "captured a small collection of houses and gristmill to anchor the line"
+  }
+ ],
+ "sides": [
+  {
+   "id": "b",
+   "name": "British"
+  },
+  {
+   "id": "f",
+   "name": "French"
+  }
+ ],
+ "units": [
+  {
+   "id": "brleft",
+   "side": "b",
+   "k": "infantry",
+   "name": "British left wing",
+   "short": "Left",
+   "leader": "Townshend",
+   "w": 10,
+   "quote": "On the left wing, regiments under Townshend exchanged fire with the militia in the scrub"
+  },
+  {
+   "id": "brcentre",
+   "side": "b",
+   "k": "infantry",
+   "name": "British main line, centre",
+   "short": "Centre",
+   "leader": "Wolfe",
+   "w": 14,
+   "quote": "called for the centre—in this case, the 43rd and 47th Foot regiments—to hold fire while waiting",
+   "leaderEntry": "james-wolfe"
+  },
+  {
+   "id": "brright",
+   "side": "b",
+   "k": "infantry",
+   "name": "British right, 35th Foot",
+   "short": "35th",
+   "w": 8,
+   "quote": "En potence on the right flank – 35th Regiment of Foot"
+  },
+  {
+   "id": "brres",
+   "side": "b",
+   "k": "guard",
+   "name": "British reserve",
+   "short": "Reserve",
+   "w": 8,
+   "quote": "Two battalions were deployed, facing north, to cover the left flank and a further two formed a reserve."
+  },
+  {
+   "id": "hld",
+   "side": "b",
+   "k": "infantry",
+   "name": "78th Fraser Highlanders",
+   "short": "78th",
+   "w": 6,
+   "quote": "The 78th Fraser Highlanders were ordered by Brigadier-General James Murray to pursue the French with their swords"
+  },
+  {
+   "id": "twn",
+   "side": "b",
+   "k": "infantry",
+   "name": "Townshend's two battalions",
+   "short": "Townshend",
+   "w": 8,
+   "quote": "He quickly formed up two battalions from the confused troops on the field and turned them to meet the oncoming French"
+  },
+  {
+   "id": "frmil",
+   "side": "f",
+   "k": "light",
+   "name": "Canadian militia and natives",
+   "short": "Militia",
+   "w": 8,
+   "quote": "the Canadian militia and native sharpshooters engaged the British left flank, sheltering in the trees and scrub"
+  },
+  {
+   "id": "frcentre",
+   "side": "f",
+   "k": "infantry",
+   "name": "French regulars, centre",
+   "short": "Centre",
+   "leader": "Montcalm",
+   "w": 14,
+   "quote": "his best regulars three deep, others six deep and his poorest regiment in column",
+   "leaderEntry": "louis-joseph-de-montcalm"
+  },
+  {
+   "id": "frleft",
+   "side": "f",
+   "k": "infantry",
+   "name": "French left wing",
+   "short": "Left",
+   "w": 10,
+   "quote": "who deployed his forces as follows"
+  },
+  {
+   "id": "bou",
+   "side": "f",
+   "k": "infantry",
+   "name": "Bougainville's column",
+   "short": "Bougainv.",
+   "leader": "Bougainville",
+   "w": 8,
+   "quote": "realised that Bougainville's column was approaching from the British rear"
+  }
+ ],
+ "phases": [
+  {
+   "title": "Wolfe's line forms on the plateau",
+   "when": "13 September 1759",
+   "text": "Wolfe's army formed a line across the Plains, its right on the bluff above the St Lawrence and its left on a bluff and wood above the St Charles. Canadian militia and native sharpshooters engaged the left flank from the trees and scrub.",
+   "quote": "Wolfe's army formed a line first with their backs to the river, then spread out across the Plains with its right anchored by the bluff along the St. Lawrence",
+   "at": {
+    "brleft": [
+     38,
+     13,
+     90
+    ],
+    "brcentre": [
+     38,
+     30,
+     90
+    ],
+    "brright": [
+     38,
+     46,
+     90
+    ],
+    "brres": [
+     22,
+     36,
+     90
+    ],
+    "frmil": [
+     62,
+     13,
+     270
+    ],
+    "frcentre": [
+     62,
+     30,
+     270
+    ],
+    "frleft": [
+     62,
+     46,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "frmil",
+     "brleft"
+    ]
+   ]
+  },
+  {
+   "title": "Montcalm orders a general advance",
+   "when": "About 10 a.m.",
+   "text": "The French regulars moved against the British line. The British lines held their fire as the French approached.",
+   "quote": "riding his dark horse and waving his sword to encourage his men, ordered a general advance on the British line",
+   "at": {
+    "frcentre": [
+     52,
+     30,
+     270
+    ],
+    "frleft": [
+     52,
+     46,
+     270
+    ]
+   }
+  },
+  {
+   "title": "The British fire two volleys and the French break",
+   "text": "The French fired two disorganised volleys. The British then fired at close range, marched forward a few paces and fired a second general volley, which sent the attackers into retreat.",
+   "quote": "the British lines marched forward a few paces towards the shocked French force and fired a second general volley that shattered the attackers and sent them into retreat.",
+   "at": {
+    "brleft": [
+     40,
+     13,
+     90
+    ],
+    "brcentre": [
+     40,
+     30,
+     90
+    ],
+    "brright": [
+     40,
+     46,
+     90
+    ],
+    "frcentre": [
+     47,
+     30,
+     270
+    ],
+    "frleft": [
+     47,
+     46,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "brcentre",
+     "frcentre"
+    ],
+    [
+     "brright",
+     "frleft"
+    ],
+    [
+     "frcentre",
+     "brcentre",
+     0.3
+    ]
+   ]
+  },
+  {
+   "title": "The French retreat and the Highlanders pursue",
+   "text": "British troops fell into a disorganised pursuit of the retreating French. The 78th Fraser Highlanders followed with their swords and met heavy fire from the militia that remained in the trees.",
+   "quote": "British troops fell into a disorganized pursuit of the retreating French troops.",
+   "at": {
+    "frcentre": [
+     68,
+     30,
+     90
+    ],
+    "frleft": [
+     68,
+     46,
+     90
+    ],
+    "hld": [
+     54,
+     35,
+     90
+    ]
+   },
+   "how": {
+    "frcentre": "retreat",
+    "frleft": "retreat"
+   },
+   "hits": [
+    [
+     "hld",
+     "frcentre"
+    ],
+    [
+     "frmil",
+     "hld",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "Bougainville's column arrives from the rear",
+   "text": "Townshend took charge and saw Bougainville's column approaching from the British rear. He formed two battalions from the confused troops and turned them to meet it.",
+   "quote": "He quickly formed up two battalions from the confused troops on the field and turned them to meet the oncoming French",
+   "at": {
+    "bou": [
+     12,
+     24,
+     90
+    ],
+    "twn": [
+     20,
+     24,
+     270
+    ]
+   }
+  },
+  {
+   "title": "Bougainville retreats and the French cross the St Charles",
+   "text": "Bougainville did not attack and retreated. The rest of Montcalm's army slipped back across the St Charles, the militia holding the bridge.",
+   "quote": "Bougainville retreated while the rest of Montcalm's army slipped back across the St. Charles.",
+   "at": {
+    "bou": [
+     6,
+     20,
+     270
+    ],
+    "frcentre": [
+     84,
+     22,
+     90
+    ],
+    "frleft": [
+     84,
+     36,
+     90
+    ],
+    "frmil": [
+     80,
+     10,
+     90
+    ]
+   },
+   "how": {
+    "bou": "retreat",
+    "frcentre": "retreat",
+    "frleft": "retreat",
+    "frmil": "retreat"
+   }
+  }
+ ]
+}

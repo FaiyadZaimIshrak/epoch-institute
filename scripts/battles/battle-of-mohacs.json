@@ -1,0 +1,374 @@
+{
+ "slug": "battle-of-mohacs",
+ "name": "Battle of Mohács",
+ "article": "battles2/wp/battle-of-mohacs",
+ "field": {
+  "north": null
+ },
+ "note": "The accounts do not give compass directions, so none is drawn. The Hungarians are drawn on the left and the Ottomans on the right. Where the marsh and the Csele stream lay is not stated: they are placed behind the Hungarian line, where the story needs them, and the village of Mohács is not drawn. The Ottoman wings and the Janissaries are placed by judgement, since the accounts say only that the counterattack came from both wings and that the Janissaries and artillery fired from prepared positions. The accounts put the Ottoman strength at perhaps 45,000 fighting troops, or perhaps 50,000, with some historians saying 100,000. One report has Suleiman struck on his cuirass by bullets during the charge; the plan does not show it. King Louis drowned near the Csele stream while trying to flee; his flight is not drawn.",
+ "terrain": [
+  {
+   "k": "marsh",
+   "name": "Marshy ground",
+   "unnamed": true,
+   "at": [
+    [
+     6,
+     52
+    ],
+    [
+     18,
+     50
+    ],
+    [
+     30,
+     52
+    ],
+    [
+     34,
+     56
+    ],
+    [
+     20,
+     58
+    ],
+    [
+     8,
+     57
+    ]
+   ],
+   "lab": [
+    18,
+    54
+   ],
+   "quote": "an open but uneven plain with some swampy marshes"
+  },
+  {
+   "k": "stream",
+   "name": "Csele",
+   "at": [
+    [
+     6,
+     46
+    ],
+    [
+     12,
+     51
+    ],
+    [
+     24,
+     55
+    ],
+    [
+     38,
+     58
+    ]
+   ],
+   "lab": [
+    40,
+    56
+   ],
+   "quote": "drowned in the marshy terrain near the Csele stream"
+  }
+ ],
+ "sides": [
+  {
+   "id": "h",
+   "name": "Hungarians and their allies"
+  },
+  {
+   "id": "o",
+   "name": "Ottomans"
+  }
+ ],
+ "units": [
+  {
+   "id": "hlc",
+   "side": "h",
+   "k": "cavalry",
+   "name": "Hungarian left heavy cavalry",
+   "short": "H. cav L",
+   "w": 9,
+   "quote": "the first composed of mercenary infantry and artillery in the centre, with heavy cavalry on both flanks"
+  },
+  {
+   "id": "hcen",
+   "side": "h",
+   "k": "infantry",
+   "name": "Mercenary infantry, artillery",
+   "short": "H. centre",
+   "w": 14,
+   "quote": "the first composed of mercenary infantry and artillery in the centre"
+  },
+  {
+   "id": "hrc",
+   "side": "h",
+   "k": "cavalry",
+   "name": "Hungarian right heavy cavalry",
+   "short": "H. cav R",
+   "w": 9,
+   "quote": "the first composed of mercenary infantry and artillery in the centre, with heavy cavalry on both flanks"
+  },
+  {
+   "id": "hsec",
+   "side": "h",
+   "k": "guard",
+   "name": "Second line and reserves",
+   "short": "Reserves",
+   "leader": "King Louis",
+   "w": 14,
+   "quote": "the second consisted largely of levy infantry and reserve cavalry",
+   "leaderEntry": "louis-ii-of-hungary"
+  },
+  {
+   "id": "ocen",
+   "side": "o",
+   "k": "infantry",
+   "name": "Ottoman centre",
+   "short": "O. centre",
+   "leader": "Ibrahim Pasha",
+   "w": 14,
+   "quote": "He commanded the Ottoman centre during the battle",
+   "leaderEntry": "pargali-ibrahim-pasha"
+  },
+  {
+   "id": "owl",
+   "side": "o",
+   "k": "cavalry",
+   "name": "Ottoman left wing",
+   "short": "O. wing",
+   "w": 9,
+   "quote": "the Ottomans launched a counterattack with cavalry and light infantry from both wings"
+  },
+  {
+   "id": "owr",
+   "side": "o",
+   "k": "cavalry",
+   "name": "Ottoman right wing",
+   "short": "O. wing",
+   "w": 9,
+   "quote": "the Ottomans launched a counterattack with cavalry and light infantry from both wings"
+  },
+  {
+   "id": "ojan",
+   "side": "o",
+   "k": "artillery",
+   "name": "Janissaries and artillery",
+   "short": "Janissary",
+   "w": 12,
+   "quote": "while Janissaries and artillery opened concentrated fire from prepared positions"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The two armies take up their positions",
+   "when": "Afternoon of 29 August 1526",
+   "text": "The Hungarians stood in two lines on a waterlogged plain, mercenary infantry and artillery in the centre of the first with heavy cavalry on both flanks, and levy infantry and reserve cavalry behind. The Ottomans faced them with Ibrahim Pasha in the centre.",
+   "quote": "The Hungarian army, numbering around 25,000–30,000 men, was arranged in two lines: the first composed of mercenary infantry and artillery in the centre, with heavy cavalry on both flanks; the second consisted largely of levy infantry and reserve cavalry.",
+   "at": {
+    "hlc": [
+     34,
+     14,
+     90
+    ],
+    "hcen": [
+     34,
+     31,
+     90
+    ],
+    "hrc": [
+     34,
+     48,
+     90
+    ],
+    "hsec": [
+     20,
+     31,
+     90
+    ],
+    "ocen": [
+     54,
+     31,
+     270
+    ],
+    "owl": [
+     58,
+     13,
+     270
+    ],
+    "owr": [
+     58,
+     49,
+     270
+    ],
+    "ojan": [
+     72,
+     31,
+     270
+    ]
+   }
+  },
+  {
+   "title": "The Hungarian cavalry charges the Ottoman front",
+   "text": "In the early afternoon Archbishop Pál Tomori led a charge that drove back the Ottoman front line and caused disorder among the irregulars. The Ottoman centre gave ground.",
+   "quote": "In the early afternoon, Archbishop Pál Tomori led a charge that initially drove back the Ottoman front line, causing disorder among the irregulars.",
+   "at": {
+    "hlc": [
+     44,
+     17,
+     90
+    ],
+    "hrc": [
+     44,
+     45,
+     90
+    ],
+    "ocen": [
+     58,
+     31,
+     270
+    ]
+   },
+   "how": {
+    "ocen": "retreat"
+   },
+   "hits": [
+    [
+     "hlc",
+     "ocen",
+     -0.1
+    ],
+    [
+     "hrc",
+     "ocen",
+     0.1
+    ]
+   ]
+  },
+  {
+   "title": "The Ottoman centre falls back and the reserves follow",
+   "text": "Ibrahim Pasha's centre fell back in a controlled manoeuvre and formed a crescent that exposed the flanks of the advancing cavalry. King Louis and the reserves moved in support, and the Hungarian centre advanced as well.",
+   "quote": "Ibrahim Pasha's centre fell back in a controlled manoeuvre, forming a crescent that exposed the flanks of the advancing Hungarian cavalry.",
+   "at": {
+    "ocen": [
+     64,
+     31,
+     270
+    ],
+    "hcen": [
+     44,
+     31,
+     90
+    ],
+    "hsec": [
+     32,
+     31,
+     90
+    ],
+    "hlc": [
+     50,
+     20,
+     90
+    ],
+    "hrc": [
+     50,
+     42,
+     90
+    ]
+   },
+   "how": {
+    "ocen": "feint"
+   }
+  },
+  {
+   "title": "The Ottoman wings counterattack and the guns open fire",
+   "text": "The Ottomans struck with cavalry and light infantry from both wings, while Janissaries and artillery fired from prepared positions. The Hungarian army had advanced too far and too fast.",
+   "quote": "the Ottomans launched a counterattack with cavalry and light infantry from both wings, while Janissaries and artillery opened concentrated fire from prepared positions.",
+   "at": {
+    "owl": [
+     56,
+     17,
+     180
+    ],
+    "owr": [
+     56,
+     45,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "owl",
+     "hlc"
+    ],
+    [
+     "owr",
+     "hrc"
+    ],
+    [
+     "ojan",
+     "hcen",
+     0.15
+    ]
+   ]
+  },
+  {
+   "title": "The Hungarian army is encircled and its lines collapse",
+   "text": "Surrounded and under concentrated musket and cannon fire, the Hungarian army collapsed within two hours. Over 14,000 Hungarian troops died by one estimate.",
+   "quote": "The Hungarian army, having advanced too far and too fast, found itself encircled and subjected to concentrated musket and cannon fire. Within two hours, their lines collapsed.",
+   "at": {
+    "hlc": [
+     44,
+     22,
+     90
+    ],
+    "hrc": [
+     44,
+     40,
+     90
+    ],
+    "hcen": [
+     40,
+     31,
+     90
+    ],
+    "hsec": [
+     28,
+     31,
+     90
+    ]
+   },
+   "how": {
+    "hlc": "rout",
+    "hrc": "rout",
+    "hcen": "rout",
+    "hsec": "rout"
+   },
+   "state": {
+    "hlc": "routed",
+    "hrc": "routed",
+    "hcen": "routed",
+    "hsec": "routed"
+   },
+   "hits": [
+    [
+     "owl",
+     "hlc"
+    ],
+    [
+     "owr",
+     "hrc"
+    ],
+    [
+     "ocen",
+     "hcen"
+    ],
+    [
+     "ojan",
+     "hcen",
+     0.15
+    ]
+   ]
+  }
+ ]
+}

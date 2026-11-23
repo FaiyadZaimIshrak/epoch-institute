@@ -1,0 +1,281 @@
+{
+ "slug": "battles-of-khalkhin-gol",
+ "name": "Battles of Khalkhin Gol",
+ "article": "battles2/wp/battles-of-khalkhin-gol",
+ "field": {
+  "north": null
+ },
+ "note": "This plan shows the Soviet offensive of 20 to 31 August 1939 at the scale of the whole operation, not a single field; the earlier fighting of May to July is not drawn. The accounts do not give compass directions, so none is drawn. They place the Japanese on the east bank and the Soviet attack as crossing the river, and name a Soviet left and right wing without saying which lay north. The accounts do not say where the Mongolian cavalry divisions stood, so they are not drawn. The Japanese force sent to relieve the 23rd Division is placed at the edge of the plan; the accounts do not say where it came from. The accounts do not say that the 23rd Division was wholly destroyed, only that remnants stayed on the Manchurian side.",
+ "terrain": [
+  {
+   "k": "river",
+   "name": "Khalkhin Gol",
+   "at": [
+    [
+     36,
+     4
+    ],
+    [
+     39,
+     20
+    ],
+    [
+     37,
+     36
+    ],
+    [
+     40,
+     50
+    ],
+    [
+     38,
+     58
+    ]
+   ],
+   "lab": [
+    31,
+    58
+   ],
+   "quote": "The conflict is named after the river Khalkhin Gol, which passes through the battlefield."
+  },
+  {
+   "k": "village",
+   "name": "Nomonhan",
+   "at": [
+    84,
+    31
+   ],
+   "lab": [
+    86,
+    38
+   ],
+   "quote": "When the Soviet wings linked up by Nomonhan on 25 August"
+  }
+ ],
+ "sides": [
+  {
+   "id": "s",
+   "name": "Soviet and Mongolian forces"
+  },
+  {
+   "id": "j",
+   "name": "Japanese forces"
+  }
+ ],
+ "units": [
+  {
+   "id": "sc",
+   "side": "s",
+   "k": "infantry",
+   "name": "Soviet centre, three divisions",
+   "short": "Centre",
+   "w": 12,
+   "quote": "Three infantry divisions and a tank brigade crossed the river, supported by massed artillery and by the Soviet Air Force."
+  },
+  {
+   "id": "sart",
+   "side": "s",
+   "k": "artillery",
+   "name": "Soviet artillery and aircraft",
+   "short": "Artillery",
+   "w": 8,
+   "quote": "Soviet artillery and 557 aircraft attacked Japanese positions"
+  },
+  {
+   "id": "sl",
+   "side": "s",
+   "k": "armour",
+   "name": "Soviet armour, left wing",
+   "short": "L. armour",
+   "w": 10,
+   "quote": "This force was allocated to the Soviet left and right wings."
+  },
+  {
+   "id": "sr",
+   "side": "s",
+   "k": "armour",
+   "name": "Soviet armour, right wing",
+   "short": "R. armour",
+   "w": 10,
+   "quote": "This force was allocated to the Soviet left and right wings."
+  },
+  {
+   "id": "j23",
+   "side": "j",
+   "k": "infantry",
+   "name": "Japanese 23rd Division",
+   "short": "23rd Div.",
+   "leader": "Michitarō Komatsubara",
+   "w": 14,
+   "quote": "the Kwantung Army had only the 23rd Infantry Division"
+  },
+  {
+   "id": "jrel",
+   "side": "j",
+   "k": "infantry",
+   "name": "Japanese relief force",
+   "short": "Relief",
+   "w": 6,
+   "quote": "a Japanese counterattack to relieve the 23rd Division failed"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The Soviet attack opens with guns and aircraft",
+   "when": "05:45, 20 August 1939",
+   "text": "The Soviet and Mongolian force stood west of the Khalkhin Gol with armour on both wings. The Japanese 23rd Infantry Division held the east bank. Artillery and aircraft opened the attack.",
+   "quote": "At 05:45 on 20 August 1939, Soviet artillery and 557 aircraft attacked Japanese positions",
+   "at": {
+    "sc": [
+     24,
+     31,
+     90
+    ],
+    "sart": [
+     11,
+     31,
+     90
+    ],
+    "sl": [
+     22,
+     12,
+     90
+    ],
+    "sr": [
+     22,
+     50,
+     90
+    ],
+    "j23": [
+     56,
+     31,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "sart",
+     "j23"
+    ]
+   ]
+  },
+  {
+   "title": "The Soviet centre crosses and pins the Japanese",
+   "text": "Three infantry divisions and a tank brigade crossed the river and attacked the east bank, supported by the guns. The Japanese were held in place while the armour on the wings prepared to move.",
+   "quote": "Once the Japanese were pinned down by the attack of Soviet center units",
+   "at": {
+    "sc": [
+     45,
+     31,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "sc",
+     "j23"
+    ],
+    [
+     "sart",
+     "j23"
+    ]
+   ]
+  },
+  {
+   "title": "The armour sweeps round both flanks",
+   "text": "Soviet armoured units swept around the flanks of the Japanese and came at them from the rear. Each wing moved round its own side of the Japanese line while the centre held them in front.",
+   "quote": "Soviet armored units swept around the flanks and attacked the Japanese in the rear",
+   "at": {
+    "sl": [
+     62,
+     9,
+     90
+    ],
+    "sr": [
+     62,
+     53,
+     90
+    ]
+   },
+   "how": {
+    "sl": "feint",
+    "sr": "feint"
+   },
+   "hits": [
+    [
+     "sl",
+     "j23"
+    ],
+    [
+     "sr",
+     "j23"
+    ]
+   ]
+  },
+  {
+   "title": "The wings meet at Nomonhan",
+   "when": "25 August",
+   "text": "The two Soviet wings joined near Nomonhan, which closed a ring behind the Japanese 23rd Infantry Division and trapped it.",
+   "quote": "When the Soviet wings linked up by Nomonhan on 25 August, they trapped the Japanese 23rd Infantry Division.",
+   "at": {
+    "sl": [
+     78,
+     24,
+     180
+    ],
+    "sr": [
+     78,
+     38,
+     0
+    ]
+   }
+  },
+  {
+   "title": "The relief and the break-out fail",
+   "when": "26 and 27 August",
+   "text": "A Japanese counterattack to relieve the 23rd Division failed on 26 August. On 27 August the division tried to break out of the encirclement and also failed.",
+   "quote": "On 26 August, a Japanese counterattack to relieve the 23rd Division failed. On 27 August, the 23rd Division attempted to break out of the encirclement but failed.",
+   "at": {
+    "jrel": [
+     92,
+     31,
+     270
+    ],
+    "j23": [
+     63,
+     31,
+     90
+    ]
+   },
+   "how": {
+    "j23": "feint"
+   }
+  },
+  {
+   "title": "The encircled force is hit again and broken up",
+   "when": "By 31 August",
+   "text": "The surrounded Japanese would not surrender and were hit again with artillery and air attacks. By 31 August the Japanese on the Mongolian side of the border were destroyed.",
+   "quote": "By 31 August, Japanese forces on the Mongolian side of the border were destroyed, leaving remnants of the 23rd Division on the Manchurian side.",
+   "hits": [
+    [
+     "sart",
+     "j23"
+    ],
+    [
+     "sc",
+     "j23"
+    ],
+    [
+     "sl",
+     "j23",
+     0.15
+    ],
+    [
+     "sr",
+     "j23",
+     -0.15
+    ]
+   ]
+  }
+ ]
+}

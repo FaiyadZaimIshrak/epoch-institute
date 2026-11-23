@@ -1,0 +1,510 @@
+{
+ "slug": "battle-of-marengo",
+ "name": "Battle of Marengo",
+ "article": "battles2/wp/battle-of-marengo",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "← Alessandria",
+    "at": [
+     3,
+     6
+    ]
+   }
+  ]
+ },
+ "note": "The accounts give the places of the villages only as a triangle (Marengo west, Castel Ceriolo north, San Giuliano Vecchio east), so distances here are schematic. The accounts do not say where Kellermann's cavalry stood before its last charge; it is placed on the northern side of the Austrian column. Frimont's cavalry, which destroyed the Guard, is drawn with the Austrian left wing, with which the accounts have him act.",
+ "terrain": [
+  {
+   "k": "river",
+   "name": "Bormida",
+   "at": [
+    [
+     10,
+     4
+    ],
+    [
+     7,
+     18
+    ],
+    [
+     10,
+     34
+    ],
+    [
+     6,
+     48
+    ],
+    [
+     9,
+     58
+    ]
+   ],
+   "lab": [
+    5,
+    24
+   ],
+   "quote": "on a plain crossed by a river forming meanders, the Bormida"
+  },
+  {
+   "k": "stream",
+   "name": "Fontanone",
+   "at": [
+    [
+     26,
+     8
+    ],
+    [
+     25,
+     24
+    ],
+    [
+     27,
+     38
+    ],
+    [
+     25,
+     56
+    ]
+   ],
+   "lab": [
+    23,
+    18
+   ],
+   "quote": "A small stream, the Fontanone, passed between Marengo and the Bormida"
+  },
+  {
+   "k": "village",
+   "name": "Marengo",
+   "at": [
+    34,
+    34
+   ],
+   "lab": [
+    34,
+    29
+   ],
+   "quote": "Marengo in the west, Castel Ceriolo in the north and San Giuliano Vecchio in the east"
+  },
+  {
+   "k": "village",
+   "name": "Castel Ceriolo",
+   "at": [
+    62,
+    8
+   ],
+   "lab": [
+    62,
+    4.5
+   ],
+   "quote": "Marengo in the west, Castel Ceriolo in the north and San Giuliano Vecchio in the east"
+  },
+  {
+   "k": "village",
+   "name": "San Giuliano Vecchio",
+   "at": [
+    92,
+    34
+   ],
+   "lab": [
+    91,
+    29
+   ],
+   "quote": "Marengo in the west, Castel Ceriolo in the north and San Giuliano Vecchio in the east"
+  },
+  {
+   "k": "village",
+   "name": "La Stortiglione",
+   "at": [
+    30,
+    57
+   ],
+   "lab": [
+    30,
+    60
+   ],
+   "quote": "then heading south to tackle the French at La Stortiglione farm"
+  }
+ ],
+ "sides": [
+  {
+   "id": "a",
+   "name": "Austrians"
+  },
+  {
+   "id": "f",
+   "name": "French"
+  }
+ ],
+ "units": [
+  {
+   "id": "aright",
+   "side": "a",
+   "k": "infantry",
+   "name": "Austrian right wing",
+   "short": "A right",
+   "w": 9,
+   "quote": "pushed the French outposts back and deployed to become the Austrian right wing"
+  },
+  {
+   "id": "acentre",
+   "side": "a",
+   "k": "infantry",
+   "name": "Austrian centre",
+   "short": "A centre",
+   "leader": "Melas",
+   "w": 16,
+   "quote": "The Austrian centre (about 18,000 under Melas) advanced towards Marengo"
+  },
+  {
+   "id": "aleft",
+   "side": "a",
+   "k": "infantry",
+   "name": "Austrian left wing",
+   "short": "A left",
+   "leader": "Peter Ott",
+   "w": 10,
+   "quote": "On the Austrian left, 7,500 men under FML Peter Ott waited for the road to clear"
+  },
+  {
+   "id": "victor",
+   "side": "f",
+   "k": "infantry",
+   "name": "Victor's corps",
+   "short": "Victor",
+   "leader": "Victor",
+   "w": 12,
+   "quote": "Victor was the one who would bear the brunt of the Austrian attack"
+  },
+  {
+   "id": "kell",
+   "side": "f",
+   "k": "cavalry",
+   "name": "Kellermann's cavalry",
+   "short": "Kellermann",
+   "leader": "Kellermann",
+   "w": 8,
+   "quote": "supported on the left by François Étienne de Kellermann's cavalry"
+  },
+  {
+   "id": "lannes",
+   "side": "f",
+   "k": "infantry",
+   "name": "Lannes's corps",
+   "short": "Lannes",
+   "leader": "Lannes",
+   "w": 10,
+   "quote": "the corps of Lannes (François Watrin's division, Mainoni's brigade) together with two cavalry brigades"
+  },
+  {
+   "id": "monnier",
+   "side": "f",
+   "k": "infantry",
+   "name": "Monnier's division",
+   "short": "Monnier",
+   "leader": "Monnier",
+   "w": 9,
+   "quote": "To the east of Castel Ceriolo took position Jean-Charles Monnier's division"
+  },
+  {
+   "id": "guard",
+   "side": "f",
+   "k": "guard",
+   "name": "Consular Guard",
+   "short": "Guard",
+   "w": 6,
+   "quote": "supported by the Guard, which formed the reserve"
+  },
+  {
+   "id": "desaix",
+   "side": "f",
+   "k": "infantry",
+   "name": "Boudet's division",
+   "short": "Boudet",
+   "leader": "Desaix",
+   "w": 10,
+   "quote": "his force (6,000 men and 9 guns of Boudet's division) was not far behind"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The two armies take their ground",
+   "when": "14 June 1800, about 9 am",
+   "text": "The Austrians crossed the Bormida in three bodies. Victor held Marengo and the Fontanone with Kellermann's cavalry on his left, Lannes stood to the north-east, and Monnier and the Guard waited east of Castel Ceriolo.",
+   "quote": "The movement began about 6 am with the first shots fired around 8 am, but the attack was not fully developed until 9 am.",
+   "at": {
+    "aright": [
+     16,
+     50,
+     90
+    ],
+    "acentre": [
+     16,
+     32,
+     90
+    ],
+    "aleft": [
+     16,
+     14,
+     90
+    ],
+    "victor": [
+     38,
+     34,
+     270
+    ],
+    "kell": [
+     38,
+     50,
+     270
+    ],
+    "lannes": [
+     48,
+     22,
+     270
+    ],
+    "monnier": [
+     70,
+     12,
+     270
+    ],
+    "guard": [
+     72,
+     26,
+     270
+    ]
+   }
+  },
+  {
+   "title": "The Austrian assaults at the Fontanone fail",
+   "when": "8 am to 11 am",
+   "text": "Melas sent his divisions at Marengo across the stream one after another. Forced into a funnel by the ground, the first attack failed under fire from two sides, and the second was beaten off by 11 am.",
+   "quote": "Forced into a funnel by the bad ground and Fontanone stream, Hadik's attack came under fire from two sides and failed, with Hadik being killed.",
+   "at": {
+    "acentre": [
+     22,
+     32,
+     90
+    ],
+    "aright": [
+     22,
+     46,
+     90
+    ],
+    "aleft": [
+     26,
+     12,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "acentre",
+     "victor"
+    ]
+   ]
+  },
+  {
+   "title": "Ott takes Castel Ceriolo and presses the French right",
+   "when": "About 11:30 am",
+   "text": "Ott's leading troops took Castel Ceriolo and began to press the French right flank. Monnier's division and the Guard were brought across to extend and shore up that flank.",
+   "quote": "but soon Ott's lead units took it around 11:30 am and began putting pressure on the French right flank",
+   "at": {
+    "aleft": [
+     52,
+     12,
+     200
+    ],
+    "monnier": [
+     64,
+     22,
+     270
+    ],
+    "guard": [
+     62,
+     32,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "aleft",
+     "lannes"
+    ]
+   ]
+  },
+  {
+   "title": "Victor withdraws from Marengo",
+   "when": "About 12:30 pm to 2:30 pm",
+   "text": "The Austrians bridged the Fontanone and took Marengo. Victor could no longer hold his positions and fell back south-east to the vine belt, with Lannes mirroring the move, while O'Reilly took Stortiglione.",
+   "quote": "However, Victor could no longer hold his positions and withdrew southeast to the main vine belt",
+   "at": {
+    "acentre": [
+     32,
+     33,
+     90
+    ],
+    "aright": [
+     30,
+     52,
+     90
+    ],
+    "victor": [
+     50,
+     42,
+     270
+    ],
+    "lannes": [
+     56,
+     24,
+     270
+    ]
+   },
+   "how": {
+    "victor": "retreat",
+    "lannes": "retreat"
+   },
+   "hits": [
+    [
+     "acentre",
+     "victor"
+    ]
+   ]
+  },
+  {
+   "title": "The French fall back and the Guard is destroyed",
+   "when": "About 4:00 pm",
+   "text": "Ott defeated Monnier, and two thirds of his division retreated north-east. The Guard, sent to delay Schellenberg's column, was surprised and destroyed. The French fell back about 3 km towards San Giuliano as the Austrian centre formed a pursuit column.",
+   "quote": "The French fell back c. 3 km and attempted to regroup to hold the village of San Giuliano.",
+   "at": {
+    "aleft": [
+     58,
+     20,
+     180
+    ],
+    "monnier": [
+     80,
+     12,
+     270
+    ],
+    "victor": [
+     68,
+     44,
+     270
+    ],
+    "lannes": [
+     68,
+     30,
+     270
+    ],
+    "kell": [
+     66,
+     18,
+     270
+    ],
+    "acentre": [
+     46,
+     38,
+     90
+    ],
+    "aright": [
+     44,
+     54,
+     90
+    ]
+   },
+   "how": {
+    "monnier": "retreat",
+    "victor": "retreat",
+    "lannes": "retreat",
+    "kell": "retreat"
+   },
+   "state": {
+    "guard": "destroyed"
+   },
+   "hits": [
+    [
+     "aleft",
+     "monnier"
+    ],
+    [
+     "aleft",
+     "guard"
+    ]
+   ]
+  },
+  {
+   "title": "Desaix's force arrives and meets the column",
+   "when": "About 5:30 pm",
+   "text": "Boudet's division was deployed in front of San Giuliano and advanced in line of brigades against the head of the Austrian column, defeating its leading brigade. The column came on along the road.",
+   "quote": "Boudet's division advanced in line of brigades against the head of the Austrian column, defeating Saint-Julien's leading Austrian brigade.",
+   "at": {
+    "desaix": [
+     80,
+     36,
+     270
+    ],
+    "acentre": [
+     56,
+     38,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "desaix",
+     "acentre"
+    ]
+   ]
+  },
+  {
+   "title": "Kellermann's charge breaks the Austrian centre",
+   "text": "Kellermann's heavy cavalry charged the left flank of the Austrian grenadier brigade, which disintegrated. The Austrian centre lost heart and rushed to the rear while the French infantry line advanced westward.",
+   "quote": "Lattermann's formation was charged on its left flank by Kellermann's heavy cavalry (ca. 400 men) and disintegrated.",
+   "at": {
+    "kell": [
+     56,
+     26,
+     180
+    ],
+    "acentre": [
+     36,
+     38,
+     270
+    ],
+    "desaix": [
+     70,
+     36,
+     270
+    ],
+    "lannes": [
+     66,
+     30,
+     270
+    ],
+    "victor": [
+     62,
+     48,
+     270
+    ]
+   },
+   "how": {
+    "acentre": "rout"
+   },
+   "state": {
+    "acentre": "routed"
+   },
+   "hits": [
+    [
+     "kell",
+     "acentre"
+    ],
+    [
+     "desaix",
+     "acentre"
+    ]
+   ]
+  }
+ ]
+}

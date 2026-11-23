@@ -1,0 +1,571 @@
+{
+ "slug": "fall-of-tenochtitlan",
+ "name": "Fall of Tenochtitlan",
+ "article": "battles2/wp/fall-of-tenochtitlan",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "Texcoco →",
+    "at": [
+     94,
+     30
+    ]
+   }
+  ]
+ },
+ "note": "This plan shows the whole siege of 1521, not a single field: the blocks are divisions, fleets and the Mexica defenders. Directions follow the routes the accounts name (Tlacopan west, Coyohuacan and Iztapalapa south, Tlatelolco north, Texcoco east of the lake); they give no map, so the causeways and the camps are placed by judgement. They place Sandoval at Iztapalapa and also names the Tepeaquilla causeway for his sloops; the causeway drawn to the south-east stands for both.",
+ "terrain": [
+  {
+   "k": "lake",
+   "name": "Lake Texcoco",
+   "at": [
+    [
+     20,
+     10
+    ],
+    [
+     40,
+     6
+    ],
+    [
+     64,
+     7
+    ],
+    [
+     80,
+     14
+    ],
+    [
+     86,
+     30
+    ],
+    [
+     80,
+     42
+    ],
+    [
+     62,
+     47
+    ],
+    [
+     40,
+     47
+    ],
+    [
+     24,
+     40
+    ],
+    [
+     16,
+     28
+    ]
+   ],
+   "lab": [
+    70,
+    10
+   ],
+   "quote": "assemble and launch the sloops in the creeks flowing into Lake Texcoco"
+  },
+  {
+   "k": "road",
+   "name": "Tacuba Causeway",
+   "at": [
+    [
+     50,
+     32
+    ],
+    [
+     34,
+     30
+    ],
+    [
+     16,
+     29
+    ]
+   ],
+   "lab": [
+    31,
+    26
+   ],
+   "quote": "On the Tacuba Causeway across Lake Texcoco connecting Tenochtitlan to the mainland"
+  },
+  {
+   "k": "road",
+   "name": "Causeway to Coyohuacan",
+   "unnamed": true,
+   "at": [
+    [
+     50,
+     32
+    ],
+    [
+     44,
+     40
+    ],
+    [
+     34,
+     52
+    ]
+   ],
+   "lab": [
+    47,
+    45
+   ],
+   "quote": "south to Coyohuacan and Iztapalapa"
+  },
+  {
+   "k": "road",
+   "name": "Causeway to Iztapalapa",
+   "unnamed": true,
+   "at": [
+    [
+     50,
+     32
+    ],
+    [
+     57,
+     40
+    ],
+    [
+     66,
+     52
+    ]
+   ],
+   "lab": [
+    60,
+    46
+   ],
+   "quote": "two to Sandoval on the Tepeaquilla causeway"
+  },
+  {
+   "k": "town",
+   "name": "Tenochtitlan",
+   "at": [
+    50,
+    32
+   ],
+   "lab": [
+    50,
+    34.5
+   ],
+   "quote": "Cortés's overall plan was to trap and besiege the Aztecs within their capital"
+  },
+  {
+   "k": "town",
+   "name": "Tlatelolco",
+   "at": [
+    50,
+    16
+   ],
+   "lab": [
+    50,
+    13
+   ],
+   "quote": "advance of all three camps towards the Tlatelolco marketplace"
+  },
+  {
+   "k": "spring",
+   "name": "Chapultepec",
+   "at": [
+    8,
+    53
+   ],
+   "lab": [
+    10,
+    56
+   ],
+   "quote": "There were springs there that supplied much of the city's water by aqueduct"
+  }
+ ],
+ "sides": [
+  {
+   "id": "s",
+   "name": "Cortés and his allies"
+  },
+  {
+   "id": "a",
+   "name": "The Mexica of Tenochtitlan"
+  }
+ ],
+ "units": [
+  {
+   "id": "alvarado",
+   "side": "s",
+   "k": "infantry",
+   "name": "Alvarado's division",
+   "short": "Alvarado",
+   "leader": "Pedro de Alvarado",
+   "w": 12,
+   "quote": "Cortés put Alvarado in command of 30 horsemen, 18 arbalesters and arquebusiers, 150 Spanish foot soldiers, and 8,000 Tlaxcalan allies",
+   "leaderEntry": "pedro-de-alvarado"
+  },
+  {
+   "id": "olid",
+   "side": "s",
+   "k": "infantry",
+   "name": "Olid's division",
+   "short": "Olid",
+   "leader": "Cristóbal de Olid",
+   "w": 11,
+   "quote": "Cristóbal de Olid took 30 horsemen, 20 arbalesters and arquebusiers, 175 foot soldiers, and 8,000 Tlaxcalan allies"
+  },
+  {
+   "id": "sandoval",
+   "side": "s",
+   "k": "infantry",
+   "name": "Sandoval's division",
+   "short": "Sandoval",
+   "leader": "Gonzalo de Sandoval",
+   "w": 11,
+   "quote": "Gonzalo de Sandoval took 24 horsemen, 14 arquebusiers and arbalesters, 150 Spanish foot soldiers, and 8,000 warriors from Chalco and Huexotzinco"
+  },
+  {
+   "id": "cortes",
+   "side": "s",
+   "k": "ships",
+   "name": "Cortés's sloops",
+   "short": "Sloops",
+   "leader": "Cortés",
+   "w": 6,
+   "quote": "Cortés commanded the 13 sloops.",
+   "leaderEntry": "hernan-cortes"
+  },
+  {
+   "id": "sl_a",
+   "side": "s",
+   "k": "ships",
+   "name": "Sloops with Alvarado",
+   "short": "Sl. Alv.",
+   "w": 4,
+   "quote": "four to Alvarado, six for Olid, and two to Sandoval on the Tepeaquilla causeway"
+  },
+  {
+   "id": "sl_o",
+   "side": "s",
+   "k": "ships",
+   "name": "Sloops with Olid",
+   "short": "Sl. Olid",
+   "w": 4,
+   "quote": "four to Alvarado, six for Olid, and two to Sandoval on the Tepeaquilla causeway"
+  },
+  {
+   "id": "sl_s",
+   "side": "s",
+   "k": "ships",
+   "name": "Sloops with Sandoval",
+   "short": "Sl. Sand.",
+   "w": 4,
+   "quote": "four to Alvarado, six for Olid, and two to Sandoval on the Tepeaquilla causeway"
+  },
+  {
+   "id": "defenders",
+   "side": "a",
+   "k": "infantry",
+   "name": "Mexica army in the city",
+   "short": "Mexica",
+   "leader": "Cuauhtemoc",
+   "w": 14,
+   "quote": "Cuauhtemoc then attacked all three Spanish camps simultaneously with his entire army",
+   "leaderEntry": "cuauhtemoc"
+  },
+  {
+   "id": "canoes",
+   "side": "a",
+   "k": "ships",
+   "name": "Mexica canoe fleets",
+   "short": "Canoes",
+   "w": 10,
+   "quote": "Aztec canoe fleets worked well for attacking the Spanish"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The three camps and the sloops take their places",
+   "when": "22 May 1521",
+   "text": "Cortés sent Alvarado to Tacuba, Olid to Coyohuacan and Sandoval to Iztapalapa, each with Spanish troops and about 8,000 allies, and kept the thirteen sloops under his own command on the lake. The Mexica held the city with their canoes.",
+   "quote": "Cortés' forces took up these positions on May 22.",
+   "at": {
+    "alvarado": [
+     11,
+     29,
+     90
+    ],
+    "olid": [
+     32,
+     54,
+     45
+    ],
+    "sandoval": [
+     68,
+     54,
+     315
+    ],
+    "cortes": [
+     78,
+     30,
+     270
+    ],
+    "defenders": [
+     50,
+     24,
+     0
+    ],
+    "canoes": [
+     64,
+     22,
+     90
+    ]
+   }
+  },
+  {
+   "title": "Alvarado and Olid are pushed back at Tlacopan",
+   "text": "Alvarado and Olid marched to Chapultepec to cut the city's spring water, then tried to cross the Tlacopan causeway. The Mexica drove them back with attacks by land and by canoe.",
+   "quote": "The two generals then tried to bring their forces over the causeway at Tlacopan, resulting in the Battle of Tlacopan. The Aztec forces managed to push back the Spanish and halt this assault on the capital with a determined and hard-fought land and naval counterattack.",
+   "at": {
+    "alvarado": [
+     24,
+     29,
+     90
+    ],
+    "olid": [
+     14,
+     44,
+     90
+    ],
+    "defenders": [
+     34,
+     29,
+     270
+    ],
+    "canoes": [
+     28,
+     40,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "defenders",
+     "alvarado"
+    ],
+    [
+     "canoes",
+     "alvarado",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The sloops meet the canoes on the lake",
+   "text": "Cortés launched the thirteen sloops from Texcoco and met more than a thousand canoes. A favourable breeze let him overturn many of them and kill or capture many of their crews.",
+   "quote": "enabling him to overturn many canoes and kill or capture many",
+   "at": {
+    "cortes": [
+     76,
+     28,
+     270
+    ],
+    "canoes": [
+     64,
+     26,
+     90
+    ],
+    "defenders": [
+     50,
+     24,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "cortes",
+     "canoes"
+    ],
+    [
+     "canoes",
+     "cortes",
+     -0.3
+    ]
+   ]
+  },
+  {
+   "title": "A gap is opened and the sloops are shared out",
+   "text": "After the first battle on the lake Cortés camped with Olid's forces. He opened a gap in the causeway for the sloops and gave four to Alvarado, six to Olid and two to Sandoval, so that the canoes could no longer attack from the lake side.",
+   "quote": "Cortés decided to make an opening in the causeway so that his brigantines could help defend his forces from both sides.",
+   "at": {
+    "cortes": [
+     40,
+     43,
+     0
+    ],
+    "olid": [
+     32,
+     54,
+     45
+    ],
+    "sl_a": [
+     28,
+     35,
+     90
+    ],
+    "sl_o": [
+     30,
+     43,
+     45
+    ],
+    "sl_s": [
+     62,
+     42,
+     315
+    ]
+   }
+  },
+  {
+   "title": "The camps hold the causeways and creep forward",
+   "text": "The Spaniards stayed on the causeways at night, since the Mexica occupied any bridge they left. They razed the districts they took and used the rubble to fill the canals and gaps, which let them advance closer to the city.",
+   "quote": "using the rubble to fill up canals and gaps in the causeways to allow his infantry and cavalry to advance in formation",
+   "at": {
+    "alvarado": [
+     32,
+     29,
+     90
+    ],
+    "olid": [
+     38,
+     48,
+     35
+    ],
+    "sandoval": [
+     62,
+     48,
+     325
+    ],
+    "cortes": [
+     48,
+     38,
+     0
+    ],
+    "sl_a": [
+     36,
+     34,
+     90
+    ],
+    "sl_o": [
+     46,
+     44,
+     35
+    ],
+    "sl_s": [
+     66,
+     41,
+     315
+    ]
+   }
+  },
+  {
+   "title": "Cuauhtemoc attacks all three camps",
+   "when": "Feast day of St. John",
+   "text": "Cuauhtemoc attacked all three Spanish camps at once with his entire army. The Spanish kept their camps on the causeways.",
+   "quote": "Cuauhtemoc then attacked all three Spanish camps simultaneously with his entire army on the feast day of St. John.",
+   "at": {
+    "defenders": [
+     50,
+     28,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "defenders",
+     "alvarado"
+    ],
+    [
+     "defenders",
+     "olid"
+    ],
+    [
+     "defenders",
+     "sandoval"
+    ]
+   ]
+  },
+  {
+   "title": "The camps close on Tlatelolco and the canoes are cut off",
+   "text": "The three camps advanced together towards the Tlatelolco marketplace, and the defending army was destroyed. As hundreds of canoes fled the city, Cortés sent the sloops to intercept them.",
+   "quote": "Cortés ordered Sandoval to attack that part of the city in which Cuauhtémoc had retreated. As hundreds of canoes filled the lake fleeing the doomed city, Cortés sent his brigantines out to intercept them.",
+   "at": {
+    "alvarado": [
+     42,
+     18,
+     60
+    ],
+    "sl_a": [
+     32,
+     32,
+     90
+    ],
+    "olid": [
+     38,
+     38,
+     35
+    ],
+    "sl_o": [
+     28,
+     42,
+     45
+    ],
+    "sandoval": [
+     62,
+     38,
+     325
+    ],
+    "cortes": [
+     70,
+     26,
+     0
+    ],
+    "sl_s": [
+     66,
+     31,
+     0
+    ],
+    "canoes": [
+     78,
+     12,
+     90
+    ]
+   },
+   "how": {
+    "canoes": "rout"
+   },
+   "state": {
+    "defenders": "destroyed",
+    "canoes": "routed"
+   },
+   "hits": [
+    [
+     "alvarado",
+     "defenders"
+    ],
+    [
+     "olid",
+     "defenders"
+    ],
+    [
+     "sandoval",
+     "defenders"
+    ],
+    [
+     "cortes",
+     "canoes"
+    ],
+    [
+     "sl_s",
+     "canoes",
+     0.2
+    ]
+   ]
+  }
+ ]
+}

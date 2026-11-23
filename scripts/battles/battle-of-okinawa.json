@@ -1,0 +1,612 @@
+{
+ "slug": "battle-of-okinawa",
+ "name": "Battle of Okinawa",
+ "article": "battles2/wp/battle-of-okinawa",
+ "field": {
+  "north": 0,
+  "ground": "sea"
+ },
+ "note": "This plan shows the whole operation, not a single field: the formations are armies, corps and divisions, and the ground is the island. Only some of the units are drawn, and the island's outline is schematic. The accounts do not say where the American divisions lay offshore before the landing, so they are placed off the Hagushi beaches; the Thirty-Second Army is placed at Shuri, where its defences lay.",
+ "terrain": [
+  {
+   "k": "land",
+   "name": "Okinawa",
+   "at": [
+    [
+     60,
+     5
+    ],
+    [
+     67,
+     7
+    ],
+    [
+     69,
+     15
+    ],
+    [
+     66,
+     24
+    ],
+    [
+     66,
+     32
+    ],
+    [
+     70,
+     40
+    ],
+    [
+     70,
+     50
+    ],
+    [
+     62,
+     58
+    ],
+    [
+     46,
+     58
+    ],
+    [
+     36,
+     54
+    ],
+    [
+     36,
+     46
+    ],
+    [
+     42,
+     38
+    ],
+    [
+     46,
+     30
+    ],
+    [
+     48,
+     20
+    ],
+    [
+     45,
+     17
+    ],
+    [
+     41,
+     12
+    ],
+    [
+     45,
+     8
+    ],
+    [
+     53,
+     8
+    ]
+   ],
+   "lab": [
+    62,
+    20
+   ],
+   "quote": "fought on the island of Okinawa by the United States Army"
+  },
+  {
+   "k": "land",
+   "name": "Kerama Islands",
+   "at": [
+    [
+     6,
+     36
+    ],
+    [
+     16,
+     35
+    ],
+    [
+     18,
+     41
+    ],
+    [
+     10,
+     43
+    ],
+    [
+     5,
+     40
+    ]
+   ],
+   "lab": [
+    11,
+    46
+   ],
+   "quote": "Kerama Islands, 15 mi (24 km) west of Okinawa on 26 March"
+  },
+  {
+   "k": "land",
+   "name": "Ie Shima",
+   "at": [
+    [
+     29,
+     6
+    ],
+    [
+     37,
+     4
+    ],
+    [
+     38,
+     10
+    ],
+    [
+     31,
+     12
+    ],
+    [
+     27,
+     9
+    ]
+   ],
+   "lab": [
+    32,
+    14
+   ],
+   "quote": "Ie Shima, a small island off the western end of the peninsula"
+  },
+  {
+   "k": "mountain",
+   "name": "Mount Yaedake",
+   "at": [
+    [
+     42,
+     10
+    ],
+    [
+     47,
+     9
+    ],
+    [
+     50,
+     12
+    ],
+    [
+     48,
+     16
+    ],
+    [
+     44,
+     15
+    ]
+   ],
+   "lab": [
+    48,
+    18
+   ],
+   "quote": "the Japanese defenses concentrated on Mount Yaedake, a twisted mass of rocky ridges and ravines on the center of the peninsula"
+  },
+  {
+   "k": "point",
+   "name": "Hagushi beaches",
+   "at": [
+    46,
+    29
+   ],
+   "lab": [
+    38,
+    25
+   ],
+   "quote": "on the Hagushi beaches on the western coast of Okinawa on 1 April"
+  },
+  {
+   "k": "point",
+   "name": "Minatoga beaches",
+   "at": [
+    70,
+    46
+   ],
+   "lab": [
+    70,
+    43
+   ],
+   "quote": "off the Minatoga beaches on the southeastern coast"
+  },
+  {
+   "k": "ridge",
+   "name": "Kakazu Ridge",
+   "at": [
+    [
+     44,
+     38
+    ],
+    [
+     50,
+     36.5
+    ],
+    [
+     54,
+     38
+    ],
+    [
+     51,
+     40.5
+    ],
+    [
+     45,
+     40.5
+    ]
+   ],
+   "lab": [
+    49,
+    35
+   ],
+   "quote": "two hills with a connecting saddle that formed part of Shuri's outer defenses"
+  },
+  {
+   "k": "town",
+   "name": "Shuri Castle",
+   "at": [
+    53,
+    43.5
+   ],
+   "lab": [
+    58,
+    44
+   ],
+   "quote": "Shuri Castle had been shelled by the battleship USS Mississippi for three days"
+  },
+  {
+   "k": "town",
+   "name": "Naha",
+   "at": [
+    41,
+    47
+   ],
+   "lab": [
+    41,
+    46
+   ],
+   "quote": "cautiously occupied the ruins of Naha, the largest city on the island"
+  },
+  {
+   "k": "point",
+   "name": "Oroku Peninsula",
+   "at": [
+    41,
+    53
+   ],
+   "lab": [
+    30,
+    57
+   ],
+   "quote": "overlooking the Okinawa Naval Base in the Oroku Peninsula"
+  },
+  {
+   "k": "town",
+   "name": "Itoman",
+   "at": [
+    47,
+    50
+   ],
+   "lab": [
+    47,
+    49
+   ],
+   "quote": "a small pocket in the far south of the island to the southeast of Itoman"
+  },
+  {
+   "k": "point",
+   "name": "Kiyan Peninsula",
+   "at": [
+    65,
+    52
+   ],
+   "lab": [
+    66,
+    57
+   ],
+   "quote": "its last defense line on the Kiyan Peninsula"
+  }
+ ],
+ "sides": [
+  {
+   "id": "a",
+   "name": "United States Tenth Army and fleet"
+  },
+  {
+   "id": "j",
+   "name": "Japanese Thirty-Second Army"
+  }
+ ],
+ "units": [
+  {
+   "id": "tf58",
+   "side": "a",
+   "k": "ships",
+   "name": "Task Force 58",
+   "short": "TF 58",
+   "w": 10,
+   "quote": "Task Force 58, deployed to the east of Okinawa with a picket group of 6 to 8 destroyers"
+  },
+  {
+   "id": "d77",
+   "side": "a",
+   "k": "infantry",
+   "name": "77th Infantry Division",
+   "short": "77th",
+   "w": 7,
+   "quote": "The first Americans ashore were soldiers of the 77th Infantry Division who landed in the Kerama Islands, 15 mi"
+  },
+  {
+   "id": "xxiv",
+   "side": "a",
+   "k": "infantry",
+   "name": "XXIV Corps (96th and 7th)",
+   "short": "XXIV",
+   "w": 12,
+   "quote": "the US Army 96th and 7th Infantry Divisions wheeled south across the narrow isthmus of Okinawa"
+  },
+  {
+   "id": "m6",
+   "side": "a",
+   "k": "infantry",
+   "name": "6th Marine Division",
+   "short": "6th Mar",
+   "w": 9,
+   "quote": "The 6th Marine Division headed up the Ishikawa Isthmus and by 7 April had sealed off the Motobu Peninsula"
+  },
+  {
+   "id": "m2",
+   "side": "a",
+   "k": "infantry",
+   "name": "2nd Marine Division",
+   "short": "2nd Mar",
+   "w": 8,
+   "quote": "The 2nd Marine Division conducted a demonstration off the Minatoga beaches on the southeastern coast"
+  },
+  {
+   "id": "m1",
+   "side": "a",
+   "k": "infantry",
+   "name": "1st Marine Division",
+   "short": "1st Mar",
+   "w": 9,
+   "quote": "the 1st Marine Division relieved the 27th Infantry Division and the 77th Infantry Division relieved the 96th"
+  },
+  {
+   "id": "m6x",
+   "side": "a",
+   "k": "infantry",
+   "name": "6th Marine Div. elements",
+   "short": "6th elts",
+   "w": 5,
+   "quote": "On 4 June, elements of the 6th Marine Division launched an amphibious assault on the peninsula"
+  },
+  {
+   "id": "j32",
+   "side": "j",
+   "k": "infantry",
+   "name": "Thirty-Second Army",
+   "short": "32nd Army",
+   "leader": "Mitsuru Ushijima",
+   "w": 13,
+   "quote": "Primary resistance was to be led in the south by Lieutenant General Mitsuru Ushijima"
+  },
+  {
+   "id": "udo",
+   "side": "j",
+   "k": "infantry",
+   "name": "Udo Force",
+   "short": "Udo",
+   "leader": "Takehiko Udo",
+   "w": 8,
+   "quote": "the bulk of the Japanese forces in the north (codenamed Udo Force) were cornered on the Motobu Peninsula"
+  },
+  {
+   "id": "navy",
+   "side": "j",
+   "k": "infantry",
+   "name": "Japanese naval troops",
+   "short": "Navy",
+   "leader": "Minoru Ōta",
+   "w": 6,
+   "quote": "approximately 4,000 holed up at the underground headquarters on the hillside overlooking the Okinawa Naval Base in the Oroku Peninsula"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The Kerama Islands are taken",
+   "when": "26 March 1945",
+   "text": "Soldiers of the 77th Infantry Division landed in the Kerama Islands, 15 miles west of Okinawa. Task Force 58 lay to the east of the island, the Thirty-Second Army held the south and Udo Force the north.",
+   "quote": "The first Americans ashore were soldiers of the 77th Infantry Division who landed in the Kerama Islands, 15 mi (24 km) west of Okinawa on 26 March.",
+   "at": {
+    "tf58": [
+     82,
+     28,
+     270
+    ],
+    "d77": [
+     12,
+     39,
+     90
+    ],
+    "xxiv": [
+     34,
+     30,
+     90
+    ],
+    "m6": [
+     34,
+     16,
+     90
+    ],
+    "m2": [
+     77,
+     50,
+     270
+    ],
+    "j32": [
+     57,
+     47,
+     0
+    ],
+    "udo": [
+     46,
+     12,
+     180
+    ],
+    "navy": [
+     41,
+     50,
+     0
+    ]
+   }
+  },
+  {
+   "title": "The main landing at the Hagushi beaches",
+   "when": "1 April 1945",
+   "text": "The XXIV Corps and the III Amphibious Corps landed on the Hagushi beaches on the west coast. Off the Minatoga beaches in the south-east the 2nd Marine Division made a demonstration to deceive the Japanese.",
+   "quote": "The main landing was made by the XXIV Corps and the III Amphibious Corps on the Hagushi beaches on the western coast of Okinawa on 1 April.",
+   "at": {
+    "xxiv": [
+     50,
+     30,
+     90
+    ],
+    "m6": [
+     53,
+     18,
+     90
+    ],
+    "m2": [
+     73,
+     47,
+     270
+    ]
+   },
+   "how": {
+    "m2": "feint"
+   }
+  },
+  {
+   "title": "The Marines close the north and the 77th takes Ie Shima",
+   "when": "7 to 21 April 1945",
+   "text": "The 6th Marine Division sealed off the Motobu Peninsula, where Udo Force was cornered around Mount Yaedake, and cleared it on 18 April. The 77th Division assaulted Ie Shima on 16 April.",
+   "quote": "By this point, the bulk of the Japanese forces in the north (codenamed Udo Force) were cornered on the Motobu Peninsula.",
+   "at": {
+    "m6": [
+     54,
+     14,
+     270
+    ],
+    "d77": [
+     33,
+     8,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "m6",
+     "udo"
+    ]
+   ]
+  },
+  {
+   "title": "The advance south meets Kakazu Ridge",
+   "when": "April 1945",
+   "text": "The 96th and 7th Infantry Divisions wheeled south and met Japanese soldiers in fortified caves at Kakazu Ridge, part of Shuri's outer defences. The advance went on, with heavy casualties on both sides.",
+   "quote": "The American advance was inexorable but resulted in a high number of casualties on both sides.",
+   "at": {
+    "xxiv": [
+     52,
+     32,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "xxiv",
+     "j32",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "Ushijima attacks across the front",
+   "when": "12 to 14 April 1945",
+   "text": "Ushijima, influenced by General Chō, took the offensive and the Thirty-Second Army attacked American positions across the whole front on the evening of 12 April. The assaults of the following nights were repulsed.",
+   "quote": "On the evening of 12 April, the 32nd Army attacked American positions across the entire front.",
+   "at": {
+    "j32": [
+     55,
+     40,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "j32",
+     "xxiv"
+    ]
+   ]
+  },
+  {
+   "title": "Shuri is left and the army withdraws south",
+   "when": "24 to 30 May 1945",
+   "text": "The 6th Marine Division occupied the ruins of Naha, and Marines of the 1st Marine Division took Shuri Castle on 29 May, which the Thirty-Second Army had left. The army moved nearly 30,000 men to the Kiyan Peninsula.",
+   "quote": "The 32nd Army was able to move nearly 30,000 personnel into its last defense line on the Kiyan Peninsula",
+   "at": {
+    "j32": [
+     56,
+     51,
+     0
+    ],
+    "m6": [
+     43,
+     43,
+     180
+    ],
+    "m1": [
+     57,
+     41,
+     180
+    ]
+   },
+   "how": {
+    "j32": "retreat"
+   }
+  },
+  {
+   "title": "The last pocket in the south",
+   "when": "4 to 22 June 1945",
+   "text": "Elements of the 6th Marine Division landed on the Oroku Peninsula, and the naval troops died by suicide in their tunnels on 13 June. By 17 June the rest of the Thirty-Second Army was in a small pocket in the far south.",
+   "quote": "By 17 June, the remnants of Ushijima's shattered 32nd Army were pushed into a small pocket in the far south of the island to the southeast of Itoman.",
+   "at": {
+    "m6x": [
+     32,
+     51,
+     90
+    ],
+    "j32": [
+     53,
+     55,
+     0
+    ]
+   },
+   "state": {
+    "navy": "destroyed"
+   },
+   "hits": [
+    [
+     "m6x",
+     "navy"
+    ],
+    [
+     "m1",
+     "j32",
+     0.25
+    ]
+   ]
+  }
+ ]
+}

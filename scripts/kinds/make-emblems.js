@@ -66,6 +66,15 @@ const EMBLEMS = [
   ['Muhammad', 'محمد', '"Segoe UI", Tahoma, sans-serif', 150], ['Ali ibn Abi Talib', 'علي', '"Segoe UI", Tahoma, sans-serif', 170],
   // battles with no picture that fits (22 Nov 2026): the place's name in Arabic, as their articles give it
   ['Battle of Badr', 'بدر', '"Segoe UI", Tahoma, sans-serif', 170], ['Battle of Ain Jalut', 'عين جالوت', '"Segoe UI", Tahoma, sans-serif', 96],
+  // battles of the second wave (23 Nov 2026) whose entry picture is a map, a collage, a later engraving or shows Muhammad:
+  // the place's name in Arabic for Karbala and Uhud, otherwise a letter (of the place's own script where it has one)
+  ['Battle of Karbala', 'كربلاء', '"Segoe UI", Tahoma, sans-serif', 110], ['Battle of Uhud', 'أحد', '"Segoe UI", Tahoma, sans-serif', 170], ['Battle of Kursk', 'K'],
+  ['Battle of Salamis', 'Σ'], ['Battle of Thermopylae', 'Θ'], ['Battle of Carrhae', 'C'],
+  ['Battle of Guandu', '官', 'serif-cjk', 220], ['Battle of Jutland', 'J'], ['Battle of Magnesia', 'M'],
+  ['Battle of Lake Trasimene', 'T'], ['Battle of Pydna', 'Π'], ['Battle of Raphia', 'R'],
+  ['Battle of Verdun', 'V'], ['Battle of Thapsus', 'T'], ['Battle of Caporetto', 'C'],
+  ['Battle of Warsaw (1920)', 'W'], ['Siege of Jerusalem (1099)', 'J'], ['Battle of Myriokephalon', 'Μ'],
+  ['Battle of Alarcos', 'A'], ['Battle of Yamen', '厓', 'serif-cjk', 220],
   ['Laozi', '老子', 'serif-cjk', 150], ['Zoroaster', 'Z'],
   // sacred texts (works3, 22 Nov 2026): a word or sign of each text's own script; the Pali Canon and the Avesta have a
   // letter (Pali is written in many scripts, and no system font draws Avestan)

@@ -1,0 +1,384 @@
+{
+ "slug": "battle-of-marignano",
+ "name": "Battle of Marignano",
+ "article": "battles2/wp/battle-of-marignano",
+ "field": {
+  "north": null,
+  "edges": [
+   {
+    "name": "← Milan",
+    "at": [
+     8,
+     58
+    ]
+   }
+  ]
+ },
+ "note": "The accounts give no compass directions for the field, so the plan is drawn with the Swiss coming from the left and the French facing them. The French guns are said to have stood in a crescent along the south-eastern and eastern edges of the vanguard; they are drawn here in front of the Landsknecht square, where the Swiss charged them. The accounts do not say where Bourbon's cavalry stood beyond the French right, nor where the Swiss second and third divisions stood, nor what troops the Venetians brought; Alencon's division is placed on the French left because the accounts call it the left-wing division when the Swiss attacked it. The fighting ran over two days and a night, and the Swiss withdrawal in a single square is drawn as three blocks falling back together.",
+ "terrain": [
+  {
+   "k": "village",
+   "name": "Marignano",
+   "at": [
+    80,
+    10
+   ],
+   "quote": "the little burnt-out village of Marignano on a plain dotted with vineyards"
+  }
+ ],
+ "sides": [
+  {
+   "id": "f",
+   "name": "French army and allies"
+  },
+  {
+   "id": "s",
+   "name": "Swiss"
+  }
+ ],
+ "units": [
+  {
+   "id": "xbow",
+   "side": "f",
+   "k": "archers",
+   "name": "French crossbowmen",
+   "short": "Crossbows",
+   "w": 8,
+   "quote": "crossbowmen (protected by earthworks and pavise shields) on the left"
+  },
+  {
+   "id": "lands",
+   "side": "f",
+   "k": "pikes",
+   "name": "Landsknecht square",
+   "short": "Landsknt.",
+   "w": 12,
+   "quote": "a large square of Landsknecht infantry at the center"
+  },
+  {
+   "id": "arq",
+   "side": "f",
+   "k": "infantry",
+   "name": "French arquebusiers",
+   "short": "Arquebus",
+   "w": 8,
+   "quote": "arquebusiers on the right, covering the artillery"
+  },
+  {
+   "id": "guns",
+   "side": "f",
+   "k": "artillery",
+   "name": "French grand battery",
+   "short": "Guns",
+   "w": 10,
+   "quote": "the artillery, which was arrayed in a crescent shape along the south-eastern and eastern edges of the formation"
+  },
+  {
+   "id": "bourbon",
+   "side": "f",
+   "k": "cavalry",
+   "name": "Bourbon's cavalry",
+   "short": "Bourbon",
+   "w": 7,
+   "leader": "Duke of Bourbon",
+   "quote": "cavalry from the French right counter-attacked their flank, driving the forlorn hope back to the shelter of the Swiss vanguard",
+   "leaderEntry": "charles-iii-duke-of-bourbon"
+  },
+  {
+   "id": "king",
+   "side": "f",
+   "k": "cavalry",
+   "name": "King's cavalry, Black Band",
+   "short": "King",
+   "w": 12,
+   "leader": "Francis I",
+   "quote": "Francis I of France personally led a force of cavalry and 6,000 Landsknechts recruited from the Netherlands known as the Black Band of Gueldern",
+   "leaderEntry": "francis-i-of-france"
+  },
+  {
+   "id": "alencon",
+   "side": "f",
+   "k": "guard",
+   "name": "French rearguard",
+   "short": "Alencon",
+   "w": 10,
+   "leader": "Duke of Alençon",
+   "quote": "the rearguard, a further kilometer to the center's rear, was led by the King's brother-in-law, Charles IV, Duke of Alençon"
+  },
+  {
+   "id": "ven",
+   "side": "f",
+   "k": "infantry",
+   "name": "Venetian allies",
+   "short": "Venetians",
+   "w": 10,
+   "leader": "Bartolomeo d'Alviano",
+   "quote": "Only the mid-morning arrival of allied Venetian forces commanded by the condottiero Bartolomeo d'Alviano turned the tide against the Swiss"
+  },
+  {
+   "id": "van",
+   "side": "s",
+   "k": "pikes",
+   "name": "Swiss vanguard",
+   "short": "Vanguard",
+   "w": 12,
+   "quote": "the Swiss approached the French in three divisions of their own, each a dense mass of pikemen"
+  },
+  {
+   "id": "div2",
+   "side": "s",
+   "k": "pikes",
+   "name": "Swiss second division",
+   "short": "2nd div.",
+   "w": 10,
+   "quote": "the Swiss approached the French in three divisions of their own, each a dense mass of pikemen"
+  },
+  {
+   "id": "div3",
+   "side": "s",
+   "k": "pikes",
+   "name": "Swiss third division",
+   "short": "3rd div.",
+   "w": 10,
+   "quote": "the Swiss approached the French in three divisions of their own, each a dense mass of pikemen"
+  },
+  {
+   "id": "hope",
+   "side": "s",
+   "k": "pikes",
+   "name": "Swiss forlorn hope",
+   "short": "Forlorn",
+   "w": 5,
+   "quote": "detaching from the Swiss vanguard phalanx, and charging the grand battery"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The French form up and the Swiss approach",
+   "when": "Close to sunset, 13 September 1515",
+   "text": "The French, who had not expected battle, formed in three divisions. The vanguard held two shallow rises with crossbowmen, a Landsknecht square and arquebusiers, the king's force stood two kilometres behind, and the Swiss came on in three divisions.",
+   "quote": "The French army quickly sprang into action, forming up in three divisions.",
+   "at": {
+    "xbow": [
+     40,
+     46,
+     270
+    ],
+    "lands": [
+     40,
+     31,
+     270
+    ],
+    "arq": [
+     40,
+     17,
+     270
+    ],
+    "guns": [
+     35,
+     31,
+     270
+    ],
+    "bourbon": [
+     48,
+     9,
+     270
+    ],
+    "king": [
+     62,
+     31,
+     270
+    ],
+    "alencon": [
+     71,
+     40,
+     270
+    ],
+    "van": [
+     22,
+     31,
+     90
+    ],
+    "div2": [
+     22,
+     17,
+     90
+    ],
+    "div3": [
+     22,
+     45,
+     90
+    ]
+   }
+  },
+  {
+   "title": "The Swiss forlorn hope charges the guns",
+   "text": "A forlorn hope detached from the Swiss vanguard and charged the grand battery with lowered pikes. It drove back the Landsknecht defenders and captured a few of the guns, the speed of its advance making the French fire ineffective.",
+   "quote": "At first the Swiss attack succeeded in driving back the landsknecht defenders and capturing a few of the guns",
+   "at": {
+    "hope": [
+     30,
+     31,
+     90
+    ],
+    "lands": [
+     44,
+     31,
+     270
+    ]
+   },
+   "how": {
+    "lands": "retreat"
+   },
+   "hits": [
+    [
+     "hope",
+     "guns"
+    ]
+   ]
+  },
+  {
+   "title": "Bourbon's cavalry strikes the flank",
+   "text": "Cavalry from the French right counter-attacked the forlorn hope's flank and drove it back to the shelter of the Swiss vanguard.",
+   "quote": "cavalry from the French right counter-attacked their flank, driving the forlorn hope back to the shelter of the Swiss vanguard",
+   "at": {
+    "bourbon": [
+     29,
+     23,
+     270
+    ],
+    "hope": [
+     27,
+     31,
+     90
+    ]
+   },
+   "how": {
+    "hope": "retreat"
+   },
+   "hits": [
+    [
+     "bourbon",
+     "hope"
+    ]
+   ]
+  },
+  {
+   "title": "Night fighting by moonlight",
+   "text": "Smoke and darkness hid the fighting. French cavalry charges, often led by the king, threw back temporary Swiss gains, and the pursuing horse of the first counter-attack fell back a full kilometre after heavy losses.",
+   "quote": "Furious French cavalry charges, often led by the king himself, with Bayard at his side, succeeded time and again in throwing back temporary Swiss gains.",
+   "at": {
+    "bourbon": [
+     47,
+     9,
+     270
+    ],
+    "king": [
+     50,
+     38,
+     270
+    ]
+   },
+   "how": {
+    "bourbon": "retreat"
+   },
+   "state": {
+    "hope": "gone"
+   },
+   "hits": [
+    [
+     "king",
+     "van",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The Swiss charge the guns again at dawn",
+   "when": "The morning of 14 September",
+   "text": "The Swiss reformed their largest phalanx and charged the reassembled battery. Point-blank cannon fire slowed it and stopped it pushing farther, though the Landsknechts were again driven back, and a cavalry charge led by Bayard forced the Swiss to give ground.",
+   "quote": "Still another French cavalry charge, this time led by Bayard, forced the attacking Swiss to give ground.",
+   "at": {
+    "van": [
+     30,
+     31,
+     90
+    ],
+    "lands": [
+     46,
+     31,
+     270
+    ]
+   },
+   "how": {
+    "lands": "retreat"
+   },
+   "hits": [
+    [
+     "van",
+     "guns"
+    ],
+    [
+     "guns",
+     "van",
+     0.15
+    ],
+    [
+     "king",
+     "van",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The Swiss turn on the French left",
+   "text": "Baffled by the artillery, the Swiss turned their assault on Alençon's left-wing division. They made some headway, and the attack was then thrown back.",
+   "quote": "After making some headway, this attack too was thrown back.",
+   "at": {
+    "div3": [
+     59,
+     46,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "div3",
+     "alencon"
+    ]
+   ]
+  },
+  {
+   "title": "The Venetians arrive and the Swiss withdraw",
+   "when": "Mid-morning",
+   "text": "The Venetian forces under d'Alviano arrived and turned the tide. With their attacks repulsed everywhere, the Swiss gave ground and withdrew in a single large open square.",
+   "quote": "they grudgingly gave ground and withdrew by forming a single gigantic open square, maintaining extraordinary discipline in their retreat",
+   "at": {
+    "ven": [
+     82,
+     54,
+     270
+    ],
+    "van": [
+     20,
+     31,
+     90
+    ],
+    "div2": [
+     22,
+     17,
+     90
+    ],
+    "div3": [
+     20,
+     45,
+     90
+    ]
+   },
+   "how": {
+    "van": "retreat",
+    "div3": "retreat"
+   }
+  }
+ ]
+}

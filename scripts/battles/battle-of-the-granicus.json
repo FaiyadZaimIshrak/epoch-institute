@@ -1,0 +1,397 @@
+{
+ "slug": "battle-of-the-granicus",
+ "name": "Battle of the Granicus",
+ "article": "battles2/wp/battle-of-the-granicus",
+ "field": {
+  "north": null,
+  "edges": []
+ },
+ "note": "The directions are not given, so the plan is not oriented to north: the Macedonians are drawn on the west bank facing east, the Persians on the east bank. The river is drawn straight, and the ridge behind the Persian cavalry is placed behind their line; the accounts do not say exactly where it lay. Historians disagree on the line Alexander's own charge took across the river (towards the Persian centre, or straight at the left wing); the plan shows it against the Persian left wing. Diodorus Siculus gives a fundamentally different account (a crossing at dawn on the next day); the plan follows Arrian and Plutarch. The accounts do not place the Macedonian light cavalry's squadrons or the archers more exactly than by wing, so they are shown with their wings, and the accounts do not say where the Persian cavalry units stood within each wing.",
+ "terrain": [
+  {
+   "k": "river",
+   "name": "Granicus",
+   "at": [
+    [
+     50,
+     2
+    ],
+    [
+     47,
+     20
+    ],
+    [
+     51,
+     38
+    ],
+    [
+     47,
+     60
+    ]
+   ],
+   "lab": [
+    53,
+    5
+   ],
+   "quote": "the Persian army took up position at the eastern bank of the Granicus River and waited for Alexander's attack"
+  },
+  {
+   "k": "ridge",
+   "name": "Ridge",
+   "unnamed": true,
+   "at": [
+    [
+     80,
+     22
+    ],
+    [
+     88,
+     20
+    ],
+    [
+     94,
+     26
+    ],
+    [
+     94,
+     42
+    ],
+    [
+     88,
+     48
+    ],
+    [
+     80,
+     44
+    ],
+    [
+     78,
+     32
+    ]
+   ],
+   "lab": [
+    79,
+    46
+   ],
+   "quote": "the ancient historians describe a long continuous ridge where the Greek mercenary infantry of the Persians was posted"
+  }
+ ],
+ "sides": [
+  {
+   "id": "m",
+   "name": "Macedonians"
+  },
+  {
+   "id": "p",
+   "name": "Persian satraps' army"
+  }
+ ],
+ "units": [
+  {
+   "id": "lcav",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Macedonian left-wing cavalry",
+   "short": "L cavalry",
+   "leader": "Parmenion",
+   "w": 10,
+   "quote": "Alexander placed Parmenion in overall command of the Foot Companions of Philip and Meleager, and the cavalry on the left wing."
+  },
+  {
+   "id": "phalanx",
+   "side": "m",
+   "k": "pikes",
+   "name": "Foot Companions",
+   "short": "Phalanx",
+   "w": 14,
+   "quote": "There were six units of Foot Companions: led by Perdiccas, Coenus, Craterus, Amyntas the son of Andromenes, Philip the son of Amyntas, and Meleager."
+  },
+  {
+   "id": "hyp",
+   "side": "m",
+   "k": "infantry",
+   "name": "Hypaspists",
+   "short": "Hypaspist",
+   "leader": "Nicanor",
+   "w": 6,
+   "quote": "After them came the hypaspists commanded by Nicanor, who guarded the right flank of the Foot Companions next to them."
+  },
+  {
+   "id": "amyn",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Vanguard cavalry",
+   "short": "Vanguard",
+   "leader": "Amyntas",
+   "w": 8,
+   "quote": "The prodromoi, the Paeonian cavalry and the eighth squadron of the Companion cavalry under Socrates were posted next to them."
+  },
+  {
+   "id": "right",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Companion cavalry, right wing",
+   "short": "Companions",
+   "leader": "Alexander",
+   "w": 9,
+   "quote": "From the right wing to the left, Alexander placed seven of his eight squadrons of Companion cavalry, along with the archers and Agrianians, under the command of Philotas.",
+   "leaderEntry": "alexander-the-great"
+  },
+  {
+   "id": "pright",
+   "side": "p",
+   "k": "cavalry",
+   "name": "Persian right-wing cavalry",
+   "short": "P right",
+   "w": 10,
+   "quote": "The right wing consisted of 1,000 Median cavalry, 2,000 cavalry headed by Rheomithres and another unit of 2,000 Bactrian horse."
+  },
+  {
+   "id": "pcen",
+   "side": "p",
+   "k": "cavalry",
+   "name": "Persian centre cavalry",
+   "short": "P centre",
+   "w": 10,
+   "quote": "The centre was held by cavalry of unspecified ethnicity."
+  },
+  {
+   "id": "pleft",
+   "side": "p",
+   "k": "cavalry",
+   "name": "Persian left-wing cavalry",
+   "short": "P left",
+   "leader": "Memnon",
+   "w": 12,
+   "quote": "The left wing was held by Memnon and Arsames, each with their own cavalry units."
+  },
+  {
+   "id": "merc",
+   "side": "p",
+   "k": "infantry",
+   "name": "Greek mercenary infantry",
+   "short": "Mercenary",
+   "leader": "Omares",
+   "w": 12,
+   "quote": "The Greek mercenaries were placed behind the cavalry and led by the Persian Omares."
+  }
+ ],
+ "phases": [
+  {
+   "title": "Both armies drawn up on either side of the river",
+   "text": "The Persian cavalry stood along the east bank with the Greek mercenaries behind it. Alexander took the right wing of the Macedonian line and Parmenion the left, and the Persians moved cavalry to their own left when they saw Alexander opposite it.",
+   "quote": "The Persians stationed their cavalry along the bank of the Granicus.",
+   "at": {
+    "lcav": [
+     38,
+     10,
+     90
+    ],
+    "phalanx": [
+     38,
+     25,
+     90
+    ],
+    "hyp": [
+     38,
+     36,
+     90
+    ],
+    "amyn": [
+     38,
+     44,
+     90
+    ],
+    "right": [
+     38,
+     53.5,
+     90
+    ],
+    "pright": [
+     60,
+     20,
+     270
+    ],
+    "pcen": [
+     60,
+     38,
+     270
+    ],
+    "pleft": [
+     60,
+     52,
+     270
+    ],
+    "merc": [
+     86,
+     34,
+     270
+    ]
+   }
+  },
+  {
+   "title": "Amyntas attacks the Persian left wing",
+   "text": "After a moment of silence Alexander ordered Amyntas to attack the Persian left wing, with the squadron of Socrates at the front. The Persians answered the charge with volleys of javelins.",
+   "quote": "Alexander then ordered Amyntas, son of Arrhabeus, to attack the Persian left wing with the Companion cavalry squadron of Socrates",
+   "at": {
+    "amyn": [
+     51,
+     46,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "amyn",
+     "pleft"
+    ],
+    [
+     "pleft",
+     "amyn",
+     -0.3
+    ]
+   ]
+  },
+  {
+   "title": "Amyntas's force is pushed back",
+   "text": "Outnumbered, and facing Persians on higher ground at the top of the bank, the vanguard suffered losses and retreated towards Alexander. Alexander now attacked with the remaining Companion cavalry of the right wing.",
+   "quote": "The Macedonians suffered losses and retreated towards Alexander, who now attacked with the remaining Companion cavalry of the right wing.",
+   "at": {
+    "amyn": [
+     40,
+     44,
+     270
+    ]
+   },
+   "how": {
+    "amyn": "retreat"
+   },
+   "hits": [
+    [
+     "pleft",
+     "amyn",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "Alexander crosses and fights on the far bank",
+   "text": "Alexander and his men engaged the Persians and their leaders in a hard-fought fight. Other Macedonian cavalry established a foothold on the bank and reinforced his force.",
+   "quote": "The other Macedonian cavalry had by then established a foothold on the river bank and reinforced Alexander's force.",
+   "at": {
+    "right": [
+     54,
+     52,
+     90
+    ],
+    "amyn": [
+     51,
+     43,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "right",
+     "pleft"
+    ],
+    [
+     "pleft",
+     "right",
+     -0.3
+    ]
+   ]
+  },
+  {
+   "title": "The Persian cavalry is driven back and breaks",
+   "text": "The Macedonian cavalry and the light infantry among them forced the Persian cavalry back, first on the left where Alexander was fighting. Then the centre broke and the Persian cavalry on both wings fled.",
+   "quote": "Then the centre was broken and the Persian cavalry on both wings fled.",
+   "at": {
+    "right": [
+     58,
+     50,
+     90
+    ],
+    "amyn": [
+     57,
+     40,
+     90
+    ],
+    "pleft": [
+     72,
+     52,
+     90
+    ],
+    "pcen": [
+     72,
+     24,
+     90
+    ],
+    "pright": [
+     72,
+     10,
+     90
+    ]
+   },
+   "how": {
+    "pleft": "rout",
+    "pcen": "rout",
+    "pright": "rout"
+   },
+   "state": {
+    "pleft": "routed",
+    "pcen": "routed",
+    "pright": "routed"
+   },
+   "hits": [
+    [
+     "right",
+     "pleft"
+    ],
+    [
+     "amyn",
+     "pcen"
+    ]
+   ]
+  },
+  {
+   "title": "The Greek mercenaries are attacked from all sides",
+   "text": "Alexander did not pursue the fleeing cavalry far. The mercenaries, mostly inactive at their original position, were surprised and attacked by the Foot Companions from the front and the cavalry from all other directions. They were soon defeated and only a few escaped.",
+   "quote": "The mercenaries were surprised by the turn of events and were attacked by both the Foot Companions from the front and the cavalry from all other directions.",
+   "at": {
+    "phalanx": [
+     76,
+     34,
+     90
+    ],
+    "right": [
+     86,
+     48,
+     0
+    ],
+    "amyn": [
+     86,
+     21,
+     180
+    ]
+   },
+   "state": {
+    "merc": "destroyed"
+   },
+   "hits": [
+    [
+     "phalanx",
+     "merc"
+    ],
+    [
+     "right",
+     "merc"
+    ],
+    [
+     "amyn",
+     "merc"
+    ]
+   ]
+  }
+ ]
+}

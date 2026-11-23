@@ -1,0 +1,289 @@
+{
+ "slug": "battle-of-trafalgar",
+ "name": "Battle of Trafalgar",
+ "article": "battles2/wp/battle-of-trafalgar",
+ "field": {
+  "north": 0,
+  "ground": "sea"
+ },
+ "note": "The British came from the west and the allied line was headed north, so north is drawn at the top. The coast and Cape Trafalgar are placed on the east side; the accounts do not say exactly where they lay on this plane. The allied line is drawn in three groups (van, centre, rear) as the plan describes; where one group ended and the next began is not stated, and the gap Royal Sovereign broke through is drawn between the centre and the rear. Dumanoir's four ships are part of the van; which of the other ships of the van stayed with it is not stated. The plan ends with the fighting; the storm, the later allied sortie and the captures at sea after the battle are not shown.",
+ "terrain": [
+  {
+   "k": "land",
+   "name": "Coast",
+   "unnamed": true,
+   "at": [
+    [
+     92,
+     0
+    ],
+    [
+     100,
+     0
+    ],
+    [
+     100,
+     62
+    ],
+    [
+     86,
+     62
+    ],
+    [
+     90,
+     48
+    ],
+    [
+     88,
+     24
+    ]
+   ],
+   "lab": [
+    95,
+    30
+   ],
+   "quote": "with the slower ships generally to leeward and closer to the shore"
+  },
+  {
+   "k": "point",
+   "name": "Cape Trafalgar",
+   "at": [
+    87,
+    55
+   ],
+   "lab": [
+    80,
+    58
+   ],
+   "quote": "to the northwest of Cape Trafalgar"
+  }
+ ],
+ "sides": [
+  {
+   "id": "b",
+   "name": "British fleet"
+  },
+  {
+   "id": "a",
+   "name": "Franco-Spanish fleet"
+  }
+ ],
+ "units": [
+  {
+   "id": "nelson",
+   "side": "b",
+   "k": "ships",
+   "name": "British windward column",
+   "short": "Nelson",
+   "leader": "Nelson",
+   "w": 8,
+   "quote": "Leading the northern, windward column in Victory was Nelson",
+   "leaderEntry": "horatio-nelson"
+  },
+  {
+   "id": "colling",
+   "side": "b",
+   "k": "ships",
+   "name": "British leeward column",
+   "short": "Collingwd",
+   "leader": "Collingwood",
+   "w": 6,
+   "quote": "Collingwood in the 100-gun Royal Sovereign led the second, leeward, column."
+  },
+  {
+   "id": "van",
+   "side": "a",
+   "k": "ships",
+   "name": "Allied van",
+   "short": "Van",
+   "leader": "Dumanoir le Pelley",
+   "w": 10,
+   "quote": "The Franco-Spanish vanguard sailed ahead while attempting to turn back"
+  },
+  {
+   "id": "centre",
+   "side": "a",
+   "k": "ships",
+   "name": "Allied centre",
+   "short": "Centre",
+   "leader": "Villeneuve",
+   "w": 10,
+   "quote": "to cut the line just in front of the French flagship, Bucentaure"
+  },
+  {
+   "id": "rear",
+   "side": "a",
+   "k": "ships",
+   "name": "Allied rear",
+   "short": "Rear",
+   "w": 8,
+   "quote": "both columns splitting the Franco-Spanish fleet in three groups, isolating the rear"
+  },
+  {
+   "id": "dum",
+   "side": "a",
+   "k": "ships",
+   "name": "Dumanoir's four ships",
+   "short": "Dumanoir",
+   "leader": "Dumanoir le Pelley",
+   "w": 5,
+   "quote": "led four French ships, his flagship the 80-gun Formidable"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The fleets close in a ragged line and two columns",
+   "when": "21 October 1805, about 11 a.m.",
+   "text": "The French and Spanish were in a ragged curved line headed north, with the coast behind them. The British came from the west in two columns: Nelson's to the north, Collingwood's to the south.",
+   "quote": "As the battle opened, the French and Spanish were in a ragged curved line headed north. As planned, the British fleet was approaching the Franco-Spanish line in two columns.",
+   "at": {
+    "nelson": [
+     30,
+     22,
+     90
+    ],
+    "colling": [
+     30,
+     42,
+     90
+    ],
+    "van": [
+     62,
+     9,
+     270
+    ],
+    "centre": [
+     60,
+     28,
+     270
+    ],
+    "rear": [
+     62,
+     46,
+     270
+    ]
+   }
+  },
+  {
+   "title": "Nelson feints at the van and the columns converge",
+   "when": "About noon",
+   "text": "Nelson led his column in a feint toward the van and then turned toward the real point of attack, while Collingwood altered course so that the two columns converged. The foremost British ships came under heavy fire for almost an hour before their guns could bear.",
+   "quote": "Nelson led his column into a feint toward the van of the Franco-Spanish fleet and then abruptly turned toward the actual point of attack. Collingwood altered the course of his column slightly so that the two lines converged at this line of attack.",
+   "at": {
+    "nelson": [
+     44,
+     16,
+     70
+    ],
+    "colling": [
+     44,
+     43,
+     90
+    ]
+   },
+   "how": {
+    "nelson": "feint"
+   },
+   "hits": [
+    [
+     "centre",
+     "nelson"
+    ],
+    [
+     "rear",
+     "colling"
+    ]
+   ]
+  },
+  {
+   "title": "Royal Sovereign breaks the line",
+   "text": "Royal Sovereign outran the rest of the British fleet and came under fire from four allied ships. She then broke the line just astern of the Spanish flagship Santa Ana.",
+   "quote": "As she approached the allied line, she came under fire from Fougueux, Indomptable, San Justo, and San Leandro, before breaking the line just astern of Admiral Alava's flagship Spanish ship Santa Ana",
+   "at": {
+    "colling": [
+     55,
+     37.5,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "colling",
+     "rear"
+    ],
+    [
+     "centre",
+     "colling",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "Victory cuts between Bucentaure and Redoutable",
+   "when": "12:45",
+   "text": "Nelson's flagship Victory cut the line between Villeneuve's flagship Bucentaure and Redoutable. Her broadside through Bucentaure's stern knocked the French flagship out of action, and a general mêlée followed.",
+   "quote": "At 12:45, Victory cut the Franco-Spanish line between Villeneuve's flagship Bucentaure and Redoutable",
+   "at": {
+    "nelson": [
+     56,
+     19,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "nelson",
+     "centre"
+    ]
+   ]
+  },
+  {
+   "title": "The allied centre and rear are overwhelmed",
+   "text": "More British ships entered the battle and the allied centre and rear were gradually overwhelmed. The British ships of both columns stayed engaged with them.",
+   "quote": "As more and more British ships entered the battle, the ships of the allied centre and rear were gradually overwhelmed.",
+   "at": {
+    "nelson": [
+     57,
+     20,
+     90
+    ],
+    "colling": [
+     56,
+     38,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "nelson",
+     "centre"
+    ],
+    [
+     "colling",
+     "centre",
+     0.2
+    ],
+    [
+     "colling",
+     "rear"
+    ]
+   ]
+  },
+  {
+   "title": "Dumanoir breaks off with four ships",
+   "text": "Dumanoir tried to help the collapsing centre. After failing to fight his way through, he led four French ships away from the fighting. The British took 20 allied vessels and lost none.",
+   "quote": "After failing to fight his way through, he decided to break off the engagement, and led four French ships, his flagship the 80-gun Formidable, the 74-gun ships Scipion, Duguay-Trouin and Mont Blanc away from the fighting.",
+   "at": {
+    "dum": [
+     74,
+     18,
+     0
+    ]
+   },
+   "how": {
+    "dum": "retreat"
+   },
+   "hits": []
+  }
+ ]
+}

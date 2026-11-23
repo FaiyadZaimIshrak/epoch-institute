@@ -1,0 +1,437 @@
+{
+ "slug": "battle-of-alesia",
+ "name": "Battle of Alesia",
+ "article": "battles2/wp/battle-of-alesia",
+ "field": {
+  "north": null
+ },
+ "note": "The plan shows the whole operation, not a single field: armies and fortification lines round Alesia. The accounts give no compass directions, so the layout is schematic. Both fortification lines are drawn as open outlines (the real lines were not continuous). The relief force is drawn on the east, outside the outer line, and the hill with the weak camp on the north-east; the accounts do not say on which side of the town they lay. Labienus's six cohorts are described as cavalry. The Roman cavalry's path is drawn straight; its route is not given. The siege lasted a month and the fighting several days, so no single date is shown.",
+ "terrain": [
+  {
+   "k": "hill",
+   "name": "Alesia",
+   "at": [
+    [
+     33,
+     29
+    ],
+    [
+     42,
+     25
+    ],
+    [
+     51,
+     29
+    ],
+    [
+     53,
+     38
+    ],
+    [
+     44,
+     44
+    ],
+    [
+     34,
+     41
+    ]
+   ],
+   "lab": [
+    42,
+    47
+   ],
+   "quote": "Alesia was an oppidum on a lofty hill, with two rivers on two different sides."
+  },
+  {
+   "k": "wall",
+   "name": "Inner fortification",
+   "at": [
+    [
+     42,
+     19
+    ],
+    [
+     57,
+     27
+    ],
+    [
+     57,
+     43
+    ],
+    [
+     42,
+     51
+    ],
+    [
+     27,
+     43
+    ],
+    [
+     27,
+     27
+    ]
+   ],
+   "lab": [
+    36,
+    52.5
+   ],
+   "quote": "Caesar ordered the construction of an encircling set of fortifications, a contravallation, around Alesia."
+  },
+  {
+   "k": "wall",
+   "name": "Outer fortification",
+   "at": [
+    [
+     42,
+     13
+    ],
+    [
+     76,
+     23
+    ],
+    [
+     76,
+     47
+    ],
+    [
+     42,
+     57
+    ],
+    [
+     8,
+     47
+    ],
+    [
+     8,
+     23
+    ]
+   ],
+   "lab": [
+    22,
+    56.5
+   ],
+   "quote": "Caesar constructed an outer fortification (a circumvallation) with the same specifications but facing the opposite way"
+  },
+  {
+   "k": "hill",
+   "name": "Hill beside the works",
+   "unnamed": true,
+   "at": [
+    [
+     57,
+     7
+    ],
+    [
+     66,
+     4
+    ],
+    [
+     75,
+     8
+    ],
+    [
+     77,
+     15
+    ],
+    [
+     70,
+     21
+    ],
+    [
+     58,
+     18
+    ]
+   ],
+   "lab": [
+    62,
+    5
+   ],
+   "quote": "The north side of a hill could not be included in the Roman works"
+  }
+ ],
+ "sides": [
+  {
+   "id": "r",
+   "name": "Romans under Caesar"
+  },
+  {
+   "id": "g",
+   "name": "Gauls under Vercingetorix"
+  }
+ ],
+ "units": [
+  {
+   "id": "besieged",
+   "side": "g",
+   "k": "infantry",
+   "name": "Gauls besieged in Alesia",
+   "short": "Besieged",
+   "leader": "Vercingetorix",
+   "w": 10,
+   "quote": "Considering that about 80,000 men were garrisoned in Alesia",
+   "leaderEntry": "vercingetorix"
+  },
+  {
+   "id": "relief",
+   "side": "g",
+   "k": "infantry",
+   "name": "Gallic relief force",
+   "short": "Relief",
+   "w": 14,
+   "quote": "Meanwhile, the Gallic relief force arrived and encamped on a hill one mile from the Roman fortification."
+  },
+  {
+   "id": "vercass",
+   "side": "g",
+   "k": "infantry",
+   "name": "Gallic assault force",
+   "short": "60,000",
+   "leader": "Vercassivellaunus",
+   "w": 6,
+   "quote": "the Gauls selected 60,000 men and appointed Vercassivellaunus, a near relative of Vercingetorix, to lead the attack on that spot."
+  },
+  {
+   "id": "rinner",
+   "side": "r",
+   "k": "infantry",
+   "name": "Roman inner line",
+   "short": "Inner",
+   "w": 10,
+   "quote": "an inner wall to keep the besieged Gauls in"
+  },
+  {
+   "id": "router",
+   "side": "r",
+   "k": "infantry",
+   "name": "Roman outer line",
+   "short": "Outer",
+   "w": 10,
+   "quote": "an outer wall to keep the Gallic relief force out"
+  },
+  {
+   "id": "rcamp",
+   "side": "r",
+   "k": "camp",
+   "name": "Roman camp of two legions",
+   "short": "Camp",
+   "w": 6,
+   "quote": "they placed a camp with two legions on steep and disadvantageous ground."
+  },
+  {
+   "id": "rcav",
+   "side": "r",
+   "k": "cavalry",
+   "name": "Roman cavalry",
+   "short": "Cavalry",
+   "w": 8,
+   "quote": "ordering part of the cavalry to follow him and part of it to leave the outer fortification and attack the Gallic relief force from the rear."
+  },
+  {
+   "id": "labi",
+   "side": "r",
+   "k": "cavalry",
+   "name": "Labienus's six cohorts",
+   "short": "Labienus",
+   "leader": "Labienus",
+   "w": 6,
+   "quote": "Caesar sent Labienus to support the defense of the weak area with six cohorts of cavalry.",
+   "leaderEntry": "titus-labienus"
+  },
+  {
+   "id": "caesar",
+   "side": "r",
+   "k": "guard",
+   "name": "Caesar and fresh troops",
+   "short": "Caesar",
+   "leader": "Caesar",
+   "w": 8,
+   "quote": "Finally, leading fresh troops, he joined in.",
+   "leaderEntry": "julius-caesar"
+  }
+ ],
+ "phases": [
+  {
+   "title": "Two lines of fortification round Alesia",
+   "text": "Caesar shut the Gauls into Alesia and built two lines of works, one facing the town and one facing outwards against a relief force. The Roman lines, with a camp of two legions on a hill beside them, stood ready.",
+   "quote": "The fortifications were dug in two lines, one to protect from the defenders, and one to protect from the relievers.",
+   "at": {
+    "besieged": [
+     42,
+     35,
+     90
+    ],
+    "rinner": [
+     57,
+     35,
+     270
+    ],
+    "router": [
+     72,
+     37,
+     270
+    ],
+    "rcav": [
+     66,
+     51,
+     90
+    ],
+    "rcamp": [
+     66,
+     12,
+     90
+    ]
+   }
+  },
+  {
+   "title": "The relief force and the besieged attack together",
+   "text": "The relief force arrived and attacked the outer line while the besieged Gauls attacked the inner line at the same moment. The combined attack failed.",
+   "quote": "They then attacked the outer Roman fortification. The besieged Gauls simultaneously attacked the inner Roman fortification.",
+   "at": {
+    "relief": [
+     88,
+     35,
+     270
+    ],
+    "besieged": [
+     47,
+     35,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "relief",
+     "router"
+    ],
+    [
+     "besieged",
+     "rinner"
+    ]
+   ]
+  },
+  {
+   "title": "A night attack fails and the Gauls withdraw",
+   "text": "The Gauls attacked again at night. The relief force withdrew at first light for fear of being surrounded, and the besieged, delayed by filling the Roman trenches, returned to the town.",
+   "quote": "At the first light of day, the Gallic relief forces, fearing being surrounded by a Roman sally, withdrew.",
+   "at": {
+    "relief": [
+     93,
+     35,
+     270
+    ],
+    "besieged": [
+     42,
+     35,
+     90
+    ]
+   },
+   "how": {
+    "relief": "retreat",
+    "besieged": "retreat"
+   },
+   "hits": [
+    [
+     "relief",
+     "router"
+    ]
+   ]
+  },
+  {
+   "title": "Sixty thousand Gauls attack the weak camp",
+   "text": "The Gauls chose a weak point where a camp of two legions stood on bad ground and sent 60,000 men against it, attacking at noon. Vercingetorix sallied against the inner line at the same time.",
+   "quote": "They marched there before dawn and launched the attack at noon. Vercingetorix made a sally and attacked any part of the inner fortification which seemed weak.",
+   "at": {
+    "vercass": [
+     82,
+     12,
+     270
+    ],
+    "besieged": [
+     50,
+     35,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "vercass",
+     "rcamp"
+    ],
+    [
+     "besieged",
+     "rinner"
+    ]
+   ]
+  },
+  {
+   "title": "Labienus and Caesar come to the weak point",
+   "text": "Caesar sent Labienus to support the weak area, then led fresh troops there himself. The attack on the inner line was repelled.",
+   "quote": "Caesar sent Labienus to support the defense of the weak area with six cohorts of cavalry.",
+   "at": {
+    "labi": [
+     62,
+     22,
+     0
+    ],
+    "caesar": [
+     74,
+     24,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "labi",
+     "vercass"
+    ],
+    [
+     "caesar",
+     "vercass"
+    ],
+    [
+     "rinner",
+     "besieged"
+    ]
+   ]
+  },
+  {
+   "title": "Roman cavalry takes the Gauls in the rear",
+   "text": "Part of the Roman cavalry left the outer line and appeared at the rear of the Gauls. The Roman troops advanced rapidly, the Gauls fled, and the cavalry intercepted them. The besieged Gauls were pulled back from the fortification.",
+   "quote": "The Roman cavalry was suddenly seen at the rear of the Gauls, the Roman troops advanced rapidly and the Gauls fled.",
+   "at": {
+    "rcav": [
+     92,
+     10,
+     270
+    ],
+    "vercass": [
+     89,
+     22,
+     90
+    ],
+    "besieged": [
+     42,
+     35,
+     90
+    ]
+   },
+   "how": {
+    "vercass": "rout",
+    "besieged": "retreat"
+   },
+   "state": {
+    "vercass": "routed"
+   },
+   "hits": [
+    [
+     "rcav",
+     "vercass"
+    ],
+    [
+     "caesar",
+     "vercass"
+    ]
+   ]
+  }
+ ]
+}

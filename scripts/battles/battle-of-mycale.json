@@ -1,0 +1,372 @@
+{
+ "slug": "battle-of-mycale",
+ "name": "Battle of Mycale",
+ "article": "battles2/wp/battle-of-mycale",
+ "field": {
+  "north": null,
+  "edges": [
+   {
+    "name": "mountain passes →",
+    "at": [
+     88,
+     8
+    ]
+   }
+  ]
+ },
+ "note": "The accounts say the Greeks probably formed two wings, and the Greek left and right are described in a way that does not fit together: the wing that fought first is called the left, but the wing that is then said to have broken the shield wall is called the right. This plan follows the order of events, with the Athenian-led wing first and the Spartan-led wing second. The accounts do not say where the camp and the beached fleet lay in relation to the hills, and they place the camp near the Gaison river without fixing the site; the camp, shore and passes are placed on the Persian side of the plan. Estimates of numbers vary widely and are not shown.",
+ "terrain": [
+  {
+   "k": "mountain",
+   "name": "Mount Mycale",
+   "at": [
+    [
+     6,
+     0
+    ],
+    [
+     94,
+     0
+    ],
+    [
+     94,
+     5
+    ],
+    [
+     70,
+     8
+    ],
+    [
+     40,
+     8
+    ],
+    [
+     6,
+     5
+    ]
+   ],
+   "lab": [
+    8,
+    2
+   ],
+   "quote": "on the slopes of Mount Mycale, which is located on the coast of Ionia opposite the island of Samos"
+  },
+  {
+   "k": "hill",
+   "name": "Hills",
+   "unnamed": true,
+   "at": [
+    [
+     8,
+     12
+    ],
+    [
+     30,
+     10
+    ],
+    [
+     52,
+     14
+    ],
+    [
+     54,
+     26
+    ],
+    [
+     30,
+     30
+    ],
+    [
+     10,
+     26
+    ]
+   ],
+   "lab": [
+    10,
+    12
+   ],
+   "quote": "On the right were the Spartans with the other contingents, deployed on the hills in uneven terrain."
+  },
+  {
+   "k": "sea",
+   "name": "Sea",
+   "at": [
+    [
+     0,
+     59
+    ],
+    [
+     100,
+     59
+    ],
+    [
+     100,
+     62
+    ],
+    [
+     0,
+     62
+    ]
+   ],
+   "lab": [
+    4,
+    60
+   ],
+   "quote": "The Persians, seeking to avoid a battle, beached their fleet below the slopes of Mycale"
+  }
+ ],
+ "sides": [
+  {
+   "id": "g",
+   "name": "Greeks"
+  },
+  {
+   "id": "p",
+   "name": "Persians"
+  }
+ ],
+ "units": [
+  {
+   "id": "left",
+   "side": "g",
+   "k": "spears",
+   "name": "Athenian-led left wing",
+   "short": "Left wing",
+   "w": 12,
+   "quote": "On the left were the Athenians, Corinthians, Sicyonians and Troezenians; around half of the army, who took up positions starting from the shore and ending at the foothills of Mount Mycale."
+  },
+  {
+   "id": "right",
+   "side": "g",
+   "k": "spears",
+   "name": "Spartans and other contingents",
+   "short": "Spartans",
+   "w": 10,
+   "quote": "On the right were the Spartans with the other contingents, deployed on the hills in uneven terrain."
+  },
+  {
+   "id": "wall",
+   "side": "p",
+   "k": "infantry",
+   "name": "Persian army and shield wall",
+   "short": "Persians",
+   "leader": "Tigranes",
+   "w": 14,
+   "quote": "Tigranes was the commander of the Persian land forces at Mycale."
+  },
+  {
+   "id": "camp",
+   "side": "p",
+   "k": "camp",
+   "name": "Palisaded camp",
+   "short": "Camp",
+   "w": 9,
+   "quote": "built abatis (field fortifications) with the wood they had cut recently"
+  },
+  {
+   "id": "fleet",
+   "side": "p",
+   "k": "ships",
+   "name": "Beached Persian fleet",
+   "short": "Fleet",
+   "w": 10,
+   "quote": "the Persians moored their fleet behind the cover of rocks"
+  },
+  {
+   "id": "mil",
+   "side": "p",
+   "k": "infantry",
+   "name": "Milesians at the passes",
+   "short": "Milesians",
+   "w": 6,
+   "quote": "they sent the Milesians to their rear to guard the mountain passes of Mycale"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The Greeks land and form two wings",
+   "when": "Afternoon of the same day as Plataea",
+   "text": "The Greeks landed out of sight of the Persian camp and formed two wings. The left stood from the shore to the foothills of the mountain, the right on the hills. The Persians had a palisaded camp with the fleet beached behind it.",
+   "quote": "The Greeks probably formed into two wings.",
+   "at": {
+    "left": [
+     32,
+     44,
+     90
+    ],
+    "right": [
+     32,
+     20,
+     90
+    ],
+    "wall": [
+     66,
+     42,
+     270
+    ],
+    "camp": [
+     82,
+     42,
+     270
+    ],
+    "fleet": [
+     80,
+     55,
+     270
+    ],
+    "mil": [
+     88,
+     14,
+     270
+    ]
+   }
+  },
+  {
+   "title": "The Greek left meets the Persians alone",
+   "text": "The Persians came out of their camp and set up their shield wall. The Greek left began fighting while the right was still crossing the hills.",
+   "quote": "The battle began when the Greek left began fighting with the Persians while their right wing was still crossing the hills.",
+   "at": {
+    "left": [
+     46,
+     44,
+     90
+    ],
+    "right": [
+     36,
+     22,
+     90
+    ],
+    "wall": [
+     58,
+     42,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "left",
+     "wall"
+    ],
+    [
+     "wall",
+     "left",
+     0.25
+    ]
+   ]
+  },
+  {
+   "title": "The right comes up and breaks the shield wall",
+   "text": "The other Greek wing, under heavy arrow fire, chose to fight at close quarters and broke the wall by shoving. Tigranes and Mardontes died in the fighting.",
+   "quote": "They increased their efforts, and managed to break through the wall by shoving.",
+   "at": {
+    "right": [
+     50,
+     28,
+     90
+    ],
+    "wall": [
+     60,
+     38,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "right",
+     "wall"
+    ],
+    [
+     "left",
+     "wall",
+     0.25
+    ]
+   ]
+  },
+  {
+   "title": "The Persians flee to their camp",
+   "text": "The Persians broke their lines and escaped to their camp. The Greek soldiers followed them in, and most of the Persian troops fled from the camp. The ethnic Persians grouped together and fought those who entered.",
+   "quote": "The Persians fought back initially, but then broke their lines and escaped to their camp.",
+   "at": {
+    "wall": [
+     76,
+     32,
+     90
+    ],
+    "right": [
+     68,
+     36,
+     90
+    ]
+   },
+   "how": {
+    "wall": "rout"
+   },
+   "state": {
+    "wall": "routed"
+   },
+   "hits": [
+    [
+     "right",
+     "camp"
+    ]
+   ]
+  },
+  {
+   "title": "The left outflanks the camp",
+   "text": "The Greek left arrived, outflanked the camp and fell on the rear of the Persians who remained, which completed the rout.",
+   "quote": "Finally, the left wing arrived, outflanking the camp and falling on the rear of the remaining Persian forces, thereby completing the rout.",
+   "at": {
+    "left": [
+     86,
+     32,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "left",
+     "wall",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "The Milesians turn on the Persians",
+   "text": "The Milesians guarding the passes first misdirected the fleeing Persians, who ended up back among the Greek troops, and then began killing them.",
+   "quote": "At first, they misdirected the fleeing Persian contingents, who then ended up back among the Greeks troops",
+   "at": {
+    "mil": [
+     90,
+     22,
+     270
+    ]
+   }
+  },
+  {
+   "title": "The fleet and fortifications are burned",
+   "text": "The Greeks burned the Persian fleet after a heavily contested fight with the Persian marines, once the loot had been taken from the ships and placed on the beach. The fortifications were burnt too.",
+   "quote": "The Greeks then burned the Persian fleet after a heavily contested fight with the Persian marines",
+   "at": {
+    "left": [
+     82,
+     50,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "left",
+     "fleet"
+    ],
+    [
+     "right",
+     "camp"
+    ]
+   ],
+   "state": {
+    "fleet": "destroyed",
+    "camp": "destroyed"
+   }
+  }
+ ]
+}

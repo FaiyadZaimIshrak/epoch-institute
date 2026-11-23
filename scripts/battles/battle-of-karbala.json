@@ -1,0 +1,411 @@
+{
+ "slug": "battle-of-karbala",
+ "name": "Battle of Karbala",
+ "article": "battles2/wp/battle-of-karbala",
+ "field": {
+  "north": null
+ },
+ "note": "The accounts do not give the compass directions of the field, so the plan is drawn without them. The Euphrates is placed along the foot of the plan and the ditch behind Husayn's tents on the side away from the Kufans; the accounts do not say where either lay. The accounts do not say which units encircled Husayn's companions, nor what each flank was made of; the wings are placed by judgement. Husayn's companions are shown as two flanks, the tents and his relatives, as the accounts name them. Most accounts give thirty-two horsemen and forty infantrymen for Husayn and 4,000 for Ibn Sa'd; Shi'a sources say Ibn Sa'd's army had grown to 30,000.",
+ "terrain": [
+  {
+   "k": "river",
+   "name": "Euphrates",
+   "at": [
+    [
+     4,
+     58
+    ],
+    [
+     30,
+     57
+    ],
+    [
+     55,
+     58
+    ],
+    [
+     80,
+     57
+    ],
+    [
+     96,
+     58
+    ]
+   ],
+   "lab": [
+    14,
+    55
+   ],
+   "quote": "should be denied access to the Euphrates river"
+  },
+  {
+   "k": "ditch",
+   "name": "Ditch filled with wood",
+   "unnamed": true,
+   "at": [
+    [
+     90,
+     12
+    ],
+    [
+     91,
+     24
+    ],
+    [
+     91,
+     38
+    ],
+    [
+     90,
+     50
+    ]
+   ],
+   "lab": [
+    86,
+    54
+   ],
+   "quote": "a ditch was dug behind the tents and filled with wood ready to be set alight in case of attack"
+  }
+ ],
+ "sides": [
+  {
+   "id": "h",
+   "name": "Husayn ibn Ali and his companions"
+  },
+  {
+   "id": "u",
+   "name": "Kufan army of Ibn Sa'd"
+  }
+ ],
+ "units": [
+  {
+   "id": "hr",
+   "side": "h",
+   "k": "light",
+   "name": "Husayn's right flank",
+   "short": "Right",
+   "leader": "Zuhayr ibn al-Qayn",
+   "w": 8,
+   "quote": "Husayn appointed Zuhayr ibn al-Qayn to command the right flank of his army"
+  },
+  {
+   "id": "hl",
+   "side": "h",
+   "k": "light",
+   "name": "Husayn's left flank",
+   "short": "Left",
+   "leader": "Habib ibn Muzahir",
+   "w": 8,
+   "quote": "Habib ibn Muzahir to command the left flank"
+  },
+  {
+   "id": "tents",
+   "side": "h",
+   "k": "camp",
+   "name": "Husayn's tents",
+   "short": "Tents",
+   "w": 14,
+   "quote": "tents were brought together and tied to one another"
+  },
+  {
+   "id": "husayn",
+   "side": "h",
+   "k": "guard",
+   "name": "Husayn",
+   "short": "Husayn",
+   "leader": "Husayn ibn Ali",
+   "w": 6,
+   "quote": "Husayn then delivered a speech to his opponents"
+  },
+  {
+   "id": "rel",
+   "side": "h",
+   "k": "infantry",
+   "name": "Husayn's relatives",
+   "short": "Relatives",
+   "w": 6,
+   "quote": "Husayn's relatives, who had not taken part in the fighting so far, joined the battle."
+  },
+  {
+   "id": "kl",
+   "side": "u",
+   "k": "infantry",
+   "name": "Kufan left wing",
+   "short": "Left wing",
+   "leader": "Shimr",
+   "w": 8,
+   "quote": "Shimr, who commanded the left wing of the Umayyad army, launched an attack"
+  },
+  {
+   "id": "kr",
+   "side": "u",
+   "k": "infantry",
+   "name": "Kufan right wing",
+   "short": "Right wing",
+   "leader": "Amr ibn al-Hajjaj",
+   "w": 8,
+   "quote": "The right wing of the Kufans, led by Amr ibn al-Hajjaj, attacked Husayn's force"
+  },
+  {
+   "id": "rh",
+   "side": "u",
+   "k": "cavalry",
+   "name": "Horsemen on the river route",
+   "short": "River",
+   "w": 7,
+   "quote": "Ibn Sa'd stationed 500 horsemen on the route leading to the river."
+  },
+  {
+   "id": "cav",
+   "side": "u",
+   "k": "cavalry",
+   "name": "Armoured cavalry",
+   "short": "Cavalry",
+   "w": 10,
+   "quote": "Ibn Sa'd brought in armoured cavalry and five hundred archers"
+  },
+  {
+   "id": "arch",
+   "side": "u",
+   "k": "archers",
+   "name": "Five hundred archers",
+   "short": "Archers",
+   "w": 8,
+   "quote": "Ibn Sa'd brought in armoured cavalry and five hundred archers"
+  },
+  {
+   "id": "sf",
+   "side": "u",
+   "k": "infantry",
+   "name": "Shimr's foot soldiers",
+   "short": "Shimr's",
+   "leader": "Shimr",
+   "w": 5,
+   "quote": "Shimr advanced towards Husayn with a group of foot soldiers"
+  }
+ ],
+ "phases": [
+  {
+   "title": "Both sides take up positions",
+   "when": "10 October 680",
+   "text": "After the morning prayer both sides formed up. Husayn put Zuhayr ibn al-Qayn on his right and Habib ibn Muzahir on his left, with the tents tied together and the ditch behind them. The Kufan wings stood opposite, with 500 horsemen on the route to the river.",
+   "quote": "After the morning prayer on 10 October, both parties took up battle positions.",
+   "at": {
+    "hr": [
+     56,
+     19,
+     270
+    ],
+    "hl": [
+     56,
+     43,
+     270
+    ],
+    "tents": [
+     64,
+     31,
+     270
+    ],
+    "husayn": [
+     76,
+     25,
+     270
+    ],
+    "rel": [
+     76,
+     37,
+     270
+    ],
+    "kl": [
+     38,
+     19,
+     90
+    ],
+    "kr": [
+     38,
+     43,
+     90
+    ],
+    "rh": [
+     30,
+     52,
+     90
+    ]
+   }
+  },
+  {
+   "title": "Volleys of arrows and duels",
+   "text": "Zuhayr ibn al-Qayn tried to dissuade the Kufan soldiers from killing Husayn, but failed. The Kufans fired several volleys of arrows, and in the duels that followed several of Husayn's companions were slain.",
+   "quote": "Ibn Sa'd's army fired several volleys of arrows. This was followed by duels in which several of Husayn's companions were slain.",
+   "at": {
+    "kl": [
+     44,
+     19,
+     90
+    ],
+    "kr": [
+     44,
+     43,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "kl",
+     "hr"
+    ],
+    [
+     "kr",
+     "hl"
+    ]
+   ]
+  },
+  {
+   "title": "The Kufan right wing attacks and is repulsed",
+   "text": "The right wing of the Kufans, under Amr ibn al-Hajjaj, attacked Husayn's force and was repulsed. Hand-to-hand fighting then paused and further volleys of arrows were exchanged.",
+   "quote": "The right wing of the Kufans, led by Amr ibn al-Hajjaj, attacked Husayn's force, but was repulsed.",
+   "at": {
+    "kr": [
+     50,
+     43,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "kr",
+     "hl"
+    ]
+   ]
+  },
+  {
+   "title": "Shimr attacks and is repulsed",
+   "text": "Shimr, who commanded the left wing of the Umayyad army, launched an attack. There were losses on both sides, and he was repulsed.",
+   "quote": "Shimr, who commanded the left wing of the Umayyad army, launched an attack, but after losses on both sides he was repulsed.",
+   "at": {
+    "kr": [
+     44,
+     43,
+     90
+    ],
+    "kl": [
+     50,
+     19,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "kl",
+     "hr"
+    ]
+   ]
+  },
+  {
+   "title": "Cavalry attacks and Ibn Sa'd brings in reinforcements",
+   "text": "Cavalry attacks followed, and Husayn's cavalry resisted fiercely. Ibn Sa'd brought in armoured cavalry and five hundred archers.",
+   "quote": "Husayn's cavalry resisted fiercely and Ibn Sa'd brought in armoured cavalry and five hundred archers.",
+   "at": {
+    "kl": [
+     44,
+     19,
+     90
+    ],
+    "cav": [
+     44,
+     31,
+     90
+    ],
+    "arch": [
+     35,
+     31,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "cav",
+     "hr"
+    ],
+    [
+     "cav",
+     "hl",
+     0.2
+    ],
+    [
+     "arch",
+     "hl",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "The tents are burned and Husayn's companions are encircled",
+   "text": "Because the Kufans could approach only from the front, Ibn Sa'd ordered the tents burned, except the one Husayn and his family used. The flames hindered the Umayyad advance for a while. After noon prayers Husayn's companions were encircled.",
+   "quote": "Ibn Sa'd ordered all of the tents, except the one which Husayn and his family were using, to be burned.",
+   "at": {
+    "cav": [
+     50,
+     31,
+     90
+    ],
+    "kl": [
+     64,
+     10,
+     180
+    ],
+    "kr": [
+     64,
+     52,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "cav",
+     "tents"
+    ],
+    [
+     "kl",
+     "hr"
+    ],
+    [
+     "kr",
+     "hl"
+    ]
+   ]
+  },
+  {
+   "title": "Husayn's relatives fight and Husayn is killed",
+   "text": "Husayn's relatives, who had not fought until then, joined the battle, and among those slain was his son Ali al-Akbar. Shimr advanced with foot soldiers, the Kufans rushed at Husayn, and he was killed.",
+   "quote": "The Kufan soldiers then rushed at Husayn and wounded him on his hand and shoulder.",
+   "at": {
+    "rel": [
+     56,
+     31,
+     270
+    ],
+    "sf": [
+     77,
+     13,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "rel",
+     "cav"
+    ],
+    [
+     "sf",
+     "husayn"
+    ],
+    [
+     "cav",
+     "husayn",
+     0.3
+    ]
+   ]
+  }
+ ]
+}

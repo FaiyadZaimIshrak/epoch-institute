@@ -1,0 +1,434 @@
+{
+ "slug": "battle-of-lake-trasimene",
+ "name": "Battle of Lake Trasimene",
+ "article": "battles2/wp/battle-of-lake-trasimene",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "← from Arretium",
+    "at": [
+     10,
+     31
+    ]
+   },
+   {
+    "name": "defile, then south ↓",
+    "at": [
+     90,
+     58
+    ]
+   }
+  ]
+ },
+ "note": "The accounts place the hills north of the road and the lake south of it, and the Romans marched east, so north is drawn at the top. The Roman army is drawn as one column on the road; the accounts say it probably marched in three parallel columns. The accounts do not give the exact places where each Carthaginian body lay, only their order from west to east, and the light infantry are placed near the defile as modern historians suggest, so those positions are approximate. The kind of troops under Maharbal is not stated and is drawn as infantry. The shoreline has changed since.",
+ "terrain": [
+  {
+   "k": "hill",
+   "name": "Hills",
+   "unnamed": true,
+   "at": [
+    [
+     6,
+     8
+    ],
+    [
+     40,
+     6
+    ],
+    [
+     78,
+     10
+    ],
+    [
+     93,
+     18
+    ],
+    [
+     92,
+     36
+    ],
+    [
+     70,
+     36
+    ],
+    [
+     40,
+     30
+    ],
+    [
+     6,
+     26
+    ]
+   ],
+   "lab": [
+    20,
+    10
+   ],
+   "quote": "To the north of the road was a range of low hills"
+  },
+  {
+   "k": "lake",
+   "name": "Lake Trasimene",
+   "at": [
+    [
+     4,
+     54
+    ],
+    [
+     30,
+     52
+    ],
+    [
+     60,
+     53
+    ],
+    [
+     80,
+     56
+    ],
+    [
+     80,
+     60
+    ],
+    [
+     4,
+     60
+    ]
+   ],
+   "lab": [
+    30,
+    57
+   ],
+   "quote": "marched along the north shore of Lake Trasimene"
+  },
+  {
+   "k": "road",
+   "name": "Road",
+   "unnamed": true,
+   "at": [
+    [
+     4,
+     44
+    ],
+    [
+     40,
+     44
+    ],
+    [
+     70,
+     44
+    ],
+    [
+     88,
+     46
+    ],
+    [
+     90,
+     56
+    ]
+   ],
+   "lab": [
+    54,
+    41
+   ],
+   "quote": "the road led along the north shore of the lake then turned south"
+  },
+  {
+   "k": "point",
+   "name": "Defile",
+   "unnamed": true,
+   "at": [
+    88,
+    47
+   ],
+   "lab": [
+    93,
+    44
+   ],
+   "quote": "before climbing away from the lake through a defile"
+  }
+ ],
+ "sides": [
+  {
+   "id": "r",
+   "name": "Romans"
+  },
+  {
+   "id": "c",
+   "name": "Carthaginians and their allies"
+  }
+ ],
+ "units": [
+  {
+   "id": "rmain",
+   "side": "r",
+   "k": "infantry",
+   "name": "Roman column",
+   "short": "Column",
+   "leader": "Flaminius",
+   "w": 12,
+   "quote": "On the morning of 21 June the Romans set off very early and marched eastward along the northern edge of the lake."
+  },
+  {
+   "id": "rfront",
+   "side": "r",
+   "k": "infantry",
+   "name": "Romans at the front",
+   "short": "Front",
+   "w": 8,
+   "quote": "The trap failed to close on the 6,000 Romans at the front of the column"
+  },
+  {
+   "id": "ccav",
+   "side": "c",
+   "k": "cavalry",
+   "name": "Carthaginian cavalry",
+   "short": "Cavalry",
+   "w": 10,
+   "quote": "The Carthaginian cavalry were positioned furthest to the west"
+  },
+  {
+   "id": "cgauls",
+   "side": "c",
+   "k": "infantry",
+   "name": "Gallic infantry",
+   "short": "Gauls",
+   "w": 12,
+   "quote": "the north-Italian Gallic infantry to their east"
+  },
+  {
+   "id": "cafr",
+   "side": "c",
+   "k": "infantry",
+   "name": "African and Iberian infantry",
+   "short": "Afr/Iber",
+   "w": 12,
+   "quote": "the experienced African and Iberian infantry furthest east, relatively close to their camp"
+  },
+  {
+   "id": "clight",
+   "side": "c",
+   "k": "light",
+   "name": "Carthaginian light infantry",
+   "short": "Light",
+   "w": 8,
+   "quote": "place the bulk of the many Carthaginian light infantry either around the defile and its mouth"
+  },
+  {
+   "id": "camp",
+   "side": "c",
+   "k": "camp",
+   "name": "Carthaginian camp",
+   "short": "Camp",
+   "quote": "The Carthaginians made camp where the hills were closest to the lake, near the defile."
+  },
+  {
+   "id": "mah",
+   "side": "c",
+   "k": "infantry",
+   "name": "Maharbal's force",
+   "short": "Maharbal",
+   "leader": "Maharbal",
+   "w": 6,
+   "quote": "surrounded by pursuing Carthaginians and surrendered to a force under Maharbal"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The Carthaginians lie hidden behind the hills",
+   "when": "20 to 21 June 217 BCE",
+   "text": "After dark Hannibal moved his army behind the hills and placed it on the reverse slopes: cavalry in the west, Gauls next, and the African and Iberian infantry in the east near the camp. The Romans, who could see the camp, set off along the lakeshore.",
+   "quote": "The Carthaginian cavalry were positioned furthest to the west, the north-Italian Gallic infantry to their east and the experienced African and Iberian infantry furthest east, relatively close to their camp.",
+   "at": {
+    "rmain": [
+     20,
+     44,
+     90
+    ],
+    "rfront": [
+     42,
+     44,
+     90
+    ],
+    "ccav": [
+     16,
+     18,
+     180
+    ],
+    "cgauls": [
+     38,
+     18,
+     180
+    ],
+    "cafr": [
+     62,
+     20,
+     180
+    ],
+    "clight": [
+     78,
+     34,
+     180
+    ],
+    "camp": [
+     86,
+     24,
+     180
+    ]
+   },
+   "state": {
+    "ccav": "hidden",
+    "cgauls": "hidden",
+    "cafr": "hidden",
+    "clight": "hidden"
+   }
+  },
+  {
+   "title": "The head of the column meets the easternmost Carthaginians",
+   "when": "Morning of 21 June",
+   "text": "The Romans marched east in a thick morning mist, by the ancient accounts, with no cavalry scouts sent ahead. The leading men made contact with the most easterly Carthaginians and the signal to advance was given.",
+   "quote": "The leading Romans made contact with the most easterly of the Carthaginians, probably some of the African or Iberian close-order infantry and the signal was given for all of the Carthaginians to advance",
+   "at": {
+    "rmain": [
+     40,
+     44,
+     90
+    ],
+    "rfront": [
+     64,
+     44,
+     90
+    ],
+    "cafr": [
+     64,
+     33,
+     180
+    ]
+   },
+   "state": {
+    "cafr": "shown"
+   },
+   "hits": [
+    [
+     "cafr",
+     "rfront"
+    ]
+   ]
+  },
+  {
+   "title": "The Carthaginians attack from the flank and rear",
+   "text": "The whole Carthaginian force came down from the hills against the column's flank and rear. The Romans could not form even a rudimentary fighting line, and some fled while others gathered in groups to face the enemy on all sides.",
+   "quote": "with the Carthaginians attacking unexpectedly from the flank and the rear, possibly with poor visibility, there was no chance to form even a rudimentary fighting line.",
+   "at": {
+    "ccav": [
+     14,
+     38,
+     180
+    ],
+    "cgauls": [
+     38,
+     35,
+     180
+    ],
+    "clight": [
+     78,
+     38,
+     180
+    ]
+   },
+   "state": {
+    "ccav": "shown",
+    "cgauls": "shown",
+    "clight": "shown"
+   },
+   "hits": [
+    [
+     "ccav",
+     "rmain"
+    ],
+    [
+     "cgauls",
+     "rmain"
+    ],
+    [
+     "cafr",
+     "rfront"
+    ]
+   ]
+  },
+  {
+   "title": "The trapped Romans fight on and are beaten down",
+   "text": "Some Roman groups fought hard, especially in the centre, where the attacking Gauls suffered heavy casualties. After three hours the trapped Romans collapsed, and men who went into the lake were cut down or drowned.",
+   "quote": "Other groups of Romans put up a stiff fight, especially in the centre, where the attacking Gauls suffered heavy casualties before beating down the trapped Romans after three hours of heavy combat.",
+   "at": {
+    "ccav": [
+     28,
+     50,
+     180
+    ],
+    "rmain": [
+     40,
+     46,
+     90
+    ]
+   },
+   "state": {
+    "rmain": "destroyed"
+   },
+   "hits": [
+    [
+     "cgauls",
+     "rmain"
+    ],
+    [
+     "ccav",
+     "rmain"
+    ],
+    [
+     "cafr",
+     "rmain",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The 6,000 at the front push out through the defile",
+   "text": "The trap did not close on the 6,000 Romans at the head of the column. They pushed out through the defile against little opposition and marched on.",
+   "quote": "they pushed their way out of the defile against little opposition.",
+   "at": {
+    "rfront": [
+     84,
+     48,
+     90
+    ]
+   }
+  },
+  {
+   "title": "The 6,000 are surrounded and surrender",
+   "text": "Later in the day pursuing Carthaginians surrounded the 6,000 Romans. They surrendered to a force under Maharbal on the promise of being disarmed and freed.",
+   "quote": "Later in the day they were surrounded by pursuing Carthaginians and surrendered to a force under Maharbal",
+   "at": {
+    "mah": [
+     72,
+     48,
+     90
+    ],
+    "rfront": [
+     88,
+     52,
+     90
+    ]
+   },
+   "state": {
+    "rfront": "destroyed"
+   },
+   "hits": [
+    [
+     "mah",
+     "rfront"
+    ]
+   ]
+  }
+ ]
+}

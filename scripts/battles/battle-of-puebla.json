@@ -1,0 +1,482 @@
+{
+ "slug": "battle-of-puebla",
+ "name": "Battle of Puebla",
+ "article": "battles2/wp/battle-of-puebla",
+ "field": {
+  "north": null,
+  "edges": [
+   {
+    "name": "← French camp",
+    "at": [
+     4,
+     58
+    ]
+   }
+  ]
+ },
+ "note": "The accounts do not give compass directions or distances, so the forts, the city, the maguey field and every formation are placed by judgement on the sides the story needs. The accounts say the French columns joined and split into three; the plan draws two blocks, the zouaves and a second column. The accounts do not say who made up the second column or the Mexican force on the French left, which is not drawn.",
+ "terrain": [
+  {
+   "k": "hill",
+   "name": "Heights of Guadalupe and Loreto",
+   "unnamed": true,
+   "at": [
+    [
+     66,
+     10
+    ],
+    [
+     80,
+     8
+    ],
+    [
+     90,
+     14
+    ],
+    [
+     92,
+     34
+    ],
+    [
+     90,
+     52
+    ],
+    [
+     78,
+     54
+    ],
+    [
+     66,
+     48
+    ],
+    [
+     64,
+     28
+    ]
+   ],
+   "lab": [
+    84,
+    10
+   ],
+   "quote": "the forts of Loreto and Guadalupe situated on top of the hills overlooking the city of Puebla"
+  },
+  {
+   "k": "fort",
+   "name": "Loreto fort",
+   "at": [
+    74,
+    16
+   ],
+   "lab": [
+    74,
+    12
+   ],
+   "quote": "the forts of Loreto and Guadalupe situated on top of the hills overlooking the city of Puebla"
+  },
+  {
+   "k": "fort",
+   "name": "Fort of Guadalupe",
+   "at": [
+    74,
+    44
+   ],
+   "lab": [
+    74,
+    40
+   ],
+   "quote": "They headed to their right towards the Fort of Guadalupe."
+  },
+  {
+   "k": "town",
+   "name": "Puebla",
+   "at": [
+    95,
+    30
+   ],
+   "lab": [
+    95,
+    27
+   ],
+   "quote": "the hills overlooking the city of Puebla"
+  },
+  {
+   "k": "wood",
+   "name": "Maguey field",
+   "at": [
+    [
+     50,
+     40
+    ],
+    [
+     62,
+     38
+    ],
+    [
+     64,
+     48
+    ],
+    [
+     62,
+     58
+    ],
+    [
+     50,
+     58
+    ],
+    [
+     47,
+     48
+    ]
+   ],
+   "lab": [
+    54,
+    56
+   ],
+   "quote": "Mexican cavalry under the cover of a maguey field remained still"
+  }
+ ],
+ "sides": [
+  {
+   "id": "f",
+   "name": "French army"
+  },
+  {
+   "id": "m",
+   "name": "Mexican army"
+  }
+ ],
+ "units": [
+  {
+   "id": "zouaves",
+   "side": "f",
+   "k": "infantry",
+   "name": "Zouave attack column",
+   "short": "Zouaves",
+   "w": 10,
+   "quote": "an attack column made up of two battalions of zouaves"
+  },
+  {
+   "id": "fart",
+   "side": "f",
+   "k": "artillery",
+   "name": "French guns",
+   "short": "Guns",
+   "w": 6,
+   "quote": "one battery commanded by Captain Bernard, and four pieces of Captain Mallat's marine artillery"
+  },
+  {
+   "id": "fres",
+   "side": "f",
+   "k": "guard",
+   "name": "French marine reserve",
+   "short": "Reserve",
+   "w": 10,
+   "quote": "The regiment of marine infantry and marine riflemen formed the reserve along with a mountain gun"
+  },
+  {
+   "id": "fconv",
+   "side": "f",
+   "k": "infantry",
+   "name": "Convoy guard, four battalions",
+   "short": "Convoy",
+   "leader": "L'Heriller",
+   "w": 10,
+   "quote": "he charged L'Heriller to protect with four battalions of marine infantry the convoy"
+  },
+  {
+   "id": "fcav",
+   "side": "f",
+   "k": "cavalry",
+   "name": "French cavalry",
+   "short": "Cavalry",
+   "w": 8,
+   "quote": "Cavalry was assigned to place itself between the convoy and the attack columns"
+  },
+  {
+   "id": "fcol2",
+   "side": "f",
+   "k": "infantry",
+   "name": "Second French column",
+   "short": "2nd column",
+   "w": 8,
+   "quote": "when another French column came to the support of the retreating troops"
+  },
+  {
+   "id": "negrete",
+   "side": "m",
+   "k": "infantry",
+   "name": "Garrison of the forts",
+   "short": "Garrison",
+   "leader": "Miguel Negrete",
+   "w": 14,
+   "quote": "General Miguel Negrete, occupied the Guadalupe and Loreto Forts"
+  },
+  {
+   "id": "minf",
+   "side": "m",
+   "k": "infantry",
+   "name": "Mexican infantry battalions",
+   "short": "Infantry",
+   "w": 8,
+   "quote": "they were met by two battalions of Mexican infantry"
+  },
+  {
+   "id": "mcav",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Mexican cavalry",
+   "short": "Cavalry",
+   "w": 8,
+   "quote": "Mexican cavalry under the cover of a maguey field remained still"
+  },
+  {
+   "id": "berri",
+   "side": "m",
+   "k": "infantry",
+   "name": "Reinforcements for the hills",
+   "short": "Reinforce",
+   "leader": "Felipe Berriozábal",
+   "w": 6,
+   "quote": "Felipe Berriozábal was then ordered to reinforce the two hills"
+  },
+  {
+   "id": "diaz",
+   "side": "m",
+   "k": "infantry",
+   "name": "Diaz's brigade and guns",
+   "short": "Diaz",
+   "leader": "General Diaz",
+   "w": 8,
+   "quote": "General Diaz with portions of his brigade and other troops and two pieces of artillery",
+   "leaderEntry": "porfirio-diaz"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The French form up below the forts",
+   "when": "Half past eleven, 5 May 1862",
+   "text": "Lorencez drew up an attack column of zouaves and guns, with a reserve behind it and a convoy guarded on the flank. The forts of Loreto and Guadalupe were held by Negrete's division, and Mexican cavalry stood on the French right.",
+   "quote": "At half past eleven Lorencez arranged an attack column made up of two battalions of zouaves",
+   "at": {
+    "zouaves": [
+     32,
+     30,
+     90
+    ],
+    "fart": [
+     32,
+     40,
+     90
+    ],
+    "fres": [
+     14,
+     34,
+     90
+    ],
+    "fconv": [
+     10,
+     12,
+     90
+    ],
+    "fcav": [
+     24,
+     22,
+     90
+    ],
+    "negrete": [
+     74,
+     30,
+     270
+    ],
+    "minf": [
+     60,
+     44,
+     270
+    ],
+    "mcav": [
+     60,
+     54,
+     270
+    ]
+   }
+  },
+  {
+   "title": "The French halt and shell the forts",
+   "text": "The zouaves climbed towards Guadalupe and, when opposite it, halted and planted their artillery. The guns fired on both forts, and Zaragoza gave orders for them to be reinforced.",
+   "quote": "The French division advanced and when opposite the Guadalupe fort, halted and planted its artillery to fire upon the Guadalupe and the Loreto forts.",
+   "at": {
+    "zouaves": [
+     44,
+     32,
+     90
+    ],
+    "fart": [
+     46,
+     42,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "fart",
+     "negrete"
+    ]
+   ]
+  },
+  {
+   "title": "The first ascent is turned back",
+   "text": "The column met two Mexican battalions halfway up, then turned towards the gap between the forts and came under fire from both. Berriozábal was sent to reinforce the hills, and the French fell back under attack from infantry and cavalry.",
+   "quote": "The ascending column now turned diagonally towards the right, as if going between the two forts, and the two forts now took advantage of the opportunity to fire upon the French troops.",
+   "at": {
+    "zouaves": [
+     62,
+     30,
+     110
+    ],
+    "berri": [
+     82,
+     46,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "minf",
+     "zouaves"
+    ],
+    [
+     "negrete",
+     "zouaves"
+    ],
+    [
+     "mcav",
+     "zouaves",
+     -0.3
+    ]
+   ]
+  },
+  {
+   "title": "The French retreat and a second column comes up",
+   "text": "The zouaves retreated and the Mexicans pursued them. The pursuit stopped when another French column came to support the retreating troops.",
+   "quote": "the French retreated and were pursued by Mexican forces, but the pursuit was given up when another French column came to the support of the retreating troops.",
+   "at": {
+    "zouaves": [
+     44,
+     28,
+     270
+    ],
+    "fcol2": [
+     38,
+     18,
+     90
+    ],
+    "mcav": [
+     52,
+     40,
+     270
+    ]
+   },
+   "how": {
+    "zouaves": "retreat"
+   },
+   "hits": [
+    [
+     "mcav",
+     "zouaves"
+    ]
+   ]
+  },
+  {
+   "title": "The second attack, from the north and the east",
+   "text": "The two French columns pushed on together towards the Guadalupe and Resurrection chapel, joined and split into three. The attack was more vigorous. Diaz came up with part of his brigade and two guns.",
+   "quote": "The two French columns now pushed on together towards the Guadalupe and Resurrection chapel.",
+   "at": {
+    "zouaves": [
+     56,
+     16,
+     90
+    ],
+    "fcol2": [
+     52,
+     32,
+     100
+    ],
+    "diaz": [
+     66,
+     24,
+     270
+    ],
+    "mcav": [
+     60,
+     54,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "zouaves",
+     "diaz"
+    ],
+    [
+     "fcol2",
+     "negrete",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The columns are repulsed",
+   "text": "The columns that went up from the north were routed. Diaz checked and drove away the French columns marching against the Mexican positions, and the third column, which reached the east side as the others were repulsed, was also defeated.",
+   "quote": "The two columns which attempted an assault on the hill from the north again were completely routed.",
+   "at": {
+    "zouaves": [
+     40,
+     14,
+     270
+    ],
+    "fcol2": [
+     42,
+     34,
+     270
+    ]
+   },
+   "how": {
+    "zouaves": "rout",
+    "fcol2": "rout"
+   },
+   "state": {
+    "zouaves": "routed",
+    "fcol2": "routed"
+   },
+   "hits": [
+    [
+     "diaz",
+     "zouaves"
+    ],
+    [
+     "minf",
+     "fcol2"
+    ]
+   ]
+  },
+  {
+   "title": "The Mexican cavalry charge and the French withdraw",
+   "when": "Seven in the evening",
+   "text": "The Mexican cavalry charged the remaining French and prevented them from reorganising for further assaults. The two armies faced each other until seven in the evening, when the French returned to their camp.",
+   "quote": "The Mexican cavalry then charged upon the remaining French and prevented their reorganization for further assaults.",
+   "at": {
+    "mcav": [
+     48,
+     34,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "mcav",
+     "fcol2"
+    ]
+   ]
+  }
+ ]
+}

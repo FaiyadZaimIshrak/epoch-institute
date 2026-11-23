@@ -1,0 +1,302 @@
+{
+ "slug": "battle-of-midway",
+ "name": "Battle of Midway",
+ "article": "battles2/wp/battle-of-midway",
+ "field": {
+  "north": 0,
+  "ground": "sea",
+  "edges": [
+   {
+    "name": "← toward Japan",
+    "at": [
+     6,
+     54
+    ]
+   },
+   {
+    "name": "toward Oahu →",
+    "at": [
+     92,
+     58
+    ]
+   }
+  ]
+ },
+ "note": "The plan shows the whole operation, not a single field: each block is a fleet or a group of carriers, and the distances are schematic. Only the directions the account gives are kept: the Americans lay northeast of Midway and east of Nagumo's carriers, and Yamamoto's ships trailed Nagumo by several hundred miles. The attack groups of aircraft are drawn as arrows between the fleets that sent them.",
+ "terrain": [
+  {
+   "k": "point",
+   "name": "Midway",
+   "at": [
+    44,
+    46
+   ],
+   "lab": [
+    44,
+    42
+   ],
+   "quote": "Instead, Yamamoto selected Midway, a tiny atoll at the extreme northwest end of the Hawaiian Island chain"
+  },
+  {
+   "k": "point",
+   "name": "Point Luck",
+   "at": [
+    72,
+    14
+   ],
+   "lab": [
+    72,
+    10
+   ],
+   "quote": "let the American carriers reach their assembly point northeast of Midway"
+  }
+ ],
+ "sides": [
+  {
+   "id": "j",
+   "name": "Imperial Japanese Navy"
+  },
+  {
+   "id": "u",
+   "name": "United States"
+  }
+ ],
+ "units": [
+  {
+   "id": "cd1",
+   "side": "j",
+   "k": "ships",
+   "name": "Carrier Division 1",
+   "short": "Carr. 1",
+   "w": 8,
+   "quote": "Kaga and Akagi forming Carrier Division 1 and Hiryū and Sōryū making up Carrier Division 2"
+  },
+  {
+   "id": "cd2",
+   "side": "j",
+   "k": "ships",
+   "name": "Carrier Division 2",
+   "short": "Carr. 2",
+   "leader": "Tamon Yamaguchi",
+   "w": 8,
+   "quote": "Kaga and Akagi forming Carrier Division 1 and Hiryū and Sōryū making up Carrier Division 2"
+  },
+  {
+   "id": "main",
+   "side": "j",
+   "k": "ships",
+   "name": "Yamamoto's main body",
+   "short": "Main body",
+   "leader": "Isoroku Yamamoto",
+   "w": 12,
+   "quote": "Yamamoto's supporting battleships and cruisers trailed Vice Admiral Chūichi Nagumo's carrier force by several hundred miles."
+  },
+  {
+   "id": "raid",
+   "side": "j",
+   "k": "ships",
+   "name": "Cruiser bombardment force",
+   "short": "Raiders",
+   "w": 5,
+   "quote": "the ships sighted by Tambor were the detachment of four cruisers and two destroyers Yamamoto had sent to bombard Midway"
+  },
+  {
+   "id": "tf16",
+   "side": "u",
+   "k": "ships",
+   "name": "Task Force 16",
+   "short": "TF 16",
+   "leader": "Raymond A. Spruance",
+   "w": 9,
+   "quote": "USS Enterprise and USS Hornet, forming Task Force 16, were the only carriers available to the Pacific Fleet"
+  },
+  {
+   "id": "tf17",
+   "side": "u",
+   "k": "ships",
+   "name": "Task Force 17 with Yorktown",
+   "short": "TF 17",
+   "leader": "Frank Jack Fletcher",
+   "w": 8,
+   "quote": "Nimitz also hurriedly recalled Rear Admiral Frank Jack Fletcher's task force, including the carrier Yorktown"
+  },
+  {
+   "id": "mid",
+   "side": "u",
+   "k": "guard",
+   "name": "Midway air groups",
+   "short": "Midway",
+   "w": 8,
+   "quote": "Midway's radar picked up the Japanese at 05:53, at a distance of 93 nautical miles, and interceptors were scrambled."
+  }
+ ],
+ "phases": [
+  {
+   "title": "The fleets take their places",
+   "text": "Nimitz sent Fletcher's force to the Midway area before the Japanese arrived, and the two American task forces waited northeast of the atoll. Nagumo's carriers approached from the west, with Yamamoto's ships several hundred miles behind them.",
+   "quote": "Chester Nimitz, commander of the Pacific Fleet, had sent a large force under Frank Jack Fletcher to the Midway area before the Japanese had arrived",
+   "at": {
+    "cd1": [
+     30,
+     24,
+     135
+    ],
+    "cd2": [
+     24,
+     34,
+     135
+    ],
+    "main": [
+     16,
+     12,
+     120
+    ],
+    "tf16": [
+     68,
+     20,
+     270
+    ],
+    "tf17": [
+     76,
+     30,
+     270
+    ],
+    "mid": [
+     42,
+     52,
+     315
+    ]
+   }
+  },
+  {
+   "title": "The Japanese strike Midway, and Midway's bombers strike back",
+   "when": "4 June 1942, from 04:30",
+   "text": "Nagumo launched his first attack on Midway at 04:30. Bombers that had taken off from the atoll before the Japanese arrived attacked his carriers. The Japanese repelled them, and the strike on Midway left its defences largely intact.",
+   "quote": "Having taken off prior to the Japanese attack, American bombers based on Midway made several attacks on the Japanese carrier force.",
+   "at": {},
+   "hits": [
+    [
+     "cd1",
+     "mid"
+    ],
+    [
+     "mid",
+     "cd1",
+     0.25
+    ]
+   ]
+  },
+  {
+   "title": "American torpedo squadrons are shot down",
+   "when": "From about 09:20",
+   "text": "The American carriers had launched from 07:00, and their torpedo squadrons reached the Japanese carriers without fighter escort. Most were shot down and none of their torpedoes hit, but the attacks drew the Japanese fighters out of position.",
+   "quote": "Without fighter escort, all 15 TBD Devastators of VT-8 were shot down without being able to inflict any damage.",
+   "at": {
+    "tf16": [
+     60,
+     24,
+     270
+    ],
+    "tf17": [
+     66,
+     32,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "tf16",
+     "cd2",
+     -0.2
+    ],
+    [
+     "tf17",
+     "cd2",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "Dive bombers hit three of the four carriers",
+   "when": "From 10:22",
+   "text": "Dive bombers from Enterprise and Yorktown arrived while the Japanese fighters were drawn off. Kaga and Akagi were hit and set on fire, and Sōryū was hit too. All three were eventually abandoned and scuttled.",
+   "quote": "Within six minutes, Sōryū and Kaga were ablaze from stem to stern.",
+   "at": {},
+   "state": {
+    "cd1": "destroyed"
+   },
+   "hits": [
+    [
+     "tf16",
+     "cd1"
+    ],
+    [
+     "tf17",
+     "cd2"
+    ]
+   ]
+  },
+  {
+   "title": "Hiryū strikes Yorktown",
+   "text": "Hiryū, the one carrier still operating, sent two waves after the American aircraft. Three bombs hit Yorktown in the first, and two torpedoes crippled her in the second. Fletcher moved his command staff to the cruiser Astoria.",
+   "quote": "Hiryū, the sole surviving Japanese aircraft carrier, wasted little time in counterattacking.",
+   "at": {},
+   "hits": [
+    [
+     "cd2",
+     "tf17"
+    ]
+   ]
+  },
+  {
+   "title": "Enterprise's bombers cripple Hiryū",
+   "when": "Late in the afternoon",
+   "text": "A Yorktown scout found Hiryū, and Enterprise launched 24 dive bombers. Four bombs, possibly five, hit her and left her ablaze. She stayed afloat for several hours and sank after being spotted the next morning.",
+   "quote": "the attack by Enterprise and orphaned Yorktown aircraft launched from Enterprise was successful: four bombs (possibly five) hit Hiryū, leaving her ablaze and unable to operate aircraft.",
+   "at": {
+    "tf16": [
+     54,
+     24,
+     270
+    ]
+   },
+   "state": {
+    "cd2": "destroyed"
+   },
+   "hits": [
+    [
+     "tf16",
+     "cd2"
+    ]
+   ]
+  },
+  {
+   "title": "Both sides draw back",
+   "when": "Night of 4 June and after",
+   "text": "Spruance withdrew to the east during the night, fearing a night encounter with Japanese surface ships. Yamamoto had detached a cruiser force to bombard Midway, then ordered a general withdrawal to the west, and the cruisers turned back.",
+   "quote": "The Japanese surface forces failed to make contact with the Americans because Spruance had briefly withdrawn eastward, and Yamamoto ordered a general withdrawal to the west.",
+   "at": {
+    "tf16": [
+     66,
+     16,
+     90
+    ],
+    "main": [
+     8,
+     14,
+     270
+    ],
+    "raid": [
+     26,
+     16,
+     270
+    ]
+   },
+   "how": {
+    "tf16": "retreat",
+    "main": "retreat",
+    "raid": "retreat"
+   }
+  }
+ ]
+}

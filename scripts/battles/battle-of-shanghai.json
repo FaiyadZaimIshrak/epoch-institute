@@ -1,0 +1,589 @@
+{
+ "slug": "battle-of-shanghai",
+ "name": "Battle of Shanghai",
+ "article": "battles2/wp/battle-of-shanghai",
+ "field": {
+  "north": 0
+ },
+ "note": "This plan shows the whole operation, not a single field: each block is an army, a corps or a fleet, and the towns, creeks and the river are the ground it was fought over. The accounts give only rough directions and distances, so the positions are schematic. Many Chinese and Japanese divisions are folded into the formations the accounts name most often; the accounts do not say which Japanese divisions stood where at each date.",
+ "terrain": [
+  {
+   "k": "sea",
+   "name": "Jiangsu coast",
+   "unnamed": true,
+   "at": [
+    [
+     88,
+     2
+    ],
+    [
+     100,
+     2
+    ],
+    [
+     100,
+     52
+    ],
+    [
+     92,
+     52
+    ],
+    [
+     88,
+     38
+    ],
+    [
+     86,
+     24
+    ],
+    [
+     86,
+     10
+    ]
+   ],
+   "lab": [
+    94,
+    12
+   ],
+   "quote": "reinforcing amphibious landings on the Jiangsu coast"
+  },
+  {
+   "k": "sea",
+   "name": "Hangzhou Bay",
+   "at": [
+    [
+     8,
+     60
+    ],
+    [
+     30,
+     58.5
+    ],
+    [
+     50,
+     59.5
+    ],
+    [
+     70,
+     58
+    ],
+    [
+     86,
+     56
+    ],
+    [
+     100,
+     57
+    ],
+    [
+     100,
+     62
+    ],
+    [
+     8,
+     62
+    ]
+   ],
+   "lab": [
+    20,
+    60.5
+   ],
+   "quote": "on the beaches of the Yangtze River and Hangzhou Bay, where the Japanese had made amphibious landings"
+  },
+  {
+   "k": "river",
+   "name": "Yangtze",
+   "at": [
+    [
+     6,
+     5
+    ],
+    [
+     28,
+     5
+    ],
+    [
+     50,
+     5
+    ],
+    [
+     72,
+     4.5
+    ],
+    [
+     88,
+     3
+    ]
+   ],
+   "lab": [
+    20,
+    3.2
+   ],
+   "quote": "on the beaches of the Yangtze River and Hangzhou Bay"
+  },
+  {
+   "k": "river",
+   "name": "Huangpu",
+   "at": [
+    [
+     66,
+     60
+    ],
+    [
+     68,
+     48
+    ],
+    [
+     71,
+     36
+    ],
+    [
+     73,
+     24
+    ],
+    [
+     70,
+     12
+    ],
+    [
+     70,
+     5
+    ]
+   ],
+   "lab": [
+    76,
+    56
+   ],
+   "quote": "docks on the northern side of the Huangpu River"
+  },
+  {
+   "k": "stream",
+   "name": "Suzhou Creek",
+   "at": [
+    [
+     8,
+     42
+    ],
+    [
+     30,
+     40
+    ],
+    [
+     50,
+     39
+    ],
+    [
+     71,
+     36
+    ]
+   ],
+   "lab": [
+    14,
+    40
+   ],
+   "quote": "was situated on the Suzhou Creek across from the International Settlement"
+  },
+  {
+   "k": "stream",
+   "name": "Wusong Creek",
+   "at": [
+    [
+     10,
+     22
+    ],
+    [
+     26,
+     22
+    ],
+    [
+     42,
+     22
+    ],
+    [
+     56,
+     21
+    ],
+    [
+     68,
+     20
+    ]
+   ],
+   "lab": [
+    14,
+    19.8
+   ],
+   "quote": "The Chinese focused their defensive line on the Wusong Creek"
+  },
+  {
+   "k": "town",
+   "name": "Zhabei",
+   "at": [
+    54,
+    35
+   ],
+   "lab": [
+    54,
+    37.5
+   ],
+   "quote": "hold on to Zhabei, Jiangwan, and other downtown positions"
+  },
+  {
+   "k": "town",
+   "name": "Luodian",
+   "at": [
+    47,
+    13
+   ],
+   "lab": [
+    47,
+    9
+   ],
+   "quote": "defensive positions around the small town of Luodian"
+  },
+  {
+   "k": "town",
+   "name": "Dachang",
+   "at": [
+    44,
+    33
+   ],
+   "lab": [
+    44,
+    35.5
+   ],
+   "quote": "cross the Creek and take the walled town of Dachang"
+  },
+  {
+   "k": "town",
+   "name": "Baoshan",
+   "at": [
+    78,
+    8
+   ],
+   "lab": [
+    78,
+    10.5
+   ],
+   "quote": "the fall of Baoshan, a vital coastal town"
+  },
+  {
+   "k": "town",
+   "name": "Jinshanwei",
+   "at": [
+    60,
+    56.5
+   ],
+   "lab": [
+    60,
+    54
+   ],
+   "quote": "a town located on the northern bank of Hangzhou Bay"
+  }
+ ],
+ "sides": [
+  {
+   "id": "c",
+   "name": "Chinese National Revolutionary Army"
+  },
+  {
+   "id": "j",
+   "name": "Imperial Japanese forces"
+  }
+ ],
+ "units": [
+  {
+   "id": "cmain",
+   "side": "c",
+   "k": "infantry",
+   "name": "Chinese 88th, 87th Divisions",
+   "short": "88th/87th",
+   "w": 12,
+   "quote": "the 88th Division was to attack Japanese army headquarters near Zhabei"
+  },
+  {
+   "id": "c36",
+   "side": "c",
+   "k": "infantry",
+   "name": "Chinese 36th Division",
+   "short": "36th Div",
+   "w": 9,
+   "quote": "Half the division was ordered to attack towards the Hueishan"
+  },
+  {
+   "id": "snlf",
+   "side": "j",
+   "k": "infantry",
+   "name": "Japanese naval landing force",
+   "short": "Marines",
+   "w": 10,
+   "quote": "the NRA besieged the Japanese Naval Landing Force stationed in Shanghai"
+  },
+  {
+   "id": "fleet",
+   "side": "j",
+   "k": "ships",
+   "name": "Japanese Third Fleet",
+   "short": "Fleet",
+   "w": 8,
+   "quote": "ships of the Third Fleet stationed in the Yangtze and the Huangpu River"
+  },
+  {
+   "id": "sef",
+   "side": "j",
+   "k": "infantry",
+   "name": "Shanghai Expeditionary Army",
+   "short": "SEF",
+   "leader": "Iwane Matsui",
+   "w": 14,
+   "quote": "the Japanese 3rd and 11th Divisions made an amphibious assault under the cover of naval bombardment"
+  },
+  {
+   "id": "chn",
+   "side": "c",
+   "k": "infantry",
+   "name": "Chinese field army",
+   "short": "Chinese",
+   "leader": "Chen Cheng",
+   "w": 14,
+   "quote": "ordered Chen Cheng to reinforce the area with the 18th Army"
+  },
+  {
+   "id": "gx",
+   "side": "c",
+   "k": "infantry",
+   "name": "Guangxi Army",
+   "short": "Guangxi",
+   "leader": "Li Zongren",
+   "w": 10,
+   "quote": "the Guangxi Army under Li Zongren and Bai Chongxi finally arrived"
+  },
+  {
+   "id": "j10",
+   "side": "j",
+   "k": "infantry",
+   "name": "Japanese 10th Army",
+   "short": "10th Army",
+   "leader": "Heisuke Yanagawa",
+   "w": 12,
+   "quote": "the Japanese 10th Army, composed of units diverted from the Battle of Taiyuan"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The Chinese assault on the Japanese garrison in the city",
+   "when": "13 to 22 August 1937",
+   "text": "Chinese divisions attacked the Japanese naval landing force in Zhabei and towards the Huangpu docks, and the 36th Division joined them. The Japanese Third Fleet shelled the attackers from the river, and the Chinese were halted short of the water.",
+   "quote": "By August 21, 1937, Chinese tanks had managed to punch through to Broadway, the last street before the Huangpu.",
+   "at": {
+    "cmain": [
+     50,
+     30,
+     90
+    ],
+    "c36": [
+     58,
+     20,
+     90
+    ],
+    "snlf": [
+     64,
+     31,
+     270
+    ],
+    "fleet": [
+     69,
+     46,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "cmain",
+     "snlf"
+    ],
+    [
+     "c36",
+     "snlf"
+    ],
+    [
+     "fleet",
+     "c36",
+     0.3
+    ]
+   ]
+  },
+  {
+   "title": "Japanese troops land on the coast",
+   "when": "23 August 1937",
+   "text": "The Japanese 3rd and 11th Divisions landed on the north-east coast under naval bombardment, and the Chinese brought troops from the city to meet them. The front line was lengthened from the city to the coast.",
+   "quote": "the Japanese 3rd and 11th Divisions made an amphibious assault under the cover of naval bombardment and proceeded to land",
+   "at": {
+    "sef": [
+     82,
+     20,
+     270
+    ],
+    "chn": [
+     74,
+     16,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "sef",
+     "chn"
+    ]
+   ]
+  },
+  {
+   "title": "The fight for Luodian",
+   "when": "11 to 30 September 1937",
+   "text": "The Chinese concentrated around Luodian and the Japanese came inland against them with naval gunfire, tanks and aircraft. The Chinese were bled almost dry and gave up the town by the end of September.",
+   "quote": "To defend Luodian, the Chinese concentrated some 300,000 soldiers there, while the Japanese amassed more than 100,000 troops",
+   "at": {
+    "sef": [
+     54,
+     10,
+     270
+    ],
+    "chn": [
+     40,
+     14,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "sef",
+     "chn"
+    ],
+    [
+     "chn",
+     "sef",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "The Japanese reach the Wusong Creek",
+   "when": "From 5 October 1937",
+   "text": "The Chinese fell back to the south bank of the Wusong Creek, and the Japanese attacked across it. The line was breached after two days at one bridge, but the Japanese met further defences behind it.",
+   "quote": "On October 5, 1937, the Japanese forces smashed into the Chinese defenses across the Wusong Creek",
+   "at": {
+    "chn": [
+     24,
+     26,
+     0
+    ],
+    "sef": [
+     24,
+     14,
+     180
+    ]
+   },
+   "how": {
+    "chn": "retreat"
+   },
+   "hits": [
+    [
+     "sef",
+     "chn"
+    ]
+   ]
+  },
+  {
+   "title": "The Guangxi counteroffensive",
+   "when": "21 to 23 October 1937",
+   "text": "The Guangxi Army joined the line and counterattacked to retake the banks of the creek. It was poorly coordinated and bogged down, and the Japanese answered with artillery, tanks and poison gas.",
+   "quote": "These Guangxi units, four divisions in total, then staged a final counteroffensive on October 21",
+   "at": {
+    "gx": [
+     7,
+     26,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "gx",
+     "sef"
+    ],
+    [
+     "sef",
+     "gx",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "Dachang falls and the Chinese leave the city",
+   "when": "26 October 1937",
+   "text": "The Japanese pushed on to Dachang and took it. The Chinese then withdrew from downtown Shanghai, which they had held for almost three months, to a line behind the Suzhou Creek.",
+   "quote": "The fighting continued until October 26, when Dachang finally fell.",
+   "at": {
+    "sef": [
+     30,
+     30,
+     180
+    ],
+    "chn": [
+     24,
+     44,
+     0
+    ],
+    "gx": [
+     8,
+     44,
+     0
+    ],
+    "cmain": [
+     56,
+     43,
+     0
+    ]
+   },
+   "how": {
+    "chn": "retreat",
+    "gx": "retreat",
+    "cmain": "retreat"
+   },
+   "hits": [
+    [
+     "sef",
+     "chn",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The Japanese cross the creek and land at Jinshanwei",
+   "when": "30 October to 5 November 1937",
+   "text": "The Japanese crossed the Suzhou Creek, and the Chinese were in danger of encirclement. On 5 November the Japanese 10th Army landed at Jinshanwei on Hangzhou Bay, behind the Chinese line.",
+   "quote": "to land easily in Jinshanwei on November 5, 1937",
+   "at": {
+    "sef": [
+     30,
+     39,
+     180
+    ],
+    "j10": [
+     44,
+     54,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "sef",
+     "chn"
+    ],
+    [
+     "j10",
+     "cmain",
+     0.2
+    ]
+   ]
+  }
+ ]
+}

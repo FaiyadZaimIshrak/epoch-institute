@@ -1,0 +1,291 @@
+{
+ "slug": "battle-of-yamen",
+ "name": "Battle of Yamen",
+ "article": "battles2/wp/battle-of-yamen",
+ "field": {
+  "ground": "sea",
+  "north": null
+ },
+ "note": "The plan shows the Song fleet and the Yuan squadrons in the bay. The accounts give the Song fleet as one chained string with the emperor's boat in the middle; it is drawn here as two halves either side of that boat. They give no compass directions, so the squadrons' sides are drawn as north, east and south on the page and Zhang Hongfan's own force on the west, where the accounts say only that it stood about a li from the Song forces. The direction of the breakout is not given.",
+ "terrain": [
+  {
+   "k": "sea",
+   "name": "The bay",
+   "unnamed": true,
+   "at": [
+    [
+     6,
+     6
+    ],
+    [
+     50,
+     3
+    ],
+    [
+     94,
+     6
+    ],
+    [
+     96,
+     32
+    ],
+    [
+     94,
+     58
+    ],
+    [
+     50,
+     60
+    ],
+    [
+     6,
+     58
+    ],
+    [
+     4,
+     32
+    ]
+   ],
+   "lab": [
+    86,
+    10
+   ],
+   "quote": "ships to be chained together, forming a long string within the bay"
+  }
+ ],
+ "sides": [
+  {
+   "id": "s",
+   "name": "Southern Song"
+  },
+  {
+   "id": "y",
+   "name": "Yuan"
+  }
+ ],
+ "units": [
+  {
+   "id": "fn",
+   "side": "s",
+   "k": "ships",
+   "name": "Song chained fleet, north half",
+   "short": "Song N",
+   "leader": "Zhang Shijie",
+   "w": 12,
+   "quote": "Zhang Shijie ordered about 1,000 ships to be chained together, forming a long string within the bay"
+  },
+  {
+   "id": "emp",
+   "side": "s",
+   "k": "guard",
+   "name": "Zhao Bing's boat",
+   "short": "Emperor",
+   "w": 5,
+   "quote": "placed Zhao Bing's boat in the center of his fleet"
+  },
+  {
+   "id": "fs",
+   "side": "s",
+   "k": "ships",
+   "name": "Song chained fleet, south half",
+   "short": "Song S",
+   "w": 12,
+   "quote": "Zhang Shijie ordered about 1,000 ships to be chained together, forming a long string within the bay"
+  },
+  {
+   "id": "yn",
+   "side": "y",
+   "k": "ships",
+   "name": "Yuan north squadron",
+   "short": "Yuan N",
+   "w": 10,
+   "quote": "one each for the Song's east, north, and south sides"
+  },
+  {
+   "id": "ye",
+   "side": "y",
+   "k": "ships",
+   "name": "Yuan east squadron",
+   "short": "Yuan E",
+   "w": 10,
+   "quote": "one each for the Song's east, north, and south sides"
+  },
+  {
+   "id": "ys",
+   "side": "y",
+   "k": "ships",
+   "name": "Yuan south squadron",
+   "short": "Yuan S",
+   "w": 10,
+   "quote": "one each for the Song's east, north, and south sides"
+  },
+  {
+   "id": "hf",
+   "side": "y",
+   "k": "ships",
+   "name": "Zhang Hongfan's squadron",
+   "short": "Hongfan",
+   "leader": "Zhang Hongfan",
+   "w": 12,
+   "quote": "while Hongfan led the remaining portion to about a li away from the Song forces"
+  },
+  {
+   "id": "out",
+   "side": "s",
+   "k": "ships",
+   "name": "Zhang Shijie's breakout ships",
+   "short": "Breakout",
+   "leader": "Zhang Shijie",
+   "w": 5,
+   "quote": "cut about a dozen ships from the formation in an attempted breakout to save the emperor"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The chained Song fleet and the four Yuan parts",
+   "text": "The Song ships lay chained in a long string in the bay, with the emperor's boat in the middle. Zhang Hongfan split his ships into four parts: three for the Song's east, north and south sides, and one under his own command a short way off.",
+   "quote": "The next day Zhang Hongfan split his naval forces into four parts",
+   "at": {
+    "fn": [
+     50,
+     22,
+     90
+    ],
+    "emp": [
+     50,
+     32,
+     90
+    ],
+    "fs": [
+     50,
+     42,
+     90
+    ],
+    "yn": [
+     50,
+     8,
+     180
+    ],
+    "ye": [
+     74,
+     32,
+     270
+    ],
+    "ys": [
+     50,
+     54,
+     0
+    ],
+    "hf": [
+     24,
+     32,
+     90
+    ]
+   },
+   "state": {}
+  },
+  {
+   "title": "The north flank is repulsed",
+   "text": "The Yuan north squadron engaged the Song fleet first and was driven back. The Song ships stayed chained where they lay, and the rest of the Yuan force held its places.",
+   "quote": "First, the north flank engaged the Song forces but were repulsed.",
+   "at": {
+    "yn": [
+     50,
+     7,
+     180
+    ]
+   },
+   "how": {
+    "yn": "retreat"
+   },
+   "hits": [
+    [
+     "yn",
+     "fn"
+    ]
+   ]
+  },
+  {
+   "title": "Zhang Hongfan attacks from the front",
+   "when": "Noon",
+   "text": "After the Yuan played festive music, which led the Song to think they were feasting, Zhang Hongfan attacked from the front with more soldiers hidden under cloth. Waves of arrows hit the Song ships, and seven ships were lost at once.",
+   "quote": "At noon Zhang Hongfan attacked from the front, hiding additional soldiers under large pieces of cloth.",
+   "at": {
+    "hf": [
+     30,
+     32,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "hf",
+     "fn",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "Zhang Shijie tries to break out",
+   "text": "The chained Song ships could neither support the middle nor retreat, and command broke down. Zhang Shijie cut about a dozen ships from the formation in an attempt to save the emperor.",
+   "quote": "The chained Song ships could neither support the middle nor retreat.",
+   "at": {
+    "out": [
+     60,
+     40,
+     270
+    ],
+    "ye": [
+     70,
+     32,
+     270
+    ],
+    "ys": [
+     50,
+     53,
+     0
+    ],
+    "hf": [
+     36,
+     32,
+     90
+    ]
+   },
+   "state": {
+    "out": "shown"
+   },
+   "hits": [
+    [
+     "ye",
+     "out"
+    ],
+    [
+     "ys",
+     "fs"
+    ]
+   ]
+  },
+  {
+   "title": "The Yuan reach the emperor's boat",
+   "text": "The Yuan advanced quickly to the centre and to Zhao Bing, killing everyone in their way. Lu Xiufu took the boy emperor and jumped into the sea, and both drowned. Zhang Shijie escaped the battle.",
+   "quote": "The Yuan forces quickly advanced to the center and to Zhao Bing, killing everyone in their way.",
+   "at": {
+    "hf": [
+     44,
+     32,
+     90
+    ]
+   },
+   "state": {
+    "emp": "destroyed",
+    "out": "gone"
+   },
+   "hits": [
+    [
+     "hf",
+     "emp"
+    ]
+   ]
+  }
+ ]
+}

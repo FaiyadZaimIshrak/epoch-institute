@@ -1,0 +1,366 @@
+{
+ "slug": "second-battle-of-panipat",
+ "name": "Second Battle of Panipat",
+ "article": "battles2/wp/second-battle-of-panipat",
+ "field": {
+  "north": null,
+  "edges": [
+   {
+    "name": "Akbar and Bairam Khan, eight miles behind ↓",
+    "at": [
+     50,
+     59
+    ]
+   }
+  ]
+ },
+ "note": "The accounts do not give the directions, so the armies are set facing each other from top to bottom. The accounts name Hemu's left and right wings and speak of an Afghan centre, which is shown as his elephants and cavalry under Hemu. The vanguard of the Mughals is not placed in the accounts and is left out. The accounts do not say where the ravine lay; it is placed in front of the Mughal centre. Ali Quli Khan's cavalry is shown as a part of the Mughal centre that rode out, the centre itself staying at the ravine.",
+ "terrain": [
+  {
+   "k": "ditch",
+   "name": "Deep ravine",
+   "unnamed": true,
+   "at": [
+    [
+     28,
+     33
+    ],
+    [
+     40,
+     32.5
+    ],
+    [
+     60,
+     32.5
+    ],
+    [
+     72,
+     33
+    ]
+   ],
+   "lab": [
+    50,
+    34.5
+   ],
+   "quote": "The Mughal centre also advanced and took up a defensive position before a deep ravine."
+  }
+ ],
+ "sides": [
+  {
+   "id": "m",
+   "name": "Mughals"
+  },
+  {
+   "id": "a",
+   "name": "Hemu's army"
+  }
+ ],
+ "units": [
+  {
+   "id": "mc",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Mughal centre",
+   "short": "M. centre",
+   "leader": "Ali Quli Khan Shaibani",
+   "w": 12,
+   "quote": "The Mughal army was led by Ali Quli Khan Shaibani, with his 10,000 cavalry in the centre"
+  },
+  {
+   "id": "mr",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Mughal right wing",
+   "short": "M. right",
+   "leader": "Sikandar Khan Uzbak",
+   "w": 9,
+   "quote": "Sikandar Khan Uzbak on the right, and Abdulla Khan Uzbak towards the left."
+  },
+  {
+   "id": "ml",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Mughal left wing",
+   "short": "M. left",
+   "leader": "Abdulla Khan Uzbak",
+   "w": 9,
+   "quote": "Sikandar Khan Uzbak on the right, and Abdulla Khan Uzbak towards the left."
+  },
+  {
+   "id": "aq",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Ali Quli's flanking cavalry",
+   "short": "Ali Quli",
+   "leader": "Ali Quli Khan",
+   "w": 6,
+   "quote": "Ali Quli Khan led his cavalry out, circling around and falling upon the Afghan centre from the rear."
+  },
+  {
+   "id": "he",
+   "side": "a",
+   "k": "elephants",
+   "name": "Hemu and the elephants",
+   "short": "Hemu",
+   "leader": "Hemchandra",
+   "w": 12,
+   "quote": "Hemchandra led his army himself into battle atop an elephant named Hawai.",
+   "leaderEntry": "hemu"
+  },
+  {
+   "id": "al",
+   "side": "a",
+   "k": "cavalry",
+   "name": "Afghan left wing",
+   "short": "A. left",
+   "leader": "Ramya",
+   "w": 12,
+   "quote": "His left was led by his sister's son, Ramya, and the right by Shadi Khan Kakar."
+  },
+  {
+   "id": "ar",
+   "side": "a",
+   "k": "cavalry",
+   "name": "Afghan right wing",
+   "short": "A. right",
+   "leader": "Shadi Khan Kakar",
+   "w": 12,
+   "quote": "His left was led by his sister's son, Ramya, and the right by Shadi Khan Kakar."
+  }
+ ],
+ "phases": [
+  {
+   "title": "The armies face each other at Panipat",
+   "when": "5 November 1556",
+   "text": "The Mughals stood with Ali Quli Khan's cavalry in the centre and a wing on each side. Hemu, with the larger army, led from an elephant between his two wings.",
+   "quote": "On 5 November 1556, the Mughal army met Hemu's army at the historic battlefield of Panipat.",
+   "at": {
+    "mc": [
+     50,
+     42,
+     0
+    ],
+    "mr": [
+     78,
+     42,
+     0
+    ],
+    "ml": [
+     22,
+     42,
+     0
+    ],
+    "he": [
+     50,
+     24,
+     180
+    ],
+    "al": [
+     78,
+     24,
+     180
+    ],
+    "ar": [
+     22,
+     24,
+     180
+    ]
+   }
+  },
+  {
+   "title": "Hemu looses his elephants on the Mughal wings",
+   "text": "Hemu began the attack and sent his elephants among the Mughal right and left wings. The Mughal centre advanced and took up a position before a ravine that his elephants and horse could not cross.",
+   "quote": "Hemchandra began the attack himself and loosed his elephants among the right and left wings of the Mughals.",
+   "at": {
+    "he": [
+     50,
+     28,
+     180
+    ],
+    "mc": [
+     50,
+     40,
+     0
+    ],
+    "mr": [
+     80,
+     34,
+     0
+    ],
+    "ml": [
+     20,
+     34,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "he",
+     "mr",
+     0.15
+    ],
+    [
+     "he",
+     "ml",
+     -0.15
+    ]
+   ]
+  },
+  {
+   "title": "Mughal horsemen turn on the elephants",
+   "text": "Men who escaped the elephants veered to the sides and attacked the flanks of Hemu's cavalry with arrows. The Mughal cavalry cut at the elephants' legs and riders, and Hemu pulled his elephants back.",
+   "quote": "Hemchandra pulled back his elephants, and the Afghan attack relented.",
+   "at": {
+    "he": [
+     50,
+     24,
+     180
+    ],
+    "mr": [
+     88,
+     29,
+     0
+    ],
+    "ml": [
+     12,
+     29,
+     0
+    ]
+   },
+   "how": {
+    "he": "retreat"
+   },
+   "hits": [
+    [
+     "mr",
+     "al",
+     0.1
+    ],
+    [
+     "ml",
+     "ar",
+     -0.1
+    ],
+    [
+     "mr",
+     "he",
+     0.25
+    ],
+    [
+     "ml",
+     "he",
+     -0.25
+    ]
+   ]
+  },
+  {
+   "title": "Ali Quli rides round to the Afghan rear",
+   "text": "As the Afghan attack slackened, Ali Quli Khan led his cavalry out, circled round and fell on the Afghan centre from behind. Hemu hurried to meet this charge.",
+   "quote": "Hemu, monitoring the battlefield from his howdah atop Hawai, immediately hurried to counter this charge.",
+   "at": {
+    "aq": [
+     50,
+     12,
+     180
+    ],
+    "he": [
+     50,
+     22,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "aq",
+     "he"
+    ],
+    [
+     "he",
+     "aq",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The Mughal wings are driven back",
+   "text": "Hemu kept leading counterattacks, and both Mughal wings were driven back. He moved his elephants and cavalry forward to crush the Mughal centre.",
+   "quote": "Both the wings of the Mughal army had been driven back, and Hemu moved his contingent of war elephants and cavalry forward to crush their centre.",
+   "at": {
+    "he": [
+     50,
+     29,
+     180
+    ],
+    "mr": [
+     86,
+     40,
+     0
+    ],
+    "ml": [
+     14,
+     40,
+     0
+    ]
+   },
+   "how": {
+    "mr": "retreat",
+    "ml": "retreat"
+   },
+   "hits": [
+    [
+     "he",
+     "mc"
+    ],
+    [
+     "al",
+     "mr",
+     0.15
+    ],
+    [
+     "ar",
+     "ml",
+     -0.15
+    ]
+   ]
+  },
+  {
+   "title": "Hemu is struck by an arrow and his army flees",
+   "text": "Hemu was struck in the eye by a chance Mughal arrow and collapsed unconscious. His army panicked, broke formation and fled, and many were killed in flight.",
+   "quote": "Seeing him going down triggered a panic in his army which broke formation and fled.",
+   "at": {
+    "he": [
+     32,
+     17,
+     180
+    ],
+    "al": [
+     86,
+     12,
+     180
+    ],
+    "ar": [
+     14,
+     12,
+     180
+    ]
+   },
+   "how": {
+    "he": "rout",
+    "al": "rout",
+    "ar": "rout"
+   },
+   "state": {
+    "he": "routed",
+    "al": "routed",
+    "ar": "routed"
+   },
+   "hits": [
+    [
+     "mc",
+     "he",
+     0.1
+    ]
+   ]
+  }
+ ]
+}

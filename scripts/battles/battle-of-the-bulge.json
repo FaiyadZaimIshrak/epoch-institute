@@ -1,0 +1,504 @@
+{
+ "slug": "battle-of-the-bulge",
+ "name": "Battle of the Bulge",
+ "article": "battles2/wp/battle-of-the-bulge",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "← to Antwerp",
+    "at": [
+     10,
+     8
+    ]
+   }
+  ]
+ },
+ "note": "This plan shows the operation, not a single field: the formations are armies, divisions and task forces, and the battle lasted from 16 December 1944 to 25 January 1945. The accounts give the sectors from north to south and the Meuse as the goal to the west, so north is drawn at the top and the Germans attack from the right. The exact positions of the places on the plan, and the routes between them, are drawn by judgement; the accounts do not give them. The Fifteenth Army, the British forces on the Meuse, the 82nd Airborne Division and the German special operations are not drawn. The plan ends with the relief of Bastogne on 26 December and the halt short of the Meuse; the fighting went on for another month. The 106th Division stands for the two regiments that surrendered; its remaining regiment is drawn inside the force at St. Vith.",
+ "terrain": [
+  {
+   "k": "river",
+   "name": "Meuse",
+   "at": [
+    [
+     18,
+     6
+    ],
+    [
+     15,
+     22
+    ],
+    [
+     13,
+     40
+    ],
+    [
+     12,
+     56
+    ]
+   ],
+   "lab": [
+    20,
+    52
+   ],
+   "quote": "To protect the river crossings on the Meuse at Givet, Dinant and Namur"
+  },
+  {
+   "k": "river",
+   "name": "Our",
+   "at": [
+    [
+     80,
+     24
+    ],
+    [
+     78,
+     34
+    ],
+    [
+     79,
+     42
+    ],
+    [
+     77,
+     54
+    ]
+   ],
+   "lab": [
+    86,
+    56
+   ],
+   "quote": "all attacking divisions crossing the River Our"
+  },
+  {
+   "k": "ridge",
+   "name": "Elsenborn Ridge",
+   "at": [
+    [
+     54,
+     9
+    ],
+    [
+     60,
+     6
+    ],
+    [
+     66,
+     6
+    ],
+    [
+     67,
+     12
+    ],
+    [
+     64,
+     17
+    ],
+    [
+     57,
+     16
+    ]
+   ],
+   "lab": [
+    52,
+    5
+   ],
+   "quote": "the strategic boomerang shaped Elsenborn Ridge"
+  },
+  {
+   "k": "town",
+   "name": "Stavelot",
+   "at": [
+    56,
+    24
+   ],
+   "lab": [
+    50,
+    25
+   ],
+   "quote": "Kampfgruppe Peiper attacked Stavelot on 18 December"
+  },
+  {
+   "k": "town",
+   "name": "St. Vith",
+   "at": [
+    58,
+    34
+   ],
+   "lab": [
+    62,
+    29
+   ],
+   "quote": "the town of St. Vith, a vital road junction"
+  },
+  {
+   "k": "town",
+   "name": "Bastogne",
+   "at": [
+    46,
+    50
+   ],
+   "lab": [
+    38,
+    44
+   ],
+   "quote": "the town of Bastogne and its network of 11 hard-topped roads"
+  },
+  {
+   "k": "point",
+   "name": "Foy-Notre-Dame",
+   "at": [
+    22,
+    30
+   ],
+   "lab": [
+    22,
+    25
+   ],
+   "quote": "German forces reached the woods of Foy-Notre-Dame"
+  }
+ ],
+ "sides": [
+  {
+   "id": "g",
+   "name": "Germans"
+  },
+  {
+   "id": "a",
+   "name": "Americans"
+  }
+ ],
+ "units": [
+  {
+   "id": "g6",
+   "side": "g",
+   "k": "armour",
+   "name": "Sixth Panzer Army",
+   "short": "6th Panzer",
+   "leader": "Sepp Dietrich",
+   "w": 12,
+   "quote": "The lead role in the attack was given to the 6th Panzer Army, commanded by SS Oberstgruppenführer Sepp Dietrich."
+  },
+  {
+   "id": "g5",
+   "side": "g",
+   "k": "armour",
+   "name": "Fifth Panzer Army",
+   "short": "5th Panzer",
+   "leader": "Hasso von Manteuffel",
+   "w": 14,
+   "quote": "The Fifth Panzer Army under General Hasso von Manteuffel was assigned to the middle sector with the objective of capturing Brussels."
+  },
+  {
+   "id": "g7",
+   "side": "g",
+   "k": "infantry",
+   "name": "Seventh Army",
+   "short": "7th Army",
+   "leader": "Erich Brandenberger",
+   "w": 10,
+   "quote": "The Seventh Army, under General Erich Brandenberger, was assigned to the southernmost sector"
+  },
+  {
+   "id": "peiper",
+   "side": "g",
+   "k": "armour",
+   "name": "Kampfgruppe Peiper",
+   "short": "Peiper",
+   "leader": "Joachim Peiper",
+   "w": 5,
+   "quote": "SS-Obersturmbannführer Joachim Peiper led Kampfgruppe Peiper, consisting of 4,800 men and 600 vehicles"
+  },
+  {
+   "id": "g2p",
+   "side": "g",
+   "k": "armour",
+   "name": "2nd Panzer",
+   "short": "2nd Panzer",
+   "w": 5,
+   "quote": "The Fifth Panzer Army was spearheaded by the 2nd Panzer Division"
+  },
+  {
+   "id": "an",
+   "side": "a",
+   "k": "infantry",
+   "name": "U.S. 2nd and 99th Divisions",
+   "short": "2nd/99th",
+   "w": 10,
+   "quote": "untested troops of the 99th Infantry Division and the battle-hardened but weary troops of the 2nd Infantry Division repelled an advance"
+  },
+  {
+   "id": "a106",
+   "side": "a",
+   "k": "infantry",
+   "name": "U.S. 106th Division",
+   "short": "106th",
+   "w": 12,
+   "quote": "They succeeded in surrounding two largely intact regiments (422nd and 423rd) of the 106th Division in a pincer movement and forced their surrender"
+  },
+  {
+   "id": "a8",
+   "side": "a",
+   "k": "infantry",
+   "name": "U.S. VIII Corps divisions",
+   "short": "VIII Corps",
+   "w": 10,
+   "quote": "Brandenberger's three infantry divisions were checked by divisions of the U.S. VIII Corps after an advance of 6.4 km (4 mi)"
+  },
+  {
+   "id": "astv",
+   "side": "a",
+   "k": "armour",
+   "name": "St. Vith defenders",
+   "short": "St. Vith",
+   "leader": "Robert W. Hasbrouck",
+   "w": 10,
+   "quote": "The defenders, led by the 7th Armored Division, included the remaining regiment of the 106th U.S. Infantry Division"
+  },
+  {
+   "id": "abas",
+   "side": "a",
+   "k": "infantry",
+   "name": "101st Airborne at Bastogne",
+   "short": "101st",
+   "leader": "Anthony McAuliffe",
+   "w": 10,
+   "quote": "By 21 December the Germans had surrounded Bastogne, which was defended by the 101st Airborne Division"
+  },
+  {
+   "id": "a2ad",
+   "side": "a",
+   "k": "armour",
+   "name": "U.S. 2nd Armored Division",
+   "short": "2nd Armd",
+   "w": 8,
+   "quote": "the 2nd Armored Division attempted to attack and cut off the spearheads of the 2nd Panzer Division at the Meuse"
+  },
+  {
+   "id": "a3",
+   "side": "a",
+   "k": "armour",
+   "name": "U.S. 4th Armored Division",
+   "short": "4th Armd",
+   "leader": "George S. Patton",
+   "w": 8,
+   "quote": "the spearhead of Gen. Patton's 4th Armored Division, supplemented by the 26th (Yankee) Infantry Division, broke through"
+  }
+ ],
+ "phases": [
+  {
+   "title": "Three German armies face the Ardennes front",
+   "when": "16 December 1944",
+   "text": "The Sixth Panzer Army stood in the north, the Fifth Panzer Army in the middle and the Seventh Army in the south. The U.S. 99th and 2nd Divisions, the 106th Division and VIII Corps held the line opposite them.",
+   "quote": "The Seventh Army, under General Erich Brandenberger, was assigned to the southernmost sector, near the Luxembourgish city of Echternach",
+   "at": {
+    "g6": [
+     84,
+     12,
+     270
+    ],
+    "g5": [
+     84,
+     32,
+     270
+    ],
+    "g7": [
+     84,
+     48,
+     270
+    ],
+    "an": [
+     70,
+     12,
+     90
+    ],
+    "a106": [
+     70,
+     32,
+     90
+    ],
+    "a8": [
+     70,
+     48,
+     90
+    ]
+   }
+  },
+  {
+   "title": "The assault opens and Peiper's group leads the north",
+   "when": "16 and 17 December 1944",
+   "text": "The Germans opened with a 90-minute artillery barrage and attacked all along the front. Kampfgruppe Peiper, charged with the main effort, left the Sixth Panzer Army's line late.",
+   "quote": "the Germans began the assault with a massive, 90-minute artillery barrage using 1,600 artillery pieces",
+   "at": {
+    "g6": [
+     78,
+     12,
+     270
+    ],
+    "g5": [
+     78,
+     32,
+     270
+    ],
+    "g7": [
+     78,
+     48,
+     270
+    ],
+    "peiper": [
+     79,
+     22,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "g6",
+     "an"
+    ],
+    [
+     "g5",
+     "a106"
+    ],
+    [
+     "g7",
+     "a8"
+    ]
+   ]
+  },
+  {
+   "title": "Two regiments of the 106th Division are surrounded",
+   "text": "The Fifth Panzer Army surrounded two largely intact regiments of the 106th Division in a pincer movement and forced their surrender.",
+   "quote": "They succeeded in surrounding two largely intact regiments (422nd and 423rd) of the 106th Division in a pincer movement and forced their surrender",
+   "at": {
+    "g5": [
+     75,
+     32,
+     270
+    ]
+   },
+   "state": {
+    "a106": "destroyed"
+   },
+   "hits": [
+    [
+     "g5",
+     "a106"
+    ]
+   ]
+  },
+  {
+   "title": "The northern shoulder holds and Peiper turns south",
+   "when": "17 to 19 December 1944",
+   "text": "The 99th and 2nd Divisions kept the Sixth Panzer Army from the ridge and the roads west of it. Peiper turned south round Hünningen and reached Stavelot, where the Americans delayed him.",
+   "quote": "forcing them to divert their offensive spearhead onto less favorable routes further south",
+   "at": {
+    "g6": [
+     76,
+     12,
+     270
+    ],
+    "peiper": [
+     60,
+     22,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "g6",
+     "an"
+    ],
+    [
+     "an",
+     "g6"
+    ]
+   ]
+  },
+  {
+   "title": "St. Vith slows the Fifth Panzer Army",
+   "text": "The defenders of St. Vith, led by the 7th Armored Division, resisted the German attacks and slowed the advance. The 2nd Panzer Division spearheaded the Fifth Panzer Army.",
+   "quote": "successfully resisted the German attacks, significantly slowing the German advance",
+   "at": {
+    "g5": [
+     60,
+     42,
+     270
+    ],
+    "astv": [
+     52,
+     34,
+     90
+    ],
+    "g2p": [
+     58,
+     54,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "g5",
+     "astv"
+    ]
+   ]
+  },
+  {
+   "title": "Bastogne is surrounded",
+   "when": "19 to 21 December 1944",
+   "text": "The 101st Airborne Division reached Bastogne by truck on 19 December. The panzer columns swung past on either side and the Germans had surrounded the town by 21 December.",
+   "quote": "The panzer columns swung past on either side, cutting off Bastogne on 20 December",
+   "at": {
+    "abas": [
+     46,
+     46,
+     90
+    ],
+    "g5": [
+     56,
+     42,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "g5",
+     "abas"
+    ]
+   ]
+  },
+  {
+   "title": "The advance stops short of the Meuse; Bastogne is relieved",
+   "when": "24 to 26 December 1944",
+   "text": "Parts of the 2nd Panzer Division came in sight of the Meuse at Foy-Notre-Dame on 24 December, and the U.S. 2nd Armored Division attacked them there. On 26 December the 4th Armored Division broke through to Bastogne.",
+   "quote": "On 24 December, German forces made their furthest penetration west.",
+   "at": {
+    "g2p": [
+     24,
+     32,
+     270
+    ],
+    "a2ad": [
+     32,
+     26,
+     270
+    ],
+    "a3": [
+     40,
+     53,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "a2ad",
+     "g2p"
+    ],
+    [
+     "a3",
+     "g5"
+    ]
+   ]
+  }
+ ]
+}

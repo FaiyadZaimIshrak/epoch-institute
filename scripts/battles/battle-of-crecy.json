@@ -1,0 +1,499 @@
+{
+ "slug": "battle-of-crecy",
+ "name": "Battle of Crécy",
+ "article": "battles2/wp/battle-of-crecy",
+ "field": {
+  "north": null,
+  "edges": [
+   {
+    "name": "from Abbeville ↓",
+    "at": [
+     10,
+     60
+    ]
+   }
+  ]
+ },
+ "note": "The English face south east; the plan puts them at the top, looking down the slope at the French. The accounts do not give the exact places of the pits, of the archers on the flanks, or of the French battles behind the first two, so these are placed by judgement. The accounts do not say which French battle made the later charges; the plan gives them to the battle of Lorraine and Blois, then to Philip's rearguard. Accounts differ on the numbers on both sides.",
+ "terrain": [
+  {
+   "k": "hill",
+   "name": "Hillside",
+   "unnamed": true,
+   "at": [
+    [
+     8,
+     3
+    ],
+    [
+     92,
+     3
+    ],
+    [
+     95,
+     14
+    ],
+    [
+     92,
+     26
+    ],
+    [
+     60,
+     30
+    ],
+    [
+     30,
+     30
+    ],
+    [
+     6,
+     26
+    ],
+    [
+     4,
+     14
+    ]
+   ],
+   "lab": [
+    50,
+    4
+   ],
+   "quote": "facing south east on a sloping hillside, broken by copses and terracing"
+  },
+  {
+   "k": "village",
+   "name": "Wadicourt",
+   "at": [
+    88,
+    14
+   ],
+   "lab": [
+    88,
+    10
+   ],
+   "quote": "The left flank was anchored against Wadicourt"
+  },
+  {
+   "k": "village",
+   "name": "Crécy",
+   "at": [
+    12,
+    14
+   ],
+   "lab": [
+    12,
+    10
+   ],
+   "quote": "the right was protected by Crécy itself and the River Maye beyond"
+  },
+  {
+   "k": "river",
+   "name": "River Maye",
+   "at": [
+    [
+     4,
+     4
+    ],
+    [
+     5,
+     16
+    ],
+    [
+     4,
+     28
+    ],
+    [
+     5,
+     40
+    ]
+   ],
+   "lab": [
+    10,
+    36
+   ],
+   "quote": "the right was protected by Crécy itself and the River Maye beyond"
+  },
+  {
+   "k": "ditch",
+   "name": "Pits",
+   "unnamed": true,
+   "at": [
+    [
+     14,
+     31.5
+    ],
+    [
+     40,
+     31.5
+    ],
+    [
+     60,
+     31.5
+    ],
+    [
+     84,
+     31.5
+    ]
+   ],
+   "lab": [
+    74,
+    33.5
+   ],
+   "quote": "the English dug pits in front of their positions, intended to disorder attacking cavalry"
+  }
+ ],
+ "sides": [
+  {
+   "id": "e",
+   "name": "English"
+  },
+  {
+   "id": "f",
+   "name": "French and allies"
+  }
+ ],
+ "units": [
+  {
+   "id": "wales",
+   "side": "e",
+   "k": "infantry",
+   "name": "English vanguard",
+   "short": "Vanguard",
+   "leader": "Prince of Wales",
+   "w": 14,
+   "quote": "commanded the vanguard with 800 men-at-arms, 2,000 archers and 1,000 foot soldiers including Welsh spearmen",
+   "leaderEntry": "edward-the-black-prince"
+  },
+  {
+   "id": "arundel",
+   "side": "e",
+   "k": "infantry",
+   "name": "English left battle",
+   "short": "Arundel",
+   "leader": "Earl of Arundel",
+   "w": 12,
+   "quote": "the other battle was led by the Earl of Arundel, with 800 men-at-arms and 1,200 archers"
+  },
+  {
+   "id": "king",
+   "side": "e",
+   "k": "guard",
+   "name": "English reserve battle",
+   "short": "Reserve",
+   "leader": "King Edward",
+   "w": 10,
+   "quote": "Behind them, the King commanded the reserve battle, with 700 men-at-arms and 2,000 archers.",
+   "leaderEntry": "edward-iii-of-england"
+  },
+  {
+   "id": "archw",
+   "side": "e",
+   "k": "archers",
+   "name": "Longbowmen, vanguard",
+   "short": "Archers",
+   "w": 12,
+   "quote": "with longbowmen on each flank and in a skirmish line to their front"
+  },
+  {
+   "id": "archa",
+   "side": "e",
+   "k": "archers",
+   "name": "Longbowmen, left battle",
+   "short": "Archers",
+   "w": 10,
+   "quote": "with longbowmen on each flank and in a skirmish line to their front"
+  },
+  {
+   "id": "detach",
+   "side": "e",
+   "k": "infantry",
+   "name": "Detachment from the reserve",
+   "short": "Detach.",
+   "w": 5,
+   "quote": "Edward sent forward a detachment from his reserve battle to rescue the situation."
+  },
+  {
+   "id": "genoese",
+   "side": "f",
+   "k": "archers",
+   "name": "Genoese crossbowmen",
+   "short": "Genoese",
+   "leader": "Antonio Doria",
+   "w": 14,
+   "quote": "The crossbowmen, under Antonio Doria and Carlo Grimaldi, formed the French vanguard."
+  },
+  {
+   "id": "alencon",
+   "side": "f",
+   "k": "cavalry",
+   "name": "Alençon's mounted battle",
+   "short": "Alençon",
+   "leader": "Count of Alençon",
+   "w": 14,
+   "quote": "a large battle of mounted men-at-arms led by Count Charles of Alençon"
+  },
+  {
+   "id": "lorraine",
+   "side": "f",
+   "k": "cavalry",
+   "name": "Battle of Lorraine and Blois",
+   "short": "Lorraine",
+   "leader": "Duke of Lorraine",
+   "w": 12,
+   "quote": "The next battle was led by Duke Rudolph of Lorraine and Count Louis of Blois"
+  },
+  {
+   "id": "philip",
+   "side": "f",
+   "k": "cavalry",
+   "name": "French rearguard",
+   "short": "Rearguard",
+   "leader": "King Philip",
+   "w": 12,
+   "quote": "while Philip commanded the rearguard",
+   "leaderEntry": "philip-vi-of-france"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The English hold the hillside",
+   "when": "Around noon on 26 August 1346",
+   "text": "Edward's army stood in three battles on a slope, with pits dug in front. French scouts came in sight of them from Abbeville, and the French column followed with the Genoese crossbowmen in front.",
+   "quote": "Around noon on 26 August French scouts, advancing north from Abbeville, came in sight of the English.",
+   "at": {
+    "wales": [
+     30,
+     19,
+     180
+    ],
+    "arundel": [
+     66,
+     19,
+     180
+    ],
+    "king": [
+     48,
+     10,
+     180
+    ],
+    "archw": [
+     30,
+     28.5,
+     180
+    ],
+    "archa": [
+     66,
+     28.5,
+     180
+    ],
+    "genoese": [
+     48,
+     41,
+     0
+    ],
+    "alencon": [
+     32,
+     49,
+     0
+    ],
+    "lorraine": [
+     58,
+     53,
+     0
+    ],
+    "philip": [
+     82,
+     55,
+     0
+    ]
+   }
+  },
+  {
+   "title": "The archery duel",
+   "when": "Late in the afternoon",
+   "text": "The Genoese went forward and shot at the English longbowmen. The longbowmen outranged them and shot more than three times as fast, and the crossbowmen had no pavises, which were still with the French baggage.",
+   "quote": "The Genoese engaged the English longbowmen in an archery duel.",
+   "at": {
+    "genoese": [
+     48,
+     35,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "archw",
+     "genoese"
+    ],
+    [
+     "archa",
+     "genoese"
+    ],
+    [
+     "genoese",
+     "archw",
+     0.1
+    ]
+   ]
+  },
+  {
+   "title": "The Genoese flee through their own cavalry",
+   "text": "The Italians were quickly defeated and fled. Knights in Alençon's division, hampered by the routed mercenaries, hacked at them as they retreated, and the clash threw the leading battle into disarray.",
+   "quote": "The knights and nobles following in Alençon's division, hampered by the routed mercenaries, hacked at them as they retreated.",
+   "at": {
+    "genoese": [
+     62,
+     43,
+     0
+    ],
+    "alencon": [
+     36,
+     39,
+     0
+    ]
+   },
+   "how": {
+    "genoese": "rout"
+   },
+   "state": {
+    "genoese": "routed"
+   },
+   "hits": [
+    [
+     "archw",
+     "alencon",
+     -0.1
+    ]
+   ]
+  },
+  {
+   "title": "Alençon's charge uphill",
+   "text": "Alençon's battle charged, disordered by its hurried start, the fleeing Italians, the mud, the slope and the pits. Archers shot the unarmoured horses, and the charge had lost much of its force when it reached the English men-at-arms.",
+   "quote": "Alençon's battle (division of the army) then launched a cavalry charge.",
+   "at": {
+    "alencon": [
+     30,
+     35,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "archw",
+     "alencon",
+     -0.15
+    ],
+    [
+     "alencon",
+     "wales",
+     0.3
+    ]
+   ]
+  },
+  {
+   "title": "Fresh French cavalry charge",
+   "text": "The attack was beaten off, and Alençon was among those killed. A fresh body of French cavalry repeated the charge over ground littered with dead men and horses, and Edward sent a detachment from his reserve to help.",
+   "quote": "Fresh forces of French cavalry moved into position at the foot of the hill and repeated Alençon's charge.",
+   "at": {
+    "alencon": [
+     16,
+     46,
+     180
+    ],
+    "lorraine": [
+     37,
+     35,
+     0
+    ],
+    "detach": [
+     47,
+     22,
+     180
+    ]
+   },
+   "how": {
+    "alencon": "rout"
+   },
+   "state": {
+    "alencon": "routed",
+    "detach": "shown"
+   },
+   "hits": [
+    [
+     "lorraine",
+     "wales",
+     0.3
+    ],
+    [
+     "archw",
+     "lorraine",
+     -0.15
+    ],
+    [
+     "detach",
+     "lorraine",
+     0.15
+    ]
+   ]
+  },
+  {
+   "title": "The charges go on into the night",
+   "text": "The French repeated their charges late into the night, each ending in fierce fighting and a French retreat. The English ranks were thinned, but men from the rear stepped forward to fill the gaps.",
+   "quote": "How many times the French charged is disputed, but they continued late into the night",
+   "at": {
+    "lorraine": [
+     84,
+     45,
+     180
+    ],
+    "philip": [
+     50,
+     36,
+     0
+    ],
+    "detach": [
+     47,
+     23,
+     180
+    ]
+   },
+   "how": {
+    "lorraine": "retreat"
+   },
+   "hits": [
+    [
+     "philip",
+     "wales",
+     0.3
+    ],
+    [
+     "archa",
+     "philip",
+     -0.1
+    ]
+   ]
+  },
+  {
+   "title": "Philip leaves the field",
+   "text": "Philip was caught up in the fighting, had two horses killed under him and was hit by an arrow in the jaw. He left the field, though it is unclear why, and near midnight most of the French army melted away.",
+   "quote": "Finally, Philip abandoned the field of battle, although it is unclear why.",
+   "at": {
+    "philip": [
+     86,
+     55,
+     90
+    ]
+   },
+   "how": {
+    "philip": "rout"
+   },
+   "state": {
+    "philip": "routed",
+    "genoese": "gone",
+    "alencon": "gone",
+    "lorraine": "gone",
+    "detach": "gone"
+   }
+  }
+ ]
+}

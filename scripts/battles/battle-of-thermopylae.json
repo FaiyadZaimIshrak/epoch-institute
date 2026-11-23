@@ -1,0 +1,479 @@
+{
+ "slug": "battle-of-thermopylae",
+ "name": "Battle of Thermopylae",
+ "article": "battles2/wp/battle-of-thermopylae",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "Persian camp →",
+    "at": [
+     95,
+     30
+    ]
+   }
+  ]
+ },
+ "note": "The Malian Gulf lay on the north side of the road and steep hills on the other, so north is drawn at the top. The accounts do not say which Greek contingent stood where along the line, so the Greek blocks are placed by judgement, and the arrows show only that the Persians attacked the Greek line. The Persians are drawn coming from the east, which the account does not state. The marsh the Phocians made, and the hill to which the Phocians retreated, are not drawn because the accounts do not place them. Herodotus names the Immortals as the men sent along the path; Diodorus gives Hydarnes a force of 20,000, and the account says it is unclear who the men were.",
+ "terrain": [
+  {
+   "k": "sea",
+   "name": "Malian Gulf",
+   "at": [
+    [
+     0,
+     0
+    ],
+    [
+     100,
+     0
+    ],
+    [
+     100,
+     6
+    ],
+    [
+     70,
+     7
+    ],
+    [
+     30,
+     6
+    ],
+    [
+     0,
+     7
+    ]
+   ],
+   "quote": "On the north side of the roadway was the Malian Gulf, into which the land shelved gently."
+  },
+  {
+   "k": "mountain",
+   "name": "Hills",
+   "unnamed": true,
+   "at": [
+    [
+     0,
+     50
+    ],
+    [
+     30,
+     48
+    ],
+    [
+     60,
+     49
+    ],
+    [
+     100,
+     48
+    ],
+    [
+     100,
+     62
+    ],
+    [
+     0,
+     62
+    ]
+   ],
+   "lab": [
+    86,
+    60
+   ],
+   "quote": "With the sea on one side and steep, impassable hills on the other"
+  },
+  {
+   "k": "wall",
+   "name": "Phocian wall",
+   "at": [
+    [
+     20,
+     9
+    ],
+    [
+     20,
+     22
+    ],
+    [
+     20,
+     34
+    ],
+    [
+     20,
+     46
+    ]
+   ],
+   "lab": [
+    20,
+    8
+   ],
+   "quote": "a wall that had been erected by the Phocians, in the previous century"
+  },
+  {
+   "k": "hill",
+   "name": "Kolonos Hill",
+   "at": [
+    [
+     6,
+     18
+    ],
+    [
+     17,
+     17
+    ],
+    [
+     18,
+     28
+    ],
+    [
+     17,
+     40
+    ],
+    [
+     8,
+     41
+    ],
+    [
+     4,
+     30
+    ]
+   ],
+   "lab": [
+    11,
+    15.5
+   ],
+   "quote": "found large numbers of Persian bronze arrowheads on Kolonos Hill"
+  }
+ ],
+ "sides": [
+  {
+   "id": "g",
+   "name": "Greek allies led by Sparta"
+  },
+  {
+   "id": "p",
+   "name": "Persian army"
+  }
+ ],
+ "units": [
+  {
+   "id": "sparta",
+   "side": "g",
+   "k": "spears",
+   "name": "Spartans",
+   "short": "Spartans",
+   "leader": "Leonidas",
+   "w": 8,
+   "quote": "remained to guard their retreat along with 300 Spartans and 700 Thespians",
+   "leaderEntry": "leonidas-i"
+  },
+  {
+   "id": "thesp",
+   "side": "g",
+   "k": "spears",
+   "name": "Thespians",
+   "short": "Thespians",
+   "leader": "Demophilus",
+   "w": 6,
+   "quote": "The contingent of 700 Thespians, led by their general Demophilus, refused to leave"
+  },
+  {
+   "id": "thebes",
+   "side": "g",
+   "k": "spears",
+   "name": "Thebans",
+   "short": "Thebans",
+   "w": 5,
+   "quote": "Also present were the 400 Thebans and probably the helots who had accompanied the Spartans."
+  },
+  {
+   "id": "allies",
+   "side": "g",
+   "k": "spears",
+   "name": "Other Greek contingents",
+   "short": "Allies",
+   "w": 10,
+   "quote": "While many of the Greeks took him up on his offer and fled"
+  },
+  {
+   "id": "phoc",
+   "side": "g",
+   "k": "spears",
+   "name": "Phocians on the heights",
+   "short": "Phocians",
+   "w": 8,
+   "quote": "Leonidas stationed 1,000 Phocians on the heights to prevent such a manoeuvre."
+  },
+  {
+   "id": "archers",
+   "side": "p",
+   "k": "archers",
+   "name": "Persian archers",
+   "short": "Archers",
+   "w": 8,
+   "quote": "he ordered 5,000 archers to shoot a barrage of arrows"
+  },
+  {
+   "id": "medes",
+   "side": "p",
+   "k": "infantry",
+   "name": "Medes and Cissians",
+   "short": "Medes",
+   "w": 10,
+   "quote": "Xerxes sent a force of 10,000 Medes and Cissians"
+  },
+  {
+   "id": "imm",
+   "side": "p",
+   "k": "guard",
+   "name": "Immortals",
+   "short": "Immortals",
+   "w": 10,
+   "quote": "the Immortals, an elite corps of 10,000 men"
+  },
+  {
+   "id": "light",
+   "side": "p",
+   "k": "light",
+   "name": "Light infantry and cavalry",
+   "short": "Light",
+   "w": 10,
+   "quote": "A Persian force of 10,000 men, comprising light infantry and cavalry, charged at the front"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The Greeks hold the middle gate",
+   "when": "Mid-August 480 BCE",
+   "text": "Leonidas camped at the narrowest part of the pass, where the Phocians had built a wall, and posted 1,000 Phocians on the heights above. The Persian army came up across the Malian Gulf.",
+   "quote": "Leonidas stationed 1,000 Phocians on the heights to prevent such a manoeuvre.",
+   "at": {
+    "thebes": [
+     30,
+     13,
+     90
+    ],
+    "sparta": [
+     30,
+     22,
+     90
+    ],
+    "thesp": [
+     30,
+     30,
+     90
+    ],
+    "allies": [
+     30,
+     40,
+     90
+    ],
+    "phoc": [
+     30,
+     54,
+     90
+    ],
+    "archers": [
+     64,
+     12,
+     270
+    ],
+    "medes": [
+     64,
+     24,
+     270
+    ],
+    "imm": [
+     76,
+     38,
+     270
+    ]
+   }
+  },
+  {
+   "title": "The first day: archers, then the Medes",
+   "when": "First day",
+   "text": "Xerxes ordered 5,000 archers to shoot, but the arrows were deflected. He then sent 10,000 Medes and Cissians forward in a frontal assault against the Greeks, who fought in front of the wall.",
+   "quote": "The Persians soon launched a frontal assault, in waves of around 10,000 men, on the Greek position.",
+   "at": {
+    "archers": [
+     56,
+     12,
+     270
+    ],
+    "medes": [
+     48,
+     24,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "archers",
+     "sparta"
+    ],
+    [
+     "medes",
+     "sparta"
+    ]
+   ]
+  },
+  {
+   "title": "The Immortals fare no better",
+   "when": "First and second days",
+   "text": "Xerxes threw the Immortals into a second assault the same day, and they made no headway. On the second day the Persian infantry again attacked the pass without success.",
+   "quote": "However, the Immortals fared no better than the Medes, and failed to make any headway against the Greeks.",
+   "at": {
+    "imm": [
+     50,
+     38,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "imm",
+     "allies"
+    ]
+   ]
+  },
+  {
+   "title": "Ephialtes shows the mountain path",
+   "when": "Evening of the second day",
+   "text": "Xerxes stopped the assault and withdrew to his camp. A Trachinian named Ephialtes then told him of the mountain path, and Hydarnes set out that evening with the Immortals to encircle the Greeks.",
+   "quote": "Xerxes sent his commander Hydarnes that evening, with the men under his command, the Immortals, to encircle the Greeks via the path.",
+   "at": {
+    "archers": [
+     64,
+     12,
+     270
+    ],
+    "medes": [
+     64,
+     24,
+     270
+    ],
+    "imm": [
+     76,
+     54,
+     270
+    ]
+   },
+   "how": {
+    "archers": "retreat",
+    "medes": "retreat",
+    "imm": "retreat"
+   }
+  },
+  {
+   "title": "The Persians pass the Phocians",
+   "when": "Daybreak of the third day",
+   "text": "The Phocians guarding the path saw the Persian column and withdrew to a nearby hill to make a stand. The Persians shot a volley of arrows at them and went on with the encirclement.",
+   "quote": "The Phocians retreated to a nearby hill to make their stand",
+   "at": {
+    "imm": [
+     38,
+     54,
+     270
+    ],
+    "phoc": [
+     22,
+     56,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "imm",
+     "phoc"
+    ]
+   ]
+  },
+  {
+   "title": "The Greeks sally from the wall",
+   "text": "Leonidas let his allies leave, and many did. The Spartans and Thespians marched out from the wall into the wider part of the pass and met a Persian force of 10,000 light infantry and cavalry. Leonidas was killed.",
+   "quote": "The Greeks this time sallied forth from the wall to meet the Persians in the wider part of the pass",
+   "at": {
+    "allies": [
+     8,
+     44,
+     270
+    ],
+    "sparta": [
+     44,
+     34,
+     90
+    ],
+    "thesp": [
+     44,
+     42,
+     90
+    ],
+    "light": [
+     54,
+     34,
+     270
+    ]
+   },
+   "how": {
+    "allies": "retreat"
+   },
+   "state": {
+    "allies": "gone"
+   },
+   "hits": [
+    [
+     "light",
+     "sparta"
+    ],
+    [
+     "sparta",
+     "light"
+    ]
+   ]
+  },
+  {
+   "title": "The last stand on the hill",
+   "text": "As the Immortals approached, the Greeks withdrew to a hill behind the wall. Most of the Thebans surrendered. Xerxes had part of the wall torn down and the hill surrounded, and the Persians shot arrows until the Greeks on it were dead.",
+   "quote": "Tearing down part of the wall, Xerxes ordered the hill surrounded, and the Persians rained down arrows until every last Greek was dead.",
+   "at": {
+    "sparta": [
+     12,
+     24,
+     90
+    ],
+    "thesp": [
+     12,
+     32,
+     90
+    ],
+    "light": [
+     26,
+     28,
+     270
+    ],
+    "imm": [
+     10,
+     46,
+     0
+    ]
+   },
+   "state": {
+    "sparta": "destroyed",
+    "thesp": "destroyed",
+    "thebes": "gone"
+   },
+   "hits": [
+    [
+     "light",
+     "sparta"
+    ],
+    [
+     "imm",
+     "thesp"
+    ]
+   ]
+  }
+ ]
+}

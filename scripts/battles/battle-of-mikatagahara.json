@@ -1,0 +1,361 @@
+{
+ "slug": "battle-of-mikatagahara",
+ "name": "Battle of Mikatagahara",
+ "article": "battles2/wp/battle-of-mikatagahara",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "to Hamamatsu Castle ↓",
+    "at": [
+     14,
+     59
+    ]
+   }
+  ]
+ },
+ "note": "The Takeda order of battle (four lines in the fish-scale formation) is the one given in the Kōyō Gunkan, a Takeda family record. The accounts do not give the Tokugawa formations' exact places beyond a line with Honda Tadakatsu's segment on the right, a left and a centre, and the Oda reinforcements alongside. The Oda force is placed at the right rear and the arquebusiers in front of the line by judgement. The plain lay just north of Hamamatsu; the Takeda are drawn at the top and the spacing of their lines is schematic. The first and second Takeda lines are drawn as one cavalry body.",
+ "terrain": [],
+ "sides": [
+  {
+   "id": "t",
+   "name": "Takeda"
+  },
+  {
+   "id": "k",
+   "name": "Tokugawa and Oda"
+  }
+ ],
+ "units": [
+  {
+   "id": "tka",
+   "side": "t",
+   "k": "cavalry",
+   "name": "Takeda vanguard cavalry",
+   "short": "Vanguard",
+   "leader": "Oyamada Nobushige",
+   "w": 10,
+   "quote": "Oyamada Nobushige was in Shingen's vanguard, followed by Naitō Masatoyo and Yamagata Masakage."
+  },
+  {
+   "id": "tkb",
+   "side": "t",
+   "k": "cavalry",
+   "name": "Takeda third line",
+   "short": "3rd line",
+   "leader": "Katsuyori",
+   "w": 10,
+   "quote": "The third line was commanded by Katsuyori and Obata Masamori"
+  },
+  {
+   "id": "tkd",
+   "side": "t",
+   "k": "infantry",
+   "name": "Takeda fourth line",
+   "short": "4th line",
+   "leader": "Baba Nobuharu",
+   "w": 9,
+   "quote": "while Baba Nobuharu was in the fourth"
+  },
+  {
+   "id": "tkc",
+   "side": "t",
+   "k": "infantry",
+   "name": "Takeda main body",
+   "short": "Main body",
+   "w": 14,
+   "quote": "the footsoldier-heavy main body of the Takeda army"
+  },
+  {
+   "id": "arq",
+   "side": "k",
+   "k": "archers",
+   "name": "Tokugawa arquebusiers",
+   "short": "Guns",
+   "w": 8,
+   "quote": "Tokugawa arquebusiers accompanied by a number of peasant stone-throwers opened fire upon the Takeda formation"
+  },
+  {
+   "id": "tor",
+   "side": "k",
+   "k": "infantry",
+   "name": "Tokugawa right (Honda)",
+   "short": "Right",
+   "leader": "Honda Tadakatsu",
+   "w": 10,
+   "quote": "Honda Tadakatsu's segment on the Tokugawa right",
+   "leaderEntry": "honda-tadakatsu"
+  },
+  {
+   "id": "toc",
+   "side": "k",
+   "k": "infantry",
+   "name": "Tokugawa centre",
+   "short": "Centre",
+   "w": 12,
+   "quote": "preventing an encirclement of the Tokugawa center"
+  },
+  {
+   "id": "tol",
+   "side": "k",
+   "k": "infantry",
+   "name": "Tokugawa left",
+   "short": "Left",
+   "w": 10,
+   "quote": "A similar attack on the left was thwarted as Tokugawa units refused to yield ground"
+  },
+  {
+   "id": "oda",
+   "side": "k",
+   "k": "infantry",
+   "name": "Oda reinforcements",
+   "short": "Oda",
+   "w": 8,
+   "quote": "rapidly assaulted the accompanying Oda reinforcements before charging the Tokugawa rear"
+  },
+  {
+   "id": "raid",
+   "side": "k",
+   "k": "light",
+   "name": "Tokugawa night raiders",
+   "short": "Raiders",
+   "leader": "Ōkubo Tadayo",
+   "w": 5,
+   "quote": "a small band of about one hundred Tokugawa foot soldiers and 16 matchlock gunners led by Ōkubo Tadayo and Amano Yasukage attacked the Takeda camp",
+   "leaderEntry": "okubo-tadayo"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The armies take their ground on the plain",
+   "when": "25 January 1573",
+   "text": "Ieyasu drew up his forces in a line on the plain of Mikatagahara. Shingen arrayed his men in the fish-scale formation in four lines, with the vanguard first and Baba Nobuharu in the fourth.",
+   "quote": "drew up his forces on a high plain called Mikatagahara, at the time located just north of Hamamatsu.",
+   "at": {
+    "tka": [
+     50,
+     24,
+     180
+    ],
+    "tkb": [
+     28,
+     16,
+     180
+    ],
+    "tkc": [
+     72,
+     16,
+     180
+    ],
+    "tkd": [
+     50,
+     10,
+     180
+    ],
+    "arq": [
+     50,
+     34,
+     0
+    ],
+    "tor": [
+     72,
+     42,
+     0
+    ],
+    "toc": [
+     50,
+     42,
+     0
+    ],
+    "tol": [
+     28,
+     42,
+     0
+    ],
+    "oda": [
+     88,
+     50,
+     0
+    ]
+   }
+  },
+  {
+   "title": "The Takeda cavalry overruns the Tokugawa right",
+   "when": "Around four in the afternoon",
+   "text": "As snow began to fall the Tokugawa arquebusiers opened fire. Naitō Masatoyo's vanguard cavalry attacked all the same and overran Honda Tadakatsu's segment on the Tokugawa right.",
+   "quote": "Naitō Masatoyo's vanguard cavalry attacked and rapidly overran Honda Tadakatsu's segment on the Tokugawa right.",
+   "at": {
+    "tka": [
+     72,
+     34,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "arq",
+     "tka"
+    ],
+    [
+     "tka",
+     "tor"
+    ]
+   ]
+  },
+  {
+   "title": "The Oda force is routed and the rear is charged",
+   "text": "The Takeda horsemen turned on the Oda reinforcements, who were quickly overrun and routed, and then charged the Tokugawa rear.",
+   "quote": "Takeda horsemen exploited the opening and rapidly assaulted the accompanying Oda reinforcements before charging the Tokugawa rear.",
+   "at": {
+    "tka": [
+     72,
+     55,
+     180
+    ],
+    "oda": [
+     94,
+     56,
+     90
+    ]
+   },
+   "how": {
+    "oda": "rout"
+   },
+   "state": {
+    "oda": "routed"
+   },
+   "hits": [
+    [
+     "tka",
+     "oda",
+     0.2
+    ],
+    [
+     "tka",
+     "toc",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "A second Takeda attack breaks the line",
+   "text": "Shingen withdrew his vanguard to rest and sent fresh horsemen under Katsuyori in a two-pronged charge, closely followed by the main body. Their weight drove the Tokugawa army into a disorderly retreat.",
+   "quote": "They were closely followed by the footsoldier-heavy main body of the Takeda army, whose combined weight drove the already battered Tokugawa army into a disorderly retreat.",
+   "at": {
+    "tka": [
+     84,
+     28,
+     0
+    ],
+    "tkb": [
+     36,
+     33,
+     180
+    ],
+    "tkc": [
+     66,
+     28,
+     180
+    ],
+    "toc": [
+     50,
+     50,
+     180
+    ],
+    "tol": [
+     28,
+     50,
+     180
+    ]
+   },
+   "how": {
+    "tka": "retreat",
+    "toc": "retreat",
+    "tol": "retreat"
+   },
+   "hits": [
+    [
+     "tkb",
+     "tol"
+    ],
+    [
+     "tkb",
+     "toc",
+     0.2
+    ],
+    [
+     "tkc",
+     "toc",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "Ieyasu flees and his units are overrun",
+   "text": "Ieyasu left the field, and several of his retainers died as their units were encircled and overrun. The Takeda vanguard under Baba Nobuharu and Yamagata Masakage came on and stopped short of Hamamatsu to make camp for the night.",
+   "quote": "they mistakenly assumed that Ieyasu had planned a trap and stopped to make camp for the night at their present position short of Hamamatsu.",
+   "at": {
+    "toc": [
+     34,
+     55,
+     180
+    ],
+    "tol": [
+     20,
+     54,
+     180
+    ],
+    "tkd": [
+     46,
+     50,
+     180
+    ]
+   },
+   "how": {
+    "toc": "rout",
+    "tol": "rout"
+   },
+   "state": {
+    "toc": "routed",
+    "tol": "routed"
+   },
+   "hits": [
+    [
+     "tkb",
+     "tol"
+    ],
+    [
+     "tkc",
+     "toc"
+    ]
+   ]
+  },
+  {
+   "title": "A night raid and the Takeda withdrawal",
+   "when": "That night",
+   "text": "A small band of Tokugawa foot soldiers and gunners attacked the Takeda camp and threw the vanguard into confusion. Shingen, uncertain of the Tokugawa strength, decided to withdraw to his own territories.",
+   "quote": "attacked the Takeda camp, throwing the vanguard of the Takeda army into confusion.",
+   "at": {
+    "raid": [
+     56,
+     56,
+     0
+    ],
+    "tkd": [
+     60,
+     46,
+     0
+    ]
+   },
+   "how": {
+    "tkd": "retreat"
+   },
+   "hits": [
+    [
+     "raid",
+     "tkd"
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,485 @@
+{
+ "slug": "battle-of-the-little-bighorn",
+ "name": "Battle of the Little Bighorn",
+ "article": "battles2/wp/battle-of-the-little-bighorn",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "Reno Creek, south",
+    "at": [
+     8,
+     59
+    ]
+   }
+  ]
+ },
+ "note": "A schematic plan. The accounts do not give a map of the field: the village, the small hill, the ford and Custer's route are placed to suit the story, and the precise route of Custer's battalion and the north end of the village remain disputed. Custer's own movements are shown by one account among several.",
+ "terrain": [
+  {
+   "k": "river",
+   "name": "Little Bighorn River",
+   "at": [
+    [
+     40,
+     60
+    ],
+    [
+     36,
+     50
+    ],
+    [
+     33,
+     38
+    ],
+    [
+     34,
+     26
+    ],
+    [
+     30,
+     14
+    ],
+    [
+     32,
+     4
+    ]
+   ],
+   "lab": [
+    38,
+    56
+   ],
+   "quote": "rugged bluffs, the Little Bighorn River, and adjacent plains"
+  },
+  {
+   "k": "wood",
+   "name": "Belt of trees",
+   "unnamed": true,
+   "at": [
+    [
+     26,
+     36
+    ],
+    [
+     31,
+     37
+    ],
+    [
+     32,
+     48
+    ],
+    [
+     30,
+     56
+    ],
+    [
+     25,
+     54
+    ],
+    [
+     24,
+     44
+    ]
+   ],
+   "lab": [
+    28,
+    33
+   ],
+   "quote": "the thick belt of trees that ran along the southern banks of the Little Bighorn River"
+  },
+  {
+   "k": "hill",
+   "name": "Small hill",
+   "unnamed": true,
+   "at": [
+    [
+     2,
+     30
+    ],
+    [
+     8,
+     28
+    ],
+    [
+     13,
+     33
+    ],
+    [
+     12,
+     40
+    ],
+    [
+     5,
+     41
+    ],
+    [
+     2,
+     36
+    ]
+   ],
+   "lab": [
+    5,
+    35
+   ],
+   "quote": "open area shielded by a small hill to the left of Reno's line"
+  },
+  {
+   "k": "hill",
+   "name": "Reno Hill",
+   "at": [
+    [
+     40,
+     34
+    ],
+    [
+     56,
+     34
+    ],
+    [
+     60,
+     46
+    ],
+    [
+     54,
+     56
+    ],
+    [
+     42,
+     54
+    ],
+    [
+     39,
+     44
+    ]
+   ],
+   "lab": [
+    58,
+    38
+   ],
+   "quote": "Atop the bluffs near what is known today as Reno Hill"
+  },
+  {
+   "k": "ford",
+   "name": "Minneconjou Ford",
+   "at": [
+    35,
+    22
+   ],
+   "lab": [
+    35,
+    18
+   ],
+   "quote": "at the mouth of Medicine Tail Coulee (Minneconjou Ford)"
+  },
+  {
+   "k": "hill",
+   "name": "Custer Hill",
+   "at": [
+    [
+     62,
+     4
+    ],
+    [
+     76,
+     4
+    ],
+    [
+     79,
+     14
+    ],
+    [
+     68,
+     19
+    ],
+    [
+     61,
+     12
+    ]
+   ],
+   "lab": [
+    70,
+    21
+   ],
+   "quote": "Custer's body was found near the top of Custer Hill"
+  }
+ ],
+ "sides": [
+  {
+   "id": "u",
+   "name": "7th Cavalry"
+  },
+  {
+   "id": "n",
+   "name": "Lakota and Northern Cheyenne"
+  }
+ ],
+ "units": [
+  {
+   "id": "reno",
+   "side": "u",
+   "k": "cavalry",
+   "name": "Reno's battalion",
+   "short": "Reno",
+   "leader": "Marcus Reno",
+   "w": 10,
+   "quote": "placed under the command of Major Marcus Reno (A, G, and M)"
+  },
+  {
+   "id": "benteen",
+   "side": "u",
+   "k": "cavalry",
+   "name": "Benteen's battalion",
+   "short": "Benteen",
+   "leader": "Frederick Benteen",
+   "w": 9,
+   "quote": "three were placed under the command of Captain Frederick Benteen (H, D, and K)"
+  },
+  {
+   "id": "packs",
+   "side": "u",
+   "k": "wagons",
+   "name": "B Troop and pack train",
+   "short": "Packs",
+   "w": 6,
+   "quote": "B troop under Captain Thomas McDougall, had been assigned to escort the slower pack train"
+  },
+  {
+   "id": "custer",
+   "side": "u",
+   "k": "cavalry",
+   "name": "Custer's battalion",
+   "short": "Custer",
+   "leader": "George Armstrong Custer",
+   "w": 11,
+   "quote": "Five troops (C, E, F, I, and L) remained under Custer's immediate command.",
+   "leaderEntry": "george-armstrong-custer"
+  },
+  {
+   "id": "yates",
+   "side": "u",
+   "k": "cavalry",
+   "name": "Yates' E and F companies",
+   "short": "Yates",
+   "leader": "Capt. Yates",
+   "w": 6,
+   "quote": "Custer proceeded with a wing of his battalion (Yates' E and F companies) north"
+  },
+  {
+   "id": "camp",
+   "side": "n",
+   "k": "camp",
+   "name": "The village",
+   "short": "Village",
+   "quote": "The tepees in that area were occupied by the Hunkpapa Sioux."
+  },
+  {
+   "id": "warriors",
+   "side": "n",
+   "k": "cavalry",
+   "name": "Lakota and Cheyenne warriors",
+   "short": "Warriors",
+   "w": 14,
+   "quote": "the mounted warriors began streaming out to meet the attack"
+  },
+  {
+   "id": "warriors2",
+   "side": "n",
+   "k": "cavalry",
+   "name": "Warriors facing Custer",
+   "short": "Pursuers",
+   "w": 10,
+   "quote": "the bulk of the native warriors were free to pursue Custer"
+  }
+ ],
+ "phases": [
+  {
+   "title": "Reno crosses the river and charges the village",
+   "when": "About 3:10 pm, 25 June 1876",
+   "text": "Reno's three troops forded the Little Bighorn at the mouth of Reno Creek on Custer's orders and rode towards the village. Custer's battalion followed the ridges to the east, while Benteen and the pack train were still behind.",
+   "quote": "Reno's force crossed the Little Bighorn at the mouth of what is today Reno Creek around 3:10 pm on June 25.",
+   "at": {
+    "camp": [
+     12,
+     10,
+     0
+    ],
+    "warriors": [
+     14,
+     24,
+     180
+    ],
+    "reno": [
+     20,
+     52,
+     0
+    ],
+    "custer": [
+     68,
+     42,
+     0
+    ],
+    "benteen": [
+     64,
+     54,
+     0
+    ],
+    "packs": [
+     78,
+     56,
+     0
+    ]
+   }
+  },
+  {
+   "title": "Reno dismounts and the warriors ride out",
+   "text": "Reno stopped a few hundred yards short of the village, fearing a trap, and put his men into a skirmish line. The mounted warriors streamed out and rode against the centre and exposed left end of the line.",
+   "quote": "He ordered his troopers to dismount and deploy in a skirmish line, according to standard army doctrine.",
+   "at": {
+    "reno": [
+     20,
+     40,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "reno",
+     "warriors"
+    ],
+    [
+     "warriors",
+     "reno"
+    ]
+   ]
+  },
+  {
+   "title": "The warriors turn Reno's left and he falls back to the trees",
+   "text": "Over 500 warriors massed behind a small hill on Reno's left and attacked his left and rear. Reno withdrew into the timber along the river bend, where the warriors pinned his men down.",
+   "quote": "From this position the Indians mounted an attack of more than 500 warriors against the left and rear of Reno's line, turning Reno's exposed left flank.",
+   "at": {
+    "warriors": [
+     12,
+     38,
+     90
+    ],
+    "reno": [
+     27,
+     46,
+     90
+    ]
+   },
+   "how": {
+    "reno": "retreat"
+   },
+   "hits": [
+    [
+     "warriors",
+     "reno"
+    ]
+   ]
+  },
+  {
+   "title": "Reno's men break for the bluffs",
+   "text": "Reno led his men out of the timber in a disorderly rout along the river. They crossed under attack and climbed the bluffs on the far side, leaving wounded behind in the timber.",
+   "quote": "Abandoning the wounded, he led a disorderly rout for a mile next to the river.",
+   "at": {
+    "reno": [
+     44,
+     40,
+     0
+    ],
+    "warriors": [
+     30,
+     44,
+     90
+    ]
+   },
+   "how": {
+    "reno": "rout"
+   },
+   "hits": [
+    [
+     "warriors",
+     "reno",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "Benteen and the pack train join Reno on the bluffs",
+   "text": "Benteen's three troops reached Reno's shaken men while they were still climbing from the valley, and McDougall's troop and the pack train came later. The command dug rifle pits and held an all-round defence.",
+   "quote": "Reno's depleted and shaken troops were joined by Captain Benteen's column",
+   "at": {
+    "benteen": [
+     52,
+     50,
+     0
+    ],
+    "packs": [
+     62,
+     52,
+     0
+    ]
+   }
+  },
+  {
+   "title": "Yates' companies appear at the mouth of Medicine Tail Coulee",
+   "text": "With Reno driven from the village, Custer moved north and a wing of his battalion under Yates went down to the river at the Minneconjou Ford. Hundreds of warriors left the fight with Reno to protect the village.",
+   "quote": "caused hundreds of warriors to disengage from the Reno valley fight and return to deal with the threat to the village",
+   "at": {
+    "custer": [
+     64,
+     24,
+     0
+    ],
+    "yates": [
+     45,
+     22,
+     270
+    ],
+    "warriors2": [
+     28,
+     24,
+     90
+    ]
+   }
+  },
+  {
+   "title": "Custer's battalion is overwhelmed on Custer Hill",
+   "text": "Custer's companies moved to Custer Hill, where the warriors, led by Crazy Horse by the Lakota account, charged from the northeast. Custer's remaining troops, E, F and half of C, were soon killed.",
+   "quote": "Custer's remaining troops (E, F, and half of C) were soon killed.",
+   "at": {
+    "custer": [
+     68,
+     8,
+     0
+    ],
+    "yates": [
+     58,
+     18,
+     0
+    ],
+    "warriors2": [
+     78,
+     12,
+     270
+    ]
+   },
+   "state": {
+    "custer": "destroyed",
+    "yates": "destroyed"
+   },
+   "hits": [
+    [
+     "warriors2",
+     "custer"
+    ],
+    [
+     "warriors2",
+     "yates",
+     -0.3
+    ]
+   ]
+  }
+ ]
+}

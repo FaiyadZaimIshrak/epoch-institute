@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Battle of Kohima: The Two Sides, the Fighting and What Followed</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="A British and Indian garrison held Kohima ridge against the Japanese 31st Division in April 1944, was relieved, and with reinforcements drove the…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Battle of Kohima: The Two Sides, the Fighting and What Followed">
+<meta property="og:description" content="A British and Indian garrison held Kohima ridge against the Japanese 31st Division in April 1944, was relieved, and with reinforcements drove the…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/battle/battle-of-kohima">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/battle-of-kohima.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/battle-of-kohima.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/battle/battle-of-kohima">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Battles","item":"https://the-epoch-institute.org/profiles?kind=battle"},{"@type":"ListItem","position":4,"name":"Battle of Kohima"}]},{"@type":"Article","headline":"Battle of Kohima","description":"A British and Indian garrison held Kohima ridge against the Japanese 31st Division in April 1944, was relieved, and with reinforcements drove the…","url":"https://the-epoch-institute.org/battle/battle-of-kohima","mainEntityOfPage":"https://the-epoch-institute.org/battle/battle-of-kohima","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Battle of Kohima"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/battle-of-kohima.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=battle">Battles</a></li><li aria-current="page">Battle of Kohima</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Battle%20of%20Kohima.png" alt="Battle of Kohima" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Battle · South &amp; Southeast Asia</p>
+        <h1 class="profile-detail-name">Battle of Kohima</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Date</span><span class="info-stat-val">4 April to 22 June 1944, in three stages: the Japanese attack on Kohima ridge (3 to 16 April), the British and Indian counter-attack (18 April to 13 May) and the pursuit (16 May to 22 June)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Place</span><span class="info-stat-val">Kohima ridge and the surrounding hills, now the capital of <a class="enc-link" href="/encyclopedia/nagaland">Nagaland</a> in north-east <a class="enc-link" href="/encyclopedia/india">India</a>, on the road between <a class="enc-link" href="/encyclopedia/dimapur">Dimapur</a> and <a class="enc-link" href="/encyclopedia/imphal">Imphal</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">The two sides</span><span class="info-stat-val">British and British Indian forces, first the garrison under Colonel Hugh Richards (about 2,500, of whom about 1,000 were non-combatants) and then the British 2nd Division and Indian XXXIII Corps under Lieutenant General Montagu Stopford; the Japanese 31st Division under Lieutenant General Kōtoku Satō, part of Lieutenant General Renya Mutaguchi's Fifteenth Army</span></div>
+          <div class="info-stat"><span class="info-stat-label">Outcome</span><span class="info-stat-val">The Japanese abandoned Kohima ridge in May and the Naga Village in late May, and on 22 June troops from Kohima and <a class="enc-link" href="/encyclopedia/imphal">Imphal</a> met at Milestone 109, ending the Siege of Imphal. British and Indian forces lost 4,064 men dead, missing and wounded; the Japanese lost at least 5,764 battle casualties in the Kohima area.</span></div>
+        </div>
+        <p class="empire-meta">5 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The Japanese 31st Division set out with only three weeks' supply of food and ammunition, and its lack of supplies was the decisive factor in the battle.</li><li>Fighting at the Deputy Commissioner's bungalow was so close that the tennis court became a no man's land with grenades thrown between trenches, and the Japanese were not driven from it until a tank was dragged up on 13 May.</li><li>Satō abandoned Naga Village on 31 May against Mutaguchi's orders, and the two commanders blamed each other afterwards.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The garrison's water supply point was on GPT Ridge and was captured by the Japanese on the first day of the siege; a small spring on Garrison Hill could be reached only at night.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#how-it-was-fought">How it was fought</a></li><li><a href="#background">Background</a></li><li><a href="#forces">The Two Sides</a></li><li><a href="#course">How It Went</a></li><li><a href="#aftermath">Aftermath</a></li><li><a href="#sources">How We Know</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">January 1944</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/imperial-general-headquarters">Imperial General Headquarters</a> approves the U-Go offensive into <a class="enc-link" href="/encyclopedia/india">India</a></span></li><li><span class="rf-year">March 1944</span><span class="rf-text">The Japanese 31st Division crosses the Chindwin and spends six days fighting at Sangshak, which delays it by a week</span></li><li><span class="rf-year">April 1944</span><span class="rf-text">The siege of Kohima begins and the garrison is driven into a small perimeter on Garrison Hill</span></li><li><span class="rf-year">Mid-April 1944</span><span class="rf-text">Troops of 161st Indian <a class="enc-link" href="/encyclopedia/brigade">Brigade</a> with tanks break through and relieve the garrison</span></li><li><span class="rf-year">May 1944</span><span class="rf-text">A tank dragged to the summit destroys the Japanese bunkers at the tennis court, clearing Kohima Ridge</span></li><li><span class="rf-year">Late May 1944</span><span class="rf-text">Satō abandons Naga Village and the positions north of the road</span></li><li><span class="rf-year">June 1944</span><span class="rf-text">Troops from Kohima and <a class="enc-link" href="/encyclopedia/imphal">Imphal</a> meet at Milestone 109, ending the Siege of Imphal</span></li><li><span class="rf-year">July 1944</span><span class="rf-text">Satō is removed from command and the Japanese offensive is broken off</span></li></ol>
+    </section>
+
+    <section class="battle-field" id="how-it-was-fought" data-battle="battle-of-kohima" data-v="0585b1a283" aria-labelledby="battle-field-title">
+      <h2 class="profile-section-title" id="battle-field-title">How it was fought</h2>
+      <p class="bf-lede">The field and the armies, phase by phase. Press Play, or step through with Next and Back.</p>
+      <ol class="bf-phases"><li><b>The garrison is penned in on Garrison Hill</b> The Japanese took GPT Ridge on the first day and pressed the garrison from the south and from the north, around the tennis court. The 161st Brigade, cut off at Jotsoma, could only support it with artillery.</li><li><b>The Japanese cut the garrison in two</b> The Japanese took the area of the Deputy Commissioner's bungalow and Kuki Picquet, cutting the garrison in two. They did not go on to attack Garrison Hill, being exhausted by hunger and the fighting.</li><li><b>The relief force breaks through</b> The 161st Brigade, with air, artillery and armour support, attacked towards Kohima from Jotsoma. After a day of heavy fighting its leading troops and tanks broke through and began to relieve the garrison.</li><li><b>The 6th Brigade takes over Garrison Hill</b> The 6th Brigade replaced the original garrison, and Colonel Richards handed over command at 06:00 on 20 April. The Japanese went on trying to capture Garrison Hill for several more nights.</li><li><b>The Japanese defend; two brigades try to outflank them</b> The Japanese held Kohima Ridge with the Left Force and Naga Village with the Centre Force. The 5th Brigade took a foothold in Naga Village and lost it to a counter-attack, while the 4th Brigade marched round Mount Pulebadze and took part of GPT Ridge by surprise.</li><li><b>The ridge is cleared</b> Both outflanking moves failed, and the 2nd Division attacked along the ridge itself. Jail Hill and Kuki Picquet fell on 11 May. On 13 May a tank was dragged to the summit and crashed onto the tennis court, destroying the Japanese trenches there, and the ridge was cleared.</li><li><b>Satō abandons Naga Village and the Japanese retreat</b> Satō left Naga Village and the positions north of the road on 31 May, which let XXXIII Corps outflank the Aradura Spur position. The 2nd Division then followed the retreat down the road and met troops from Imphal at Milestone 109 on 22 June.</li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="background">
+        <h2 class="profile-section-title">Background</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/chiang-kai-shek"><img src="/images/encyclopedia/chiang-kai-shek.jpg" alt="Chiang Kai-shek" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/chiang-kai-shek">Chiang Kai-shek</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Chiang_Kai-shek%EF%BC%88%E8%94%A3%E4%B8%AD%E6%AD%A3%EF%BC%89.jpg" target="_blank" rel="noopener">Unknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The Japanese plan to invade <a class="enc-link" href="/encyclopedia/india">India</a>, codenamed U-Go, was first meant as a spoiling attack on the British IV Corps at <a class="enc-link" href="/encyclopedia/imphal">Imphal</a> in Manipur, to disrupt Allied plans for 1944. Lieutenant General Renya Mutaguchi, commanding the Fifteenth Army, enlarged it into an invasion of India itself, perhaps even to overthrow the <a class="enc-link" href="/encyclopedia/british-raj">British Raj</a>. A foothold in India would show the weakness of the <a class="enc-link" href="/encyclopedia/british-empire">British Empire</a> and encourage Indian nationalists, and holding the area around Imphal would hurt American efforts to supply <a class="enc-link" href="/encyclopedia/chiang-kai-shek">Chiang Kai-shek</a>'s army in <a class="enc-link" href="/encyclopedia/china">China</a>. Objections from various staffs were overcome and <a class="enc-link" href="/encyclopedia/imperial-general-headquarters">Imperial General Headquarters</a> approved the offensive on 7 January 1944.</p><p>The plan sent the 31st Division to capture Kohima and so cut off Imphal. Mutaguchi wished to go on to <a class="enc-link" href="/encyclopedia/dimapur">Dimapur</a>, the railhead and supply base in the <a class="enc-link" href="/encyclopedia/brahmaputra">Brahmaputra</a> valley. The division's commander, Lieutenant General Kōtoku Satō, had not been involved in the planning and doubted that it could succeed; he had told his staff that they might all starve. He also thought Mutaguchi a blockhead, and the two had been on opposite sides in the Toseiha and Kodoha factions of the Japanese Army in the early 1930s.</p></div>
+      </div>
+      <div class="profile-section-block" id="forces">
+        <h2 class="profile-section-title">The Two Sides</h2>
+        <div class="profile-section-body"><p>The 31st Division consisted of the 58th, 124th and 138th Infantry Regiments and the 31st Mountain Artillery Regiment. It crossed the Chindwin from 15 March on a front almost 60 miles (97 km) wide, and because of a shortage of transport it left behind half the mountain guns and the infantry's heavy weapons. It carried only three weeks' supply of food and ammunition. Its left wing, the bulk of the 58th Regiment under Major General Shigesaburō Miyazaki, was delayed by a week at Sangshak, where the 50th Indian <a class="enc-link" href="/encyclopedia/parachute">Parachute</a> <a class="enc-link" href="/encyclopedia/brigade">Brigade</a> lost 600 men and the Japanese over 400.</p><p>Lieutenant General William Slim, commanding the British Fourteenth Army, had believed that the terrain would allow the Japanese to send only a regiment to Kohima. Before 161st Indian Brigade arrived, the only fighting troops in the area were the newly raised 1st Battalion, <a class="enc-link" href="/encyclopedia/assam">Assam</a> Regiment and a few platoons of the Assam Rifles. The garrison that held Kohima numbered about 2,500, of whom about 1,000 were non-combatants, under Colonel Hugh Richards. It included the 4th Battalion, Queen's Own Royal West Kent Regiment, a company of the 7th <a class="enc-link" href="/encyclopedia/rajputs">Rajput</a> Regiment, a raw Nepalese battalion, the Shere Regiment, and convalescents and line-of-communication troops. The ridge runs north and south, with the <a class="enc-link" href="/encyclopedia/dimapur">Dimapur</a> to <a class="enc-link" href="/encyclopedia/imphal">Imphal</a> road climbing to its northern end.</p></div>
+      </div>
+      <div class="profile-section-block" id="course">
+        <h2 class="profile-section-title">How It Went</h2>
+        <div class="profile-section-body"><p>The siege began on 6 April. The garrison was shelled and mortared, partly with weapons and ammunition captured at Sangshak, and was driven into a small perimeter on Garrison Hill. The water supply point on GPT Ridge fell on the first day. The heaviest fighting was around the Deputy Commissioner's bungalow and tennis court, where the two sides dug in on opposite sides so close that grenades were thrown between the trenches. On the night of 17/18 April the Japanese took the bungalow area and Kuki Picquet, cutting the garrison in two, but did not attack Garrison Hill, being exhausted by hunger and fighting. On 18 April 161st <a class="enc-link" href="/encyclopedia/brigade">Brigade</a>, with tanks, broke through and began the relief, and the garrison handed over to 6th Brigade on 20 April.</p><p>The counter-offensive of the British 2nd Division was slow in <a class="enc-link" href="/encyclopedia/monsoon">monsoon</a> mud against deeply dug, mutually supporting bunkers. Jail Hill, Kuki Picquet, FSD and DIS fell on 11 May, and on 13 May a Lee tank dragged up a bulldozed track destroyed the Japanese positions at the tennis court. Attacks on Naga Village and Aradura Spur on 24/25 and 28/29 May failed. On 31 May Satō abandoned Naga Village, and XXXIII Corps pushed south until it met the 5th Indian Division at Milestone 109 on 22 June.</p></div><details class="sec-src"><summary>Sources for this section</summary><p class="sec-src-n">Works that Wikipedia&#8217;s article &#8220;Battle of Kohima&#8221; cites where it covers Geography, Siege, Relief, Counter-offensive:</p><ul><li>Peter Dennis, Kohima 1944: The Battle That Saved India (Osprey, 2010)</li></ul></details>
+      </div>
+      <div class="profile-section-block" id="aftermath">
+        <h2 class="profile-section-title">Aftermath</h2>
+        <div class="profile-section-body"><p>During the battle British and Indian forces lost 4,064 men, dead, missing and wounded. The Japanese lost at least 5,764 battle casualties in the Kohima area, and many of the 31st Division later died of disease or starvation, or took their own lives. Many were too weak to go further south than Ukhrul or Humine, where the hospitals had no medicines, staff or food.</p><p>Satō was removed from command early in July, when the whole Japanese offensive was broken off. He refused an invitation to commit seppuku and demanded a court martial to clear his name and publish his complaints about Fifteenth Army headquarters. At the prompting of Lieutenant General Masakasu Kawabe, commanding the <a class="enc-link" href="/encyclopedia/burma">Burma</a> Area Army, he was declared to have suffered a mental breakdown and unfit to stand trial, and Lieutenant General Tsuchitaro Kawada replaced him. Miyazaki was promoted to command the 54th Division in Arakan. On the Allied side Major General John Grover was dismissed from the 2nd Division on 5 July for perceived slowness and after complaints about his handling of Indian formations, and Major General Cameron Nicholson replaced him. The Japanese losses at <a class="enc-link" href="/encyclopedia/imphal">Imphal</a> and Kohima, mainly from starvation and disease, crippled their defence of Burma against Allied attacks the following year.</p></div><details class="sec-src"><summary>Sources for this section</summary><p class="sec-src-n">Works that Wikipedia&#8217;s article &#8220;Battle of Kohima&#8221; cites where it covers Japanese retreat, Aftermath, Aerial resupply, Victoria Cross:</p><ul><li>Peter Dennis, Kohima 1944: The Battle That Saved India (Osprey, 2010)</li></ul></details>
+      </div>
+      <div class="profile-section-block" id="sources">
+        <h2 class="profile-section-title">How We Know</h2>
+        <div class="profile-section-body"><p>One battle-hardened officer of 6th <a class="enc-link" href="/encyclopedia/brigade">Brigade</a> who saw the relieved garrison on 20 April described them as "aged, bloodstained scarecrows". Documents captured at Sangshak first showed Slim that a whole Japanese division was moving on Kohima. The Japanese commanders' conduct is disputed. Slim derided Satō as the most unenterprising of his opponents, while Japanese sources blame Mutaguchi for the weaknesses of the plan and for the antipathy between the two that led Satō to concentrate on saving his division. The Japanese loss is put at at least 5,764 battle casualties; later deaths from disease, starvation and suicide are not counted in it. The American historians Alan Millet and Williamson Murray wrote that nowhere in the <a class="enc-link" href="/encyclopedia/second-world-war">Second World War</a>, even on the Eastern Front, did the combatants fight with more mindless savagery.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>The battle is called the turning point of the Japanese U-Go offensive. Martin Dougherty, Frank McLynn and Jonathan Ritter have called the battles of Kohima and <a class="enc-link" href="/encyclopedia/imphal">Imphal</a> the "<a class="enc-link" href="/encyclopedia/volgograd">Stalingrad</a> of the East". Allied air supply was a major factor in turning the tide in this <a class="enc-link" href="/encyclopedia/theatre">theatre</a>, since garrisons could hold when surrounded and cut off, while the Japanese found their own supply harder to solve.</p><p>Three Victoria Crosses were awarded for actions at Kohima, to Lance Corporal John Pennington Harman of the Queen's Own Royal West Kent Regiment, Captain John Niel Randle of the Royal <a class="enc-link" href="/encyclopedia/norfolk">Norfolk</a> Regiment and Jemadar Abdul Hafiz of the 9th Jat Regiment, at 18 the youngest recipient from the British <a class="enc-link" href="/encyclopedia/indian-army">Indian Army</a>. The Kohima War Cemetery, holding 1,420 Allied war dead, lies on the slopes of Garrison Hill where the Deputy Commissioner's tennis court stood. The epitaph on the 2nd Division memorial, "When you go home, tell them of us and say, For your tomorrow, we gave our today", is attributed to John Maxwell Edmonds and thought to be inspired by <a class="enc-link" href="/encyclopedia/simonides-of-ceos">Simonides</a>' epitaph for <a class="enc-link" href="/encyclopedia/battle-of-thermopylae">Thermopylae</a>. In 2024 the <a class="enc-link" href="/encyclopedia/nagaland">Nagaland</a> Government and the Japanese ambassador unveiled the Kohima Peace Memorial.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>From April to June 1944 a British and Indian garrison at Kohima was besieged by the Japanese 31st Division, relieved, and then helped to drive it off the ridge. Short of food, the Japanese retreated, and the road to <a class="enc-link" href="/encyclopedia/imphal">Imphal</a> reopened on 22 June.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Fergal Keane, Road of Bones: The Siege of Kohima 1944 (HarperPress, 2010)</li>
+        <li>Arthur Swinson, Kohima (Head of Zeus, 2015)</li>
+        <li>Leslie Edwards, Kohima: The Furthest Battle (The History Press, 2009)</li>
+        <li>John Colvin, Not Ordinary Men: The Story of the Battle of Kohima (Leo Cooper, 2012)</li>
+        <li>Louis Allen, Burma: The Longest War 1941–45 (Phoenix Press, 2000)</li>
+        <li>William Slim, Defeat into Victory (Cassell, 1956)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other battles</p>
+      <div class="related-grid"><a class="related-card" href="/battle/battle-of-the-bulge"><img src="/logos/thumbs/Battle%20of%20the%20Bulge.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of the Bulge</span><span class="related-card-dates">16 December 1944 – 25 January 1945</span></a><a class="related-card" href="/battle/normandy-landings"><img src="/logos/thumbs/Normandy%20landings.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Normandy landings</span><span class="related-card-dates">6 June 1944</span></a><a class="related-card" href="/battle/battle-of-iwo-jima"><img src="/logos/thumbs/Battle%20of%20Iwo%20Jima.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Iwo Jima</span><span class="related-card-dates">19 February – 26 March 1945</span></a><a class="related-card" href="/battle/battle-of-kursk"><img src="/logos/thumbs/Battle%20of%20Kursk.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Kursk</span><span class="related-card-dates">5 July – 23 August 1943</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/battle/battle-of-tarawa"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Battle%20of%20Tarawa.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Tarawa</span><span class="related-card-dates">20–23 November 1943</span></a><a class="related-card" href="/battle/battle-of-the-bulge"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Battle%20of%20the%20Bulge.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of the Bulge</span><span class="related-card-dates">16 December 1944 – 25 January 1945</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".battle-field[data-battle]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/battle-map.js";s.onload=function(){fetch("/data/battles/"+el.getAttribute("data-battle")+".json?v="+el.getAttribute("data-v")).then(function(r){return r.json();}).then(function(d){BattleMap.mount(el,d);}).catch(function(){});};document.head.appendChild(s);};if(location.hash==="#how-it-was-fought"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Battle of Kohima",slug="battle-of-kohima",url="https://the-epoch-institute.org/battle/battle-of-kohima";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Battle of Kohima on The Epoch Institute — the two sides, the fighting and what followed. https://the-epoch-institute.org/battle/battle-of-kohima #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/battle/battle-of-kohima"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Battle of Kohima",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Battle of Kohima",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

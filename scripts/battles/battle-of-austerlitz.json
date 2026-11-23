@@ -1,0 +1,640 @@
+{
+ "slug": "battle-of-austerlitz",
+ "name": "Battle of Austerlitz",
+ "article": "battles2/wp/battle-of-austerlitz",
+ "field": {
+  "north": 0
+ },
+ "note": "North is drawn at the top because the Olmütz/Brno road ran east to west and the Goldbach flowed south. The French are drawn in the west and the Allies in the east; the accounts do not say exactly where each village and stream lay, so they are placed by judgement. Where the French reserve lay is not stated. St. Hilaire's division is treated as part of Soult's corps, as its attack on the Pratzen Heights suggests. The routes of the Allied cavalry and of the fleeing columns are not given. The Satschan ponds episode is disputed and is not drawn.",
+ "terrain": [
+  {
+   "k": "hill",
+   "name": "Žuráň Hill",
+   "at": [
+    [
+     4,
+     5
+    ],
+    [
+     10,
+     4
+    ],
+    [
+     15,
+     6
+    ],
+    [
+     16,
+     11
+    ],
+    [
+     10,
+     12
+    ],
+    [
+     5,
+     10
+    ]
+   ],
+   "lab": [
+    9,
+    8
+   ],
+   "quote": "700-foot (210-metre) Santon Hill and the 880-foot (270-meter) Žuráň Hill"
+  },
+  {
+   "k": "hill",
+   "name": "Santon Hill",
+   "at": [
+    [
+     22,
+     5
+    ],
+    [
+     30,
+     4
+    ],
+    [
+     36,
+     6
+    ],
+    [
+     36,
+     10
+    ],
+    [
+     28,
+     12
+    ],
+    [
+     22,
+     10
+    ]
+   ],
+   "lab": [
+    29,
+    8
+   ],
+   "quote": "700-foot (210-metre) Santon Hill and the 880-foot (270-meter) Žuráň Hill"
+  },
+  {
+   "k": "road",
+   "name": "Olomouc/Brno road",
+   "unnamed": true,
+   "at": [
+    [
+     4,
+     13
+    ],
+    [
+     30,
+     13
+    ],
+    [
+     60,
+     13
+    ],
+    [
+     96,
+     13
+    ]
+   ],
+   "lab": [
+    78,
+    11.5
+   ],
+   "quote": "overlooking the vital Olomouc/Brno road, which was on an east–west axis"
+  },
+  {
+   "k": "hill",
+   "name": "Pratzen Heights",
+   "at": [
+    [
+     42,
+     26
+    ],
+    [
+     50,
+     23
+    ],
+    [
+     60,
+     24
+    ],
+    [
+     66,
+     30
+    ],
+    [
+     65,
+     40
+    ],
+    [
+     54,
+     43
+    ],
+    [
+     44,
+     40
+    ],
+    [
+     41,
+     33
+    ]
+   ],
+   "lab": [
+    55,
+    42
+   ],
+   "quote": "The centrepiece of the entire area was the Pratzen (Prace) Heights, a gently sloping hill."
+  },
+  {
+   "k": "stream",
+   "name": "Bosenitz",
+   "at": [
+    [
+     17,
+     4
+    ],
+    [
+     18,
+     16
+    ],
+    [
+     20,
+     26
+    ],
+    [
+     26,
+     31
+    ],
+    [
+     33,
+     33
+    ]
+   ],
+   "lab": [
+    20,
+    22
+   ],
+   "quote": "the Bosenitz (Roketnice) stream went south to link up with the Goldbach (Říčka) stream"
+  },
+  {
+   "k": "stream",
+   "name": "Goldbach",
+   "at": [
+    [
+     33,
+     33
+    ],
+    [
+     34,
+     44
+    ],
+    [
+     34,
+     52
+    ],
+    [
+     33,
+     59
+    ]
+   ],
+   "lab": [
+    31,
+    40
+   ],
+   "quote": "the Bosenitz (Roketnice) stream went south to link up with the Goldbach (Říčka) stream"
+  },
+  {
+   "k": "village",
+   "name": "Kobelnitz",
+   "at": [
+    37,
+    36
+   ],
+   "lab": [
+    40,
+    37
+   ],
+   "quote": "flowing by the villages of Kobelnitz (Kobylnice), Sokolnitz (Sokolnice), and Telnitz (Telnice)"
+  },
+  {
+   "k": "village",
+   "name": "Sokolnitz",
+   "at": [
+    36,
+    46
+   ],
+   "lab": [
+    39,
+    44
+   ],
+   "quote": "flowing by the villages of Kobelnitz (Kobylnice), Sokolnitz (Sokolnice), and Telnitz (Telnice)"
+  },
+  {
+   "k": "village",
+   "name": "Telnitz",
+   "at": [
+    35,
+    56
+   ],
+   "lab": [
+    38,
+    58
+   ],
+   "quote": "flowing by the villages of Kobelnitz (Kobylnice), Sokolnitz (Sokolnice), and Telnitz (Telnice)"
+  }
+ ],
+ "sides": [
+  {
+   "id": "f",
+   "name": "French (Grande Armée)"
+  },
+  {
+   "id": "a",
+   "name": "Russo-Austrian Allies"
+  }
+ ],
+ "units": [
+  {
+   "id": "legrand",
+   "side": "f",
+   "k": "infantry",
+   "name": "French right at Telnitz",
+   "short": "Legrand",
+   "leader": "Legrand",
+   "w": 6,
+   "quote": "General Legrand's men, who held the extreme southern flank"
+  },
+  {
+   "id": "davout",
+   "side": "f",
+   "k": "infantry",
+   "name": "Davout's III Corps",
+   "short": "Davout",
+   "leader": "Davout",
+   "w": 8,
+   "quote": "Napoleon ordered Davout's III Corps to force march from Vienna",
+   "leaderEntry": "louis-nicolas-davout"
+  },
+  {
+   "id": "soult",
+   "side": "f",
+   "k": "infantry",
+   "name": "Soult's IV Corps",
+   "short": "Soult",
+   "leader": "Soult",
+   "w": 12,
+   "quote": "The massive thrust through the Allied centre was conducted by 16,000 troops of Soult's IV Corps."
+  },
+  {
+   "id": "hil",
+   "side": "f",
+   "k": "infantry",
+   "name": "St. Hilaire's division",
+   "short": "St Hilaire",
+   "w": 5,
+   "quote": "A dense fog helped to cloud the advance of St. Hilaire's French division"
+  },
+  {
+   "id": "lannes",
+   "side": "f",
+   "k": "infantry",
+   "name": "Lannes's V Corps",
+   "short": "Lannes",
+   "leader": "Lannes",
+   "w": 8,
+   "quote": "the V Corps under Lannes guarded the northern sector of the battlefield"
+  },
+  {
+   "id": "murat",
+   "side": "f",
+   "k": "cavalry",
+   "name": "French cavalry under Murat",
+   "short": "Murat",
+   "leader": "Murat",
+   "w": 9,
+   "quote": "Murat, who was in control of this sector on the battlefield",
+   "leaderEntry": "joachim-murat"
+  },
+  {
+   "id": "reserve",
+   "side": "f",
+   "k": "guard",
+   "name": "Imperial Guard and I Corps",
+   "short": "Reserve",
+   "leader": "Napoleon",
+   "w": 8,
+   "quote": "The Imperial Guard and Bernadotte's I Corps were held in reserve",
+   "leaderEntry": "napoleon"
+  },
+  {
+   "id": "buxh",
+   "side": "a",
+   "k": "infantry",
+   "name": "Allied left-wing columns",
+   "short": "Columns",
+   "leader": "Buxhoeveden",
+   "w": 14,
+   "quote": "The Allies deployed most of their troops into four columns that would attack the French right."
+  },
+  {
+   "id": "kut",
+   "side": "a",
+   "k": "infantry",
+   "name": "Kutuzov's IV Corps",
+   "short": "Kutuzov",
+   "leader": "Kutuzov",
+   "w": 10,
+   "quote": "Kutuzov's IV Corps stopped at the Pratzen Heights and stayed still."
+  },
+  {
+   "id": "bag",
+   "side": "a",
+   "k": "infantry",
+   "name": "Bagration's Allied right",
+   "short": "Bagration",
+   "leader": "Bagration",
+   "w": 8,
+   "quote": "while Russian troops under Bagration guarded the Allied right"
+  },
+  {
+   "id": "liech",
+   "side": "a",
+   "k": "cavalry",
+   "name": "Liechtenstein's cavalry",
+   "short": "Liechtenst",
+   "leader": "Liechtenstein",
+   "w": 8,
+   "quote": "cavalry detachments under Liechtenstein on the Allied left flank had to be placed on the right flank"
+  },
+  {
+   "id": "ruguard",
+   "side": "a",
+   "k": "guard",
+   "name": "Russian Imperial Guard",
+   "short": "Rus Guard",
+   "leader": "Grand Duke Constantine",
+   "w": 8,
+   "quote": "The Russian Imperial Guard was held in reserve"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The armies take their ground",
+   "when": "1 December 1805",
+   "text": "Napoleon abandoned the Pratzen Heights and moved all his troops but the right flank into dead ground. The Allies planned four columns against the French right, with the Russian Guard in reserve and Bagration on their right.",
+   "quote": "Meanwhile, Napoleon's main force was to be concealed in a dead ground opposite the Heights.",
+   "at": {
+    "legrand": [
+     30,
+     54,
+     90
+    ],
+    "soult": [
+     26,
+     42,
+     90
+    ],
+    "lannes": [
+     26,
+     18,
+     90
+    ],
+    "murat": [
+     26,
+     30,
+     90
+    ],
+    "reserve": [
+     16,
+     36,
+     90
+    ],
+    "buxh": [
+     46,
+     48,
+     270
+    ],
+    "kut": [
+     52,
+     34,
+     270
+    ],
+    "bag": [
+     66,
+     18,
+     270
+    ],
+    "liech": [
+     60,
+     54,
+     270
+    ],
+    "ruguard": [
+     72,
+     30,
+     270
+    ]
+   },
+   "state": {
+    "soult": "hidden",
+    "reserve": "hidden"
+   }
+  },
+  {
+   "title": "The Allied columns attack the French right",
+   "when": "About 8 am",
+   "text": "The first Allied lines attacked Telnitz and drove the French across the Goldbach. The first men of Davout's corps arrived and threw the Allies out of the village, and French artillery checked further attacks.",
+   "quote": "The first men of Davout's corps arrived at this time and threw the Allies out of Telnitz before they, too, were attacked by hussars and re-abandoned the town.",
+   "at": {
+    "davout": [
+     23,
+     53,
+     90
+    ],
+    "buxh": [
+     42,
+     50,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "buxh",
+     "legrand"
+    ],
+    [
+     "davout",
+     "buxh",
+     0.15
+    ]
+   ]
+  },
+  {
+   "title": "The Tsar orders Kutuzov off the Pratzen Heights",
+   "text": "Kutuzov's corps had halted on the Heights, but the Tsar ordered it to withdraw. That left the Allied centre weak.",
+   "quote": "But the young Tsar did not, so he ordered the IV Corps to withdraw from the Heights.",
+   "at": {
+    "kut": [
+     60,
+     36,
+     270
+    ]
+   },
+   "how": {
+    "kut": "retreat"
+   }
+  },
+  {
+   "title": "Soult's corps climbs the Heights",
+   "when": "About 9 am",
+   "text": "As the mist cleared, Napoleon ordered the attack. Soult's corps went up the slope and the Allies sent the delayed detachments of the fourth column into the fight. After over an hour of fighting the French bayoneted the Allies off the Heights.",
+   "quote": "A dense fog helped to cloud the advance of St. Hilaire's French division, but as they ascended the slope, the legendary 'Sun of Austerlitz' ripped the mist apart and encouraged them forward.",
+   "at": {
+    "soult": [
+     47,
+     34,
+     90
+    ]
+   },
+   "state": {
+    "soult": "shown"
+   },
+   "hits": [
+    [
+     "soult",
+     "kut"
+    ]
+   ]
+  },
+  {
+   "title": "The Russian Guard counterattacks and breaks",
+   "text": "Grand Duke Constantine's Guard counterattacked in Vandamme's section and forced a bloody effort. French Guard cavalry and Bernadotte's I Corps came up, and the Russians broke and were pursued for about a quarter of a mile.",
+   "quote": "The Russians broke, and many died as they were pursued by the reinvigorated French cavalry for about a quarter of a mile.",
+   "at": {
+    "reserve": [
+     52,
+     22,
+     90
+    ],
+    "ruguard": [
+     72,
+     36,
+     90
+    ]
+   },
+   "how": {
+    "ruguard": "rout"
+   },
+   "state": {
+    "reserve": "shown",
+    "ruguard": "routed"
+   },
+   "hits": [
+    [
+     "ruguard",
+     "soult",
+     0.2
+    ],
+    [
+     "reserve",
+     "ruguard",
+     0.1
+    ]
+   ]
+  },
+  {
+   "title": "In the north the French drive off the cavalry and Bagration",
+   "text": "Liechtenstein's heavy cavalry attacked Murat's lighter cavalry, and French cuirassiers finished off the Russian cavalry after a long and bitter mêlée. Lannes then led his corps against Bagration and drove him off the field.",
+   "quote": "On Napoleon's orders, Lannes then led his V Corps against Bagration's men and, after hard fighting, drove the skilled Russian commander off the field.",
+   "at": {
+    "murat": [
+     74,
+     21,
+     90
+    ],
+    "lannes": [
+     64,
+     14,
+     90
+    ],
+    "liech": [
+     84,
+     29,
+     90
+    ],
+    "bag": [
+     86,
+     12,
+     90
+    ]
+   },
+   "how": {
+    "liech": "rout",
+    "bag": "rout"
+   },
+   "state": {
+    "liech": "routed",
+    "bag": "routed"
+   },
+   "hits": [
+    [
+     "liech",
+     "murat"
+    ],
+    [
+     "murat",
+     "liech",
+     0.2
+    ],
+    [
+     "lannes",
+     "bag"
+    ]
+   ]
+  },
+  {
+   "title": "Sokolnitz falls and the Allied army leaves the field",
+   "text": "St. Hilaire's division and part of Davout's corps broke through at Sokolnitz. The commanders of the first two columns fled, and general panic seized the Allied army, which abandoned the field in all possible directions.",
+   "quote": "In an effective double-pronged assault, St. Hilaire's division and part of Davout's III Corps smashed through the enemy at Sokolnitz, which persuaded the commanders of the first two columns, Generals Kienmayer and Langeron, to flee as fast as they could.",
+   "at": {
+    "hil": [
+     40,
+     38,
+     180
+    ],
+    "buxh": [
+     60,
+     52,
+     90
+    ],
+    "kut": [
+     78,
+     48,
+     90
+    ]
+   },
+   "how": {
+    "buxh": "rout",
+    "kut": "rout"
+   },
+   "state": {
+    "buxh": "routed",
+    "kut": "routed"
+   },
+   "hits": [
+    [
+     "hil",
+     "buxh"
+    ],
+    [
+     "davout",
+     "buxh",
+     0.15
+    ]
+   ]
+  }
+ ]
+}

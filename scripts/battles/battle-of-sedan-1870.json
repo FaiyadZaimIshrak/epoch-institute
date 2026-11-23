@@ -1,0 +1,485 @@
+{
+ "slug": "battle-of-sedan-1870",
+ "name": "Battle of Sedan (1870)",
+ "article": "battles2/wp/battle-of-sedan-1870",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "to Floing and the north-west",
+    "at": [
+     12,
+     4
+    ]
+   },
+   {
+    "name": "south bank of the Meuse",
+    "at": [
+     30,
+     58
+    ]
+   }
+  ]
+ },
+ "note": "The accounts give directions only roughly (north-west, west, east, south-west). The places are set by judgement on that basis, and the Meuse, the wood and the hills are drawn only as markers; the accounts do not say exactly where each lay. They also name the Bavarian attacks both at Bazeilles and as coming from the south-west, which cannot be shown together.",
+ "terrain": [
+  {
+   "k": "river",
+   "name": "Meuse",
+   "at": [
+    [
+     2,
+     46
+    ],
+    [
+     28,
+     48
+    ],
+    [
+     56,
+     48
+    ],
+    [
+     78,
+     47
+    ],
+    [
+     98,
+     46
+    ]
+   ],
+   "lab": [
+    20,
+    50
+   ],
+   "quote": "Bavarian engineers deployed two pontoon bridges across the Meuse to secure their way across"
+  },
+  {
+   "k": "fort",
+   "name": "Sedan",
+   "at": [
+    44,
+    41
+   ],
+   "lab": [
+    44,
+    44.5
+   ],
+   "quote": "the obsolete 17th-century fortress of Sedan"
+  },
+  {
+   "k": "hill",
+   "name": "Calvaire d'Illy",
+   "at": [
+    [
+     26,
+     5
+    ],
+    [
+     38,
+     5
+    ],
+    [
+     44,
+     9
+    ],
+    [
+     38,
+     14
+    ],
+    [
+     28,
+     14
+    ]
+   ],
+   "lab": [
+    34,
+    7.5
+   ],
+   "quote": "offered a defensive position at the Calvaire d'Illy, which had both hills and woods to provide cover"
+  },
+  {
+   "k": "wood",
+   "name": "Bois de la Garenne",
+   "at": [
+    [
+     36,
+     16
+    ],
+    [
+     46,
+     14
+    ],
+    [
+     58,
+     16
+    ],
+    [
+     58,
+     26
+    ],
+    [
+     46,
+     28
+    ],
+    [
+     36,
+     26
+    ]
+   ],
+   "lab": [
+    47,
+    14
+   ],
+   "quote": "drove the Army of Châlons north into the Bois de la Garenne, where it was surrounded"
+  },
+  {
+   "k": "village",
+   "name": "Floing",
+   "at": [
+    16,
+    26
+   ],
+   "lab": [
+    16,
+    29.5
+   ],
+   "quote": "launching three attacks on the nearby village of Floing where the Prussian XI Corps was concentrated"
+  },
+  {
+   "k": "village",
+   "name": "Bazeilles",
+   "at": [
+    82,
+    36
+   ],
+   "lab": [
+    81,
+    30
+   ],
+   "quote": "Lebrun's 12th Corps garrisoned Bazeilles"
+  },
+  {
+   "k": "village",
+   "name": "La Moncelle",
+   "at": [
+    68,
+    28
+   ],
+   "lab": [
+    68,
+    25
+   ],
+   "quote": "the only point where that seemed possible was La Moncelle, whose flank was protected by a fortified town"
+  }
+ ],
+ "sides": [
+  {
+   "id": "f",
+   "name": "French Army of Châlons"
+  },
+  {
+   "id": "g",
+   "name": "Prussian and allied Third and Fourth Armies"
+  }
+ ],
+ "units": [
+  {
+   "id": "c7",
+   "side": "f",
+   "k": "infantry",
+   "name": "French 7th Corps",
+   "short": "7th Corps",
+   "leader": "Douay",
+   "w": 12,
+   "quote": "MacMahon deployed Douay's 7th Corps to the north-west on the crest between the Calvaire and Floing"
+  },
+  {
+   "id": "c1",
+   "side": "f",
+   "k": "infantry",
+   "name": "French 1st Corps",
+   "short": "1st Corps",
+   "leader": "Ducrot",
+   "w": 12,
+   "quote": "Auguste-Alexandre Ducrot's 1st Corps faced east"
+  },
+  {
+   "id": "c12",
+   "side": "f",
+   "k": "infantry",
+   "name": "French 12th Corps",
+   "short": "12th Corps",
+   "leader": "Lebrun",
+   "w": 10,
+   "quote": "Lebrun's 12th Corps garrisoned Bazeilles"
+  },
+  {
+   "id": "c5",
+   "side": "f",
+   "k": "guard",
+   "name": "French 5th Corps (reserve)",
+   "short": "5th Corps",
+   "leader": "Wimpffen",
+   "w": 10,
+   "quote": "5th Corps was placed in reserve in the centre"
+  },
+  {
+   "id": "cav",
+   "side": "f",
+   "k": "cavalry",
+   "name": "Margueritte's cavalry",
+   "short": "Cavalry",
+   "leader": "Margueritte",
+   "w": 6,
+   "quote": "Ducrot directed General Jean Auguste Margueritte's cavalry squadrons to open an escape route"
+  },
+  {
+   "id": "bav",
+   "side": "g",
+   "k": "infantry",
+   "name": "I Royal Bavarian Corps",
+   "short": "Bavarians",
+   "leader": "von der Tann",
+   "w": 10,
+   "quote": "The I Royal Bavarian Corps under General Baron von der Tann moved to Bazeilles"
+  },
+  {
+   "id": "sax",
+   "side": "g",
+   "k": "infantry",
+   "name": "Saxon XII Corps",
+   "short": "Saxons",
+   "leader": "Prince George",
+   "w": 10,
+   "quote": "The Saxon XII Corps crossed the Meuse to the Chiers, with the Prussian Guards on their right."
+  },
+  {
+   "id": "gds",
+   "side": "g",
+   "k": "infantry",
+   "name": "Prussian Guards Corps",
+   "short": "Guards",
+   "w": 10,
+   "quote": "with the Prussian Guards on their right"
+  },
+  {
+   "id": "v",
+   "side": "g",
+   "k": "infantry",
+   "name": "Prussian V Corps",
+   "short": "V Corps",
+   "w": 10,
+   "quote": "The Prussian V and XI Corps completed the encirclement of the French army to the north-west"
+  },
+  {
+   "id": "xi",
+   "side": "g",
+   "k": "infantry",
+   "name": "Prussian XI Corps",
+   "short": "XI Corps",
+   "w": 10,
+   "quote": "Prince George of Saxony and the Prussian XI Corps was assigned to the task"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The French held a ring round Sedan",
+   "when": "31 August to 1 September 1870",
+   "text": "MacMahon placed the 7th Corps on the north-west crest, the 1st Corps facing east and the 12th Corps in Bazeilles, with the 5th Corps in reserve in the centre. The Germans closed a ring round the north-west, west and east.",
+   "quote": "The Prussian V and XI Corps completed the encirclement of the French army to the north-west by 0900 on 1 September.",
+   "at": {
+    "c7": [
+     26,
+     20,
+     270
+    ],
+    "c1": [
+     62,
+     22,
+     90
+    ],
+    "c12": [
+     75,
+     36,
+     90
+    ],
+    "c5": [
+     48,
+     33,
+     90
+    ],
+    "bav": [
+     80,
+     56,
+     0
+    ],
+    "sax": [
+     74,
+     20,
+     270
+    ],
+    "gds": [
+     66,
+     8,
+     180
+    ],
+    "v": [
+     8,
+     34,
+     90
+    ],
+    "xi": [
+     8,
+     18,
+     90
+    ]
+   }
+  },
+  {
+   "title": "The Bavarians storm Bazeilles",
+   "when": "About 04:00, 1 September",
+   "text": "A Bavarian brigade crossed the Meuse on pontoon bridges in the morning mist and rushed Bazeilles. The French fought from stone houses while Bavarian guns shelled the buildings.",
+   "quote": "Von der Tann sent a brigade across pontoon bridges at 04:00 in the early morning mist, the Bavarians rushing the village and capturing it through surprise.",
+   "at": {
+    "bav": [
+     88,
+     36,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "bav",
+     "c12"
+    ]
+   ]
+  },
+  {
+   "title": "Wimpffen attacks the Saxons at La Moncelle",
+   "text": "Ducrot ordered a retreat but Wimpffen overruled him and threw his forces against the Saxons at La Moncelle. The French rallied briefly, then the counter-attack began to collapse as fresh Prussian troops arrived.",
+   "quote": "Wimpffen then threw his forces against the Saxons at La Moncelle.",
+   "at": {
+    "c5": [
+     60,
+     34,
+     90
+    ],
+    "c1": [
+     60,
+     22,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "c5",
+     "sax"
+    ],
+    [
+     "c1",
+     "sax",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "French cavalry charge at Floing",
+   "when": "About 15:00",
+   "text": "Ducrot sent Margueritte's cavalry to open an escape route with three attacks on Floing, where the XI Corps stood. Margueritte was mortally wounded in the first charge and German infantry fire defeated the other two.",
+   "quote": "Margueritte was mortally wounded leading the very first charge, and the two additional charges were defeated by German infantry fire at 15:00",
+   "at": {
+    "cav": [
+     24,
+     32,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "cav",
+     "xi"
+    ],
+    [
+     "xi",
+     "cav",
+     0.3
+    ]
+   ]
+  },
+  {
+   "title": "The Germans close in and the Bois de la Garenne falls",
+   "when": "About 14:00 to 14:30",
+   "text": "German infantry reached the Calvaire and attacked from all sides. The 7th Corps broke and the 1st Corps was routed by artillery. When the Guards infantry captured the Bois de la Garenne at 14:30, the French inside surrendered.",
+   "quote": "when the Prussian Guards infantry captured the forest at 14:30, the French troops inside it surrendered.",
+   "at": {
+    "xi": [
+     14,
+     18,
+     90
+    ],
+    "c7": [
+     38,
+     22,
+     270
+    ],
+    "c1": [
+     51,
+     21,
+     90
+    ],
+    "gds": [
+     52,
+     9,
+     180
+    ],
+    "sax": [
+     66,
+     22,
+     270
+    ]
+   },
+   "how": {
+    "c7": "rout",
+    "c1": "rout"
+   },
+   "state": {
+    "c7": "routed",
+    "c1": "routed"
+   },
+   "hits": [
+    [
+     "xi",
+     "c7"
+    ],
+    [
+     "gds",
+     "c1"
+    ],
+    [
+     "sax",
+     "c1",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "A last attack after the white flag",
+   "text": "Napoleon III hoisted a white flag on the walls of Sedan. Wimpffen refused to surrender and launched one more attack, which the Germans defeated.",
+   "quote": "Wimpffen saw the white flag but refused to surrender and launched one more attack, which was defeated by the Germans.",
+   "at": {
+    "c5": [
+     56,
+     36,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "c5",
+     "sax"
+    ]
+   ]
+  }
+ ]
+}

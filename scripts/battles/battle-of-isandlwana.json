@@ -1,0 +1,446 @@
+{
+ "slug": "battle-of-isandlwana",
+ "name": "Battle of Isandlwana",
+ "article": "battles2/wp/battle-of-isandlwana",
+ "field": {
+  "north": null,
+  "edges": []
+ },
+ "note": "The accounts do not say where the Zulu stood or in which direction they came, so they are placed at the top of the plan and the British camp at the foot; the hill of Isandlwana is placed on the British left, as the accounts put the Zulu movement round it, but its exact position is not given. The donga is placed on the British right flank as stated. The accounts say the valley where the Zulu waited may have been the Ngwebeni or closer, so no valley is drawn. The Zulu reserve is shown unengaged; the accounts give no position for it. Other accounts give different details of the last stands.",
+ "terrain": [
+  {
+   "k": "hill",
+   "name": "Isandlwana",
+   "at": [
+    [
+     6,
+     40
+    ],
+    [
+     16,
+     38
+    ],
+    [
+     24,
+     42
+    ],
+    [
+     25,
+     52
+    ],
+    [
+     20,
+     58
+    ],
+    [
+     6,
+     58
+    ]
+   ],
+   "lab": [
+    13,
+    46
+   ],
+   "quote": "moving to the British left around the hill of Isandlwana"
+  },
+  {
+   "k": "stream",
+   "name": "Donga",
+   "unnamed": true,
+   "at": [
+    [
+     72,
+     40
+    ],
+    [
+     80,
+     38
+    ],
+    [
+     90,
+     38
+    ],
+    [
+     96,
+     41
+    ]
+   ],
+   "lab": [
+    86,
+    41
+   ],
+   "quote": "retreated to a donga, a dried-out watercourse, on the British right flank"
+  }
+ ],
+ "sides": [
+  {
+   "id": "b",
+   "name": "British and colonial troops"
+  },
+  {
+   "id": "z",
+   "name": "Zulu army"
+  }
+ ],
+ "units": [
+  {
+   "id": "zr",
+   "side": "z",
+   "k": "infantry",
+   "name": "Zulu right horn",
+   "short": "R. horn",
+   "w": 10,
+   "quote": "uDududu, uNokenke regiments, part uNodwengu corps"
+  },
+  {
+   "id": "zc",
+   "side": "z",
+   "k": "infantry",
+   "name": "Zulu chest",
+   "short": "Chest",
+   "w": 14,
+   "quote": "umCijo, uKhandampevu, regiments; part uNodwengu corps"
+  },
+  {
+   "id": "zl",
+   "side": "z",
+   "k": "infantry",
+   "name": "Zulu left horn",
+   "short": "L. horn",
+   "w": 12,
+   "quote": "the left horn of the Zulu advance was moving to outflank and envelop"
+  },
+  {
+   "id": "zres",
+   "side": "z",
+   "k": "infantry",
+   "name": "Zulu reserve (the loins)",
+   "short": "Reserve",
+   "w": 10,
+   "leader": "Dabulamanzi kaMpande",
+   "quote": "Undi corps, uDloko, iNdluyengwe, Indlondlo and Uthulwana regiments"
+  },
+  {
+   "id": "camp",
+   "side": "b",
+   "k": "camp",
+   "name": "British camp",
+   "short": "Camp",
+   "w": 10,
+   "quote": "The British under Chelmsford pitched camp at Isandlwana on 20 January"
+  },
+  {
+   "id": "b24",
+   "side": "b",
+   "k": "infantry",
+   "name": "Companies of the 24th Foot",
+   "short": "24th Foot",
+   "w": 12,
+   "leader": "Pulleine",
+   "quote": "all six companies of the 24th Foot into an extended firing line"
+  },
+  {
+   "id": "guns",
+   "side": "b",
+   "k": "artillery",
+   "name": "Two 7-pounder guns",
+   "short": "Guns",
+   "w": 5,
+   "quote": "two 7-pounder guns with around 70 men of the Royal Artillery"
+  },
+  {
+   "id": "dur",
+   "side": "b",
+   "k": "light",
+   "name": "Durnford's column",
+   "short": "Durnford",
+   "w": 9,
+   "leader": "Durnford",
+   "quote": "arrived from Rorke's Drift with 500 men of the Natal Native Contingent"
+  },
+  {
+   "id": "rocket",
+   "side": "b",
+   "k": "artillery",
+   "name": "Rocket battery",
+   "short": "Rockets",
+   "w": 5,
+   "quote": "a rocket battery of two 9pr Hale rocket troughs of the No. 2 Column"
+  },
+  {
+   "id": "gco",
+   "side": "b",
+   "k": "infantry",
+   "name": "G Company, 2nd/24th",
+   "short": "G Co",
+   "w": 5,
+   "quote": "exposed the flank of G Company, 2nd/24th"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The Zulu army is found near the camp",
+   "when": "About 11:00 am, 22 January 1879",
+   "text": "Scouts chased some Zulus into a valley and saw most of the main force sitting in total quiet. Durnford had reached the camp with his men and a rocket battery, and Pulleine held the camp with the 24th and two guns.",
+   "quote": "most of the 20,000 men of the main enemy force sitting in total quiet",
+   "at": {
+    "zr": [
+     20,
+     14,
+     180
+    ],
+    "zc": [
+     50,
+     18,
+     180
+    ],
+    "zl": [
+     80,
+     14,
+     180
+    ],
+    "zres": [
+     50,
+     8,
+     180
+    ],
+    "camp": [
+     30,
+     54,
+     0
+    ],
+    "b24": [
+     46,
+     50,
+     0
+    ],
+    "guns": [
+     60,
+     52,
+     0
+    ],
+    "dur": [
+     70,
+     52,
+     0
+    ],
+    "rocket": [
+     82,
+     54,
+     0
+    ]
+   },
+   "state": {
+    "zr": "hidden",
+    "zc": "hidden",
+    "zl": "hidden",
+    "zres": "hidden"
+   }
+  },
+  {
+   "title": "The Zulu advance and the British extend their line",
+   "text": "Having been discovered, the Zulu leapt to the offensive in the horns and chest of the buffalo. Pulleine sent all six companies of the 24th out into an extended firing line, and Durnford's men moved forward.",
+   "quote": "Pulleine sent out first one, then all six companies of the 24th Foot into an extended firing line",
+   "at": {
+    "zr": [
+     20,
+     24,
+     180
+    ],
+    "zc": [
+     50,
+     22,
+     180
+    ],
+    "zl": [
+     80,
+     18,
+     180
+    ],
+    "b24": [
+     46,
+     34,
+     0
+    ],
+    "dur": [
+     66,
+     32,
+     0
+    ],
+    "rocket": [
+     66,
+     44,
+     0
+    ]
+   },
+   "state": {
+    "zr": "shown",
+    "zc": "shown",
+    "zl": "shown",
+    "zres": "shown"
+   }
+  },
+  {
+   "title": "Durnford falls back to a donga",
+   "text": "Durnford's men met part of the Zulu centre, retreated to a donga on the British right flank and formed a defensive line there. The rocket battery fell behind, fired three rockets and was overrun.",
+   "quote": "Durnford's men, upon meeting elements of the Zulu centre, had retreated to a donga",
+   "at": {
+    "zc": [
+     52,
+     26,
+     180
+    ],
+    "dur": [
+     84,
+     36,
+     0
+    ]
+   },
+   "how": {
+    "dur": "retreat"
+   },
+   "hits": [
+    [
+     "zc",
+     "dur"
+    ],
+    [
+     "zc",
+     "rocket"
+    ]
+   ],
+   "state": {
+    "rocket": "destroyed"
+   }
+  },
+  {
+   "title": "Volleys pin the centre while the left horn swings out",
+   "text": "For an hour or so the British volleys and the artillery held the Zulu centre. Meanwhile the left horn moved to outflank and envelop the British right.",
+   "quote": "the left horn of the Zulu advance was moving to outflank and envelop the British right",
+   "at": {
+    "b24": [
+     46,
+     38,
+     0
+    ],
+    "gco": [
+     57,
+     38,
+     0
+    ],
+    "zl": [
+     88,
+     24,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "b24",
+     "zc"
+    ],
+    [
+     "guns",
+     "zc",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "Durnford's withdrawal exposes the British flank",
+   "text": "Durnford's men, who had fought the longest, began to withdraw. This exposed the right flank of the regulars, and G Company was overrun. Pulleine ordered the rest back to the camp, and they fell back fighting.",
+   "quote": "Durnford's retreat, however, exposed the flank of G Company, 2nd/24th, which was overrun relatively quickly.",
+   "at": {
+    "dur": [
+     78,
+     46,
+     0
+    ],
+    "b24": [
+     44,
+     50,
+     0
+    ],
+    "zl": [
+     62,
+     30,
+     180
+    ],
+    "zc": [
+     48,
+     34,
+     180
+    ],
+    "zr": [
+     26,
+     38,
+     180
+    ]
+   },
+   "how": {
+    "dur": "retreat",
+    "b24": "retreat"
+   },
+   "hits": [
+    [
+     "zl",
+     "gco"
+    ],
+    [
+     "zl",
+     "dur"
+    ]
+   ],
+   "state": {
+    "gco": "destroyed"
+   }
+  },
+  {
+   "title": "The Zulu close in on the camp",
+   "text": "The Zulu pressed into the camp and fought hand to hand. Evidence shows large groups of bodies around the camp, and the slaughter was complete in the area around it.",
+   "quote": "the slaughter was complete in the area around the camp",
+   "at": {
+    "zc": [
+     46,
+     42,
+     180
+    ],
+    "zr": [
+     28,
+     46,
+     180
+    ],
+    "zl": [
+     90,
+     58,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "zc",
+     "b24"
+    ],
+    [
+     "zr",
+     "camp"
+    ],
+    [
+     "zl",
+     "dur"
+    ],
+    [
+     "zc",
+     "guns",
+     0.2
+    ]
+   ],
+   "state": {
+    "b24": "destroyed",
+    "camp": "destroyed",
+    "dur": "destroyed",
+    "guns": "destroyed"
+   }
+  }
+ ]
+}

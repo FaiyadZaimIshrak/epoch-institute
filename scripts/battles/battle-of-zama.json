@@ -1,0 +1,507 @@
+{
+ "slug": "battle-of-zama",
+ "name": "Battle of Zama",
+ "article": "battles2/wp/battle-of-zama",
+ "field": {
+  "north": null
+ },
+ "note": "The accounts give no directions, so the Romans are drawn on the left facing right. The accounts give no ground for the fight beyond a flat area, so none is drawn. The Roman velites stood in avenues between the maniples; they are drawn as one small block in front of the hastati, as the accounts do not say exactly where they stood. The Carthaginian light infantry and the 6,000 Numidian infantry on the Roman side are not drawn: the accounts do not say where the second stood, and the first screened the elephants. The Roman heavy infantry are drawn as hastati, principes and triarii, without the allied legions on each side. Which of the principes and triarii went to which side when the single line formed is not stated; they are drawn one to each side. Before the last fight the survivors of the Carthaginian first and second lines are drawn extending the line of the third. Polybius is the main source for the battle; the later accounts of Livy and Appian differ from it and are not followed.",
+ "sides": [
+  {
+   "id": "r",
+   "name": "Romans and Numidian allies"
+  },
+  {
+   "id": "c",
+   "name": "Carthaginians"
+  }
+ ],
+ "units": [
+  {
+   "id": "rlael",
+   "side": "r",
+   "k": "cavalry",
+   "name": "Roman and allied cavalry",
+   "short": "Laelius",
+   "leader": "Laelius",
+   "w": 8,
+   "quote": "Laelius led 1,500 Roman and allied cavalry positioned on the left.",
+   "leaderEntry": "gaius-laelius"
+  },
+  {
+   "id": "rmas",
+   "side": "r",
+   "k": "cavalry",
+   "name": "Masinissa's Numidian cavalry",
+   "short": "Masinissa",
+   "leader": "Masinissa",
+   "w": 10,
+   "quote": "Masinissa's 4,000 Numidian cavalry were on the right of the infantry.",
+   "leaderEntry": "masinissa"
+  },
+  {
+   "id": "rhast",
+   "side": "r",
+   "k": "infantry",
+   "name": "Roman hastati",
+   "short": "Hastati",
+   "w": 10,
+   "quote": "As usual, the hastati formed the front rank with the principes and then the triarii behind them."
+  },
+  {
+   "id": "rprin",
+   "side": "r",
+   "k": "infantry",
+   "name": "Roman principes",
+   "short": "Principes",
+   "w": 8,
+   "quote": "Scipio arranged a principes maniple directly behind each maniple of hastati."
+  },
+  {
+   "id": "rtri",
+   "side": "r",
+   "k": "spears",
+   "name": "Roman triarii",
+   "short": "Triarii",
+   "w": 6,
+   "quote": "As usual, the hastati formed the front rank with the principes and then the triarii behind them."
+  },
+  {
+   "id": "rvel",
+   "side": "r",
+   "k": "light",
+   "name": "Roman velites",
+   "short": "Velites",
+   "w": 6,
+   "quote": "This left broad avenues through the Roman lines, which were occupied by the Roman light infantry, the velites."
+  },
+  {
+   "id": "ccav",
+   "side": "c",
+   "k": "cavalry",
+   "name": "Numidian cavalry, left wing",
+   "short": "Numidians",
+   "w": 8,
+   "quote": "Hannibal placed the Numidians among them on his left flank, facing Masinissa's Numidians"
+  },
+  {
+   "id": "cafr",
+   "side": "c",
+   "k": "cavalry",
+   "name": "African cavalry, right wing",
+   "short": "Af. horse",
+   "w": 8,
+   "quote": "and the other African cavalry on the right."
+  },
+  {
+   "id": "cele",
+   "side": "c",
+   "k": "elephants",
+   "name": "War elephants",
+   "short": "Elephants",
+   "w": 12,
+   "quote": "In front of these infantry were the 80 war elephants, evenly spaced along the line"
+  },
+  {
+   "id": "cl1",
+   "side": "c",
+   "k": "infantry",
+   "name": "Carthaginian first line",
+   "short": "1st line",
+   "w": 10,
+   "quote": "Its first line was made up largely of veterans of Mago's failed expedition to northern Italy."
+  },
+  {
+   "id": "cl2",
+   "side": "c",
+   "k": "spears",
+   "name": "Carthaginian second line",
+   "short": "2nd line",
+   "w": 10,
+   "quote": "Carthaginians and other Africans made up the second line."
+  },
+  {
+   "id": "cl3",
+   "side": "c",
+   "k": "guard",
+   "name": "Hannibal's veterans from Italy",
+   "short": "Veterans",
+   "leader": "Hannibal",
+   "w": 12,
+   "quote": "About 200 metres (700 ft) behind the Carthaginian second line were the infantry Hannibal had brought back from Italy.",
+   "leaderEntry": "hannibal"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The armies draw up facing each other",
+   "text": "The Romans put their heavy infantry in the centre in three ranks, with Laelius's cavalry on the left and Masinissa's Numidians on the right. Hannibal set elephants before two lines of infantry, a third line well behind them, and cavalry on each flank.",
+   "quote": "The Roman army formed up with the heavy infantry of its two Roman legions in the centre and with allied legions on each side of them.",
+   "at": {
+    "rlael": [
+     38,
+     12,
+     90
+    ],
+    "rmas": [
+     38,
+     50,
+     90
+    ],
+    "rhast": [
+     38,
+     31,
+     90
+    ],
+    "rprin": [
+     28,
+     31,
+     90
+    ],
+    "rtri": [
+     18,
+     31,
+     90
+    ],
+    "rvel": [
+     43,
+     21,
+     90
+    ],
+    "ccav": [
+     58,
+     50,
+     270
+    ],
+    "cafr": [
+     58,
+     12,
+     270
+    ],
+    "cele": [
+     54,
+     31,
+     270
+    ],
+    "cl1": [
+     66,
+     31,
+     270
+    ],
+    "cl2": [
+     76,
+     31,
+     270
+    ],
+    "cl3": [
+     92,
+     31,
+     270
+    ]
+   }
+  },
+  {
+   "title": "The elephants charge with two lines behind them",
+   "text": "The Numidian horsemen on each side skirmished with javelins, then Hannibal sent in the elephants and moved his first two infantry lines forward in support. His third line stayed where it stood.",
+   "quote": "Hannibal then ordered a charge against the Roman infantry by his 80 elephants, with the whole of his first two lines moving forward in support.",
+   "at": {
+    "cele": [
+     49,
+     31,
+     270
+    ],
+    "cl1": [
+     61,
+     31,
+     270
+    ],
+    "cl2": [
+     71,
+     31,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "cele",
+     "rhast"
+    ],
+    [
+     "ccav",
+     "rmas"
+    ],
+    [
+     "rmas",
+     "ccav",
+     0.3
+    ]
+   ]
+  },
+  {
+   "title": "The elephants are turned and the cavalry driven off",
+   "text": "The velites threw javelins at the elephants and the legions sounded their bugles. Many elephants bolted into the Roman gaps and some back through the Carthaginian cavalry. Masinissa and Laelius charged the disordered horse and chased it away.",
+   "quote": "The Carthaginian cavalry were swept from the field and the Roman cavalry closely pursued them.",
+   "at": {
+    "cele": [
+     46,
+     37,
+     270
+    ],
+    "rvel": [
+     48,
+     28,
+     90
+    ],
+    "rmas": [
+     62,
+     50,
+     90
+    ],
+    "rlael": [
+     58,
+     14,
+     90
+    ],
+    "ccav": [
+     78,
+     54,
+     90
+    ],
+    "cafr": [
+     78,
+     8,
+     90
+    ]
+   },
+   "how": {
+    "cele": "rout",
+    "ccav": "rout",
+    "cafr": "rout"
+   },
+   "state": {
+    "cele": "routed",
+    "ccav": "routed",
+    "cafr": "routed"
+   },
+   "hits": [
+    [
+     "rvel",
+     "cele"
+    ],
+    [
+     "rmas",
+     "ccav"
+    ],
+    [
+     "rlael",
+     "cafr"
+    ]
+   ]
+  },
+  {
+   "title": "The first lines of infantry clash",
+   "text": "With elephants and cavalry gone from the field, all three Roman ranks and the first two Carthaginian lines advanced. The hastati took heavy losses, but the Carthaginian front line broke and fled round the flanks of the second.",
+   "quote": "The two front ranks charged enthusiastically and violently into each other and commenced a hard-fought, close-quarter, hand-to-hand combat.",
+   "at": {
+    "rhast": [
+     47,
+     31,
+     90
+    ],
+    "rprin": [
+     37,
+     31,
+     90
+    ],
+    "rtri": [
+     27,
+     31,
+     90
+    ],
+    "cl1": [
+     57,
+     31,
+     270
+    ],
+    "cl2": [
+     67,
+     31,
+     270
+    ],
+    "rmas": [
+     92,
+     54,
+     90
+    ],
+    "rlael": [
+     92,
+     8,
+     90
+    ]
+   },
+   "state": {
+    "cele": "gone",
+    "rvel": "gone",
+    "ccav": "gone",
+    "cafr": "gone",
+    "cl1": "routed",
+    "rmas": "hidden",
+    "rlael": "hidden"
+   },
+   "how": {
+    "cl1": "rout"
+   },
+   "hits": [
+    [
+     "rhast",
+     "cl1"
+    ],
+    [
+     "cl1",
+     "rhast",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The second line pushes the Romans back",
+   "text": "The Carthaginian second line fought fiercely and drove the hastati back in disorder. The Romans committed the principes, and the second line then fled, with the hastati pursuing it. The Carthaginian third line did not move.",
+   "quote": "The Romans were forced to commit their second line, the principes, to the fight.",
+   "at": {
+    "rhast": [
+     57,
+     31,
+     90
+    ],
+    "rprin": [
+     47,
+     31,
+     90
+    ],
+    "cl2": [
+     66,
+     31,
+     270
+    ],
+    "cl1": [
+     64,
+     15,
+     270
+    ]
+   },
+   "how": {
+    "cl2": "rout"
+   },
+   "state": {
+    "cl2": "routed"
+   },
+   "hits": [
+    [
+     "cl2",
+     "rhast"
+    ],
+    [
+     "rprin",
+     "cl2"
+    ],
+    [
+     "rhast",
+     "cl2",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "Both sides re-form into single long lines",
+   "text": "The Romans recalled the hastati and formed one line, with the principes and triarii at the sides. The Carthaginians rallied survivors of their first two lines to lengthen the veterans' line, so it outflanked the Romans.",
+   "quote": "The hastati formed up in the centre and the principes and triarii moved to each side to make a single, longer line.",
+   "at": {
+    "rhast": [
+     52,
+     31,
+     90
+    ],
+    "rprin": [
+     52,
+     21,
+     90
+    ],
+    "rtri": [
+     52,
+     41,
+     90
+    ],
+    "cl3": [
+     66,
+     31,
+     270
+    ],
+    "cl1": [
+     66,
+     19,
+     270
+    ],
+    "cl2": [
+     66,
+     43,
+     270
+    ]
+   },
+   "state": {
+    "cl1": "shown",
+    "cl2": "shown"
+   }
+  },
+  {
+   "title": "The Roman cavalry returns and takes the line in the rear",
+   "text": "The two lines charged each other and neither gained the advantage. Masinissa's and Laelius's cavalry then came back and charged the Carthaginian line from behind. Its line collapsed.",
+   "quote": "The cavalry commanded by Masinissa and Laelius then returned to the battlefield, apparently at more or less the same time.",
+   "at": {
+    "rlael": [
+     80,
+     20,
+     270
+    ],
+    "rmas": [
+     80,
+     42,
+     270
+    ]
+   },
+   "state": {
+    "rlael": "shown",
+    "rmas": "shown",
+    "cl1": "routed",
+    "cl2": "routed",
+    "cl3": "routed"
+   },
+   "hits": [
+    [
+     "rhast",
+     "cl3"
+    ],
+    [
+     "rprin",
+     "cl1"
+    ],
+    [
+     "rtri",
+     "cl2"
+    ],
+    [
+     "rlael",
+     "cl1"
+    ],
+    [
+     "rmas",
+     "cl2"
+    ],
+    [
+     "rlael",
+     "cl3",
+     0.2
+    ]
+   ]
+  }
+ ]
+}

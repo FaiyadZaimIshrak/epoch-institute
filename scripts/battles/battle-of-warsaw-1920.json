@@ -1,0 +1,470 @@
+{
+ "slug": "battle-of-warsaw-1920",
+ "name": "Battle of Warsaw (1920)",
+ "article": "battles2/wp/battle-of-warsaw-1920",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "to Białystok →",
+    "at": [
+     92,
+     5
+    ]
+   },
+   {
+    "name": "to Lwów ↓",
+    "at": [
+     82,
+     59
+    ]
+   },
+   {
+    "name": "← East Prussia",
+    "at": [
+     8,
+     4
+    ]
+   }
+  ]
+ },
+ "note": "This plan shows the whole operation of about two weeks, not a single field: each block is an army, corps or division, and distances are schematic. The Wieprz is drawn much nearer Warsaw than it lay, and the accounts do not say where the Polish 1st Legions Division stood when it began its march, so it first appears near Białystok.",
+ "terrain": [
+  {
+   "k": "river",
+   "name": "Vistula",
+   "at": [
+    [
+     45,
+     58
+    ],
+    [
+     44,
+     46
+    ],
+    [
+     41,
+     34
+    ],
+    [
+     36,
+     28
+    ],
+    [
+     32,
+     23
+    ],
+    [
+     24,
+     18
+    ],
+    [
+     12,
+     11
+    ]
+   ],
+   "lab": [
+    50,
+    41
+   ],
+   "quote": "withdraw across the Vistula River and defend the bridgeheads at Warsaw"
+  },
+  {
+   "k": "river",
+   "name": "Wieprz",
+   "at": [
+    [
+     90,
+     47
+    ],
+    [
+     78,
+     48
+    ],
+    [
+     64,
+     50
+    ],
+    [
+     52,
+     53
+    ],
+    [
+     44,
+     56
+    ]
+   ],
+   "lab": [
+    86,
+    45
+   ],
+   "quote": "the Wieprz River, a tributary of the Vistula southeast of Warsaw"
+  },
+  {
+   "k": "town",
+   "name": "Warsaw",
+   "at": [
+    41,
+    34
+   ],
+   "lab": [
+    33,
+    40
+   ],
+   "quote": "approached the Polish capital of Warsaw and the nearby Modlin Fortress"
+  },
+  {
+   "k": "fort",
+   "name": "Modlin",
+   "at": [
+    32,
+    23
+   ],
+   "lab": [
+    28,
+    25
+   ],
+   "quote": "approached the Polish capital of Warsaw and the nearby Modlin Fortress"
+  },
+  {
+   "k": "village",
+   "name": "Radzymin",
+   "at": [
+    53,
+    32
+   ],
+   "lab": [
+    53,
+    29
+   ],
+   "quote": "at the town of Radzymin (only 23 kilometres east of the city)"
+  }
+ ],
+ "sides": [
+  {
+   "id": "p",
+   "name": "Poland"
+  },
+  {
+   "id": "s",
+   "name": "Soviet Western Front and Southwestern Front"
+  }
+ ],
+ "units": [
+  {
+   "id": "p5",
+   "side": "p",
+   "k": "infantry",
+   "name": "Polish 5th Army",
+   "short": "5th Army",
+   "leader": "Sikorski",
+   "w": 10,
+   "quote": "would defend the northern area near the Modlin Fortress"
+  },
+  {
+   "id": "p1",
+   "side": "p",
+   "k": "infantry",
+   "name": "Polish 1st Army",
+   "short": "1st Army",
+   "leader": "Latinik",
+   "w": 10,
+   "quote": "General Franciszek Latinik's 1st Army would defend Warsaw itself"
+  },
+  {
+   "id": "p2",
+   "side": "p",
+   "k": "infantry",
+   "name": "Polish 2nd Army",
+   "short": "2nd Army",
+   "leader": "Roja",
+   "w": 10,
+   "quote": "General Bolesław Roja's 2nd Army was to hold the Vistula River line from Góra Kalwaria to Dęblin"
+  },
+  {
+   "id": "ag",
+   "side": "p",
+   "k": "infantry",
+   "name": "Polish Assault Group",
+   "short": "Assault",
+   "leader": "Piłsudski",
+   "w": 12,
+   "quote": "composed of the most elite Polish units from the southern front",
+   "leaderEntry": "jozef-pilsudski"
+  },
+  {
+   "id": "leg",
+   "side": "p",
+   "k": "infantry",
+   "name": "Polish 1st Legions Division",
+   "short": "1st Leg.",
+   "w": 5,
+   "quote": "The Polish 1st Legions Infantry Division, in order to cut the enemy's retreat"
+  },
+  {
+   "id": "s15",
+   "side": "s",
+   "k": "infantry",
+   "name": "Soviet 3rd and 15th Armies",
+   "short": "3rd/15th",
+   "w": 10,
+   "quote": "the 15th and 3rd Armies were approaching Modlin Fortress"
+  },
+  {
+   "id": "s4",
+   "side": "s",
+   "k": "infantry",
+   "name": "Soviet 4th Army",
+   "short": "4th Army",
+   "leader": "Shuvayev",
+   "w": 8,
+   "quote": "Cavalry Corps, together with the 4th Army, crossed the Wkra River"
+  },
+  {
+   "id": "bz",
+   "side": "s",
+   "k": "cavalry",
+   "name": "Soviet 3rd Cavalry Corps",
+   "short": "Cav Corps",
+   "leader": "Bzhishkyan",
+   "w": 8,
+   "quote": "Gayk Bzhishkyan's Cavalry Corps, together with the 4th Army, crossed the Wkra River"
+  },
+  {
+   "id": "s16",
+   "side": "s",
+   "k": "infantry",
+   "name": "Soviet 16th Army",
+   "short": "16th Army",
+   "w": 10,
+   "quote": "the 16th Army moved towards Warsaw"
+  },
+  {
+   "id": "mz",
+   "side": "s",
+   "k": "infantry",
+   "name": "Soviet Mazyr Group",
+   "short": "Mazyr",
+   "w": 8,
+   "quote": "had been reduced to only one or two divisions covering a 150-kilometre front line"
+  },
+  {
+   "id": "bu",
+   "side": "s",
+   "k": "cavalry",
+   "name": "Soviet 1st Cavalry Army",
+   "short": "1st Cav.",
+   "leader": "Budyonny",
+   "w": 8,
+   "quote": "Budyonny, commanding the 1st Cavalry Army, a unit much feared by Piłsudski and other Polish commanders"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The Red Army's final assault on Warsaw",
+   "when": "12 August 1920",
+   "text": "The Soviet 16th Army attacked at Radzymin, east of Warsaw, while the 3rd and 15th Armies came up to Modlin. The Polish 5th Army had to face three Soviet armies at once.",
+   "quote": "The final Russian assault on Warsaw began on August 12.",
+   "at": {
+    "p5": [
+     34,
+     14,
+     90
+    ],
+    "p1": [
+     47,
+     34,
+     90
+    ],
+    "p2": [
+     49,
+     48,
+     90
+    ],
+    "ag": [
+     72,
+     53,
+     0
+    ],
+    "s15": [
+     48,
+     12,
+     270
+    ],
+    "s4": [
+     22,
+     9,
+     270
+    ],
+    "bz": [
+     14,
+     20,
+     270
+    ],
+    "s16": [
+     64,
+     32,
+     270
+    ],
+    "mz": [
+     84,
+     38,
+     270
+    ],
+    "bu": [
+     92,
+     24,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "s16",
+     "p1"
+    ],
+    [
+     "s15",
+     "p5"
+    ]
+   ]
+  },
+  {
+   "title": "Budyonny's army marches on Lwów, not Warsaw",
+   "text": "The Soviet High Command ordered the 1st Cavalry Army to advance on Warsaw from the south. It marched on Lwów instead and missed the battle, leaving only a weak Mazyr Group on the southern flank.",
+   "quote": "Ultimately, Budyonny's forces marched on Lwów instead of Warsaw, and thus missed the battle.",
+   "at": {
+    "bu": [
+     90,
+     52,
+     180
+    ]
+   }
+  },
+  {
+   "title": "The Polish 5th Army counterattacks in the north",
+   "when": "14 to 15 August 1920",
+   "text": "The 5th Army crossed the Wkra and fought the Soviet 3rd and 15th Armies at Nasielsk. The Soviet advance towards Warsaw and Modlin was halted at the end of 15 August.",
+   "quote": "The Polish 5th Army counterattacked on 14 August, crossing the Wkra River.",
+   "at": {
+    "p5": [
+     40,
+     13,
+     90
+    ],
+    "s15": [
+     53,
+     12,
+     270
+    ]
+   },
+   "how": {
+    "s15": "retreat"
+   },
+   "hits": [
+    [
+     "p5",
+     "s15"
+    ]
+   ]
+  },
+  {
+   "title": "The Assault Group breaks through the Mazyr Group",
+   "when": "16 August 1920",
+   "text": "Piłsudski's Assault Group marched north from the Wieprz and met almost no opposition. It routed the Mazyr Group and cut the supply lines of the Soviet 16th Army.",
+   "quote": "On 16 August, the Polish Assault Group commanded by Piłsudski began its march north from the Wieprz River.",
+   "at": {
+    "ag": [
+     74,
+     41,
+     0
+    ],
+    "mz": [
+     92,
+     31,
+     90
+    ]
+   },
+   "how": {
+    "mz": "rout"
+   },
+   "state": {
+    "mz": "routed"
+   },
+   "hits": [
+    [
+     "ag",
+     "mz"
+    ]
+   ]
+  },
+  {
+   "title": "The Soviet 16th Army is cut off near Białystok",
+   "when": "18 August 1920",
+   "text": "Tukhachevsky ordered a retreat, but his orders came too late or not at all. The Polish 1st Legions Division made a forced march and cut off the 16th Army, and most of its troops surrendered.",
+   "quote": "The division's rapid advance allowed it to intercept the 16th Soviet Army, cutting it off from reinforcements near Białystok and forcing most of its troops to surrender.",
+   "at": {
+    "s16": [
+     74,
+     22,
+     90
+    ],
+    "leg": [
+     86,
+     16,
+     270
+    ]
+   },
+   "how": {
+    "s16": "retreat"
+   },
+   "hits": [
+    [
+     "leg",
+     "s16"
+    ]
+   ]
+  },
+  {
+   "title": "The northern Soviet armies join the general rout",
+   "when": "19 to 21 August 1920",
+   "text": "The 15th Army, which had tried to cover the retreat of the 4th Army, was defeated twice and joined the rout. By 21 August all organised Soviet resistance had ceased.",
+   "quote": "However, it was defeated twice on 19 and 20 August and joined the general rout of the Red Army's North-Western Front.",
+   "at": {
+    "p5": [
+     44,
+     13,
+     90
+    ],
+    "s15": [
+     62,
+     10,
+     90
+    ],
+    "s4": [
+     13,
+     11,
+     270
+    ],
+    "bz": [
+     8,
+     22,
+     270
+    ]
+   },
+   "how": {
+    "s15": "rout",
+    "s4": "retreat",
+    "bz": "retreat"
+   },
+   "state": {
+    "s15": "routed"
+   },
+   "hits": [
+    [
+     "p5",
+     "s15"
+    ]
+   ]
+  }
+ ]
+}

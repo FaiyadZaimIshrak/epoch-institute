@@ -1,0 +1,428 @@
+{
+ "slug": "battle-of-manzikert",
+ "name": "Battle of Manzikert",
+ "article": "battles2/wp/battle-of-manzikert",
+ "field": {
+  "north": null,
+  "edges": []
+ },
+ "note": "The accounts do not give compass directions, so the Byzantines are drawn on the left and the Seljuks on the right. The hills where the Seljuks had hidden the night before are placed behind their line, and the two camps are placed by judgement; the accounts do not say exactly where they lay. The Seljuk wings are drawn as an upper and a lower horn of the crescent. The accounts differ on whether the Armenians fled first or stood to the end.",
+ "terrain": [
+  {
+   "k": "town",
+   "name": "Manzikert",
+   "at": [
+    10,
+    12
+   ],
+   "quote": "continued to Manzikert, which he easily captured on 23 August"
+  },
+  {
+   "k": "hill",
+   "name": "Hills",
+   "unnamed": true,
+   "at": [
+    [
+     84,
+     38
+    ],
+    [
+     92,
+     36
+    ],
+    [
+     98,
+     42
+    ],
+    [
+     98,
+     56
+    ],
+    [
+     88,
+     58
+    ],
+    [
+     82,
+     50
+    ]
+   ],
+   "lab": [
+    90,
+    54
+   ],
+   "quote": "The Seljuk forces hid among the nearby hills for the night"
+  }
+ ],
+ "sides": [
+  {
+   "id": "b",
+   "name": "Byzantine Empire"
+  },
+  {
+   "id": "s",
+   "name": "Seljuk Empire"
+  }
+ ],
+ "units": [
+  {
+   "id": "bl",
+   "side": "b",
+   "k": "infantry",
+   "name": "Byzantine left wing",
+   "short": "Left",
+   "leader": "Bryennios",
+   "w": 10,
+   "quote": "the left wing under Bryennios, the right wing under Theodore Alyates"
+  },
+  {
+   "id": "bc",
+   "side": "b",
+   "k": "guard",
+   "name": "Byzantine centre",
+   "short": "Centre",
+   "leader": "Romanos",
+   "w": 12,
+   "quote": "the centre under the emperor",
+   "leaderEntry": "romanos-iv-diogenes"
+  },
+  {
+   "id": "br",
+   "side": "b",
+   "k": "infantry",
+   "name": "Byzantine right wing",
+   "short": "Right",
+   "leader": "Theodore Alyates",
+   "w": 10,
+   "quote": "the left wing under Bryennios, the right wing under Theodore Alyates"
+  },
+  {
+   "id": "bres",
+   "side": "b",
+   "k": "infantry",
+   "name": "Byzantine reserve",
+   "short": "Reserve",
+   "leader": "Andronikos Doukas",
+   "w": 8,
+   "quote": "Andronikos Doukas led the reserve forces in the rear"
+  },
+  {
+   "id": "bcamp",
+   "side": "b",
+   "k": "camp",
+   "name": "Byzantine camp",
+   "short": "Camp",
+   "quote": "marched directly back to the Byzantine camp outside Manzikert"
+  },
+  {
+   "id": "sc",
+   "side": "s",
+   "k": "horse-archers",
+   "name": "Seljuk crescent centre",
+   "short": "Centre",
+   "w": 12,
+   "quote": "the centre of their crescent continually moved backwards while the wings moved to surround the Byzantine troops"
+  },
+  {
+   "id": "sn",
+   "side": "s",
+   "k": "horse-archers",
+   "name": "Seljuk upper wing",
+   "short": "Up wing",
+   "w": 9,
+   "quote": "the centre of their crescent continually moved backwards while the wings moved to surround the Byzantine troops"
+  },
+  {
+   "id": "ss",
+   "side": "s",
+   "k": "horse-archers",
+   "name": "Seljuk lower wing",
+   "short": "Low wing",
+   "w": 9,
+   "quote": "the centre of their crescent continually moved backwards while the wings moved to surround the Byzantine troops"
+  },
+  {
+   "id": "scamp",
+   "side": "s",
+   "k": "camp",
+   "name": "Alp Arslan's camp",
+   "short": "Camp",
+   "quote": "captured Alp Arslan's camp by the end of the afternoon"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The Byzantines form up and march out",
+   "when": "26 August 1071",
+   "text": "The Byzantine army gathered into battle formation and marched on the Seljuk positions, with Bryennios on the left, Theodore Alyates on the right and the emperor in the centre. Andronikos Doukas held the reserve in the rear, and the Seljuks stood in a crescent about four kilometres away.",
+   "quote": "the Byzantine army gathered itself into a proper battle formation and began to march on the Seljuk positions, with the left wing under Bryennios, the right wing under Theodore Alyates, and the centre under the emperor.",
+   "at": {
+    "bl": [
+     30,
+     15,
+     90
+    ],
+    "bc": [
+     30,
+     31,
+     90
+    ],
+    "br": [
+     30,
+     47,
+     90
+    ],
+    "bres": [
+     16,
+     31,
+     90
+    ],
+    "bcamp": [
+     8,
+     52,
+     90
+    ],
+    "sc": [
+     72,
+     31,
+     270
+    ],
+    "sn": [
+     68,
+     15,
+     270
+    ],
+    "ss": [
+     68,
+     47,
+     270
+    ],
+    "scamp": [
+     93,
+     10,
+     270
+    ]
+   }
+  },
+  {
+   "title": "Horse archers draw the crescent round them",
+   "text": "Seljuk horse archers shot at the Byzantines as they drew closer. The centre of the crescent kept falling back while the wings moved round to surround the advancing troops.",
+   "quote": "Seljuk horse archers attacked the Byzantines as they drew closer; the centre of their crescent continually moved backwards while the wings moved to surround the Byzantine troops.",
+   "at": {
+    "bl": [
+     40,
+     15,
+     90
+    ],
+    "bc": [
+     40,
+     31,
+     90
+    ],
+    "br": [
+     40,
+     47,
+     90
+    ],
+    "sc": [
+     78,
+     31,
+     270
+    ],
+    "sn": [
+     54,
+     20,
+     225
+    ],
+    "ss": [
+     54,
+     42,
+     315
+    ]
+   },
+   "how": {
+    "sc": "retreat"
+   },
+   "hits": [
+    [
+     "sn",
+     "bl"
+    ],
+    [
+     "ss",
+     "br"
+    ]
+   ]
+  },
+  {
+   "title": "The Byzantines take the camp, but the wings fray",
+   "text": "The Byzantine centre pressed on despite the arrows and captured Alp Arslan's camp by the end of the afternoon. The wings, where the arrows did most damage, almost broke up as units tried to force a pitched battle, and the Seljuk cavalry simply disengaged when challenged.",
+   "quote": "The Byzantines pressed on despite the arrow attacks and captured Alp Arslan's camp by the end of the afternoon.",
+   "at": {
+    "bl": [
+     50,
+     15,
+     90
+    ],
+    "bc": [
+     82,
+     22,
+     90
+    ],
+    "br": [
+     50,
+     47,
+     90
+    ],
+    "sc": [
+     76,
+     44,
+     270
+    ],
+    "sn": [
+     64,
+     6,
+     270
+    ],
+    "ss": [
+     64,
+     56,
+     270
+    ]
+   },
+   "how": {
+    "sn": "retreat",
+    "ss": "retreat",
+    "sc": "retreat"
+   },
+   "state": {
+    "scamp": "destroyed"
+   },
+   "hits": [
+    [
+     "bc",
+     "scamp"
+    ],
+    [
+     "bl",
+     "sn"
+    ],
+    [
+     "br",
+     "ss"
+    ]
+   ]
+  },
+  {
+   "title": "The withdrawal is ordered and misunderstood",
+   "when": "By nightfall",
+   "text": "With the Seljuks avoiding battle, Romanos ordered a withdrawal. The right wing misunderstood the order, and Doukas ignored it and marched his reserve straight back to the camp outside Manzikert instead of covering the retreat.",
+   "quote": "With the Seljuks avoiding battle, Romanos was forced to order a withdrawal by nightfall. However, the right wing misunderstood the order, and Doukas deliberately ignored the emperor's order to cover the army's withdrawal and marched directly back to the Byzantine camp outside Manzikert.",
+   "at": {
+    "bc": [
+     56,
+     31,
+     270
+    ],
+    "bres": [
+     16,
+     44,
+     270
+    ]
+   },
+   "how": {
+    "bc": "retreat",
+    "bres": "retreat"
+   }
+  },
+  {
+   "title": "The Seljuks attack and the right wing breaks",
+   "text": "With the Byzantines confused, the Seljuks attacked. The right wing was almost at once routed, its men thinking they had been betrayed.",
+   "quote": "With the Byzantines thoroughly confused, the Seljuks seized the opportunity and attacked. The Byzantine right wing was almost immediately routed, thinking they were betrayed either by the Armenians or the army's Turkish auxiliaries.",
+   "at": {
+    "br": [
+     32,
+     54,
+     270
+    ],
+    "sc": [
+     64,
+     44,
+     270
+    ],
+    "ss": [
+     56,
+     55,
+     270
+    ]
+   },
+   "how": {
+    "br": "rout"
+   },
+   "state": {
+    "br": "routed"
+   },
+   "hits": [
+    [
+     "sc",
+     "br"
+    ],
+    [
+     "ss",
+     "br"
+    ]
+   ]
+  },
+  {
+   "title": "The left wing is routed and the centre encircled",
+   "text": "The left wing under Bryennios held out a little longer but was soon routed. The Seljuks encircled what remained of the centre, including the emperor and the Varangian Guard, and Romanos was wounded and taken prisoner.",
+   "quote": "The left wing under Bryennios held out a little longer but was also soon routed. The remnants of the Byzantine centre, including the emperor and the Varangian Guard, were encircled by the Seljuks. Romanos was wounded and taken prisoner by the Seljuks.",
+   "at": {
+    "bl": [
+     30,
+     11,
+     270
+    ],
+    "sc": [
+     66,
+     31,
+     270
+    ],
+    "sn": [
+     56,
+     20,
+     225
+    ],
+    "ss": [
+     56,
+     42,
+     315
+    ]
+   },
+   "how": {
+    "bl": "rout"
+   },
+   "state": {
+    "bl": "routed"
+   },
+   "hits": [
+    [
+     "sn",
+     "bl"
+    ],
+    [
+     "sc",
+     "bc"
+    ],
+    [
+     "sn",
+     "bc"
+    ],
+    [
+     "ss",
+     "bc"
+    ]
+   ]
+  }
+ ]
+}

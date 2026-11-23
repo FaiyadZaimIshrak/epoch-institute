@@ -1,0 +1,484 @@
+{
+ "slug": "battle-of-vienna-1683",
+ "name": "Battle of Vienna (1683)",
+ "article": "battles2/wp/battle-of-vienna-1683",
+ "field": {
+  "north": 0
+ },
+ "note": "The plan shows the day of 12 September 1683 on the ground north and west of the city. The relief army is drawn on the west and north because the accounts put the Poles to the west of the Türkenschanze, the Saxons and Bavarians to the northwest and the Austrians to the north, with the Ottoman main camp further south. The accounts give no map positions for the villages, the forest or the hills, so each is placed on the side the story needs; the accounts do not say exactly where they lay. Which wing of the Ottoman army lay where is not stated beyond the Ottoman right flank, which the Polish infantry attacked. Numbers of troops differ widely between sources and are not shown. Paths are drawn straight; the accounts give no routes.",
+ "terrain": [
+  {
+   "k": "hill",
+   "name": "Kahlenberg",
+   "at": [
+    [
+     3,
+     2
+    ],
+    [
+     22,
+     2
+    ],
+    [
+     25,
+     8
+    ],
+    [
+     15,
+     12
+    ],
+    [
+     4,
+     9
+    ]
+   ],
+   "lab": [
+    13,
+    5
+   ],
+   "quote": "signaled their arrival on the Kahlenberg above Vienna with bonfires"
+  },
+  {
+   "k": "wood",
+   "name": "nearby forest",
+   "unnamed": true,
+   "at": [
+    [
+     3,
+     15
+    ],
+    [
+     15,
+     15
+    ],
+    [
+     17,
+     27
+    ],
+    [
+     10,
+     31
+    ],
+    [
+     3,
+     27
+    ]
+   ],
+   "lab": [
+    9,
+    29
+   ],
+   "quote": "the Polish cavalry slowly emerged from a nearby forest"
+  },
+  {
+   "k": "village",
+   "name": "Nussdorf",
+   "at": [
+    46,
+    6
+   ],
+   "quote": "took several key positions, in particular the fortified villages of Nussdorf and Heiligenstadt"
+  },
+  {
+   "k": "village",
+   "name": "Heiligenstadt",
+   "at": [
+    36,
+    4
+   ],
+   "lab": [
+    31,
+    4
+   ],
+   "quote": "took several key positions, in particular the fortified villages of Nussdorf and Heiligenstadt"
+  },
+  {
+   "k": "village",
+   "name": "Gersthof",
+   "at": [
+    30,
+    38
+   ],
+   "quote": "By 4:00 pm the Poles had captured the village of Gersthof"
+  },
+  {
+   "k": "village",
+   "name": "Unterdöbling",
+   "at": [
+    50,
+    12
+   ],
+   "quote": "taken the villages of Unterdöbling and Oberdöbling"
+  },
+  {
+   "k": "village",
+   "name": "Oberdöbling",
+   "at": [
+    42,
+    16
+   ],
+   "lab": [
+    36,
+    16
+   ],
+   "quote": "taken the villages of Unterdöbling and Oberdöbling"
+  },
+  {
+   "k": "fort",
+   "name": "Türkenschanze",
+   "at": [
+    58,
+    25
+   ],
+   "lab": [
+    66,
+    25
+   ],
+   "quote": "Imperial forces closed in on the central Ottoman position"
+  },
+  {
+   "k": "town",
+   "name": "Vienna",
+   "at": [
+    86,
+    46
+   ],
+   "lab": [
+    86,
+    41
+   ],
+   "quote": "the remaining Viennese garrison sallied out of its defenses to join in the assault"
+  }
+ ],
+ "sides": [
+  {
+   "id": "a",
+   "name": "Imperial and Polish relief army"
+  },
+  {
+   "id": "o",
+   "name": "Ottoman army"
+  }
+ ],
+ "units": [
+  {
+   "id": "impl",
+   "side": "a",
+   "k": "infantry",
+   "name": "Imperial army, left",
+   "short": "Imp. left",
+   "leader": "Charles of Lorraine",
+   "w": 10,
+   "quote": "Charles of Lorraine moved forward with the imperial army on the left"
+  },
+  {
+   "id": "impc",
+   "side": "a",
+   "k": "infantry",
+   "name": "Other imperial forces, centre",
+   "short": "Imp. ctr",
+   "w": 12,
+   "quote": "other imperial forces in the center"
+  },
+  {
+   "id": "pinf",
+   "side": "a",
+   "k": "infantry",
+   "name": "Polish infantry",
+   "short": "Pol. inf.",
+   "w": 10,
+   "quote": "the Polish infantry advanced on the Ottoman right flank"
+  },
+  {
+   "id": "pcav",
+   "side": "a",
+   "k": "cavalry",
+   "name": "Polish and imperial cavalry",
+   "short": "Cavalry",
+   "leader": "John III Sobieski",
+   "w": 12,
+   "quote": "the Polish king ordered the cavalry to attack in four contingents, three Polish groups and one from the Holy Roman Empire",
+   "leaderEntry": "jan-iii-sobieski"
+  },
+  {
+   "id": "hus",
+   "side": "a",
+   "k": "cavalry",
+   "name": "Hussars of the probing charge",
+   "short": "Hussars",
+   "w": 5,
+   "quote": "a detachment of 120 hussars engaged in a probing charge"
+  },
+  {
+   "id": "gar",
+   "side": "a",
+   "k": "infantry",
+   "name": "Viennese garrison",
+   "short": "Garrison",
+   "leader": "Starhemberg",
+   "w": 8,
+   "quote": "the remaining Viennese garrison sallied out of its defenses to join in the assault"
+  },
+  {
+   "id": "omain",
+   "side": "o",
+   "k": "infantry",
+   "name": "Ottoman main army",
+   "short": "Ottomans",
+   "leader": "Kara Mustafa Pasha",
+   "w": 12,
+   "quote": "Mustafa Pasha launched counterattacks with most of his forces",
+   "leaderEntry": "kara-mustafa-pasha"
+  },
+  {
+   "id": "oright",
+   "side": "o",
+   "k": "infantry",
+   "name": "Ottoman right flank",
+   "short": "Right",
+   "w": 9,
+   "quote": "the Polish infantry advanced on the Ottoman right flank"
+  },
+  {
+   "id": "oassault",
+   "side": "o",
+   "k": "guard",
+   "name": "Janissaries, Sipahis held back",
+   "short": "Elite",
+   "w": 9,
+   "quote": "held back some of the elite Janissary and Sipahi units for a simultaneous assault on the city"
+  },
+  {
+   "id": "ocamp",
+   "side": "o",
+   "k": "camp",
+   "name": "Ottoman main camp",
+   "short": "Camp",
+   "w": 8,
+   "quote": "retreated to his headquarters in the main camp further south"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The Ottoman army attacks before the allies are deployed",
+   "when": "4:00 am, 12 September",
+   "text": "The Ottoman army attacked early, seeking to disrupt the allied deployment. The imperial troops on the left and in the centre met the attack while the Polish troops were still coming into place.",
+   "quote": "At 4:00 am on 12 September, the Ottoman army attacked, seeking to interfere with the deployment of allied troops.",
+   "at": {
+    "impl": [
+     38,
+     11,
+     135
+    ],
+    "impc": [
+     27,
+     22,
+     110
+    ],
+    "pinf": [
+     14,
+     42,
+     90
+    ],
+    "pcav": [
+     9,
+     22,
+     90
+    ],
+    "gar": [
+     80,
+     52,
+     0
+    ],
+    "omain": [
+     53,
+     26,
+     270
+    ],
+    "oright": [
+     48,
+     40,
+     270
+    ],
+    "oassault": [
+     68,
+     38,
+     135
+    ],
+    "ocamp": [
+     60,
+     54,
+     0
+    ]
+   },
+   "state": {
+    "pcav": "hidden"
+   },
+   "hits": [
+    [
+     "omain",
+     "impl"
+    ]
+   ]
+  },
+  {
+   "title": "The imperial army counterattacks in the north",
+   "text": "The Germans were the first to counterattack. After heavy fighting and several Ottoman counterattacks, the imperial army took the fortified villages of Nussdorf and Heiligenstadt.",
+   "quote": "The Germans were the first to counterattack.",
+   "at": {
+    "impl": [
+     42,
+     11,
+     135
+    ],
+    "impc": [
+     31,
+     22,
+     110
+    ]
+   },
+   "hits": [
+    [
+     "impl",
+     "omain"
+    ]
+   ]
+  },
+  {
+   "title": "Polish infantry advances on the Ottoman right",
+   "when": "Early afternoon",
+   "text": "Polish infantry advanced against the Ottoman right flank. Parts of the Ottoman army kept attacking the city, which let the Poles move forward, and by 4:00 pm they held Gersthof.",
+   "quote": "In the early afternoon, a large engagement started on the other side of the battlefield as the Polish infantry advanced on the Ottoman right flank.",
+   "at": {
+    "pinf": [
+     24,
+     42,
+     90
+    ],
+    "oassault": [
+     74,
+     40,
+     135
+    ]
+   },
+   "hits": [
+    [
+     "pinf",
+     "oright"
+    ],
+    [
+     "oassault",
+     "gar"
+    ]
+   ]
+  },
+  {
+   "title": "The imperial left presses on to the Türkenschanze",
+   "when": "3:30 to 5:00 pm",
+   "text": "The Germans resumed the offensive on the left at 3:30 pm. They met fierce resistance at first, then advanced by 5:00 pm and took Unterdöbling and Oberdöbling, closing on the central Ottoman position.",
+   "quote": "However, by 5:00 pm they had begun to advance and taken the villages of Unterdöbling and Oberdöbling.",
+   "at": {
+    "impl": [
+     46,
+     16,
+     135
+    ],
+    "impc": [
+     38,
+     25,
+     110
+    ]
+   },
+   "hits": [
+    [
+     "impl",
+     "omain"
+    ],
+    [
+     "impc",
+     "omain"
+    ]
+   ]
+  },
+  {
+   "title": "Hussars probe the Ottoman line",
+   "when": "4:00 pm",
+   "text": "The Polish cavalry came out of the forest, and a detachment of 120 hussars made a probing charge that showed the Ottomans could be attacked, at the cost of many casualties. The vizier left the Türkenschanze for the main camp.",
+   "quote": "At 4:00 pm, a detachment of 120 hussars engaged in a probing charge, successfully proving Ottoman vulnerability to attack but taking many casualties.",
+   "at": {
+    "pcav": [
+     14,
+     22,
+     90
+    ],
+    "hus": [
+     26,
+     28,
+     90
+    ]
+   },
+   "state": {
+    "pcav": "shown",
+    "hus": "shown"
+   },
+   "hits": [
+    [
+     "hus",
+     "omain"
+    ]
+   ]
+  },
+  {
+   "title": "The cavalry charges down the hills",
+   "when": "About 6:00 pm",
+   "text": "The king ordered the cavalry to attack in four contingents. The charge broke the Ottoman lines, the Ottomans retreated, and the horsemen rode for the camps and headquarters while the Viennese garrison sallied out to join in.",
+   "quote": "The charge quickly broke the battle lines of the Ottomans, who were already exhausted and demoralized and began to retreat from the battlefield.",
+   "at": {
+    "pcav": [
+     40,
+     42,
+     90
+    ],
+    "omain": [
+     62,
+     42,
+     0
+    ],
+    "oright": [
+     48,
+     50,
+     0
+    ],
+    "gar": [
+     80,
+     45,
+     0
+    ]
+   },
+   "how": {
+    "omain": "rout",
+    "oright": "rout"
+   },
+   "state": {
+    "hus": "gone",
+    "omain": "routed",
+    "oright": "routed"
+   },
+   "hits": [
+    [
+     "pcav",
+     "omain"
+    ],
+    [
+     "pcav",
+     "ocamp",
+     0.2
+    ],
+    [
+     "gar",
+     "oassault"
+    ]
+   ]
+  }
+ ]
+}

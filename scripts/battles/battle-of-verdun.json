@@ -1,0 +1,476 @@
+{
+ "slug": "battle-of-verdun",
+ "name": "Battle of Verdun",
+ "article": "battles2/wp/battle-of-verdun",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "German lines ↑",
+    "at": [
+     88,
+     59
+    ]
+   }
+  ]
+ },
+ "note": "This plan shows the whole operation from 21 February to 5 November 1916, not a single field: each block is an army, a corps or a group of divisions, and the forts, wood and hill are the places the accounts name. The positions of the blocks on the plan are approximate, and north is taken to be up because the accounts place the Germans north of Verdun and the right (east) bank of the Meuse on the right. The Meuse and the town are placed by judgement. The French counter-offensive of 15 to 17 December is not drawn, and neither is the fighting on the west bank after March.",
+ "terrain": [
+  {
+   "k": "river",
+   "name": "Meuse",
+   "at": [
+    [
+     44,
+     4
+    ],
+    [
+     46,
+     20
+    ],
+    [
+     43,
+     38
+    ],
+    [
+     45,
+     52
+    ],
+    [
+     44,
+     58
+    ]
+   ],
+   "lab": [
+    41,
+    12
+   ],
+   "quote": "on the right (east) bank of the Meuse river"
+  },
+  {
+   "k": "town",
+   "name": "Verdun",
+   "at": [
+    45,
+    54
+   ],
+   "lab": [
+    38,
+    56
+   ],
+   "quote": "Verdun, on the Meuse river, had played an important role in the defence of the French hinterland"
+  },
+  {
+   "k": "fort",
+   "name": "Fort Douaumont",
+   "at": [
+    66,
+    32
+   ],
+   "lab": [
+    72,
+    33
+   ],
+   "quote": "Douaumont was the largest fort in the RFV"
+  },
+  {
+   "k": "fort",
+   "name": "Fort Vaux",
+   "at": [
+    76,
+    38
+   ],
+   "lab": [
+    84,
+    39
+   ],
+   "quote": "the top of Fort Vaux was occupied on 2 June"
+  },
+  {
+   "k": "fort",
+   "name": "Fort Souville",
+   "at": [
+    60,
+    54
+   ],
+   "lab": [
+    68,
+    55
+   ],
+   "quote": "Fort Souville dominated a crest 0.62 mi (1 km) south-east of Fleury"
+  },
+  {
+   "k": "hill",
+   "name": "Mort-Homme",
+   "at": [
+    [
+     24,
+     30
+    ],
+    [
+     30,
+     28
+    ],
+    [
+     36,
+     31
+    ],
+    [
+     36,
+     37
+    ],
+    [
+     30,
+     40
+    ],
+    [
+     24,
+     37
+    ]
+   ],
+   "lab": [
+    30,
+    41
+   ],
+   "quote": "Mort-Homme sheltered batteries of French field guns"
+  },
+  {
+   "k": "wood",
+   "name": "Bois des Caures",
+   "at": [
+    [
+     54,
+     12
+    ],
+    [
+     62,
+     11
+    ],
+    [
+     68,
+     13
+    ],
+    [
+     67,
+     17
+    ],
+    [
+     58,
+     18
+    ],
+    [
+     53,
+     16
+    ]
+   ],
+   "lab": [
+    74,
+    15
+   ],
+   "quote": "captured Bois des Caures at the edge of the village of Flabas"
+  }
+ ],
+ "sides": [
+  {
+   "id": "g",
+   "name": "German 5th Army"
+  },
+  {
+   "id": "f",
+   "name": "French Second Army and Fortified Region of Verdun"
+  }
+ ],
+ "units": [
+  {
+   "id": "geast",
+   "side": "g",
+   "k": "infantry",
+   "name": "German corps on the east bank",
+   "short": "East bank",
+   "w": 12,
+   "quote": "The III Corps, VII Corps and XVIII Corps attacked at 4:00 p.m."
+  },
+  {
+   "id": "gart",
+   "side": "g",
+   "k": "artillery",
+   "name": "German artillery",
+   "short": "Guns",
+   "w": 12,
+   "quote": "A total of 1,201 guns were massed on the Verdun front"
+  },
+  {
+   "id": "gwest",
+   "side": "g",
+   "k": "infantry",
+   "name": "German west bank attack group",
+   "short": "West bank",
+   "w": 10,
+   "quote": "The VI Reserve Corps was reinforced with the X Reserve Corps"
+  },
+  {
+   "id": "gparty",
+   "side": "g",
+   "k": "light",
+   "name": "German party at Douaumont",
+   "short": "Party",
+   "w": 5,
+   "quote": "The German party of c. 100 soldiers tried to signal to the artillery with flares"
+  },
+  {
+   "id": "gvaux",
+   "side": "g",
+   "k": "infantry",
+   "name": "German assault on Fort Vaux",
+   "short": "Vaux",
+   "w": 8,
+   "quote": "a final assault on 1 June by about 10,000 German troops"
+  },
+  {
+   "id": "fxxx",
+   "side": "f",
+   "k": "infantry",
+   "name": "French XXX Corps",
+   "short": "XXX Corps",
+   "w": 12,
+   "quote": "XXX Corps held the salient east of the Meuse to the north and north-east"
+  },
+  {
+   "id": "fvii",
+   "side": "f",
+   "k": "infantry",
+   "name": "French VII Corps",
+   "short": "VII Corps",
+   "w": 9,
+   "quote": "ordered the VII Corps to Verdun on 23 January, to hold the north face of the west bank"
+  },
+  {
+   "id": "fart",
+   "side": "f",
+   "k": "artillery",
+   "name": "French guns on the west bank",
+   "short": "W. guns",
+   "w": 8,
+   "quote": "French guns on the west bank had begun a constant bombardment of Germans on the east bank"
+  },
+  {
+   "id": "fvaux",
+   "side": "f",
+   "k": "infantry",
+   "name": "Fort Vaux garrison",
+   "short": "Garrison",
+   "w": 5,
+   "quote": "Fighting went on underground until the garrison ran out of water"
+  },
+  {
+   "id": "foff",
+   "side": "f",
+   "k": "infantry",
+   "name": "French offensive divisions",
+   "short": "Offensive",
+   "w": 12,
+   "quote": "the French began the First Offensive Battle of Verdun"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The German guns open on the east bank",
+   "when": "21 February 1916",
+   "text": "After delays from fog, rain and wind, a ten-hour bombardment began on the right bank, and the German corps attacked at 4:00 p.m. French XXX Corps held the north and north-east of the salient.",
+   "quote": "a 10-hour artillery bombardment by 808 guns began",
+   "at": {
+    "geast": [
+     62,
+     8,
+     180
+    ],
+    "gart": [
+     82,
+     8,
+     180
+    ],
+    "fxxx": [
+     58,
+     23,
+     0
+    ],
+    "fvii": [
+     30,
+     32,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "gart",
+     "fxxx",
+     -0.1
+    ],
+    [
+     "geast",
+     "fxxx"
+    ]
+   ]
+  },
+  {
+   "title": "The Germans take Bois des Caures",
+   "when": "22 to 24 February",
+   "text": "German troops advanced about 5 km and took the wood after two French battalions had held it for two days. The French XXX Corps was forced out of its second line of defence.",
+   "quote": "captured Bois des Caures at the edge of the village of Flabas",
+   "at": {
+    "geast": [
+     62,
+     21,
+     180
+    ],
+    "fxxx": [
+     50,
+     31,
+     0
+    ]
+   },
+   "how": {
+    "fxxx": "retreat"
+   },
+   "hits": [
+    [
+     "geast",
+     "fxxx"
+    ]
+   ]
+  },
+  {
+   "title": "A German party enters Fort Douaumont",
+   "when": "25 February",
+   "text": "Infantry reached their objectives in under twenty minutes, and two parties made for the fort. One of about 100 men found the ditch bunkers unmanned and took prisoner the small maintenance crew inside.",
+   "quote": "where they found Warrant Officer Chenot and about 25 French troops, most of the skeleton garrison of the fort, and took them prisoner",
+   "at": {
+    "geast": [
+     62,
+     24,
+     180
+    ],
+    "gparty": [
+     66,
+     29,
+     180
+    ]
+   }
+  },
+  {
+   "title": "The attack widens to the west bank",
+   "when": "From 6 March",
+   "text": "Falkenhayn lent two divisions from the reserve, and the German VI and X Reserve Corps attacked towards Mort-Homme and Côte 304 to silence the French guns across the river. Those guns went on firing into the Germans on the east bank.",
+   "quote": "The VI Reserve Corps was reinforced with the X Reserve Corps, to capture a line from the south of Avocourt to Côte 304 north of Esnes",
+   "at": {
+    "gwest": [
+     26,
+     19,
+     180
+    ],
+    "fart": [
+     24,
+     43,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "gwest",
+     "fvii"
+    ],
+    [
+     "fart",
+     "geast",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "Fort Vaux is taken",
+   "when": "1 to 7 June",
+   "text": "The German attack shifted back to the right bank, south of Fort Douaumont. About 10,000 men assaulted Fort Vaux and the top was occupied on 2 June. Fighting continued underground until the garrison surrendered on 7 June.",
+   "quote": "After a final assault on 1 June by about 10,000 German troops, the top of Fort Vaux was occupied on 2 June.",
+   "at": {
+    "geast": [
+     62,
+     40,
+     180
+    ],
+    "gvaux": [
+     76,
+     31,
+     180
+    ],
+    "fvaux": [
+     76,
+     38,
+     0
+    ]
+   },
+   "state": {
+    "fvaux": "destroyed"
+   },
+   "hits": [
+    [
+     "gvaux",
+     "fvaux"
+    ]
+   ]
+  },
+  {
+   "title": "The German salient towards Fort Souville",
+   "when": "23 June",
+   "text": "After a gas bombardment the Germans attacked on a front of 5 km and drove a salient of 3 by 2 km into the French defences. They came within 5 km of the Verdun citadel before the French recaptured Chapelle Sainte-Fine and the advance stopped.",
+   "quote": "the Germans attacked on a 3.1 mi (5 km) front and drove a 1.9 by 1.2 mi (3 by 2 km) salient into the French defences",
+   "at": {
+    "geast": [
+     64,
+     47,
+     180
+    ]
+   }
+  },
+  {
+   "title": "The French offensives regain the ground",
+   "when": "20 October to 5 November",
+   "text": "After a six-day bombardment French divisions attacked on 20 October and recaptured Fort Douaumont on 24 October. The Germans evacuated Fort Vaux on 2 November, and by 5 November the French were back at the front line of 24 February.",
+   "quote": "on 5 November, the French reached the front line of 24 February and offensive operations ceased until December",
+   "at": {
+    "foff": [
+     68,
+     40,
+     0
+    ],
+    "geast": [
+     56,
+     24,
+     180
+    ],
+    "gvaux": [
+     82,
+     22,
+     180
+    ]
+   },
+   "how": {
+    "geast": "retreat",
+    "gvaux": "retreat"
+   },
+   "state": {
+    "fvaux": "gone",
+    "gparty": "gone"
+   },
+   "hits": [
+    [
+     "foff",
+     "geast"
+    ],
+    [
+     "foff",
+     "gvaux"
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,361 @@
+{
+ "slug": "battle-of-actium",
+ "name": "Battle of Actium",
+ "article": "battles2/wp/battle-of-actium",
+ "field": {
+  "north": 0,
+  "ground": "sea",
+  "edges": [
+   {
+    "name": "← open sea",
+    "at": [
+     8,
+     58
+    ]
+   },
+   {
+    "name": "Ambracian Gulf →",
+    "at": [
+     88,
+     40
+    ]
+   }
+  ]
+ },
+ "note": "Antony's fleet came out of the straits and Octavian's waited beyond them, so Antony is drawn to the east and Octavian to the west, with north at the top; the accounts give the wings and the north end of Antony's line but no compass bearings. The land is drawn only as the accounts name it and is placed by judgement. The accounts give two sets of ship numbers, and J. M. Carter gives a second account, in which Antony formed a horseshoe near the shore and broke out through a gap in Octavian's line while his own ships spread north and south. Cleopatra's route to the open sea and Antony's route through the line are not described, so both are drawn as straight lines. Octavian's order to steer to the right is drawn as a small shift of his right wing.",
+ "terrain": [
+  {
+   "k": "land",
+   "name": "Promontory of Actium",
+   "at": [
+    [
+     84,
+     62
+    ],
+    [
+     84,
+     48
+    ],
+    [
+     90,
+     42
+    ],
+    [
+     100,
+     40
+    ],
+    [
+     100,
+     62
+    ]
+   ],
+   "lab": [
+    93,
+    55
+   ],
+   "quote": "his land forces encamped near the promontory of Actium"
+  },
+  {
+   "k": "land",
+   "name": "Shore north of the straits",
+   "unnamed": true,
+   "at": [
+    [
+     84,
+     0
+    ],
+    [
+     100,
+     0
+    ],
+    [
+     100,
+     22
+    ],
+    [
+     90,
+     21
+    ],
+    [
+     84,
+     14
+    ]
+   ],
+   "lab": [
+    92,
+    8
+   ],
+   "quote": "observed the battle from shore to the north of the straits"
+  }
+ ],
+ "sides": [
+  {
+   "id": "o",
+   "name": "Octavian's fleet"
+  },
+  {
+   "id": "a",
+   "name": "Antony and Cleopatra"
+  }
+ ],
+ "units": [
+  {
+   "id": "agr",
+   "side": "o",
+   "k": "ships",
+   "name": "Octavian's left wing",
+   "short": "Left",
+   "leader": "Agrippa",
+   "w": 10,
+   "quote": "commanding from the left wing of the fleet, Lucius Arruntius the centre, and Marcus Lurius the right",
+   "leaderEntry": "marcus-vipsanius-agrippa"
+  },
+  {
+   "id": "arr",
+   "side": "o",
+   "k": "ships",
+   "name": "Octavian's centre",
+   "short": "Centre",
+   "leader": "Lucius Arruntius",
+   "w": 10,
+   "quote": "commanding from the left wing of the fleet, Lucius Arruntius the centre, and Marcus Lurius the right"
+  },
+  {
+   "id": "lur",
+   "side": "o",
+   "k": "ships",
+   "name": "Octavian's right wing",
+   "short": "Right",
+   "leader": "Marcus Lurius",
+   "w": 10,
+   "quote": "commanding from the left wing of the fleet, Lucius Arruntius the centre, and Marcus Lurius the right"
+  },
+  {
+   "id": "ant",
+   "side": "a",
+   "k": "ships",
+   "name": "Antony's right wing",
+   "short": "Right",
+   "leader": "Antony",
+   "w": 10,
+   "quote": "Antony and Lucius Gellius Poplicola commanded the Antonian fleet's right wing",
+   "leaderEntry": "mark-antony"
+  },
+  {
+   "id": "aoi",
+   "side": "a",
+   "k": "ships",
+   "name": "Antony's centre",
+   "short": "Centre",
+   "leader": "Marcus Octavius",
+   "w": 10,
+   "quote": "Marcus Octavius and Marcus Insteius commanded the centre"
+  },
+  {
+   "id": "sos",
+   "side": "a",
+   "k": "ships",
+   "name": "Antony's left wing",
+   "short": "Left",
+   "leader": "Gaius Sosius",
+   "w": 10,
+   "quote": "Gaius Sosius commanded the left wing; Cleopatra's squadron was behind them."
+  },
+  {
+   "id": "cleo",
+   "side": "a",
+   "k": "ships",
+   "name": "Cleopatra's squadron",
+   "short": "Cleopatra",
+   "leader": "Cleopatra",
+   "w": 8,
+   "quote": "Gaius Sosius commanded the left wing; Cleopatra's squadron was behind them.",
+   "leaderEntry": "cleopatra-vii"
+  },
+  {
+   "id": "esc",
+   "side": "a",
+   "k": "ships",
+   "name": "Antony's flagship and escort",
+   "short": "Escort",
+   "leader": "Antony",
+   "w": 4,
+   "quote": "Antony transferred to a smaller vessel with his flag and managed to escape",
+   "leaderEntry": "mark-antony"
+  }
+ ],
+ "phases": [
+  {
+   "title": "Antony's fleet comes out and forms line",
+   "when": "2 September 31 BCE",
+   "text": "Octavian's fleet waited beyond the straits. Antony led his ships out through the straits and they formed a line, with Cleopatra's squadron behind them, and stayed quiet.",
+   "quote": "Antony's fleet began issuing from the straits and the ships moved into line and remained quiet.",
+   "at": {
+    "agr": [
+     36,
+     14,
+     90
+    ],
+    "arr": [
+     36,
+     30,
+     90
+    ],
+    "lur": [
+     36,
+     46,
+     90
+    ],
+    "ant": [
+     54,
+     14,
+     270
+    ],
+    "aoi": [
+     54,
+     30,
+     270
+    ],
+    "sos": [
+     54,
+     46,
+     270
+    ],
+    "cleo": [
+     72,
+     30,
+     270
+    ]
+   }
+  },
+  {
+   "title": "Octavian steers to the right",
+   "text": "After a short hesitation Octavian ordered his ships to steer to the right and pass the enemy's ships. Fearing that his line would be surrounded, Antony was forced to give the order to attack.",
+   "quote": "Octavian, after a short hesitation, ordered his vessels to steer to the right and pass the enemy's ships.",
+   "at": {
+    "lur": [
+     38,
+     49,
+     80
+    ]
+   }
+  },
+  {
+   "title": "Sosius attacks and Octavian's left stays out of range",
+   "text": "Sosius opened the attack from Antony's left wing. Antony hoped to drive back Agrippa's wing at the north end of his line with his biggest ships, but Octavian's fleet stayed out of range.",
+   "quote": "Antony had hoped to use his biggest ships to drive back Agrippa's wing on the north end of his line, but Octavian's entire fleet, aware of this strategy, stayed out of range.",
+   "at": {
+    "sos": [
+     46,
+     46,
+     270
+    ],
+    "ant": [
+     46,
+     14,
+     270
+    ],
+    "agr": [
+     28,
+     14,
+     90
+    ]
+   },
+   "how": {
+    "agr": "feint"
+   },
+   "hits": [
+    [
+     "sos",
+     "lur"
+    ]
+   ]
+  },
+  {
+   "title": "The fleets fight through the afternoon",
+   "text": "The two lines closed after midday and fought on all afternoon. Antony's larger ships rained missiles on the smaller ones, which closed in, shot at the crews and drew off again, and neither side gained a clear result.",
+   "quote": "The battle raged all afternoon without a decisive result.",
+   "at": {
+    "aoi": [
+     48,
+     30,
+     270
+    ],
+    "arr": [
+     38,
+     30,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "sos",
+     "lur"
+    ],
+    [
+     "ant",
+     "agr"
+    ],
+    [
+     "aoi",
+     "arr"
+    ],
+    [
+     "arr",
+     "aoi",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "Cleopatra's squadron sails for the open sea",
+   "text": "Cleopatra's squadron, in the rear, took no part in the fighting and retreated to the open sea. A breeze sprang up in the right direction and the ships were soon out of sight.",
+   "quote": "Cleopatra's fleet, in the rear, retreated to the open sea without engaging.",
+   "at": {
+    "cleo": [
+     58,
+     53,
+     250
+    ]
+   },
+   "how": {
+    "cleo": "retreat"
+   }
+  },
+  {
+   "title": "Antony follows and the rest are taken",
+   "text": "Antony thought all was lost and followed the fleeing squadron. He moved to a smaller vessel and slipped away with a few ships as escort, and the ships left behind were captured or sunk.",
+   "quote": "Antony transferred to a smaller vessel with his flag and managed to escape, taking a few ships with him as an escort to help break through Octavian's lines. Those left behind were captured or sunk.",
+   "at": {
+    "esc": [
+     22,
+     24,
+     250
+    ]
+   },
+   "how": {
+    "esc": "retreat"
+   },
+   "state": {
+    "cleo": "gone",
+    "ant": "destroyed",
+    "aoi": "destroyed",
+    "sos": "destroyed"
+   },
+   "hits": [
+    [
+     "agr",
+     "ant"
+    ],
+    [
+     "arr",
+     "aoi"
+    ],
+    [
+     "lur",
+     "sos"
+    ]
+   ]
+  }
+ ]
+}

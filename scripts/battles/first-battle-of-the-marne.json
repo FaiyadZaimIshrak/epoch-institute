@@ -1,0 +1,537 @@
+{
+ "slug": "first-battle-of-the-marne",
+ "name": "First Battle of the Marne",
+ "article": "battles2/wp/first-battle-of-the-marne",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "to Verdun →",
+    "at": [
+     95,
+     22
+    ]
+   }
+  ]
+ },
+ "note": "This plan shows the whole operation along a front of about 230 km, not a single field: each block is an army. The accounts give the armies' relative places (Paris in the west, Verdun in the east, the Aisne to the north) but no map of the lines, so the positions, the course of the rivers and the directions of the retreats are drawn by judgement. The Allied pursuit after 10 September is shown only in outline.",
+ "terrain": [
+  {
+   "k": "town",
+   "name": "Paris",
+   "at": [
+    6,
+    32
+   ],
+   "quote": "the military governor of Paris, Joseph Gallieni, perceived that the German right flank was vulnerable"
+  },
+  {
+   "k": "river",
+   "name": "Ourcq",
+   "at": [
+    [
+     22,
+     8
+    ],
+    [
+     23,
+     16
+    ],
+    [
+     25,
+     22
+    ],
+    [
+     26,
+     28
+    ]
+   ],
+   "lab": [
+    20,
+    6
+   ],
+   "quote": "probing 40 km (25 miles) northeast from Paris near the Ourcq River"
+  },
+  {
+   "k": "river",
+   "name": "Marne",
+   "at": [
+    [
+     16,
+     33
+    ],
+    [
+     34,
+     30
+    ],
+    [
+     52,
+     29
+    ],
+    [
+     70,
+     31
+    ],
+    [
+     96,
+     29
+    ]
+   ],
+   "lab": [
+    76,
+    27.5
+   ],
+   "quote": "his forces crossed the Marne River 60 km (37 miles) east of Paris"
+  },
+  {
+   "k": "river",
+   "name": "Petit Morin",
+   "at": [
+    [
+     32,
+     46
+    ],
+    [
+     46,
+     45
+    ],
+    [
+     60,
+     46
+    ],
+    [
+     70,
+     47
+    ]
+   ],
+   "lab": [
+    44,
+    43
+   ],
+   "quote": "crossed the Petit Morin, captured bridges over the Marne, and established a bridgehead"
+  },
+  {
+   "k": "marsh",
+   "name": "Marshes of Saint–Gond",
+   "at": [
+    [
+     76,
+     42
+    ],
+    [
+     82,
+     40
+    ],
+    [
+     90,
+     41
+    ],
+    [
+     93,
+     45
+    ],
+    [
+     88,
+     48
+    ],
+    [
+     80,
+     48
+    ]
+   ],
+   "lab": [
+    92,
+    49
+   ],
+   "quote": "assaulted Foch's 9th Army in the Marshes of Saint–Gond near the city of Sézanne"
+  },
+  {
+   "k": "river",
+   "name": "Aisne",
+   "at": [
+    [
+     8,
+     14
+    ],
+    [
+     30,
+     13
+    ],
+    [
+     52,
+     14
+    ],
+    [
+     74,
+     13
+    ],
+    [
+     96,
+     14
+    ]
+   ],
+   "lab": [
+    84,
+    11.2
+   ],
+   "quote": "they were ordered to retreat to the Aisne River"
+  }
+ ],
+ "sides": [
+  {
+   "id": "g",
+   "name": "Germans"
+  },
+  {
+   "id": "a",
+   "name": "French and British"
+  }
+ ],
+ "units": [
+  {
+   "id": "g1",
+   "side": "g",
+   "k": "infantry",
+   "name": "German 1st Army",
+   "short": "1st Army",
+   "leader": "Alexander von Kluck",
+   "w": 14,
+   "quote": "He ordered his army to turn to the right and face west to confront the threat from the French 6th Army"
+  },
+  {
+   "id": "gron",
+   "side": "g",
+   "k": "infantry",
+   "name": "German IV Reserve Corps",
+   "short": "IV Res.",
+   "leader": "Hans von Gronau",
+   "w": 6,
+   "quote": "encountered the IV Reserve Corps of 24,000 men commanded by German General Hans von Gronau"
+  },
+  {
+   "id": "g2",
+   "side": "g",
+   "k": "infantry",
+   "name": "German 2nd Army",
+   "short": "2nd Army",
+   "leader": "Karl von Bülow",
+   "w": 12,
+   "quote": "Bülow's 2nd Army south of the Marne on 6 September was as worn and depleted as Kluck's"
+  },
+  {
+   "id": "g3",
+   "side": "g",
+   "k": "infantry",
+   "name": "German 3rd Army",
+   "short": "3rd Army",
+   "leader": "Max von Hausen",
+   "w": 10,
+   "quote": "Hausen covered Bülow's left flank and assaulted Foch's 9th Army"
+  },
+  {
+   "id": "f6",
+   "side": "a",
+   "k": "infantry",
+   "name": "French 6th Army",
+   "short": "6th Army",
+   "leader": "Michel-Joseph Maunoury",
+   "w": 10,
+   "quote": "Part of Maunoury's 6th Army, made up mostly of reservists and numbering in total 150,000"
+  },
+  {
+   "id": "bef",
+   "side": "a",
+   "k": "infantry",
+   "name": "British Expeditionary Force",
+   "short": "BEF",
+   "leader": "John French",
+   "w": 8,
+   "quote": "crossed the Petit Morin, captured bridges over the Marne, and established a bridgehead"
+  },
+  {
+   "id": "f5",
+   "side": "a",
+   "k": "infantry",
+   "name": "French 5th Army",
+   "short": "5th Army",
+   "leader": "Louis Franchet d'Espèrey",
+   "w": 12,
+   "quote": "The right wing of the French 5th Army attacked on 6 September and pinned the 2nd Army"
+  },
+  {
+   "id": "f9",
+   "side": "a",
+   "k": "infantry",
+   "name": "French 9th Army",
+   "short": "9th Army",
+   "leader": "Ferdinand Foch",
+   "w": 10,
+   "quote": "Hausen pushed Foch back 13 km (8.1 miles)"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The 6th Army meets the German right flank",
+   "when": "5 September 1914",
+   "text": "French reservists of the 6th Army, probing northeast of Paris, met the German IV Reserve Corps near the Ourcq. Though outnumbered, the corps attacked and held them for 24 hours before it retreated.",
+   "quote": "On 5 September, one day before Joffre's plan to begin the French offensive, the French and Germans clashed on Kluck's 1st Army's right flank.",
+   "at": {
+    "g1": [
+     44,
+     38,
+     180
+    ],
+    "gron": [
+     28,
+     14,
+     270
+    ],
+    "g2": [
+     66,
+     38,
+     180
+    ],
+    "g3": [
+     84,
+     36,
+     180
+    ],
+    "f6": [
+     12,
+     22,
+     90
+    ],
+    "bef": [
+     32,
+     54,
+     0
+    ],
+    "f5": [
+     54,
+     54,
+     0
+    ],
+    "f9": [
+     84,
+     54,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "f6",
+     "gron",
+     -0.1
+    ],
+    [
+     "gron",
+     "f6",
+     0.1
+    ]
+   ]
+  },
+  {
+   "title": "Kluck turns west and the 5th Army attacks Bülow",
+   "when": "6 and 7 September",
+   "text": "Kluck turned his army to face west against the 6th Army and moved off its attacks. The right wing of the 5th Army attacked the German 2nd Army and pinned it, while the turn left a gap between the two German armies.",
+   "quote": "He ordered his army to turn to the right and face west to confront the threat from the French 6th Army.",
+   "at": {
+    "g1": [
+     38,
+     22,
+     270
+    ],
+    "gron": [
+     36,
+     8,
+     270
+    ],
+    "g2": [
+     66,
+     38,
+     180
+    ],
+    "f5": [
+     56,
+     52,
+     0
+    ]
+   },
+   "how": {
+    "gron": "retreat"
+   },
+   "hits": [
+    [
+     "f6",
+     "g1"
+    ],
+    [
+     "f5",
+     "g2"
+    ]
+   ]
+  },
+  {
+   "title": "Bülow's right gives way while Hausen attacks Foch",
+   "when": "7 and 8 September",
+   "text": "Bülow ordered his right wing to retreat while his left wing attacked with Hausen's 3rd Army. Hausen's night attack on Foch's 9th Army in the marshes pushed it back 13 km before it bogged down.",
+   "quote": "Hausen pushed Foch back 13 km (8.1 miles).",
+   "at": {
+    "g2": [
+     66,
+     34,
+     180
+    ],
+    "g3": [
+     84,
+     40,
+     180
+    ],
+    "f9": [
+     84,
+     57,
+     0
+    ]
+   },
+   "how": {
+    "g2": "retreat",
+    "f9": "retreat"
+   },
+   "hits": [
+    [
+     "g3",
+     "f9"
+    ]
+   ]
+  },
+  {
+   "title": "The BEF and the 5th Army enter the gap",
+   "when": "6 to 9 September",
+   "text": "The Allies sent the BEF northwest toward Kluck and the 5th Army northeast toward Bülow, into the gap between the two German armies. The BEF crossed the Petit Morin and established a bridgehead over the Marne.",
+   "quote": "The Allies exploited the gap in the German lines, sending the BEF northwest toward Kluck and the 5th Army northeast toward Bülow into the gap between the two German armies.",
+   "at": {
+    "bef": [
+     46,
+     36,
+     0
+    ],
+    "f5": [
+     58,
+     40,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "bef",
+     "g1",
+     0.2
+    ],
+    [
+     "f5",
+     "g2"
+    ]
+   ]
+  },
+  {
+   "title": "Quast breaks through the 6th Army",
+   "when": "9 September",
+   "text": "Kluck had telegraphed that an enveloping attack by General von Quast would bring the decision. Quast fought his way through the 6th Army's defences, and the way to Paris, 50 km away, lay open.",
+   "quote": "The next morning Quast fought his way through the defences of the French 6th Army and the way to Paris, 50 km (31 miles) distant, was open.",
+   "at": {
+    "g1": [
+     32,
+     22,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "g1",
+     "f6"
+    ]
+   ]
+  },
+  {
+   "title": "Hentsch's order turns the 1st and 2nd Armies back",
+   "when": "8 and 9 September",
+   "text": "Hentsch agreed with Bülow that a general retreat was needed once the Allies crossed the Marne. On 9 September Bülow withdrew again, and Kluck, with Bülow retreating, had no choice but to follow.",
+   "quote": "With Bülow retreating, Kluck had no choice but to follow suit.",
+   "at": {
+    "g2": [
+     68,
+     22,
+     180
+    ],
+    "g1": [
+     38,
+     19,
+     180
+    ],
+    "f5": [
+     58,
+     30,
+     0
+    ]
+   },
+   "how": {
+    "g2": "retreat",
+    "g1": "retreat"
+   }
+  },
+  {
+   "title": "The Germans fall back to the Aisne",
+   "when": "9 to 12 September",
+   "text": "Moltke ordered the 3rd, 4th and 5th Armies back as well, to the Aisne. The Germans retreated 65 km and dug in north of the river, pursued by the French and British at a slow pace.",
+   "quote": "The Germans were pursued by the French and British, although the pace of the exhausted Allied forces was slow and averaged only 19 km (12 mi) per day.",
+   "at": {
+    "g1": [
+     50,
+     8,
+     180
+    ],
+    "gron": [
+     26,
+     8,
+     270
+    ],
+    "g2": [
+     66,
+     8,
+     180
+    ],
+    "g3": [
+     86,
+     9,
+     180
+    ],
+    "f6": [
+     20,
+     26,
+     0
+    ],
+    "bef": [
+     46,
+     24,
+     0
+    ],
+    "f5": [
+     62,
+     24,
+     0
+    ],
+    "f9": [
+     86,
+     35,
+     0
+    ]
+   },
+   "how": {
+    "g1": "retreat",
+    "g2": "retreat",
+    "g3": "retreat",
+    "gron": "retreat"
+   }
+  }
+ ]
+}

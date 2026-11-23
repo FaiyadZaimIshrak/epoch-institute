@@ -1,0 +1,468 @@
+{
+ "slug": "battle-of-san-jacinto",
+ "name": "Battle of San Jacinto",
+ "article": "battles2/wp/battle-of-san-jacinto",
+ "field": {
+  "north": null,
+  "edges": [
+   {
+    "name": "to Vince's Bridge →",
+    "at": [
+     88,
+     4
+    ]
+   }
+  ]
+ },
+ "note": "The accounts do not give compass directions or the exact positions of the Mexican troops, who are shown as one body behind their breastworks. The Mexican camp lay on a plain with woods on one side and marsh and lake on another; the plan puts the woods at the left and the marsh and lake at the top, and does not claim these were their true bearings. Vince's Bridge lay about 8 miles from the Texian camp, so only the direction Santa Anna took is drawn. The Texian riflemen on the lake banks are shown as a small part of the Texian infantry; the accounts do not say which regiment supplied them.",
+ "terrain": [
+  {
+   "k": "wood",
+   "name": "Woods by the bayou",
+   "unnamed": true,
+   "at": [
+    [
+     6,
+     52
+    ],
+    [
+     30,
+     50
+    ],
+    [
+     56,
+     51
+    ],
+    [
+     74,
+     52
+    ],
+    [
+     74,
+     61
+    ],
+    [
+     6,
+     61
+    ]
+   ],
+   "lab": [
+    40,
+    57
+   ],
+   "quote": "The Texians made camp in a wooded area along the bank of Buffalo Bayou"
+  },
+  {
+   "k": "wood",
+   "name": "Woods",
+   "unnamed": true,
+   "at": [
+    [
+     4,
+     24
+    ],
+    [
+     14,
+     22
+    ],
+    [
+     20,
+     28
+    ],
+    [
+     18,
+     36
+    ],
+    [
+     6,
+     38
+    ]
+   ],
+   "lab": [
+    8,
+    30
+   ],
+   "quote": "bordered by woods on one side, marsh and lake on another"
+  },
+  {
+   "k": "marsh",
+   "name": "Marsh",
+   "unnamed": true,
+   "at": [
+    [
+     24,
+     4
+    ],
+    [
+     34,
+     3
+    ],
+    [
+     46,
+     5
+    ],
+    [
+     46,
+     13
+    ],
+    [
+     34,
+     15
+    ],
+    [
+     24,
+     12
+    ]
+   ],
+   "lab": [
+    35,
+    9
+   ],
+   "quote": "Many Mexican soldiers retreated through the marsh to Peggy Lake."
+  },
+  {
+   "k": "lake",
+   "name": "Peggy Lake",
+   "at": [
+    [
+     5,
+     4
+    ],
+    [
+     14,
+     3
+    ],
+    [
+     23,
+     5
+    ],
+    [
+     23,
+     12
+    ],
+    [
+     14,
+     14
+    ],
+    [
+     5,
+     11
+    ]
+   ],
+   "lab": [
+    14,
+    9
+   ],
+   "quote": "Many Mexican soldiers retreated through the marsh to Peggy Lake."
+  },
+  {
+   "k": "wall",
+   "name": "Breastworks",
+   "at": [
+    [
+     28,
+     22
+    ],
+    [
+     44,
+     22
+    ],
+    [
+     58,
+     22
+    ],
+    [
+     70,
+     22
+    ]
+   ],
+   "lab": [
+    74,
+    22
+   ],
+   "quote": "creating breastworks out of everything they could find, including saddles and brush"
+  }
+ ],
+ "sides": [
+  {
+   "id": "t",
+   "name": "Texian army"
+  },
+  {
+   "id": "m",
+   "name": "Mexican army"
+  }
+ ],
+ "units": [
+  {
+   "id": "sherman",
+   "side": "t",
+   "k": "infantry",
+   "name": "Texian second regiment",
+   "short": "2nd Regt",
+   "leader": "Sydney Sherman",
+   "w": 10,
+   "quote": "The second regiment, under the command of Colonel Sydney Sherman (sic), formed the left-wing of the army."
+  },
+  {
+   "id": "burleson",
+   "side": "t",
+   "k": "infantry",
+   "name": "Texian centre",
+   "short": "Centre",
+   "leader": "Edward Burleson",
+   "w": 12,
+   "quote": "Colonel Edward Burleson was assigned the center."
+  },
+  {
+   "id": "art",
+   "side": "t",
+   "k": "artillery",
+   "name": "Texian artillery",
+   "short": "Guns",
+   "leader": "Geo. W. Hackley",
+   "w": 6,
+   "quote": "The artillery, under the special command of Col. Geo. W. Hackley, inspector general, was placed on the right of the first regiment"
+  },
+  {
+   "id": "millard",
+   "side": "t",
+   "k": "infantry",
+   "name": "Millard's four companies",
+   "short": "Millard",
+   "leader": "Henry Millard",
+   "w": 8,
+   "quote": "four companies under the command of Lieutenant Colonel Henry Millard, sustained the artillery on the right"
+  },
+  {
+   "id": "cav",
+   "side": "t",
+   "k": "cavalry",
+   "name": "Texian cavalry",
+   "short": "Cavalry",
+   "leader": "Mirabeau B. Lamar",
+   "w": 8,
+   "quote": "our cavalry, sixty-one in number and commanded by Colonel Mirabeau B. Lamar",
+   "leaderEntry": "mirabeau-b-lamar"
+  },
+  {
+   "id": "rifles",
+   "side": "t",
+   "k": "light",
+   "name": "Texian riflemen",
+   "short": "Riflemen",
+   "w": 4,
+   "quote": "Texian riflemen stationed themselves on the banks and shot at anything that moved."
+  },
+  {
+   "id": "mex",
+   "side": "m",
+   "k": "infantry",
+   "name": "Mexican army",
+   "short": "Mexicans",
+   "w": 16,
+   "quote": "Throughout the night, Mexican troops worked to fortify their camp"
+  },
+  {
+   "id": "sa",
+   "side": "m",
+   "k": "guard",
+   "name": "Santa Anna and staff",
+   "short": "Santa Anna",
+   "leader": "Santa Anna",
+   "w": 5,
+   "quote": "Santa Anna, Castrillón, and Almonte yelled often conflicting orders",
+   "leaderEntry": "antonio-lopez-de-santa-anna"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The armies face each other across the grass",
+   "when": "21 April 1836",
+   "text": "Houston drew up the Texian line with the second regiment on the left, Burleson in the centre, the artillery and Millard's companies on the right and the cavalry on the extreme right. The Mexican troops lay behind breastworks in their camp.",
+   "quote": "The two camps were approximately 500 yards (460 m) apart, separated by a grassy area with a slight rise in the middle.",
+   "at": {
+    "sherman": [
+     30,
+     40,
+     0
+    ],
+    "burleson": [
+     44,
+     40,
+     0
+    ],
+    "art": [
+     57,
+     40,
+     0
+    ],
+    "millard": [
+     67,
+     40,
+     0
+    ],
+    "cav": [
+     84,
+     42,
+     0
+    ],
+    "mex": [
+     44,
+     18,
+     180
+    ]
+   }
+  },
+  {
+   "title": "The cavalry go wide and the guns move up",
+   "text": "The Texian cavalry was sent to the Mexican far left, and the artillery advanced through the tall grass to within 200 yards of the breastworks.",
+   "quote": "The Texian cavalry was first dispatched to the Mexican forces' far left, and the artillery advanced through the tall grass to within 200 yards of the Mexican breastworks.",
+   "at": {
+    "cav": [
+     88,
+     26,
+     0
+    ],
+    "art": [
+     57,
+     30,
+     0
+    ]
+   }
+  },
+  {
+   "title": "The Twin Sisters fire and the Texians rush the camp",
+   "when": "4:30",
+   "text": "The Twin Sisters fired and began the battle. After a single volley the Texians broke ranks and swarmed over the breastworks, and the surprised Mexican officers shouted conflicting orders.",
+   "quote": "After a single volley, Texians broke ranks and swarmed over the Mexican breastworks",
+   "at": {
+    "sherman": [
+     30,
+     28,
+     0
+    ],
+    "burleson": [
+     44,
+     27,
+     0
+    ],
+    "millard": [
+     67,
+     28,
+     0
+    ],
+    "sa": [
+     58,
+     18,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "art",
+     "mex",
+     0.2
+    ],
+    [
+     "burleson",
+     "mex"
+    ],
+    [
+     "sherman",
+     "mex",
+     -0.2
+    ],
+    [
+     "millard",
+     "sa",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The breastworks fall and the Mexican troops flee",
+   "text": "The Texian infantry advanced until they held the woodland and the breastworks. Within 18 minutes the Mexican soldiers left their camp and fled. Santa Anna escaped towards Vince's Bridge.",
+   "quote": "Within 18 minutes, Mexican soldiers abandoned their campsite and fled for their lives.",
+   "at": {
+    "sherman": [
+     32,
+     21,
+     0
+    ],
+    "burleson": [
+     44,
+     21,
+     0
+    ],
+    "millard": [
+     66,
+     22,
+     0
+    ],
+    "rifles": [
+     44,
+     29,
+     0
+    ],
+    "mex": [
+     34,
+     10,
+     0
+    ],
+    "sa": [
+     86,
+     10,
+     90
+    ]
+   },
+   "how": {
+    "mex": "rout",
+    "sa": "retreat"
+   },
+   "state": {
+    "mex": "routed"
+   },
+   "hits": [
+    [
+     "burleson",
+     "mex"
+    ],
+    [
+     "sherman",
+     "mex",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "Pursuit to Peggy Lake",
+   "text": "Many Mexican soldiers retreated through the marsh to Peggy Lake, where Texian riflemen stationed themselves on the banks and shot at anything that moved. The killing lasted for hours.",
+   "quote": "Texian riflemen stationed themselves on the banks and shot at anything that moved.",
+   "at": {
+    "mex": [
+     16,
+     9,
+     0
+    ],
+    "rifles": [
+     26,
+     17,
+     270
+    ]
+   },
+   "how": {
+    "mex": "rout"
+   },
+   "state": {
+    "mex": "routed"
+   },
+   "hits": [
+    [
+     "rifles",
+     "mex"
+    ]
+   ]
+  }
+ ]
+}

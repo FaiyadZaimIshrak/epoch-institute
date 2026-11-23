@@ -1,0 +1,439 @@
+{
+ "slug": "battle-of-madagascar",
+ "name": "Battle of Madagascar",
+ "article": "battles2/wp/battle-of-madagascar",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "south →",
+    "at": [
+     92,
+     57
+    ]
+   }
+  ]
+ },
+ "note": "The plan shows only the landing at Diego-Suarez in May 1942 (Operation Ironclad), not the months of campaigning that followed. The accounts put the two landing bays west of the port but do not say which lay further north, nor the distances between the places; the positions of the town, the naval base and the line are placed by judgement within that.",
+ "terrain": [
+  {
+   "k": "sea",
+   "name": "Courrier Bay",
+   "at": [
+    [
+     0,
+     4
+    ],
+    [
+     8,
+     4
+    ],
+    [
+     8,
+     58
+    ],
+    [
+     0,
+     58
+    ]
+   ],
+   "lab": [
+    4,
+    31
+   ],
+   "quote": "All were carried ashore by landing craft to Courrier Bay and Ambararata Bay"
+  },
+  {
+   "k": "sea",
+   "name": "Diego-Suarez Bay",
+   "at": [
+    [
+     85,
+     4
+    ],
+    [
+     100,
+     4
+    ],
+    [
+     100,
+     58
+    ],
+    [
+     85,
+     58
+    ]
+   ],
+   "lab": [
+    92,
+    8
+   ],
+   "quote": "Diego-Suarez is a large bay, with a fine harbour"
+  },
+  {
+   "k": "town",
+   "name": "Diego-Suarez",
+   "at": [
+    48,
+    12
+   ],
+   "quote": "took the town of Diego-Suarez and captured a hundred prisoners"
+  },
+  {
+   "k": "town",
+   "name": "Antisarane",
+   "at": [
+    78,
+    50
+   ],
+   "lab": [
+    78,
+    54
+   ],
+   "quote": "headed towards the French naval base of Antisarane"
+  },
+  {
+   "k": "ditch",
+   "name": "Joffre line",
+   "at": [
+    [
+     62,
+     30
+    ],
+    [
+     63,
+     38
+    ],
+    [
+     63,
+     46
+    ],
+    [
+     62,
+     54
+    ]
+   ],
+   "lab": [
+    57,
+    44
+   ],
+   "quote": "Antisarane was elaborately defended with trenches, two redoubts, and pillboxes"
+  },
+  {
+   "k": "marsh",
+   "name": "Swamp",
+   "unnamed": true,
+   "at": [
+    [
+     54,
+     23
+    ],
+    [
+     62,
+     22
+    ],
+    [
+     70,
+     24
+    ],
+    [
+     70,
+     28
+    ],
+    [
+     60,
+     29
+    ],
+    [
+     54,
+     28
+    ]
+   ],
+   "lab": [
+    60,
+    20
+   ],
+   "quote": "flanked on both sides by impenetrable swamps"
+  },
+  {
+   "k": "marsh",
+   "name": "Swamp",
+   "unnamed": true,
+   "at": [
+    [
+     50,
+     55
+    ],
+    [
+     58,
+     54
+    ],
+    [
+     63,
+     56
+    ],
+    [
+     63,
+     59
+    ],
+    [
+     50,
+     59
+    ]
+   ],
+   "lab": [
+    44,
+    57
+   ],
+   "quote": "flanked on both sides by impenetrable swamps"
+  }
+ ],
+ "sides": [
+  {
+   "id": "a",
+   "name": "British force"
+  },
+  {
+   "id": "v",
+   "name": "Vichy French forces"
+  }
+ ],
+ "units": [
+  {
+   "id": "b29",
+   "side": "a",
+   "k": "infantry",
+   "name": "29th Independent Brigade",
+   "short": "29th Bde",
+   "w": 10,
+   "quote": "the 29th Independent Brigade, headed towards the French naval base of Antisarane"
+  },
+  {
+   "id": "b17",
+   "side": "a",
+   "k": "infantry",
+   "name": "17th Infantry Brigade",
+   "short": "17th Bde",
+   "w": 10,
+   "quote": "The Courier Bay force, the British 17th Infantry Brigade"
+  },
+  {
+   "id": "tanks",
+   "side": "a",
+   "k": "armour",
+   "name": "Valentine and Tetrarch tanks",
+   "short": "Tanks",
+   "w": 7,
+   "quote": "six Valentines of 'B' Special Service Squadron and six Tetrarch light tanks of 'C' Special Service Squadron"
+  },
+  {
+   "id": "slr",
+   "side": "a",
+   "k": "infantry",
+   "name": "South Lancashires",
+   "short": "S Lancs",
+   "w": 5,
+   "quote": "Another assault by the South Lancashires worked its way around the Vichy defences"
+  },
+  {
+   "id": "anthony",
+   "side": "a",
+   "k": "ships",
+   "name": "HMS Anthony",
+   "short": "Anthony",
+   "w": 5,
+   "quote": "the old destroyer HMS Anthony broke the deadlock when it dashed straight past the Antisarane harbour defences"
+  },
+  {
+   "id": "marines",
+   "side": "a",
+   "k": "infantry",
+   "name": "Royal Marines from Ramillies",
+   "short": "Marines",
+   "w": 4,
+   "quote": "landed fifty Royal Marines from Ramillies amidst the Vichy rear area"
+  },
+  {
+   "id": "vichy",
+   "side": "v",
+   "k": "infantry",
+   "name": "Vichy defenders of Antisarane",
+   "short": "Vichy",
+   "leader": "Armand Léon Annet",
+   "w": 10,
+   "quote": "Between 1,500 and 3,000 Vichy troops were concentrated around Diego-Suarez"
+  },
+  {
+   "id": "vsouth",
+   "side": "v",
+   "k": "infantry",
+   "name": "Vichy forces that withdrew",
+   "short": "Withdrew",
+   "w": 6,
+   "quote": "though substantial Vichy forces withdrew to the south"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The landings west of Diego-Suarez",
+   "when": "5 May 1942",
+   "text": "The first wave of the 29th Brigade landed at Ambararata Bay and the 17th Brigade at Courrier Bay. The Vichy troops were concentrated around Diego-Suarez, and the defences of Antisarane lay ahead.",
+   "quote": "the first wave of the British 29th Infantry Brigade and No. 5 Commando landed in Landing Craft Assault on 5 May",
+   "at": {
+    "b29": [
+     16,
+     42,
+     90
+    ],
+    "tanks": [
+     16,
+     52,
+     90
+    ],
+    "b17": [
+     16,
+     16,
+     90
+    ],
+    "vichy": [
+     68,
+     40,
+     270
+    ]
+   }
+  },
+  {
+   "title": "Both brigades advance inland",
+   "when": "5 May 1942",
+   "text": "The 17th Brigade took the town of Diego-Suarez after crossing mangrove swamp and bush. The 29th Brigade, with the tanks, advanced 21 miles towards Antisarane against light resistance.",
+   "quote": "they advanced 21 mi (34 km), overcoming light resistance with bayonet charges",
+   "at": {
+    "b17": [
+     42,
+     16,
+     90
+    ],
+    "b29": [
+     44,
+     40,
+     90
+    ],
+    "tanks": [
+     44,
+     50,
+     90
+    ]
+   }
+  },
+  {
+   "title": "A frontal assault on the line fails",
+   "when": "Morning of 6 May 1942",
+   "text": "The 29th Brigade and its tanks attacked the defences head on. Ten of the twelve tanks were destroyed by the end of the day, and the British had not known how strong the line was.",
+   "quote": "On the morning of 6 May, a frontal assault on the defences failed with the loss of three Valentines and two Tetrarchs.",
+   "at": {
+    "b29": [
+     54,
+     40,
+     90
+    ],
+    "tanks": [
+     54,
+     50,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "b29",
+     "vichy"
+    ],
+    [
+     "tanks",
+     "vichy",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The South Lancashires work round the line",
+   "when": "6 May 1942",
+   "text": "The South Lancashires went round the Vichy defences through the swamps and rough ground, and swung behind the line. They fired on the defences from behind and took a radio station and a barracks.",
+   "quote": "It swung behind the Vichy line and caused chaos.",
+   "at": {
+    "slr": [
+     74,
+     34,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "slr",
+     "vichy"
+    ]
+   ],
+   "note": "The accounts do not say by which side of the line they went; the plan places them behind it."
+  },
+  {
+   "title": "Marines land in the rear and the line is broken",
+   "when": "6 May 1942",
+   "text": "HMS Anthony ran past the harbour defences and landed fifty Royal Marines among the Vichy rear. The 17th Brigade broke through the defences. The South Lancashires withdrew after their radio failed.",
+   "quote": "At the same time, the 17th Infantry Brigade had broken through the defences and was soon in the town.",
+   "at": {
+    "anthony": [
+     91,
+     42,
+     270
+    ],
+    "marines": [
+     82,
+     46,
+     270
+    ],
+    "b17": [
+     58,
+     34,
+     90
+    ]
+   },
+   "state": {
+    "slr": "gone"
+   },
+   "hits": [
+    [
+     "marines",
+     "vichy",
+     0.2
+    ],
+    [
+     "b17",
+     "vichy"
+    ]
+   ]
+  },
+  {
+   "title": "Antisarane surrenders",
+   "when": "Evening of 6 May 1942",
+   "text": "With the Vichy defence broken, Antisarane surrendered that evening, though substantial Vichy forces withdrew to the south.",
+   "quote": "With the Vichy defence broken, Antisarane surrendered that evening",
+   "at": {
+    "b17": [
+     70,
+     36,
+     90
+    ],
+    "vsouth": [
+     68,
+     52,
+     180
+    ]
+   },
+   "how": {
+    "vsouth": "retreat"
+   },
+   "state": {
+    "vichy": "gone"
+   }
+  }
+ ]
+}

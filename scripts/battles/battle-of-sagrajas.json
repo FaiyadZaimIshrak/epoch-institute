@@ -1,0 +1,482 @@
+{
+ "slug": "battle-of-sagrajas",
+ "name": "Battle of Sagrajas",
+ "article": "battles2/wp/battle-of-sagrajas",
+ "field": {
+  "north": null
+ },
+ "note": "The accounts name the commanders of each division but give no compass directions and no exact lines, so the two armies are drawn facing each other across the river with the divisions in the order the accounts list them. Which side of the Christian army each division stood on, where the Christian camp lay and the nearby hill are placed on their side of the field; the accounts do not say exactly where they lay. The accounts also describe the Muslim vanguard both as ten thousand Almoravid cavalry assisting Al-Mu'tamid and as a separate Almoravid force under Dawud ibn Aisha; it is drawn as one block. European accounts call the first phase of the fighting the Battle of Rueda and the second the Battle of Sacralias.",
+ "terrain": [
+  {
+   "k": "river",
+   "name": "Wadi Bira",
+   "at": [
+    [
+     4,
+     27
+    ],
+    [
+     28,
+     26
+    ],
+    [
+     50,
+     28
+    ],
+    [
+     72,
+     26
+    ],
+    [
+     96,
+     27
+    ]
+   ],
+   "lab": [
+    10,
+    25
+   ],
+   "quote": "separated only by the river Wadi Bira"
+  },
+  {
+   "k": "hill",
+   "name": "High mound",
+   "unnamed": true,
+   "at": [
+    [
+     44,
+     45
+    ],
+    [
+     48,
+     42
+    ],
+    [
+     56,
+     41
+    ],
+    [
+     62,
+     44
+    ],
+    [
+     60,
+     48
+    ],
+    [
+     50,
+     49
+    ]
+   ],
+   "lab": [
+    53,
+    45
+   ],
+   "quote": "remained concealed behind a high mound"
+  },
+  {
+   "k": "hill",
+   "name": "Nearby hill",
+   "unnamed": true,
+   "at": [
+    [
+     58,
+     5
+    ],
+    [
+     66,
+     3
+    ],
+    [
+     74,
+     5
+    ],
+    [
+     75,
+     11
+    ],
+    [
+     66,
+     14
+    ],
+    [
+     58,
+     11
+    ]
+   ],
+   "lab": [
+    66,
+    12
+   ],
+   "quote": "retreated with a small contingent to a nearby hill"
+  }
+ ],
+ "sides": [
+  {
+   "id": "m",
+   "name": "Muslim army"
+  },
+  {
+   "id": "c",
+   "name": "Castilian army"
+  }
+ ],
+ "units": [
+  {
+   "id": "vang",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Vanguard of Al-Mu'tamid",
+   "short": "Vanguard",
+   "leader": "Al-Mu'tamid",
+   "w": 14,
+   "quote": "the vanguard was led by Al-Mu'tamid himself, assisted by Abu Sulayman Dawud ibn Aisha, comprising ten thousand cavalry from the Almoravids",
+   "leaderEntry": "al-mutamid-ibn-abbad"
+  },
+  {
+   "id": "mright",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Right flank of Badajoz",
+   "short": "Right",
+   "leader": "Al-Mutawakkil",
+   "w": 9,
+   "quote": "The right flank was commanded by Al-Mutawakkil 'ala Allah Umar ibn al-Aftas, the Emir of Batalyaws",
+   "leaderEntry": "umar-al-mutawakkil"
+  },
+  {
+   "id": "mleft",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Left flank, Eastern Andalusia",
+   "short": "Left",
+   "w": 9,
+   "quote": "while the left flank consisted of troops from Eastern Andalusia"
+  },
+  {
+   "id": "res",
+   "side": "m",
+   "k": "guard",
+   "name": "Almoravid reserve",
+   "short": "Reserve",
+   "leader": "Yusuf ibn Tashfin",
+   "w": 12,
+   "quote": "the reserve force was commanded by the Emir of the Muslims, consisting of an elite group of Almoravid fighters from Morocco and his personal guard",
+   "leaderEntry": "yusuf-ibn-tashfin"
+  },
+  {
+   "id": "sir",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Battalion of Sir ibn Abi Bakr",
+   "short": "Sir's men",
+   "leader": "Sir ibn Abi Bakr",
+   "w": 5,
+   "quote": "ibn Tashfin dispatched a battalion led by his strongest commander"
+  },
+  {
+   "id": "tak",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Black cavalry from Takrur",
+   "short": "Takrur",
+   "w": 10,
+   "quote": "Ibn Tashfin ordered 4,000 black cavalry from Takrur to charge into the fray"
+  },
+  {
+   "id": "first",
+   "side": "c",
+   "k": "infantry",
+   "name": "First division",
+   "short": "First div.",
+   "leader": "Count García",
+   "w": 10,
+   "quote": "The first was led by Count García and Count Zodric, tasked with attacking the Muslim vanguard"
+  },
+  {
+   "id": "alb",
+   "side": "c",
+   "k": "infantry",
+   "name": "Vanguard of Albaráns",
+   "short": "Albaráns",
+   "leader": "Albaráns",
+   "w": 10,
+   "quote": "The vanguard was directed by his commander Albaráns, primarily composed of troops from the Kingdom of Aragon"
+  },
+  {
+   "id": "wa",
+   "side": "c",
+   "k": "infantry",
+   "name": "Wing of Sancho Ramírez",
+   "short": "Sancho",
+   "leader": "Sancho Ramírez",
+   "w": 8,
+   "quote": "The second division consisted of two wings led by Sancho Ramírez, the King of Aragon, and Count Raymond, with the core of the army commanded by Alfonso himself",
+   "leaderEntry": "sancho-ramirez"
+  },
+  {
+   "id": "wb",
+   "side": "c",
+   "k": "infantry",
+   "name": "Wing of Count Raymond",
+   "short": "Raymond",
+   "leader": "Count Raymond",
+   "w": 8,
+   "quote": "The second division consisted of two wings led by Sancho Ramírez, the King of Aragon, and Count Raymond, with the core of the army commanded by Alfonso himself"
+  },
+  {
+   "id": "alf",
+   "side": "c",
+   "k": "infantry",
+   "name": "Core under Alfonso VI",
+   "short": "Alfonso",
+   "leader": "Alfonso VI",
+   "w": 14,
+   "quote": "The second division consisted of two wings led by Sancho Ramírez, the King of Aragon, and Count Raymond, with the core of the army commanded by Alfonso himself",
+   "leaderEntry": "alfonso-vi-of-castile"
+  },
+  {
+   "id": "camp",
+   "side": "c",
+   "k": "camp",
+   "name": "Castilian camp",
+   "short": "Camp",
+   "w": 6,
+   "quote": "He advanced with his reserve forces and attacked the Castilian camp"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The armies face each other across the river",
+   "when": "23 October 1086",
+   "text": "The two armies had camped facing each other with only the Wadi Bira between them. The Muslims put heavy cavalry in front and kept the Almoravid reserve hidden behind a high mound; Alfonso drew up two divisions and a vanguard.",
+   "quote": "The Islamic and Castilian armies set up camp facing each other, separated only by the river Wadi Bira",
+   "at": {
+    "vang": [
+     50,
+     33,
+     0
+    ],
+    "mright": [
+     76,
+     36,
+     0
+    ],
+    "mleft": [
+     24,
+     36,
+     0
+    ],
+    "res": [
+     53,
+     54,
+     0
+    ],
+    "first": [
+     38,
+     19,
+     180
+    ],
+    "alb": [
+     62,
+     19,
+     180
+    ],
+    "wa": [
+     20,
+     11,
+     180
+    ],
+    "wb": [
+     80,
+     11,
+     180
+    ],
+    "alf": [
+     50,
+     11,
+     180
+    ],
+    "camp": [
+     90,
+     20,
+     180
+    ]
+   },
+   "state": {
+    "res": "hidden"
+   }
+  },
+  {
+   "title": "The Castilian first division is thrown back",
+   "text": "Alfonso sent his first division against Al-Mu'tamid, but it met the Almoravid cavalry before reaching him. The Almoravid archers helped drive it back to its second line, though the Almoravids lost men.",
+   "quote": "Nevertheless, his reliance on a large contingent of archers played a crucial role in repelling the initial Castilian attack, compelling them to retreat to their second line of defense.",
+   "at": {
+    "first": [
+     38,
+     22,
+     180
+    ]
+   },
+   "how": {
+    "first": "retreat"
+   },
+   "hits": [
+    [
+     "first",
+     "vang"
+    ],
+    [
+     "vang",
+     "first",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "Alfonso attacks and Sir's battalion is sent",
+   "text": "Alfonso then attacked the Almoravids with Al-Mu'tamid. Dawud ibn Aisha sent word to Yusuf ibn Tashfin, who dispatched a battalion that broke into the Castilian army and linked up with Al-Mu'tamid's forces.",
+   "quote": "This battalion successfully penetrated the heart of the Castilian army, linking up with Al-Mu'tamid's forces",
+   "at": {
+    "alf": [
+     50,
+     29,
+     180
+    ],
+    "sir": [
+     34,
+     30,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "alf",
+     "vang"
+    ],
+    [
+     "sir",
+     "alf",
+     -0.25
+    ]
+   ]
+  },
+  {
+   "title": "Alfonso reaches the tents and the vanguard gives way",
+   "text": "Alfonso kept up the pressure until he reached the Almoravid tents and breached the trench round them. Al-Mu'tamid's Andalusian forces were driven back, and the Castilians went after them.",
+   "quote": "advancing until he reached the tents of the Almoravids and breached the trench protecting them",
+   "at": {
+    "alf": [
+     56,
+     38,
+     180
+    ],
+    "vang": [
+     30,
+     44,
+     0
+    ]
+   },
+   "how": {
+    "vang": "retreat"
+   },
+   "hits": [
+    [
+     "alf",
+     "vang"
+    ]
+   ]
+  },
+  {
+   "title": "The reserve strikes the Castilian camp",
+   "text": "While the Castilians chased Al-Mu'tamid, Yusuf ibn Tashfin brought up his reserve and attacked their camp. The Castilian horses panicked at the camels, which he set ablaze, and the camp's remaining men fled towards Alfonso.",
+   "quote": "He advanced with his reserve forces and attacked the Castilian camp",
+   "at": {
+    "res": [
+     84,
+     30,
+     0
+    ]
+   },
+   "state": {
+    "res": "shown"
+   },
+   "hits": [
+    [
+     "res",
+     "camp"
+    ]
+   ]
+  },
+  {
+   "title": "Alfonso turns back and the Muslims counter-attack",
+   "text": "Alfonso gave up the pursuit and withdrew to save his camp. Al-Mu'tamid ordered an attack, and Sir ibn Abi Bakr's men charged Alfonso's forces as they fell back.",
+   "quote": "Alfonso halted his pursuit of Al-Mu'tamid and retreated to save his stronghold from disaster",
+   "at": {
+    "alf": [
+     68,
+     28,
+     0
+    ],
+    "vang": [
+     42,
+     38,
+     0
+    ],
+    "sir": [
+     56,
+     31,
+     0
+    ]
+   },
+   "how": {
+    "alf": "retreat"
+   },
+   "hits": [
+    [
+     "vang",
+     "alf",
+     0.2
+    ],
+    [
+     "sir",
+     "alf"
+    ]
+   ]
+  },
+  {
+   "title": "The Takrur cavalry charge and Alfonso leaves the field",
+   "text": "Yusuf ibn Tashfin ordered 4,000 black cavalry from Takrur to charge. Their charge broke the Christian cavalry, and Alfonso retreated with a small contingent to a nearby hill and escaped after dark.",
+   "quote": "The turning point occurred when Ibn Tashfin ordered 4,000 black cavalry from Takrur to charge into the fray.",
+   "at": {
+    "tak": [
+     68,
+     32,
+     0
+    ],
+    "alf": [
+     66,
+     9,
+     180
+    ]
+   },
+   "how": {
+    "alf": "rout"
+   },
+   "state": {
+    "alf": "routed"
+   },
+   "hits": [
+    [
+     "tak",
+     "alb"
+    ],
+    [
+     "tak",
+     "alf",
+     0.3
+    ]
+   ]
+  }
+ ]
+}

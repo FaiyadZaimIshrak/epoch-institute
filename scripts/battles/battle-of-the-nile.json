@@ -1,0 +1,505 @@
+{
+ "slug": "battle-of-the-nile",
+ "name": "Battle of the Nile",
+ "article": "battles2/wp/battle-of-the-nile",
+ "field": {
+  "ground": "sea",
+  "north": 0,
+  "edges": [
+   {
+    "name": "← Abu Qir",
+    "at": [
+     8,
+     16
+    ]
+   },
+   {
+    "name": "to Rosetta →",
+    "at": [
+     92,
+     30
+    ]
+   }
+  ]
+ },
+ "note": "A battle at sea, drawn as a schematic: the real line was about 2,850 yards long and the plan is not to scale. The four French frigates of the inner line, the bomb vessels and the brigs are not drawn, and the shoals are shown in the land colour. Peuple Souverain is drawn inside the French van: it cut its cable and drifted south, but the accounts do not say where it stopped, and it surrendered in the night. Leander and Timoléon are not drawn as formations: Timoléon was part of the French rear and grounded on the shoal. Swiftsure and Alexander are drawn as one block, as are the five ships that passed inside the line. The accounts do not say where Bellerophon drifted to.",
+ "terrain": [
+  {
+   "k": "land",
+   "name": "Shoals",
+   "at": [
+    [
+     3,
+     3
+    ],
+    [
+     16,
+     3
+    ],
+    [
+     20,
+     12
+    ],
+    [
+     19,
+     26
+    ],
+    [
+     27,
+     33
+    ],
+    [
+     38,
+     40
+    ],
+    [
+     48,
+     45
+    ],
+    [
+     58,
+     50
+    ],
+    [
+     62,
+     52
+    ],
+    [
+     62,
+     59
+    ],
+    [
+     3,
+     59
+    ]
+   ],
+   "lab": [
+    10,
+    40
+   ],
+   "quote": "These shoals were too shallow to permit the passage of larger warships"
+  },
+  {
+   "k": "fort",
+   "name": "Aboukir Island",
+   "at": [
+    9,
+    7
+   ],
+   "lab": [
+    10,
+    11
+   ],
+   "quote": "A small fort situated on an island among the rocks protected the shoals."
+  }
+ ],
+ "sides": [
+  {
+   "id": "b",
+   "name": "Royal Navy"
+  },
+  {
+   "id": "f",
+   "name": "French Navy"
+  }
+ ],
+ "units": [
+  {
+   "id": "fvan",
+   "side": "f",
+   "k": "ships",
+   "name": "French van",
+   "short": "Van",
+   "w": 12,
+   "quote": "The van of the French line was led by Guerrier"
+  },
+  {
+   "id": "ffrank",
+   "side": "f",
+   "k": "ships",
+   "name": "Franklin",
+   "short": "Franklin",
+   "leader": "Blanquet",
+   "w": 6,
+   "quote": "firing on the fifth French ship, Peuple Souverain, and Admiral Blanquet's flagship, Franklin"
+  },
+  {
+   "id": "forient",
+   "side": "f",
+   "k": "ships",
+   "name": "Orient",
+   "short": "Orient",
+   "leader": "Brueys",
+   "w": 6,
+   "quote": "with the flagship Orient at the centre and two large 80-gun ships anchored on either side"
+  },
+  {
+   "id": "ftonn",
+   "side": "f",
+   "k": "ships",
+   "name": "Tonnant",
+   "short": "Tonnant",
+   "leader": "Du Petit Thouars",
+   "w": 6,
+   "quote": "two large 80-gun ships anchored on either side"
+  },
+  {
+   "id": "fcentre",
+   "side": "f",
+   "k": "ships",
+   "name": "Heureux and Mercure",
+   "short": "Heureux",
+   "w": 8,
+   "quote": "Likewise the French ships Tonnant, Heureux, and Mercure all cut their anchor cables and drifted southwards away from the burning ship."
+  },
+  {
+   "id": "frear",
+   "side": "f",
+   "k": "ships",
+   "name": "French rear division",
+   "short": "Rear",
+   "leader": "Villeneuve",
+   "w": 10,
+   "quote": "The rear division of the line was under the command of Counter-admiral Pierre-Charles Villeneuve in Guillaume Tell."
+  },
+  {
+   "id": "binner",
+   "side": "b",
+   "k": "ships",
+   "name": "British inner column",
+   "short": "Inner",
+   "w": 12,
+   "quote": "Foley's attack was followed by Hood in Zealous, who also crossed the French line and successfully anchored next to Guerrier"
+  },
+  {
+   "id": "bout",
+   "side": "b",
+   "k": "ships",
+   "name": "Vanguard, Minotaur, Defence",
+   "short": "Vanguard",
+   "leader": "Nelson",
+   "w": 10,
+   "quote": "Vanguard in the lead followed by HMS Minotaur and HMS Defence, remained in line of battle formation",
+   "leaderEntry": "horatio-nelson"
+  },
+  {
+   "id": "bbel",
+   "side": "b",
+   "k": "ships",
+   "name": "Bellerophon",
+   "short": "Bellerop.",
+   "w": 6,
+   "quote": "Captain Henry Darby on Bellerophon missed his intended anchor near Franklin and instead found his ship underneath the main battery of the French flagship."
+  },
+  {
+   "id": "bmaj",
+   "side": "b",
+   "k": "ships",
+   "name": "Majestic",
+   "short": "Majestic",
+   "w": 6,
+   "quote": "Captain George Blagdon Westcott on Majestic also missed his station and almost collided with Heureux"
+  },
+  {
+   "id": "culloden",
+   "side": "b",
+   "k": "ships",
+   "name": "Culloden",
+   "short": "Culloden",
+   "leader": "Troubridge",
+   "w": 6,
+   "quote": "The final ship of the British line, Culloden under Troubridge, sailed too close to Aboukir Island in the growing darkness and became stuck fast on the shoal."
+  },
+  {
+   "id": "late",
+   "side": "b",
+   "k": "ships",
+   "name": "Swiftsure and Alexander",
+   "short": "Late",
+   "w": 8,
+   "quote": "Culloden trailed behind to the north and Alexander and Swiftsure hastened to catch up to the west"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The French line at anchor, the British closing",
+   "when": "1 August 1798",
+   "text": "The French thirteen ships of the line lay at anchor along the edge of the shoals, with the van near Aboukir Island and Orient at the centre. The British fleet came up in the evening, with Swiftsure and Alexander out of sight to the west.",
+   "quote": "Brueys ordered his thirteen ships of the line to form up in a line of battle following the northeastern edge of the shoals to the south of the island",
+   "at": {
+    "fvan": [
+     32,
+     18.5,
+     36
+    ],
+    "ffrank": [
+     42.3,
+     25.8,
+     36
+    ],
+    "forient": [
+     48,
+     30,
+     36
+    ],
+    "ftonn": [
+     53.7,
+     34.2,
+     36
+    ],
+    "fcentre": [
+     60.3,
+     39,
+     36
+    ],
+    "frear": [
+     67.5,
+     44.5,
+     36
+    ],
+    "binner": [
+     46,
+     14,
+     255
+    ],
+    "bout": [
+     58,
+     11,
+     255
+    ],
+    "bbel": [
+     68,
+     9,
+     255
+    ],
+    "bmaj": [
+     77,
+     7,
+     255
+    ],
+    "culloden": [
+     87,
+     6,
+     255
+    ],
+    "late": [
+     32,
+     10,
+     255
+    ]
+   },
+   "state": {
+    "late": "hidden"
+   }
+  },
+  {
+   "title": "Goliath and Zealous cross the head of the line",
+   "when": "From 18:30",
+   "text": "Foley saw a gap between Guerrier and the shoal and took Goliath through it, and Zealous followed. Orion, Theseus and Audacious also passed inside the line, which was ready to fight only on its seaward side.",
+   "quote": "On his own initiative, Foley decided to exploit this tactical error and changed his angle of approach to sail through the gap.",
+   "at": {
+    "binner": [
+     34.6,
+     25.2,
+     36
+    ]
+   },
+   "hits": [
+    [
+     "binner",
+     "fvan"
+    ],
+    [
+     "binner",
+     "ffrank",
+     0.1
+    ]
+   ]
+  },
+  {
+   "title": "The seaward ships anchor and Culloden grounds",
+   "when": "18:40",
+   "text": "Vanguard, Minotaur and Defence anchored on the seaward side of the French van, which was now caught on both sides. Bellerophon and Majestic went on to the French centre. Culloden ran onto the shoal near Aboukir Island.",
+   "quote": "With the French vanguard now heavily outnumbered, the following British ships, HMS Bellerophon and HMS Majestic, passed by the melee and advanced on the so far unengaged French centre.",
+   "at": {
+    "bout": [
+     41,
+     17,
+     216
+    ],
+    "bbel": [
+     53.5,
+     24.5,
+     216
+    ],
+    "bmaj": [
+     61.5,
+     30.5,
+     216
+    ],
+    "culloden": [
+     17.5,
+     8,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "bout",
+     "fvan"
+    ],
+    [
+     "binner",
+     "fvan"
+    ],
+    [
+     "bbel",
+     "forient"
+    ],
+    [
+     "bmaj",
+     "ftonn"
+    ]
+   ]
+  },
+  {
+   "title": "Bellerophon drifts out and the last ships join",
+   "when": "From 19:50",
+   "text": "Bellerophon, battered by Orient, cut her anchor cables at 20:20 and drifted away from the fight. Swiftsure and Alexander came up in the dark and opened fire on Orient and Franklin.",
+   "quote": "Captain Darby recognised that his position was untenable and ordered the anchor cables cut at 20:20.",
+   "at": {
+    "bbel": [
+     64,
+     16,
+     36
+    ],
+    "late": [
+     50,
+     18,
+     216
+    ]
+   },
+   "how": {
+    "bbel": "retreat"
+   },
+   "state": {
+    "late": "shown"
+   },
+   "hits": [
+    [
+     "late",
+     "forient"
+    ],
+    [
+     "bmaj",
+     "ftonn"
+    ]
+   ]
+  },
+  {
+   "title": "The French van surrenders",
+   "when": "By 21:25",
+   "text": "Guerrier, Conquérant and Spartiate struck their colours, and Aquilon was dismasted and its officers surrendered at 21:25. Peuple Souverain had already cut its cable and drifted south, and surrendered in the night.",
+   "quote": "by 21:25 the French ship was dismasted and battered, Captain Thévenard killed and his junior officers forced to surrender",
+   "state": {
+    "fvan": "destroyed"
+   },
+   "hits": [
+    [
+     "binner",
+     "fvan"
+    ],
+    [
+     "bout",
+     "fvan"
+    ]
+   ]
+  },
+  {
+   "title": "Orient explodes and the centre gives way",
+   "when": "21:00 to 22:10",
+   "text": "A fire on Orient reached her magazines at 22:00 and the ship blew up. Tonnant, Heureux and Mercure had already cut their cables and drifted south. Franklin fought on after the lull and was forced to surrender.",
+   "quote": "At 22:00 the fire reached the magazines, and the Orient was destroyed by a massive explosion.",
+   "at": {
+    "ftonn": [
+     51.5,
+     38.5,
+     36
+    ],
+    "fcentre": [
+     58,
+     43.5,
+     36
+    ]
+   },
+   "how": {
+    "ftonn": "retreat",
+    "fcentre": "retreat"
+   },
+   "state": {
+    "forient": "destroyed",
+    "ffrank": "destroyed"
+   },
+   "hits": [
+    [
+     "late",
+     "forient"
+    ],
+    [
+     "bout",
+     "ffrank"
+    ]
+   ]
+  },
+  {
+   "title": "The French rear stands out to sea",
+   "when": "04:00 to 11:00 on 2 August",
+   "text": "Firing began again between the French southern ships and Alexander and Majestic. Heureux and Mercure had drifted onto the shoal and surrendered, Tonnant was driven ashore, and the surviving French ships stood out to sea.",
+   "quote": "The surviving French ships of the line, covering their retreat with gunfire, gradually pulled to the east away from the shore at 06:00.",
+   "at": {
+    "late": [
+     65,
+     37.5,
+     216
+    ],
+    "fcentre": [
+     55,
+     49.5,
+     36
+    ],
+    "ftonn": [
+     50.5,
+     44,
+     36
+    ],
+    "frear": [
+     84,
+     36,
+     70
+    ]
+   },
+   "how": {
+    "frear": "retreat"
+   },
+   "state": {
+    "fcentre": "destroyed",
+    "ftonn": "destroyed"
+   },
+   "hits": [
+    [
+     "bmaj",
+     "frear",
+     -0.2
+    ],
+    [
+     "late",
+     "frear"
+    ],
+    [
+     "late",
+     "fcentre"
+    ]
+   ]
+  }
+ ]
+}

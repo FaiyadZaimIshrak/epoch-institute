@@ -6765,5 +6765,409 @@ var SECTION_IMAGES = {
     reception:{slug:"emperor-xuanzong-of-tang",name:"Emperor Xuanzong of Tang",img:"/images/encyclopedia/emperor-xuanzong-of-tang.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E6%9D%8E%E9%9A%86%E5%9F%BA%E5%83%8F.jpg"},
     survival:{slug:"mogao-caves",name:"Mogao Caves",img:"/images/encyclopedia/mogao-caves.jpg",artist:"xiquinhosilva",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Mogao_Caves_(54376969262).jpg"},
     legacy:{slug:"zhuangzi",name:"Zhuangzi",img:"/images/encyclopedia/zhuangzi.jpg",artist:"Hua Zili (華祖立)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E7%8E%84%E9%96%80%E5%8D%81%E5%AD%90%E5%9C%96_%E8%8E%8A%E5%AD%90.jpg"}
+  },
+  "Battle of Actium": {
+    background:{slug:"mark-antony",name:"Mark Antony",img:"/images/encyclopedia/mark-antony.jpg",artist:"Byzantium565",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Octavian_and_Antony_denarius_(obverse).jpg"},
+    forces:{slug:"marcus-vipsanius-agrippa",name:"Marcus Vipsanius Agrippa",img:"/images/encyclopedia/marcus-vipsanius-agrippa.jpg",artist:"",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Agrippa_Gabii_Louvre_Ma1208.jpg"},
+    course:{slug:"cleopatra-vii",name:"Cleopatra VII",img:"/images/encyclopedia/cleopatra-vii.jpg",artist:"Louis le Grand",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kleopatra-VII.-Altes-Museum-Berlin1.jpg"},
+    aftermath:{slug:"caesarion",name:"Caesarion",img:"/images/encyclopedia/caesarion.jpg",artist:"carolemage (Flickr)",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Caesarion_granite_head.jpg"},
+    sources:{slug:"plutarch",name:"Plutarch",img:"/images/encyclopedia/plutarch.jpg",artist:"Zde",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_a_philosopher,_maybe_Plutarch,_2nd_century_BC,_AM_Delphi,_0135.jpg"}
+  },
+  "Battle of al-Qadisiyyah": {
+    background:{slug:"yazdegerd-iii",name:"Yazdegerd III",img:"/images/encyclopedia/yazdegerd-iii.jpg",artist:"Classical Numismatic Group; [1]",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Coin_of_the_Sasanian_king_Yazdegerd_III,_651_mint_(Cropped).jpg"},
+    forces:{slug:"rostam-farrokhzad",name:"Rostam Farrokhzad",img:"/images/encyclopedia/rostam-farrokhzad.jpg",artist:"Darvîsh 'Abdî",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rustam,_Yazdigird%27s_general,_slain_by_Sa%27d,_the_son_of_Vaqqas_the_Arab_-_The_New_York_Public_Library_Digital_Collections_(cropped).jpg"},
+    sources:{slug:"heraclius",name:"Heraclius",img:"/images/encyclopedia/heraclius.jpg",artist:"Classical Numismatic Group",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Heraclius_solidus.jpg"}
+  },
+  "Battle of Alarcos": {
+    background:{slug:"alfonso-viii",name:"Alfonso VIII",img:"/images/encyclopedia/alfonso-viii.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alfons8_Tumbo.jpg"},
+    forces:{slug:"alfonso-ix-of-leon",name:"Alfonso IX of León",img:"/images/encyclopedia/alfonso-ix-of-leon.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Adeffonsus,_king_of_Galicia_and_Leon_(detail).jpg"},
+    legacy:{slug:"muhammad-al-nasir",name:"Muhammad al-Nasir",img:"/images/encyclopedia/muhammad-al-nasir.jpg",artist:"LouisAragon",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Gold_coin_of_Almohad_ruler_Abu_%27Abd_Allah_Muhammad_(r._1199-1213).jpg"}
+  },
+  "Battle of Alesia": {
+    background:{slug:"julius-caesar",name:"Julius Caesar",img:"/images/encyclopedia/julius-caesar.jpg",artist:"Ángel M. Felicísimo from Mérida, España",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Retrato_de_Julio_C%C3%A9sar_(26724093101)_(cropped).jpg"},
+    forces:{slug:"vercingetorix",name:"Vercingetorix",img:"/images/encyclopedia/vercingetorix.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Vercing%C3%A9torix_stat%C3%A8re_Gallica_avers.jpg"},
+    sources:{slug:"plutarch",name:"Plutarch",img:"/images/encyclopedia/plutarch.jpg",artist:"Zde",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_a_philosopher,_maybe_Plutarch,_2nd_century_BC,_AM_Delphi,_0135.jpg"},
+    legacy:{slug:"napoleon-iii",name:"Napoleon III",img:"/images/encyclopedia/napoleon-iii.jpg",artist:"Alexandre Cabanel",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexandre_Cabanel_002.jpg"}
+  },
+  "Battle of Austerlitz": {
+    background:{slug:"napoleon",name:"Napoleon",img:"/images/encyclopedia/napoleon.jpg",artist:"Jacques-Louis David",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg"},
+    forces:{slug:"louis-nicolas-davout",name:"Louis-Nicolas Davout",img:"/images/encyclopedia/louis-nicolas-davout.jpg",artist:"After Pierre-Claude Gautherot / Tito Marzocchi de Bellucci",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Louis_nicolas_davout.jpg"},
+    sources:{slug:"alexander-i-of-russia",name:"Alexander I of Russia",img:"/images/encyclopedia/alexander-i-of-russia.jpg",artist:"George Dawe",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_I_of_Russia_by_G.Dawe_(1826,_Peterhof)-crop.jpg"},
+    legacy:{slug:"victor-hugo",name:"Victor Hugo",img:"/images/encyclopedia/victor-hugo.jpg",artist:"Étienne Carjat",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Victor_Hugo_by_%C3%89tienne_Carjat_1876_-_full.jpg"}
+  },
+  "Battle of Ayacucho": {
+    background:{slug:"jose-de-la-serna",name:"José de la Serna",img:"/images/encyclopedia/jose-de-la-serna.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Retrato_del_conde_de_los_Andes.jpg"},
+    forces:{slug:"jose-maria-cordova",name:"José María Córdova",img:"/images/encyclopedia/jose-maria-cordova.jpg",artist:"José María Espinosa",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jos%C3%A9_Mar%C3%ADa_C%C3%B3rdova._An%C3%B3nimo,_ca._1840._Colecci%C3%B3n_Museo_Nacional_de_Colombia._Reg._350.jpg"},
+    course:{slug:"antonio-jose-de-sucre",name:"Antonio José de Sucre",img:"/images/encyclopedia/antonio-jose-de-sucre.jpg",artist:"Arturo Michelena",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Antonio_Jos%C3%A9_de_Sucre._Michelena,_Arturo._1895,_Legislative_Palace,_La_Paz.png"},
+    legacy:{slug:"simon-bolivar",name:"Simón Bolívar",img:"/images/encyclopedia/simon-bolivar.jpg",artist:"Luis Enrique Toro Moreno (1897-1933)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sim%C3%B3n_Bol%C3%ADvar._Toro_Moreno,_Luis._1922,_Legislative_Palace,_La_Paz.png"}
+  },
+  "Battle of Boyacá": {
+    background:{slug:"simon-bolivar",name:"Simón Bolívar",img:"/images/encyclopedia/simon-bolivar.jpg",artist:"Luis Enrique Toro Moreno (1897-1933)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sim%C3%B3n_Bol%C3%ADvar._Toro_Moreno,_Luis._1922,_Legislative_Palace,_La_Paz.png"}
+  },
+  "Battle of Caporetto": {
+    background:{slug:"wilhelm-ii",name:"Wilhelm II",img:"/images/encyclopedia/wilhelm-ii.jpg",artist:"Studio of Thomas Heinrich Voigt",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kaiser_Wilhelm_II_of_Germany_-_1902_(3x4_cropped).jpg"},
+    forces:{slug:"luigi-cadorna",name:"Luigi Cadorna",img:"/images/encyclopedia/luigi-cadorna.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Luigi_Cadorna_02.jpg"},
+    aftermath:{slug:"armando-diaz",name:"Armando Diaz",img:"/images/encyclopedia/armando-diaz.jpg",artist:"Mario Nunes Vais",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Armando_Diaz_01.jpg"},
+    legacy:{slug:"david-lloyd-george",name:"David Lloyd George",img:"/images/encyclopedia/david-lloyd-george.jpg",artist:"Harris & Ewing",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:David_Lloyd_George.jpg"}
+  },
+  "Battle of Carrhae": {
+    background:{slug:"julius-caesar",name:"Julius Caesar",img:"/images/encyclopedia/julius-caesar.jpg",artist:"Ángel M. Felicísimo from Mérida, España",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Retrato_de_Julio_C%C3%A9sar_(26724093101)_(cropped).jpg"},
+    forces:{slug:"plutarch",name:"Plutarch",img:"/images/encyclopedia/plutarch.jpg",artist:"Zde",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_a_philosopher,_maybe_Plutarch,_2nd_century_BC,_AM_Delphi,_0135.jpg"},
+    aftermath:{slug:"euripides",name:"Euripides",img:"/images/encyclopedia/euripides.jpg",artist:"NikonZ7II",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Euripide_(cropped).jpg"},
+    sources:{slug:"ovid",name:"Ovid",img:"/images/encyclopedia/ovid.jpg",artist:"Lucasaw",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Ovid_by_an_anonymous_sculptor.jpg"},
+    legacy:{slug:"pompey",name:"Pompey",img:"/images/encyclopedia/pompey.jpg",artist:"Didier Descouens",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:(Venice)_Pompey_the_Great,_Museo_Archeologico_Nazionale.jpg"}
+  },
+  "Battle of Crécy": {
+    background:{slug:"hundred-years-war",name:"Hundred Years' War",img:"/images/encyclopedia/hundred-years-war.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Schlacht_von_Azincourt.jpg"}
+  },
+  "Battle of Dien Bien Phu": {
+    background:{slug:"first-indochina-war",name:"First Indochina War",img:"/images/encyclopedia/first-indochina-war.jpg",artist:"Mohamed Ajjani",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:First_Indochina_War_COLLAGE.jpg"},
+    aftermath:{slug:"pierre-mendes-france",name:"Pierre Mendès France",img:"/images/encyclopedia/pierre-mendes-france.jpg",artist:"Studio Harcourt",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mend%C3%A8s-France_Harcourt_1948.jpg"},
+    legacy:{slug:"ferhat-abbas",name:"Ferhat Abbas",img:"/images/encyclopedia/ferhat-abbas.jpg",artist:"Anefo",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Ferhat_Abbas_(cropped).jpg"}
+  },
+  "Battle of Grunwald": {
+    background:{slug:"w-adys-aw-ii-jagie-o",name:"Władysław II Jagiełło",img:"/images/encyclopedia/w-adys-aw-ii-jagie-o.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jogaila_(W%C5%82adys%C5%82aw_II).jpg"},
+    forces:{slug:"vytautas-the-great",name:"Vytautas the Great",img:"/images/encyclopedia/vytautas-the-great.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Seal_of_Vytautas_the_Great.jpg"},
+    course:{slug:"zbigniew-olesnicki",name:"Zbigniew Oleśnicki",img:"/images/encyclopedia/zbigniew-olesnicki.jpg",artist:"Jan Bąkowski (1872-1934)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Olesnicki_Zbigniew.jpg"}
+  },
+  "Battle of Guandu": {
+    legacy:{slug:"mao-zedong",name:"Mao Zedong",img:"/images/encyclopedia/mao-zedong.jpg",artist:"Chen Zhengqing (1917–1966)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mao_Zedong_1950_Portrait_(3x4_cropped)(2).jpg"}
+  },
+  "Battle of Isandlwana": {
+    background:{slug:"bartle-frere",name:"Bartle Frere",img:"/images/encyclopedia/bartle-frere.jpg",artist:"George Reid",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sir_(Henry)_Bartle_Frere,_1st_Bt_by_Sir_George_Reid.jpg"},
+    forces:{slug:"ntshingwayo-khoza",name:"Ntshingwayo Khoza",img:"/images/encyclopedia/ntshingwayo-khoza.jpg",artist:"Unknown photographer (Life time: Unknown, but late 1800s.)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Nthsingwayo_kaMahole.jpg"},
+    aftermath:{slug:"cetshwayo",name:"Cetshwayo",img:"/images/encyclopedia/cetshwayo.jpg",artist:"Alexander Bassano",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Cetshwayo_ka_Mpande,_cropped.jpg"},
+    legacy:{slug:"garnet-wolseley",name:"Garnet Wolseley",img:"/images/encyclopedia/garnet-wolseley.jpg",artist:"William Lawrence, printed and published by London Stereoscopic and Photographic Company",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Garnet_Joseph_Wolseley,_1st_Viscount_Wolseley_by_William_Lawrence.jpg"}
+  },
+  "Battle of Issus": {
+    background:{slug:"darius-iii",name:"Darius III",img:"/images/encyclopedia/darius-iii.jpg",artist:"Carole Raddato from FRANKFURT, Germany",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Darius_III_mosaic.jpg"},
+    forces:{slug:"arrian",name:"Arrian",img:"/images/encyclopedia/arrian.jpg",artist:"WikiSysop",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Arrian7.jpg"},
+    sources:{slug:"plutarch",name:"Plutarch",img:"/images/encyclopedia/plutarch.jpg",artist:"Zde",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_a_philosopher,_maybe_Plutarch,_2nd_century_BC,_AM_Delphi,_0135.jpg"},
+    legacy:{slug:"battle-of-gaugamela",name:"Battle of Gaugamela",img:"/images/encyclopedia/battle-of-gaugamela.jpg",artist:"Pietro da Cortona",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pietro_da_Cortona_-_Battle_of_Alexander_versus_Darius_-_Google_Art_Project.jpg"}
+  },
+  "Battle of Iwo Jima": {
+    aftermath:{slug:"battle-of-okinawa",name:"Battle of Okinawa",img:"/images/encyclopedia/battle-of-okinawa.jpg",artist:"Staff Sergent Walter F. Kleine",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ww2_158.jpg"}
+  },
+  "Battle of Jena–Auerstedt": {
+    background:{slug:"napoleon",name:"Napoleon",img:"/images/encyclopedia/napoleon.jpg",artist:"Jacques-Louis David",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg"},
+    forces:{slug:"louis-nicolas-davout",name:"Louis-Nicolas Davout",img:"/images/encyclopedia/louis-nicolas-davout.jpg",artist:"After Pierre-Claude Gautherot / Tito Marzocchi de Bellucci",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Louis_nicolas_davout.jpg"},
+    course:{slug:"michel-ney",name:"Michel Ney",img:"/images/encyclopedia/michel-ney.jpg",artist:"François Gérard",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Marechal_Ney.jpg"},
+    aftermath:{slug:"gebhard-leberecht-von-blucher",name:"Gebhard Leberecht von Blücher",img:"/images/encyclopedia/gebhard-leberecht-von-blucher.jpg",artist:"George Dawe",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Field_Marshal_Prince_von_Blucher.jpg"},
+    legacy:{slug:"gerhard-von-scharnhorst",name:"Gerhard von Scharnhorst",img:"/images/encyclopedia/gerhard-von-scharnhorst.jpg",artist:"Circle of Friedrich Bury",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Friedrich_Bury_-_Bildnis_des_Generals_von_Scharnhorst.jpg"}
+  },
+  "Battle of Jutland": {
+    aftermath:{slug:"winston-churchill",name:"Winston Churchill",img:"/images/encyclopedia/winston-churchill.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sir_Winston_Churchill_-_19086236948_(restored).jpg"}
+  },
+  "Battle of Kohima": {
+    background:{slug:"chiang-kai-shek",name:"Chiang Kai-shek",img:"/images/encyclopedia/chiang-kai-shek.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Chiang_Kai-shek%EF%BC%88%E8%94%A3%E4%B8%AD%E6%AD%A3%EF%BC%89.jpg"}
+  },
+  "Battle of Königgrätz": {
+    course:{slug:"wilhelm-i",name:"Wilhelm I",img:"/images/encyclopedia/wilhelm-i.jpg",artist:"Wilhelm Kuntzemüller",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kaiser_Wilhelm_I_(3x4_cropped).jpg"},
+    aftermath:{slug:"first-geneva-convention",name:"First Geneva Convention",img:"/images/encyclopedia/first-geneva-convention.jpg",artist:"Frédéric Boissonnas",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Henry_Dunant-young.jpg"},
+    legacy:{slug:"austro-prussian-war",name:"Austro-Prussian War",img:"/images/encyclopedia/austro-prussian-war.jpg",artist:"Georg Bleibtreu",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Schlacht-bei-koeniggraetz-von-georg-bleibtreu.jpg"}
+  },
+  "Battle of Kosovo": {
+    background:{slug:"stefan-dusan",name:"Stefan Dušan",img:"/images/encyclopedia/stefan-dusan.jpg",artist:"Unknown 14th century Serbian artist",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Stefan_Uro%C5%A1_IV_Du%C5%A1an_of_Serbia_Lesnovo_fresco.JPG"},
+    forces:{slug:"konstantin-dragas",name:"Konstantin Dragaš",img:"/images/encyclopedia/konstantin-dragas.jpg",artist:"RunnerTrees",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:SerbianMagnateKonstantinDragasDejanovic.jpg"},
+    aftermath:{slug:"battle-of-nicopolis",name:"Battle of Nicopolis",img:"/images/encyclopedia/battle-of-nicopolis.jpg",artist:"Sébastien Mamerot",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:NikopolisSchlacht.jpg"},
+    legacy:{slug:"archduke-franz-ferdinand-of-austria",name:"Archduke Franz Ferdinand of Austria",img:"/images/encyclopedia/archduke-franz-ferdinand-of-austria.jpg",artist:"Ferdinand Schmutzer",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ferdinand_Schmutzer_-_Franz_Ferdinand_von_%C3%96sterreich-Este,_um_1914_(cropped).jpg"}
+  },
+  "Battle of Kursk": {
+    background:{slug:"battle-of-stalingrad",name:"Battle of Stalingrad",img:"/images/encyclopedia/battle-of-stalingrad.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Расчет_советской_76,2-мм_пушки_ЗиС-3_ведет_огонь_в_Сталинграде._Ноябрь_1942_г.jpg"}
+  },
+  "Battle of Lake Trasimene": {
+    background:{slug:"hamilcar-barca",name:"Hamilcar Barca",img:"/images/encyclopedia/hamilcar-barca.jpg",artist:"Max Karl Baldamus",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Amilcare_Barca_(Ritratto).jpg"},
+    course:{slug:"polybius",name:"Polybius",img:"/images/encyclopedia/polybius.jpg",artist:"Jona Lendering, Livius Onderwijs",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Stele_des_Polybios.jpg"},
+    legacy:{slug:"battle-of-cannae",name:"Battle of Cannae",img:"/images/encyclopedia/battle-of-cannae.jpg",artist:"John Trumbull",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Death_of_Paulus_Aemilius_at_the_Battle_of_Cannae_(Yale_University_Art_Gallery_scan).jpg"}
+  },
+  "Battle of Leipzig": {
+    background:{slug:"napoleon",name:"Napoleon",img:"/images/encyclopedia/napoleon.jpg",artist:"Jacques-Louis David",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg"},
+    forces:{slug:"karl-philipp-prince-of-schwarzenberg",name:"Karl Philipp, Prince of Schwarzenberg",img:"/images/encyclopedia/karl-philipp-prince-of-schwarzenberg.jpg",artist:"Unidentified painter",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Karel_Filip_Schwarzenberg.jpg"},
+    course:{slug:"gebhard-leberecht-von-blucher",name:"Gebhard Leberecht von Blücher",img:"/images/encyclopedia/gebhard-leberecht-von-blucher.jpg",artist:"George Dawe",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Field_Marshal_Prince_von_Blucher.jpg"},
+    sources:{slug:"alexander-i-of-russia",name:"Alexander I of Russia",img:"/images/encyclopedia/alexander-i-of-russia.jpg",artist:"George Dawe",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_I_of_Russia_by_G.Dawe_(1826,_Peterhof)-crop.jpg"},
+    legacy:{slug:"napoleonic-wars",name:"Napoleonic Wars",img:"/images/encyclopedia/napoleonic-wars.jpg",artist:"Ruedi33a",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Napoleonic_Wars_(revision).jpg"}
+  },
+  "Battle of Leuctra": {
+    background:{slug:"corinthian-war",name:"Corinthian War",img:"/images/encyclopedia/corinthian-war.jpg",artist:"Tilemahos Efthimiadis from Athens, Greece",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Grave_relief_of_Dexileos,_son_of_Lysanias,_of_Thorikos_(Ca._390_BC)_(4454389225).jpg"},
+    forces:{slug:"diodorus-siculus",name:"Diodorus Siculus",img:"/images/encyclopedia/diodorus-siculus.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Diodoro_siculo_-_storico_di_Agira.jpg"},
+    course:{slug:"xenophon",name:"Xenophon",img:"/images/encyclopedia/xenophon.jpg",artist:"Carole Raddato",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Xenophon.jpg"},
+    aftermath:{slug:"aristotle",name:"Aristotle",img:"/images/encyclopedia/aristotle.jpg",artist:"After Lysippos",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Aristotle_Altemps_Inv8575.jpg"},
+    sources:{slug:"plutarch",name:"Plutarch",img:"/images/encyclopedia/plutarch.jpg",artist:"Zde",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_a_philosopher,_maybe_Plutarch,_2nd_century_BC,_AM_Delphi,_0135.jpg"},
+    legacy:{slug:"alexander-the-great",name:"Alexander the Great",img:"/images/encyclopedia/alexander-the-great.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_Mosaic_detail_of_Alexander_the_Great_(3x4_cropped).jpg"}
+  },
+  "Battle of Madagascar": {
+    background:{slug:"ranavalona-iii",name:"Ranavalona III",img:"/images/encyclopedia/ranavalona-iii.jpg",artist:"J. Geiser. Algier phot.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ranavalona.jpg"}
+  },
+  "Battle of Magnesia": {
+    background:{slug:"philip-v-of-macedon",name:"Philip V of Macedon",img:"/images/encyclopedia/philip-v-of-macedon.jpg",artist:"Livioandronico2013",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Philip_V_of_Macedon_in_Palazzo_Massimo_(Rome).jpg"}
+  },
+  "Battle of Manzikert": {
+    background:{slug:"romanos-iv-diogenes",name:"Romanos IV Diogenes",img:"/images/encyclopedia/romanos-iv-diogenes.jpg",artist:"Unknown / Photography: CNG coins",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Romanus_IV_coin_crop.png"}
+  },
+  "Battle of Marengo": {
+    background:{slug:"andre-massena",name:"André Masséna",img:"/images/encyclopedia/andre-massena.jpg",artist:"Edme-Adolphe Fontaine / After Antoine-Jean Gros",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Andr%C3%A9_Mass%C3%A9na_(Fontaine_et_Gros).jpg"},
+    sources:{slug:"napoleon",name:"Napoleon",img:"/images/encyclopedia/napoleon.jpg",artist:"Jacques-Louis David",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg"},
+    legacy:{slug:"battle-of-waterloo",name:"Battle of Waterloo",img:"/images/encyclopedia/battle-of-waterloo.jpg",artist:"William Sadler",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Waterloo_1815.PNG"}
+  },
+  "Battle of Marignano": {
+    background:{slug:"ludovico-sforza",name:"Ludovico Sforza",img:"/images/encyclopedia/ludovico-sforza.jpg",artist:"Unknown Master, Italian (active 1490-1520 in Lombardy)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pala_Sforzesca_-_detail_01.jpg"},
+    forces:{slug:"charles-iii-duke-of-bourbon",name:"Charles III, Duke of Bourbon",img:"/images/encyclopedia/charles-iii-duke-of-bourbon.jpg",artist:"Jean Clouet",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Connetable_Bourbon.jpg"},
+    aftermath:{slug:"pope-leo-x",name:"Pope Leo X",img:"/images/encyclopedia/pope-leo-x.jpg",artist:"Francesco Bini",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Raffaello,_ritratto_di_papa_leone_X_tra_i_cardinali_luigi_de'_rossi_e_giulio_de'_medici,_1518,_03.jpg"},
+    legacy:{slug:"napoleon",name:"Napoleon",img:"/images/encyclopedia/napoleon.jpg",artist:"Jacques-Louis David",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg"}
+  },
+  "Battle of Midway": {
+    background:{slug:"attack-on-pearl-harbor",name:"Attack on Pearl Harbor",img:"/images/encyclopedia/attack-on-pearl-harbor.jpg",artist:"Imperial Japanese Navy",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Attack_on_Pearl_Harbor_Japanese_planes_view.jpg"}
+  },
+  "Battle of Mikatagahara": {
+    background:{slug:"oda-nobunaga",name:"Oda Nobunaga",img:"/images/encyclopedia/oda-nobunaga.jpg",artist:"狩野宗秀 (Kanō Sōshū, 1551 - 1601)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Odanobunaga.jpg"},
+    course:{slug:"honda-tadakatsu",name:"Honda Tadakatsu",img:"/images/encyclopedia/honda-tadakatsu.jpg",artist:"Unknown",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait-Honda-Tadakatsu.jpg"},
+    legacy:{slug:"takeda-shingen",name:"Takeda Shingen",img:"/images/encyclopedia/takeda-shingen.jpg",artist:"Unknown",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Takeda_Harunobu.jpg"}
+  },
+  "Battle of Mohács": {
+    background:{slug:"francis-i-of-france",name:"Francis I of France",img:"/images/encyclopedia/francis-i-of-france.jpg",artist:"Jean Clouet",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:François_Ier_Louvre.jpg"},
+    forces:{slug:"john-zapolya",name:"John Zápolya",img:"/images/encyclopedia/john-zapolya.jpg",artist:"Erhard Schön (1491-1542)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Szapolyai_J%C3%A1nos_fametszet.jpg"}
+  },
+  "Battle of Mycale": {
+    background:{slug:"xerxes-i",name:"Xerxes I",img:"/images/encyclopedia/xerxes-i.jpg",artist:"Darafsh",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:National_Museum_of_Iran_Darafsh_(785).JPG"},
+    forces:{slug:"herodotus",name:"Herodotus",img:"/images/encyclopedia/herodotus.jpg",artist:"",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Marble_bust_of_Herodotos_MET_DT11742_(cropped).jpg"},
+    course:{slug:"battle-of-plataea",name:"Battle of Plataea",img:"/images/encyclopedia/battle-of-plataea.jpg",artist:"John Steeple Davis",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Scene_of_the_Battle_of_Plataea.jpg"},
+    sources:{slug:"diodorus-siculus",name:"Diodorus Siculus",img:"/images/encyclopedia/diodorus-siculus.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Diodoro_siculo_-_storico_di_Agira.jpg"},
+    legacy:{slug:"demosthenes",name:"Demosthenes",img:"/images/encyclopedia/demosthenes.jpg",artist:"Polyeuctus",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Demosthenes_Polyeuctos_Louvre_Ma237_n01.jpg"}
+  },
+  "Battle of Myriokephalon": {
+    background:{slug:"manuel-i-komnenos",name:"Manuel I Komnenos",img:"/images/encyclopedia/manuel-i-komnenos.jpg",artist:"Uploader: Tokle",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Manuel_I_Comnenus.jpg"},
+    forces:{slug:"bela-iii-of-hungary",name:"Béla III of Hungary",img:"/images/encyclopedia/bela-iii-of-hungary.jpg",artist:"Márk Kálti",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:K%C3%A9pes_kr%C3%B3nika_-_122.oldal_-_III._B%C3%A9la_kir%C3%A1ly.jpg"},
+    aftermath:{slug:"battle-of-manzikert",name:"Battle of Manzikert",img:"/images/encyclopedia/battle-of-manzikert.jpg",artist:"Rohan Master",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:131_Bataille_de_Malazgirt.jpg"},
+    sources:{slug:"niketas-choniates",name:"Niketas Choniates",img:"/images/encyclopedia/niketas-choniates.jpg",artist:"Buchhändler",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Niketas_Choniates.jpg"}
+  },
+  "Battle of Nagashino": {
+    background:{slug:"oda-nobunaga",name:"Oda Nobunaga",img:"/images/encyclopedia/oda-nobunaga.jpg",artist:"狩野宗秀 (Kanō Sōshū, 1551 - 1601)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Odanobunaga.jpg"},
+    aftermath:{slug:"takeda-shingen",name:"Takeda Shingen",img:"/images/encyclopedia/takeda-shingen.jpg",artist:"Unknown",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Takeda_Harunobu.jpg"}
+  },
+  "Battle of Navarino": {
+    background:{slug:"muhammad-ali-of-egypt",name:"Muhammad Ali of Egypt",img:"/images/encyclopedia/muhammad-ali-of-egypt.jpg",artist:"Auguste Couder",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:ModernEgypt,_Muhammad_Ali_by_Auguste_Couder,_BAP_17996.jpg"},
+    legacy:{slug:"russo-turkish-war-1828-1829",name:"Russo-Turkish War (1828–1829)",img:"/images/encyclopedia/russo-turkish-war-1828-1829.jpg",artist:"January Suchodolski",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:January_Suchodolski_-_Akhaltsikhe_siege.jpg"}
+  },
+  "Battle of Nicopolis": {
+    background:{slug:"sigismund-holy-roman-emperor",name:"Sigismund, Holy Roman Emperor",img:"/images/encyclopedia/sigismund-holy-roman-emperor.jpg",artist:"Formerly attributed to Pisanello",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pisanello_024.jpg"},
+    forces:{slug:"louis-i-duke-of-orleans",name:"Louis I, Duke of Orléans",img:"/images/encyclopedia/louis-i-duke-of-orleans.jpg",artist:"Possibly Colart de Laon / Colart de Laon",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Attribu%C3%A9_%C3%A0_Colart_de_Laon_-_Louis_d%27Orl%C3%A9ans_(detail_de_la_Pri%C3%A8re_dans_les_jardins_des_oliviers).jpg"},
+    sources:{slug:"jean-froissart",name:"Jean Froissart",img:"/images/encyclopedia/jean-froissart.jpg",artist:"Jacques Le Boucq",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jean-Froissart.jpg"},
+    legacy:{slug:"crusade-of-varna",name:"Crusade of Varna",img:"/images/encyclopedia/crusade-of-varna.jpg",artist:"Jan Matejko",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_of_Varna_1444.PNG"}
+  },
+  "Battle of Okinawa": {
+    legacy:{slug:"atomic-bombings-of-hiroshima-and-nagasaki",name:"Atomic bombings of Hiroshima and Nagasaki",img:"/images/encyclopedia/atomic-bombings-of-hiroshima-and-nagasaki.jpg",artist:"George R. Caron / Charles Levy",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Atomic_bombing_of_Japan.jpg"}
+  },
+  "Battle of Oriskany": {
+    forces:{slug:"joseph-brant",name:"Joseph Brant",img:"/images/encyclopedia/joseph-brant.jpg",artist:"Gilbert Stuart",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Joseph_Brant_2.jpg"}
+  },
+  "Battle of Plataea": {
+    background:{slug:"xerxes-i",name:"Xerxes I",img:"/images/encyclopedia/xerxes-i.jpg",artist:"Darafsh",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:National_Museum_of_Iran_Darafsh_(785).JPG"},
+    forces:{slug:"herodotus",name:"Herodotus",img:"/images/encyclopedia/herodotus.jpg",artist:"",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Marble_bust_of_Herodotos_MET_DT11742_(cropped).jpg"},
+    sources:{slug:"diodorus-siculus",name:"Diodorus Siculus",img:"/images/encyclopedia/diodorus-siculus.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Diodoro_siculo_-_storico_di_Agira.jpg"},
+    legacy:{slug:"alexander-the-great",name:"Alexander the Great",img:"/images/encyclopedia/alexander-the-great.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_Mosaic_detail_of_Alexander_the_Great_(3x4_cropped).jpg"}
+  },
+  "Battle of Poitiers (1356)": {
+    background:{slug:"edward-the-black-prince",name:"Edward the Black Prince",img:"/images/encyclopedia/edward-the-black-prince.jpg",artist:"Josep Renalias",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:TombaPrincepNegre_(cropped).JPG"},
+    legacy:{slug:"hundred-years-war",name:"Hundred Years' War",img:"/images/encyclopedia/hundred-years-war.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Schlacht_von_Azincourt.jpg"}
+  },
+  "Battle of Poltava": {
+    background:{slug:"charles-xii-of-sweden",name:"Charles XII of Sweden",img:"/images/encyclopedia/charles-xii-of-sweden.jpg",artist:"Workshop of Hyacinthe Rigaud",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Copy_Charles_XII_-_Nationalmuseum_-_17886.png"},
+    aftermath:{slug:"voltaire",name:"Voltaire",img:"/images/encyclopedia/voltaire.jpg",artist:"Nicolas de Largillière",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Nicolas_de_Largilli%C3%A8re_-_Portrait_de_Voltaire_(1694-1778)_en_1718_-_P208_-_mus%C3%A9e_Carnavalet_-_5_(cropped).jpg"},
+    legacy:{slug:"great-northern-war",name:"Great Northern War",img:"/images/encyclopedia/great-northern-war.jpg",artist:"Imonoz",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Great_Northern_War_Collage.jpg"}
+  },
+  "Battle of Puebla": {
+    background:{slug:"porfirio-diaz",name:"Porfirio Díaz",img:"/images/encyclopedia/porfirio-diaz.jpg",artist:"Aurelio Escobar Castellanos, Archive",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Porfirio_diaz.jpg"},
+    aftermath:{slug:"napoleon-iii",name:"Napoleon III",img:"/images/encyclopedia/napoleon-iii.jpg",artist:"Alexandre Cabanel",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexandre_Cabanel_002.jpg"},
+    legacy:{slug:"franklin-d-roosevelt",name:"Franklin D. Roosevelt",img:"/images/encyclopedia/franklin-d-roosevelt.jpg",artist:"Leon Perskie",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:FDR-1944-Campaign-Portrait_(3x4_retouched,_cropped).jpg"}
+  },
+  "Battle of Pydna": {
+    background:{slug:"perseus-of-macedon",name:"Perseus of Macedon",img:"/images/encyclopedia/perseus-of-macedon.jpg",artist:"CNG Coins",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Perseus_of_Macedon_coin_cropped.png"},
+    aftermath:{slug:"scipio-aemilianus",name:"Scipio Aemilianus",img:"/images/encyclopedia/scipio-aemilianus.jpg",artist:"Carole Raddato from FRANKFURT, Germany",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Bronze_statue_of_a_Hellenistic_prince,_1st_half_of_2nd_century_BC,_found_on_the_Quirinal_in_Rome,_Palazzo_Massimo_alle_Terme,_Rome_(31479801364).jpg"},
+    sources:{slug:"plutarch",name:"Plutarch",img:"/images/encyclopedia/plutarch.jpg",artist:"Zde",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_a_philosopher,_maybe_Plutarch,_2nd_century_BC,_AM_Delphi,_0135.jpg"},
+    legacy:{slug:"alexander-the-great",name:"Alexander the Great",img:"/images/encyclopedia/alexander-the-great.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexander_Mosaic_detail_of_Alexander_the_Great_(3x4_cropped).jpg"}
+  },
+  "Battle of Raphia": {
+    background:{slug:"ptolemy-iv-philopator",name:"Ptolemy IV Philopator",img:"/images/encyclopedia/ptolemy-iv-philopator.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Octadrachm_Ptolemy_IV_BM_CMBMC33.jpg"},
+    forces:{slug:"polybius",name:"Polybius",img:"/images/encyclopedia/polybius.jpg",artist:"Jona Lendering, Livius Onderwijs",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Stele_des_Polybios.jpg"}
+  },
+  "Battle of Salamis": {
+    background:{slug:"darius-i",name:"Darius I",img:"/images/encyclopedia/darius-i.jpg",artist:"Rumlu",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Darius_I.jpg"},
+    forces:{slug:"herodotus",name:"Herodotus",img:"/images/encyclopedia/herodotus.jpg",artist:"",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Marble_bust_of_Herodotos_MET_DT11742_(cropped).jpg"},
+    course:{slug:"aeschylus",name:"Aeschylus",img:"/images/encyclopedia/aeschylus.jpg",artist:"Zde",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Herma_of_Aeschylus,_Klas08.jpg"},
+    aftermath:{slug:"xerxes-i",name:"Xerxes I",img:"/images/encyclopedia/xerxes-i.jpg",artist:"Darafsh",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:National_Museum_of_Iran_Darafsh_(785).JPG"},
+    sources:{slug:"plutarch",name:"Plutarch",img:"/images/encyclopedia/plutarch.jpg",artist:"Zde",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_a_philosopher,_maybe_Plutarch,_2nd_century_BC,_AM_Delphi,_0135.jpg"},
+    legacy:{slug:"battle-of-plataea",name:"Battle of Plataea",img:"/images/encyclopedia/battle-of-plataea.jpg",artist:"John Steeple Davis",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Scene_of_the_Battle_of_Plataea.jpg"}
+  },
+  "Battle of San Jacinto": {
+    background:{slug:"antonio-lopez-de-santa-anna",name:"Antonio López de Santa Anna",img:"/images/encyclopedia/antonio-lopez-de-santa-anna.jpg",artist:"Meade Brothers",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Antonio_Lopez_de_Santa_Anna_c1853.png"},
+    forces:{slug:"mirabeau-b-lamar",name:"Mirabeau B. Lamar",img:"/images/encyclopedia/mirabeau-b-lamar.jpg",artist:"Unknown author; derivative work by Oldag07",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mirabeaulamar_2.jpg"},
+    legacy:{slug:"pastry-war",name:"Pastry War",img:"/images/encyclopedia/pastry-war.jpg",artist:"Horace Vernet",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%C3%89pisode_de_l%27exp%C3%A9dition_du_Mexique_en_1838_(cropped).jpg"}
+  },
+  "Battle of Sedan (1870)": {
+    background:{slug:"napoleon-iii",name:"Napoleon III",img:"/images/encyclopedia/napoleon-iii.jpg",artist:"Alexandre Cabanel",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alexandre_Cabanel_002.jpg"},
+    forces:{slug:"wilhelm-i",name:"Wilhelm I",img:"/images/encyclopedia/wilhelm-i.jpg",artist:"Wilhelm Kuntzemüller",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kaiser_Wilhelm_I_(3x4_cropped).jpg"}
+  },
+  "Battle of Shanghai": {
+    background:{slug:"marco-polo-bridge-incident",name:"Marco Polo Bridge Incident",img:"/images/encyclopedia/marco-polo-bridge-incident.jpg",artist:"Sweeper tamonten",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Marco_Polo_Bridge_air_view.PNG"},
+    forces:{slug:"chiang-kai-shek",name:"Chiang Kai-shek",img:"/images/encyclopedia/chiang-kai-shek.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Chiang_Kai-shek%EF%BC%88%E8%94%A3%E4%B8%AD%E6%AD%A3%EF%BC%89.jpg"}
+  },
+  "Battle of Tarawa": {
+    background:{slug:"guadalcanal-campaign",name:"Guadalcanal campaign",img:"/images/encyclopedia/guadalcanal-campaign.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Marines_rest_in_the_field_on_Guadalcanal.jpg"}
+  },
+  "Battle of Thapsus": {
+    background:{slug:"julius-caesar",name:"Julius Caesar",img:"/images/encyclopedia/julius-caesar.jpg",artist:"Ángel M. Felicísimo from Mérida, España",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Retrato_de_Julio_C%C3%A9sar_(26724093101)_(cropped).jpg"},
+    aftermath:{slug:"plutarch",name:"Plutarch",img:"/images/encyclopedia/plutarch.jpg",artist:"Zde",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_a_philosopher,_maybe_Plutarch,_2nd_century_BC,_AM_Delphi,_0135.jpg"},
+    legacy:{slug:"pompey",name:"Pompey",img:"/images/encyclopedia/pompey.jpg",artist:"Didier Descouens",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:(Venice)_Pompey_the_Great,_Museo_Archeologico_Nazionale.jpg"}
+  },
+  "Battle of the Bulge": {
+    background:{slug:"dwight-d-eisenhower",name:"Dwight D. Eisenhower",img:"/images/encyclopedia/dwight-d-eisenhower.jpg",artist:"White House",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Dwight_D._Eisenhower,_official_photo_portrait,_May_29,_1959_(cropped)(3).jpg"},
+    sources:{slug:"ambrose",name:"Ambrose",img:"/images/encyclopedia/ambrose.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:AmbroseOfMilan_(cropped).jpg"},
+    legacy:{slug:"winston-churchill",name:"Winston Churchill",img:"/images/encyclopedia/winston-churchill.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sir_Winston_Churchill_-_19086236948_(restored).jpg"}
+  },
+  "Battle of the Catalaunian Plains": {
+    background:{slug:"valentinian-iii",name:"Valentinian III",img:"/images/encyclopedia/valentinian-iii.jpg",artist:"Tony Querrec (photo)",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Valentinian_III,_Louvre_(cropped).jpg"},
+    forces:{slug:"notitia-dignitatum",name:"Notitia Dignitatum",img:"/images/encyclopedia/notitia-dignitatum.jpg",artist:"Unknown author",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Bodl_Canon.Misc.378_roll159B_frame28.jpg"},
+    course:{slug:"avitus",name:"Avitus",img:"/images/encyclopedia/avitus.jpg",artist:"Numismatica Ars Classica NAC AG",licence:"CC BY-SA 3.0 ch",source:"https://commons.wikimedia.org/wiki/File:Solidus_Avitus_Arles_(obverse).jpg"},
+    aftermath:{slug:"gregory-of-tours",name:"Gregory of Tours",img:"/images/encyclopedia/gregory-of-tours.jpg",artist:"",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Gregory_of_Tours_cour_Napoleon_Louvre.jpg"},
+    sources:{slug:"cassiodorus",name:"Cassiodorus",img:"/images/encyclopedia/cassiodorus.jpg",artist:"Fulda workshop",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Gesta_Theodorici_-_Flavius_Magnus_Aurelius_Cassiodorus_(c_485_-_c_580).jpg"},
+    legacy:{slug:"edward-gibbon",name:"Edward Gibbon",img:"/images/encyclopedia/edward-gibbon.jpg",artist:"Henry Walton",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Edward_Gibbon_by_Henry_Walton_cleaned.jpg"}
+  },
+  "Battle of the Granicus": {
+    background:{slug:"darius-iii",name:"Darius III",img:"/images/encyclopedia/darius-iii.jpg",artist:"Carole Raddato from FRANKFURT, Germany",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Darius_III_mosaic.jpg"},
+    forces:{slug:"arrian",name:"Arrian",img:"/images/encyclopedia/arrian.jpg",artist:"WikiSysop",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Arrian7.jpg"},
+    aftermath:{slug:"plutarch",name:"Plutarch",img:"/images/encyclopedia/plutarch.jpg",artist:"Zde",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_a_philosopher,_maybe_Plutarch,_2nd_century_BC,_AM_Delphi,_0135.jpg"},
+    sources:{slug:"diodorus-siculus",name:"Diodorus Siculus",img:"/images/encyclopedia/diodorus-siculus.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Diodoro_siculo_-_storico_di_Agira.jpg"},
+    legacy:{slug:"lysippus",name:"Lysippus",img:"/images/encyclopedia/lysippus.jpg",artist:"Mark Landon",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Statue_base_with_signature_of_Lysippos,_Corinth_(inv._I_29;_Corinth_VIII.1,_34).jpg"}
+  },
+  "Battle of the Hydaspes": {
+    background:{slug:"porus",name:"Porus",img:"/images/encyclopedia/porus.jpg",artist:"User PHGCOM",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Porus_alexander_coin.png"},
+    forces:{slug:"arrian",name:"Arrian",img:"/images/encyclopedia/arrian.jpg",artist:"WikiSysop",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Arrian7.jpg"}
+  },
+  "Battle of the Little Bighorn": {
+    background:{slug:"sitting-bull",name:"Sitting Bull",img:"/images/encyclopedia/sitting-bull.jpg",artist:"David F. Barry, Photographer, Bismarck, Dakota Territory",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sitting_Bull_by_D_F_Barry_ca_1883_Dakota_Territory.jpg"},
+    forces:{slug:"george-armstrong-custer",name:"George Armstrong Custer",img:"/images/encyclopedia/george-armstrong-custer.jpg",artist:"Photographer is Mathew Brady (died 1896) and his field staff",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Custer_Bvt_MG_Geo_A_1865_LC-BH831-365-crop.jpg"}
+  },
+  "Battle of the Nile": {
+    background:{slug:"napoleon",name:"Napoleon",img:"/images/encyclopedia/napoleon.jpg",artist:"Jacques-Louis David",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg"},
+    forces:{slug:"horatio-nelson",name:"Horatio Nelson",img:"/images/encyclopedia/horatio-nelson.jpg",artist:"Lemuel Francis Abbott",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:HoratioNelson1.jpg"},
+    sources:{slug:"george-iii",name:"George III",img:"/images/encyclopedia/george-iii.jpg",artist:"Allan Ramsay",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Allan_Ramsay_-_King_George_III_in_coronation_robes_-_Google_Art_Project.jpg"},
+    legacy:{slug:"selim-iii",name:"Selim III",img:"/images/encyclopedia/selim-iii.jpg",artist:"Konstantin Kapıdağlı",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Konstantin_Kapidagli_002.jpg"}
+  },
+  "Battle of the Plains of Abraham": {
+    background:{slug:"james-wolfe",name:"James Wolfe",img:"/images/encyclopedia/james-wolfe.jpg",artist:"Attributed to Joseph Highmore",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:James_Wolfe.jpeg"},
+    aftermath:{slug:"battle-of-quiberon-bay",name:"Battle of Quiberon Bay",img:"/images/encyclopedia/battle-of-quiberon-bay.jpg",artist:"Richard Paton",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Battle_of_Quiberon_Bay,_20_November_1759_RMG_BHC0397.tiff"},
+    sources:{slug:"john-knox",name:"John Knox",img:"/images/encyclopedia/john-knox.jpg",artist:"Theodore Beza, Icones (1580)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Knoxbezaicones.jpg"}
+  },
+  "Battle of the Pyramids": {
+    aftermath:{slug:"horatio-nelson",name:"Horatio Nelson",img:"/images/encyclopedia/horatio-nelson.jpg",artist:"Lemuel Francis Abbott",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:HoratioNelson1.jpg"},
+    legacy:{slug:"napoleon",name:"Napoleon",img:"/images/encyclopedia/napoleon.jpg",artist:"Jacques-Louis David",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg"}
+  },
+  "Battle of the Teutoburg Forest": {
+    background:{slug:"julius-caesar",name:"Julius Caesar",img:"/images/encyclopedia/julius-caesar.jpg",artist:"Ángel M. Felicísimo from Mérida, España",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Retrato_de_Julio_C%C3%A9sar_(26724093101)_(cropped).jpg"},
+    course:{slug:"segestes",name:"Segestes",img:"/images/encyclopedia/segestes.jpg",artist:"Benjamin West",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Benjamin_West_(1738-1820)_-_The_Wife_of_Arminius_brought_captive_to_Germanicus_-_RCIN_405683_-_Royal_Collection.jpg"},
+    aftermath:{slug:"tiberius",name:"Tiberius",img:"/images/encyclopedia/tiberius.jpg",artist:"Didier Descouens",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:(Venice)_Tiberius_Portrait_of_the_%27Imperium_Maius%27_type_in_Museo_Archeologico_Nazionale.jpg"},
+    sources:{slug:"velleius-paterculus",name:"Velleius Paterculus",img:"/images/encyclopedia/velleius-paterculus.jpg",artist:"Medpro",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:F16-0039-2_(32528546593).jpg"},
+    legacy:{slug:"germanicus",name:"Germanicus",img:"/images/encyclopedia/germanicus.jpg",artist:"J. Paul Getty Museum",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Germanicus,_front_-_Getty_Museum_(2021.66).jpg"}
+  },
+  "Battle of the Trebia": {
+    background:{slug:"hamilcar-barca",name:"Hamilcar Barca",img:"/images/encyclopedia/hamilcar-barca.jpg",artist:"Max Karl Baldamus",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Amilcare_Barca_(Ritratto).jpg"},
+    forces:{slug:"polybius",name:"Polybius",img:"/images/encyclopedia/polybius.jpg",artist:"Jona Lendering, Livius Onderwijs",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Stele_des_Polybios.jpg"},
+    legacy:{slug:"battle-of-lake-trasimene",name:"Battle of Lake Trasimene",img:"/images/encyclopedia/battle-of-lake-trasimene.jpg",artist:"Joseph-Noël Sylvestre",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sylvestre_Ducar_decapite_Flaminius_(Trasimene).jpg"}
+  },
+  "Battle of the Yarmuk": {
+    background:{slug:"heraclius",name:"Heraclius",img:"/images/encyclopedia/heraclius.jpg",artist:"Classical Numismatic Group",licence:"CC BY-SA 2.5",source:"https://commons.wikimedia.org/wiki/File:Heraclius_solidus.jpg"},
+    aftermath:{slug:"true-cross",name:"True Cross",img:"/images/encyclopedia/true-cross.jpg",artist:"Giotto",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Giotto_Crucifixion.jpg"},
+    sources:{slug:"theophanes-the-confessor",name:"Theophanes the Confessor",img:"/images/encyclopedia/theophanes-the-confessor.jpg",artist:"Tzortzis Phouka",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Athonite_Icon_of_Saint_Theophanes_the_Confessor_of_Megalos_Agros_3.jpg"}
+  },
+  "Battle of Thermopylae": {
+    background:{slug:"darius-i",name:"Darius I",img:"/images/encyclopedia/darius-i.jpg",artist:"Rumlu",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Darius_I.jpg"},
+    forces:{slug:"herodotus",name:"Herodotus",img:"/images/encyclopedia/herodotus.jpg",artist:"",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Marble_bust_of_Herodotos_MET_DT11742_(cropped).jpg"},
+    course:{slug:"xerxes-i",name:"Xerxes I",img:"/images/encyclopedia/xerxes-i.jpg",artist:"Darafsh",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:National_Museum_of_Iran_Darafsh_(785).JPG"},
+    aftermath:{slug:"battle-of-plataea",name:"Battle of Plataea",img:"/images/encyclopedia/battle-of-plataea.jpg",artist:"John Steeple Davis",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Scene_of_the_Battle_of_Plataea.jpg"},
+    sources:{slug:"diodorus-siculus",name:"Diodorus Siculus",img:"/images/encyclopedia/diodorus-siculus.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Diodoro_siculo_-_storico_di_Agira.jpg"}
+  },
+  "Battle of Trafalgar": {
+    background:{slug:"napoleon",name:"Napoleon",img:"/images/encyclopedia/napoleon.jpg",artist:"Jacques-Louis David",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg"},
+    forces:{slug:"horatio-nelson",name:"Horatio Nelson",img:"/images/encyclopedia/horatio-nelson.jpg",artist:"Lemuel Francis Abbott",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:HoratioNelson1.jpg"},
+    legacy:{slug:"napoleonic-wars",name:"Napoleonic Wars",img:"/images/encyclopedia/napoleonic-wars.jpg",artist:"Ruedi33a",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Napoleonic_Wars_(revision).jpg"}
+  },
+  "Battle of Tsushima": {
+    background:{slug:"russo-japanese-war",name:"Russo-Japanese War",img:"/images/encyclopedia/russo-japanese-war.jpg",artist:"Original uploader and author was Dustandshadow at en.wikipedia",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:RUSSOJAPANESEWARIMAGE.jpg"},
+    legacy:{slug:"emperor-meiji",name:"Emperor Meiji",img:"/images/encyclopedia/emperor-meiji.jpg",artist:"Uchida Kuichi",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Meiji_Emperor_(cropped)(b).jpg"}
+  },
+  "Battle of Verdun": {
+    background:{slug:"first-battle-of-the-marne",name:"First Battle of the Marne",img:"/images/encyclopedia/first-battle-of-the-marne.jpg",artist:"German Army",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:German_soldiers_Battle_of_Marne_WWI.jpg"},
+    aftermath:{slug:"paul-von-hindenburg",name:"Paul von Hindenburg",img:"/images/encyclopedia/paul-von-hindenburg.jpg",artist:"Unknown author.",licence:"CC BY-SA 3.0 de",source:"https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-C06886,_Paul_v._Hindenburg_(cropped)(2).jpg"},
+    sources:{slug:"winston-churchill",name:"Winston Churchill",img:"/images/encyclopedia/winston-churchill.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sir_Winston_Churchill_-_19086236948_(restored).jpg"}
+  },
+  "Battle of Vienna (1683)": {
+    background:{slug:"kara-mustafa-pasha",name:"Kara Mustafa Pasha",img:"/images/encyclopedia/kara-mustafa-pasha.jpg",artist:"Rijksmuseum",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Portret_van_Kara_Mustafa_Pasha,_RP-P-1894-A-18289.jpg"},
+    forces:{slug:"jan-iii-sobieski",name:"Jan III Sobieski",img:"/images/encyclopedia/jan-iii-sobieski.jpg",artist:"Attributed to Daniel Schultz / Possibly Andreas Stech",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Schultz_John_III_Sobieski.jpg"},
+    legacy:{slug:"prince-eugene-of-savoy",name:"Prince Eugene of Savoy",img:"/images/encyclopedia/prince-eugene-of-savoy.jpg",artist:"Jacob van Schuppen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Prinz_Eugene_of_Savoy.PNG"}
+  },
+  "Battle of Warsaw (1920)": {
+    background:{slug:"jozef-pilsudski",name:"Józef Piłsudski",img:"/images/encyclopedia/jozef-pilsudski.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:J%C3%B3zef_Pi%C5%82sudski_(-1930).jpg"},
+    forces:{slug:"ivan-paskevich",name:"Ivan Paskevich",img:"/images/encyclopedia/ivan-paskevich.jpg",artist:"George Dawe",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%D0%98%D0%B2%D0%B0%D0%BD_%D0%A4%D0%B5%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87_%D0%9F%D0%B0%D1%81%D0%BA%D0%B5%D0%B2%D0%B8%D1%87.jpg"},
+    aftermath:{slug:"peace-of-riga",name:"Peace of Riga",img:"/images/encyclopedia/peace-of-riga.jpg",artist:"official document of Poland",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Peace_treaty_of_Riga_1921.png"}
+  },
+  "Battle of Yamen": {
+    aftermath:{slug:"kublai-khan",name:"Kublai Khan",img:"/images/encyclopedia/kublai-khan.jpg",artist:"Araniko",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumKhubilaiPortrait.jpg"},
+    legacy:{slug:"hongwu-emperor",name:"Hongwu Emperor",img:"/images/encyclopedia/hongwu-emperor.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_assis_de_l%27empereur_Ming_Taizu.jpg"}
+  },
+  "Battle of Zama": {
+    background:{slug:"battle-of-cannae",name:"Battle of Cannae",img:"/images/encyclopedia/battle-of-cannae.jpg",artist:"John Trumbull",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Death_of_Paulus_Aemilius_at_the_Battle_of_Cannae_(Yale_University_Art_Gallery_scan).jpg"},
+    forces:{slug:"polybius",name:"Polybius",img:"/images/encyclopedia/polybius.jpg",artist:"Jona Lendering, Livius Onderwijs",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Stele_des_Polybios.jpg"},
+    aftermath:{slug:"vermina",name:"Vermina",img:"/images/encyclopedia/vermina.jpg",artist:"Unknown author",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Vermina_tetradrachm_both_sides.png"},
+    sources:{slug:"scipio-aemilianus",name:"Scipio Aemilianus",img:"/images/encyclopedia/scipio-aemilianus.jpg",artist:"Carole Raddato from FRANKFURT, Germany",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Bronze_statue_of_a_Hellenistic_prince,_1st_half_of_2nd_century_BC,_found_on_the_Quirinal_in_Rome,_Palazzo_Massimo_alle_Terme,_Rome_(31479801364).jpg"}
+  },
+  "Battle on the Ice": {
+    forces:{slug:"novgorod-first-chronicle",name:"Novgorod First Chronicle",img:"/images/encyclopedia/novgorod-first-chronicle.jpg",artist:"Nikolay Omonov",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Novgorod_First_Chronicle,_Synod_manuscript_01.jpg"},
+    sources:{slug:"laurentian-codex",name:"Laurentian Codex",img:"/images/encyclopedia/laurentian-codex.jpg",artist:"Nikolay Omonov",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Laurentian_Codex_07,_Calling_of_varangians.jpg"},
+    legacy:{slug:"sergei-eisenstein",name:"Sergei Eisenstein",img:"/images/encyclopedia/sergei-eisenstein.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sergei_Eisenstein_03.jpg"}
+  },
+  "Battles of Khalkhin Gol": {
+    background:{slug:"anti-comintern-pact",name:"Anti-Comintern Pact",img:"/images/encyclopedia/anti-comintern-pact.jpg",artist:"Unknown photographer",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Anti-Comintern_Pact_signing_1936.jpg"},
+    legacy:{slug:"khorloogiin-choibalsan",name:"Khorloogiin Choibalsan",img:"/images/encyclopedia/khorloogiin-choibalsan.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Horloogiyn_Choybalsan.jpg"}
+  },
+  "Battles of Lexington and Concord": {
+    background:{slug:"thomas-gage",name:"Thomas Gage",img:"/images/encyclopedia/thomas-gage.jpg",artist:"John Singleton Copley",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Thomas_Gage_John_Singleton_Copley.jpeg"},
+    legacy:{slug:"john-adams",name:"John Adams",img:"/images/encyclopedia/john-adams.jpg",artist:"Gilbert Stuart",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Gilbert_Stuart,_John_Adams,_c._1800-1815,_NGA_42933.jpg"}
+  },
+  "Fall of Singapore": {
+    aftermath:{slug:"sook-ching",name:"Sook Ching",img:"/images/encyclopedia/sook-ching.jpg",artist:"Deoma12",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Civilian_War_Memorial_2019.jpg"},
+    legacy:{slug:"john-curtin",name:"John Curtin",img:"/images/encyclopedia/john-curtin.jpg",artist:"National Library of Australia",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:JohnCurtin.jpg"}
+  },
+  "Fall of Tenochtitlan": {
+    forces:{slug:"ahuitzotl",name:"Ahuitzotl",img:"/images/encyclopedia/ahuitzotl.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ahuitzotl.jpg"},
+    aftermath:{slug:"charles-v-holy-roman-emperor",name:"Charles V, Holy Roman Emperor",img:"/images/encyclopedia/charles-v-holy-roman-emperor.jpg",artist:"Attributed to Titian",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Charles_V,_Holy_Roman_Emperor,_seated_(1500%E2%80%931558),_formerly_attributed_to_Titian_(Alte_Pinakothek,_Munich).jpg"},
+    sources:{slug:"florentine-codex",name:"Florentine Codex",img:"/images/encyclopedia/florentine-codex.jpg",artist:"Bernardino de Sahagún",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Codex_florentino_51_9.jpg"}
+  },
+  "First Battle of the Marne": {
+    background:{slug:"joseph-gallieni",name:"Joseph Gallieni",img:"/images/encyclopedia/joseph-gallieni.jpg",artist:"Bain News Service, publisher",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Gen._Gallieni_LCCN2014697689_(cropped).jpg"}
+  },
+  "Normandy landings": {
+    background:{slug:"joseph-stalin",name:"Joseph Stalin",img:"/images/encyclopedia/joseph-stalin.jpg",artist:"Franklin D. Roosevelt Library Public Domain Photographs",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:StalinCropped1943.jpg"},
+    forces:{slug:"dwight-d-eisenhower",name:"Dwight D. Eisenhower",img:"/images/encyclopedia/dwight-d-eisenhower.jpg",artist:"White House",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Dwight_D._Eisenhower,_official_photo_portrait,_May_29,_1959_(cropped)(3).jpg"},
+    sources:{slug:"albert-speer",name:"Albert Speer",img:"/images/encyclopedia/albert-speer.jpg",artist:"Binder (maybe Atelier Binder after Alexander Binders death in 1929)",licence:"CC BY-SA 3.0 de",source:"https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_146II-277,_Albert_Speer_(cropped).jpg"}
+  },
+  "Second Battle of El Alamein": {
+    background:{slug:"winston-churchill",name:"Winston Churchill",img:"/images/encyclopedia/winston-churchill.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sir_Winston_Churchill_-_19086236948_(restored).jpg"},
+    sources:{slug:"benito-mussolini",name:"Benito Mussolini",img:"/images/encyclopedia/benito-mussolini.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mussolini_mezzobusto.jpg"}
+  },
+  "Second Battle of Panipat": {
+    background:{slug:"humayun",name:"Humayun",img:"/images/encyclopedia/humayun.jpg",artist:"Circa 1550-55 artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Contemporary_portrait_of_Humayun_seated_(made_in_Kabul_in_1550-1555).jpg"},
+    forces:{slug:"akbar",name:"Akbar",img:"/images/encyclopedia/akbar.jpg",artist:"Govardhan / Mir Ali Heravi",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Govardhan._Akbar_With_Lion_and_Calf_ca._1630,_Metmuseum_(cropped).jpg"},
+    sources:{slug:"abul-fazl-ibn-mubarak",name:"Abu'l-Fazl ibn Mubarak",img:"/images/encyclopedia/abul-fazl-ibn-mubarak.jpg",artist:"Govardhan",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Abul_Fazl_cropped.png"},
+    legacy:{slug:"first-battle-of-panipat",name:"First Battle of Panipat",img:"/images/encyclopedia/first-battle-of-panipat.jpg",artist:"Ẓahīr ud-Dīn Muḥammad Bābur (1483-1530); It contains 30 mostly full-page miniatures in fine Mughal style by at least two different artists.",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_battle_of_Panipat_and_the_death_of_Sultan_Ibr%C4%81h%C4%ABm,_the_last_of_the_L%C5%8Dd%C4%AB_Sultans_of_Delhi.jpg"}
+  },
+  "Siege of Baghdad (1258)": {
+    background:{slug:"mongke",name:"Möngke",img:"/images/encyclopedia/mongke.jpg",artist:"1438 artist, Shiraz",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:M%C3%B6ngke_enthroned._Tarikh-i_Jahangushay-i_Juvaini,_1438,_Shiraz.jpg"},
+    forces:{slug:"al-mustasim",name:"al-Musta'sim",img:"/images/encyclopedia/al-mustasim.jpg",artist:"DrFO.Jr.Tn",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Dinar_Abbasside_-_al-Musta%27sim_bi-llah_-_641_AH_(cropped).jpg"},
+    aftermath:{slug:"louis-ix-of-france",name:"Louis IX of France",img:"/images/encyclopedia/louis-ix-of-france.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Saintlouis_(cropped).jpg"}
+  },
+  "Siege of Jerusalem (1099)": {
+    background:{slug:"pope-urban-ii",name:"Pope Urban II",img:"/images/encyclopedia/pope-urban-ii.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Urbano_II_in_consacrazione_de_l%27altare_del_monastero_di_Cluny_(detail)_(crop).png"},
+    aftermath:{slug:"dome-of-the-rock",name:"Dome of the Rock",img:"/images/encyclopedia/dome-of-the-rock.jpg",artist:"Ludvig14",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Jerusalem_DomeoftheRock_J65_(cropped).JPG"},
+    legacy:{slug:"first-crusade",name:"First Crusade",img:"/images/encyclopedia/first-crusade.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Peter_the_Hermit.jpg"}
   }
 };

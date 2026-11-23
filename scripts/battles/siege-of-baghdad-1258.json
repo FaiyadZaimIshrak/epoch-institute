@@ -1,0 +1,463 @@
+{
+ "slug": "siege-of-baghdad-1258",
+ "name": "Siege of Baghdad (1258)",
+ "article": "battles2/wp/siege-of-baghdad-1258",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "to Mosul ↑",
+    "at": [
+     40,
+     5
+    ]
+   },
+   {
+    "name": "Shahrizor plain →",
+    "at": [
+     90,
+     5
+    ]
+   },
+   {
+    "name": "from Kermanshah →",
+    "at": [
+     90,
+     40
+    ]
+   },
+   {
+    "name": "Khuzistan →",
+    "at": [
+     88,
+     58
+    ]
+   }
+  ]
+ },
+ "note": "The plan shows the whole operation, not a single field. The compass directions are only roughly given by the accounts, and the places the Mongol columns started from are placed by judgement. The moat, palisade and pontoon bridges were built after the first phases but are drawn throughout; the accounts do not say exactly where they lay. The surrender is drawn as the garrison leaving the field, not as its destruction.",
+ "terrain": [
+  {
+   "k": "river",
+   "name": "Tigris",
+   "at": [
+    [
+     54,
+     4
+    ],
+    [
+     50,
+     18
+    ],
+    [
+     52,
+     31
+    ],
+    [
+     48,
+     44
+    ],
+    [
+     52,
+     58
+    ]
+   ],
+   "lab": [
+    57,
+    8
+   ],
+   "quote": "To prevent anyone from using the Tigris to escape"
+  },
+  {
+   "k": "stream",
+   "name": "Dujayl Canal",
+   "at": [
+    [
+     10,
+     22
+    ],
+    [
+     20,
+     19
+    ],
+    [
+     30,
+     17
+    ],
+    [
+     42,
+     15
+    ]
+   ],
+   "lab": [
+    20,
+    24
+   ],
+   "quote": "broke the dykes of the Dujayl Canal"
+  },
+  {
+   "k": "wall",
+   "name": "Baghdad's walls",
+   "unnamed": true,
+   "at": [
+    [
+     41,
+     24
+    ],
+    [
+     50,
+     20
+    ],
+    [
+     61,
+     25
+    ],
+    [
+     62,
+     37
+    ],
+    [
+     52,
+     42
+    ],
+    [
+     41,
+     37
+    ]
+   ],
+   "quote": "the flood-weakened walls were in disrepair"
+  },
+  {
+   "k": "ditch",
+   "name": "Moat and palisade",
+   "unnamed": true,
+   "at": [
+    [
+     38,
+     20
+    ],
+    [
+     50,
+     16
+    ],
+    [
+     65,
+     22
+    ],
+    [
+     66,
+     40
+    ],
+    [
+     52,
+     46
+    ],
+    [
+     38,
+     41
+    ]
+   ],
+   "quote": "digging a moat inside this circumvallation"
+  },
+  {
+   "k": "town",
+   "name": "Baghdad",
+   "at": [
+    51,
+    31
+   ],
+   "lab": [
+    47,
+    40
+   ],
+   "quote": "attacked the historic capital of the Abbasid Caliphate"
+  },
+  {
+   "k": "bridge",
+   "name": "Pontoon bridge",
+   "unnamed": true,
+   "at": [
+    51,
+    12
+   ],
+   "lab": [
+    58,
+    12
+   ],
+   "quote": "construction of pontoon bridges across the river on both sides of the city"
+  },
+  {
+   "k": "bridge",
+   "name": "Pontoon bridge",
+   "unnamed": true,
+   "at": [
+    50,
+    52
+   ],
+   "lab": [
+    57,
+    54
+   ],
+   "quote": "construction of pontoon bridges across the river on both sides of the city"
+  }
+ ],
+ "sides": [
+  {
+   "id": "m",
+   "name": "Mongols and their vassals"
+  },
+  {
+   "id": "a",
+   "name": "Abbasid Caliphate"
+  }
+ ],
+ "units": [
+  {
+   "id": "hulegu",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Hulegu's main force",
+   "short": "Hulegu",
+   "leader": "Hulegu",
+   "w": 14,
+   "quote": "Hulegu commanded the main Mongol force",
+   "leaderEntry": "hulagu-khan"
+  },
+  {
+   "id": "horde",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Golden Horde princes",
+   "short": "Horde",
+   "w": 9,
+   "quote": "Flanked on the right wing by the Golden Horde princes, who approached via the Shahrizor plain"
+  },
+  {
+   "id": "kitbuqa",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Kitbuqa's left wing",
+   "short": "Kitbuqa",
+   "leader": "Kitbuqa",
+   "w": 10,
+   "quote": "on the left by Kitbuqa in Khuzistan",
+   "leaderEntry": "kitbuqa"
+  },
+  {
+   "id": "baiju",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Baiju's army",
+   "short": "Baiju",
+   "leader": "Baiju",
+   "w": 10,
+   "quote": "and crossing the Tigris at Mosul with the help of its emir",
+   "leaderEntry": "baiju"
+  },
+  {
+   "id": "dawatdar",
+   "side": "a",
+   "k": "infantry",
+   "name": "The dawatdar's army",
+   "short": "Dawatdar",
+   "leader": "the dawatdar",
+   "w": 10,
+   "quote": "confronted by the dawatdar with 20,000 infantry"
+  },
+  {
+   "id": "garrison",
+   "side": "a",
+   "k": "infantry",
+   "name": "Baghdad's garrison",
+   "short": "Garrison",
+   "w": 8,
+   "quote": "which was left with around 30,000 troops"
+  },
+  {
+   "id": "ships",
+   "side": "a",
+   "k": "ships",
+   "name": "The dawatdar's ships",
+   "short": "Ships",
+   "leader": "the dawatdar",
+   "w": 5,
+   "quote": "forced him back into the city with a loss of three ships"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The Mongol columns approach Baghdad",
+   "when": "December 1257",
+   "text": "Hulegu led the main force, with the Golden Horde princes on the right and Kitbuqa on the left. Baiju crossed the Tigris at Mosul and headed south, while Baghdad held a garrison of its own.",
+   "quote": "his commanders dispersed to carry out different tasks",
+   "at": {
+    "hulegu": [
+     88,
+     32,
+     270
+    ],
+    "horde": [
+     84,
+     12,
+     270
+    ],
+    "kitbuqa": [
+     76,
+     52,
+     270
+    ],
+    "baiju": [
+     46,
+     8,
+     180
+    ],
+    "dawatdar": [
+     46,
+     28,
+     270
+    ],
+    "garrison": [
+     56,
+     33,
+     90
+    ]
+   }
+  },
+  {
+   "title": "The dawatdar's army marches out",
+   "when": "16 January 1258",
+   "text": "Baiju's advance party came within about 40 km of the city. The dawatdar met it with 20,000 infantry and forced it to retreat, and the caliphal army pursued.",
+   "quote": "On 16 January, Sughunchaq was confronted by the dawatdar with 20,000 infantry and forced to retreat",
+   "at": {
+    "baiju": [
+     24,
+     8,
+     270
+    ],
+    "dawatdar": [
+     32,
+     24,
+     300
+    ]
+   },
+   "how": {
+    "baiju": "retreat"
+   },
+   "hits": [
+    [
+     "dawatdar",
+     "baiju"
+    ]
+   ]
+  },
+  {
+   "title": "The canal dykes are broken and the camp flooded",
+   "when": "16-17 January 1258",
+   "text": "That night Baiju's forces broke the dykes of the Dujayl Canal and flooded the camp of the celebrating Abbasid army. Many drowned and next morning the rest were routed; only a few, the dawatdar among them, reached Baghdad.",
+   "quote": "that night Baiju's forces broke the dykes of the Dujayl Canal and flooded the camp of the celebrating Abbasid army",
+   "at": {
+    "baiju": [
+     26,
+     12,
+     90
+    ],
+    "dawatdar": [
+     38,
+     28,
+     90
+    ]
+   },
+   "how": {
+    "dawatdar": "rout"
+   },
+   "state": {
+    "dawatdar": "routed"
+   },
+   "hits": [
+    [
+     "baiju",
+     "dawatdar"
+    ]
+   ]
+  },
+  {
+   "title": "Hulegu and Kitbuqa close in on the city",
+   "when": "22 January 1258",
+   "text": "Kitbuqa crossed the Tigris to the south and approached the Karkh suburbs, while Hulegu reached the eastern suburbs. The Mongols then enclosed the whole city with a palisade and a moat, completed within a day.",
+   "quote": "Hulegu himself reached the eastern suburbs on 22 January",
+   "at": {
+    "hulegu": [
+     74,
+     31,
+     270
+    ],
+    "kitbuqa": [
+     40,
+     49,
+     0
+    ]
+   },
+   "state": {
+    "dawatdar": "gone"
+   }
+  },
+  {
+   "title": "The assault takes the east wall",
+   "when": "29 January to 4 February 1258",
+   "text": "The assault began on 29 or 30 January. A first breach on 1 February was driven back, but further breaches over the next two days gave the Mongols the east battlements by 4 February.",
+   "quote": "further breaches over the next two days enabled them to access and seize control of the east battlements by 4 February",
+   "at": {
+    "hulegu": [
+     67,
+     31,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "hulegu",
+     "garrison"
+    ]
+   ]
+  },
+  {
+   "title": "The dawatdar tries to escape by river",
+   "when": "After 4 February 1258",
+   "text": "The dawatdar sailed down the Tigris to escape. The Mongol preparations on the river held and forced him back into the city with a loss of three ships.",
+   "quote": "the dawatdar attempted to escape by sailing down the Tigris",
+   "at": {
+    "ships": [
+     52,
+     47,
+     180
+    ]
+   },
+   "state": {
+    "ships": "destroyed"
+   },
+   "hits": [
+    [
+     "hulegu",
+     "ships",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The caliph surrenders the city",
+   "when": "7 to 10 February 1258",
+   "text": "On 7 February a large number of unarmed soldiers and inhabitants came out and were executed. On 10 February the caliph surrendered, bringing his family and 3,000 dignitaries.",
+   "quote": "the caliph surrendered on 10 February, bringing his family and 3,000 dignitaries",
+   "at": {
+    "hulegu": [
+     60,
+     31,
+     270
+    ]
+   },
+   "state": {
+    "garrison": "gone"
+   }
+  }
+ ]
+}

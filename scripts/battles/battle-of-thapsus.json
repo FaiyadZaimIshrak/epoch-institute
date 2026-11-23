@@ -1,0 +1,437 @@
+{
+ "slug": "battle-of-thapsus",
+ "name": "Battle of Thapsus",
+ "article": "battles2/wp/battle-of-thapsus",
+ "field": {
+  "north": null
+ },
+ "note": "The accounts do not give compass directions, so the armies are drawn facing each other with Caesar on the left of the plan; his right wing is therefore at the bottom and Scipio's left wing faces it. The accounts do not say where the town, the marsh or the Optimate camp lay on the field, so they are placed on Caesar's side of the plan and the distances are only a guide. The five cohorts of the fifth legion are drawn behind Caesar's left flank; the other half of the legion, kept behind the other flank, and Caesar's left-flank archers and cavalry are not drawn. The cavalry's destruction of the fortified camp is not drawn. A tradition cited from Plutarch, that Caesar had an epileptic seizure before the lines advanced, is not drawn.",
+ "terrain": [
+  {
+   "k": "town",
+   "name": "Thapsus",
+   "at": [
+    8,
+    22
+   ],
+   "unnamed": false,
+   "quote": "Caesar arrived at Thapsus and besieged the city"
+  },
+  {
+   "k": "marsh",
+   "name": "Marsh of Moknine",
+   "at": [
+    [
+     6,
+     36
+    ],
+    [
+     12,
+     34
+    ],
+    [
+     17,
+     37
+    ],
+    [
+     17,
+     43
+    ],
+    [
+     11,
+     45
+    ],
+    [
+     6,
+     42
+    ]
+   ],
+   "lab": [
+    11,
+    40
+   ],
+   "quote": "Outside of the city was the Marsh of Moknine"
+  }
+ ],
+ "sides": [
+  {
+   "id": "c",
+   "name": "Caesar's army"
+  },
+  {
+   "id": "s",
+   "name": "Optimates and their allies"
+  }
+ ],
+ "units": [
+  {
+   "id": "cleft",
+   "side": "c",
+   "k": "infantry",
+   "name": "Legions VIII and IX, left",
+   "short": "VIII, IX",
+   "w": 12,
+   "quote": "VIII and IX on the left"
+  },
+  {
+   "id": "ccentre",
+   "side": "c",
+   "k": "infantry",
+   "name": "Legions XIII, XIV and recruits",
+   "short": "Centre",
+   "w": 14,
+   "quote": "the XIII and XIV with three newly recruited legions in the centre"
+  },
+  {
+   "id": "cright",
+   "side": "c",
+   "k": "infantry",
+   "name": "Legions VII and X, right",
+   "short": "VII, X",
+   "leader": "Caesar",
+   "w": 12,
+   "quote": "Caesar's position was typical of his style, with him commanding the right.",
+   "leaderEntry": "julius-caesar"
+  },
+  {
+   "id": "cflank",
+   "side": "c",
+   "k": "archers",
+   "name": "Right-flank archers and horse",
+   "short": "Archers",
+   "w": 8,
+   "quote": "he had put his slingers, archers and the cavalry on the flanks"
+  },
+  {
+   "id": "cv",
+   "side": "c",
+   "k": "guard",
+   "name": "Five cohorts of Legio V",
+   "short": "V Legion",
+   "w": 6,
+   "quote": "the V legion was split in two and kept as a reserve behind the flanks to counter the elephants"
+  },
+  {
+   "id": "siege",
+   "side": "c",
+   "k": "infantry",
+   "name": "Legions left at the siege",
+   "short": "Siege",
+   "w": 6,
+   "quote": "Caesar had left two recently recruited legions to continue the siege of the city"
+  },
+  {
+   "id": "sright",
+   "side": "s",
+   "k": "cavalry",
+   "name": "Optimate right-flank troops",
+   "short": "R. flank",
+   "w": 8,
+   "quote": "his cavalry and light infantry on the flanks"
+  },
+  {
+   "id": "scentre",
+   "side": "s",
+   "k": "infantry",
+   "name": "Optimate legions, three lines",
+   "short": "Legions",
+   "w": 16,
+   "quote": "Scipio had drawn up his legions in three lines in the centre"
+  },
+  {
+   "id": "sleft",
+   "side": "s",
+   "k": "cavalry",
+   "name": "Optimate left-flank troops",
+   "short": "L. flank",
+   "w": 8,
+   "quote": "his cavalry and light infantry on the flanks"
+  },
+  {
+   "id": "eup",
+   "side": "s",
+   "k": "elephants",
+   "name": "Elephants, right flank",
+   "short": "Elephants",
+   "w": 6,
+   "quote": "He put his elephants in front of the flanks."
+  },
+  {
+   "id": "edown",
+   "side": "s",
+   "k": "elephants",
+   "name": "Elephants, left flank",
+   "short": "Elephants",
+   "w": 6,
+   "quote": "He put his elephants in front of the flanks."
+  },
+  {
+   "id": "afcamp",
+   "side": "s",
+   "k": "camp",
+   "name": "Afranius' camp",
+   "short": "Camp",
+   "w": 6,
+   "quote": "attacked and overran Afranius' camp"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The armies draw up facing each other",
+   "text": "Scipio set his legions in three lines in the centre, with cavalry and light infantry on the flanks and elephants in front of them. Caesar also used three lines, with archers and cavalry on the flanks and half of the fifth legion in reserve.",
+   "quote": "Scipio had drawn up his legions in three lines in the centre with his cavalry and light infantry on the flanks.",
+   "at": {
+    "cleft": [
+     30,
+     18,
+     90
+    ],
+    "ccentre": [
+     30,
+     31,
+     90
+    ],
+    "cright": [
+     30,
+     44,
+     90
+    ],
+    "cflank": [
+     30,
+     54,
+     90
+    ],
+    "cv": [
+     21,
+     12,
+     90
+    ],
+    "siege": [
+     12,
+     29,
+     270
+    ],
+    "afcamp": [
+     22,
+     56,
+     270
+    ],
+    "sright": [
+     56,
+     10,
+     270
+    ],
+    "scentre": [
+     56,
+     31,
+     270
+    ],
+    "sleft": [
+     56,
+     54,
+     270
+    ],
+    "eup": [
+     46,
+     16,
+     270
+    ],
+    "edown": [
+     46,
+     46,
+     270
+    ]
+   }
+  },
+  {
+   "title": "Caesar's lines advance",
+   "text": "A trumpeter of the seventh legion sounded the attack. Caesar saw his right surge forward and ordered a general advance.",
+   "quote": "A trumpeter of the VII sounded the attack and Caesar, seeing his right surge forward, ordered a general advance.",
+   "at": {
+    "cleft": [
+     37,
+     18,
+     90
+    ],
+    "ccentre": [
+     37,
+     31,
+     90
+    ],
+    "cright": [
+     37,
+     44,
+     90
+    ],
+    "cflank": [
+     37,
+     54,
+     90
+    ]
+   }
+  },
+  {
+   "title": "The archers panic the elephants on one flank",
+   "text": "Caesar's archers on the right flank attacked the elephants facing them. The animals panicked, turned and trampled their own men.",
+   "quote": "Caesar's archers on the right flank attacked the elephants opposing them, causing them to panic and turn and trample their own men.",
+   "at": {
+    "edown": [
+     51,
+     47,
+     270
+    ]
+   },
+   "how": {
+    "edown": "rout"
+   },
+   "state": {
+    "edown": "routed"
+   },
+   "hits": [
+    [
+     "cflank",
+     "edown"
+    ]
+   ]
+  },
+  {
+   "title": "The elephants on the other flank charge",
+   "text": "The elephants on the other flank charged against Caesar's left. The five cohorts of the fifth legion, placed behind that flank, met the charge.",
+   "quote": "The elephants on the other flank charged against Caesar's left flank.",
+   "at": {
+    "eup": [
+     33,
+     7,
+     270
+    ],
+    "cv": [
+     26,
+     10,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "eup",
+     "cv"
+    ],
+    [
+     "cv",
+     "eup"
+    ]
+   ]
+  },
+  {
+   "title": "The fifth legion turns the elephants back",
+   "text": "The legionaries stabbed their pila at the elephants' eyes and weak spots and sounded their trumpets. The beasts turned and ran towards their own lines.",
+   "quote": "and blasted away on their trumpets frightening the beasts, causing them to turn back and run towards their own lines.",
+   "at": {
+    "eup": [
+     50,
+     7,
+     90
+    ]
+   },
+   "how": {
+    "eup": "rout"
+   },
+   "state": {
+    "eup": "routed"
+   },
+   "hits": [
+    [
+     "cv",
+     "eup"
+    ]
+   ]
+  },
+  {
+   "title": "Scipio's left breaks, then the rest",
+   "text": "After the elephants were lost, Scipio began to lose ground. His left broke first and the rest of his army followed, with Caesar's lines pressing after it.",
+   "quote": "After the loss of the elephants, Metellus Scipio started to lose ground, his left broke first the rest followed.",
+   "at": {
+    "cleft": [
+     46,
+     17,
+     90
+    ],
+    "ccentre": [
+     46,
+     30,
+     90
+    ],
+    "cright": [
+     46,
+     44,
+     90
+    ],
+    "cflank": [
+     46,
+     54,
+     90
+    ],
+    "sleft": [
+     68,
+     54,
+     270
+    ],
+    "scentre": [
+     68,
+     31,
+     270
+    ],
+    "sright": [
+     68,
+     10,
+     270
+    ]
+   },
+   "how": {
+    "sleft": "rout",
+    "scentre": "rout",
+    "sright": "rout"
+   },
+   "state": {
+    "sleft": "routed",
+    "scentre": "routed",
+    "sright": "routed"
+   },
+   "hits": [
+    [
+     "cflank",
+     "sleft"
+    ],
+    [
+     "cright",
+     "scentre",
+     -0.2
+    ],
+    [
+     "ccentre",
+     "scentre"
+    ]
+   ]
+  },
+  {
+   "title": "The siege legions overrun Afranius' camp",
+   "text": "The two legions left at the siege marched south to the troops fortified opposite Afranius and Juba's camp. Together they attacked and overran Afranius' camp.",
+   "quote": "Having done so these legionaries marched south to reinforce the troops fortified opposite Afranius and Juba's camp and together they attacked and overran Afranius' camp.",
+   "at": {
+    "siege": [
+     22,
+     48,
+     180
+    ]
+   },
+   "state": {
+    "afcamp": "destroyed"
+   },
+   "hits": [
+    [
+     "siege",
+     "afcamp"
+    ]
+   ]
+  }
+ ]
+}

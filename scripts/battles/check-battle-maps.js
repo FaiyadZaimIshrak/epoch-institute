@@ -6,7 +6,7 @@
 const fs = require('fs'), path = require('path');
 const [dir, wp, ...only] = process.argv.slice(2);
 if (!dir || !wp) { console.error('usage: check-battle-maps.js <scenario dir> <articles dir> [slug …]'); process.exit(1); }
-const KINDS = ['infantry', 'spears', 'pikes', 'cavalry', 'horse-archers', 'archers', 'light', 'elephants', 'chariots', 'artillery', 'ships', 'guard', 'camp', 'wagons'];
+const KINDS = ['infantry', 'spears', 'pikes', 'cavalry', 'horse-archers', 'archers', 'light', 'elephants', 'chariots', 'artillery', 'armour', 'ships', 'guard', 'camp', 'wagons'];
 const AREAS = ['hill', 'ridge', 'mountain', 'wood', 'marsh', 'sea', 'lake', 'land'], LINES = ['river', 'stream', 'road', 'wall', 'ditch'], PLACES = ['town', 'village', 'fort', 'spring', 'bridge', 'ford', 'point'];
 const HOW = ['advance', 'retreat', 'feint', 'rout'], STATE = ['hidden', 'shown', 'routed', 'destroyed', 'gone'];
 const HYPE = /\b(brilliant|masterful|masterly|genius|legendary|stunning|heroic|glorious|decisive blow|famous(ly)?|iconic|pivotal|crushing|daring|bold(ly)?|magnificent|epic|turning point|against all odds|fateful)\b/i;

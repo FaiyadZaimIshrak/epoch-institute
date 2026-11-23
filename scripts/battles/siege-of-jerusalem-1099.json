@@ -1,0 +1,484 @@
+{
+ "slug": "siege-of-jerusalem-1099",
+ "name": "Siege of Jerusalem (1099)",
+ "article": "battles2/wp/siege-of-jerusalem-1099",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "← to Jaffa",
+    "at": [
+     10,
+     56
+    ]
+   }
+  ]
+ },
+ "note": "The plan shows the siege as a whole, not a single field: the blocks are the besieging armies and the garrison, and the ground is the city's wall, gates and Mount Zion. Where each army stood is given by the gate it faced; the exact places are drawn by judgement. The accounts put the Count of Flanders on the Count of Normandy's right, placed here on his west side. The accounts also have Godfrey at the north-west corner at first and later to the east behind the ram; the plan follows both. They do not say which contingents made the attack of 13 June, which part of the city the crusaders first entered, or who made the feint on the north-west angle, so none of these is drawn.",
+ "terrain": [
+  {
+   "k": "wall",
+   "name": "City wall",
+   "at": [
+    [
+     34,
+     46
+    ],
+    [
+     34,
+     28
+    ],
+    [
+     70,
+     28
+    ],
+    [
+     70,
+     46
+    ],
+    [
+     52,
+     46
+    ]
+   ],
+   "lab": [
+    60,
+    26.2
+   ],
+   "quote": "The stone walls around the city stretching four kilometers long, were three meters thick and 15 meters high."
+  },
+  {
+   "k": "hill",
+   "name": "Mount Zion",
+   "at": [
+    [
+     24,
+     50
+    ],
+    [
+     34,
+     48
+    ],
+    [
+     46,
+     49
+    ],
+    [
+     54,
+     53
+    ],
+    [
+     50,
+     59
+    ],
+    [
+     34,
+     60
+    ],
+    [
+     24,
+     57
+    ]
+   ],
+   "lab": [
+    28,
+    54
+   ],
+   "quote": "he moved up to Mount Zion after two or three days"
+  },
+  {
+   "k": "point",
+   "name": "Gate of Flowers",
+   "at": [
+    58,
+    28
+   ],
+   "lab": [
+    61,
+    30.4
+   ],
+   "quote": "opposite the Gate of Flowers (also known as Herod's Gate)"
+  },
+  {
+   "k": "point",
+   "name": "Gate of the Column",
+   "at": [
+    46,
+    28
+   ],
+   "lab": [
+    40,
+    30.4
+   ],
+   "quote": "facing the Gate of the Column (also known as St Stephen's Gate or the Damascus Gate)"
+  },
+  {
+   "k": "point",
+   "name": "Jaffa Gate",
+   "at": [
+    34,
+    36
+   ],
+   "lab": [
+    29,
+    38.4
+   ],
+   "quote": "extending down to the Jaffa Gate"
+  }
+ ],
+ "sides": [
+  {
+   "id": "c",
+   "name": "Crusaders"
+  },
+  {
+   "id": "f",
+   "name": "Fatimid garrison"
+  }
+ ],
+ "units": [
+  {
+   "id": "normandy",
+   "side": "c",
+   "k": "infantry",
+   "name": "Robert of Normandy's army",
+   "short": "Normandy",
+   "leader": "Robert of Normandy",
+   "w": 10,
+   "quote": "Robert of Normandy posted his troops along the northern wall, opposite the Gate of Flowers",
+   "leaderEntry": "robert-curthose"
+  },
+  {
+   "id": "flanders",
+   "side": "c",
+   "k": "infantry",
+   "name": "Robert of Flanders's army",
+   "short": "Flanders",
+   "leader": "Robert of Flanders",
+   "w": 10,
+   "quote": "Robert of Flanders was stationed on his right, facing the Gate of the Column"
+  },
+  {
+   "id": "godfrey",
+   "side": "c",
+   "k": "infantry",
+   "name": "Godfrey of Lorraine's army",
+   "short": "Godfrey",
+   "leader": "Godfrey of Lorraine",
+   "w": 12,
+   "quote": "Godfrey of Lorraine covered the north-west corner of the city, extending down to the Jaffa Gate.",
+   "leaderEntry": "godfrey-of-bouillon"
+  },
+  {
+   "id": "tancred",
+   "side": "c",
+   "k": "cavalry",
+   "name": "Tancred's knights",
+   "short": "Tancred",
+   "leader": "Tancred",
+   "w": 6,
+   "quote": "Tancred joined him here, riding up when the army was already in position",
+   "leaderEntry": "tancred-prince-of-galilee"
+  },
+  {
+   "id": "raymond",
+   "side": "c",
+   "k": "infantry",
+   "name": "Raymond of Toulouse's army",
+   "short": "Raymond",
+   "leader": "Raymond of Toulouse",
+   "w": 12,
+   "quote": "Raymond of Toulouse stood to the south.",
+   "leaderEntry": "raymond-iv-of-toulouse"
+  },
+  {
+   "id": "ram",
+   "side": "c",
+   "k": "artillery",
+   "name": "Battering ram",
+   "short": "Ram",
+   "w": 5,
+   "quote": "a battering ram with an iron-clad head"
+  },
+  {
+   "id": "tower",
+   "side": "c",
+   "k": "artillery",
+   "name": "Siege tower on Mount Zion",
+   "short": "Tower",
+   "w": 5,
+   "quote": "two massive wheel-mounted siege towers"
+  },
+  {
+   "id": "garrison",
+   "side": "f",
+   "k": "infantry",
+   "name": "Fatimid garrison",
+   "short": "Garrison",
+   "leader": "Iftikhar ad-Dawla",
+   "w": 12,
+   "quote": "The garrison defending Jerusalem comprised roughly some thousand Arab and Sudanese troops"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The crusaders take up positions round the walls",
+   "when": "7 June 1099",
+   "text": "The crusaders could not surround the whole city, so they placed themselves where the walls could be approached. Normandy, Flanders and Godfrey faced the north and north-west, Raymond lay to the south, and the east was left unguarded.",
+   "quote": "Since the Crusaders had insufficient forces to besiege the entire city, they concentrated their strength on the sectors where they could approach the walls.",
+   "at": {
+    "normandy": [
+     58,
+     20,
+     180
+    ],
+    "flanders": [
+     45,
+     20,
+     180
+    ],
+    "godfrey": [
+     31,
+     21,
+     180
+    ],
+    "tancred": [
+     22,
+     32,
+     90
+    ],
+    "raymond": [
+     58,
+     57,
+     0
+    ],
+    "garrison": [
+     52,
+     38,
+     0
+    ]
+   }
+  },
+  {
+   "title": "Raymond moves up to Mount Zion",
+   "when": "Two or three days later",
+   "text": "The valley kept Raymond too far from the walls, so he moved his army up to Mount Zion after two or three days. The army then stood on the hill south-west of the wall.",
+   "quote": "Finding that the valley kept him too far from the walls, he moved up to Mount Zion after two or three days.",
+   "at": {
+    "raymond": [
+     38,
+     54,
+     20
+    ]
+   }
+  },
+  {
+   "title": "The first assault fails",
+   "when": "13 June 1099",
+   "text": "The crusaders attacked the walls with whatever materials they could find. The attack had some early success but failed, which showed that they needed siege engines.",
+   "quote": "Despite initial success the attack proved to be a failure, demonstrating the need for more siege engines.",
+   "at": {
+    "normandy": [
+     58,
+     23,
+     180
+    ],
+    "flanders": [
+     45,
+     23,
+     180
+    ],
+    "godfrey": [
+     31,
+     24,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "normandy",
+     "garrison"
+    ],
+    [
+     "flanders",
+     "garrison"
+    ],
+    [
+     "godfrey",
+     "garrison",
+     0.2
+    ],
+    [
+     "raymond",
+     "garrison",
+     0.3
+    ]
+   ]
+  },
+  {
+   "title": "The armies move into place for the final attack",
+   "when": "Night of 13 to 14 July 1099",
+   "text": "After almost three weeks of building, the ram and the siege tower were ready. Godfrey moved east behind the ram, the tower came up from Mount Zion, and Iftikhar moved his troops to the north wall.",
+   "quote": "The main attack would be launched simultaneously from Mount Zion and on the eastern sector of the northern wall, with a feint attack on the north-west angle.",
+   "at": {
+    "normandy": [
+     58,
+     20,
+     180
+    ],
+    "flanders": [
+     45,
+     20,
+     180
+    ],
+    "godfrey": [
+     73,
+     18,
+     180
+    ],
+    "ram": [
+     71,
+     24,
+     180
+    ],
+    "tower": [
+     40,
+     49,
+     0
+    ],
+    "raymond": [
+     38,
+     56,
+     20
+    ],
+    "garrison": [
+     52,
+     33,
+     0
+    ]
+   }
+  },
+  {
+   "title": "The ram and the tower go forward",
+   "when": "14 July 1099",
+   "text": "To the sound of trumpets the crusaders attacked from north and south. Normandy and Flanders shot at the walls, the ram was brought up to the wall, and the tower advanced from Mount Zion while the defenders fired back.",
+   "quote": "Despite constant attack from arrow fire and flying stones the northern army were able to bring their ram into position.",
+   "at": {
+    "normandy": [
+     58,
+     23,
+     180
+    ],
+    "flanders": [
+     45,
+     23,
+     180
+    ],
+    "ram": [
+     71,
+     26,
+     180
+    ],
+    "tower": [
+     40,
+     47,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "normandy",
+     "garrison"
+    ],
+    [
+     "flanders",
+     "garrison"
+    ],
+    [
+     "ram",
+     "garrison"
+    ],
+    [
+     "tower",
+     "garrison"
+    ],
+    [
+     "garrison",
+     "ram",
+     0.25
+    ]
+   ]
+  },
+  {
+   "title": "The ram breaks through but sticks",
+   "when": "Evening of 14 July 1099",
+   "text": "The ram pierced the wall in the north, but it stuck and the crusaders could not use the breach. They abandoned it, and the general attack was stopped.",
+   "quote": "Having managed to pierce through the wall the cursaders failed to exploit their success as the ram were stuck.",
+   "at": {
+    "ram": [
+     71,
+     27.5,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "ram",
+     "garrison"
+    ],
+    [
+     "garrison",
+     "ram",
+     0.25
+    ]
+   ]
+  },
+  {
+   "title": "The tower reaches the wall and the crusaders enter",
+   "when": "Midday, 15 July 1099",
+   "text": "The attack was resumed, and when the tower was pushed up against the wall the crusaders got into the city. Godfrey and Tancred led the way, and the defenders near Mount Zion fought on against Raymond's men.",
+   "quote": "When the tower was pushed right up against the wall, the cursaders were able to enter the city.",
+   "at": {
+    "tower": [
+     40,
+     45,
+     0
+    ],
+    "godfrey": [
+     64,
+     37,
+     270
+    ],
+    "tancred": [
+     40,
+     38,
+     90
+    ],
+    "garrison": [
+     52,
+     35,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "tower",
+     "garrison"
+    ],
+    [
+     "godfrey",
+     "garrison"
+    ],
+    [
+     "tancred",
+     "garrison"
+    ],
+    [
+     "raymond",
+     "garrison",
+     0.2
+    ]
+   ]
+  }
+ ]
+}

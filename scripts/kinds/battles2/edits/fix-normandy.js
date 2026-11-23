@@ -1,0 +1,3 @@
+const fs = require('fs'), f = __dirname + '/prof2/out/normandy-landings.json', j = JSON.parse(fs.readFileSync(f, 'utf8'));
+const a = ' The strengths of the fleet, the troops and the divisions on both sides are given as an order of battle, while the figures for the dead and wounded come with ranges.</p><p>Some figures are plainly estimates.', b = '</p><p>The figures for the dead and wounded are ranges and estimates.';
+if (j.sections.sources.split(a).length !== 2) throw new Error('not found'); j.sections.sources = j.sections.sources.replace(a, () => b); fs.writeFileSync(f, JSON.stringify(j, null, 1) + '\n'); console.log('ok');

@@ -1,0 +1,492 @@
+{
+ "slug": "battle-of-caporetto",
+ "name": "Battle of Caporetto",
+ "article": "battles2/wp/battle-of-caporetto",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "← Venetian Plain",
+    "at": [
+     9,
+     56
+    ]
+   },
+   {
+    "name": "to the Adriatic ↓",
+    "at": [
+     88,
+     58
+    ]
+   }
+  ]
+ },
+ "note": "This plan shows the whole operation of 24 October to 10 November 1917, not a single field: the blocks are armies and corps, and distances are not to scale. The accounts do not say which of the IV and XXVII Corps stood to the north or south of the valley, or where the Italian main force stood before the retreat, so those places are judgement. The two Alpine blocks are placed on the two ridges the accounts name; which ridge lay north is not stated. The Army Group Boroević is shown where it was meant to attack; the accounts do not describe its moves. The 55th Division's bridgehead is placed by judgement along the Tagliamento.",
+ "terrain": [
+  {
+   "k": "river",
+   "name": "Isonzo",
+   "at": [
+    [
+     73,
+     6
+    ],
+    [
+     74,
+     20
+    ],
+    [
+     72,
+     32
+    ],
+    [
+     73,
+     46
+    ],
+    [
+     72,
+     56
+    ]
+   ],
+   "lab": [
+    77,
+    53
+   ],
+   "quote": "and near the river Isonzo"
+  },
+  {
+   "k": "town",
+   "name": "Kobarid",
+   "at": [
+    70,
+    33
+   ],
+   "lab": [
+    70,
+    36
+   ],
+   "quote": "near the town of Kobarid"
+  },
+  {
+   "k": "town",
+   "name": "Bovec",
+   "at": [
+    76,
+    11
+   ],
+   "lab": [
+    80,
+    8
+   ],
+   "quote": "in the northern area of the battle (near Bovec/Plezzo)"
+  },
+  {
+   "k": "road",
+   "name": "Valley road",
+   "unnamed": true,
+   "at": [
+    [
+     78,
+     31
+    ],
+    [
+     58,
+     31
+    ],
+    [
+     38,
+     31
+    ],
+    [
+     20,
+     31
+    ],
+    [
+     6,
+     31
+    ]
+   ],
+   "lab": [
+    47,
+    29
+   ],
+   "quote": "a good road ran west through a mountain valley to the Venetian Plain"
+  },
+  {
+   "k": "ridge",
+   "name": "Matajur",
+   "unnamed": true,
+   "at": [
+    [
+     42,
+     9
+    ],
+    [
+     52,
+     7
+    ],
+    [
+     62,
+     10
+    ],
+    [
+     62,
+     18
+    ],
+    [
+     52,
+     20
+    ],
+    [
+     42,
+     17
+    ]
+   ],
+   "lab": [
+    47,
+    5.5
+   ],
+   "quote": "along the crests of the adjoining ridges, Matajur and Kolovrat"
+  },
+  {
+   "k": "ridge",
+   "name": "Kolovrat",
+   "unnamed": true,
+   "at": [
+    [
+     42,
+     45
+    ],
+    [
+     52,
+     43
+    ],
+    [
+     62,
+     46
+    ],
+    [
+     62,
+     54
+    ],
+    [
+     52,
+     56
+    ],
+    [
+     42,
+     53
+    ]
+   ],
+   "lab": [
+    47,
+    58.5
+   ],
+   "quote": "along the crests of the adjoining ridges, Matajur and Kolovrat"
+  },
+  {
+   "k": "river",
+   "name": "Tagliamento",
+   "at": [
+    [
+     38,
+     6
+    ],
+    [
+     36,
+     20
+    ],
+    [
+     39,
+     34
+    ],
+    [
+     36,
+     48
+    ],
+    [
+     38,
+     56
+    ]
+   ],
+   "lab": [
+    42,
+    52
+   ],
+   "quote": "retreat to the other side of the Tagliamento"
+  },
+  {
+   "k": "river",
+   "name": "Piave",
+   "at": [
+    [
+     18,
+     6
+    ],
+    [
+     20,
+     20
+    ],
+    [
+     17,
+     34
+    ],
+    [
+     20,
+     48
+    ],
+    [
+     18,
+     56
+    ]
+   ],
+   "lab": [
+    22,
+    52
+   ],
+   "quote": "established a position on the Piave River and Monte Grappa"
+  }
+ ],
+ "sides": [
+  {
+   "id": "i",
+   "name": "Kingdom of Italy"
+  },
+  {
+   "id": "c",
+   "name": "Central Powers"
+  }
+ ],
+ "units": [
+  {
+   "id": "iv",
+   "side": "i",
+   "k": "infantry",
+   "name": "Italian IV Corps",
+   "short": "IV Corps",
+   "w": 9,
+   "quote": "breaching the defensive line of the Italian Second Army between the IV and XXVII Corps"
+  },
+  {
+   "id": "xxvii",
+   "side": "i",
+   "k": "infantry",
+   "name": "Italian XXVII Corps",
+   "short": "XXVII",
+   "w": 9,
+   "quote": "breaching the defensive line of the Italian Second Army between the IV and XXVII Corps"
+  },
+  {
+   "id": "main",
+   "side": "i",
+   "k": "infantry",
+   "name": "Italian main force",
+   "short": "Italians",
+   "w": 14,
+   "quote": "Cadorna ordered the majority of the Italian force to retreat to the other side of the Tagliamento"
+  },
+  {
+   "id": "below",
+   "side": "c",
+   "k": "infantry",
+   "name": "14th Army",
+   "short": "14th Army",
+   "leader": "Otto von Below",
+   "w": 14,
+   "quote": "a new 14th Army was formed with nine Austrian and six to eight German divisions"
+  },
+  {
+   "id": "boro",
+   "side": "c",
+   "k": "infantry",
+   "name": "Army Group Boroević",
+   "short": "Boroević",
+   "leader": "Svetozar Boroević",
+   "w": 12,
+   "quote": "The Austro-Hungarian Army Group Boroević, commanded by Svetozar Boroević, was prepared for the offensive."
+  },
+  {
+   "id": "alpm",
+   "side": "c",
+   "k": "light",
+   "name": "Alpine troops on Matajur",
+   "short": "Alpine N",
+   "w": 6,
+   "quote": "Alpine Troops infiltrated the strong points and batteries along the crests of the adjoining ridges, Matajur and Kolovrat"
+  },
+  {
+   "id": "alpk",
+   "side": "c",
+   "k": "light",
+   "name": "Alpine troops on Kolovrat",
+   "short": "Alpine S",
+   "w": 6,
+   "quote": "Alpine Troops infiltrated the strong points and batteries along the crests of the adjoining ridges, Matajur and Kolovrat"
+  },
+  {
+   "id": "d55",
+   "side": "c",
+   "k": "infantry",
+   "name": "55th Infantry Division",
+   "short": "55th Div.",
+   "w": 6,
+   "quote": "the 55th Infantry Division (Austria-Hungary) established a bridgehead across the Tagliamento River"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The attackers gather east of the Italian line",
+   "text": "The German and Austro-Hungarian plan sent von Below's army against the Caporetto sector, with Boroević's army attacking the eastern end of the salient and ground near the Adriatic. The Italian Second Army held the line, with the IV and XXVII Corps on either side of the valley.",
+   "quote": "Meanwhile, Svetozar's Austro-Hungarian army would attack the eastern end of the salient and a stretch of ground near the Adriatic shore.",
+   "at": {
+    "iv": [
+     66,
+     15,
+     90
+    ],
+    "xxvii": [
+     66,
+     47,
+     90
+    ],
+    "below": [
+     83,
+     31,
+     270
+    ],
+    "boro": [
+     83,
+     51,
+     270
+    ]
+   }
+  },
+  {
+   "title": "Gas and the bombardment",
+   "when": "24 October 1917",
+   "text": "At 02:00 gas projectors fired near Bovec, and the defenders fled their trenches. At 06:41 2,200 guns opened fire on the front.",
+   "quote": "At 06:41, 2,200 guns opened fire, many targeting the valley road along which reserves were advancing to plug the gap.",
+   "hits": [
+    [
+     "below",
+     "iv",
+     -0.1
+    ],
+    [
+     "below",
+     "xxvii",
+     0.1
+    ]
+   ]
+  },
+  {
+   "title": "The infantry break the line in the valley",
+   "when": "24 October 1917, 08:00",
+   "text": "After two large mines were detonated under strong points on the heights, the infantry attacked and breached the line between the IV and XXVII Corps. Alpine troops went along the ridges on either side to protect the attackers' flanks.",
+   "quote": "At 08:00 two large mines were detonated under strong points on the heights bordering the valley and the infantry attacked.",
+   "at": {
+    "below": [
+     64,
+     31,
+     270
+    ],
+    "alpm": [
+     54,
+     12,
+     90
+    ],
+    "alpk": [
+     54,
+     50,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "below",
+     "iv",
+     -0.1
+    ],
+    [
+     "below",
+     "xxvii",
+     0.1
+    ]
+   ]
+  },
+  {
+   "title": "The central column drives down the valley road",
+   "when": "24 October 1917",
+   "text": "The attackers in the valley marched almost unopposed along the road, and some advanced 25 kilometres on the first day. The Italians beat back the attackers on either side, but the central penetration threw their whole army into disarray.",
+   "quote": "The attackers in the valley marched almost unopposed along the excellent road toward Italy; some advanced 25 kilometres (16 mi) on the first day.",
+   "at": {
+    "below": [
+     52,
+     31,
+     270
+    ]
+   }
+  },
+  {
+   "title": "The Italian retreat to the Tagliamento",
+   "when": "30 October 1917",
+   "text": "Cadorna ordered most of the Italian force to retreat across the Tagliamento, and it took four days to cross. The Central Powers followed closely and ambushed the defenders whenever they could.",
+   "quote": "Finally, on 30 October 1917, Cadorna ordered the majority of the Italian force to retreat to the other side of the Tagliamento.",
+   "at": {
+    "main": [
+     28,
+     31,
+     90
+    ],
+    "below": [
+     44,
+     31,
+     270
+    ]
+   },
+   "how": {
+    "main": "retreat"
+   },
+   "hits": [
+    [
+     "below",
+     "main"
+    ]
+   ]
+  },
+  {
+   "title": "A bridgehead over the Tagliamento",
+   "when": "2 November 1917",
+   "text": "After an attack by a battalion of the 4th Bosnian Infantry Regiment, the 55th Infantry Division established a bridgehead across the Tagliamento. The rapid success had stretched German and Austro-Hungarian supply lines to the breaking point.",
+   "quote": "Then, on 2 November, after an attack by Captain Emil Redl's 4th Battalion of the 4th Bosnian Infantry Regiment, the 55th Infantry Division (Austria-Hungary) established a bridgehead across the Tagliamento River.",
+   "at": {
+    "d55": [
+     33,
+     45,
+     270
+    ]
+   }
+  },
+  {
+   "title": "The Italians stand on the Piave",
+   "when": "10 November 1917",
+   "text": "The Central Powers could not launch another attack to cut off part of the Italian army against the Adriatic. Cadorna retreated further and by 10 November held a position on the Piave River and Monte Grappa.",
+   "quote": "Cadorna was able to retreat further and by 10 November had established a position on the Piave River and Monte Grappa.",
+   "at": {
+    "main": [
+     10,
+     31,
+     90
+    ],
+    "below": [
+     27,
+     31,
+     270
+    ]
+   },
+   "how": {
+    "main": "retreat"
+   }
+  }
+ ]
+}

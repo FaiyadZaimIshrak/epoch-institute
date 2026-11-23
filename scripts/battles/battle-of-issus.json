@@ -1,0 +1,450 @@
+{
+ "slug": "battle-of-issus",
+ "name": "Battle of Issus",
+ "article": "battles2/wp/battle-of-issus",
+ "field": {
+  "north": null,
+  "edges": []
+ },
+ "note": "The accounts do not say which way the Pinarus ran or where the camps stood, so the plan puts the sea at the top and the mountains at the foot, with the river between the armies. The Greek infantry and the hypaspists are placed between the cavalry wings as the course of the fighting implies; the accounts do not give their exact order of battle. The Persian line is drawn as a straight line; the accounts describe the Cardaces as wrapping across the river into the foothills.",
+ "terrain": [
+  {
+   "k": "sea",
+   "name": "Gulf of Issus",
+   "at": [
+    [
+     0,
+     0
+    ],
+    [
+     100,
+     0
+    ],
+    [
+     100,
+     3
+    ],
+    [
+     60,
+     4
+    ],
+    [
+     0,
+     4
+    ]
+   ],
+   "quote": "the distance from the Gulf of Issus to the surrounding mountains is only 2.6 km"
+  },
+  {
+   "k": "mountain",
+   "name": "Mountains",
+   "unnamed": true,
+   "at": [
+    [
+     30,
+     60
+    ],
+    [
+     45,
+     59.5
+    ],
+    [
+     70,
+     59
+    ],
+    [
+     100,
+     59
+    ],
+    [
+     100,
+     62
+    ],
+    [
+     30,
+     62
+    ]
+   ],
+   "lab": [
+    78,
+    60.5
+   ],
+   "quote": "the distance from the Gulf of Issus to the surrounding mountains is only 2.6 km"
+  },
+  {
+   "k": "river",
+   "name": "Pinarus",
+   "at": [
+    [
+     48,
+     5
+    ],
+    [
+     46.5,
+     20
+    ],
+    [
+     49,
+     35
+    ],
+    [
+     47.5,
+     48
+    ],
+    [
+     48.5,
+     58
+    ]
+   ],
+   "lab": [
+    53,
+    6
+   ],
+   "quote": "on either side of a small river called Pinarus"
+  }
+ ],
+ "sides": [
+  {
+   "id": "g",
+   "name": "Hellenic League under Alexander"
+  },
+  {
+   "id": "p",
+   "name": "Achaemenid Empire under Darius III"
+  }
+ ],
+ "units": [
+  {
+   "id": "thess",
+   "side": "g",
+   "k": "cavalry",
+   "name": "Thessalian allied cavalry",
+   "short": "Thessal.",
+   "leader": "Parmenion",
+   "w": 10,
+   "quote": "he set his Thessalian allied cavalry on the left of the phalanx with Parmenion in command"
+  },
+  {
+   "id": "phalanx",
+   "side": "g",
+   "k": "pikes",
+   "name": "Macedonian centre phalanx",
+   "short": "Phalanx",
+   "w": 13,
+   "quote": "Their center phalanx, having to advance across a river and up a fortified bank"
+  },
+  {
+   "id": "hyp",
+   "side": "g",
+   "k": "infantry",
+   "name": "Hypaspists",
+   "short": "Hypasp.",
+   "leader": "Alexander",
+   "w": 8,
+   "quote": "Then the Hypaspists led by Alexander on foot delivered an assault on the Cardaces",
+   "leaderEntry": "alexander-the-great"
+  },
+  {
+   "id": "comp",
+   "side": "g",
+   "k": "cavalry",
+   "name": "Companion cavalry",
+   "short": "Compan.",
+   "leader": "Alexander",
+   "w": 9,
+   "quote": "Alexander led his Companion cavalry on the right flank",
+   "leaderEntry": "alexander-the-great"
+  },
+  {
+   "id": "agri",
+   "side": "g",
+   "k": "light",
+   "name": "Agrianians",
+   "short": "Agrian.",
+   "w": 5,
+   "quote": "The Agrianians too drove back a mass of Persian skirmishers menacing Alexander's far right"
+  },
+  {
+   "id": "pcav",
+   "side": "p",
+   "k": "cavalry",
+   "name": "Persian heavy cavalry",
+   "short": "P. horse",
+   "w": 10,
+   "quote": "Darius formed his line with his heavy cavalry concentrated next to the coast on his right"
+  },
+  {
+   "id": "merc",
+   "side": "p",
+   "k": "spears",
+   "name": "Greek mercenary phalanx",
+   "short": "Mercen.",
+   "w": 12,
+   "quote": "followed by the Greek mercenary phalanx"
+  },
+  {
+   "id": "card",
+   "side": "p",
+   "k": "infantry",
+   "name": "Persian infantry (Cardaces)",
+   "short": "Cardaces",
+   "w": 10,
+   "quote": "Darius spread his Persian infantry, the Cardaces, along the river and into the foothills"
+  },
+  {
+   "id": "skirm",
+   "side": "p",
+   "k": "light",
+   "name": "Persian skirmishers",
+   "short": "Skirm.",
+   "w": 6,
+   "quote": "a mass of Persian skirmishers menacing Alexander's far right"
+  },
+  {
+   "id": "darius",
+   "side": "p",
+   "k": "guard",
+   "name": "Darius and his guard",
+   "short": "Darius",
+   "leader": "Darius III",
+   "w": 8,
+   "quote": "Darius positioned himself in the centre with the Greek mercenaries, his royal cavalry guard, and his best infantry",
+   "leaderEntry": "darius-iii"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The two armies draw up on either side of the river",
+   "when": "5 November 333 BCE",
+   "text": "Alexander placed the Companions on his right and the Thessalian cavalry on the left of the phalanx under Parmenion. Darius set his heavy cavalry by the coast, the Greek mercenaries next, and the Cardaces along the river and into the foothills.",
+   "quote": "Alexander led his Companion cavalry on the right flank and he set his Thessalian allied cavalry on the left of the phalanx with Parmenion in command.",
+   "at": {
+    "thess": [
+     36,
+     11,
+     90
+    ],
+    "phalanx": [
+     36,
+     25,
+     90
+    ],
+    "hyp": [
+     36,
+     37,
+     90
+    ],
+    "comp": [
+     36,
+     47,
+     90
+    ],
+    "agri": [
+     36,
+     55,
+     90
+    ],
+    "pcav": [
+     60,
+     11,
+     270
+    ],
+    "merc": [
+     60,
+     24,
+     270
+    ],
+    "darius": [
+     68,
+     34,
+     270
+    ],
+    "card": [
+     60,
+     44,
+     270
+    ],
+    "skirm": [
+     60,
+     55,
+     270
+    ]
+   }
+  },
+  {
+   "title": "The Persian cavalry charges across the river",
+   "text": "The Persian horse crossed the river and charged Parmenion and the allied cavalry. The Thessalian cavalry faced a larger mass of heavy horse and charged and fell back by turns to buy time.",
+   "quote": "The Persian cavalry first charged Parmenion and the allied cavalry, crossing the river to open battle.",
+   "at": {
+    "pcav": [
+     43,
+     11,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "pcav",
+     "thess"
+    ],
+    [
+     "thess",
+     "pcav",
+     0.3
+    ]
+   ]
+  },
+  {
+   "title": "The Macedonian centre is thrown back",
+   "text": "The centre phalanx advanced across the river and up the fortified bank and suffered badly against the mercenaries. The Macedonians were forced to retreat across the river.",
+   "quote": "the Macedonians were forced to retreat across the river",
+   "at": {
+    "phalanx": [
+     46,
+     25,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "phalanx",
+     "merc"
+    ],
+    [
+     "merc",
+     "phalanx",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The right wing breaks into the Persian line",
+   "text": "Alexander led the hypaspists on foot against the Cardaces and punched a hole through the Persian line. The Agrianians drove back the skirmishers on his far right, which secured the flank of the Companions.",
+   "quote": "Then the Hypaspists led by Alexander on foot delivered an assault on the Cardaces, and managed to punch a hole through the Persian line.",
+   "at": {
+    "phalanx": [
+     38,
+     25,
+     90
+    ],
+    "hyp": [
+     51,
+     42,
+     90
+    ],
+    "agri": [
+     50,
+     55,
+     90
+    ],
+    "skirm": [
+     66,
+     55,
+     270
+    ]
+   },
+   "how": {
+    "phalanx": "retreat",
+    "skirm": "retreat"
+   },
+   "hits": [
+    [
+     "hyp",
+     "card"
+    ],
+    [
+     "agri",
+     "skirm"
+    ]
+   ]
+  },
+  {
+   "title": "Alexander's cavalry attacks Darius, who flees",
+   "text": "Alexander mounted a horse at the head of the Companions and led a direct assault on Darius and his bodyguards. They fled from the battlefield.",
+   "quote": "Alexander then mounted a horse at the head of his Companions and led a direct assault against Darius and his bodyguards, causing them to flee from the battlefield.",
+   "at": {
+    "comp": [
+     63,
+     36,
+     90
+    ],
+    "darius": [
+     88,
+     30,
+     90
+    ]
+   },
+   "how": {
+    "darius": "rout"
+   },
+   "state": {
+    "darius": "routed"
+   },
+   "hits": [
+    [
+     "comp",
+     "darius"
+    ]
+   ]
+  },
+  {
+   "title": "The Companions strike the mercenaries from behind",
+   "text": "Alexander saw his left flank and centre in trouble and let Darius go. He crashed into the rear of the Greek mercenaries, who broke up and began to retreat.",
+   "quote": "Alexander then saw his left flank and center in trouble, and allowing Darius to flee, he crashed into the rear of the Greek mercenaries.",
+   "at": {
+    "comp": [
+     66,
+     24,
+     270
+    ]
+   },
+   "state": {
+    "merc": "routed"
+   },
+   "hits": [
+    [
+     "comp",
+     "merc"
+    ]
+   ]
+  },
+  {
+   "title": "The Persians abandon their positions",
+   "text": "The Persians saw that the Great King had gone and that the battle was being lost, and they fled in full rout. The Hellenic cavalry pursued them for as long as there was light.",
+   "quote": "The Persians saw that their Great King had gone and that the battle was being lost, and they abandoned their positions and fled in full rout.",
+   "at": {
+    "pcav": [
+     78,
+     11,
+     90
+    ],
+    "merc": [
+     76,
+     25,
+     90
+    ],
+    "card": [
+     78,
+     44,
+     90
+    ],
+    "skirm": [
+     78,
+     55,
+     90
+    ]
+   },
+   "how": {
+    "pcav": "rout",
+    "merc": "rout",
+    "card": "rout",
+    "skirm": "rout"
+   },
+   "state": {
+    "pcav": "routed",
+    "card": "routed",
+    "skirm": "routed"
+   }
+  }
+ ]
+}

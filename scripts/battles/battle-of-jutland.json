@@ -1,0 +1,463 @@
+{
+ "slug": "battle-of-jutland",
+ "name": "Battle of Jutland",
+ "article": "battles2/wp/battle-of-jutland",
+ "field": {
+  "ground": "sea",
+  "north": 0,
+  "edges": [
+   {
+    "name": "← Britain",
+    "at": [
+     4,
+     32
+    ]
+   },
+   {
+    "name": "Skagerrak →",
+    "at": [
+     88,
+     8
+    ]
+   },
+   {
+    "name": "German bases ↓",
+    "at": [
+     60,
+     59
+    ]
+   }
+  ]
+ },
+ "note": "The plan shows the whole operation of 31 May and 1 June 1916 at the scale of fleets, not a single field. The accounts give distances and compass bearings only roughly, so the squadrons are placed to match them and the plan is not to scale. The accounts do not say where the British battlecruisers stood during the night, so they are left off the last phase.",
+ "terrain": [
+  {
+   "k": "land",
+   "name": "Jutland",
+   "at": [
+    [
+     90,
+     26
+    ],
+    [
+     100,
+     22
+    ],
+    [
+     100,
+     62
+    ],
+    [
+     89,
+     62
+    ],
+    [
+     92,
+     44
+    ]
+   ],
+   "lab": [
+    96,
+    46
+   ],
+   "quote": "off the North Sea coast of Denmark's Jutland Peninsula"
+  },
+  {
+   "k": "point",
+   "name": "Horns Reef",
+   "at": [
+    86,
+    54
+   ],
+   "lab": [
+    85,
+    57
+   ],
+   "quote": "Scheer opted to cross Jellicoe's wake and escape via Horns Reef."
+  }
+ ],
+ "sides": [
+  {
+   "id": "b",
+   "name": "Royal Navy, Grand Fleet"
+  },
+  {
+   "id": "g",
+   "name": "Imperial German Navy, High Seas Fleet"
+  }
+ ],
+ "units": [
+  {
+   "id": "jel",
+   "side": "b",
+   "k": "ships",
+   "name": "Grand Fleet battleships",
+   "short": "Jellicoe",
+   "leader": "Jellicoe",
+   "w": 14,
+   "quote": "deploy his battleships from their cruising formation (six columns of four ships each)"
+  },
+  {
+   "id": "hood",
+   "side": "b",
+   "k": "ships",
+   "name": "3rd Battlecruiser Squadron",
+   "short": "Hood",
+   "leader": "Horace Hood",
+   "w": 6,
+   "quote": "Jellicoe had ordered Rear-Admiral Horace Hood's 3rd Battlecruiser Squadron to speed ahead to find and support Beatty's force"
+  },
+  {
+   "id": "bc",
+   "side": "b",
+   "k": "ships",
+   "name": "Beatty's battlecruisers",
+   "short": "Beatty",
+   "leader": "Beatty",
+   "w": 10,
+   "quote": "Beatty's ships were divided into three columns, with the two battlecruiser squadrons leading in parallel lines"
+  },
+  {
+   "id": "bs5",
+   "side": "b",
+   "k": "ships",
+   "name": "5th Battle Squadron",
+   "short": "5th BS",
+   "leader": "Evan-Thomas",
+   "w": 8,
+   "quote": "The 5th Battle Squadron was stationed 5 mi (4.3 nmi; 8.0 km) to the north-west"
+  },
+  {
+   "id": "jscr",
+   "side": "b",
+   "k": "ships",
+   "name": "Grand Fleet rear screen",
+   "short": "Screen",
+   "w": 10,
+   "quote": "He placed a screen of cruisers and destroyers 5 mi (4.3 nmi; 8.0 km) behind his battle fleet"
+  },
+  {
+   "id": "hip",
+   "side": "g",
+   "k": "ships",
+   "name": "German battlecruisers",
+   "short": "Hipper",
+   "leader": "Hipper",
+   "w": 10,
+   "quote": "The battlecruisers were in line ahead, with the four cruisers of the II scouting group plus supporting torpedo boats ranged in an arc"
+  },
+  {
+   "id": "hsf",
+   "side": "g",
+   "k": "ships",
+   "name": "High Seas Fleet battle line",
+   "short": "Scheer",
+   "leader": "Scheer",
+   "w": 14,
+   "quote": "The High Seas Fleet similarly adopted a line-ahead formation, with close screening by torpedo boats to either side"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The fleets sail towards each other unseen",
+   "when": "About 14:00, 31 May 1916",
+   "text": "Beatty's ships ran east while Hipper's battlecruisers ran north, with Scheer's battle line following Hipper. Jellicoe's fleet was still out of sight to the north-west, and the Germans did not know it was at sea.",
+   "quote": "By around 14:00, Beatty's ships were proceeding eastward at roughly the same latitude as Hipper's squadron, which was heading north.",
+   "at": {
+    "jel": [
+     16,
+     14,
+     90
+    ],
+    "hood": [
+     28,
+     14,
+     90
+    ],
+    "bc": [
+     50,
+     30,
+     90
+    ],
+    "bs5": [
+     44,
+     24,
+     90
+    ],
+    "hip": [
+     66,
+     16,
+     0
+    ],
+    "hsf": [
+     70,
+     34,
+     0
+    ]
+   },
+   "state": {
+    "jel": "hidden",
+    "hood": "hidden",
+    "hsf": "hidden"
+   }
+  },
+  {
+   "title": "The Run to the South",
+   "when": "15:48",
+   "text": "Hipper turned south-east to lead Beatty towards Scheer and opened fire. The British battlecruisers, with the 5th Battle Squadron behind them, followed on the south-western side. Hood was sent ahead from Jellicoe's fleet at about 16:05.",
+   "quote": "At 15:48, with the opposing forces roughly parallel at 15,000 yd (14,000 m), with the British to the south-west of the Germans (i.e., on the right side), Hipper opened fire",
+   "at": {
+    "jel": [
+     22,
+     20,
+     135
+    ],
+    "hood": [
+     32,
+     22,
+     135
+    ],
+    "bc": [
+     58,
+     34,
+     135
+    ],
+    "bs5": [
+     50,
+     30,
+     135
+    ],
+    "hip": [
+     68,
+     28,
+     135
+    ],
+    "hsf": [
+     80,
+     40,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "hip",
+     "bc"
+    ],
+    [
+     "bc",
+     "hip"
+    ],
+    [
+     "bs5",
+     "hip",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "Beatty turns north and the Germans follow",
+   "when": "16:40",
+   "text": "Beatty sighted the German battle line and turned his battlecruisers about to lead the Germans towards Jellicoe. The 5th Battle Squadron passed them going the other way and then turned north, drawing the fire of Hipper and of Scheer's leading battleships.",
+   "quote": "Beatty turned his battlecruiser force 180°, heading north to draw the Germans toward Jellicoe.",
+   "at": {
+    "jel": [
+     30,
+     24,
+     135
+    ],
+    "hood": [
+     44,
+     20,
+     270
+    ],
+    "bc": [
+     56,
+     22,
+     0
+    ],
+    "bs5": [
+     62,
+     34,
+     0
+    ],
+    "hip": [
+     74,
+     30,
+     315
+    ],
+    "hsf": [
+     78,
+     42,
+     315
+    ]
+   },
+   "how": {
+    "bc": "retreat"
+   },
+   "state": {
+    "jel": "shown",
+    "hood": "shown",
+    "hsf": "shown"
+   },
+   "hits": [
+    [
+     "hsf",
+     "bs5"
+    ],
+    [
+     "hip",
+     "bs5"
+    ],
+    [
+     "bs5",
+     "hip",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "Jellicoe deploys to the east",
+   "when": "18:15",
+   "text": "Jellicoe formed his six columns into a single battle line, deploying on the eastern column. Beatty's battlecruisers crossed the front of his line to join Hood, and Hood and Beatty engaged Hipper while Scheer's fleet came on from the south.",
+   "quote": "In one of the most critical and difficult tactical command decisions of the entire war, Jellicoe ordered deployment to the east at 18:15.",
+   "at": {
+    "jel": [
+     38,
+     16,
+     180
+    ],
+    "hood": [
+     56,
+     20,
+     180
+    ],
+    "bc": [
+     56,
+     28,
+     180
+    ],
+    "bs5": [
+     44,
+     32,
+     0
+    ],
+    "hip": [
+     74,
+     32,
+     0
+    ],
+    "hsf": [
+     66,
+     40,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "hood",
+     "hip",
+     0.2
+    ],
+    [
+     "bc",
+     "hip"
+    ]
+   ]
+  },
+  {
+   "title": "Scheer's T is crossed and he turns away",
+   "when": "18:30 to 18:33",
+   "text": "The leading German battleships came out of the mist facing the whole British line, which crossed their T. Scheer ordered a turn together through 180°, and the German fleet disengaged under smoke and mist.",
+   "quote": "Realising he was heading into a death trap, Scheer ordered his fleet to turn and disengage at 18:33.",
+   "at": {
+    "hsf": [
+     64,
+     48,
+     180
+    ]
+   },
+   "how": {
+    "hsf": "retreat"
+   },
+   "hits": [
+    [
+     "jel",
+     "hsf",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "Scheer turns back and turns away again",
+   "when": "18:55 to about 19:30",
+   "text": "Scheer doubled back east, and by 19:15 Jellicoe had crossed his T again. Scheer turned west a second time and sent his battlecruisers and torpedo boats at the British to cover the turn.",
+   "quote": "Scheer ordered a major torpedo attack by his destroyers and a potentially sacrificial charge by Scouting Group I's four remaining battlecruisers.",
+   "at": {
+    "jel": [
+     42,
+     26,
+     180
+    ],
+    "hip": [
+     56,
+     36,
+     270
+    ],
+    "hsf": [
+     62,
+     44,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "jel",
+     "hip"
+    ]
+   ]
+  },
+  {
+   "title": "Scheer slips round the British rear in the night",
+   "when": "From 21:00",
+   "text": "Jellicoe headed south with a screen of cruisers and destroyers behind him to guard Scheer's expected escape route. Scheer instead crossed the British wake and made for Horns Reef, passing through the screen.",
+   "quote": "In reality, Scheer opted to cross Jellicoe's wake and escape via Horns Reef.",
+   "at": {
+    "jel": [
+     26,
+     48,
+     180
+    ],
+    "jscr": [
+     34,
+     40,
+     180
+    ],
+    "bs5": [
+     46,
+     46,
+     180
+    ],
+    "hip": [
+     78,
+     36,
+     90
+    ],
+    "hsf": [
+     62,
+     34,
+     90
+    ]
+   },
+   "state": {
+    "hood": "gone",
+    "bc": "gone"
+   },
+   "hits": [
+    [
+     "jscr",
+     "hsf"
+    ]
+   ]
+  }
+ ]
+}

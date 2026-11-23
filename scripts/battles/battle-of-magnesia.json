@@ -1,0 +1,403 @@
+{
+ "slug": "battle-of-magnesia",
+ "name": "Battle of Magnesia",
+ "article": "battles2/wp/battle-of-magnesia",
+ "field": {
+  "north": null,
+  "edges": []
+ },
+ "note": "The accounts do not give the compass directions, so the Romans are drawn on the left and the Seleucids on the right. The rivers are placed on the Roman left, where the accounts say the right flank was the one left unprotected. The accounts do not say which Roman formation met Antiochus's attack; the Roman left is used because it stood opposite his right. The Seleucid left wing is drawn as one block although it held many units, and the strengths of both armies are disputed.",
+ "terrain": [
+  {
+   "k": "river",
+   "name": "Phrygios",
+   "unnamed": true,
+   "at": [
+    [
+     4,
+     5
+    ],
+    [
+     20,
+     5
+    ],
+    [
+     26,
+     8
+    ],
+    [
+     27,
+     2
+    ]
+   ],
+   "lab": [
+    8,
+    8
+   ],
+   "quote": "leaving their right flank unprotected by the rivers"
+  }
+ ],
+ "sides": [
+  {
+   "id": "r",
+   "name": "Romans and Pergamon"
+  },
+  {
+   "id": "s",
+   "name": "Seleucid army"
+  }
+ ],
+ "units": [
+  {
+   "id": "rl",
+   "side": "r",
+   "k": "infantry",
+   "name": "Roman left wing",
+   "short": "R. left",
+   "leader": "Gnaeus Domitius Ahenobarbus",
+   "w": 9,
+   "quote": "It numbered 10,800 heavy infantrymen drawn from among the Romans and Rome's socii"
+  },
+  {
+   "id": "rc",
+   "side": "r",
+   "k": "infantry",
+   "name": "Roman centre",
+   "short": "R. centre",
+   "leader": "Scipio",
+   "w": 13,
+   "quote": "The center likewise consisted of 10,800 Roman and Latin heavy infantrymen commanded personally by Scipio."
+  },
+  {
+   "id": "rr",
+   "side": "r",
+   "k": "cavalry",
+   "name": "Roman and Pergamene cavalry",
+   "short": "R. horse",
+   "leader": "Eumenes",
+   "w": 9,
+   "quote": "The right flank was led by Eumenes and comprised 2,800 to 3,000 cavalry",
+   "leaderEntry": "eumenes-ii"
+  },
+  {
+   "id": "rlight",
+   "side": "r",
+   "k": "light",
+   "name": "Light infantry and archers",
+   "short": "R. light",
+   "w": 8,
+   "quote": "Ahead of the Roman main force were 3,000 Achaean and Pergamene light infantry and 800 Cretan and Illyrian archers."
+  },
+  {
+   "id": "rrear",
+   "side": "r",
+   "k": "guard",
+   "name": "Roman rearguard",
+   "short": "Rearguard",
+   "w": 6,
+   "quote": "The rearguard was formed by 2,000 Thracian and Macedonian volunteers"
+  },
+  {
+   "id": "rcamp",
+   "side": "r",
+   "k": "camp",
+   "name": "Roman camp",
+   "short": "R. camp",
+   "quote": "retreating to their camp where they were reinforced by the Thracians and Macedonians"
+  },
+  {
+   "id": "sl",
+   "side": "s",
+   "k": "cavalry",
+   "name": "Seleucid left wing cavalry",
+   "short": "S. left",
+   "leader": "Seleucus",
+   "w": 9,
+   "quote": "The left wing of the Seleucid army was commanded by Antiochus' son Seleucus and his nephew Antipater."
+  },
+  {
+   "id": "chariots",
+   "side": "s",
+   "k": "chariots",
+   "name": "Scythed chariots and camels",
+   "short": "Chariots",
+   "w": 6,
+   "quote": "units of scythed chariots and a unit of camel-borne Arab archers were posted in front of the left flank"
+  },
+  {
+   "id": "sgal",
+   "side": "s",
+   "k": "infantry",
+   "name": "Galatian and other infantry",
+   "short": "Galatians",
+   "w": 8,
+   "quote": "The Galatians, Cappadocians, and mercenary infantry to the left of the phalanx"
+  },
+  {
+   "id": "phalanx",
+   "side": "s",
+   "k": "pikes",
+   "name": "Macedonian phalanx",
+   "short": "Phalanx",
+   "leader": "Philip",
+   "w": 14,
+   "quote": "The center was formed by a 16,000-strong Macedonian phalanx, commanded by Philip"
+  },
+  {
+   "id": "sr",
+   "side": "s",
+   "k": "cavalry",
+   "name": "Seleucid right wing",
+   "short": "S. right",
+   "leader": "Antiochus",
+   "w": 10,
+   "quote": "The right flank was led by Antiochus, consisting of 3,000 cataphracts",
+   "leaderEntry": "antiochus-iii-the-great"
+  },
+  {
+   "id": "scamp",
+   "side": "s",
+   "k": "camp",
+   "name": "Seleucid camp",
+   "short": "S. camp",
+   "quote": "The war camp was guarded by 7,000 of the least combat-ready Seleucid troops."
+  }
+ ],
+ "phases": [
+  {
+   "title": "The armies line up",
+   "text": "The two armies lined up facing each other without fighting. The Romans stood with their left towards the rivers, and Antiochus took the Roman challenge on the third day after the last Roman advance.",
+   "quote": "the two armies lined up for battle, without engaging each other",
+   "at": {
+    "rl": [
+     30,
+     12,
+     90
+    ],
+    "rc": [
+     30,
+     28,
+     90
+    ],
+    "rr": [
+     30,
+     46,
+     90
+    ],
+    "rlight": [
+     41,
+     46,
+     90
+    ],
+    "rrear": [
+     17,
+     40,
+     90
+    ],
+    "rcamp": [
+     6,
+     29,
+     90
+    ],
+    "sr": [
+     60,
+     10,
+     270
+    ],
+    "phalanx": [
+     60,
+     28,
+     270
+    ],
+    "sgal": [
+     60,
+     40,
+     270
+    ],
+    "sl": [
+     60,
+     51,
+     270
+    ],
+    "chariots": [
+     52,
+     51,
+     270
+    ],
+    "scamp": [
+     92,
+     29,
+     270
+    ]
+   }
+  },
+  {
+   "title": "Eumenes drives off the chariots",
+   "text": "Eumenes sent forward archers, slingers and spearmen against the scythed chariots. The chariots suffered heavy casualties and fled in panic, throwing the camel archers and cataphracts behind them into confusion.",
+   "quote": "Eumenes sent forward his archers, slingers, and spearmen to harass the Seleucid scythed chariots.",
+   "at": {
+    "rlight": [
+     46,
+     47,
+     90
+    ],
+    "chariots": [
+     66,
+     54,
+     270
+    ]
+   },
+   "how": {
+    "chariots": "rout"
+   },
+   "state": {
+    "chariots": "routed"
+   },
+   "hits": [
+    [
+     "rlight",
+     "chariots"
+    ]
+   ]
+  },
+  {
+   "title": "The Seleucid left is broken",
+   "text": "Eumenes charged with his cavalry before the cataphracts could reorganise. The Roman and Pergamene cavalry broke through the Seleucid left flank, and the cataphracts fled to the Seleucid camp.",
+   "quote": "The Roman and Pergamene cavalry broke through the Seleucid left flank, causing the cataphracts to flee to the Seleucid camp.",
+   "at": {
+    "rr": [
+     52,
+     49,
+     90
+    ],
+    "sl": [
+     82,
+     41,
+     0
+    ]
+   },
+   "how": {
+    "sl": "rout"
+   },
+   "state": {
+    "sl": "routed"
+   },
+   "hits": [
+    [
+     "rr",
+     "sl"
+    ]
+   ]
+  },
+  {
+   "title": "The infantry beside the phalanx give way",
+   "text": "The Galatians, Cappadocians and mercenary infantry were attacked at once by the Roman centre and right. They retreated, which left the left flank of the phalanx exposed.",
+   "quote": "faced a simultaneous attack from the Roman center and right, causing them to retreat and exposing the phalanx's left flank.",
+   "at": {
+    "rc": [
+     44,
+     30,
+     90
+    ],
+    "sgal": [
+     72,
+     41,
+     270
+    ]
+   },
+   "how": {
+    "sgal": "retreat"
+   },
+   "hits": [
+    [
+     "rc",
+     "sgal"
+    ],
+    [
+     "rr",
+     "sgal",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "Antiochus attacks on the right",
+   "text": "Antiochus led his cataphracts and agema cavalry against the Latin infantry while the argyraspides engaged the legionaries. The Roman infantry broke ranks and retreated to their camp, where the Thracians and Macedonians reinforced them.",
+   "quote": "The Roman infantry broke ranks retreating to their camp where they were reinforced by the Thracians and Macedonians",
+   "at": {
+    "sr": [
+     30,
+     18,
+     270
+    ],
+    "rl": [
+     12,
+     13,
+     270
+    ],
+    "rrear": [
+     16,
+     24,
+     270
+    ]
+   },
+   "how": {
+    "rl": "retreat"
+   },
+   "hits": [
+    [
+     "sr",
+     "rl"
+    ]
+   ]
+  },
+  {
+   "title": "The phalanx breaks",
+   "text": "The phalanx held against the Roman infantry but could not drive off the archers and slingers who shot at it. It began a slow retreat, the elephants between its units panicked, and the phalangites threw down their weapons and left the field.",
+   "quote": "The phalangites discarded their weapons and abandoned the battlefield.",
+   "at": {
+    "rlight": [
+     52,
+     30,
+     90
+    ],
+    "phalanx": [
+     76,
+     28,
+     90
+    ]
+   },
+   "how": {
+    "phalanx": "rout"
+   },
+   "state": {
+    "phalanx": "routed"
+   },
+   "hits": [
+    [
+     "rlight",
+     "phalanx"
+    ],
+    [
+     "rc",
+     "phalanx"
+    ]
+   ]
+  },
+  {
+   "title": "Antiochus withdraws",
+   "text": "Antiochus's cavalry came back to reinforce the centre after his army had already dispersed. He gathered the surviving troops and retreated to Sardes.",
+   "quote": "He gathered the surviving troops and retreated to Sardes while the Romans were busy looting his camp.",
+   "at": {
+    "sr": [
+     80,
+     14,
+     90
+    ]
+   },
+   "how": {
+    "sr": "retreat"
+   }
+  }
+ ]
+}

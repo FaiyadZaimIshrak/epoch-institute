@@ -3525,6 +3525,39 @@ then declutter. Answers: about 100 each; all sections; menus by subject plus hub
     backslashes: patch scripts are written as files.
   - battle-map.js is loaded without `?v=` (root .htaccess list, as faith-map.js); deploy.sh DATA has data/battles;
     scripts/tests/battle-maps.js.
+- **The second wave, 85 battles (23 Nov 2026; 103 in all; scripts/kinds/battles2/):**
+  - **Candidates:** 130 ranked from the encyclopedia's battles (editions, article length, mentions, floors by region
+    and age). 10 articles were too short to try; of the 120 tried, 85 pass, 9 are held (held.txt: one side's
+    deployment was the writer's judgement: Talas, Adrianople, Kulikovo, Bannockburn, Changping, Fei River, the Somme,
+    Chacabuco, Stamford Bridge) and 26 are skips (Pavia, Lechfeld, Ipsus, Chaeronea, White Mountain, Siffin, the
+    Camel, Nineveh, Köse Dağ, Vienna 1529, Jerusalem 1187, Ascalon, Mogadishu …). The section stops there: more
+    battles need fuller sources than one article.
+  - **Each battle:** a plan writer (the strict test: a side placed only by the writer's judgement is a skip), the
+    checker, the editor's read of the contact sheet (`sheet.js … --compact`), then a profile writer with
+    BATTLES-GUIDE.md, check-drafts.js, the editor's read and exact-pair fixes (battles2/edits/: fix-prof*.js through
+    apply-fixes.js; fix-wave2*.js for the plans), references from the article's own book list (picks.tsv, refs.js),
+    commanders matched to entries by hand and their portraits chosen by eye (edits/set-leaders*.js,
+    scripts/battles/portraits.tsv).
+  - **What the read taught:** a "sources" section must speak of the evidence, never of the article ("in one place",
+    "the lead says", "the saved account gives no …"); a claim of absence ("no figure is recorded") is cut unless the
+    article makes it; key-event labels never start with a day ("April 1242": the timeline reads the first number as
+    the year) and always carry a year; region names are given by hand.
+  - **The player:** a kind `armour` (tanks and mechanised troops), camps never turn, ground names stay inside the plan.
+  - **Emblems:** the battle's own entry picture cropped square (life-emblems.ps1 -Only); the place's name in Arabic
+    for Karbala and Uhud; a letter (of the place's own script where it has one) where the entry picture is a map, a
+    collage or a later engraving (Kursk, Salamis, Thermopylae, Carrhae, Guandu, Jutland, Magnesia, Lake Trasimene,
+    Pydna, Raphia, Verdun, Thapsus, Caporetto, Warsaw, Jerusalem 1099, Myriokephalon, Alarcos, Yamen). Home pictures
+    likewise ("-" for those twenty).
+  - **Two entry pictures taken off** ("nopicture"): the Battle of Uhud and the Companions of the Prophet carried
+    miniatures that show Muhammad.
+  - **Links:** 100 exclusions read from the scans (ships and units named after people and places: HMS Ramillies, the
+    Knyaz Suvorov, the Trieste Division; historians named David, Wells and Engels; "Sucre" the general as the city,
+    "Rustam" as the hero of the Shahnameh, "Francis I" of Austria as the French king, "King John" of Bohemia, of
+    France and Sobieski as John of England) and 56 profile-only forms for commanders' short names (battles2/forms.js).
+    Besides link-audit.js caps, a battle's single year makes a date test strong: every link to an entry dated far
+    from the battle was read.
+  - Seen and left: the encyclopedia has two entries for Francis I of France (francis-i, without a picture, and
+    francis-i-of-france).
 
 ## Connections map and the states register
 - `data/polities.json` — register of every state (incl. the modern Levant: Israel, the State of Palestine, Jordan, Lebanon, Syria — added by hand Oct 2026, successor links to the mandates): nodes {id, n name, t type, b broad region, s/e years, a aka, m mode, c capital, mo modern countries, p profile url} and links {s, t, r relation, f/u years}. Successions stored one way (successor-of). Built from regional research files by the scratchpad states/merge.ps1 (dedupe, relation resolution, validation report).

@@ -1,0 +1,415 @@
+{
+ "slug": "battle-of-navarino",
+ "name": "Battle of Navarino",
+ "article": "battles2/wp/battle-of-navarino",
+ "field": {
+  "ground": "sea",
+  "north": null,
+  "edges": [
+   {
+    "name": "open sea ↓",
+    "at": [
+     60,
+     60
+    ]
+   }
+  ]
+ },
+ "note": "The plan shows the bay as a schematic, not to scale. The accounts give the shape of the Ottoman line and which Allied squadron faced which part of it, but not exact anchorages. Where the Ottoman left and right wings lay on the page, and where the corvettes at the entrance stood, is placed by judgement. The Ottoman second and third lines are drawn as one block, and the Allied squadrons as one block each. Allied sources give the account of how the fighting began; Codrington's claim that the Ottomans began it is the account followed.",
+ "terrain": [
+  {
+   "k": "land",
+   "name": "Sphacteria",
+   "at": [
+    [
+     0,
+     38
+    ],
+    [
+     10,
+     37
+    ],
+    [
+     16,
+     44
+    ],
+    [
+     18,
+     52
+    ],
+    [
+     14,
+     62
+    ],
+    [
+     0,
+     62
+    ]
+   ],
+   "lab": [
+    6,
+    56
+   ],
+   "quote": "The bay is sheltered from the open sea by a long, narrow islet, Sphacteria."
+  },
+  {
+   "k": "fort",
+   "name": "Navarino fort",
+   "at": [
+    93,
+    48
+   ],
+   "lab": [
+    90,
+    44
+   ],
+   "quote": "The southern entrance was at that time guarded by the Ottoman-held New Navarino fortress (Pylos)."
+  }
+ ],
+ "sides": [
+  {
+   "id": "a",
+   "name": "Allied fleet (Britain, France, Russia)"
+  },
+  {
+   "id": "o",
+   "name": "Ottoman and Egyptian fleet"
+  }
+ ],
+ "units": [
+  {
+   "id": "brit",
+   "side": "a",
+   "k": "ships",
+   "name": "British squadron",
+   "short": "British",
+   "w": 12,
+   "leader": "Edward Codrington",
+   "quote": "Codrington's squadron would take up position facing the centre of the Ottoman line"
+  },
+  {
+   "id": "fren",
+   "side": "a",
+   "k": "ships",
+   "name": "French squadron",
+   "short": "French",
+   "w": 9,
+   "leader": "Rigny",
+   "quote": "the French and Russian squadrons would face the Ottoman left and right wings respectively"
+  },
+  {
+   "id": "russ",
+   "side": "a",
+   "k": "ships",
+   "name": "Russian squadron",
+   "short": "Russians",
+   "w": 9,
+   "leader": "Van Heiden",
+   "quote": "The Russians under Van Heiden were the last to take up station"
+  },
+  {
+   "id": "dart",
+   "side": "a",
+   "k": "ships",
+   "name": "Dartmouth and small vessels",
+   "short": "Dartmouth",
+   "w": 5,
+   "leader": "Thomas Fellowes",
+   "quote": "had been detailed, with six smaller vessels (2 brigs and 4 schooners) to keep watch on the group of Ottoman corvettes and fireships"
+  },
+  {
+   "id": "bres",
+   "side": "a",
+   "k": "ships",
+   "name": "French Breslaw",
+   "short": "Breslaw",
+   "w": 4,
+   "quote": "decided on his own initiative to break away from the French formation and move into the centre of the bay"
+  },
+  {
+   "id": "front",
+   "side": "o",
+   "k": "ships",
+   "name": "Ottoman front line",
+   "short": "Front",
+   "w": 14,
+   "quote": "The front line consisted of the ships of the line and large frigates"
+  },
+  {
+   "id": "rear",
+   "side": "o",
+   "k": "ships",
+   "name": "Ottoman second and third lines",
+   "short": "Rear lines",
+   "w": 16,
+   "quote": "the second line contained the remaining frigates and larger corvettes; the third consisted of the remaining smaller vessels"
+  },
+  {
+   "id": "lw",
+   "side": "o",
+   "k": "ships",
+   "name": "Corvettes and fireships, left",
+   "short": "Left wing",
+   "w": 8,
+   "quote": "On the ends of the horseshoe were stationed corvettes and fireships."
+  },
+  {
+   "id": "rw",
+   "side": "o",
+   "k": "ships",
+   "name": "Ottoman right wing",
+   "short": "Right wing",
+   "w": 8,
+   "quote": "On the ends of the horseshoe were stationed corvettes and fireships."
+  },
+  {
+   "id": "fort",
+   "side": "o",
+   "k": "artillery",
+   "name": "Navarino fort battery",
+   "short": "Fort",
+   "w": 5,
+   "quote": "Navarino fort and on the southern tip of Sphacteria island"
+  },
+  {
+   "id": "isle",
+   "side": "o",
+   "k": "artillery",
+   "name": "Sphacteria battery",
+   "short": "Isle batt.",
+   "w": 5,
+   "quote": "The Ottomans possessed a shore battery on each side of the main entrance to the bay"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The Allied squadrons enter the bay",
+   "when": "About 2.00 p.m., 20 October 1827",
+   "text": "The Ottoman and Egyptian fleet lay anchored in a horseshoe of three lines. The Allied ships came through the southern entrance in two lines, British and French to starboard and the Russians to port, slightly behind.",
+   "quote": "Allied warships, with Codrington in the lead in Asia, began filing into the bay through the southern entrance",
+   "at": {
+    "front": [
+     50,
+     20,
+     180
+    ],
+    "rear": [
+     50,
+     9,
+     180
+    ],
+    "lw": [
+     80,
+     28,
+     180
+    ],
+    "rw": [
+     20,
+     28,
+     180
+    ],
+    "fort": [
+     92,
+     57,
+     270
+    ],
+    "isle": [
+     14,
+     34,
+     90
+    ],
+    "brit": [
+     50,
+     54,
+     0
+    ],
+    "fren": [
+     70,
+     57,
+     0
+    ],
+    "russ": [
+     32,
+     58,
+     0
+    ],
+    "dart": [
+     80,
+     50,
+     0
+    ]
+   }
+  },
+  {
+   "title": "The Allies anchor in the crescent",
+   "when": "By 2.15 p.m.",
+   "text": "The three British ships of the line anchored facing the Ottoman centre. The French took the side facing the Ottoman left wing, and the Russians the right end of the crescent. Allied captains had orders to fire only if attacked.",
+   "quote": "By 2.15 p.m., the three British ships of the line had dropped anchor in their allotted positions.",
+   "at": {
+    "brit": [
+     50,
+     36,
+     0
+    ],
+    "fren": [
+     72,
+     44,
+     0
+    ],
+    "russ": [
+     28,
+     42,
+     0
+    ],
+    "dart": [
+     86,
+     48,
+     0
+    ]
+   }
+  },
+  {
+   "title": "Fighting breaks out at the entrance",
+   "text": "Dartmouth's boats were fired on when they tried to stop an Ottoman fireship, and the shooting spread along the line. Breslaw left the French formation to reinforce Albion and Azov in the centre.",
+   "quote": "This chain reaction spread along the line, so that within a short time, there was general engagement.",
+   "at": {
+    "bres": [
+     62,
+     46,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "dart",
+     "lw"
+    ],
+    [
+     "lw",
+     "dart"
+    ],
+    [
+     "fren",
+     "lw"
+    ],
+    [
+     "front",
+     "brit"
+    ],
+    [
+     "fort",
+     "fren",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The centre fights at anchor",
+   "text": "Ships fired at very close range, with little room to manoeuvre. The French silenced the fort's battery. Asia concentrated her fire on Fahti Bahri, and Breslaw moved to the junction of the British and Russian lines.",
+   "quote": "Sirène, with the support of Trident and Scipion, then bombarded the fort of Navarino and eventually silenced its shore battery.",
+   "at": {
+    "bres": [
+     38,
+     40,
+     0
+    ]
+   },
+   "state": {
+    "fort": "destroyed"
+   },
+   "hits": [
+    [
+     "fren",
+     "fort",
+     0.2
+    ],
+    [
+     "brit",
+     "front"
+    ],
+    [
+     "bres",
+     "front"
+    ],
+    [
+     "front",
+     "brit",
+     -0.2
+    ],
+    [
+     "rear",
+     "brit"
+    ],
+    [
+     "russ",
+     "rw"
+    ],
+    [
+     "rw",
+     "russ"
+    ],
+    [
+     "isle",
+     "russ"
+    ]
+   ]
+  },
+  {
+   "title": "The Ottoman front line is despatched",
+   "when": "By about 4 p.m.",
+   "text": "All three Ottoman ships of the line and most of the large frigates of the first line had been despatched. The small British and French vessels stopped the fireships, and only the first attack on Scipion got home.",
+   "quote": "By about 4 p.m., all three Ottoman ships of the line and most of the large frigates of the first line had been despatched.",
+   "state": {
+    "front": "destroyed"
+   },
+   "hits": [
+    [
+     "brit",
+     "front"
+    ],
+    [
+     "bres",
+     "front"
+    ],
+    [
+     "russ",
+     "rw"
+    ],
+    [
+     "dart",
+     "lw"
+    ]
+   ]
+  },
+  {
+   "title": "The smaller vessels are destroyed",
+   "when": "The following two hours",
+   "text": "The Allied ships of the line, all still operational, fired on the second and third lines. Codrington tried twice to order a ceasefire, but his signals were hidden by smoke or ignored. Of 78 vessels, just eight stayed seaworthy.",
+   "quote": "Within the following two hours, virtually the entire Ottoman fleet was destroyed, despite the signal bravery of the Ottoman crews",
+   "state": {
+    "rear": "destroyed",
+    "lw": "destroyed",
+    "rw": "destroyed"
+   },
+   "hits": [
+    [
+     "brit",
+     "rear"
+    ],
+    [
+     "russ",
+     "rear",
+     -0.2
+    ],
+    [
+     "fren",
+     "rear"
+    ],
+    [
+     "bres",
+     "lw"
+    ]
+   ]
+  }
+ ]
+}

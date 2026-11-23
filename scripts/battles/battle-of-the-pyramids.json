@@ -1,0 +1,358 @@
+{
+ "slug": "battle-of-the-pyramids",
+ "name": "Battle of the Pyramids",
+ "article": "battles2/wp/battle-of-the-pyramids",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "Ibrahim Bey’s army across the Nile →",
+    "at": [
+     88,
+     58
+    ]
+   },
+   {
+    "name": "to Upper Egypt ↓",
+    "at": [
+     30,
+     59
+    ]
+   }
+  ]
+ },
+ "note": "The accounts give the French order from right to left, the Nile on their left and their advance to the south, so the river is drawn on the east. The distances, the exact lie of the two villages and the places of the squares are not given and are placed by judgement.",
+ "terrain": [
+  {
+   "k": "river",
+   "name": "Nile",
+   "at": [
+    [
+     96,
+     0
+    ],
+    [
+     97,
+     18
+    ],
+    [
+     95,
+     36
+    ],
+    [
+     97,
+     50
+    ],
+    [
+     96,
+     62
+    ]
+   ],
+   "lab": [
+    91,
+    4
+   ],
+   "quote": "the left secured by the Nile"
+  },
+  {
+   "k": "village",
+   "name": "Embabeh",
+   "at": [
+    82,
+    50
+   ],
+   "lab": [
+    82,
+    54
+   ],
+   "quote": "Murad anchored his right on the Nile at Embabeh, which was fortified with infantry and artillery"
+  },
+  {
+   "k": "village",
+   "name": "Biktil",
+   "at": [
+    14,
+    52
+   ],
+   "lab": [
+    14,
+    56
+   ],
+   "quote": "his left on Biktil with additional guns"
+  }
+ ],
+ "sides": [
+  {
+   "id": "f",
+   "name": "French army"
+  },
+  {
+   "id": "m",
+   "name": "Murad Bey’s Mamluk-led forces"
+  }
+ ],
+ "units": [
+  {
+   "id": "desaix",
+   "side": "f",
+   "k": "infantry",
+   "name": "Desaix’s division (square)",
+   "short": "Desaix",
+   "leader": "Louis Desaix",
+   "w": 9,
+   "quote": "Each of the five divisions was organised into hollow rectangles with cavalry and baggage in the centre and cannon at the corners."
+  },
+  {
+   "id": "reynier",
+   "side": "f",
+   "k": "infantry",
+   "name": "Reynier’s division (square)",
+   "short": "Reynier",
+   "leader": "Jean-Louis-Ébénézer Reynier",
+   "w": 9,
+   "quote": "From right to left, the divisions were commanded by Louis Desaix, Jean-Louis-Ébénézer Reynier, Charles-François-Joseph Dugua, Honoré Vial, and Louis André Bon."
+  },
+  {
+   "id": "dugua",
+   "side": "f",
+   "k": "infantry",
+   "name": "Dugua’s division (square)",
+   "short": "Dugua",
+   "leader": "Charles-François-Joseph Dugua",
+   "w": 9,
+   "quote": "From right to left, the divisions were commanded by Louis Desaix, Jean-Louis-Ébénézer Reynier, Charles-François-Joseph Dugua, Honoré Vial, and Louis André Bon."
+  },
+  {
+   "id": "vial",
+   "side": "f",
+   "k": "infantry",
+   "name": "Vial’s division (square)",
+   "short": "Vial",
+   "leader": "Honoré Vial",
+   "w": 9,
+   "quote": "From right to left, the divisions were commanded by Louis Desaix, Jean-Louis-Ébénézer Reynier, Charles-François-Joseph Dugua, Honoré Vial, and Louis André Bon."
+  },
+  {
+   "id": "bon",
+   "side": "f",
+   "k": "infantry",
+   "name": "Bon’s division",
+   "short": "Bon",
+   "leader": "Louis André Bon",
+   "w": 9,
+   "quote": "Near the river, Bon’s division deployed into attack columns and stormed Embabeh."
+  },
+  {
+   "id": "detach",
+   "side": "f",
+   "k": "infantry",
+   "name": "Desaix’s detachment at Biktil",
+   "short": "Detach.",
+   "w": 5,
+   "quote": "Desaix also sent a detachment to occupy the nearby village of Biktil."
+  },
+  {
+   "id": "cav",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Mamluk cavalry",
+   "short": "Cavalry",
+   "leader": "Murad Bey",
+   "w": 16,
+   "quote": "His Mamluk cavalry deployed in the centre."
+  },
+  {
+   "id": "emb",
+   "side": "m",
+   "k": "infantry",
+   "name": "Embabeh garrison",
+   "short": "Embabeh",
+   "w": 9,
+   "quote": "Murad anchored his right on the Nile at Embabeh, which was fortified with infantry and artillery"
+  },
+  {
+   "id": "bik",
+   "side": "m",
+   "k": "artillery",
+   "name": "Guns on the Biktil flank",
+   "short": "Biktil",
+   "w": 7,
+   "quote": "his left on Biktil with additional guns"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The two armies take their places",
+   "when": "21 July 1798",
+   "text": "The French formed five divisional squares in echelon, Desaix on the right and Bon on the left beside the Nile. Murad Bey fixed his right at fortified Embabeh and his left at Biktil, with the Mamluk cavalry between them.",
+   "quote": "The French advanced south in echelon, with the right flank leading and the left secured by the Nile.",
+   "at": {
+    "desaix": [
+     14,
+     18,
+     180
+    ],
+    "reynier": [
+     30,
+     16,
+     180
+    ],
+    "dugua": [
+     46,
+     14,
+     180
+    ],
+    "vial": [
+     62,
+     12,
+     180
+    ],
+    "bon": [
+     78,
+     10,
+     180
+    ],
+    "cav": [
+     46,
+     42,
+     0
+    ],
+    "emb": [
+     82,
+     42,
+     0
+    ],
+    "bik": [
+     14,
+     44,
+     0
+    ]
+   }
+  },
+  {
+   "title": "The French advance and the cavalry charge the squares",
+   "text": "The French moved south in echelon and Desaix sent a detachment to occupy Biktil. Murad meant to hold them on his fortified flanks and strike their centre with cavalry, and repeated charges were made against the squares.",
+   "quote": "Murad’s plan was to hold the French on his fortified flanks and then strike their centre with cavalry. Repeated cavalry charges were directed against the French squares.",
+   "at": {
+    "desaix": [
+     14,
+     24,
+     180
+    ],
+    "reynier": [
+     30,
+     22,
+     180
+    ],
+    "dugua": [
+     46,
+     20,
+     180
+    ],
+    "vial": [
+     62,
+     18,
+     180
+    ],
+    "bon": [
+     78,
+     16,
+     180
+    ],
+    "detach": [
+     14,
+     36,
+     180
+    ],
+    "cav": [
+     46,
+     34,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "cav",
+     "dugua"
+    ]
+   ]
+  },
+  {
+   "title": "The mass assault of about 15:30",
+   "when": "About 15:30",
+   "text": "Murad ordered his defterdar, Ayyub Bey, to lead a mass assault. The divisions of Desaix, Reynier and Dugua held and repelled the horsemen with musketry and artillery, and some Mamluks who attacked Desaix’s detachment failed.",
+   "quote": "At about 15:30 Murad ordered his defterdar, Ayyub Bey, to lead a mass assault.",
+   "at": {
+    "cav": [
+     34,
+     29,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "cav",
+     "desaix",
+     0.2
+    ],
+    [
+     "cav",
+     "reynier"
+    ],
+    [
+     "cav",
+     "dugua"
+    ],
+    [
+     "cav",
+     "detach",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "Bon’s columns storm Embabeh",
+   "text": "Near the river Bon’s division formed attack columns and stormed Embabeh. The garrison broke and many fled into the Nile, where hundreds drowned.",
+   "quote": "The garrison broke, with many fleeing into the Nile where hundreds drowned.",
+   "at": {
+    "bon": [
+     80,
+     34,
+     180
+    ],
+    "emb": [
+     90,
+     46,
+     90
+    ]
+   },
+   "how": {
+    "emb": "rout"
+   },
+   "state": {
+    "emb": "routed"
+   },
+   "hits": [
+    [
+     "bon",
+     "emb"
+    ]
+   ]
+  },
+  {
+   "title": "Murad escapes towards Upper Egypt",
+   "text": "Murad’s losses were far heavier than the French, with thousands killed or wounded, Ayyub Bey among them. Murad, wounded in the cheek, got away with several thousand cavalry to Upper Egypt.",
+   "quote": "Murad himself was wounded in the cheek by a saber but escaped with several thousand cavalry to Upper Egypt",
+   "at": {
+    "cav": [
+     34,
+     52,
+     180
+    ]
+   },
+   "how": {
+    "cav": "retreat"
+   }
+  }
+ ]
+}

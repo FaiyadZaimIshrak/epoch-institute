@@ -1,0 +1,489 @@
+{
+ "slug": "battle-of-dien-bien-phu",
+ "name": "Battle of Dien Bien Phu",
+ "article": "battles2/wp/battle-of-dien-bien-phu",
+ "field": {
+  "north": 0,
+  "edges": []
+ },
+ "note": "The plan shows the whole siege, not a single day: the blocks are the strong points and the Viet Minh divisions. The positions of the strong points follow the compass directions the accounts give; the distances are not to scale except that Isabelle stands furthest south. The accounts do not say where each Viet Minh division stood before it attacked, so each is placed in the hills on the side of the strong point it is said to have attacked. Claudine, Eliane and the other numbered works are not drawn singly. Isabelle's end is told only as a breakout, so its block is left as it was.",
+ "terrain": [
+  {
+   "k": "hill",
+   "name": "High ground",
+   "unnamed": true,
+   "at": [
+    [
+     84,
+     4
+    ],
+    [
+     100,
+     4
+    ],
+    [
+     100,
+     58
+    ],
+    [
+     84,
+     58
+    ],
+    [
+     80,
+     44
+    ],
+    [
+     81,
+     20
+    ]
+   ],
+   "lab": [
+    92,
+    6
+   ],
+   "quote": "the Viet Minh controlled much of the high ground around the valley"
+  },
+  {
+   "k": "hill",
+   "name": "High ground",
+   "unnamed": true,
+   "at": [
+    [
+     0,
+     4
+    ],
+    [
+     10,
+     4
+    ],
+    [
+     12,
+     30
+    ],
+    [
+     9,
+     56
+    ],
+    [
+     0,
+     58
+    ]
+   ],
+   "lab": [
+    4,
+    7
+   ],
+   "quote": "the Viet Minh controlled much of the high ground around the valley"
+  },
+  {
+   "k": "river",
+   "name": "Nam Yum River",
+   "at": [
+    [
+     58,
+     6
+    ],
+    [
+     56,
+     22
+    ],
+    [
+     57,
+     40
+    ],
+    [
+     58,
+     58
+    ]
+   ],
+   "lab": [
+    60,
+    7
+   ],
+   "quote": "the two remaining outposts east of the Nam Yum River"
+  }
+ ],
+ "sides": [
+  {
+   "id": "f",
+   "name": "French Union forces"
+  },
+  {
+   "id": "v",
+   "name": "Viet Minh"
+  }
+ ],
+ "units": [
+  {
+   "id": "hq",
+   "side": "f",
+   "k": "guard",
+   "name": "French headquarters",
+   "short": "HQ",
+   "leader": "Christian de Castries",
+   "w": 12,
+   "quote": "The fortified headquarters was centrally located, with positions Huguette to the west"
+  },
+  {
+   "id": "hug",
+   "side": "f",
+   "k": "infantry",
+   "name": "Huguette positions",
+   "short": "Huguette",
+   "w": 8,
+   "quote": "with positions Huguette to the west, Claudine to the south, and Dominique to the northeast"
+  },
+  {
+   "id": "east",
+   "side": "f",
+   "k": "infantry",
+   "name": "Dominique and Eliane",
+   "short": "Dom-Eli",
+   "w": 10,
+   "quote": "the two remaining outposts east of the Nam Yum River"
+  },
+  {
+   "id": "bea",
+   "side": "f",
+   "k": "infantry",
+   "name": "Béatrice (Foreign Legion)",
+   "short": "Béatrice",
+   "w": 8,
+   "quote": "which was held by the 3rd Battalion, 13th Foreign Legion Demi-Brigade"
+  },
+  {
+   "id": "gab",
+   "side": "f",
+   "k": "infantry",
+   "name": "Gabrielle (Algerians)",
+   "short": "Gabrielle",
+   "w": 8,
+   "quote": "the northern outpost Gabrielle, held by an elite Algerian battalion"
+  },
+  {
+   "id": "ann",
+   "side": "f",
+   "k": "light",
+   "name": "Anne-Marie (Tai troops)",
+   "short": "Anne-Marie",
+   "w": 8,
+   "quote": "The northwestern outpost Anne-Marie was defended by Tai troops, members of an ethnic minority loyal to the French"
+  },
+  {
+   "id": "isa",
+   "side": "f",
+   "k": "infantry",
+   "name": "Isabelle",
+   "short": "Isabelle",
+   "w": 10,
+   "quote": "Isabelle 6 km (3.7 mi) to the south, covering the reserve airstrip"
+  },
+  {
+   "id": "v312",
+   "side": "v",
+   "k": "infantry",
+   "name": "Viet Minh 312th Division",
+   "short": "312th",
+   "w": 10,
+   "quote": "The Viet Minh 312th Division then launched an assault with its 141st and 209th Infantry Regiments"
+  },
+  {
+   "id": "v308",
+   "side": "v",
+   "k": "infantry",
+   "name": "Viet Minh 308th Division",
+   "short": "308th",
+   "w": 10,
+   "quote": "Two regiments from the crack 308th Division attacked starting at 20:00"
+  },
+  {
+   "id": "v316",
+   "side": "v",
+   "k": "infantry",
+   "name": "Viet Minh 316th Division",
+   "short": "316th",
+   "w": 10,
+   "quote": "The 316th Division captured Eliane 1 from its Moroccan defenders"
+  },
+  {
+   "id": "art",
+   "side": "v",
+   "k": "artillery",
+   "name": "351st Heavy Division",
+   "short": "Artillery",
+   "w": 8,
+   "quote": "including the 351st Heavy Division, which was an artillery formation"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The French fortress and the Viet Minh ring",
+   "when": "31 January 1954",
+   "text": "The French held a central headquarters with strong points round it, and Isabelle to the south. The Viet Minh moved divisions and artillery into the hills round the valley and the French were completely surrounded.",
+   "quote": "The French garrison came under sporadic direct artillery fire from the Viet Minh for the first time on 31 January 1954 and patrols encountered the Viet Minh troops in all directions around them. The French were completely surrounded.",
+   "at": {
+    "hq": [
+     46,
+     32,
+     0
+    ],
+    "hug": [
+     30,
+     32,
+     270
+    ],
+    "east": [
+     68,
+     30,
+     90
+    ],
+    "bea": [
+     72,
+     12,
+     90
+    ],
+    "gab": [
+     46,
+     14,
+     0
+    ],
+    "ann": [
+     26,
+     14,
+     315
+    ],
+    "isa": [
+     46,
+     54,
+     180
+    ],
+    "v312": [
+     88,
+     12,
+     270
+    ],
+    "v316": [
+     90,
+     34,
+     270
+    ],
+    "art": [
+     88,
+     50,
+     270
+    ],
+    "v308": [
+     12,
+     24,
+     90
+    ]
+   }
+  },
+  {
+   "title": "Béatrice is overrun",
+   "when": "13 March 1954",
+   "text": "The Viet Minh opened with a heavy bombardment of Béatrice, the northeastern outpost. The 312th Division then attacked, and by the early hours of 14 March the position had been taken.",
+   "quote": "The Viet Minh assault began in earnest on 13 March 1954 with an attack on the northeastern outpost, Béatrice",
+   "at": {
+    "v312": [
+     80,
+     12,
+     270
+    ]
+   },
+   "state": {
+    "bea": "destroyed"
+   },
+   "hits": [
+    [
+     "art",
+     "bea",
+     0.2
+    ],
+    [
+     "v312",
+     "bea"
+    ]
+   ]
+  },
+  {
+   "title": "Gabrielle falls and Anne-Marie is given up",
+   "when": "14 to 17 March 1954",
+   "text": "The 308th Division attacked Gabrielle on the night of 14 March, and the Algerian battalion fell back at 08:00 the next day. On 17 March most of the Tai troops left or defected, and Anne-Marie was abandoned.",
+   "quote": "At 08:00 the next day, the Algerian battalion fell back, abandoning Gabrielle to the Viet Minh.",
+   "at": {
+    "v308": [
+     46,
+     6,
+     180
+    ],
+    "gab": [
+     46,
+     20,
+     0
+    ]
+   },
+   "how": {
+    "gab": "retreat"
+   },
+   "state": {
+    "gab": "routed",
+    "ann": "gone"
+   },
+   "hits": [
+    [
+     "v308",
+     "gab"
+    ],
+    [
+     "art",
+     "gab",
+     0.25
+    ]
+   ]
+  },
+  {
+   "title": "Attacks on the eastern and western positions",
+   "when": "30 March 1954",
+   "text": "The 312th Division took Dominique 1 and 2 and the 316th Division took Eliane 1. In the west the 308th Division nearly broke through at Huguette 7, but the breach was sealed.",
+   "quote": "At 19:00 on 30 March, the Viet Minh 312th Division captured Dominique 1 and 2",
+   "at": {
+    "v312": [
+     77,
+     25,
+     270
+    ],
+    "v316": [
+     77,
+     37,
+     270
+    ],
+    "v308": [
+     22,
+     32,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "v312",
+     "east"
+    ],
+    [
+     "v316",
+     "east"
+    ],
+    [
+     "v308",
+     "hug"
+    ]
+   ]
+  },
+  {
+   "title": "Trenches and sapping",
+   "when": "5 to 22 April 1954",
+   "text": "After heavy losses in open ground on 5 April, Giáp turned to entrenchment and sapping. The Viet Minh trenches almost surrounded Huguette 1 and 6, and Huguette 1 was overrun on 22 April.",
+   "quote": "he decided to employ entrenchment and sapping to achieve it.",
+   "at": {
+    "v312": [
+     74,
+     25,
+     270
+    ],
+    "v316": [
+     74,
+     37,
+     270
+    ],
+    "v308": [
+     24,
+     32,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "v308",
+     "hug"
+    ],
+    [
+     "v316",
+     "east"
+    ]
+   ]
+  },
+  {
+   "title": "The eastern positions are overrun",
+   "when": "1 to 6 May 1954",
+   "text": "On the night of 1 May the Viet Minh overran Eliane 1 and Dominique 3, and on 6 May they attacked Eliane 2 with Katyusha rockets. A mine under Eliane 2 was detonated and within a few hours the defenders were overrun.",
+   "quote": "the Viet Minh detonated a mine under Eliane 2, with devastating effect",
+   "at": {
+    "v312": [
+     72,
+     25,
+     270
+    ],
+    "v316": [
+     72,
+     37,
+     270
+    ]
+   },
+   "state": {
+    "east": "destroyed"
+   },
+   "hits": [
+    [
+     "v312",
+     "east"
+    ],
+    [
+     "v316",
+     "east"
+    ]
+   ]
+  },
+  {
+   "title": "The last attack on the headquarters",
+   "when": "7 May 1954",
+   "text": "Giáp ordered an all-out attack on the remaining French units. By evening enemy troops stood outside the headquarters bunker and the last radio report said the positions had been overrun.",
+   "quote": "enemy troops were directly outside the headquarters bunker and that all the positions had been overrun",
+   "at": {
+    "v312": [
+     58,
+     24,
+     270
+    ],
+    "v316": [
+     56,
+     41,
+     270
+    ],
+    "v308": [
+     28,
+     32,
+     90
+    ]
+   },
+   "state": {
+    "hq": "destroyed",
+    "hug": "destroyed"
+   },
+   "hits": [
+    [
+     "v312",
+     "hq"
+    ],
+    [
+     "v316",
+     "hq"
+    ],
+    [
+     "v308",
+     "hug"
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Battle of the Pyramids: The Two Sides, the Fighting and What Followed</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="On 21 July 1798 Bonaparte's French army, formed in squares, defeated Murad Bey's Mamluk-led force near Embabeh in Ottoman Egypt, shattering Murad's field…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Battle of the Pyramids: The Two Sides, the Fighting and What Followed">
+<meta property="og:description" content="On 21 July 1798 Bonaparte's French army, formed in squares, defeated Murad Bey's Mamluk-led force near Embabeh in Ottoman Egypt, shattering Murad's field…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/battle/battle-of-the-pyramids">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/battle-of-the-pyramids.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/battle-of-the-pyramids.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/battle/battle-of-the-pyramids">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Battles","item":"https://the-epoch-institute.org/profiles?kind=battle"},{"@type":"ListItem","position":4,"name":"Battle of the Pyramids"}]},{"@type":"Article","headline":"Battle of the Pyramids","description":"On 21 July 1798 Bonaparte's French army, formed in squares, defeated Murad Bey's Mamluk-led force near Embabeh in Ottoman Egypt, shattering Murad's field…","url":"https://the-epoch-institute.org/battle/battle-of-the-pyramids","mainEntityOfPage":"https://the-epoch-institute.org/battle/battle-of-the-pyramids","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Battle of the Pyramids"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/battle-of-the-pyramids.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=battle">Battles</a></li><li aria-current="page">Battle of the Pyramids</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Battle%20of%20the%20Pyramids.png" alt="Battle of the Pyramids" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Battle · Egypt &amp; North Africa</p>
+        <h1 class="profile-detail-name">Battle of the Pyramids</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Date</span><span class="info-stat-val">21 July 1798</span></div>
+          <div class="info-stat"><span class="info-stat-label">Place</span><span class="info-stat-val">Near the village of Embabeh on the left bank of the <a class="enc-link" href="/encyclopedia/nile">Nile</a>, in sight of the Pyramids of <a class="enc-link" href="/encyclopedia/giza">Giza</a>, Ottoman <a class="enc-link" href="/encyclopedia/egypt">Egypt</a> (present-day Egypt)</span></div>
+          <div class="info-stat"><span class="info-stat-label">The two sides</span><span class="info-stat-val">The French army under General Bonaparte, in five divisions under Desaix, Reynier, Dugua, Vial and Bon; the Mamluk-led forces of Murad Bey, with elite armoured cavalry and fellahin militia, while Ibrahim Bey's army watched from across the <a class="enc-link" href="/encyclopedia/nile">Nile</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">Outcome</span><span class="info-stat-val">The French took the fortified village of Embabeh and broke Murad Bey's army, which retreated to <a class="enc-link" href="/encyclopedia/upper-egypt">Upper Egypt</a>. French losses were reported at about 300; <a class="enc-link" href="/encyclopedia/mamluk">Mamluk</a> and Ottoman casualties are estimated from several thousand to as many as 10,000.</span></div>
+        </div>
+        <p class="empire-meta">5 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The French formed each of five divisions into hollow rectangles, with cavalry and baggage in the centre and <a class="enc-link" href="/encyclopedia/cannon">cannon</a> at the corners, and these squares withstood repeated cavalry charges.</li><li>Murad Bey's plan was to hold the French on his fortified flanks, at Embabeh and Biktil, and strike their centre with cavalry, but Bon's division stormed Embabeh near the river.</li><li>The victory opened the way to <a class="enc-link" href="/encyclopedia/cairo">Cairo</a> and marked the beginning of the end of seven centuries of <a class="enc-link" href="/encyclopedia/mamluk">Mamluk</a> dominance, but its strategic effect was short-lived once Nelson destroyed the French fleet ten days later.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Bonaparte named the battle after the Pyramids, although the <a class="enc-link" href="/encyclopedia/great-pyramid-of-giza">Great Pyramid of Giza</a> was distant from the field. In his order of the day he told his men that from the top of those pyramids forty centuries were contemplating them.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#how-it-was-fought">How it was fought</a></li><li><a href="#background">Background</a></li><li><a href="#forces">The Two Sides</a></li><li><a href="#course">How It Went</a></li><li><a href="#aftermath">Aftermath</a></li><li><a href="#sources">How We Know</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">July 1798</span><span class="rf-text">The French under General Bonaparte capture <a class="enc-link" href="/encyclopedia/alexandria">Alexandria</a> on 2 July and march across the desert toward <a class="enc-link" href="/encyclopedia/cairo">Cairo</a></span></li><li><span class="rf-year">July 1798</span><span class="rf-text">On 13 July French artillery wins the skirmish at Shubra Khit and destroys the <a class="enc-link" href="/encyclopedia/mamluk">Mamluk</a> flagship on the <a class="enc-link" href="/encyclopedia/nile">Nile</a></span></li><li><span class="rf-year">July 1798</span><span class="rf-text">On 21 July the French squares repel the <a class="enc-link" href="/encyclopedia/mamluk">Mamluk</a> cavalry and Bon's division storms Embabeh</span></li><li><span class="rf-year">July 1798</span><span class="rf-text">Bonaparte enters <a class="enc-link" href="/encyclopedia/cairo">Cairo</a> on 24 July and sets up a French administration</span></li><li><span class="rf-year">July 1798</span><span class="rf-text">Ten days after the battle Nelson's fleet defeats the French navy at the <a class="enc-link" href="/encyclopedia/battle-of-the-nile">Battle of the Nile</a></span></li><li><span class="rf-year">August 1798</span><span class="rf-text">On 11 August French forces catch up with Ibrahim Bey and defeat him at Salalieh</span></li><li><span class="rf-year">1799</span><span class="rf-text">Desaix defeats Murad Bey in <a class="enc-link" href="/encyclopedia/upper-egypt">Upper Egypt</a> in the late months of the year</span></li></ol>
+    </section>
+
+    <section class="battle-field" id="how-it-was-fought" data-battle="battle-of-the-pyramids" data-v="7ee35297d6" aria-labelledby="battle-field-title">
+      <h2 class="profile-section-title" id="battle-field-title">How it was fought</h2>
+      <p class="bf-lede">The field and the armies, phase by phase. Press Play, or step through with Next and Back.</p>
+      <ol class="bf-phases"><li><b>The two armies take their places</b> The French formed five divisional squares in echelon, Desaix on the right and Bon on the left beside the Nile. Murad Bey fixed his right at fortified Embabeh and his left at Biktil, with the Mamluk cavalry between them.</li><li><b>The French advance and the cavalry charge the squares</b> The French moved south in echelon and Desaix sent a detachment to occupy Biktil. Murad meant to hold them on his fortified flanks and strike their centre with cavalry, and repeated charges were made against the squares.</li><li><b>The mass assault of about 15:30</b> Murad ordered his defterdar, Ayyub Bey, to lead a mass assault. The divisions of Desaix, Reynier and Dugua held and repelled the horsemen with musketry and artillery, and some Mamluks who attacked Desaix’s detachment failed.</li><li><b>Bon’s columns storm Embabeh</b> Near the river Bon’s division formed attack columns and stormed Embabeh. The garrison broke and many fled into the Nile, where hundreds drowned.</li><li><b>Murad escapes towards Upper Egypt</b> Murad’s losses were far heavier than the French, with thousands killed or wounded, Ayyub Bey among them. Murad, wounded in the cheek, got away with several thousand cavalry to Upper Egypt.</li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="background">
+        <h2 class="profile-section-title">Background</h2>
+        <div class="profile-section-body"><p>French forces landed in Ottoman-controlled <a class="enc-link" href="/encyclopedia/egypt">Egypt</a> and captured <a class="enc-link" href="/encyclopedia/alexandria">Alexandria</a> on 2 July 1798. The army under General Bonaparte then marched across the desert toward <a class="enc-link" href="/encyclopedia/cairo">Cairo</a>. Its objective was to break the power of the <a class="enc-link" href="/encyclopedia/mamluk">Mamluk</a> beys who dominated Egypt and to secure control of the capital before Ottoman reinforcements could arrive.</p><p>Murad Bey and Ibrahim Bey, two Georgian Mamluks, commanded the country's military forces and prepared to oppose the advance. Their army included elite, heavily armoured cavalry, supported by fellahin militia serving as infantry. The French encountered the Mamluks about 9 miles (14 kilometres) from the Pyramids and 4 miles (6.4 kilometres) from Cairo.</p><p>On 13 July French scouts located Murad's encampment near Shubra Khit, and Bonaparte ordered an immediate advance. The skirmish that followed, at Shubra Khit, which is also called Chobrakit, saw French artillery destroy the Mamluk flagship on the <a class="enc-link" href="/encyclopedia/nile">Nile</a> and force a retreat. It gave Bonaparte his first victory in Egypt after the landing and showed the effectiveness of concentrated firepower against cavalry charges.</p></div>
+      </div>
+      <div class="profile-section-block" id="forces">
+        <h2 class="profile-section-title">The Two Sides</h2>
+        <div class="profile-section-body"><p>The French army was organised into five divisions. Each was formed into a hollow rectangle with the cavalry and baggage in the centre and <a class="enc-link" href="/encyclopedia/cannon">cannon</a> at the corners. From right to left the divisions were commanded by Louis Desaix, Jean-Louis-Ébénézer Reynier, Charles-François-Joseph Dugua, Honoré Vial and Louis André Bon. Desaix also sent a detachment to occupy the nearby village of Biktil. Before the fighting Bonaparte exhorted his men to remain steady when facing the <a class="enc-link" href="/encyclopedia/mamluk">Mamluk</a> cavalry, telling them that they had come to save the inhabitants from barbarism and that from the top of the pyramids forty centuries were contemplating them.</p><p>The French advanced south in echelon, with the right flank leading and the left secured by the <a class="enc-link" href="/encyclopedia/nile">Nile</a>. Murad Bey anchored his right on the Nile at Embabeh, which was fortified with infantry and artillery, and his left on Biktil, where he placed additional guns. His Mamluk cavalry deployed in the centre. Across the Nile, the army of Ibrahim Bey watched the battle but was unable to cross and intervene.</p><p>Murad's plan was to hold the French on his fortified flanks and then strike their centre with cavalry. The Mamluk force combined heavily armoured horsemen with militia infantry and artillery in fixed positions, while the French relied on disciplined squares with <a class="enc-link" href="/encyclopedia/musket">muskets</a> and guns.</p></div>
+      </div>
+      <div class="profile-section-block" id="course">
+        <h2 class="profile-section-title">How It Went</h2>
+        <div class="profile-section-body"><p>On 21 July, after marching all night, the French reached the vicinity of the village of Embabeh. After a short rest Bonaparte ordered his troops to form for battle, and they advanced in their squares. Repeated cavalry charges were directed against the French squares. One armoured rider advanced to within a few steps of the French lines and demanded a duel, but was shot down by <a class="enc-link" href="/encyclopedia/musket">musket</a> fire.</p><p>At about 15:30 Murad ordered his defterdar, Ayyub Bey, to lead a mass assault. The divisions of Desaix, Reynier and Dugua held firm, repelling the horsemen with musketry and artillery. Some of the <a class="enc-link" href="/encyclopedia/mamluk">Mamluks</a> then attempted to attack Desaix's detached force, but without success. The Egyptian chronicler al-Jabarti described the fight as lasting about three-quarters of an hour, with drums, gunfire and so much dust and smoke that the sky darkened and people thought the earth had moved.</p><p>Near the river, Bon's division deployed into attack columns and stormed Embabeh. The garrison broke, and many fled into the <a class="enc-link" href="/encyclopedia/nile">Nile</a>, where hundreds drowned. Murad himself was wounded in the cheek by a sabre but escaped with several thousand cavalry to <a class="enc-link" href="/encyclopedia/upper-egypt">Upper Egypt</a>.</p></div><details class="sec-src"><summary>Sources for this section</summary><p class="sec-src-n">Works that Wikipedia&#8217;s article &#8220;Battle of the Pyramids&#8221; cites where it covers Battle:</p><ul><li>Donald Holbrook, Al-Qaeda 2.0: A Critical Reader (Oxford University Press, 2018)</li></ul></details>
+      </div>
+      <div class="profile-section-block" id="aftermath">
+        <h2 class="profile-section-title">Aftermath</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/horatio-nelson"><img src="/images/encyclopedia/horatio-nelson.jpg" alt="Horatio Nelson" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/horatio-nelson">Horatio Nelson</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:HoratioNelson1.jpg" target="_blank" rel="noopener">Lemuel Francis Abbott, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>French reports listed 29 killed and 260 wounded, and French losses were reported at about 300 in all. Murad's losses were far heavier, with thousands killed or wounded, including Ayyub Bey and perhaps 3,000 of the elite <a class="enc-link" href="/encyclopedia/mamluk">Mamluk</a> cavalry. Estimates of Mamluk and Ottoman casualties vary widely, from several thousand to as many as 10,000.</p><p>Upon hearing news of the defeat of their cavalry, the Mamluk armies waiting in <a class="enc-link" href="/encyclopedia/cairo">Cairo</a> dispersed to <a class="enc-link" href="/encyclopedia/syria">Syria</a>. Bonaparte entered the capital on 24 July. On 11 August French forces caught up with Ibrahim Bey and inflicted a defeat on him at Salalieh. Murad, in <a class="enc-link" href="/encyclopedia/upper-egypt">Upper Egypt</a>, waged a <a class="enc-link" href="/encyclopedia/guerrilla-warfare">guerrilla</a> campaign until Desaix defeated him in late 1799.</p><p>In Cairo, Bonaparte instituted French administration and suppressed later rebellions with force. He tried to co-opt the local <a class="enc-link" href="/encyclopedia/ulama">ulama</a>, but scholars such as al-Jabarti poured scorn on the cultural claims of the French. Ten days after the battle, Admiral <a class="enc-link" href="/encyclopedia/horatio-nelson">Horatio Nelson</a> destroyed the French fleet at the <a class="enc-link" href="/encyclopedia/battle-of-the-nile">Battle of the Nile</a>, which cut Bonaparte's army off from <a class="enc-link" href="/encyclopedia/france">France</a> and curtailed his ambitions in the region.</p></div>
+      </div>
+      <div class="profile-section-block" id="sources">
+        <h2 class="profile-section-title">How We Know</h2>
+        <div class="profile-section-body"><p>The battle is known from French reports, which list 29 killed and 260 wounded on the French side, and from the Egyptian chronicler al-Jabarti, whose History of <a class="enc-link" href="/encyclopedia/egypt">Egypt</a> describes the <a class="enc-link" href="/encyclopedia/mamluk">Mamluks</a> being defeated at the gates of <a class="enc-link" href="/encyclopedia/cairo">Cairo</a>. Bonaparte's own order of the day, with its reference to forty centuries, survives as well.</p><p>Casualty figures are uncertain. French losses are put at about 300, but estimates of Mamluk and Ottoman casualties run from several thousand to as many as 10,000. The figure of perhaps 3,000 elite Mamluk cavalry killed or wounded is likewise an estimate.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/napoleon"><img src="/images/encyclopedia/napoleon.jpg" alt="Napoleon" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/napoleon">Napoleon</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg" target="_blank" rel="noopener">Jacques-Louis David, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The battle signalled the beginning of the end of seven centuries of <a class="enc-link" href="/encyclopedia/mamluk">Mamluk</a> dominance in <a class="enc-link" href="/encyclopedia/egypt">Egypt</a>. Its strategic effect was short-lived, since ten days later Nelson destroyed the French fleet at the <a class="enc-link" href="/encyclopedia/battle-of-the-nile">Battle of the Nile</a> and the army was cut off from <a class="enc-link" href="/encyclopedia/france">France</a>. Abdullah al-Sharqawi, who headed Bonaparte's <a class="enc-link" href="/encyclopedia/cairo">Cairo</a> divan, later described the occupiers as materialist, libertine philosophers who deny the resurrection, the afterlife and the prophets, while the mathematician <a class="enc-link" href="/encyclopedia/joseph-fourier">Joseph Fourier</a> lamented that the Muslim religion would on no account permit the development of the mind.</p><p>The battle has been a frequent subject in art. François-André Vincent made a preparatory sketch and a painting of it, and later artists include Antoine-Jean Gros, Carle Vernet and François-Louis-Joseph Watteau. In popular culture it appears in Ridley Scott's 2023 film <a class="enc-link" href="/encyclopedia/napoleon">Napoleon</a>, whose depiction has been criticised for historical inaccuracies, such as showing French troops firing on the pyramids.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>On 21 July 1798 Bonaparte's French army, formed in squares, repelled Murad Bey's <a class="enc-link" href="/encyclopedia/mamluk">Mamluk</a> cavalry near Embabeh and stormed the fortified village, breaking Murad's army and opening the way to <a class="enc-link" href="/encyclopedia/cairo">Cairo</a>. The victory was blunted ten days later at the <a class="enc-link" href="/encyclopedia/battle-of-the-nile">Battle of the Nile</a>.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>P. Strathern, Napoleon in Egypt: 'the Greatest Glory' (Vintage, 2008)</li>
+        <li>Juan Cole, Napoleon's Egypt: Invading the Middle East (Macmillan + ORM, 2007)</li>
+        <li>D.G. Chandler, The Campaigns of Napoleon (Scribner, 2009)</li>
+        <li>A. Roberts, Napoleon: A Life (Penguin Publishing Group, 2015)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other battles</p>
+      <div class="related-grid"><a class="related-card" href="/battle/battle-of-the-nile"><img src="/logos/thumbs/Battle%20of%20the%20Nile.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of the Nile</span><span class="related-card-dates">1–3 August 1798</span></a><a class="related-card" href="/battle/battle-of-marengo"><img src="/logos/thumbs/Battle%20of%20Marengo.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Marengo</span><span class="related-card-dates">14 June 1800</span></a><a class="related-card" href="/battle/battle-of-austerlitz"><img src="/logos/thumbs/Battle%20of%20Austerlitz.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Austerlitz</span><span class="related-card-dates">2 December 1805</span></a><a class="related-card" href="/battle/battle-of-trafalgar"><img src="/logos/thumbs/Battle%20of%20Trafalgar.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Trafalgar</span><span class="related-card-dates">21 October 1805</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/battle/battle-of-the-nile"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Battle%20of%20the%20Nile.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of the Nile</span><span class="related-card-dates">1–3 August 1798</span></a><a class="related-card" href="/battle/battle-of-marengo"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Battle%20of%20Marengo.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Marengo</span><span class="related-card-dates">14 June 1800</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".battle-field[data-battle]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/battle-map.js";s.onload=function(){fetch("/data/battles/"+el.getAttribute("data-battle")+".json?v="+el.getAttribute("data-v")).then(function(r){return r.json();}).then(function(d){BattleMap.mount(el,d);}).catch(function(){});};document.head.appendChild(s);};if(location.hash==="#how-it-was-fought"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Battle of the Pyramids",slug="battle-of-the-pyramids",url="https://the-epoch-institute.org/battle/battle-of-the-pyramids";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Battle of the Pyramids on The Epoch Institute — the two sides, the fighting and what followed. https://the-epoch-institute.org/battle/battle-of-the-pyramids #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/battle/battle-of-the-pyramids"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Battle of the Pyramids",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Battle of the Pyramids",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

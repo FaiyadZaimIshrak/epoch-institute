@@ -1,0 +1,325 @@
+{
+ "slug": "battle-of-the-catalaunian-plains",
+ "name": "Battle of the Catalaunian Plains",
+ "article": "battles2/wp/battle-of-the-catalaunian-plains",
+ "field": {
+  "north": null
+ },
+ "note": "The site of the battle is disputed, and the plan follows the account of Jordanes as modern scholars read it, chiefly Hughes. The accounts do not say which way the ridge ran, so it is drawn across the plan with the allies on one side and Attila's army on the other. The accounts do not say where Attila's camp lay, so it is placed behind the Hunnic line on the right-hand side. Placing the Gepids opposite the Romans and the Amali Goths opposite the Visigoths follows the order of the fighting in the account. Hughes places Thorismund between the Alans and the Visigothic main body, while MacDowall places him on the far right. Other scholars hold that the account is distorted and that the outcome was indecisive.",
+ "terrain": [
+  {
+   "k": "ridge",
+   "name": "The ridge",
+   "at": [
+    [
+     6,
+     31
+    ],
+    [
+     28,
+     28
+    ],
+    [
+     60,
+     27.5
+    ],
+    [
+     94,
+     29
+    ],
+    [
+     95,
+     38
+    ],
+    [
+     60,
+     37
+    ],
+    [
+     28,
+     38
+    ],
+    [
+     6,
+     37
+    ]
+   ],
+   "lab": [
+    11,
+    33
+   ],
+   "quote": "the Catalaunian plain rose on one side by a sharp slope to a ridge"
+  }
+ ],
+ "sides": [
+  {
+   "id": "a",
+   "name": "Romans, Visigoths and Alans"
+  },
+  {
+   "id": "h",
+   "name": "Huns and their vassals"
+  }
+ ],
+ "units": [
+  {
+   "id": "rom",
+   "side": "a",
+   "k": "infantry",
+   "name": "Roman army, left of the line",
+   "short": "Romans",
+   "leader": "Aetius",
+   "w": 12,
+   "quote": "Then Aetius's Romans arrived on the left side of the ridge",
+   "leaderEntry": "flavius-aetius"
+  },
+  {
+   "id": "alan",
+   "side": "a",
+   "k": "cavalry",
+   "name": "Alans, in the centre",
+   "short": "Alans",
+   "leader": "Sangiban",
+   "w": 10,
+   "quote": "Aetius placed the Alans in the centre of the formation"
+  },
+  {
+   "id": "thor",
+   "side": "a",
+   "k": "cavalry",
+   "name": "Thorismund's Visigoths",
+   "short": "Thorismund",
+   "leader": "Thorismund",
+   "w": 6,
+   "quote": "he places Thorismund between the Alans and Visigothic main body"
+  },
+  {
+   "id": "theo",
+   "side": "a",
+   "k": "infantry",
+   "name": "Visigoths, right of the line",
+   "short": "Visigoths",
+   "leader": "Theodoric",
+   "w": 12,
+   "quote": "the Visigoths held the right side, the Romans the left",
+   "leaderEntry": "theodoric-i"
+  },
+  {
+   "id": "gep",
+   "side": "h",
+   "k": "infantry",
+   "name": "Gepids, Hunnic wing",
+   "short": "Gepids",
+   "leader": "Ardaric",
+   "w": 10,
+   "quote": "repulsed the Gepids as they came up",
+   "leaderEntry": "ardaric"
+  },
+  {
+   "id": "hun",
+   "side": "h",
+   "k": "horse-archers",
+   "name": "Huns, centre of the line",
+   "short": "Huns",
+   "leader": "Attila",
+   "w": 14,
+   "quote": "the Huns deployed in the centre, with their vassals on the wings",
+   "leaderEntry": "attila"
+  },
+  {
+   "id": "amal",
+   "side": "h",
+   "k": "infantry",
+   "name": "Amali Goths, Hunnic wing",
+   "short": "Amali",
+   "leader": "Valamir",
+   "w": 12,
+   "quote": "whilst leading his own men against the enemy Amali Goths"
+  },
+  {
+   "id": "camp",
+   "side": "h",
+   "k": "camp",
+   "name": "Attila's wagon camp",
+   "short": "Camp",
+   "w": 8,
+   "quote": "Attila was forced to seek refuge in his own camp, which he had fortified with wagons."
+  }
+ ],
+ "phases": [
+  {
+   "title": "The two armies deploy along the ridge",
+   "when": "About 20 June 451, the ninth hour",
+   "text": "Both sides spent the day deploying their coalition armies. Attila's Huns stood in the centre with their vassals on the wings, while the Romans took the left, the Alans the centre and the Visigoths the right.",
+   "quote": "both sides spent the entire day carefully deploying their coalition armies.",
+   "at": {
+    "rom": [
+     20,
+     45,
+     0
+    ],
+    "alan": [
+     44,
+     45,
+     0
+    ],
+    "thor": [
+     58,
+     45,
+     0
+    ],
+    "theo": [
+     78,
+     45,
+     0
+    ],
+    "gep": [
+     20,
+     25,
+     180
+    ],
+    "hun": [
+     48,
+     25,
+     180
+    ],
+    "amal": [
+     78,
+     25,
+     180
+    ],
+    "camp": [
+     92,
+     10,
+     180
+    ]
+   }
+  },
+  {
+   "title": "The Romans take the left and repulse the Gepids",
+   "text": "Attila's forces reached the right side of the ridge first. The Romans then arrived on the left side and drove back the Gepids as they came up.",
+   "quote": "Then Aetius's Romans arrived on the left side of the ridge, and repulsed the Gepids as they came up.",
+   "at": {
+    "rom": [
+     20,
+     41,
+     0
+    ],
+    "gep": [
+     20,
+     28,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "rom",
+     "gep"
+    ]
+   ]
+  },
+  {
+   "title": "The Alans and Thorismund secure the centre",
+   "text": "The Alans and the Visigoths under Thorismund fought their way up the ridge and took its centre, which they held against Attila.",
+   "quote": "Finally the Alans and the Visigoths under Thorismund fought their way up and secured the centre of the ridge, holding it against Attila.",
+   "at": {
+    "alan": [
+     44,
+     40,
+     0
+    ],
+    "thor": [
+     58,
+     40,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "alan",
+     "hun"
+    ],
+    [
+     "thor",
+     "hun",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "The Visigoths try to take the right of the ridge",
+   "text": "Theodoric led his Visigoths against the Amali Goths on the right. He was killed in the assault, and the rest of his army did not know of his death.",
+   "quote": "Theodoric, whilst leading his own men against the enemy Amali Goths, was killed in the assault without his men noticing.",
+   "at": {
+    "theo": [
+     78,
+     40,
+     0
+    ],
+    "amal": [
+     78,
+     29,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "theo",
+     "amal"
+    ]
+   ]
+  },
+  {
+   "title": "Thorismund drives back the Hunnic centre",
+   "text": "Thorismund found Attila's place in the Hunnic line and attacked the Hunnic centre, nearly killing Attila. The Hunnic centre was forced to retreat.",
+   "quote": "attacked the Hunnic centre, nearly slaying Attila himself and forcing the Hunnic centre to retreat.",
+   "at": {
+    "thor": [
+     52,
+     32,
+     0
+    ],
+    "hun": [
+     50,
+     19,
+     180
+    ]
+   },
+   "how": {
+    "hun": "retreat"
+   },
+   "hits": [
+    [
+     "thor",
+     "hun"
+    ]
+   ]
+  },
+  {
+   "title": "Attila withdraws into his camp as night falls",
+   "text": "Attila sought refuge in his wagon camp. When night fell, Thorismund, returning towards friendly lines, entered the camp by mistake and was wounded in the fighting there.",
+   "quote": "Thorismund, son of king Theodoric, returning to friendly lines, mistakenly entered Attila's encampment.",
+   "at": {
+    "hun": [
+     73,
+     16,
+     180
+    ],
+    "thor": [
+     91,
+     17,
+     0
+    ]
+   },
+   "how": {
+    "hun": "retreat"
+   },
+   "hits": [
+    [
+     "camp",
+     "thor"
+    ]
+   ]
+  }
+ ]
+}

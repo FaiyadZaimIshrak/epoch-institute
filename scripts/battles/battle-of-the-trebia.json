@@ -1,0 +1,542 @@
+{
+ "slug": "battle-of-the-trebia",
+ "name": "Battle of the Trebia",
+ "article": "battles2/wp/battle-of-the-trebia",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "to Placentia →",
+    "at": [
+     96,
+     18
+    ]
+   }
+  ]
+ },
+ "note": "The Carthaginian camp lay west of the Trebia and the Roman camp east of it, so north is drawn at the top; the accounts do not say which way the river ran, and it is drawn straight. The fight was on the flood plain west of the river. The accounts do not say in which direction Placentia lay. The Carthaginian elephants stood beyond each block of veteran infantry and are not drawn. The Carthaginian light infantry went round both Roman flanks and the Roman velites faced them; the plan shows that as one move on the southern side. The Gallic allies on the Roman side, and the Gallic and Numidian parts of the Carthaginian cavalry, are not set apart, because the accounts do not say where they stood. The paths of the cavalry are drawn straight.",
+ "terrain": [
+  {
+   "k": "river",
+   "name": "Trebia",
+   "at": [
+    [
+     86,
+     4
+    ],
+    [
+     83,
+     20
+    ],
+    [
+     85,
+     36
+    ],
+    [
+     83,
+     50
+    ],
+    [
+     85,
+     58
+    ]
+   ],
+   "lab": [
+    78,
+    6
+   ],
+   "quote": "through the icy waters of the Trebia, which was running chest-high"
+  },
+  {
+   "k": "stream",
+   "name": "old watercourse",
+   "unnamed": true,
+   "at": [
+    [
+     34,
+     57
+    ],
+    [
+     46,
+     56
+    ],
+    [
+     60,
+     57
+    ],
+    [
+     72,
+     56
+    ]
+   ],
+   "lab": [
+    30,
+    60
+   ],
+   "note": "The accounts say it lay to the south of where Hannibal meant to fight; it is placed along the southern edge of the plan.",
+   "quote": "an old watercourse full of brush"
+  }
+ ],
+ "sides": [
+  {
+   "id": "r",
+   "name": "Romans and their allies"
+  },
+  {
+   "id": "c",
+   "name": "Carthaginians and their allies"
+  }
+ ],
+ "units": [
+  {
+   "id": "rcavn",
+   "side": "r",
+   "k": "cavalry",
+   "name": "Roman northern cavalry",
+   "short": "R. horse N",
+   "w": 8,
+   "quote": "Like the Carthaginians, the Romans divided their 4,000 cavalry between their wings"
+  },
+  {
+   "id": "alln",
+   "side": "r",
+   "k": "infantry",
+   "name": "Allied infantry, north",
+   "short": "Allies N",
+   "w": 9,
+   "quote": "on each side of them were part of their allied force, some 17,000 in total"
+  },
+  {
+   "id": "rcentre",
+   "side": "r",
+   "k": "infantry",
+   "name": "Roman heavy infantry",
+   "short": "Legions",
+   "leader": "Sempronius",
+   "w": 12,
+   "quote": "the Roman heavy infantry were in the centre, perhaps 13,000 strong"
+  },
+  {
+   "id": "alls",
+   "side": "r",
+   "k": "infantry",
+   "name": "Allied infantry, south",
+   "short": "Allies S",
+   "w": 9,
+   "quote": "on each side of them were part of their allied force, some 17,000 in total"
+  },
+  {
+   "id": "rcavs",
+   "side": "r",
+   "k": "cavalry",
+   "name": "Roman southern cavalry",
+   "short": "R. horse S",
+   "w": 8,
+   "quote": "Like the Carthaginians, the Romans divided their 4,000 cavalry between their wings"
+  },
+  {
+   "id": "vel",
+   "side": "r",
+   "k": "light",
+   "name": "Roman velites",
+   "short": "Velites",
+   "w": 8,
+   "quote": "The survivors of the 6,000 velites were regrouping to their rear"
+  },
+  {
+   "id": "cavn",
+   "side": "c",
+   "k": "cavalry",
+   "name": "Carthaginian northern cavalry",
+   "short": "Cav. N",
+   "w": 8,
+   "quote": "and on each wing were 5,000 cavalry"
+  },
+  {
+   "id": "afn",
+   "side": "c",
+   "k": "infantry",
+   "name": "African and Iberian infantry N",
+   "short": "Afr. N",
+   "w": 9,
+   "quote": "on each side of them was a formation of 6,000 African and Iberian veteran infantry"
+  },
+  {
+   "id": "gauls",
+   "side": "c",
+   "k": "infantry",
+   "name": "Gallic infantry",
+   "short": "Gauls",
+   "w": 12,
+   "quote": "the 8,000 Gallic infantry were in the centre"
+  },
+  {
+   "id": "afs",
+   "side": "c",
+   "k": "infantry",
+   "name": "African and Iberian infantry S",
+   "short": "Afr. S",
+   "w": 9,
+   "quote": "on each side of them was a formation of 6,000 African and Iberian veteran infantry"
+  },
+  {
+   "id": "cavs",
+   "side": "c",
+   "k": "cavalry",
+   "name": "Carthaginian southern cavalry",
+   "short": "Cav. S",
+   "w": 8,
+   "quote": "and on each wing were 5,000 cavalry"
+  },
+  {
+   "id": "light",
+   "side": "c",
+   "k": "light",
+   "name": "Carthaginian light infantry",
+   "short": "Skirmish",
+   "w": 8,
+   "quote": "The Carthaginian light infantry then moved towards the flanks of their army"
+  },
+  {
+   "id": "mago",
+   "side": "c",
+   "k": "cavalry",
+   "name": "Mago's ambush force",
+   "short": "Mago",
+   "leader": "Mago",
+   "w": 5,
+   "quote": "had his younger brother Mago take 1,000 cavalry and 1,000 infantry during the night"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The armies form up on the west bank",
+   "when": "22 or 23 December 218 BCE",
+   "text": "After the Romans waded the Trebia, both armies drew up symmetrically, infantry in the centre and cavalry on the wings. Mago's force had been put in a watercourse to the south in the night and stayed out of sight.",
+   "quote": "The Carthaginian army formed up symmetrically: the 8,000 Gallic infantry were in the centre;",
+   "at": {
+    "rcavn": [
+     60,
+     8,
+     270
+    ],
+    "alln": [
+     60,
+     18,
+     270
+    ],
+    "rcentre": [
+     60,
+     30,
+     270
+    ],
+    "alls": [
+     60,
+     41,
+     270
+    ],
+    "rcavs": [
+     60,
+     51,
+     270
+    ],
+    "vel": [
+     72,
+     32,
+     270
+    ],
+    "cavn": [
+     40,
+     8,
+     90
+    ],
+    "afn": [
+     40,
+     18,
+     90
+    ],
+    "gauls": [
+     40,
+     30,
+     90
+    ],
+    "afs": [
+     40,
+     41,
+     90
+    ],
+    "cavs": [
+     40,
+     51,
+     90
+    ],
+    "light": [
+     50,
+     32,
+     90
+    ],
+    "mago": [
+     52,
+     56,
+     0
+    ]
+   },
+   "state": {
+    "mago": "hidden"
+   }
+  },
+  {
+   "title": "The Roman cavalry flees and the infantry lines close",
+   "text": "On each wing 5,000 Carthaginian horse charged the 2,000 Roman horse, which fled back over the Trebia. Most of the Carthaginian cavalry pursued them while the heavy infantry lines met in the centre.",
+   "quote": "Both encounters ended rapidly, with the Romans fleeing back over the Trebia and most of the Carthaginian cavalry pursuing them.",
+   "at": {
+    "rcavn": [
+     90,
+     8,
+     90
+    ],
+    "rcavs": [
+     90,
+     51,
+     90
+    ],
+    "cavn": [
+     74,
+     8,
+     90
+    ],
+    "cavs": [
+     74,
+     54,
+     90
+    ],
+    "light": [
+     30,
+     52,
+     90
+    ],
+    "alln": [
+     52,
+     18,
+     270
+    ],
+    "rcentre": [
+     52,
+     30,
+     270
+    ],
+    "alls": [
+     52,
+     41,
+     270
+    ],
+    "afn": [
+     45,
+     18,
+     90
+    ],
+    "gauls": [
+     45,
+     30,
+     90
+    ],
+    "afs": [
+     45,
+     41,
+     90
+    ],
+    "vel": [
+     62,
+     32,
+     270
+    ]
+   },
+   "how": {
+    "rcavn": "rout",
+    "rcavs": "rout"
+   },
+   "state": {
+    "rcavn": "routed",
+    "rcavs": "routed"
+   },
+   "hits": [
+    [
+     "cavn",
+     "rcavn"
+    ],
+    [
+     "cavs",
+     "rcavs"
+    ],
+    [
+     "alln",
+     "afn"
+    ],
+    [
+     "rcentre",
+     "gauls"
+    ],
+    [
+     "alls",
+     "afs"
+    ]
+   ]
+  },
+  {
+   "title": "Carthaginian skirmishers go round the exposed flank",
+   "text": "The Carthaginian light infantry moved forward and round the Roman flank, which the flight of the cavalry had left open. The velites turned to face them and many allied infantry on the flanks turned too, which slowed their push on the front.",
+   "quote": "The Carthaginian light infantry, who had withdrawn to the wings behind the cavalry, moved forward and round the now exposed Roman flanks.",
+   "at": {
+    "light": [
+     56,
+     52,
+     0
+    ],
+    "vel": [
+     66,
+     40,
+     180
+    ],
+    "alln": [
+     52,
+     18,
+     0
+    ],
+    "alls": [
+     52,
+     41,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "light",
+     "alls"
+    ],
+    [
+     "vel",
+     "light"
+    ]
+   ]
+  },
+  {
+   "title": "Mago's force strikes the Roman left rear",
+   "text": "Mago's men came down the watercourse unnoticed and charged the velites, who were already holding off the Carthaginian light infantry. The velites held their formation.",
+   "quote": "Mago's force charged into the velites who were already fending off the Carthaginian light infantry, but their formation held.",
+   "at": {
+    "mago": [
+     66,
+     48,
+     0
+    ]
+   },
+   "state": {
+    "mago": "shown"
+   },
+   "hits": [
+    [
+     "mago",
+     "vel"
+    ],
+    [
+     "light",
+     "vel",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The Carthaginian cavalry returns to the Roman rear",
+   "text": "Increasing numbers of Carthaginian cavalry broke off the pursuit, came back and attacked the Roman rear. Under this strain the allied infantry on the flanks and the velites began to break up.",
+   "quote": "Increasing numbers of Carthaginian cavalry broke off their pursuit, returned and attacked the Roman rear.",
+   "at": {
+    "cavn": [
+     70,
+     14,
+     270
+    ],
+    "cavs": [
+     72,
+     48,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "cavn",
+     "alln"
+    ],
+    [
+     "cavs",
+     "vel"
+    ],
+    [
+     "cavs",
+     "alls",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The Roman centre breaks through the Gauls",
+   "text": "The Roman infantry in the centre routed the 8,000 Gauls facing them and broke through the middle of the Carthaginian army. Behind them the rest of the Roman army had dissolved.",
+   "quote": "Meanwhile, the Roman infantry in the centre routed the 8,000 Gauls facing them, as well as a unit of African heavy infantry, and broke clean through the centre of the Carthaginian army.",
+   "at": {
+    "rcentre": [
+     34,
+     30,
+     270
+    ],
+    "gauls": [
+     22,
+     30,
+     270
+    ]
+   },
+   "how": {
+    "gauls": "rout"
+   },
+   "state": {
+    "gauls": "routed",
+    "alln": "routed",
+    "alls": "routed",
+    "vel": "routed"
+   },
+   "hits": [
+    [
+     "rcentre",
+     "gauls"
+    ]
+   ]
+  },
+  {
+   "title": "Ten thousand Romans reach Placentia",
+   "text": "Sempronius ordered the infantry away from the field. Keeping its formation, 10,000 of them recrossed the Trebia and reached Placentia. The Carthaginians cut down the partly surrounded rest of the Roman army.",
+   "quote": "The Carthaginians concentrated on pursuing and cutting down the partially surrounded balance of the Roman army.",
+   "at": {
+    "rcentre": [
+     90,
+     30,
+     90
+    ]
+   },
+   "how": {
+    "rcentre": "retreat"
+   },
+   "hits": [
+    [
+     "cavn",
+     "alln"
+    ],
+    [
+     "cavs",
+     "alls"
+    ],
+    [
+     "light",
+     "vel"
+    ]
+   ]
+  }
+ ]
+}

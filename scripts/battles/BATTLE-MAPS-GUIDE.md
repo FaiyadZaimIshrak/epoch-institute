@@ -52,7 +52,8 @@ A skip is a good answer. Never fill a gap from what you know from elsewhere.
 - `units`: 4 to 12 formations in all. Each: `id`, `side`, `k`, `name` (at most 30 characters, what it is: "Roman
   right-wing cavalry"), `short` (at most 10 characters, for phones), `w`, `quote`.
 - `k`: `infantry`, `spears`, `pikes`, `archers`, `light`, `cavalry`, `horse-archers`, `elephants`, `chariots`,
-  `artillery`, `ships`, `guard` (a commander's own unit or a reserve), `camp`, `wagons`.
+  `artillery`, `armour` (tanks and mechanised troops), `ships`, `guard` (a commander's own unit or a reserve), `camp`,
+  `wagons`.
 - `leader`: only where the article says who led that formation, written as the article writes the name.
   `leaderEntry`: leave out; the editor adds it.
 - Group small units into the formations the article itself speaks of. Do not invent a subdivision to look precise.

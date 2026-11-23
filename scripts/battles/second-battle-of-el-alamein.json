@@ -1,0 +1,512 @@
+{
+ "slug": "second-battle-of-el-alamein",
+ "name": "Second Battle of El Alamein",
+ "article": "battles2/wp/second-battle-of-el-alamein",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "to Fuka →",
+    "at": [
+     96,
+     33
+    ]
+   }
+  ]
+ },
+ "note": "This plan shows the whole operation, not a single field: the formations are corps, groups and divisions, drawn as a schematic of a front about 40 miles long. The Eighth Army stood in the east and faced west; the coast lay to the north and the Qattara Depression to the south. The minefields, the Devil's gardens and the successive lines are not drawn. The accounts do not give an exact position for each division inside its corps, so the corps are drawn as single blocks, the northern one standing for the four infantry divisions of XXX Corps. The Kidney feature and Tel el Aqqaqir are placed from their stated distances from each other, and Point 29 near the coast, only roughly. The paths of the moves are drawn straight, and where the accounts say a move was repulsed or left positions unchanged the block is drawn at its furthest point. The Axis infantry line stands for the German and Italian infantry alternating along the front, with the Folgore division drawn apart because the accounts name it in the south. Ariete is counted in the southern armoured group, of which the accounts say one third went north.",
+ "terrain": [
+  {
+   "k": "sea",
+   "name": "Mediterranean coast",
+   "unnamed": true,
+   "at": [
+    [
+     4,
+     0
+    ],
+    [
+     30,
+     0
+    ],
+    [
+     60,
+     0
+    ],
+    [
+     96,
+     0
+    ],
+    [
+     96,
+     2.5
+    ],
+    [
+     4,
+     2.5
+    ]
+   ],
+   "quote": "should strike northwards toward the coast with the 9th Australian Division",
+   "note": "The coast is drawn as a strip at the north edge; the accounts give only that it lay to the north."
+  },
+  {
+   "k": "land",
+   "name": "Qattara Depression",
+   "at": [
+    [
+     4,
+     58.5
+    ],
+    [
+     30,
+     58
+    ],
+    [
+     60,
+     58.5
+    ],
+    [
+     96,
+     58
+    ],
+    [
+     96,
+     62
+    ],
+    [
+     4,
+     62
+    ]
+   ],
+   "quote": "The depression was impassable and meant that any attack had to be frontal",
+   "lab": [
+    78,
+    59.5
+   ]
+  },
+  {
+   "k": "ridge",
+   "name": "Miteirya Ridge",
+   "at": [
+    [
+     41,
+     38
+    ],
+    [
+     46,
+     37
+    ],
+    [
+     48,
+     41
+    ],
+    [
+     46,
+     45
+    ],
+    [
+     41,
+     44
+    ],
+    [
+     39,
+     41
+    ]
+   ],
+   "quote": "to secure the southern end of Miteirya Ridge",
+   "lab": [
+    43,
+    47
+   ],
+   "note": "Placed in front of the British start line; the accounts do not give its exact outline."
+  },
+  {
+   "k": "point",
+   "name": "Kidney feature",
+   "at": [
+    62,
+    34
+   ],
+   "quote": "advanced from the Kidney feature (also known to the Germans and Italians as Hill 28)"
+  },
+  {
+   "k": "point",
+   "name": "Tel el Aqqaqir",
+   "at": [
+    61,
+    27
+   ],
+   "quote": "Tel el Aqqaqir, the base of the Axis defence roughly 3 mi (4.8 km) north-west of the Kidney feature"
+  },
+  {
+   "k": "point",
+   "name": "Point 29",
+   "at": [
+    52,
+    9
+   ],
+   "quote": "the Australians were attacking Point 29",
+   "note": "The accounts put it south-west of Tel el Eisa near the coast; its place here is rough."
+  }
+ ],
+ "sides": [
+  {
+   "id": "b",
+   "name": "Eighth Army"
+  },
+  {
+   "id": "a",
+   "name": "Axis Panzer Army"
+  }
+ ],
+ "units": [
+  {
+   "id": "xxx",
+   "side": "b",
+   "k": "infantry",
+   "name": "XXX Corps infantry divisions",
+   "short": "XXX Corps",
+   "leader": "Oliver Leese",
+   "w": 12,
+   "quote": "four infantry divisions of XXX Corps to advance on a 16 mi"
+  },
+  {
+   "id": "xc",
+   "side": "b",
+   "k": "armour",
+   "name": "X Corps, armoured divisions",
+   "short": "X Corps",
+   "leader": "Herbert Lumsden",
+   "w": 10,
+   "quote": "through which the armoured divisions from X Corps would pass to gain the Pierson Line"
+  },
+  {
+   "id": "xiii",
+   "side": "b",
+   "k": "armour",
+   "name": "XIII Corps, 7th Armoured",
+   "short": "XIII Corps",
+   "leader": "Brian Horrocks",
+   "w": 10,
+   "quote": "The 7th Armoured Division (with a Free French Brigade under command) from XIII Corps"
+  },
+  {
+   "id": "aus",
+   "side": "b",
+   "k": "infantry",
+   "name": "Australian attack on Point 29",
+   "short": "Aust.",
+   "w": 6,
+   "quote": "the Australians were attacking Point 29"
+  },
+  {
+   "id": "inf2",
+   "side": "b",
+   "k": "infantry",
+   "name": "Supercharge assault brigades",
+   "short": "Brigades",
+   "w": 6,
+   "quote": "two infantry brigades (the 151st on the right and 152nd on the left)"
+  },
+  {
+   "id": "a9",
+   "side": "b",
+   "k": "armour",
+   "name": "9th Armoured Brigade",
+   "short": "9th Armd",
+   "leader": "Currie",
+   "w": 6,
+   "quote": "9th Armoured Brigade would pass through supported by a heavy artillery barrage"
+  },
+  {
+   "id": "axinf",
+   "side": "a",
+   "k": "infantry",
+   "name": "Axis forward infantry",
+   "short": "Infantry",
+   "w": 10,
+   "quote": "Rommel stiffened his forward lines by alternating German and Italian infantry formations."
+  },
+  {
+   "id": "afol",
+   "side": "a",
+   "k": "infantry",
+   "name": "Folgore Division, south",
+   "short": "Folgore",
+   "w": 10,
+   "quote": "The attack met determined resistance, mainly from the 185th Infantry Division"
+  },
+  {
+   "id": "narm",
+   "side": "a",
+   "k": "armour",
+   "name": "Northern armoured group",
+   "short": "N. armour",
+   "w": 10,
+   "quote": "split it into a northern group (15th Panzer Division"
+  },
+  {
+   "id": "sarm",
+   "side": "a",
+   "k": "armour",
+   "name": "Southern armoured group",
+   "short": "S. armour",
+   "w": 10,
+   "quote": "and a southern group (21st Panzer Division"
+  },
+  {
+   "id": "l90",
+   "side": "a",
+   "k": "guard",
+   "name": "90th Light Division",
+   "short": "90th Light",
+   "w": 10,
+   "quote": "Rommel held the 90th Light Division further back"
+  },
+  {
+   "id": "tri",
+   "side": "a",
+   "k": "guard",
+   "name": "Trieste Division, reserve",
+   "short": "Trieste",
+   "w": 8,
+   "quote": "in reserve close to the coast"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The armies stand in their lines",
+   "when": "October 1942",
+   "text": "The Eighth Army stood in the east with XXX Corps in the north, XIII Corps in the south and X Corps ready to exploit. Rommel split his armour into a northern and a southern group, held the 90th Light Division further back and kept the Trieste Division in reserve near the coast.",
+   "quote": "Rommel held the 90th Light Division further back and kept the 101st Motorised Division",
+   "at": {
+    "xxx": [
+     38,
+     19,
+     90
+    ],
+    "xc": [
+     26,
+     19,
+     90
+    ],
+    "xiii": [
+     38,
+     50,
+     90
+    ],
+    "axinf": [
+     55,
+     17,
+     270
+    ],
+    "afol": [
+     55,
+     50,
+     270
+    ],
+    "narm": [
+     66,
+     24,
+     270
+    ],
+    "sarm": [
+     66,
+     46,
+     270
+    ],
+    "l90": [
+     78,
+     28,
+     270
+    ],
+    "tri": [
+     80,
+     12,
+     270
+    ]
+   }
+  },
+  {
+   "title": "The break-in: infantry advance, armour is held up",
+   "when": "23 to 24 October 1942, from 21:40",
+   "text": "After a barrage, the four infantry divisions of XXX Corps advanced into the Axis minefields and the armour crawled up behind. Only about half of the infantry reached their objectives and none of the tanks broke through. In the south XIII Corps met determined resistance.",
+   "quote": "Only about half of the infantry attained their objectives and none of the tanks broke through.",
+   "at": {
+    "xxx": [
+     47,
+     19,
+     90
+    ],
+    "xc": [
+     41,
+     19,
+     90
+    ],
+    "xiii": [
+     47,
+     50,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "xxx",
+     "axinf"
+    ],
+    [
+     "xiii",
+     "afol"
+    ]
+   ]
+  },
+  {
+   "title": "Axis tanks counter-attack and the Australians strike north",
+   "when": "24 to 26 October 1942",
+   "text": "At dusk on 24 October tanks of the northern group advanced from the Kidney feature against the 1st Armoured Division. Over 100 tanks fought and half were destroyed by dark, with neither position altered. The Australians attacked Point 29 at midnight on 25 October.",
+   "quote": "Over 100 tanks were involved and half were destroyed by dark; neither position was altered.",
+   "at": {
+    "narm": [
+     58,
+     32,
+     270
+    ],
+    "xc": [
+     42,
+     32,
+     90
+    ],
+    "aus": [
+     47,
+     7,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "narm",
+     "xc"
+    ],
+    [
+     "aus",
+     "axinf"
+    ]
+   ]
+  },
+  {
+   "title": "Rommel brings his armour north",
+   "when": "26 October 1942",
+   "text": "Rommel reversed his policy of spreading his armour along the front. The 90th Light Division came forward and the 21st Panzer Division went north with a third of the Ariete Division. A shortage of fuel meant the move could not be reversed.",
+   "quote": "Rommel reversed his policy of distributing his armour across the front",
+   "at": {
+    "l90": [
+     66,
+     26,
+     270
+    ],
+    "sarm": [
+     62,
+     42,
+     270
+    ]
+   }
+  },
+  {
+   "title": "Operation Supercharge and the charge of the 9th Armoured",
+   "when": "2 November 1942",
+   "text": "Two assault brigades cleared a path from 01:05 and gained most of their objectives. At 06:15 the 9th Armoured Brigade advanced on the Axis gun line and failed to create the gap, though it caused great damage.",
+   "quote": "The brigade had sacrificed itself upon the gun line and caused great damage but had failed to create the gap",
+   "at": {
+    "inf2": [
+     49,
+     34,
+     90
+    ],
+    "a9": [
+     53,
+     26,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "inf2",
+     "axinf"
+    ],
+    [
+     "a9",
+     "axinf"
+    ]
+   ]
+  },
+  {
+   "title": "The Axis tanks counter-attack and fail",
+   "when": "2 November 1942, 11:00",
+   "text": "The remains of the 9th Armoured Brigade came under the 1st Armoured Division, which had deployed. The northern and southern armoured groups counter-attacked at 11:00 and failed under shells and bombs at a cost of about 100 tanks.",
+   "quote": "At 11:00 on 2 November, the remains of the 15th Panzer Division, 21st Panzer Division and the Littorio Division counter-attacked the 1st Armoured Division",
+   "at": {
+    "xc": [
+     53,
+     38,
+     90
+    ],
+    "narm": [
+     57,
+     36,
+     270
+    ],
+    "sarm": [
+     62,
+     40,
+     270
+    ]
+   },
+   "state": {
+    "a9": "gone"
+   },
+   "hits": [
+    [
+     "narm",
+     "xc"
+    ],
+    [
+     "sarm",
+     "xc"
+    ]
+   ]
+  },
+  {
+   "title": "The front is broken and Rommel orders a retreat",
+   "when": "4 November 1942",
+   "text": "British armour burst a 19-kilometre hole in the Axis front. Rommel could wait no longer for Hitler's reply and at 17:30 gave the order to retreat. The two armoured groups pulled back to the west.",
+   "quote": "At 17:30, unable to wait any longer for a reply from Hitler, Rommel gave orders to retreat.",
+   "at": {
+    "xc": [
+     62,
+     40,
+     90
+    ],
+    "narm": [
+     78,
+     34,
+     270
+    ],
+    "sarm": [
+     80,
+     47,
+     270
+    ]
+   },
+   "how": {
+    "narm": "retreat",
+    "sarm": "retreat"
+   },
+   "hits": [
+    [
+     "xc",
+     "sarm"
+    ]
+   ]
+  }
+ ]
+}

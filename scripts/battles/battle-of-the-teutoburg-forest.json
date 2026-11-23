@@ -1,0 +1,434 @@
+{
+ "slug": "battle-of-the-teutoburg-forest",
+ "name": "Battle of the Teutoburg Forest",
+ "article": "battles2/wp/battle-of-the-teutoburg-forest",
+ "field": {
+  "north": null
+ },
+ "note": "The plan shows the march and the ambush near Kalkriese, a possible site of the battle. The accounts do not say which way the road ran, how the Roman column was ordered along it, or where the woods, the wall and the trench lay beyond what they state, so their places are set by judgement. The cavalry's line of flight is not given. The battle ran from 8 to 11 September 9 CE; the plan shows only its main stages.",
+ "terrain": [
+  {
+   "k": "wood",
+   "name": "Thick forest",
+   "unnamed": true,
+   "at": [
+    [
+     4,
+     14
+    ],
+    [
+     30,
+     12
+    ],
+    [
+     46,
+     14
+    ],
+    [
+     48,
+     52
+    ],
+    [
+     26,
+     56
+    ],
+    [
+     4,
+     52
+    ]
+   ],
+   "lab": [
+    10,
+    50
+   ],
+   "quote": "continued snaking its way through the area's thick forest"
+  },
+  {
+   "k": "hill",
+   "name": "Kalkriese Hill",
+   "at": [
+    [
+     50,
+     4
+    ],
+    [
+     94,
+     4
+    ],
+    [
+     95,
+     14
+    ],
+    [
+     86,
+     19
+    ],
+    [
+     64,
+     19
+    ],
+    [
+     52,
+     13
+    ]
+   ],
+   "lab": [
+    64,
+    8
+   ],
+   "quote": "another trap that Arminius had set at the foot of Kalkriese Hill"
+  },
+  {
+   "k": "marsh",
+   "name": "Great Bog",
+   "at": [
+    [
+     52,
+     47
+    ],
+    [
+     74,
+     45
+    ],
+    [
+     94,
+     47
+    ],
+    [
+     95,
+     58
+    ],
+    [
+     72,
+     58
+    ],
+    [
+     52,
+     56
+    ]
+   ],
+   "lab": [
+    66,
+    52
+   ],
+   "quote": "between the woods and the swampland at the edge of the Great Bog"
+  },
+  {
+   "k": "road",
+   "name": "Road",
+   "unnamed": true,
+   "at": [
+    [
+     4,
+     36
+    ],
+    [
+     40,
+     36
+    ],
+    [
+     66,
+     36
+    ],
+    [
+     96,
+     35
+    ]
+   ],
+   "lab": [
+    8,
+    39
+   ],
+   "quote": "a sandy, open strip on which the Romans could march was constricted by the hill"
+  },
+  {
+   "k": "wall",
+   "name": "Earthen wall",
+   "unnamed": true,
+   "at": [
+    [
+     52,
+     27
+    ],
+    [
+     62,
+     25
+    ],
+    [
+     72,
+     27
+    ],
+    [
+     84,
+     25
+    ],
+    [
+     92,
+     27
+    ]
+   ],
+   "lab": [
+    60,
+    29
+   ],
+   "quote": "an earthen wall had been built along the roadside"
+  },
+  {
+   "k": "ditch",
+   "name": "Trench",
+   "unnamed": true,
+   "at": [
+    [
+     91,
+     30
+    ],
+    [
+     90,
+     36
+    ],
+    [
+     91,
+     42
+    ]
+   ],
+   "lab": [
+    86,
+    43
+   ],
+   "quote": "The road was further blocked by a trench"
+  }
+ ],
+ "sides": [
+  {
+   "id": "r",
+   "name": "Romans"
+  },
+  {
+   "id": "g",
+   "name": "Germanic alliance"
+  }
+ ],
+ "units": [
+  {
+   "id": "roman",
+   "side": "r",
+   "k": "infantry",
+   "name": "Roman legions and auxiliaries",
+   "short": "Romans",
+   "leader": "Varus",
+   "w": 14,
+   "quote": "the Roman army decamped and continued snaking its way through the area's thick forest",
+   "leaderEntry": "publius-quinctilius-varus"
+  },
+  {
+   "id": "cav",
+   "side": "r",
+   "k": "cavalry",
+   "name": "Roman cavalry",
+   "short": "R. cavalry",
+   "leader": "Numonius Vala",
+   "w": 8,
+   "quote": "abandoned the troops by riding off with the cavalry"
+  },
+  {
+   "id": "camp",
+   "side": "r",
+   "k": "camp",
+   "name": "Roman camp",
+   "short": "Camp",
+   "w": 10,
+   "quote": "A sturdy camp was erected, and Varus called a war council."
+  },
+  {
+   "id": "bruct",
+   "side": "g",
+   "k": "infantry",
+   "name": "Bructeri",
+   "short": "Bructeri",
+   "w": 10,
+   "quote": "his Bructerii allies attacked the Roman army along its length in the late morning"
+  },
+  {
+   "id": "angriv",
+   "side": "g",
+   "k": "infantry",
+   "name": "Angrivarii at the wall",
+   "short": "Angrivarii",
+   "w": 12,
+   "quote": "Kalkriese, where the Angrivarii lay in ambush"
+  },
+  {
+   "id": "gcav",
+   "side": "g",
+   "k": "cavalry",
+   "name": "Germanic cavalry",
+   "short": "G. cavalry",
+   "w": 8,
+   "quote": "he was overtaken by the Germanic cavalry and killed shortly thereafter"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The Bructeri strike the strung-out column",
+   "when": "Late morning, 8 September",
+   "text": "The Roman army moved through thick forest, its line of march stretched over 15 to 20 kilometres. The Bructeri attacked along its length with javelins, a brief skirmish meant to tire the Romans and damage their supplies. The Angrivarii lay hidden at Kalkriese.",
+   "quote": "his Bructerii allies attacked the Roman army along its length in the late morning.",
+   "at": {
+    "roman": [
+     16,
+     36,
+     90
+    ],
+    "cav": [
+     34,
+     36,
+     90
+    ],
+    "bruct": [
+     20,
+     24,
+     180
+    ],
+    "angriv": [
+     72,
+     22,
+     180
+    ]
+   },
+   "state": {
+    "angriv": "hidden"
+   },
+   "hits": [
+    [
+     "bruct",
+     "roman"
+    ]
+   ]
+  },
+  {
+   "title": "The Bructeri withdraw and the Romans camp",
+   "text": "The Bructeri withdrew quickly. A torrential downpour left the Romans unable to advance, and Varus ordered the army to make camp. Losses reported were light, but the baggage trains and scout cavalry were shown to be vulnerable.",
+   "quote": "Unable to advance, Varus ordered the army to make camp.",
+   "at": {
+    "bruct": [
+     20,
+     15,
+     180
+    ],
+    "camp": [
+     48,
+     36,
+     0
+    ]
+   },
+   "how": {
+    "bruct": "retreat"
+   },
+   "state": {
+    "bruct": "gone"
+   }
+  },
+  {
+   "title": "A night march into the second trap",
+   "text": "The Romans marched at night to escape and went into another trap set at the foot of Kalkriese Hill. There the open strip they could march along was squeezed to a gap of about 100 metres between the woods and the swampland at the edge of the Great Bog.",
+   "quote": "The Romans undertook a night march to escape, but marched into another trap that Arminius had set at the foot of Kalkriese Hill.",
+   "at": {
+    "roman": [
+     46,
+     36,
+     90
+    ],
+    "cav": [
+     60,
+     38,
+     90
+    ]
+   },
+   "state": {
+    "camp": "gone",
+    "angriv": "hidden"
+   }
+  },
+  {
+   "title": "The Romans try to storm the wall",
+   "text": "The road was blocked by a trench and an earthen wall built along its side, which let the Germanic alliance attack from cover. The Romans made a desperate attempt to storm the wall and failed.",
+   "quote": "The Romans made a desperate attempt to storm the wall, but failed",
+   "at": {
+    "roman": [
+     72,
+     35,
+     0
+    ],
+    "cav": [
+     58,
+     38,
+     90
+    ]
+   },
+   "state": {
+    "angriv": "shown"
+   },
+   "hits": [
+    [
+     "roman",
+     "angriv"
+    ],
+    [
+     "angriv",
+     "roman",
+     0.3
+    ]
+   ]
+  },
+  {
+   "title": "Vala rides off and is overtaken",
+   "text": "The highest-ranking officer next to Varus, Numonius Vala, abandoned the troops by riding off with the cavalry. Germanic cavalry overtook him and he was killed shortly afterwards, according to Velleius Paterculus.",
+   "quote": "abandoned the troops by riding off with the cavalry. His retreat was in vain, however, as he was overtaken by the Germanic cavalry and killed shortly thereafter",
+   "at": {
+    "cav": [
+     34,
+     42,
+     270
+    ],
+    "gcav": [
+     48,
+     42,
+     270
+    ]
+   },
+   "how": {
+    "cav": "retreat"
+   },
+   "state": {
+    "cav": "destroyed"
+   },
+   "hits": [
+    [
+     "gcav",
+     "cav"
+    ]
+   ]
+  },
+  {
+   "title": "The Germanic warriors storm the field",
+   "text": "The Germanic warriors stormed the field and cut down the disintegrating Roman forces. Varus killed himself. By later accounts some officers were sacrificed or ransomed and some common soldiers enslaved.",
+   "quote": "The Germanic warriors then stormed the field and slaughtered the disintegrating Roman forces.",
+   "at": {
+    "angriv": [
+     72,
+     29,
+     180
+    ]
+   },
+   "state": {
+    "roman": "destroyed"
+   },
+   "hits": [
+    [
+     "angriv",
+     "roman"
+    ]
+   ]
+  }
+ ]
+}

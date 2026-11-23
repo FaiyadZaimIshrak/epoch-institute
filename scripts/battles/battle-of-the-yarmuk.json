@@ -1,0 +1,619 @@
+{
+ "slug": "battle-of-the-yarmuk",
+ "name": "Battle of the Yarmuk",
+ "article": "battles2/wp/battle-of-the-yarmuk",
+ "field": {
+  "north": 0,
+  "edges": [
+   {
+    "name": "← to Ayn Dhakar",
+    "at": [
+     4,
+     59
+    ]
+   },
+   {
+    "name": "Jabiyah road",
+    "at": [
+     50,
+     2
+    ]
+   }
+  ]
+ },
+ "note": "The battle lasted six days and the plan shows its main phases. The accounts give the Byzantine centre as the armies of Dairjan and Vahan together; Dairjan's army is placed on the left centre, where they name him, and the Armenian army of Vahan on the right centre by judgement. Where the bridge at Ayn Dhakar lay along the ravine, and where the Byzantine cavalry stood in the rear, the accounts do not say. Accounts differ on the length of the battle: some say it lasted a day, others six days.",
+ "terrain": [
+  {
+   "k": "river",
+   "name": "Wadi-ur-Ruqqad",
+   "at": [
+    [
+     9,
+     4
+    ],
+    [
+     8,
+     20
+    ],
+    [
+     9,
+     36
+    ],
+    [
+     8,
+     50
+    ],
+    [
+     10,
+     58
+    ]
+   ],
+   "lab": [
+    15,
+    56
+   ],
+   "quote": "The battle was fought on the plain east of Wadi-ur-Ruqqad."
+  },
+  {
+   "k": "river",
+   "name": "Yarmuk River",
+   "at": [
+    [
+     10,
+     58
+    ],
+    [
+     40,
+     58.5
+    ],
+    [
+     70,
+     58
+    ],
+    [
+     96,
+     57
+    ]
+   ],
+   "lab": [
+    58,
+    60
+   ],
+   "quote": "That wadi joins the Yarmuk River, a tributary of the Jordan River, on its south."
+  },
+  {
+   "k": "road",
+   "name": "Jabiyah road",
+   "at": [
+    [
+     6,
+     4
+    ],
+    [
+     30,
+     3.5
+    ],
+    [
+     60,
+     3.5
+    ],
+    [
+     96,
+     4
+    ]
+   ],
+   "lab": [
+    78,
+    2
+   ],
+   "quote": "On the north is the Jabiyah road"
+  },
+  {
+   "k": "hill",
+   "name": "Tel al Jumm'a",
+   "at": [
+    [
+     84,
+     6
+    ],
+    [
+     92,
+     7
+    ],
+    [
+     97,
+     12
+    ],
+    [
+     96,
+     20
+    ],
+    [
+     90,
+     24
+    ],
+    [
+     84,
+     18
+    ]
+   ],
+   "lab": [
+    91,
+    27
+   ],
+   "quote": "there was only one prominence in the battlefield: a 100 m (330 ft) elevation known as Tel al Jumm'a"
+  },
+  {
+   "k": "bridge",
+   "name": "Ayn Dhakar",
+   "unnamed": true,
+   "at": [
+    8,
+    27
+   ],
+   "lab": [
+    15,
+    24
+   ],
+   "quote": "strategically the most important one was at Ayn Dhakar, a bridge."
+  }
+ ],
+ "sides": [
+  {
+   "id": "m",
+   "name": "Rashidun Caliphate"
+  },
+  {
+   "id": "b",
+   "name": "Byzantine Empire and allies"
+  }
+ ],
+ "units": [
+  {
+   "id": "mr",
+   "side": "m",
+   "k": "infantry",
+   "name": "Muslim right wing",
+   "short": "Right",
+   "leader": "Amr",
+   "w": 10,
+   "quote": "The left wing was under the command of Yazid and the right wing was under Amr.",
+   "leaderEntry": "amr-ibn-al-as"
+  },
+  {
+   "id": "mrc",
+   "side": "m",
+   "k": "infantry",
+   "name": "Muslim right centre",
+   "short": "R. centre",
+   "leader": "Shurahbil",
+   "w": 12,
+   "quote": "The centre of the army was under the command of Abu Ubayda (left centre) and Shurahbil (right centre)."
+  },
+  {
+   "id": "mlc",
+   "side": "m",
+   "k": "infantry",
+   "name": "Muslim left centre",
+   "short": "L. centre",
+   "leader": "Abu Ubayda",
+   "w": 12,
+   "quote": "The centre of the army was under the command of Abu Ubayda (left centre) and Shurahbil (right centre).",
+   "leaderEntry": "abu-ubayda-ibn-al-jarrah"
+  },
+  {
+   "id": "ml",
+   "side": "m",
+   "k": "infantry",
+   "name": "Muslim left wing",
+   "short": "Left",
+   "leader": "Yazid",
+   "w": 10,
+   "quote": "The left wing was under the command of Yazid and the right wing was under Amr."
+  },
+  {
+   "id": "guard",
+   "side": "m",
+   "k": "guard",
+   "name": "Khalid's mobile guard",
+   "short": "Guard",
+   "leader": "Khalid",
+   "w": 12,
+   "quote": "Behind the centre stood the mobile guard under the personal command of Khalid.",
+   "leaderEntry": "khalid-ibn-al-walid"
+  },
+  {
+   "id": "dhirar",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Dhirar's 500 cavalry",
+   "short": "Dhirar",
+   "leader": "Dhirar",
+   "w": 5,
+   "quote": "Khalid sent Dhirar with 500 cavalry at night to secure that bridge."
+  },
+  {
+   "id": "bl",
+   "side": "b",
+   "k": "infantry",
+   "name": "Byzantine left wing (Slavs)",
+   "short": "Left",
+   "leader": "Qanatir",
+   "w": 10,
+   "quote": "The right wing was commanded by Gregory and the left by Qanatir."
+  },
+  {
+   "id": "blc",
+   "side": "b",
+   "k": "infantry",
+   "name": "Byzantine left centre",
+   "short": "L. centre",
+   "leader": "Dairjan",
+   "w": 12,
+   "quote": "The centre was formed by the army of Dairjan and the Armenian army of Vahan, both under the overall command of Dairjan."
+  },
+  {
+   "id": "brc",
+   "side": "b",
+   "k": "infantry",
+   "name": "Byzantine right centre",
+   "short": "R. centre",
+   "leader": "Vahan",
+   "w": 12,
+   "quote": "The centre was formed by the army of Dairjan and the Armenian army of Vahan, both under the overall command of Dairjan."
+  },
+  {
+   "id": "br",
+   "side": "b",
+   "k": "infantry",
+   "name": "Byzantine right wing",
+   "short": "Right",
+   "leader": "Gregory",
+   "w": 10,
+   "quote": "The right wing was commanded by Gregory and the left by Qanatir."
+  },
+  {
+   "id": "bcav",
+   "side": "b",
+   "k": "cavalry",
+   "name": "Byzantine heavy cavalry",
+   "short": "Cavalry",
+   "w": 12,
+   "quote": "each army deploying its infantry at the forefront and its cavalry as a reserve in the rear."
+  }
+ ],
+ "phases": [
+  {
+   "title": "The two armies stand facing each other",
+   "when": "15 August 636",
+   "text": "The Byzantines faced east and the Muslims west, on fronts of about 13 and 12 kilometres. Each side had four sections, and each Byzantine army kept its cavalry in the rear. On the first day a third of the Byzantine infantry attacked and neither side gained ground.",
+   "quote": "Vahan deployed the Imperial Army facing east, with a front about 13 kilometres (8.1 mi) long",
+   "at": {
+    "mr": [
+     64,
+     12,
+     270
+    ],
+    "mrc": [
+     64,
+     25,
+     270
+    ],
+    "mlc": [
+     64,
+     38,
+     270
+    ],
+    "ml": [
+     64,
+     51,
+     270
+    ],
+    "guard": [
+     77,
+     31,
+     270
+    ],
+    "bl": [
+     44,
+     12,
+     90
+    ],
+    "blc": [
+     44,
+     25,
+     90
+    ],
+    "brc": [
+     44,
+     38,
+     90
+    ],
+    "br": [
+     44,
+     51,
+     90
+    ],
+    "bcav": [
+     29,
+     31,
+     90
+    ]
+   }
+  },
+  {
+   "title": "The Byzantine wings drive the Muslim wings back",
+   "when": "16 August",
+   "text": "The Byzantine centre only pinned the Muslim centre. On the wings Qanatir's Slavs and Gregory's army attacked in force, and the Muslim wings fell back towards their camps.",
+   "quote": "Qanatir, commanding the Byzantine left flank, which consisted of mainly Slavs, attacked in force, and the Muslim infantry on the right flank had to retreat.",
+   "at": {
+    "bl": [
+     60,
+     12,
+     90
+    ],
+    "mr": [
+     72,
+     12,
+     270
+    ],
+    "br": [
+     57,
+     51,
+     90
+    ],
+    "ml": [
+     72,
+     51,
+     270
+    ]
+   },
+   "how": {
+    "mr": "retreat",
+    "ml": "retreat"
+   },
+   "hits": [
+    [
+     "bl",
+     "mr"
+    ],
+    [
+     "br",
+     "ml"
+    ]
+   ]
+  },
+  {
+   "title": "Khalid's guard strikes the Byzantine left wing",
+   "when": "16 August",
+   "text": "Khalid sent the mobile guard against the southern flank of the Byzantine left wing while the Muslim right wing attacked from the front. The Byzantine left wing gave up the ground it had won and Amr regained his position.",
+   "quote": "The three-pronged attack forced the Byzantine left wing to abandon the Muslim positions they had gained on, and Amr regained his lost ground",
+   "at": {
+    "guard": [
+     54,
+     21,
+     0
+    ],
+    "mr": [
+     64,
+     12,
+     270
+    ],
+    "bl": [
+     46,
+     12,
+     90
+    ]
+   },
+   "how": {
+    "bl": "retreat"
+   },
+   "hits": [
+    [
+     "guard",
+     "bl"
+    ],
+    [
+     "mr",
+     "bl"
+    ]
+   ]
+  },
+  {
+   "title": "Qanatir presses the right again and Khalid flanks the centre",
+   "when": "18 August",
+   "text": "Qanatir led his Slavs, with help from Armenians and Jabalah's Christian Arabs, against the Muslim right wing and right centre, which fell back. Khalid sent the mobile guard at the flanks of the Byzantine left centre while Abu Ubayda and Yazid attacked on the left.",
+   "quote": "Qanatir led two armies of Slavs against the Muslim right wing and right centre with some assistance from the Armenians and Christian Arabs led by Jabalah.",
+   "at": {
+    "bl": [
+     58,
+     10,
+     90
+    ],
+    "mr": [
+     70,
+     14,
+     270
+    ],
+    "mrc": [
+     72,
+     26,
+     270
+    ],
+    "guard": [
+     52,
+     19,
+     180
+    ],
+    "ml": [
+     64,
+     51,
+     270
+    ]
+   },
+   "how": {
+    "mr": "retreat",
+    "mrc": "retreat"
+   },
+   "hits": [
+    [
+     "bl",
+     "mr"
+    ],
+    [
+     "bl",
+     "mrc"
+    ],
+    [
+     "guard",
+     "blc"
+    ],
+    [
+     "mlc",
+     "brc"
+    ],
+    [
+     "ml",
+     "br"
+    ]
+   ]
+  },
+  {
+   "title": "Dhirar secures the bridge in the night",
+   "when": "Night of 19 August",
+   "text": "Khalid had grouped all his cavalry into one force of about 8,000, with the mobile guard as its core. He sent Dhirar with 500 cavalry round the Byzantine northern flank to take the bridge at Ayn Dhakar, the best crossing of the western ravine.",
+   "quote": "Dhirar moved around the northern flank of Byzantines and captured the bridge, a maneuver that was to prove decisive the next day.",
+   "at": {
+    "bl": [
+     44,
+     12,
+     90
+    ],
+    "mr": [
+     64,
+     12,
+     270
+    ],
+    "mrc": [
+     64,
+     25,
+     270
+    ],
+    "guard": [
+     77,
+     31,
+     270
+    ],
+    "dhirar": [
+     11,
+     27,
+     90
+    ]
+   },
+   "state": {
+    "dhirar": "shown"
+   }
+  },
+  {
+   "title": "The cavalry sweeps round the left and routs the horse",
+   "when": "20 August",
+   "text": "Khalid galloped his cavalry round the Byzantine left wing and attacked its rear while the Muslim right wing pressed from the front, and the left wing collapsed. He then wheeled back upon the Byzantine cavalry as it formed and routed it to the north.",
+   "quote": "Khalid had wheeled his cavalry back to attack the concentrating Byzantine cavalry squadrons, falling upon them from the front and the flank while they were still moving into formation.",
+   "at": {
+    "guard": [
+     35,
+     19,
+     90
+    ],
+    "mr": [
+     56,
+     12,
+     270
+    ],
+    "mrc": [
+     56,
+     25,
+     270
+    ],
+    "bl": [
+     47,
+     12,
+     90
+    ],
+    "bcav": [
+     20,
+     9,
+     270
+    ]
+   },
+   "how": {
+    "bl": "rout",
+    "bcav": "rout"
+   },
+   "state": {
+    "bl": "routed",
+    "bcav": "routed"
+   },
+   "hits": [
+    [
+     "guard",
+     "bl"
+    ],
+    [
+     "guard",
+     "bcav"
+    ],
+    [
+     "mrc",
+     "blc"
+    ]
+   ]
+  },
+  {
+   "title": "The Byzantine centre breaks and the army is trapped",
+   "text": "Khalid's cavalry fell on the Byzantine left centre from behind and broke it, and a general retreat began. The Byzantines fell back west towards the bridge, which Dhirar's men already held, while Khalid took his cavalry north to block that way out.",
+   "quote": "The Byzantines retreated west towards Wadi-ur-Ruqqad, where there was a bridge at Ayn Dhakar for safe crossing across the deep gorges of the ravines of Wadi-ur-Ruqqad.",
+   "at": {
+    "blc": [
+     24,
+     24,
+     270
+    ],
+    "brc": [
+     24,
+     38,
+     270
+    ],
+    "br": [
+     24,
+     51,
+     270
+    ],
+    "guard": [
+     38,
+     6,
+     180
+    ]
+   },
+   "how": {
+    "blc": "rout",
+    "brc": "retreat",
+    "br": "retreat"
+   },
+   "state": {
+    "blc": "routed"
+   },
+   "hits": [
+    [
+     "dhirar",
+     "blc"
+    ],
+    [
+     "guard",
+     "blc",
+     -0.2
+    ]
+   ]
+  }
+ ]
+}

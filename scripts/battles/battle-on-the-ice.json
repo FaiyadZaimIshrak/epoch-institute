@@ -1,0 +1,256 @@
+{
+ "slug": "battle-on-the-ice",
+ "name": "Battle on the Ice",
+ "article": "battles2/wp/battle-on-the-ice",
+ "field": {
+  "north": null
+ },
+ "note": "The plan follows the scholarly reconstruction of the accounts. The accounts do not say which way each army faced, where on the lake the fight took place, or where the wings stood before they entered the battle; the wings are placed on either side of the militia by judgement. Earlier accounts say only that the Rus' and the crusaders fought and that the crusaders were pursued, and the claim of a fight on the ice itself first appears in a later text. Numbers are not shown on the plan.",
+ "terrain": [
+  {
+   "k": "lake",
+   "name": "Lake Peipus",
+   "at": [
+    [
+     4,
+     6
+    ],
+    [
+     96,
+     6
+    ],
+    [
+     96,
+     56
+    ],
+    [
+     4,
+     56
+    ]
+   ],
+   "lab": [
+    20,
+    9
+   ],
+   "quote": "It was fought on the frozen Lake Peipus"
+  }
+ ],
+ "sides": [
+  {
+   "id": "r",
+   "name": "Novgorod and Vladimir-Suzdal"
+  },
+  {
+   "id": "c",
+   "name": "Livonian Order and Dorpat"
+  }
+ ],
+ "units": [
+  {
+   "id": "mil",
+   "side": "r",
+   "k": "infantry",
+   "name": "Novgorodian militia",
+   "short": "Militia",
+   "leader": "Alexander Nevsky",
+   "w": 12,
+   "quote": "held up by the infantry of the Novgorodian militia",
+   "leaderEntry": "alexander-nevsky"
+  },
+  {
+   "id": "lw",
+   "side": "r",
+   "k": "cavalry",
+   "name": "Rus' left wing",
+   "short": "Left wing",
+   "w": 9,
+   "quote": "Alexander ordered the left and right wings of his army (including cavalry) to enter the battle"
+  },
+  {
+   "id": "rw",
+   "side": "r",
+   "k": "cavalry",
+   "name": "Rus' right wing",
+   "short": "Right wing",
+   "w": 9,
+   "quote": "Alexander ordered the left and right wings of his army (including cavalry) to enter the battle"
+  },
+  {
+   "id": "wedge",
+   "side": "c",
+   "k": "cavalry",
+   "name": "Knights and crusaders",
+   "short": "Crusaders",
+   "leader": "Bishop Hermann",
+   "w": 14,
+   "quote": "The Teutonic knights and crusaders charged across the lake and reached the enemy",
+   "leaderEntry": "hermann-of-buxhoeveden"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The two armies stand on the lake",
+   "when": "5 April 1242",
+   "text": "Alexander and the men of Novgorod drew up their forces by the lake. The crusaders stood opposite, ready to ride at them. The wings were part of Alexander's army.",
+   "quote": "Prince Alexander and all the men of Novgorod drew up their forces by the lake",
+   "at": {
+    "mil": [
+     68,
+     31,
+     270
+    ],
+    "lw": [
+     72,
+     16,
+     270
+    ],
+    "rw": [
+     72,
+     46,
+     270
+    ],
+    "wedge": [
+     20,
+     31,
+     90
+    ]
+   }
+  },
+  {
+   "title": "The crusaders charge across the lake",
+   "text": "The knights and crusaders charged across the lake and reached the enemy. The chronicle of Novgorod says they drove themselves like a wedge through the Rus' army.",
+   "quote": "The Teutonic knights and crusaders charged across the lake and reached the enemy",
+   "at": {
+    "wedge": [
+     50,
+     31,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "wedge",
+     "mil"
+    ]
+   ]
+  },
+  {
+   "title": "The militia holds them up",
+   "text": "The infantry of the Novgorodian militia held up the charge and its momentum slowed. For a little more than two hours the two sides fought at close quarters on the frozen surface.",
+   "quote": "The battle was fierce, with the allied Rus' soldiers fighting the Teutonic and crusader troops on the frozen surface of the lake.",
+   "at": {
+    "wedge": [
+     59,
+     31,
+     90
+    ],
+    "mil": [
+     63,
+     31,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "wedge",
+     "mil"
+    ],
+    [
+     "mil",
+     "wedge",
+     0.3
+    ]
+   ]
+  },
+  {
+   "title": "Alexander sends in the wings",
+   "text": "After a little more than two hours Alexander ordered the left and right wings of his army, cavalry among them, into the battle. The crusaders were by then exhausted from the struggle on the slippery ice.",
+   "quote": "After a little more than two hours of close quarters fighting, Alexander ordered the left and right wings of his army (including cavalry) to enter the battle.",
+   "at": {
+    "lw": [
+     58,
+     17,
+     180
+    ],
+    "rw": [
+     58,
+     45,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "lw",
+     "wedge"
+    ],
+    [
+     "rw",
+     "wedge"
+    ]
+   ]
+  },
+  {
+   "title": "The crusaders fall back in disarray",
+   "text": "The crusaders started to retreat in disarray, deeper onto the ice, with the fresh Novgorod cavalry now facing them.",
+   "quote": "The Crusaders started to retreat in disarray deeper onto the ice",
+   "at": {
+    "wedge": [
+     46,
+     31,
+     270
+    ]
+   },
+   "how": {
+    "wedge": "retreat"
+   },
+   "hits": [
+    [
+     "lw",
+     "wedge"
+    ],
+    [
+     "rw",
+     "wedge"
+    ]
+   ]
+  },
+  {
+   "title": "The retreat becomes a panic",
+   "text": "The appearance of the fresh Novgorod cavalry made the crusaders retreat in panic. The Novgorod First Chronicle says the fighting went on during the pursuit, seven versts short of the Subol shore.",
+   "quote": "the appearance of the fresh Novgorod cavalry made them retreat in panic.",
+   "at": {
+    "wedge": [
+     26,
+     31,
+     270
+    ],
+    "lw": [
+     44,
+     21,
+     270
+    ],
+    "rw": [
+     44,
+     41,
+     270
+    ]
+   },
+   "how": {
+    "wedge": "rout"
+   },
+   "state": {
+    "wedge": "routed"
+   },
+   "hits": [
+    [
+     "lw",
+     "wedge"
+    ],
+    [
+     "rw",
+     "wedge"
+    ]
+   ]
+  }
+ ]
+}
