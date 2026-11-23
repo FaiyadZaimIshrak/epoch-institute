@@ -17,7 +17,28 @@ articles/ likewise holds the community article pages (/articles → /community).
 maps/ — the atlas's data and outlines (generated, see "Atlas and maps").
 Plus 404.html and generator.html (generator is NOT deployed — see scripts/deploy.sh).
 
-## Menu (shared-nav.js initNav: MENUS, MORE)
+## Menu (shared-nav.js initNav: MENUS)
+**By subject since 23 Nov 2026** (the user: the Themes menu ran off the screen; "what about the menu and page
+structuring issue?"): Discover · Encyclopedia · People ▾ · Places ▾ · Events ▾ · Ideas ▾ · Play ▾ · More ▾.
+- **The rule:** a column never holds more than eight items, so no panel can run off the screen; a new page goes into
+  the subject it belongs to and, if the column is full, something leaves it. scripts/tests/menus.js opens every panel at
+  1366 x 700 and at 1180 px, counts the items, checks the bar stands on one line and every address is a page.
+- **People:** Great Lives, People by Century, Ruling Houses, Cultures and Peoples, Social Ladders, Quotations, Great
+  Speeches. **Places:** Atlas, Cities, Country Histories, Empires and States (/profiles?kind=polity), States Register,
+  Journeys on the Globe, Connections, Power Curves. **Events:** Today in History, Battles, Wars, World Timeline,
+  Centuries, Year by Year, This Month in History, History Now. **Ideas:** Faiths Side by Side, Faith Maps, Forms of
+  Government, Ideologies, Movements, Great Works, Inventions Tree, Songs in History. **Play:** History Games, History
+  Quiz, Today at the Institute, Flashcards, Write in Ancient Scripts, Rise and Fall Race (the Advent Calendar takes its
+  place from 1 December to 6 January: ADVENT_ON), Kids Corner, My Passport, and "Surprise me". **More** is a panel of
+  two columns: Read (Reading Paths, Research Series, All Profiles, Compare, Glossary, Find Your Way In, Explore
+  Everything, What's New) and The Institute (About, Open Data, Teachers' Corner, Community, Write for Us, Newsletter,
+  Support, Contact).
+- Out of the menus, still linked where they belong: My Week and Past Games (the games lobby, /today, the footer),
+  Your Birthday (Today in History, the home page), Submit an Article (/community). "Profiles" left the bar (More → All
+  Profiles; the phone menu keeps it at its head). MORE is gone: More is one of MENUS.
+- Still to come from the plan: the footer by the same subjects, a hub page for each subject (/explore/<subject>) and an
+  index page for each kind of profile.
+The paragraphs below describe the earlier menus.
 Regrouped by theme on 31 Oct 2026 (the user: Explore had grown to 22 items and looked cramped):
 Since 21 Nov 2026: Discover · Encyclopedia · Profiles · Maps & Time ▾ · Themes ▾ · Play ▾ · More ▾ (Today in History
 moved to the head of Maps & Time → Time; the phone bar keeps Today). A menu item's fifth field marks it "Start here"
@@ -3525,6 +3546,16 @@ then declutter. Answers: about 100 each; all sections; menus by subject plus hub
     backslashes: patch scripts are written as files.
   - battle-map.js is loaded without `?v=` (root .htaccess list, as faith-map.js); deploy.sh DATA has data/battles;
     scripts/tests/battle-maps.js.
+  - **Pictures, not map signs (23 Nov 2026; the user: "can you use better icons?"):** a block holds one to four small
+    pictures of what it is, drawn from the IC table of battle-map.js (paths in a 24 x 24 box): a shield for foot, a
+    spear, a pike, a bow, a horse's head, a horse and bow, an elephant, a chariot, a cannon, a tank, a ship, a banner
+    for a guard, a wagon for a camp, and a musket with bayonet (`rifles`) for foot and light troops of a battle from
+    1500 on (make-battle-maps.js sets `gun: 1` in the data from the profile's start year). The pictures stand in
+    `g.bf-ic > g.bf-ic-r`, and update() turns each `.bf-ic-r` back by the block's facing, so a picture stays upright
+    however its block is turned. The key under the field uses the same pictures. To look at a field as built:
+    a page of the repository, not the work folder's prototype (its proto-shot.js still draws the first signs).
+  - regen-profiles.ps1 may hang after "pages generated" at `Stop-Job` on its server job: stop the child powershell
+    of the regen process and the chain goes on.
 - **The second wave, 85 battles (23 Nov 2026; 103 in all; scripts/kinds/battles2/):**
   - **Candidates:** 130 ranked from the encyclopedia's battles (editions, article length, mentions, floors by region
     and age). 10 articles were too short to try; of the 120 tried, 85 pass, 9 are held (held.txt: one side's

@@ -26,23 +26,38 @@ var BattleMap = (function () {
     return d + (closed ? 'Z' : '');
   }
   function centre(p) { var x = 0, y = 0; p.forEach(function (q) { x += q[0]; y += q[1]; }); return [x / p.length, y / p.length]; }
-  // the mark inside a block says what the formation is (in the block's own frame: w x d, its front at the top)
+  // the pictures inside a block say what the formation is. Each is drawn in a 24 x 24 box about its centre:
+  // f a filled shape, s a stroked line, c a line cut out of a filled shape (in the block's own colour), o a filled dot,
+  // r a ring. A block holds one to four of them in a rank; each stands in a group that update() keeps upright.
+  var IC = {
+    infantry: [['f', 'M-7 -10H7V0C7 6 3 9 0 11C-3 9 -7 6 -7 0Z'], ['c', 'M0 -8V8M-5 -3H5']],
+    light: [['o', -2, 2, 6], ['c', 'M-2 2h.01'], ['s', 'M-9 10L9 -9'], ['f', 'M11 -11L9.5 -5L5 -9.5Z']],
+    spears: [['o', -4, 3, 5.5], ['s', 'M4 11V-6'], ['f', 'M4 -12L7 -5H1Z']],
+    pikes: [['s', 'M-6 11V-6M0 11V-6M6 11V-6'], ['f', 'M-6 -12L-3.6 -5H-8.4ZM0 -12L2.4 -5H-2.4ZM6 -12L8.4 -5H3.6Z']],
+    archers: [['s', 'M-5 -10C6 -6 6 6 -5 10'], ['t', 'M-5 -10V10'], ['s', 'M-9 0H7'], ['f', 'M11 0L6 -3V3Z']],
+    cavalry: [['f', 'M-8 11H9V7C9 0 6 -6 0 -9L-1 -12L-4 -9C-7 -7 -10 -3 -11 0L-9 3L-5 1C-5 4 -7 6 -8 8Z'], ['c', 'M-5 -4h.01']],
+    'horse-archers': [['f', 'M-11 11H3V8C3 2 1 -3 -4 -6L-5 -8L-7 -6C-9 -4 -11 -1 -12 1L-10 3L-7 2C-7 4 -9 6 -10 8Z'], ['s', 'M6 -10C12 -7 12 1 6 4'], ['t', 'M6 -10V4'], ['s', 'M2 -3H10']],
+    elephants: [['f', 'M-11 4V-3C-11 -7 -8 -9 -4 -9H4C9 -9 12 -6 12 -2V6C12 8 9.5 8 9.5 6V1C9.5 0 8.5 -1 7 -1H6V10H2V4H-5V10H-9V4Z'], ['c', 'M7 -5h.01']],
+    chariots: [['r', 0, 0, 8], ['s', 'M-8 0H8M0 -8V8M-5.7 -5.7L5.7 5.7M-5.7 5.7L5.7 -5.7'], ['o', 0, 0, 2.2]],
+    artillery: [['f', 'M-10 0L8 -9L10 -5L-8 4Z'], ['r', -3, 5, 5.5], ['o', -3, 5, 1.6]],
+    armour: [['f', 'M-11 2H11L8.5 9H-8.5Z'], ['f', 'M-5 2V-3C-5 -4 -4 -5 -3 -5H3C4 -5 5 -4 5 -3V2Z'], ['s', 'M5 -2H12']],
+    ships: [['f', 'M-10 4H10L7 10H-7Z'], ['s', 'M0 4V-11'], ['f', 'M1.5 -10L9 2H1.5ZM-1.5 -7L-7 2H-1.5Z']],
+    guard: [['s', 'M-6 11V-11'], ['f', 'M-6 -10H9L5 -5L9 0H-6Z']],
+    wagons: [['f', 'M-10 -6H10V3H-10Z'], ['r', -5, 6, 3.5], ['r', 5, 6, 3.5]],
+    rifles: [['f', 'M-11 11L-4 8L-7 4Z'], ['s', 'M-7 7L6 -6'], ['t', 'M6 -6L11 -11']]   // foot from 1500 on: a musket and its bayonet
+  };
   function mark(k, w, d) {
-    var x = w / 2, y = d / 2, m = Math.min(w, d) * 0.5, ln = function (p) { return el('path', { d: p, 'class': 'bf-mk', fill: 'none' }); };
-    switch (k) {
-      case 'infantry': case 'light': return [ln('M' + (-x) + ' ' + (-y) + 'L' + x + ' ' + y + 'M' + x + ' ' + (-y) + 'L' + (-x) + ' ' + y)];
-      case 'spears': case 'pikes': return [ln('M' + (-x) + ' ' + (-y) + 'L' + x + ' ' + y + 'M' + x + ' ' + (-y) + 'L' + (-x) + ' ' + y), ln('M' + (-x * 0.5) + ' ' + (-y) + 'v' + (-d * 0.4) + 'M0 ' + (-y) + 'v' + (-d * 0.4) + 'M' + (x * 0.5) + ' ' + (-y) + 'v' + (-d * 0.4))];
-      case 'cavalry': return [ln('M' + (-x) + ' ' + y + 'L' + x + ' ' + (-y))];
-      case 'horse-archers': return [ln('M' + (-x) + ' ' + y + 'L' + x + ' ' + (-y)), el('circle', { cx: -x * 0.45, cy: -y * 0.35, r: m * 0.24, 'class': 'bf-mk-f' })];
-      case 'archers': return [ln('M' + (-m * 0.9) + ' ' + (y * 0.55) + 'Q0 ' + (-y * 1.5) + ' ' + (m * 0.9) + ' ' + (y * 0.55) + 'M0 ' + (y * 0.7) + 'V' + (-y * 0.75))];
-      case 'artillery': return [el('circle', { cx: 0, cy: 0, r: m * 0.42, 'class': 'bf-mk-f' })];
-      case 'armour': return [el('ellipse', { cx: 0, cy: 0, rx: x * 0.62, ry: y * 0.52, 'class': 'bf-mk', fill: 'none' })];
-      case 'elephants': return [el('path', { d: 'M' + (-m * 1.1) + ' ' + (y * 0.7) + 'Q' + (-m * 1.1) + ' ' + (-y * 0.9) + ' 0 ' + (-y * 0.9) + 'Q' + (m * 1.1) + ' ' + (-y * 0.9) + ' ' + (m * 1.1) + ' ' + (y * 0.7) + 'Z', 'class': 'bf-mk-f' })];
-      case 'chariots': return [el('circle', { cx: 0, cy: 0, r: m * 0.6, 'class': 'bf-mk', fill: 'none' }), ln('M' + (-m * 0.6) + ' 0H' + (m * 0.6) + 'M0 ' + (-m * 0.6) + 'V' + (m * 0.6))];
-      case 'guard': return [el('path', { d: 'M' + (-m * 0.5) + ' ' + (y * 0.75) + 'V' + (-y * 0.75) + 'L' + (m * 0.8) + ' ' + (-y * 0.2) + 'L' + (-m * 0.5) + ' ' + (y * 0.2), 'class': 'bf-mk-f' })];
-      case 'wagons': return [el('rect', { x: -m * 0.7, y: -m * 0.4, width: m * 1.4, height: m * 0.8, 'class': 'bf-mk', fill: 'none' })];
+    var P = IC[k]; if (!P) return [];
+    var s = Math.min(w, d) * 0.92, n = Math.max(1, Math.min(4, Math.floor(w / (s * 1.35)))), out = [];
+    for (var i = 0; i < n; i++) {
+      var kids = P.map(function (p) {
+        if (p[0] === 'o') return el('circle', { cx: p[1], cy: p[2], r: p[3], 'class': 'bf-mk-f' });
+        if (p[0] === 'r') return el('circle', { cx: p[1], cy: p[2], r: p[3], 'class': 'bf-mk', fill: 'none' });
+        return el('path', { d: p[1], 'class': p[0] === 'f' ? 'bf-mk-f' : p[0] === 'c' ? 'bf-ic-c' : p[0] === 't' ? 'bf-mk bf-ic-t' : 'bf-mk', fill: p[0] === 'f' ? null : 'none' });
+      });
+      out.push(el('g', { 'class': 'bf-ic', transform: 'translate(' + ((i - (n - 1) / 2) * (w / n)).toFixed(1) + ' 0) scale(' + (s / 24).toFixed(3) + ')' }, [el('g', { 'class': 'bf-ic-r' }, kids)]));
     }
-    return [];
+    return out;
   }
   function shape(u) {
     var w = u.w * U, d = u.d * U;
@@ -106,7 +121,7 @@ var BattleMap = (function () {
     });
     var node = {};
     units.forEach(function (u, i) {
-      var inner = el('g', {}, [shape(u)].concat(mark(u.k, u.w * U, u.d * U), [el('path', { d: 'M-9 -9L9 9M9 -9L-9 9', 'class': 'bf-x' })]));
+      var inner = el('g', {}, [shape(u)].concat(mark(data.gun && (u.k === 'infantry' || u.k === 'light') ? 'rifles' : u.k, u.w * U, u.d * U), [el('path', { d: 'M-9 -9L9 9M9 -9L-9 9', 'class': 'bf-x' })]));
       var g = el('g', { 'class': 'bf-u bf-s' + side[u.side] + ' bf-k-' + u.k }, [inner, el('title', {}, [tx(u.name + (u.leader ? ' (' + u.leader + ')' : ''))])]);
       var lab = el('text', { 'class': 'bf-ul' }), lead = u.leader ? el('text', { 'class': 'bf-ul bf-ld' }, [tx(u.leader)]) : null, pic = null, ring = null;
       if (u.pic) {
@@ -117,7 +132,7 @@ var BattleMap = (function () {
       var tie = el('line', { 'class': 'bf-tie' });
       var lg = el('g', { 'class': 'bf-lg bf-s' + side[u.side] }, [tie].concat(pic ? [pic, ring] : [], [lab], lead ? [lead] : []));
       gU.appendChild(g); gL.appendChild(lg);
-      node[u.id] = { g: g, inner: inner, lg: lg, lab: lab, lead: lead, pic: pic, ring: ring, tie: tie, clip: pic ? defs.lastChild.firstChild : null, x: 0, y: 0, f: 0, o: 0, lx: 0, ly: 0, bw: 60, bh: 16, tw: 60 };
+      node[u.id] = { g: g, inner: inner, ics: inner.querySelectorAll('.bf-ic-r'), lg: lg, lab: lab, lead: lead, pic: pic, ring: ring, tie: tie, clip: pic ? defs.lastChild.firstChild : null, x: 0, y: 0, f: 0, o: 0, lx: 0, ly: 0, bw: 60, bh: 16, tw: 60 };
     });
     [gT, gTrail, gU, gA, gL].forEach(function (g) { svg.appendChild(g); }); fig.appendChild(svg);
 
@@ -133,7 +148,7 @@ var BattleMap = (function () {
     units.forEach(function (u) { if (kinds.indexOf(u.k) < 0 && KIND[u.k]) kinds.push(u.k); });
     kinds.forEach(function (k) {
       var ship = k === 'ships', li = h('li', {});
-      li.appendChild(el('svg', { viewBox: '-24 -16 48 30', 'class': 'bf-key-g bf-s9', 'aria-hidden': 'true' }, [el('g', {}, [shape({ k: k, w: ship ? 3.2 : 3.6, d: ship ? 1.4 : 1.8 })].concat(mark(k, ship ? 32 : 36, ship ? 14 : 18)))]));
+      li.appendChild(el('svg', { viewBox: '-24 -16 48 30', 'class': 'bf-key-g bf-s9', 'aria-hidden': 'true' }, [el('g', {}, [shape({ k: k, w: ship ? 3.2 : 3.6, d: ship ? 1.4 : 1.8 })].concat(mark(data.gun && (k === 'infantry' || k === 'light') ? 'rifles' : k, ship ? 32 : 36, ship ? 14 : 18)))]));
       li.appendChild(tx(KIND[k])); key.appendChild(li);
     });
     if (S.some(function (st) { for (var id in st) if (st[id].s === 'hidden') return true; })) { var lh = h('li', {}); lh.appendChild(h('i', { 'class': 'bf-sw bf-sw-hid' })); lh.appendChild(tx('Hidden')); key.appendChild(lh); }
@@ -171,7 +186,7 @@ var BattleMap = (function () {
     function lay(i) { return LAY[i] || (LAY[i] = layout(i)); }
     function place(id, v) {
       var n = node[id]; n.x = v.x; n.y = v.y; n.f = v.f; n.o = v.o; n.lx = v.lx; n.ly = v.ly;
-      n.g.setAttribute('transform', 'translate(' + (v.x * U).toFixed(1) + ' ' + (v.y * U).toFixed(1) + ')'); n.inner.setAttribute('transform', 'rotate(' + (U_BY[id].k === 'camp' ? 0 : v.f).toFixed(1) + ')');   // a camp is a sign, not a line: it never turns
+      n.g.setAttribute('transform', 'translate(' + (v.x * U).toFixed(1) + ' ' + (v.y * U).toFixed(1) + ')'); n.inner.setAttribute('transform', 'rotate(' + (U_BY[id].k === 'camp' ? 0 : v.f).toFixed(1) + ')'); for (var q = 0; q < n.ics.length; q++) n.ics[q].setAttribute('transform', 'rotate(' + (-v.f).toFixed(1) + ')');   // the pictures stay upright   // a camp is a sign, not a line: it never turns
       n.g.style.opacity = v.o; n.lg.style.opacity = v.o < 0.2 ? 0 : Math.min(1, v.o * 1.8);
       var two = n.lead && !small, pr = n.pic && !small ? F * 1.25 : 0, x0 = v.lx - n.bw / 2, tx0 = pr ? x0 + pr * 2 + 6 : v.lx, y1 = v.ly + (two ? -F * 0.16 : F * 0.34);
       n.lab.setAttribute('x', tx0.toFixed(1)); n.lab.setAttribute('y', y1.toFixed(1)); n.lab.setAttribute('text-anchor', pr ? 'start' : 'middle');

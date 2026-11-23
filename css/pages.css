@@ -3044,8 +3044,11 @@ body.has-tab-bar .consent-bar { bottom: calc(68px + env(safe-area-inset-bottom, 
 .bf-s9 { --c: var(--muted); }
 .bf-blk { fill: var(--c); stroke: var(--bf-ink); stroke-width: 1.6; }
 .bf-camp { fill: none; stroke: var(--c); stroke-width: 3; }
-.bf-mk { stroke: var(--bf-ink); stroke-width: 2.2; stroke-linecap: round; }
+.bf-mk { stroke: var(--bf-ink); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
 .bf-mk-f { fill: var(--bf-ink); stroke: none; }
+.bf-ic-c { stroke: var(--c); stroke-width: 2; stroke-linecap: round; fill: none; }
+.bf-ic-t { stroke-width: 1; }
+.bf-u.is-hidden .bf-ic-c, .bf-u.is-routed .bf-ic-c, .bf-u.is-destroyed .bf-ic-c { display: none; }
 .bf-u.is-hidden .bf-blk { fill-opacity: .25; stroke: var(--c); stroke-dasharray: 5 4; }
 .bf-u.is-hidden .bf-mk { stroke: var(--c); }
 .bf-u.is-hidden .bf-mk-f { fill: var(--c); }

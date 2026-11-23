@@ -16,6 +16,7 @@ const R = path.join(__dirname, '..', '..'), DRY = process.argv.includes('--dry')
 const NEVER = new Set(['muhammad', 'ali', 'ali-ibn-abi-talib']);   // never depicted, whatever a file says
 const E = new Function(fs.readFileSync(path.join(R, 'shared-data.js'), 'utf8') + ';return {EMPIRES, profileUrl}')();
 const PROF = new Map(E.EMPIRES.filter(e => e.kind === 'battle').map(e => [e.name, E.profileUrl(e).split('/').pop()]));
+const YEAR = new Map(E.EMPIRES.filter(e => e.kind === 'battle').map(e => [e.name, e.start]));   // from 1500 on the foot carry muskets (the player's picture)
 const ENT = new Map(); for (const l of fs.readFileSync(path.join(R, 'encyclopedia-data.js'), 'utf8').split('\n')) { const m = l.match(/^\s*\{slug:"([^"]+)"/); if (m) ENT.set(m[1], (l.match(/,img:"([^"]+)"/) || [])[1] || ''); }
 const PORT = new Map(); const pf = path.join(DIR, 'portraits.tsv');
 if (fs.existsSync(pf)) for (const l of fs.readFileSync(pf, 'utf8').split(/\r?\n/)) { if (!l.trim() || l[0] === '#') continue; const c = l.split('\t'); PORT.set(c[0], c[1] === 'yes'); }
@@ -42,6 +43,7 @@ for (const f of fs.readdirSync(DIR).filter(x => x.endsWith('.json')).sort()) {
     sides: sc.sides.map(s => ({ id: s.id, name: s.name })), units,
     phases: sc.phases.map(p => { const o = { title: p.title, text: p.text }; for (const k of ['when', 'at', 'how', 'state', 'hits']) if (p[k] && (Array.isArray(p[k]) ? p[k].length : typeof p[k] === 'string' || Object.keys(p[k]).length)) o[k] = p[k]; return o; }) };
   if (sc.note) data.note = sc.note;
+  if (YEAR.get(sc.name) >= 1500) data.gun = 1;
   const text = JSON.stringify(data), v = crypto.createHash('sha1').update(text).digest('hex').slice(0, 10);
   write(path.join(R, 'data', 'battles', slug + '.json'), text);
   out[sc.name] = [slug, v, sc.phases.map(p => [p.title, p.text])]; n++;
