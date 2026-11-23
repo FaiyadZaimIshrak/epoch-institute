@@ -8274,5 +8274,301 @@ var SECTION_IMAGES = {
     early:{slug:"james-cook",name:"James Cook",img:"/images/encyclopedia/james-cook.jpg",artist:"Nathaniel Dance-Holland",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Captainjamescookportrait.jpg"},
     rise:{slug:"george-arthur",name:"George Arthur",img:"/images/encyclopedia/george-arthur.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Major-General_Sir_George_Arthur_(cropped).jpg"},
     last:{slug:"queen-victoria",name:"Queen Victoria",img:"/images/encyclopedia/queen-victoria.jpg",artist:"Alexander Bassano",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Queen_Victoria_by_Bassano.jpg"}
+  },
+  "Quakers": {
+    events:{slug:"william-penn",name:"William Penn",img:"/images/encyclopedia/william-penn.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:William_Penn.png"},
+    people:{slug:"underground-railroad",name:"Underground Railroad",img:"/images/encyclopedia/underground-railroad.jpg",artist:"Eastman Johnson",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_-_A_Ride_for_Liberty_--_The_Fugitive_Slaves_-_Eastman_Johnson_-_overall.jpg"},
+    outcomes:{slug:"william-wilberforce",name:"William Wilberforce",img:"/images/encyclopedia/william-wilberforce.jpg",artist:"Anton Hickel",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:William_wilberforce.jpg"}
+  },
+  "Puritans": {
+    background:{slug:"elizabeth-i",name:"Elizabeth I",img:"/images/encyclopedia/elizabeth-i.jpg",artist:"Unidentified painter",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Darnley_stage_3.jpg"},
+    people:{slug:"oliver-cromwell",name:"Oliver Cromwell",img:"/images/encyclopedia/oliver-cromwell.jpg",artist:"After Samuel Cooper",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Oliver_Cromwell_by_Samuel_Cooper.jpg"},
+    legacy:{slug:"max-weber",name:"Max Weber",img:"/images/encyclopedia/max-weber.jpg",artist:"Ernst Gottmann",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Max_Weber,_1918.jpg"}
+  },
+  "Hussites": {
+    background:{slug:"cyril-and-methodius",name:"Cyril and Methodius",img:"/images/encyclopedia/cyril-and-methodius.jpg",artist:"painted by Zahari Zograf (Захарий Христович Димитров)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sv_Kiril_Metodij_Zahari_Zograf_Trojanski_mon_1848.jpg"},
+    events:{slug:"pope-martin-v",name:"Pope Martin V",img:"/images/encyclopedia/pope-martin-v.jpg",artist:"Venetian school / After Pisanello",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Papa_Martino_V.jpg"},
+    people:{slug:"jan-hus",name:"Jan Hus",img:"/images/encyclopedia/jan-hus.jpg",artist:"Christoph Murer 1587",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Stimmer_Jan_Hus.jpg"},
+    outcomes:{slug:"pope-pius-ii",name:"Pope Pius II",img:"/images/encyclopedia/pope-pius-ii.jpg",artist:"Pinturicchio",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pintoricchio_014.jpg"},
+    legacy:{slug:"martin-luther",name:"Martin Luther",img:"/images/encyclopedia/martin-luther.jpg",artist:"Lucas Cranach the Elder",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lucas_Cranach_d.%C3%84._-_Martin_Luther,_1528_(Veste_Coburg).jpg"}
+  },
+  "Surrealism": {
+    background:{slug:"sigmund-freud",name:"Sigmund Freud",img:"/images/encyclopedia/sigmund-freud.jpg",artist:"Max Halberstadt",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sigmund_Freud,_by_Max_Halberstadt_(cropped).jpg"},
+    people:{slug:"pablo-picasso",name:"Pablo Picasso",img:"/images/encyclopedia/pablo-picasso.jpg",artist:"Argentina. Revista Vea y Lea",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pablo_picasso_1.jpg"}
+  },
+  "Prague Spring": {
+    background:{slug:"nikita-khrushchev",name:"Nikita Khrushchev",img:"/images/encyclopedia/nikita-khrushchev.jpg",artist:"TASS",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:1956_Press_Photo_Communist_Party_Secretary_Nikita_S._Khrushchev_in_Moscow_(cropped).jpg"},
+    aims:{slug:"alexander-dubcek",name:"Alexander Dubček",img:"/images/encyclopedia/alexander-dubcek.jpg",artist:"CTK",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Alexander_Dubcek_in_August_23rd,_1968_(cropped).jpg"},
+    events:{slug:"leonid-brezhnev",name:"Leonid Brezhnev",img:"/images/encyclopedia/leonid-brezhnev.jpg",artist:"Vladimir Musaelyan",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Leonid_Brezhnev,_Staatshoofden,_portretten,_Bestanddeelnr_925-6564_(cropped)(2).jpg"},
+    people:{slug:"ludvik-svoboda",name:"Ludvík Svoboda",img:"/images/encyclopedia/ludvik-svoboda.jpg",artist:"Original photo taken by Stanislav Tereba, The first derivated version by Fredy.00; This derivated version by Esc.eliska",licence:"CC BY-SA 3.0 cz",source:"https://commons.wikimedia.org/wiki/File:Ludv%C3%ADk_Svoboda_1968.JPG"},
+    outcomes:{slug:"jan-palach",name:"Jan Palach",img:"/images/encyclopedia/jan-palach.jpg",artist:"Úřady",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jan_Palach_foto_z_pr%C5%AFkazu.JPG"},
+    legacy:{slug:"mikhail-gorbachev",name:"Mikhail Gorbachev",img:"/images/encyclopedia/mikhail-gorbachev.jpg",artist:"Vladimir Vyatkin / Владимир Вяткин; derivative work by Jbarta",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:RIAN_archive_850809_General_Secretary_of_the_CPSU_CC_M._Gorbachev_(crop).jpg"}
+  },
+  "Unification of Italy": {
+    background:{slug:"dante-alighieri",name:"Dante Alighieri",img:"/images/encyclopedia/dante-alighieri.jpg",artist:"Wolfgang Sauber",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Bargello_-_Kapelle_Fresko_2a.jpg"},
+    aims:{slug:"giuseppe-mazzini",name:"Giuseppe Mazzini",img:"/images/encyclopedia/giuseppe-mazzini.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Giuseppe_Mazzini.jpg"},
+    events:{slug:"ciro-menotti",name:"Ciro Menotti",img:"/images/encyclopedia/ciro-menotti.jpg",artist:"",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Ciro_Menotti_-_Malatesta.jpg"},
+    people:{slug:"giuseppe-garibaldi",name:"Giuseppe Garibaldi",img:"/images/encyclopedia/giuseppe-garibaldi.jpg",artist:"Salvatore Lo Forte",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Giuseppe_Garibaldi.jpg"},
+    outcomes:{slug:"porta-pia",name:"Porta Pia",img:"/images/encyclopedia/porta-pia.jpg",artist:"Monticiano",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Porta_Pia_-_internal_side.jpg"},
+    legacy:{slug:"antonio-gramsci",name:"Antonio Gramsci",img:"/images/encyclopedia/antonio-gramsci.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Gramsci.png"}
+  },
+  "Revolutions of 1848": {
+    background:{slug:"french-revolution",name:"French Revolution",img:"/images/encyclopedia/french-revolution.jpg",artist:"Unidentified painter",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Anonymous_-_Prise_de_la_Bastille.jpg"},
+    events:{slug:"louis-philippe-i",name:"Louis Philippe I",img:"/images/encyclopedia/louis-philippe-i.jpg",artist:"Franz Xaver Winterhalter",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:1841_portrait_painting_of_Louis_Philippe_I_(King_of_the_French)_by_Winterhalter.jpg"},
+    people:{slug:"louis-eugene-cavaignac",name:"Louis-Eugène Cavaignac",img:"/images/encyclopedia/louis-eugene-cavaignac.jpg",artist:"Pierre Petit",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:G%C3%A9n%C3%A9ral_Cavaignac_-_photo_Pierre_Petit.jpg"},
+    outcomes:{slug:"franz-joseph-i",name:"Franz Joseph I",img:"/images/encyclopedia/franz-joseph-i.jpg",artist:"Carl Pietzner",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Franz_Joseph_I_of_Austria.1910_(cropped).jpg"},
+    legacy:{slug:"karl-marx",name:"Karl Marx",img:"/images/encyclopedia/karl-marx.jpg",artist:"John Jabez Edwin Mayall",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Karl_Marx_001_restored.jpg"}
+  },
+  "Underground Railroad": {
+    background:{slug:"charles-ii-of-spain",name:"Charles II of Spain",img:"/images/encyclopedia/charles-ii-of-spain.jpg",artist:"Juan Carreño de Miranda",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Juan_de_Miranda_Carreno_002.jpg"},
+    people:{slug:"harriet-tubman",name:"Harriet Tubman",img:"/images/encyclopedia/harriet-tubman.jpg",artist:"Horatio Seymour Squyer",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Harriet_Tubman_(circa_1885).jpg"},
+    legacy:{slug:"frederick-douglass",name:"Frederick Douglass",img:"/images/encyclopedia/frederick-douglass.jpg",artist:"George Kendall Warren",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Frederick_Douglass_(circa_1879)_(cropped).jpg"}
+  },
+  "Mau Mau rebellion": {
+    events:{slug:"jomo-kenyatta",name:"Jomo Kenyatta",img:"/images/encyclopedia/jomo-kenyatta.jpg",artist:"Pridan Moshe",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jomo_Kenyatta_(cropped)_in_June_15th,_1966.jpg"},
+    outcomes:{slug:"lancaster-house",name:"Lancaster House",img:"/images/encyclopedia/lancaster-house.jpg",artist:"Financial Times",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Lancaster_House_(5880536589).jpg"}
+  },
+  "March First Movement": {
+    background:{slug:"woodrow-wilson",name:"Woodrow Wilson",img:"/images/encyclopedia/woodrow-wilson.jpg",artist:"Harris & Ewing, photographer",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:President_Woodrow_Wilson_Harris_%26_Ewing_(3x4_cropped_b).jpg"},
+    aims:{slug:"fourteen-points",name:"Fourteen Points",img:"/images/encyclopedia/fourteen-points.jpg",artist:"William Orpen",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:William_Orpen_Woodrow_Wilson_cropped.jpg"},
+    events:{slug:"zhang-zuolin",name:"Zhang Zuolin",img:"/images/encyclopedia/zhang-zuolin.jpg",artist:"B. Nagakiya",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Zhangzuolin.jpg"},
+    people:{slug:"syngman-rhee",name:"Syngman Rhee",img:"/images/encyclopedia/syngman-rhee.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rhee_Syng-Man_in_1948.jpg"},
+    legacy:{slug:"mahatma-gandhi",name:"Mahatma Gandhi",img:"/images/encyclopedia/mahatma-gandhi.jpg",artist:"Elliott & Fry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mahatma-Gandhi,_studio,_1931.jpg"}
+  },
+  "Persian Constitutional Revolution": {
+    background:{slug:"paul-julius-reuter",name:"Paul Julius Reuter",img:"/images/encyclopedia/paul-julius-reuter.jpg",artist:"Nadar",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Reuter,_Paul_Julius_von,_Nadar,_Gallica.jpg"},
+    events:{slug:"mozaffar-ad-din-shah-qajar",name:"Mozaffar ad-Din Shah Qajar",img:"/images/encyclopedia/mozaffar-ad-din-shah-qajar.jpg",artist:"Golestan Palace",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mozaffar_ad-Din_Shah_Qajar_portrait.jpg"},
+    people:{slug:"sattar-khan",name:"Sattar Khan",img:"/images/encyclopedia/sattar-khan.jpg",artist:"Unknown",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:SattarKhanPortrait.jpg"},
+    outcomes:{slug:"national-consultative-assembly",name:"National Consultative Assembly",img:"/images/encyclopedia/national-consultative-assembly.jpg",artist:"Supersian",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:The_inaugural_National_Consultative_Assembly_of_Iran.png"}
+  },
+  "Haskalah": {
+    background:{slug:"voltaire",name:"Voltaire",img:"/images/encyclopedia/voltaire.jpg",artist:"Nicolas de Largillière",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Nicolas_de_Largilli%C3%A8re_-_Portrait_de_Voltaire_(1694-1778)_en_1718_-_P208_-_mus%C3%A9e_Carnavalet_-_5_(cropped).jpg"},
+    people:{slug:"torah",name:"Torah",img:"/images/encyclopedia/torah.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Тора._Нацыянальная_бібліятэка_Беларусі.jpg"},
+    legacy:{slug:"theodor-herzl",name:"Theodor Herzl",img:"/images/encyclopedia/theodor-herzl.jpg",artist:"Carl Pietzner",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Theodor_Herzl_(3x4_cropped).jpg"}
+  },
+  "Jadidism": {
+    background:{slug:"sadriddin-ayni",name:"Sadriddin Ayni",img:"/images/encyclopedia/sadriddin-ayni.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:AyniSadriddin.jpg"},
+    events:{slug:"october-manifesto",name:"October Manifesto",img:"/images/encyclopedia/october-manifesto.jpg",artist:"Ilya Repin",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Repin_17October.jpg"},
+    people:{slug:"muhammad-amin-bughra",name:"Muhammad Amin Bughra",img:"/images/encyclopedia/muhammad-amin-bughra.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Muhammad_Amin_Bughra2.jpg"}
+  },
+  "Donghak Peasant Revolution": {
+    background:{slug:"choe-je-u",name:"Choe Je-u",img:"/images/encyclopedia/choe-je-u.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Choe_Je-u.jpg"},
+    people:{slug:"kim-gu",name:"Kim Gu",img:"/images/encyclopedia/kim-gu.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kim_Gu_in_1949.jpg"}
+  },
+  "Quit India movement": {
+    background:{slug:"mahatma-gandhi",name:"Mahatma Gandhi",img:"/images/encyclopedia/mahatma-gandhi.jpg",artist:"Elliott & Fry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mahatma-Gandhi,_studio,_1931.jpg"},
+    people:{slug:"jawaharlal-nehru",name:"Jawaharlal Nehru",img:"/images/encyclopedia/jawaharlal-nehru.jpg",artist:"Harry Pot",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Nehru_in_the_Netherlands,_1957.jpg"},
+    legacy:{slug:"vinayak-damodar-savarkar",name:"Vinayak Damodar Savarkar",img:"/images/encyclopedia/vinayak-damodar-savarkar.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Swatyantra_Vir_Savarkar.jpg"}
+  },
+  "American Indian Movement": {
+    events:{slug:"mayflower",name:"Mayflower",img:"/images/encyclopedia/mayflower.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Copyrighted_and_Published_by_A_S_Burbank,_The_Mayflower_at_Sea_(NBY_21340).jpg"},
+    legacy:{slug:"christopher-columbus",name:"Christopher Columbus",img:"/images/encyclopedia/christopher-columbus.jpg",artist:"Sebastiano del Piombo",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_a_Man,_Said_to_be_Christopher_Columbus.jpg"}
+  },
+  "Temperance movement": {
+    background:{slug:"john-wesley",name:"John Wesley",img:"/images/encyclopedia/john-wesley.jpg",artist:"After George Romney",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:John_Wesley_by_George_Romney.jpg"},
+    people:{slug:"abraham-lincoln",name:"Abraham Lincoln",img:"/images/encyclopedia/abraham-lincoln.jpg",artist:"Alexander Gardner",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Abraham_Lincoln_O-77_matte_collodion_print.jpg"},
+    outcomes:{slug:"henry-ford",name:"Henry Ford",img:"/images/encyclopedia/henry-ford.jpg",artist:"Fred Hartsook",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Henry_ford_1919.jpg"},
+    legacy:{slug:"mahatma-gandhi",name:"Mahatma Gandhi",img:"/images/encyclopedia/mahatma-gandhi.jpg",artist:"Elliott & Fry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mahatma-Gandhi,_studio,_1931.jpg"}
+  },
+  "Liberation theology": {
+    aims:{slug:"gustavo-gutierrez",name:"Gustavo Gutiérrez",img:"/images/encyclopedia/gustavo-gutierrez.jpg",artist:"Mohan",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Gustavo_gutierrez_(Peruvian_theologian).jpg"},
+    events:{slug:"oscar-romero",name:"Óscar Romero",img:"/images/encyclopedia/oscar-romero.jpg",artist:"Arzobispado de San Salvador; Congregatio de Causis Sanctorum",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Monse%C3%B1or_Romero_(colour).jpg"},
+    people:{slug:"desmond-tutu",name:"Desmond Tutu",img:"/images/encyclopedia/desmond-tutu.jpg",artist:"Benny Gool",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Archbishop-Tutu-medium.jpg"},
+    outcomes:{slug:"pope-john-paul-ii",name:"Pope John Paul II",img:"/images/encyclopedia/pope-john-paul-ii.jpg",artist:"Gregorini Demetrio",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:ADAMELLO_-_PAPA_-_Giovanni_Paolo_II_-_panoramio_(cropped).jpg"},
+    legacy:{slug:"pope-francis",name:"Pope Francis",img:"/images/encyclopedia/pope-francis.jpg",artist:"Jeon Han, Korea.net",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Pope_Francis_Korea_Haemi_Castle_19.jpg"}
+  },
+  "Ghost Dance": {
+    people:{slug:"sitting-bull",name:"Sitting Bull",img:"/images/encyclopedia/sitting-bull.jpg",artist:"David F. Barry, Photographer, Bismarck, Dakota Territory",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sitting_Bull_by_D_F_Barry_ca_1883_Dakota_Territory.jpg"}
+  },
+  "Hundred Days' Reform": {
+    background:{slug:"li-hongzhang",name:"Li Hongzhang",img:"/images/encyclopedia/li-hongzhang.jpg",artist:"Russell & Sons",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Li_Hung_Chang_in_1896(cropped).jpg"},
+    aims:{slug:"kang-youwei",name:"Kang Youwei",img:"/images/encyclopedia/kang-youwei.jpg",artist:"Elmer Chickering",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kang_Yu-wei_cph.3a45114.jpg"},
+    events:{slug:"guangxu-emperor",name:"Guangxu Emperor",img:"/images/encyclopedia/guangxu-emperor.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E5%85%89%E7%BB%AA%E5%B8%9D.jpg"},
+    people:{slug:"ito-hirobumi",name:"Itō Hirobumi",img:"/images/encyclopedia/ito-hirobumi.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:IT%C5%8C_Hirobumi.jpg"},
+    legacy:{slug:"empress-dowager-cixi",name:"Empress Dowager Cixi",img:"/images/encyclopedia/empress-dowager-cixi.jpg",artist:"John Yu Shuinling",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:The_Ci-Xi_Imperial_Dowager_Empress_(9.2).PNG"}
+  },
+  "Māori King movement": {
+    background:{slug:"queen-victoria",name:"Queen Victoria",img:"/images/encyclopedia/queen-victoria.jpg",artist:"Alexander Bassano",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Queen_Victoria_by_Bassano.jpg"},
+    aims:{slug:"potatau-te-wherowhero",name:"Pōtatau Te Wherowhero",img:"/images/encyclopedia/potatau-te-wherowhero.jpg",artist:"George French, 1822-1886 Angas (Copyist); J W fl 1847 Giles (as the lithographer); Joseph Jenner, 1816?-1854 Merrett (as the artist)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:P%C5%8Dtatau_Te_Wherowhero_by_George_French_Angas.jpg"},
+    events:{slug:"tawhiao",name:"Tāwhiao",img:"/images/encyclopedia/tawhiao.jpg",artist:"Gottfried Lindauer (1839-1926)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tawhiao_Matutaera_Potatau_Te_Wherowhero,_by_Gottfried_Landauer.jpg"},
+    people:{slug:"turangawaewae",name:"Tūrangawaewae",img:"/images/encyclopedia/turangawaewae.jpg",artist:"",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Turongo_House.JPG"},
+    outcomes:{slug:"george-v",name:"George V",img:"/images/encyclopedia/george-v.jpg",artist:"Bassano Ltd",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:King_George_1923_LCCN2014715558_(cropped).jpg"}
+  },
+  "First Great Awakening": {
+    background:{slug:"august-hermann-francke",name:"August Hermann Francke",img:"/images/encyclopedia/august-hermann-francke.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:August-Hermann-Francke.jpg"},
+    aims:{slug:"john-wesley",name:"John Wesley",img:"/images/encyclopedia/john-wesley.jpg",artist:"After George Romney",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:John_Wesley_by_George_Romney.jpg"},
+    outcomes:{slug:"american-revolution",name:"American Revolution",img:"/images/encyclopedia/american-revolution.jpg",artist:"John Trumbull",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Declaration_of_Independence_(1819),_by_John_Trumbull.jpg"}
+  },
+  "New Culture Movement": {
+    background:{slug:"yuan-shikai",name:"Yuan Shikai",img:"/images/encyclopedia/yuan-shikai.jpg",artist:"Photo by Rio V. De Sieux [1]",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanShikaiPresidente1915.jpg"},
+    aims:{slug:"confucius",name:"Confucius",img:"/images/encyclopedia/confucius.jpg",artist:"Anonymous Chinese painter of the Western Han period",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Confucius,_fresco_from_a_Western_Han_tomb_of_Dongping_County,_Shandong_province,_China_(cropped).jpg"},
+    events:{slug:"hu-shih",name:"Hu Shih",img:"/images/encyclopedia/hu-shih.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hu_Shih_1960_color_Crop.jpg"},
+    people:{slug:"cai-yuanpei",name:"Cai Yuanpei",img:"/images/encyclopedia/cai-yuanpei.jpg",artist:"The Library of Congress",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Cai_Yuanpei-loc-nodate-crop.jpg"},
+    outcomes:{slug:"mao-zedong",name:"Mao Zedong",img:"/images/encyclopedia/mao-zedong.jpg",artist:"Chen Zhengqing (1917–1966)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mao_Zedong_1950_Portrait_(3x4_cropped)(2).jpg"}
+  },
+  "Black Consciousness Movement": {
+    background:{slug:"steve-biko",name:"Steve Biko",img:"/images/encyclopedia/steve-biko.jpg",artist:"Cape Argus",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Steve_Biko_on_Flyer_for_Steve_Biko_Memorial_at_the_Carver_Cultural_Center.jpg"},
+    people:{slug:"desmond-tutu",name:"Desmond Tutu",img:"/images/encyclopedia/desmond-tutu.jpg",artist:"Benny Gool",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Archbishop-Tutu-medium.jpg"},
+    outcomes:{slug:"nelson-mandela",name:"Nelson Mandela",img:"/images/encyclopedia/nelson-mandela.jpg",artist:"Kingkongphoto & www.celebrity-photos.com from Laurel",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Nelson_Mandela_1994.jpg"}
+  },
+  "Wahhabism": {
+    background:{slug:"muhammad-ibn-abd-al-wahhab",name:"Muhammad ibn Abd al-Wahhab",img:"/images/encyclopedia/muhammad-ibn-abd-al-wahhab.jpg",artist:"أبو آسر",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:محمد_بن_عبد_الوهاب.png"},
+    events:{slug:"ibn-saud",name:"Ibn Saud",img:"/images/encyclopedia/ibn-saud.jpg",artist:"Saudi Press Agency",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Official_Portrait_of_King_Abdulaziz.jpg"},
+    people:{slug:"rashid-rida",name:"Rashid Rida",img:"/images/encyclopedia/rashid-rida.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:MuhammadRashidRida.jpg"},
+    legacy:{slug:"muhammad-iqbal",name:"Muhammad Iqbal",img:"/images/encyclopedia/muhammad-iqbal.jpg",artist:"Iqbal Academy Pakistan",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Allama_Iqbal.jpg"}
+  },
+  "Mau movement": {
+    background:{slug:"wilhelm-solf",name:"Wilhelm Solf",img:"/images/encyclopedia/wilhelm-solf.jpg",artist:"Unknown",licence:"CC BY-SA 3.0 de",source:"https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-R73059,_Wilhelm_Solf.jpg"},
+    aims:{slug:"olaf-frederick-nelson",name:"Olaf Frederick Nelson",img:"/images/encyclopedia/olaf-frederick-nelson.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ta%E2%80%99isi_O.F._Nelson_(cropped).png"},
+    events:{slug:"tupua-tamasese-lealofi-iii",name:"Tupua Tamasese Lealofi III",img:"/images/encyclopedia/tupua-tamasese-lealofi-iii.jpg",artist:"Alfred John Tattersall",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mau_leaders_and_Tupua_Tamasese_Lealofi_III_in_front_of_Mau_office_1929.jpg"},
+    legacy:{slug:"helen-clark",name:"Helen Clark",img:"/images/encyclopedia/helen-clark.jpg",artist:"Global Commission on Drug Policy",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Helen_Clark_official_photo_(cropped).jpg"}
+  },
+  "Marxism": {
+    origins:{slug:"karl-marx",name:"Karl Marx",img:"/images/encyclopedia/karl-marx.jpg",artist:"John Jabez Edwin Mayall",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Karl_Marx_001_restored.jpg"},
+    spread:{slug:"rosa-luxemburg",name:"Rosa Luxemburg",img:"/images/encyclopedia/rosa-luxemburg.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rosa_Luxemburg_(cropped).jpg"},
+    power:{slug:"deng-xiaoping",name:"Deng Xiaoping",img:"/images/encyclopedia/deng-xiaoping.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Deng_Xiaoping_at_the_arrival_ceremony_for_the_Vice_Premier_of_China_(cropped).jpg"},
+    critiques:{slug:"mikhail-bakunin",name:"Mikhail Bakunin",img:"/images/encyclopedia/mikhail-bakunin.jpg",artist:"Nadar",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mikhail_Bakunin_Nader_(3x4_cropped).jpg"},
+    legacy:{slug:"max-weber",name:"Max Weber",img:"/images/encyclopedia/max-weber.jpg",artist:"Ernst Gottmann",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Max_Weber,_1918.jpg"}
+  },
+  "Nazism": {
+    origins:{slug:"johann-gottlieb-fichte",name:"Johann Gottlieb Fichte",img:"/images/encyclopedia/johann-gottlieb-fichte.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Johann_Gottlieb_Fichte.jpg"},
+    spread:{slug:"hermann-goring",name:"Hermann Göring",img:"/images/encyclopedia/hermann-goring.jpg",artist:"Charles Alexander, Office of the United States Chief of Counsel",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hermann_Goering_-_Nuremberg_2_(cropped).jpg"},
+    power:{slug:"paul-von-hindenburg",name:"Paul von Hindenburg",img:"/images/encyclopedia/paul-von-hindenburg.jpg",artist:"Unknown author.",licence:"CC BY-SA 3.0 de",source:"https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-C06886,_Paul_v._Hindenburg_(cropped)(2).jpg"},
+    critiques:{slug:"wilhelm-ii",name:"Wilhelm II",img:"/images/encyclopedia/wilhelm-ii.jpg",artist:"Studio of Thomas Heinrich Voigt",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kaiser_Wilhelm_II_of_Germany_-_1902_(3x4_cropped).jpg"}
+  },
+  "Marxism–Leninism": {
+    origins:{slug:"nicholas-ii",name:"Nicholas II",img:"/images/encyclopedia/nicholas-ii.jpg",artist:"Unknown author (originally uploaded to Wikimedia Commons on 22 August 2012 by Peruanec)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mikola_II_(cropped)-2.jpg"},
+    ideas:{slug:"karl-marx",name:"Karl Marx",img:"/images/encyclopedia/karl-marx.jpg",artist:"John Jabez Edwin Mayall",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Karl_Marx_001_restored.jpg"},
+    spread:{slug:"josip-broz-tito",name:"Josip Broz Tito",img:"/images/encyclopedia/josip-broz-tito.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Josip_Broz_Tito_uniform_portrait.jpg"},
+    power:{slug:"pol-pot",name:"Pol Pot",img:"/images/encyclopedia/pol-pot.jpg",artist:"Editura Politică",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Pol_Pot_in_1978.png"},
+    critiques:{slug:"amartya-sen",name:"Amartya Sen",img:"/images/encyclopedia/amartya-sen.jpg",artist:"Elke Wetzig (Elya); derivative work by ChaudhryAzan",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Amartya_Sen_20071128_cologne_cropped.jpg"},
+    legacy:{slug:"mikhail-gorbachev",name:"Mikhail Gorbachev",img:"/images/encyclopedia/mikhail-gorbachev.jpg",artist:"Vladimir Vyatkin / Владимир Вяткин; derivative work by Jbarta",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:RIAN_archive_850809_General_Secretary_of_the_CPSU_CC_M._Gorbachev_(crop).jpg"}
+  },
+  "Stalinism": {
+    origins:{slug:"joseph-stalin",name:"Joseph Stalin",img:"/images/encyclopedia/joseph-stalin.jpg",artist:"Franklin D. Roosevelt Library Public Domain Photographs",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:StalinCropped1943.jpg"},
+    spread:{slug:"khorloogiin-choibalsan",name:"Khorloogiin Choibalsan",img:"/images/encyclopedia/khorloogiin-choibalsan.jpg",artist:"",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Horloogiyn_Choybalsan.jpg"},
+    power:{slug:"nikolai-yezhov",name:"Nikolai Yezhov",img:"/images/encyclopedia/nikolai-yezhov.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ezhov_NI.jpg"},
+    critiques:{slug:"robert-conquest",name:"Robert Conquest",img:"/images/encyclopedia/robert-conquest.jpg",artist:"Rob C. Croes (ANEFO)",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Robert_Conquest_(cropped).jpg"},
+    legacy:{slug:"mao-zedong",name:"Mao Zedong",img:"/images/encyclopedia/mao-zedong.jpg",artist:"Chen Zhengqing (1917–1966)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mao_Zedong_1950_Portrait_(3x4_cropped)(2).jpg"}
+  },
+  "Neoliberalism": {
+    origins:{slug:"friedrich-hayek",name:"Friedrich Hayek",img:"/images/encyclopedia/friedrich-hayek.jpg",artist:"The original uploader was DickClarkMises at English Wikipedia.",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Friedrich_Hayek_portrait.jpg"},
+    ideas:{slug:"milton-friedman",name:"Milton Friedman",img:"/images/encyclopedia/milton-friedman.jpg",artist:"Bachrach Studios",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Milton_Friedman_(4x5_cropped).jpg"},
+    spread:{slug:"ludwig-erhard",name:"Ludwig Erhard",img:"/images/encyclopedia/ludwig-erhard.jpg",artist:"Eric Koch for Anefo",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Einde_bezoek_bondskanselier_dr_Ludwig_Erhard_en_gaf_persconferentie_in_het_Haag,_Bestanddeelnr_916-1330.jpg"},
+    power:{slug:"salvador-allende",name:"Salvador Allende",img:"/images/encyclopedia/salvador-allende.jpg",artist:"Biblioteca del Congreso Nacional de Chile",licence:"CC BY 3.0 cl",source:"https://commons.wikimedia.org/wiki/File:Salvador_Allende_Gossens-.jpg"},
+    critiques:{slug:"amartya-sen",name:"Amartya Sen",img:"/images/encyclopedia/amartya-sen.jpg",artist:"Elke Wetzig (Elya); derivative work by ChaudhryAzan",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Amartya_Sen_20071128_cologne_cropped.jpg"}
+  },
+  "Utilitarianism": {
+    origins:{slug:"jeremy-bentham",name:"Jeremy Bentham",img:"/images/encyclopedia/jeremy-bentham.jpg",artist:"Henry William Pickersgill",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jeremy_Bentham_by_Henry_William_Pickersgill_detail.jpg"},
+    critiques:{slug:"karl-marx",name:"Karl Marx",img:"/images/encyclopedia/karl-marx.jpg",artist:"John Jabez Edwin Mayall",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Karl_Marx_001_restored.jpg"}
+  },
+  "Libertarianism": {
+    origins:{slug:"laozi",name:"Laozi",img:"/images/encyclopedia/laozi.jpg",artist:"Zhang Lu",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Zhang_Lu-Laozi_Riding_an_Ox_(cropped).jpg"},
+    ideas:{slug:"friedrich-hayek",name:"Friedrich Hayek",img:"/images/encyclopedia/friedrich-hayek.jpg",artist:"The original uploader was DickClarkMises at English Wikipedia.",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Friedrich_Hayek_portrait.jpg"},
+    power:{slug:"ronald-reagan",name:"Ronald Reagan",img:"/images/encyclopedia/ronald-reagan.jpg",artist:"Michael Evans",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Official_Portrait_of_President_Reagan_1981.jpg"}
+  },
+  "Populism": {
+    origins:{slug:"alphonse-de-lamartine",name:"Alphonse de Lamartine",img:"/images/encyclopedia/alphonse-de-lamartine.jpg",artist:"François Gérard",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alphonse_de_Lamartine_par_Fran%C3%A7ois_G%C3%A9rard.jpg"},
+    spread:{slug:"getulio-vargas",name:"Getúlio Vargas",img:"/images/encyclopedia/getulio-vargas.jpg",artist:"Governo do Brasil",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Getulio_Vargas_(1930).jpg"},
+    power:{slug:"john-stuart-mill",name:"John Stuart Mill",img:"/images/encyclopedia/john-stuart-mill.jpg",artist:"London Stereoscopic Company",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:John_Stuart_Mill_by_London_Stereoscopic_Company,_c1870.jpg"}
+  },
+  "Pacifism": {
+    origins:{slug:"aristophanes",name:"Aristophanes",img:"/images/encyclopedia/aristophanes.jpg",artist:"Alexander Mayatsky",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Aristophanes.jpg"},
+    spread:{slug:"erasmus",name:"Erasmus",img:"/images/encyclopedia/erasmus.jpg",artist:"Hans Holbein the Younger",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Holbein-erasmus.jpg"},
+    power:{slug:"william-penn",name:"William Penn",img:"/images/encyclopedia/william-penn.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:William_Penn.png"},
+    critiques:{slug:"bertrand-russell",name:"Bertrand Russell",img:"/images/encyclopedia/bertrand-russell.jpg",artist:"Bassano Ltd",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bertrand_Russell_in_1936.jpg"},
+    legacy:{slug:"mahatma-gandhi",name:"Mahatma Gandhi",img:"/images/encyclopedia/mahatma-gandhi.jpg",artist:"Elliott & Fry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mahatma-Gandhi,_studio,_1931.jpg"}
+  },
+  "Trotskyism": {
+    ideas:{slug:"karl-marx",name:"Karl Marx",img:"/images/encyclopedia/karl-marx.jpg",artist:"John Jabez Edwin Mayall",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Karl_Marx_001_restored.jpg"},
+    power:{slug:"russian-revolution",name:"Russian Revolution",img:"/images/encyclopedia/russian-revolution.jpg",artist:"unknown; photo retake by George Shuklin",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%D0%9C%D0%B8%D1%82%D0%B8%D0%BD%D0%B3_%D0%BD%D0%B0_%D0%9D%D0%B5%D0%B2%D1%81%D0%BA%D0%BE%D0%BC_%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%D0%B5_(1917).jpg"},
+    critiques:{slug:"fidel-castro",name:"Fidel Castro",img:"/images/encyclopedia/fidel-castro.jpg",artist:"Unknown (Mondadori Publishers)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Fidel_Castro_1950s_(cropped).jpg"},
+    legacy:{slug:"diego-rivera",name:"Diego Rivera",img:"/images/encyclopedia/diego-rivera.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Diego_Rivera_-_Google_Art_Project_(cropped).jpg"}
+  },
+  "Christian democracy": {
+    origins:{slug:"french-revolution",name:"French Revolution",img:"/images/encyclopedia/french-revolution.jpg",artist:"Unidentified painter",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Anonymous_-_Prise_de_la_Bastille.jpg"},
+    ideas:{slug:"thomas-aquinas",name:"Thomas Aquinas",img:"/images/encyclopedia/thomas-aquinas.jpg",artist:"Carlo Crivelli",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:St-thomas-aquinasFXD.jpg"},
+    spread:{slug:"abraham-kuyper",name:"Abraham Kuyper",img:"/images/encyclopedia/abraham-kuyper.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Abraham_Kuyper_1905_(1).jpg"},
+    power:{slug:"alcide-de-gasperi",name:"Alcide De Gasperi",img:"/images/encyclopedia/alcide-de-gasperi.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alcide_de_Gasperi_2.jpg"}
+  },
+  "Secularism": {
+    origins:{slug:"william-of-ockham",name:"William of Ockham",img:"/images/encyclopedia/william-of-ockham.jpg",artist:"self-created (Moscarlop)",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:William_of_Ockham.png"},
+    spread:{slug:"baruch-spinoza",name:"Baruch Spinoza",img:"/images/encyclopedia/baruch-spinoza.jpg",artist:"anonymous",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Spinoza.jpg"},
+    power:{slug:"mustafa-kemal-ataturk",name:"Mustafa Kemal Atatürk",img:"/images/encyclopedia/mustafa-kemal-ataturk.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ataturk1930s.jpg"},
+    legacy:{slug:"max-weber",name:"Max Weber",img:"/images/encyclopedia/max-weber.jpg",artist:"Ernst Gottmann",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Max_Weber,_1918.jpg"}
+  },
+  "Social Darwinism": {
+    origins:{slug:"thomas-henry-huxley",name:"Thomas Henry Huxley",img:"/images/encyclopedia/thomas-henry-huxley.jpg",artist:"Lock & Whitfield",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:T.H.Huxley(Woodburytype).jpg"},
+    spread:{slug:"ernst-haeckel",name:"Ernst Haeckel",img:"/images/encyclopedia/ernst-haeckel.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ernst_Haeckel_5.jpg"},
+    power:{slug:"hannah-arendt",name:"Hannah Arendt",img:"/images/encyclopedia/hannah-arendt.jpg",artist:"Barbara Niggl Radloff",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Hannah_Arendt_auf_dem_1._Kulturkritikerkongress,_Barbara_Niggl_Radloff,_FM-2019-1-5-9-16_(cropped).jpg"},
+    critiques:{slug:"peter-kropotkin",name:"Peter Kropotkin",img:"/images/encyclopedia/peter-kropotkin.jpg",artist:"Nadar",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Peter_Kropotkin_circa_1900.jpg"},
+    legacy:{slug:"h-g-wells",name:"H. G. Wells",img:"/images/encyclopedia/h-g-wells.jpg",artist:"George Charles Beresford",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:H.G._Wells_by_Beresford.jpg"}
+  },
+  "Three Principles of the People": {
+    origins:{slug:"sun-yat-sen",name:"Sun Yat-sen",img:"/images/encyclopedia/sun-yat-sen.jpg",artist:"上海波尔照相馆",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E5%AD%99%E4%B8%AD%E5%B1%B1%E8%82%96%E5%83%8F.jpg"},
+    spread:{slug:"wang-jingwei",name:"Wang Jingwei",img:"/images/encyclopedia/wang-jingwei.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E6%B1%AA%E7%B2%BE%E8%A1%9B%E7%85%A7%E7%89%87.jpg"},
+    power:{slug:"chiang-kai-shek",name:"Chiang Kai-shek",img:"/images/encyclopedia/chiang-kai-shek.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Chiang_Kai-shek%EF%BC%88%E8%94%A3%E4%B8%AD%E6%AD%A3%EF%BC%89.jpg"},
+    critiques:{slug:"chen-jiongming",name:"Chen Jiongming",img:"/images/encyclopedia/chen-jiongming.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Chen_Jiongming2.jpg"},
+    legacy:{slug:"mao-zedong",name:"Mao Zedong",img:"/images/encyclopedia/mao-zedong.jpg",artist:"Chen Zhengqing (1917–1966)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mao_Zedong_1950_Portrait_(3x4_cropped)(2).jpg"}
+  },
+  "Syndicalism": {
+    origins:{slug:"pierre-joseph-proudhon",name:"Pierre-Joseph Proudhon",img:"/images/encyclopedia/pierre-joseph-proudhon.jpg",artist:"Gustave Courbet",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portrait_of_Pierre_Joseph_Proudhon_1865.jpg"},
+    ideas:{slug:"karl-marx",name:"Karl Marx",img:"/images/encyclopedia/karl-marx.jpg",artist:"John Jabez Edwin Mayall",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Karl_Marx_001_restored.jpg"},
+    spread:{slug:"alceste-de-ambris",name:"Alceste De Ambris",img:"/images/encyclopedia/alceste-de-ambris.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Alceste_de_Ambris_1930.jpg"},
+    power:{slug:"kronstadt-rebellion",name:"Kronstadt rebellion",img:"/images/encyclopedia/kronstadt-rebellion.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Kronstadt_attack.JPG"},
+    critiques:{slug:"vladimir-lenin",name:"Vladimir Lenin",img:"/images/encyclopedia/vladimir-lenin.jpg",artist:"Unknown, presumably official",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lenin_in_1920_(cropped).jpg"},
+    legacy:{slug:"solidarity-polish-trade-union",name:"Solidarity (Polish trade union)",img:"/images/encyclopedia/solidarity-polish-trade-union.jpg",artist:"Zenon Mirota",licence:"CC BY-SA 3.0 pl",source:"https://commons.wikimedia.org/wiki/File:Strajk_sierpniowy_w_Stoczni_Gda%C5%84skiej_im._Lenina_34.jpg"}
+  },
+  "Ba'athism": {
+    origins:{slug:"michel-aflaq",name:"Michel Aflaq",img:"/images/encyclopedia/michel-aflaq.jpg",artist:"Basch, Fritz",licence:"CC BY-SA 3.0 nl",source:"https://commons.wikimedia.org/wiki/File:Michel_Aflaq_1963.jpg"},
+    spread:{slug:"hafez-al-assad",name:"Hafez al-Assad",img:"/images/encyclopedia/hafez-al-assad.jpg",artist:"Government of Syria",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hafez_al-Assad_official_portrait_(precise_crop)(2).jpg"},
+    power:{slug:"saddam-hussein",name:"Saddam Hussein",img:"/images/encyclopedia/saddam-hussein.jpg",artist:"Iraqi News Agency",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Saddam_Hussein_in_1998.jpg"},
+    critiques:{slug:"karl-marx",name:"Karl Marx",img:"/images/encyclopedia/karl-marx.jpg",artist:"John Jabez Edwin Mayall",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Karl_Marx_001_restored.jpg"},
+    legacy:{slug:"gamal-abdel-nasser",name:"Gamal Abdel Nasser",img:"/images/encyclopedia/gamal-abdel-nasser.jpg",artist:"Stevan Kragujević",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Stevan_Kragujevic,_Gamal_Abdel_Naser_u_Beogradu,_1962_(cropped).jpg"}
+  },
+  "Pan-Slavism": {
+    origins:{slug:"ivan-gundulic",name:"Ivan Gundulić",img:"/images/encyclopedia/ivan-gundulic.jpg",artist:"anonymous",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:De_Gondola.jpg"},
+    ideas:{slug:"frantisek-palacky",name:"František Palacký",img:"/images/encyclopedia/frantisek-palacky.jpg",artist:"Jan Vilímek",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jan_Vil%C3%ADmek_-_Franti%C5%A1ek_Palack%C3%BD_2.jpg"},
+    spread:{slug:"franz-joseph-i",name:"Franz Joseph I",img:"/images/encyclopedia/franz-joseph-i.jpg",artist:"Carl Pietzner",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Franz_Joseph_I_of_Austria.1910_(cropped).jpg"},
+    power:{slug:"josip-broz-tito",name:"Josip Broz Tito",img:"/images/encyclopedia/josip-broz-tito.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Josip_Broz_Tito_uniform_portrait.jpg"},
+    legacy:{slug:"tomas-garrigue-masaryk",name:"Tomáš Garrigue Masaryk",img:"/images/encyclopedia/tomas-garrigue-masaryk.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tom%C3%A1%C5%A1_Garrigue_Masaryk_1925.PNG"}
+  },
+  "Pan-Islamism": {
+    origins:{slug:"usman-dan-fodio",name:"Usman dan Fodio",img:"/images/encyclopedia/usman-dan-fodio.jpg",artist:"Anasskoko",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Usman_Ibn_Fodio_Calligraphy_02.png"},
+    ideas:{slug:"jamal-al-din-al-afghani",name:"Jamal al-Din al-Afghani",img:"/images/encyclopedia/jamal-al-din-al-afghani.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Al_afghani.jpg"},
+    spread:{slug:"muhammad-abduh",name:"Muhammad Abduh",img:"/images/encyclopedia/muhammad-abduh.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Muhammad_Abduh.jpg"},
+    power:{slug:"abdul-hamid-ii",name:"Abdul Hamid II",img:"/images/encyclopedia/abdul-hamid-ii.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sultan_Gazi_Abdül_Hamid_II_-_السلطان_الغازي_عبد_الحميد_الثاني.png"},
+    critiques:{slug:"gamal-abdel-nasser",name:"Gamal Abdel Nasser",img:"/images/encyclopedia/gamal-abdel-nasser.jpg",artist:"Stevan Kragujević",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Stevan_Kragujevic,_Gamal_Abdel_Naser_u_Beogradu,_1962_(cropped).jpg"}
+  },
+  "Mohism": {
+    spread:{slug:"joseph-needham",name:"Joseph Needham",img:"/images/encyclopedia/joseph-needham.jpg",artist:"Kognos",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Joseph_Needham_in_Cambridge_1965_04.jpg"},
+    power:{slug:"the-art-of-war",name:"The Art of War",img:"/images/encyclopedia/the-art-of-war.jpg",artist:"vlasta2, bluefootedbooby on flickr.com",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Bamboo_book_-_unfolded_-_UCR.jpg"}
+  },
+  "African socialism": {
+    origins:{slug:"julius-nyerere",name:"Julius Nyerere",img:"/images/encyclopedia/julius-nyerere.jpg",artist:"Rob Mieremet / Anefo",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:President_Nyerere_van_Tanzania,_koppen,_Bestanddeelnr_928-2879_(cropped).jpg"},
+    ideas:{slug:"nelson-mandela",name:"Nelson Mandela",img:"/images/encyclopedia/nelson-mandela.jpg",artist:"Kingkongphoto & www.celebrity-photos.com from Laurel",licence:"CC BY-SA 2.0",source:"https://commons.wikimedia.org/wiki/File:Nelson_Mandela_1994.jpg"},
+    spread:{slug:"desmond-tutu",name:"Desmond Tutu",img:"/images/encyclopedia/desmond-tutu.jpg",artist:"Benny Gool",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Archbishop-Tutu-medium.jpg"},
+    power:{slug:"arusha-declaration",name:"Arusha Declaration",img:"/images/encyclopedia/arusha-declaration.jpg",artist:"Arthur Buliva",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Uhuru_Monument_Aug_2011.jpg"}
+  },
+  "Gandhism": {
+    origins:{slug:"mahatma-gandhi",name:"Mahatma Gandhi",img:"/images/encyclopedia/mahatma-gandhi.jpg",artist:"Elliott & Fry",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mahatma-Gandhi,_studio,_1931.jpg"},
+    ideas:{slug:"bhagavad-gita",name:"Bhagavad Gita",img:"/images/encyclopedia/bhagavad-gita.jpg",artist:"Unknown artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:BhagavadGita-19th-century-Illustrated-Sanskrit-Chapter_1.20.21.jpg"},
+    spread:{slug:"martin-luther-king-jr",name:"Martin Luther King Jr.",img:"/images/encyclopedia/martin-luther-king-jr.jpg",artist:"Yoichi Okamoto",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Martin_Luther_King,_Jr._and_Lyndon_Johnson_(cropped).jpg"},
+    power:{slug:"jawaharlal-nehru",name:"Jawaharlal Nehru",img:"/images/encyclopedia/jawaharlal-nehru.jpg",artist:"Harry Pot",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Nehru_in_the_Netherlands,_1957.jpg"},
+    critiques:{slug:"muhammad-ali-jinnah",name:"Muhammad Ali Jinnah",img:"/images/encyclopedia/muhammad-ali-jinnah.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jinnah1945c.jpg"},
+    legacy:{slug:"julius-nyerere",name:"Julius Nyerere",img:"/images/encyclopedia/julius-nyerere.jpg",artist:"Rob Mieremet / Anefo",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:President_Nyerere_van_Tanzania,_koppen,_Bestanddeelnr_928-2879_(cropped).jpg"}
+  },
+  "Antisemitism": {
+    origins:{slug:"antiochus-iv-epiphanes",name:"Antiochus IV Epiphanes",img:"/images/encyclopedia/antiochus-iv-epiphanes.jpg",artist:"José Luiz",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Antiochus_IV_Epiphanes_-_Altes_Museum_-_Berlin_-_Germany_2017.jpg"},
+    ideas:{slug:"henry-ford",name:"Henry Ford",img:"/images/encyclopedia/henry-ford.jpg",artist:"Fred Hartsook",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Henry_ford_1919.jpg"},
+    spread:{slug:"martin-luther",name:"Martin Luther",img:"/images/encyclopedia/martin-luther.jpg",artist:"Lucas Cranach the Elder",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Lucas_Cranach_d.%C3%84._-_Martin_Luther,_1528_(Veste_Coburg).jpg"},
+    critiques:{slug:"hannah-arendt",name:"Hannah Arendt",img:"/images/encyclopedia/hannah-arendt.jpg",artist:"Barbara Niggl Radloff",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Hannah_Arendt_auf_dem_1._Kulturkritikerkongress,_Barbara_Niggl_Radloff,_FM-2019-1-5-9-16_(cropped).jpg"}
+  },
+  "Manifest destiny": {
+    origins:{slug:"john-winthrop",name:"John Winthrop",img:"/images/encyclopedia/john-winthrop.jpg",artist:"Unknown author; when donated to the AAS, it was thought to be by a follower of Anthony van Dyck …",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:John_Winthrop_17th_cent._American_Antiquarian_Society_portrait.jpg"},
+    spread:{slug:"william-mckinley",name:"William McKinley",img:"/images/encyclopedia/william-mckinley.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:McKinley_(cropped).jpg"},
+    power:{slug:"ulysses-s-grant",name:"Ulysses S. Grant",img:"/images/encyclopedia/ulysses-s-grant.jpg",artist:"Brady-Handy Photograph Collection, Library of Congress",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ulysses_S._Grant_1870-1880_(cropped).jpg"},
+    critiques:{slug:"abraham-lincoln",name:"Abraham Lincoln",img:"/images/encyclopedia/abraham-lincoln.jpg",artist:"Alexander Gardner",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Abraham_Lincoln_O-77_matte_collodion_print.jpg"},
+    legacy:{slug:"theodore-roosevelt",name:"Theodore Roosevelt",img:"/images/encyclopedia/theodore-roosevelt.jpg",artist:"Adam Cuerden",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Theodore_Roosevelt_by_the_Pach_Bros_(4x5_cropped)_(3).jpg"}
   }
 };

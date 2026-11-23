@@ -88,6 +88,19 @@ const EMBLEMS = [
   ['Addis Ababa', 'አ', 'Nyala, Ebrima, serif', 220],   // its entry picture is a night skyline, nearly black as a seal
   // works and lives, fourth wave (23 Nov 2026): no entry picture (Arthashastra), a map (Hadrian's Wall) or a modern statue (Chandragupta, Yaa Asantewaa)
   ['Arthashastra', 'अ', 'Nirmala UI, Mangal, sans-serif', 220], ['Chandragupta Maurya', 'च', 'Nirmala UI, Mangal, sans-serif', 220], ["Hadrian's Wall", 'H'], ['Yaa Asantewaa', 'Y'],
+  // movements, third wave, and ideologies, second wave (23 Nov 2026): the initial, or a word of the movement's own script where
+  // one names it (the March First Movement 三一, the Hundred Days' Reform 戊戌 "Wuxu", the New Culture Movement 新, Donghak 東學,
+  // the Three Principles 三民, Mohism 墨, the Haskalah in Hebrew, Jadidism in Arabic script); never a party's, a regime's or a faith's symbol
+  ['Quakers', 'Q'], ['Puritans', 'P'], ['Hussites', 'H'], ['Surrealism', 'S'], ['Prague Spring', 'P'], ['Unification of Italy', 'I'], ['Revolutions of 1848', 'R'],
+  ['Underground Railroad', 'U'], ['Mau Mau rebellion', 'M'], ['March First Movement', '三一', 'serif-cjk', 170], ['Persian Constitutional Revolution', 'P'],
+  ['Haskalah', 'ה', '"Times New Roman", David, serif', 230], ['Jadidism', 'ج', '"Segoe UI", Tahoma, sans-serif', 220], ['Donghak Peasant Revolution', '東學', 'serif-cjk', 170],
+  ['Quit India movement', 'Q'], ['American Indian Movement', 'A'], ['Temperance movement', 'T'], ['Liberation theology', 'L'], ['Ghost Dance', 'G'],
+  ["Hundred Days' Reform", '戊戌', 'serif-cjk', 170], ['Māori King movement', 'K'], ['First Great Awakening', 'G'], ['New Culture Movement', '新', 'serif-cjk', 220],
+  ['Black Consciousness Movement', 'B'], ['Wahhabism', 'W'], ['Mau movement', 'M'],
+  ['Marxism', 'M'], ['Nazism', 'N'], ['Marxism–Leninism', 'M'], ['Stalinism', 'S'], ['Neoliberalism', 'N'], ['Utilitarianism', 'U'], ['Libertarianism', 'L'], ['Populism', 'P'],
+  ['Pacifism', 'P'], ['Trotskyism', 'T'], ['Christian democracy', 'C'], ['Secularism', 'S'], ['Social Darwinism', 'S'], ['Three Principles of the People', '三民', 'serif-cjk', 170],
+  ['Syndicalism', 'S'], ["Ba'athism", 'B'], ['Pan-Slavism', 'P'], ['Pan-Islamism', 'P'], ['Mohism', '墨', 'serif-cjk', 220], ['African socialism', 'A'], ['Gandhism', 'G'],
+  ['Antisemitism', 'A'], ['Manifest destiny', 'M'],
 ];
 const argv = process.argv.slice(2), sheet = (argv.find(a => a.startsWith('--sheet=')) || '').slice(8);
 // --initial: a name not in EMBLEMS gets the monogram of its first distinctive word (the Kingdom of Kano: K), as the

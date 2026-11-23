@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Donghak Peasant Revolution: Aims, Course and Legacy</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Donghak Peasant Revolution was a rising in Korea between January 1894 and December 1895, led by followers of the Donghak religion and joined by…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Donghak Peasant Revolution: Aims, Course and Legacy">
+<meta property="og:description" content="The Donghak Peasant Revolution was a rising in Korea between January 1894 and December 1895, led by followers of the Donghak religion and joined by…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/movement/donghak-peasant-revolution">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/donghak-peasant-revolution.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/donghak-peasant-revolution.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/movement/donghak-peasant-revolution">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Movements & revolutions","item":"https://the-epoch-institute.org/profiles?kind=movement"},{"@type":"ListItem","position":4,"name":"Donghak Peasant Revolution"}]},{"@type":"Article","headline":"Donghak Peasant Revolution","description":"The Donghak Peasant Revolution was a rising in Korea between January 1894 and December 1895, led by followers of the Donghak religion and joined by…","url":"https://the-epoch-institute.org/movement/donghak-peasant-revolution","mainEntityOfPage":"https://the-epoch-institute.org/movement/donghak-peasant-revolution","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Donghak Peasant Revolution"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/donghak-peasant-revolution.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=movement">Movements &amp; revolutions</a></li><li aria-current="page">Donghak Peasant Revolution</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Donghak%20Peasant%20Revolution.png" alt="Donghak Peasant Revolution" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Movement · Central &amp; East Asia</p>
+        <h1 class="profile-detail-name">Donghak Peasant Revolution</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Where</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia/korea">Korea</a>, above all <a class="enc-link" href="/encyclopedia/jeolla-province">Jeolla Province</a>, with fighting also in Chungcheong, Gyeongsang, Gyeonggi, Gangwon and Hwanghae.</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">The Gyojo Shinwon petitions (1892–1893); the Gobu revolt (January 1894); the first revolt and the Treaty of <a class="enc-link" href="/encyclopedia/jeonju">Jeonju</a> (spring 1894); rebel rule in the south (summer 1894); the second revolt and the defeat at Ugeumchi (October–November 1894); executions and mopping-up (December 1894–1895).</span></div>
+          <div class="info-stat"><span class="info-stat-label">Leading figures</span><span class="info-stat-val">Jeon Bong-jun, leader of the revolt; Kim Gae-nam and Son Hwa-jung, his generals; Choe Sihyeong, the second leader of <a class="enc-link" href="/encyclopedia/donghak">Donghak</a>, who opposed the rebellion; Son Byong-hi, general of the Northern Jeob; Yi Bangeon, a Jeolla rebel leader; <a class="enc-link" href="/encyclopedia/kim-gu">Kim Gu</a>, the 'Baby Jeobju'.</span></div>
+          <div class="info-stat"><span class="info-stat-label">Outcome</span><span class="info-stat-val">The rebel armies were defeated, mainly by Japanese and government forces, and their leaders were captured and executed. Some of their demands later appeared in the Gabo Reform, and many survivors joined the Righteous Armies or the independence movement.</span></div>
+        </div>
+        <p class="empire-meta">6 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The revolution began as a revolt against the abuses of Jo Byeong-gap, the magistrate of Gobu, and grew into a rising across <a class="enc-link" href="/encyclopedia/korea">Korea</a> whose leaders were <a class="enc-link" href="/encyclopedia/donghak">Donghak</a> believers and whose armies were largely peasants.</li><li>After the Treaty of <a class="enc-link" href="/encyclopedia/jeonju">Jeonju</a> of May 1894, the rebels ran much of south-west <a class="enc-link" href="/encyclopedia/korea">Korea</a> through local offices called Jibgangso, until the arrival of Qing and Japanese troops and then the Japanese victory at Ugeumchi ended their hopes.</li><li>The rebel leaders were hanged in March 1895 and thousands of rebels were killed; some of their demands, such as the remarriage of widows and the freeing of enslaved people, were taken up in the Gabo Reform.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>The rebels of 1894 followed rules that included not killing the innocent and paying for food in money rather than taking it, and they wore mostly white and carried bamboo spears, which gave rise to the saying &quot;When sitting, a white mountain; when standing, a bamboo mountain.&quot;</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#background">Background</a></li><li><a href="#aims">Aims</a></li><li><a href="#events">Course of Events</a></li><li><a href="#people">People</a></li><li><a href="#outcomes">Outcomes</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">1892</span><span class="rf-text">Southern <a class="enc-link" href="/encyclopedia/donghak">Donghak</a> believers petition for the religion's recognition and for the restoration of the honour of its founder</span></li><li><span class="rf-year">1894</span><span class="rf-text">Rebels led by Jeon Bong-jun rise at Gobu against Jo Byeong-gap and defeat government forces at Hwangtojae and the Hwangryong River</span></li><li><span class="rf-year">1894</span><span class="rf-text">The Treaty of <a class="enc-link" href="/encyclopedia/jeonju">Jeonju</a> ends the first revolt, and the rebels govern much of the south-west</span></li><li><span class="rf-year">1894</span><span class="rf-text">Qing and Japanese troops land at <a class="enc-link" href="/encyclopedia/incheon">Incheon</a>, and the <a class="enc-link" href="/encyclopedia/first-sino-japanese-war">First Sino-Japanese War</a> begins</span></li><li><span class="rf-year">1894</span><span class="rf-text">The rebel army is defeated at the Battle of Ugeumchi, and Jeon disbands it after Taein</span></li><li><span class="rf-year">1894</span><span class="rf-text">At Jonggok on 18 December Japanese forces kill about 2,500 of 2,600 rebels, according to Japanese sources</span></li><li><span class="rf-year">1895</span><span class="rf-text">Jeon Bong-jun and three other leaders are hanged for treason on 29 March</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="background">
+        <h2 class="profile-section-title">Background</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/choe-je-u"><img src="/images/encyclopedia/choe-je-u.jpg" alt="Choe Je-u" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/choe-je-u">Choe Je-u</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Choe_Je-u.jpg" target="_blank" rel="noopener">Unknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>In the late 19th century Korean society faced inequality, corruption and excessive taxation. These problems sparked a series of peasant-led rebellions, which began with the Gwanseo Peasant War and weakened the Joseon government's control of regions outside <a class="enc-link" href="/encyclopedia/seoul">Hanseong</a>. <a class="enc-link" href="/encyclopedia/secret-society">Secret societies</a> also formed, among them the Salbangye, the 'Association of the Killers of the <a class="enc-link" href="/encyclopedia/yangban">Yangban</a> (aristocrats)', and the Nokrimdang, 'noble thieves' who stole from the rich and gave to the poor.</p><p>In this period the <a class="enc-link" href="/encyclopedia/donghak">Donghak</a> religion was formed by <a class="enc-link" href="/encyclopedia/choe-je-u">Choe Je-u</a>, who described a voice that told him to teach its word and gave him a talisman to save people from disease. Donghak was a mixture of religions: its <a class="enc-link" href="/encyclopedia/monotheism">monotheism</a>, sacred books and organised religion resemble <a class="enc-link" href="/encyclopedia/christianity">Christianity</a>, while its chants and the Sword Dance came from shamanism and folk belief. Choe said that "All humans are Hanulnim", promoted human equality and taught that the world was a cycle of 5,000 years that was ending to make way for a new world. The Joseon dynasty banned the religion and executed him for 'Tricking and Lying to the Foolish People.'</p><p>Donghak spread across Gyeongsang Province by the 1870s and was organised into Jeob and Po. In 1871 Yi Pil-je, Jeobju of Yeonghae, revolted using Donghak's organisation; the revolt failed, and Choe Sihyeong, the second leader, then carried the religion to Chungcheong and Jeolla, where Son Hwa-jung, Son Byong-hi, Kim Gae-nam and Jeon Bong-jun were converted.</p></div>
+      </div>
+      <div class="profile-section-block" id="aims">
+        <h2 class="profile-section-title">Aims</h2>
+        <div class="profile-section-body"><p>By the 1890s <a class="enc-link" href="/encyclopedia/donghak">Donghak</a> believers were petitioning to overturn the charges on which <a class="enc-link" href="/encyclopedia/choe-je-u">Choe Je-u</a> had been executed. The religion had split into a Northern Jeob and a Southern Jeob. Seo Inju, leader of the Southern Jeob, asked Choe Sihyeong, the Gyoju, for a petition, but Choe did not answer, presumably remembering the effects of Yi Pil-je's revolt. In November 1892 Jeon Bong-jun led the Samrye Petition, which asked that Donghak not be banned, that Western missionaries and merchants be expelled and that corrupt officials be killed.</p><p>At Boeun, about 80,000 believers gathered under flags reading "Expel Westerners and Japanese" and built an earthen fortress. Their requests included restoring the honour of Choe Je-u, ending the persecution of believers, chasing away colonial powers, halting foreign imports, removing the Min family from power, lowering taxes and banning the Dangojeon coin. Northern leaders such as Choe Sihyeong and Son Byong-hi feared executions and stopped the petition within three days.</p><p>In 1894 the rebels in arms gave four guidelines, including not killing the innocent, defeating the Japanese and marching on <a class="enc-link" href="/encyclopedia/seoul">Seoul</a> to kill the Min family. The twelve requests accepted at the Treaty of <a class="enc-link" href="/encyclopedia/jeonju">Jeonju</a> asked for punishment of corrupt officials and of <a class="enc-link" href="/encyclopedia/yangban">yangban</a> and seonbi, freedom for slaves and for the <a class="enc-link" href="/encyclopedia/cheonmin">Cheonmin</a> class, legal remarriage for widows, lower taxes, the picking of politicians by qualities rather than families, the cancelling of debts and land for all peasants.</p></div>
+      </div>
+      <div class="profile-section-block" id="events">
+        <h2 class="profile-section-title">Course of Events</h2>
+        <div class="profile-section-body"><p>The immediate cause of the Gobu revolt was the conduct of the local official Jo Byeong-gap. Jeon later listed his misdeeds, among them water taxes for a new reservoir, fines for invented offences and the building of a monument to his father at the peasants' expense. In January 1894 about a thousand rebels occupied the government office, freed prisoners, returned taxed property and destroyed the reservoir, until Jo's replacement persuaded them to disband. In March Jeon and Kim Gae-nam returned with an army that grew to tens of thousands, took Taein and Buan, and defeated government forces at Hwangtojae and the Hwangryong River.</p><p>After the rebels took <a class="enc-link" href="/encyclopedia/jeonju">Jeonju</a> Fortress, the government asked for Qing and Japanese help. Qing and Japanese forces landed at <a class="enc-link" href="/encyclopedia/incheon">Incheon</a> in May, and the dispute over the Convention of <a class="enc-link" href="/encyclopedia/tianjin">Tientsin</a> led to the <a class="enc-link" href="/encyclopedia/first-sino-japanese-war">First Sino-Japanese War</a>. On 7 May the Treaty of Jeonju ended the siege. That summer the rebels ruled most of the south-west through Jibgangso, local offices with a council, scribes and police.</p><p>With Japanese troops occupying <a class="enc-link" href="/encyclopedia/seoul">Seoul</a>, Jeon sought the Northern Jeob's help. Choe Sihyeong had opposed rebellion, but on 12 October the two armies marched on <a class="enc-link" href="/encyclopedia/gongju">Gongju</a>. After defeat at Ugeumchi on 9 and 10 November and at Taein, Jeon dissolved the army on 28 November. Fighting went on elsewhere into 1895, and the leaders were captured in December and executed in March.</p></div>
+      </div>
+      <div class="profile-section-block" id="people">
+        <h2 class="profile-section-title">People</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/kim-gu"><img src="/images/encyclopedia/kim-gu.jpg" alt="Kim Gu" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/kim-gu">Kim Gu</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Kim_Gu_in_1949.jpg" target="_blank" rel="noopener">Unknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Jeon Bong-jun was Jeobju of Gobu and became the revolt's leader, with Kim Gae-nam and Son Hwa-jung as generals. Along with Choe Gyeong-seon and Kim Deokmyeong they are known as the Five <a class="enc-link" href="/encyclopedia/donghak">Donghak</a> Generals. In his testimony after capture Jeon emphasised that Donghak believers formed only a small part of the rebels, most of whom were peasants seeking vengeance. Choe Sihyeong, the Gyoju, was staunchly anti-rebel and feared that a large rebellion would end with the destruction of Donghak, though he ordered the Northern Jeob to rise on 12 October. Son Byong-hi led the Northern Jeob as its general.</p><p>Other leaders held regions of their own: Yi Bangeon in Jangheung, Kim Inbae in the south coast, Cha Giseok among the <a class="enc-link" href="/encyclopedia/guerrilla-warfare">guerrillas</a> of Gangwon and <a class="enc-link" href="/encyclopedia/kim-gu">Kim Gu</a> in Hwanghae, called the 'Baby Jeobju' because he was 18. Many of the Hwanghae rebels were gold miners; a Japanese lieutenant, Suzuku, sorted them into 'True', 'Temporary' and 'False' Donghak.</p><p>Against the rebels stood magistrates such as Jo Byeong-gap, government commanders such as Hong Gyehun, Confucian scholars such as Maeng Yeongjae, who put down Cha Giseok's rising, and Japanese battalions. Yi Yihwa sees the council of a Jibgangso as a rudimentary democracy, while the Joseon scholar Hwang Hyeon, in the Ohagimun, recorded rapes, torture and arson by the rebels out of vengeance against the ruling <a class="enc-link" href="/encyclopedia/caste">castes</a>.</p></div>
+      </div>
+      <div class="profile-section-block" id="outcomes">
+        <h2 class="profile-section-title">Outcomes</h2>
+        <div class="profile-section-body"><p>The rebels lacked modern weapons. At Ugeumchi they had bows, spears, swords and seventeenth-century-style <a class="enc-link" href="/encyclopedia/musket">muskets</a> against Japanese <a class="enc-link" href="/encyclopedia/cannon">cannon</a> and rifles. Of an army put at 200,000 only 500 remained when the rebels retreated; other figures for the rebels' strength differ and recent estimates give about 50,000. At Taein the Japanese firepower destroyed the rebels and, in the historian Park Eunsik's words, left "nothing left in Taein for 40 kilometers".</p><p>Repression was heavy. Japanese sources report that 2,500 of 2,600 rebels died at Jonggok on 18 December 1894; some scholars prefer the term Jonggok Massacre. At the Seokdae Fields 2,000 rebels were killed, and as 800 Japanese soldiers moved through the south-west they killed 600 civilians in a scorched-earth campaign. Cha Giseok was beheaded, Kim Gae-nam was beheaded and his body torn apart, and Jeon Bong-jun and three other leaders were hanged on 29 March 1895. Rebels were also killed in 1895 by being chained together and buried alive in pits or drowned in the sea, and by being torn apart with horses or cows.</p><p>The last battle was on Mount Daedun on 17 February 1895, where 30 rebels held out for three days and only a child survived. Choe Sihyeong was captured in April 1898 and executed after a speedy trial.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Some rebel demands, including the remarriage of widows and the freeing of enslaved people, were included in the Gabo Reform. The reform was not supported, however, because it did not include land reform, which was the peasants' greatest need. Many rebels later joined the Righteous Army; those of 1905 and 1907 were almost entirely made up of former rebels. Jeon Haesan, the most famous of the Jeolla Righteous Army leaders, was often called the 'son of Jeon Bong-jun'; the North Korean textbook traces a 'patriotic line' from the Jeon family, and the South Korean Ministry of Education calls this revisionism meant to glorify <a class="enc-link" href="/encyclopedia/kim-il-sung">Kim Il Sung</a>. <a class="enc-link" href="/encyclopedia/kim-gu">Kim Gu</a> became one of the most respected Korean leaders.</p><p>Son Byong-hi became the third patriarch and renamed <a class="enc-link" href="/encyclopedia/donghak">Donghak</a> 'Cheondoism' to escape persecution as 'rebels'. Cheondoism was legalised in 1905, and Son was imprisoned in 1919 for leading the March 1st Movement and died in prison.</p><p>The name of the revolution is disputed. Some hold that it was fundamentally a Donghak revolt, as <a class="enc-link" href="/encyclopedia/south-korea">South Korea</a>'s military government did; others, as <a class="enc-link" href="/encyclopedia/north-korea">North Korea</a> officially does, that it was a peasant revolt, citing Jeon's testimony "There were many angered peasants and few Donghak"; the present South Korean position calls it the Donghak Peasant Revolution, since the leaders were Donghak and the armies peasants. Historians also disagree over whether the Great Regent Heungseon secretly backed the rising, which the Russian envoy Hitrovo's message suggested, and over a link to the Japanese Genyosha, which Korean historians largely reject.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Donghak Peasant Revolution was a rising in <a class="enc-link" href="/encyclopedia/korea">Korea</a> in 1894 and 1895, led by followers of the <a class="enc-link" href="/encyclopedia/donghak">Donghak</a> religion and joined by peasants angered by corruption and taxation. It held much of the south-west until Japanese and government forces defeated it, and its leaders were executed.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Stewart Lone, Korea Since 1850 (Longman Cheshire Pty Limited, 1993)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other movements</p>
+      <div class="related-grid"><a class="related-card" href="/movement/hundred-days-reform"><img src="/logos/thumbs/Hundred%20Days'%20Reform.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Hundred Days' Reform</span><span class="related-card-dates">1898 CE – 1898 CE</span></a><a class="related-card" href="/movement/ghost-dance"><img src="/logos/thumbs/Ghost%20Dance.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Ghost Dance</span><span class="related-card-dates">1889 CE – present</span></a><a class="related-card" href="/movement/young-turks"><img src="/logos/thumbs/Young%20Turks.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Young Turks</span><span class="related-card-dates">1889 CE – 1918 CE</span></a><a class="related-card" href="/movement/pan-africanism"><img src="/logos/thumbs/Pan-Africanism.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Pan-Africanism</span><span class="related-card-dates">1900 CE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/movement/young-turks"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Young%20Turks.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Young Turks</span><span class="related-card-dates">1889 CE – 1918 CE</span></a><a class="related-card" href="/movement/hundred-days-reform"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Hundred%20Days'%20Reform.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Hundred Days' Reform</span><span class="related-card-dates">1898 CE – 1898 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>
+(function(){
+  var name="Donghak Peasant Revolution",slug="donghak-peasant-revolution",url="https://the-epoch-institute.org/movement/donghak-peasant-revolution";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Donghak Peasant Revolution on The Epoch Institute — aims, course and legacy. https://the-epoch-institute.org/movement/donghak-peasant-revolution #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/movement/donghak-peasant-revolution"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Donghak Peasant Revolution",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Donghak Peasant Revolution",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

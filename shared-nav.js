@@ -530,7 +530,7 @@ function searchThumb(r) {
   if (r.src === 's' && SEARCH_STATES[r.i][4]) return '/images/states/thumbs/' + SEARCH_STATES[r.i][0] + '.jpg';
   return '';
 }
-var SEARCH_INDEX_SRC = '/search-index.js?v=b56e9b58fc';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
+var SEARCH_INDEX_SRC = '/search-index.js?v=fdf6aaf3db';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
 var SEARCH_PAGES_SRC = '/search-pages.js?v=694dfb3dc1';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
@@ -1380,6 +1380,9 @@ ${MENUS.map(menuHtml).join('')}
     }
     function set() {
       ticking = false; if (!built) build(); if (!heads.length) return;
+      // the header's foot is measured again here: at build time the page may still be sliding in (it stood 8 px low on a phone)
+      var bar0 = document.getElementById('site-nav'), tp = bar0 ? Math.round(bar0.getBoundingClientRect().bottom) + 'px' : '';
+      if (tp && nav.style.top !== tp) nav.style.top = tp;
       var edge = parseInt(nav.style.top, 10) + 70, now = -1;
       for (var i = 0; i < heads.length; i++) { if (heads[i].getBoundingClientRect().top < edge + 8) now = i; else break; }
       var show = now >= 0;

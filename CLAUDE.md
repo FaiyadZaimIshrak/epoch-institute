@@ -3686,6 +3686,32 @@ then declutter. Answers: about 100 each; all sections; menus by subject plus hub
   - **Whose Life?:** make-whose-life.js ALSO and ALSOBOX: Martin Luther King's "King" (a title word by the general rule) reads
     "this person", and "Jhansi" (after the name's "of") is boxed. Read --show for a new life whose name holds a title word or
     whose "of" names a small place.
+- **The third wave of movements and the second of ideologies (23 Nov 2026; 61 movements, 43 ideologies, 1,275 profiles;
+  scripts/kinds/moves3/ and ideas2/):**
+  - **The lists** (rank.tsv, list.tsv made by edits/mklist.js): 27 movements and 24 ideologies, one Sonnet writer each
+    with JOB-MOVE.md or JOB-IDEA.md from one saved article. Brahmo Samaj was a skip (about 600 words of history in its
+    article); Juche is held (ideas2/held/): its article names no famine, camps or executions, so the record in power
+    could not be told. 26 movements and 23 ideologies merged.
+  - **The editor's read:** every draft's facts, takeaways, events and summary, and the "power", events and outcomes
+    sections of the hardest (Nazism, Stalinism, Marxism–Leninism, antisemitism, Social Darwinism, Ba'athism, manifest
+    destiny, Mau Mau, the Ghost Dance, Donghak, Wahhabism). edits/spell-fix2.js turns -ize into -ise outside quotations;
+    fix-move1.js, fix-move2.js, fix-idea1.js, fix-idea2.js hold the changes (single-year event labels; Wahhabism starts
+    with the pact of 1744; neoliberalism's region is Europe, where it was named; references in the house form). A decade
+    or century as an event label ("1930s", "Late 19th century") is read by eventYear and may stay.
+  - **Entries:** 25 had none (Marxism, antisemitism, Surrealism, the temperance movement …):
+    scripts/kinds/make-kind-entries.js <rows.json> (moves3/entries.json) writes them from the profiles' summaries as text
+    at the end of added-entries.json. The Unification of Italy's own entry is italian-unification.
+  - **Links:** 64 exclusions (moves3/excl1.tsv, excl2.tsv): eleven more modern Davids, Frances Willard as France, New
+    London as London, Abraham Darby and Abraham Mapu as Abraham, Moses Mendelssohn and Robert Moses as Moses, Solomon
+    Northup, Josiah Strong, Gilbert Tennent as Humphrey Gilbert, Cotton Mather as cotton, the Tea Party as tea, the
+    Quaker Renaissance, Orthodox Jews as the Orthodox Church, the Minnesota State Capitol as the Capitoline Hill, Zou
+    Rong as the Rong people, Salah al-Din al-Bitar as Saladin, Abd al-Aziz ibn Baz as the Fatimid caliph al-Aziz.
+  - **Emblems:** letters, or a word of the movement's own script (三一, 戊戌, 新, 東學, 三民, 墨, a Hebrew he, an Arabic jim);
+    never a party's, a regime's or a faith's symbol. **Pictures:** moves3/pics/mi-propose.js, three rounds, 198 on 49
+    profiles: no logos, flags or emblems, no generic pictures (Jesus, the Bible, the Quran), no present-day leaders, no
+    Hitler, not the photograph of the dead child at Soweto. Home pictures set by hand where the first section picture
+    did not stand for the subject; Nazism, Stalinism, antisemitism and Social Darwinism are hidden from the featured
+    rotation.
   - Seen and left: the encyclopedia has two entries for Hu Shih (hu-shih and hu-shi); "Council of Ministers" links the Council
     of the European Union and "Yale" the Welsh commote Ial wherever they stand; Victor Hugo's entry links his novel's title
     to the cathedral.

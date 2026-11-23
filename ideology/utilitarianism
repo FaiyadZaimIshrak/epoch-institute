@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Utilitarianism: Origins, Ideas and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Utilitarianism is a family of ethical theories holding that actions should maximise happiness and well-being for all affected; it took shape in…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Utilitarianism: Origins, Ideas and Legacy — The Epoch Institute">
+<meta property="og:description" content="Utilitarianism is a family of ethical theories holding that actions should maximise happiness and well-being for all affected; it took shape in…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/ideology/utilitarianism">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/utilitarianism.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/utilitarianism.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/ideology/utilitarianism">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Ideologies","item":"https://the-epoch-institute.org/profiles?kind=ideology"},{"@type":"ListItem","position":4,"name":"Utilitarianism"}]},{"@type":"Article","headline":"Utilitarianism","description":"Utilitarianism is a family of ethical theories holding that actions should maximise happiness and well-being for all affected; it took shape in…","url":"https://the-epoch-institute.org/ideology/utilitarianism","mainEntityOfPage":"https://the-epoch-institute.org/ideology/utilitarianism","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Utilitarianism"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/utilitarianism.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=ideology">Ideologies</a></li><li aria-current="page">Utilitarianism</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Utilitarianism.png" alt="Utilitarianism" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Ideology · Europe</p>
+        <h1 class="profile-detail-name">Utilitarianism</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">c. 1780 CE – present</span></div>
+          <div class="info-stat"><span class="info-stat-label">Thinkers</span><span class="info-stat-val"><a class="enc-link" href="/encyclopedia/jeremy-bentham">Jeremy Bentham</a>, the founder of utilitarianism; <a class="enc-link" href="/encyclopedia/john-stuart-mill">John Stuart Mill</a>, who popularised the term; Henry Sidgwick, whose book has been called the culmination of classical utilitarianism; Francis Hutcheson, John Gay and William Paley before them; G. E. Moore, R. M. Hare, John Harsanyi and Peter Singer in the 20th century; Mozi and Śāntideva among earlier sources of its ideas</span></div>
+          <div class="info-stat"><span class="info-stat-label">Key texts</span><span class="info-stat-val">Francis Hutcheson, An Inquiry into the Original of Our Ideas of Beauty and Virtue (1725); John Gay, Concerning the Fundamental Principle of Virtue or Morality (1731); William Paley, The Principles of Moral and Political Philosophy (1785); <a class="enc-link" href="/encyclopedia/jeremy-bentham">Jeremy Bentham</a>, An Introduction to the Principles of Morals and Legislation (printed 1780, published 1789); <a class="enc-link" href="/encyclopedia/john-stuart-mill">John Stuart Mill</a>, Utilitarianism (1861); Henry Sidgwick, The Methods of Ethics; G. E. Moore, Ethics (1912); R. M. Hare, Moral Thinking (1981)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Core ideas</span><span class="info-stat-val">the principle of utility; consequences as the only standard of right and wrong; the equal weight of everyone's interests; the hedonic calculus; higher and lower pleasures; act and rule utilitarianism; total or average utility</span></div>
+          <div class="info-stat"><span class="info-stat-label">Today</span><span class="info-stat-val">applied to social welfare economics, questions of justice, global poverty, the ethics of raising animals for food and the avoidance of existential risks; Peter Singer's ideas formed the basis of the modern effective altruism movement</span></div>
+        </div>
+        <p class="empire-meta">6 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li><a class="enc-link" href="/encyclopedia/jeremy-bentham">Jeremy Bentham</a> opened his Introduction to the Principles of Morals and Legislation by placing mankind under two sovereign masters, pain and pleasure, and approved every action, private or governmental, by its tendency to increase or reduce happiness.</li><li><a class="enc-link" href="/encyclopedia/john-stuart-mill">John Stuart Mill</a> rejected a purely quantitative measure of utility and held that some pleasures are intrinsically better than others, so that it is better to be <a class="enc-link" href="/encyclopedia/socrates">Socrates</a> dissatisfied than a fool satisfied.</li><li>Utilitarianism is a cluster of related theories developed over two hundred years, and its supporters have disagreed over act and rule utilitarianism and over total and average utility.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p><a class="enc-link" href="/encyclopedia/john-stuart-mill">John Stuart Mill</a> believed he was the first to bring the word utilitarian into use, adopting it from a passing expression in John Galt's novel Annals of the Parish (1821), but Bentham had used the word in a letter of 1781.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#ideas">Core Ideas</a></li><li><a href="#spread">Spread &amp; Variants</a></li><li><a href="#power">In Power</a></li><li><a href="#critiques">Critiques &amp; Debates</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">1725</span><span class="rf-text">Francis Hutcheson introduces a key utilitarian phrase, the greatest happiness to the greatest numbers</span></li><li><span class="rf-year">1731</span><span class="rf-text">John Gay publishes his account of virtue, which some claim to be the first systematic theory of utilitarian ethics</span></li><li><span class="rf-year">1785</span><span class="rf-text">William Paley's Principles of Moral and Political Philosophy popularises theological utilitarianism</span></li><li><span class="rf-year">1789</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/jeremy-bentham">Jeremy Bentham</a>'s Introduction to the Principles of Morals and Legislation, printed in 1780, is published</span></li><li><span class="rf-year">1802</span><span class="rf-text">Pierre Étienne Louis Dumont's French selections from Bentham's <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a> spread his ideas further</span></li><li><span class="rf-year">1861</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/john-stuart-mill">John Stuart Mill</a>'s Utilitarianism appears as three articles in Fraser's Magazine</span></li><li><span class="rf-year">1971</span><span class="rf-text">John Rawls's A Theory of Justice brings to prominence the objection that utilitarianism ignores the distinction between persons</span></li><li><span class="rf-year">1977</span><span class="rf-text">John Harsanyi proposes preference utilitarianism in Morality and the Theory of Rational Behaviour</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="origins">
+        <h2 class="profile-section-title">Origins</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/jeremy-bentham"><img src="/images/encyclopedia/jeremy-bentham.jpg" alt="Jeremy Bentham" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/jeremy-bentham">Jeremy Bentham</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Jeremy_Bentham_by_Henry_William_Pickersgill_detail.jpg" target="_blank" rel="noopener">Henry William Pickersgill, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Utilitarianism as a distinct ethical position emerged in the 18th century, and although it is usually thought to have begun with <a class="enc-link" href="/encyclopedia/jeremy-bentham">Jeremy Bentham</a>, some earlier writers presented similar theories. Its seeds are found in the hedonists Aristippus and <a class="enc-link" href="/encyclopedia/epicurus">Epicurus</a>, who viewed happiness as the only good, in the consequentialism of the ancient Chinese philosopher Mozi, who proposed a system to maximise benefit and eliminate harm, and in the work of the 8th-century Indian philosopher Śāntideva. Mohist consequentialism advocated communitarian goods such as political stability, population growth and wealth, but did not support the utilitarian notion of maximising individual happiness.</p><p>Francis Hutcheson introduced a key utilitarian phrase in An Inquiry into the Original of Our Ideas of Beauty and Virtue (1725): the best action is the one that procures the greatest happiness to the greatest numbers. Some claim that John Gay developed the first systematic theory of utilitarian ethics in Concerning the Fundamental Principle of Virtue or Morality (1731), which gave the pursuit of happiness a theological basis in the will of God. <a class="enc-link" href="/encyclopedia/david-hume">David Hume</a> wrote in 1751 that public utility is ever principally in view in determinations of morality. William Paley developed and popularised Gay's theological utilitarianism in The Principles of Moral and Political Philosophy (1785), a required text at <a class="enc-link" href="/encyclopedia/cambridge">Cambridge</a>; Schneewind wrote that utilitarianism first became widely known in <a class="enc-link" href="/encyclopedia/england">England</a> through Paley's work.</p></div>
+      </div>
+      <div class="profile-section-block" id="ideas">
+        <h2 class="profile-section-title">Core Ideas</h2>
+        <div class="profile-section-body"><p>Bentham's work opens with the principle of utility: nature has placed mankind under the governance of two sovereign masters, pain and pleasure, and the principle approves or disapproves of every action according to its tendency to augment or diminish the happiness of the party whose interest is in question. He applied it to every measure of government as well as to private actions. In Chapter IV he proposed a hedonic calculus, measuring a pleasure or pain by its intensity, duration, certainty and propinquity, and adding its fecundity, its purity and its extent, the number of people affected.</p><p>Bentham also distinguished evils of the first and second order. The first are the more immediate consequences of an act; the second are those spread through the community as alarm and danger, and in his example of a hungry beggar stealing a loaf it is the second order that makes the act a crime and punishment necessary. Mill rejected a purely quantitative measure and held that some kinds of pleasure are more desirable than others, judged by those competently acquainted with both. He argued that the sole evidence that anything is desirable is that people desire it, and that each person's happiness is a good to that person and the general happiness a good to all persons together.</p><p>Bentham wrote that the question about animals is not whether they can reason or talk but whether they can suffer, and Sidgwick held that the happiness of every sentient being counts.</p></div>
+      </div>
+      <div class="profile-section-block" id="spread">
+        <h2 class="profile-section-title">Spread &amp; Variants</h2>
+        <div class="profile-section-body"><p>Bentham's book, printed in 1780, was not an immediate success. His ideas spread further when Pierre Étienne Louis Dumont translated selections from his <a class="enc-link" href="/encyclopedia/manuscript">manuscripts</a> into French as Traité de législation civile et pénale (1802), and Sir John Bowring issued an edition of his works in parts between 1838 and 1843. Mill, who was brought up as a Benthamite to carry on the cause, popularised the word utilitarianism; in 1861 he noted that he believed himself the first to bring the word utilitarian into use. Henry Sidgwick's The Methods of Ethics has been called the peak of classical utilitarianism; Sidgwick held that the most general principles of intuitionism are compatible with utilitarianism, though egoism could not be reconciled with it without religious assumptions.</p><p>In the 20th century the theory divided into many forms. Hastings Rashdall and G. E. Moore (Ethics, 1912) argued for an ideal utilitarianism that values more than pleasure. In the 1950s and 1960s philosophers including J. J. C. Smart and H. J. McCloskey debated act and rule utilitarianism, and R. M. Hare proposed a two-level version in 1973. Karl Popper argued in 1945 for minimising pain, which Smart named negative utilitarianism in 1958. Robert Merrihew Adams proposed motive utilitarianism in 1976, and John Harsanyi preference utilitarianism in 1977.</p></div>
+      </div>
+      <div class="profile-section-block" id="power">
+        <h2 class="profile-section-title">In Power</h2>
+        <div class="profile-section-body"><p>Bentham held that the principle of utility applied to every measure of government, and his book is concerned with the principles of legislation: the business of government, he wrote, is to promote the happiness of society by punishing and rewarding. Seen this way, the law's punishments are justified by the second-order evils of crime rather than by the first-order effects of a single offence.</p><p>In the 20th century utilitarian-style thinking reached legal and economic scholarship. Wealth maximisation, which has its economic roots in the potential Pareto improvements of Nicholas Kaldor, John Hicks and Tibor Scitovsky, permits changes that raise overall economic surplus even if some parties lose, so long as the winners could in principle compensate the losers. Richard Posner popularised it in legal scholarship in Economic Analysis of Law (1973), where a rule is judged desirable if it produces a net increase in aggregate wealth, measured by willingness to pay. Its advocates held that taxes and transfers can handle worries about distribution; critics countered that wealthier parties can outbid poorer ones and skew the outcome.</p><p>The concept has also been applied to social welfare economics, questions of justice, the ethics of raising animals for food and the avoidance of existential risks to humanity. Some utilitarians support white lies.</p></div>
+      </div>
+      <div class="profile-section-block" id="critiques">
+        <h2 class="profile-section-title">Critiques &amp; Debates</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/karl-marx"><img src="/images/encyclopedia/karl-marx.jpg" alt="Karl Marx" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/karl-marx">Karl Marx</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Karl_Marx_001_restored.jpg" target="_blank" rel="noopener">John Jabez Edwin Mayall, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Because utilitarianism is a cluster of related theories, criticisms have had different targets. John Rawls's A Theory of Justice (1971) brought to prominence the objection that utilitarianism does not take seriously the distinction between persons; Thomas Nagel said in 1970 that consequentialism treats the desires of distinct persons as those of a mass person. Thomas Carlyle derided Benthamite utility as virtue by profit and loss. <a class="enc-link" href="/encyclopedia/karl-marx">Karl Marx</a>, in <a class="enc-link" href="/encyclopedia/das-kapital">Das Kapital</a>, charged Bentham with taking the modern English shopkeeper as the normal man. <a class="enc-link" href="/encyclopedia/pope-john-paul-ii">Pope John Paul II</a> argued that utilitarianism is a civilisation of production and use in which persons are used as things are used.</p><p>W. D. Ross held that the duty to promote the aggregate good is only one of several duties, such as keeping promises, which utilitarianism ignores; Roger Scruton argued that it gives duty too little place. In 1957 H. J. McCloskey posed his sheriff scenario, in which an extreme utilitarian sheriff appears committed to framing an innocent man to prevent riots that would cost lives. Rosen (2003) and Hare answered that such critics attack a crude caricature of act utilitarianism.</p><p>The demandingness objection holds that impartiality requires great sacrifice; Peter Singer accepted its demands, while Michael Slote and Samuel Scheffler proposed modifications. Others objected that happiness cannot be quantified, and that consequences cannot be predicted. Mill answered that mankind has long learned by experience the tendencies of actions.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Rosen warned in 2003 that common descriptions of utilitarianism bear little resemblance to Bentham and Mill, and are more a crude version of act utilitarianism conceived in the 20th century as a straw man. Mill's proof of the principle of utility has been called a set of fallacies since his lifetime, and Hall (1949) and Popkin (1950) defended him; Necip Fikri Alican's book of 1994 defended the proof against all three charges, and the alleged fallacies still attract scholarly attention.</p><p>The tradition continues with Peter Singer, who argues that the well-being of all sentient beings deserves equal consideration and that the suffering of nonhuman animals cannot be disregarded. Singer and Toby Ord argue that inhabitants of developed countries are obliged to help end extreme poverty, for example by donating part of their income to the most cost-effective charities, and Singer's ideas formed the basis of the modern effective altruism movement. Utilitarians have also argued over the interests of future people, where Derek Parfit's mere addition paradox is set against the average view, and Nick Bostrom and Carl Shulman have considered the possible interests of digital minds. Utilitarianism places no direct intrinsic value on biodiversity or on beings unable to feel; deep ecology holds that all forms of life have intrinsic value.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>Utilitarianism is a family of ethical theories that judge actions by their consequences for the happiness and well-being of all affected. It was founded by <a class="enc-link" href="/encyclopedia/jeremy-bentham">Jeremy Bentham</a>, extended by <a class="enc-link" href="/encyclopedia/john-stuart-mill">John Stuart Mill</a> and Henry Sidgwick, and later divided into act, rule, preference and other forms.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="utilitarianism"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Francis Hutcheson introduces a key utilitarian phrase, the greatest happiness to the greatest numbers","o":["1802","1861","1725","1971"],"a":2,"w":"1725: Francis Hutcheson introduces a key utilitarian phrase, the greatest happiness to the greatest numbers."},{"p":"Which came first?","q":"","o":["Jeremy Bentham's Introduction to the Principles of Morals and Legislation, printed in 1780, is published","John Harsanyi proposes preference utilitarianism in Morality and the Theory of Rational Behaviour"],"a":0,"w":"1789: Jeremy Bentham's Introduction to the Principles of Morals and Legislation, printed in 1780, is published · 1977: John Harsanyi proposes preference utilitarianism in Morality and the Theory of Rational Behaviour."},{"p":"In which year?","q":"William Paley's Principles of Moral and Political Philosophy popularises theological utilitarianism","o":["1725","1802","1785","1971"],"a":2,"w":"1785: William Paley's Principles of Moral and Political Philosophy popularises theological utilitarianism."},{"p":"Which came first?","q":"","o":["Francis Hutcheson introduces a key utilitarian phrase, the greatest happiness to the greatest numbers","John Rawls's A Theory of Justice brings to prominence the objection that utilitarianism ignores the distinction between persons"],"a":0,"w":"1725: Francis Hutcheson introduces a key utilitarian phrase, the greatest happiness to the greatest numbers · 1971: John Rawls's A Theory of Justice brings to prominence the objection that utilitarianism ignores the distinction between persons."},{"p":"In which year?","q":"John Gay publishes his account of virtue, which some claim to be the first systematic theory of utilitarian ethics","o":["1785","1731","1802","1725"],"a":1,"w":"1731: John Gay publishes his account of virtue, which some claim to be the first systematic theory of utilitarian ethics."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>John Stuart Mill, Utilitarianism (Oxford University Press, 1998)</li>
+        <li>Frederick Rosen, Classical Utilitarianism from Hume to Mill (Routledge, 2003)</li>
+        <li>J. B. Schneewind, Sidgwick's Ethics and Victorian Moral Philosophy (Oxford University Press, 1977)</li>
+        <li>Henry Sidgwick, Methods of Ethics (Hackett Publishing Co, Inc; 7th Revised edition, 1981)</li>
+        <li>J. J. C. Smart, Utilitarianism: For and Against (Cambridge University Press, 1973)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other ideologys</p>
+      <div class="related-grid"><a class="related-card" href="/ideology/nationalism"><img src="/logos/thumbs/Nationalism.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Nationalism</span><span class="related-card-dates">c. 1772 CE – present</span></a><a class="related-card" href="/ideology/conservatism"><img src="/logos/thumbs/Conservatism.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Conservatism</span><span class="related-card-dates">c. 1790 CE – present</span></a><a class="related-card" href="/ideology/feminism"><img src="/logos/thumbs/Feminism.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Feminism</span><span class="related-card-dates">1792 CE – present</span></a><a class="related-card" href="/ideology/communism"><img src="/logos/thumbs/Communism.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Communism</span><span class="related-card-dates">1793 CE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/ideology/nationalism"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Nationalism.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Nationalism</span><span class="related-card-dates">c. 1772 CE – present</span></a><a class="related-card" href="/ideology/conservatism"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Conservatism.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Conservatism</span><span class="related-card-dates">c. 1790 CE – present</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Utilitarianism",slug="utilitarianism",url="https://the-epoch-institute.org/ideology/utilitarianism";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Utilitarianism on The Epoch Institute — origins, ideas and legacy. https://the-epoch-institute.org/ideology/utilitarianism #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/ideology/utilitarianism"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Utilitarianism",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Utilitarianism",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

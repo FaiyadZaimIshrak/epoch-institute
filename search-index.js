@@ -34466,7 +34466,32 @@ var SEARCH_INDEX = [
 [0,"Sistine Chapel ceiling","work","",3,1],
 [0,"Statue of Liberty","work","",1,1],
 [0,"Tomb of Tutankhamun","work","",1,1],
-[0,"Truganini","person","",1,1]
+[0,"Truganini","person","",1,1],
+[0,"African socialism","idea","",0],
+[0,"American Indian Movement","idea","",0],
+[0,"Antisemitism","idea","",4],
+["baathism","Ba'athism","idea","",2],
+[0,"Christian democracy","idea","",0],
+[0,"First Great Awakening","idea","",0],
+[0,"Gandhism","idea","",0],
+[0,"Liberation theology","idea","",2],
+[0,"Libertarianism","idea","",0],
+[0,"Manifest destiny","idea","",0],
+[0,"Māori King movement","idea","",0],
+[0,"Marxism","idea","",6],
+[0,"Mohism","idea","",0],
+[0,"Neoliberalism","idea","",3],
+[0,"New Culture Movement","idea","",0],
+[0,"Pacifism","idea","",2],
+[0,"Pan-Slavism","idea","",0],
+[0,"Populism","idea","",4],
+[0,"Secularism","idea","",0],
+[0,"Social Darwinism","idea","",4],
+[0,"Surrealism","idea","",0],
+[0,"Syndicalism","idea","",0],
+[0,"Temperance movement","idea","",0],
+[0,"Trotskyism","idea","",2],
+[0,"Utilitarianism","idea","",2]
 ];
 (function () { for (var i = 0, r; i < SEARCH_INDEX.length; i++) { r = SEARCH_INDEX[i]; if (r[0] === 0) r[0] = r[1].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); } })();   // packed by scripts/build-pages.ps1: a slug written 0 is made from its name
 // states (register, /state/<id>): [id, name, type, aliases, 1 if it has a picture]. Generated from data/polities.json.

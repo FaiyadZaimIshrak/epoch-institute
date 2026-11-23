@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Mau Mau rebellion: Aims, Course and Legacy — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The Mau Mau rebellion, also called the Kenya Emergency, was an armed conflict from 1952 to 1960 between the Kenya Land and Freedom Army, drawn mainly…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Mau Mau rebellion: Aims, Course and Legacy — The Epoch Institute">
+<meta property="og:description" content="The Mau Mau rebellion, also called the Kenya Emergency, was an armed conflict from 1952 to 1960 between the Kenya Land and Freedom Army, drawn mainly…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/movement/mau-mau-rebellion">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/mau-mau-rebellion.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/mau-mau-rebellion.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/movement/mau-mau-rebellion">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Movements & revolutions","item":"https://the-epoch-institute.org/profiles?kind=movement"},{"@type":"ListItem","position":4,"name":"Mau Mau rebellion"}]},{"@type":"Article","headline":"Mau Mau rebellion","description":"The Mau Mau rebellion, also called the Kenya Emergency, was an armed conflict from 1952 to 1960 between the Kenya Land and Freedom Army, drawn mainly…","url":"https://the-epoch-institute.org/movement/mau-mau-rebellion","mainEntityOfPage":"https://the-epoch-institute.org/movement/mau-mau-rebellion","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Mau Mau rebellion"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/mau-mau-rebellion.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=movement">Movements &amp; revolutions</a></li><li aria-current="page">Mau Mau rebellion</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Mau%20Mau%20rebellion.png" alt="Mau Mau rebellion" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Movement · Sub-Saharan Africa</p>
+        <h1 class="profile-detail-name">Mau Mau rebellion</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Where</span><span class="info-stat-val">The British Colony of <a class="enc-link" href="/encyclopedia/kenya">Kenya</a>: the Kikuyu districts of Central Province, the Aberdares and the forests around Mount Kenya, Nairobi, the Rift Valley and Meru.</span></div>
+          <div class="info-stat"><span class="info-stat-label">Period</span><span class="info-stat-val">Oathing from about 1943; the State of Emergency declared on 20 October 1952; Operation Anvil (1954); the capture of Dedan Kimathi on 21 October 1956; fighting by Meru units until after independence; an amnesty and army action in 1964 and 1965.</span></div>
+          <div class="info-stat"><span class="info-stat-label">Leading figures</span><span class="info-stat-val">Field Marshal Dedan Kimathi; General <a class="enc-link" href="/encyclopedia/china">China</a>; Field Marshal Musa Mwariama; General Baimungi; Field Marshal Muthoni; <a class="enc-link" href="/encyclopedia/jomo-kenyatta">Jomo Kenyatta</a>, tried as one of the Kapenguria Six; on the British side Governor Evelyn Baring and General George Erskine.</span></div>
+          <div class="info-stat"><span class="info-stat-label">Outcome</span><span class="info-stat-val">The British campaign ended with Kimathi's capture in 1956 after mass detention, villagisation and 1,090 executions; at least 11,000 deaths among the Mau Mau and other forces, with some estimates considerably higher; Kenyan majority rule was set in motion in January 1960, and independence came in December 1963.</span></div>
+        </div>
+        <p class="empire-meta">7 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The <a class="enc-link" href="/encyclopedia/kenya">Kenya</a> Land and Freedom Army, called the Mau Mau, rose against British colonial rule in Kenya from 1952, after decades of land seizure, forced wage labour and failed petitions; Wangari Maathai names its three issues as land, freedom and self-governance.</li><li>The British answered with a State of Emergency, Operation Anvil, a detention system called the Pipeline and the forced resettlement of more than a million Kikuyu in fortified villages; 1,090 people were hanged.</li><li>Historians still dispute the death toll, with estimates of 25,000 and 50,000 and a claim of up to 300,000, and whether the conflict was a nationalist rising, an intra-Kikuyu civil war, or both.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>By the end of the Emergency, 1,090 Mau Mau suspects had been executed by hanging, more than double the number executed by the French in <a class="enc-link" href="/encyclopedia/algeria">Algeria</a>, and at no other time or place in the <a class="enc-link" href="/encyclopedia/british-empire">British Empire</a> was capital punishment dispensed so aggressively.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#background">Background</a></li><li><a href="#aims">Aims</a></li><li><a href="#events">Course of Events</a></li><li><a href="#people">People</a></li><li><a href="#outcomes">Outcomes</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">1934</span><span class="rf-text">The Carter Land Commission's report is followed by the seizure of about 7,000,000 acres for the White Highlands</span></li><li><span class="rf-year">1952</span><span class="rf-text">Senior Chief Waruhiu is shot on 9 October and the State of Emergency is declared on 20 October</span></li><li><span class="rf-year">1953</span><span class="rf-text">Mau Mau militants attack Lari on the night of 25 to 26 March, and a retaliatory massacre follows</span></li><li><span class="rf-year">1954</span><span class="rf-text">Operation Anvil clears Nairobi of Kikuyu, Embu and Meru, and villagisation begins in June</span></li><li><span class="rf-year">1956</span><span class="rf-text">Field Marshal Dedan Kimathi is captured on 21 October, ending the British military campaign</span></li><li><span class="rf-year">1959</span><span class="rf-text">Eleven detainees are clubbed to death by guards at the Hola camp</span></li><li><span class="rf-year">1960</span><span class="rf-text">The First <a class="enc-link" href="/encyclopedia/lancaster-house">Lancaster House</a> Conference sets native Kenyan majority rule in motion</span></li><li><span class="rf-year">2013</span><span class="rf-text"><a class="enc-link" href="/encyclopedia/britain">Britain</a> settles with 5,228 claimants for £19.9 million and denies liability</span></li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="background">
+        <h2 class="profile-section-title">Background</h2>
+        <div class="profile-section-body"><p><a class="enc-link" href="/encyclopedia/britain">Britain</a> claimed <a class="enc-link" href="/encyclopedia/kenya">Kenya</a> as a <a class="enc-link" href="/encyclopedia/protectorate">protectorate</a> by a proclamation of 1 July 1895 and declared it a colony in 1920. Land was the primary British interest, since Kenya had some of the richest agricultural soils in the world. The first settlers arrived in 1902 as part of Governor Charles Eliot's plan to have a settler economy pay for the <a class="enc-link" href="/encyclopedia/uganda-railway">Uganda Railway</a>, and over the next three decades the colonial government and settlers consolidated their control over Kenyan land and forced native Kenyans to become wage labourers. Earlier armed risings, among them the Nandi Resistance, the Giriama Uprising of 1913 to 1914 and the women's revolt against forced labour in Murang'a in 1947, did not succeed.</p><p>The Carter Land Commission reported in 1934, and the government seized approximately 7,000,000 acres of fertile land in the Central and Rift Valley regions, creating the 'White Highlands' exclusively for European settlement. The Kikuyu of Kiambu, Nyeri and Murang'a were among the groups most affected, and a Kenya High Court decision of 1921 had already reaffirmed the legality of the expropriation. The Hut and Poll Taxes, the reserves, the Masters and Servants Ordinance of 1906 and the kipande identification pass of 1918 pressed people into wage labour. The Ordinance of 1939 eliminated squatters' remaining <a class="enc-link" href="/encyclopedia/tenancy">tenancy</a> rights and permitted settlers to demand 270 days' labour from them. Nairobi's population doubled between 1938 and 1952, and a small class of Kikuyu landowners with ties to the colonial administration created an economic rift within the Kikuyu.</p></div>
+      </div>
+      <div class="profile-section-block" id="aims">
+        <h2 class="profile-section-title">Aims</h2>
+        <div class="profile-section-body"><p>According to some members, they never called themselves Mau Mau and preferred the military title <a class="enc-link" href="/encyclopedia/kenya">Kenya</a> Land and Freedom Army. The origin of the name is uncertain. Wangari Maathai points to the Kikuyu phrase that opens a list, "maũndũ ni mau", "the main issues are", said while holding up three fingers, and says the three issues were land, freedom and self-governance. A <a class="enc-link" href="/encyclopedia/swahili">Swahili</a> backronym, "Mzungu Aende Ulaya, Mwafrika Apate Uhuru", meant "Let the foreigner go back abroad, let the African regain independence". J. M. Kariuki, a detainee and member, suggested that the British preferred the name Mau Mau to deny the rebellion international legitimacy.</p><p>Until the mid-1930s the two main complaints were low wages and the kipande; from the early 1930s elected African political representation and land came to the fore. The first countrywide party, the Kenya African Study Union, began on 1 October 1944 and became the Kenya <a class="enc-link" href="/encyclopedia/african-union">African Union</a> in 1946. Its failure to win reforms shifted the initiative to younger and more militant figures in the trade unions, among squatters on settler estates in the Rift Valley and in Kikuyu branches of the union. Around 1943, residents of Olenguruone Settlement radicalised the traditional practice of oathing and extended it to women and children; by the mid-1950s 90% of Kikuyu, Embu and Meru were oathed.</p><p>Scholars disagree about the movement's nature. Bruce Berman holds that to the question of whether it was nationalism the answer must be "yes and no", and it has also been argued that it was not explicitly national, either intellectually or operationally.</p></div>
+      </div>
+      <div class="profile-section-block" id="events">
+        <h2 class="profile-section-title">Course of Events</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/jomo-kenyatta"><img src="/images/encyclopedia/jomo-kenyatta.jpg" alt="Jomo Kenyatta" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/jomo-kenyatta">Jomo Kenyatta</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Jomo_Kenyatta_(cropped)_in_June_15th,_1966.jpg" target="_blank" rel="noopener">Pridan Moshe, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>On 3 October 1952 the Mau Mau claimed their first European victim, a woman stabbed to death near her home in Thika. On 9 October Senior Chief Waruhiu, one of the strongest supporters of the British presence, was shot dead in his car. Governor Evelyn Baring then declared a State of Emergency on 20 October. Operation Jock Scott arrested <a class="enc-link" href="/encyclopedia/jomo-kenyatta">Jomo Kenyatta</a> and 180 other identified leaders, and in January 1953 six of the most prominent detainees, the Kapenguria Six, were tried, a trial claimed to have featured a suborned lead defence witness and a bribed judge. Hundreds, then thousands, of Mau Mau adherents fled to the forests, mainly the Aberdares and the forests around Mount <a class="enc-link" href="/encyclopedia/kenya">Kenya</a>. On the night of 25 to 26 March 1953 Mau Mau militants attacked Lari, herding people into huts and setting them on fire; official estimates give 74 dead in the first massacre and 150 in the retaliation by security forces.</p><p>General George Erskine was sent in May 1953. General <a class="enc-link" href="/encyclopedia/china">China</a> was captured on 15 January 1954, and Operation Anvil began on 24 April 1954, when 25,000 members of the security forces sealed off Nairobi; 20,000 suspects were taken to Langata and 30,000 more deported to the reserves. In June 1954 the War Council ordered the forced resettlement of Kiambu, Nyeri, Murang'a and Embu districts, and within eighteen months 1,050,899 Kikuyu were inside 804 villages. The RAF bombed the forests from June 1953 to October 1955. Dedan Kimathi was captured on 21 October 1956.</p></div>
+      </div>
+      <div class="profile-section-block" id="people">
+        <h2 class="profile-section-title">People</h2>
+        <div class="profile-section-body"><p>The Mau Mau command was relatively well educated. General Gatunga had been a respected Christian teacher who recorded his attacks in five notebooks. Dedan Kimathi, a Field Marshal, was captured in 1956, and Field Marshal Musa Mwariama led the Meru units that carried on after his fall. Field Marshal Muthoni was the highest-ranking woman who fought. Women formed a core part of the Mau Mau, especially in maintaining supply lines, moving food, ammunition, medical care and information between hideouts; Wamuyu Gakuru exemplified this role. Accounts often lack nuance about women's experience, and female memories were not consulted until a quarter of a century later. Wangui, assigned to look after Njama's needs, accepted the household and sexual duties the Mau Mau required, saying, "Wherever I might go under the sun, I think these same duties would follow me."</p><p><a class="enc-link" href="/encyclopedia/jomo-kenyatta">Jomo Kenyatta</a> was assumed to be the orchestrator of the rebellion despite a lack of credible evidence. In August 1952 he told a Kikuyu audience, "Let Mau Mau perish forever", and in his memoirs he called the conflict a civil war. Detainees organised themselves in the camps; perhaps the most famous compound leader was Josiah Mwangi Kariuki. On the British side were Governor Baring, General Erskine, Thomas Askwith, who designed the Pipeline, and Roger Swynnerton, author of the agrarian plan. Loyalist Kikuyu, among them chiefs such as Waruhiu and Nderi and the Home Guard, fought against the Mau Mau, and as many Kikuyu fought on the government's side as joined the rebellion.</p></div>
+      </div>
+      <div class="profile-section-block" id="outcomes">
+        <h2 class="profile-section-title">Outcomes</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/lancaster-house"><img src="/images/encyclopedia/lancaster-house.jpg" alt="Lancaster House" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/lancaster-house">Lancaster House</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Lancaster_House_(5880536589).jpg" target="_blank" rel="noopener">Financial Times, CC BY 2.0</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>The capture of Kimathi signalled the defeat of the Mau Mau and essentially ended the British military campaign, though the rebellion survived until after independence, driven mainly by Meru units under Musa Mwariama. Suppression cost <a class="enc-link" href="/encyclopedia/britain">Britain</a> £55 million and caused at least 11,000 deaths among the Mau Mau and other forces, with some estimates considerably higher. Estimates of total deaths from the Emergency are disputed: David Anderson estimates 25,000, John Blacker 50,000, half of them children aged ten or below, mostly from malnutrition, starvation and disease. Caroline Elkins says "tens of thousands, perhaps hundreds of thousands"; Blacker argued that her figure of 300,000 was overestimated. Officially 1,819 native Kenyans were killed by the Mau Mau, though Anderson cites about 5,000, and 95 British military personnel died. The authorities interned 80,000 by their own count, while Elkins estimated between 160,000 and 320,000.</p><p>The government made concessions. The June 1956 land reform increased Kikuyu landholdings, the ban on growing <a class="enc-link" href="/encyclopedia/coffee-economy">coffee</a> was relaxed, and by 1956 direct election of native Kenyan members of the Legislative Assembly had been granted. Lieutenant General Lathbury noted that "Mau Mau has not been cured: it has been suppressed." In January 1960 the First <a class="enc-link" href="/encyclopedia/lancaster-house">Lancaster House</a> Conference established native Kenyan majority rule and began the transition to independence.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <div class="profile-section-body"><p>Historians dispute the rebellion's effect on <a class="enc-link" href="/encyclopedia/decolonisation">decolonisation</a>. The most common view holds that independence came because continued colonial rule would have needed more force than the British public would tolerate; Nissimi objects that this does not explain why the same tendencies failed to stop the dirty war then being fought. Daniel Branch stressed that the conflict was rooted in longstanding grievances and quickly became a civil war among the people of the Mount <a class="enc-link" href="/encyclopedia/kenya">Kenya</a> region. The conflict is now often regarded in academic circles as an intra-Kikuyu civil war, a characterisation that remains extremely unpopular in Kenya. David Anderson called it a story of atrocity and excess on both sides.</p><p>After independence, Kenyatta offered an amnesty on 12 December 1964, and in January 1965 the army was sent against fighters under Mwariama and Baimungi, who were killed. The movement was banned until September 2003. Former detainees, supported by the Kenya Human Rights Commission, brought a test case in <a class="enc-link" href="/encyclopedia/london">London</a>, and on 6 June 2013 the British government announced a settlement for 5,228 claimants worth £19.9 million while continuing to deny liability. A memorial statue funded by the British government was unveiled in Nairobi's Uhuru Park on 12 September 2015. The Kenyan Government now recognises Mau Mau members as freedom heroes and marks Mashujaa Day on 20 October; critics charge that the state has manipulated the memory of the rebellion for political ends.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>The Mau Mau rebellion was an armed conflict of 1952 to 1960 in colonial <a class="enc-link" href="/encyclopedia/kenya">Kenya</a> between the Kenya Land and Freedom Army and the British authorities. <a class="enc-link" href="/encyclopedia/britain">Britain</a> suppressed it by mass detention, villagisation and 1,090 executions, and its toll and meaning, including its character as a civil war among the Kikuyu, remain disputed.</em></p>
+
+    <section class="ty-sec" id="test-yourself" aria-labelledby="ty-title">
+      <h2 class="profile-section-title" id="ty-title">Test yourself</h2>
+      <p class="ty-lede">5 questions on this page, from its key events and facts.</p>
+      <div class="ty" data-ty="mau-mau-rebellion"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
+      <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Eleven detainees are clubbed to death by guards at the Hola camp","o":["1952","1960","1934","1959"],"a":3,"w":"1959: Eleven detainees are clubbed to death by guards at the Hola camp."},{"p":"Which came first?","q":"","o":["The First Lancaster House Conference sets native Kenyan majority rule in motion","The Carter Land Commission's report is followed by the seizure of about 7,000,000 acres for the White Highlands"],"a":1,"w":"1960: The First Lancaster House Conference sets native Kenyan majority rule in motion · 1934: The Carter Land Commission's report is followed by the seizure of about 7,000,000 acres for the White Highlands."},{"p":"In which year?","q":"Operation Anvil clears Nairobi of Kikuyu, Embu and Meru, and villagisation begins in June","o":["1952","1954","1956","1953"],"a":1,"w":"1954: Operation Anvil clears Nairobi of Kikuyu, Embu and Meru, and villagisation begins in June."},{"p":"Which came first?","q":"","o":["Britain settles with 5,228 claimants for £19.9 million and denies liability","Eleven detainees are clubbed to death by guards at the Hola camp"],"a":1,"w":"2013: Britain settles with 5,228 claimants for £19.9 million and denies liability · 1959: Eleven detainees are clubbed to death by guards at the Hola camp."},{"p":"In which year?","q":"Britain settles with 5,228 claimants for £19.9 million and denies liability","o":["1952","2013","1960","1954"],"a":1,"w":"2013: Britain settles with 5,228 claimants for £19.9 million and denies liability."}]</script>
+    </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>David Anderson, Histories of the Hanged: The Dirty War in Kenya and the End of Empire (Weidenfeld &amp; Nicolson, 2005)</li>
+        <li>Huw Bennett, Fighting the Mau Mau: The British Army and Counter-Insurgency in the Kenya Emergency (Cambridge University Press, 2013)</li>
+        <li>Daniel Branch, Defeating Mau Mau, Creating Kenya: Counterinsurgency, Civil War, and Decolonization (Cambridge University Press, 2009)</li>
+        <li>Caroline Elkins, Imperial Reckoning: The Untold Story of Britain's Gulag in Kenya (Henry Holt and Company, 2005)</li>
+        <li>Wunyabari O. Maloba, Mau Mau and Kenya: An Analysis of a Peasant Revolt (Indiana University Press, 1998)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other movements</p>
+      <div class="related-grid"><a class="related-card" href="/movement/civil-rights-movement"><img src="/logos/thumbs/Civil%20rights%20movement.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Civil rights movement</span><span class="related-card-dates">1954 CE – 1968 CE</span></a><a class="related-card" href="/movement/anti-apartheid-movement"><img src="/logos/thumbs/Anti-apartheid%20movement.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Anti-apartheid movement</span><span class="related-card-dates">1948 CE – 1994 CE</span></a><a class="related-card" href="/movement/liberation-theology"><img src="/logos/thumbs/Liberation%20theology.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Liberation theology</span><span class="related-card-dates">c. 1960 CE – present</span></a><a class="related-card" href="/movement/non-aligned-movement"><img src="/logos/thumbs/Non-Aligned%20Movement.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Non-Aligned Movement</span><span class="related-card-dates">1961 CE – present</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/movement/anti-apartheid-movement"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Anti-apartheid%20movement.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Anti-apartheid movement</span><span class="related-card-dates">1948 CE – 1994 CE</span></a><a class="related-card" href="/movement/civil-rights-movement"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Civil%20rights%20movement.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Civil rights movement</span><span class="related-card-dates">1954 CE – 1968 CE</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".ty[data-ty]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/test-yourself.js";s.onload=function(){TestYourself.mount(el);};document.head.appendChild(s);};if(location.hash==="#test-yourself"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"600px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Mau Mau rebellion",slug="mau-mau-rebellion",url="https://the-epoch-institute.org/movement/mau-mau-rebellion";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Mau Mau rebellion on The Epoch Institute — aims, course and legacy. https://the-epoch-institute.org/movement/mau-mau-rebellion #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/movement/mau-mau-rebellion"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Mau Mau rebellion",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Mau Mau rebellion",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>
