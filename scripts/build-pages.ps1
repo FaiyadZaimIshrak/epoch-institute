@@ -622,7 +622,7 @@ for ($ri = 0; $ri -lt $(if ($SkipEntries) { 0 } else { $FS }); $ri++) {
     try { $rx = EncRx $txt $mode } catch { continue }
     $kt = if ($mode -eq 1 -and $txt.EndsWith('y')) { $txt.Substring(0, $txt.Length - 1) } else { $txt }
     $kword = [EpochBuild.W]::LongestWord($kt)
-    $c = [pscustomobject]@{ id = [long]$ri * 1000 + $pj; slug = $rs; grp = $grp; rx = $rx }
+    $c = [pscustomobject]@{ id = [long]$ri * 1000 + $pj; slug = $rs; grp = $grp; rx = $rx; pl = $(if ($mode -ne 1 -and -not $txt.EndsWith('s')) { $txt.Length } else { 0 }) }
     if (-not $kword) { $ALWAYS.Add($c); $nPat++; continue }   # no word of 3+ letters ("Ur", "Wu"): tried on every text
     $lst = $null; if (-not $KW.TryGetValue($kword, [ref]$lst)) { $lst = New-Object System.Collections.Generic.List[object]; $KW[$kword] = $lst }
     $lst.Add($c); $nPat++
@@ -661,6 +661,8 @@ function LinkDesc([string]$text, [string]$self, $ctx) {
     if (-not $c.grp -and $c.slug -eq $self) { if ($ownP) { foreach ($m in $c.rx.Matches($text)) { if ($m.Length -gt 0) { $ownSp.Add(@($m.Index, ($m.Index + $m.Length))) } } }; continue }
     foreach ($m in $c.rx.Matches($text)) {
       if ($m.Length -eq 0) { continue }
+      # a person is not meant by the plural of their name: "Herders move seasonally" is not Johann Gottfried Herder
+      if ($c.pl -and -not $c.grp -and $m.Length -eq $c.pl + 1 -and $m.Value.EndsWith('s') -and $BY.ContainsKey($c.slug) -and $BY[$c.slug].type -eq 'person') { continue }
       $s0 = $m.Index; $e0 = $s0 + $m.Length
       if ($c.grp) { $sl = EncPick @($c.grp.m | Where-Object { $_ -ne $self }) $text $s0 $e0 $ctx $null $Y $c.grp.p }
       elseif (EncOk $c.slug $text $s0 $e0 $Y) { $sl = $c.slug } else { $sl = $null }
@@ -1299,7 +1301,8 @@ $MORETITLE = '^(?:King|Queen|Emperor|Empress|Sultan|Sultana|Prince|Princess|Pres
 $MOREQ = @([string][char]0x201C, [string][char]0x201D, [string][char]0x2019)   # curly quotes, by number: PowerShell reads them as quote marks in a script
 # also off: a person linked by a form that is not the entry's own name whose years lie more than 50 from the host
 # entry's ("Otto I" on the Ottonian dynasty linked a 12th-century duke of Bavaria), and the pairs of
-# scripts/entry-more-nolink.tsv (host entry TAB the entry never linked from its longer text TAB why)
+# scripts/entry-more-nolink.tsv (host entry TAB the entry never linked from its longer text TAB why; "entry=Link text"
+# takes off only the links with that text, where another link to the same entry in the text is right)
 $MORENO = @{}; if (Test-Path "$Repo\scripts\entry-more-nolink.tsv") { foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\entry-more-nolink.tsv", $U8)) { if ($l -and $l[0] -ne '#') { $c = $l.Split("`t"); if ($c.Count -ge 2) { $MORENO[$c[0] + '|' + $c[1]] = 1 } } } }
 function MoreUnlink([string]$html, [string]$hostSlug) {
   $ms = $MOREANCH.Matches($html); if ($ms.Count -eq 0) { return $html }
@@ -1308,7 +1311,7 @@ function MoreUnlink([string]$html, [string]$hostSlug) {
   foreach ($m in $ms) {
     $bef = $MORETAG.Replace($html.Substring(0, $m.Index), ''); $aft = $MORETAG.Replace($html.Substring($m.Index + $m.Length), '')
     $txt = $m.Groups[2].Value; $off = $false; $tgt = $m.Groups[1].Value
-    if ($MORENO.ContainsKey($hostSlug + '|' + $tgt)) { $off = $true }
+    if ($MORENO.ContainsKey($hostSlug + '|' + $tgt) -or $MORENO.ContainsKey($hostSlug + '|' + $tgt + '=' + [Net.WebUtility]::HtmlDecode($txt))) { $off = $true }
     if (-not $off -and $hostSp -and $BY[$tgt] -and $BY[$tgt].type -eq 'person' -and $EYRS[$tgt] -and ([Net.WebUtility]::HtmlDecode($txt) -ne [string]$BY[$tgt].name)) {
       if ($EYRS[$tgt][0] - $hostSp[1] -gt 50 -or $hostSp[0] - $EYRS[$tgt][1] -gt 50) { $off = $true }
     }

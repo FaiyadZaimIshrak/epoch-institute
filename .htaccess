@@ -45,6 +45,8 @@ AddType font/woff2 .woff2
   RewriteRule ^articles/?$ /community [R=301,L]
   # a community article withdrawn in Oct 2026: 410 Gone, so search engines drop it (readers get the 404 page)
   RewriteRule ^articles/sati-pratha$ - [G,L]
+  # an encyclopedia entry folded into its twin (Nov 2026): the old address goes to the page that was kept
+  RewriteRule ^encyclopedia/lady-hyegyong$ /encyclopedia/lady-hyegyeong [R=301,L]
   # the profile folders have no index page: their kind's list on /profiles
   RewriteRule ^(religion|language|culture|movement|government|ideology|work|life|city|battle)/?$ /profiles?kind=$1 [R=301,L]
   RewriteRule ^empire/?$ /profiles [R=301,L]

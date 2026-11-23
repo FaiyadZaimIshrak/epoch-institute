@@ -3456,6 +3456,31 @@ the globe, E6 cities through time, E7 battles as pages, E8 sources under each pr
     register's ?v= had not been raised for wave ms1, so a reader's copy could be a week old).
   - life-emblems.ps1 cannot overwrite an emblem that exists (GDI+ "generic error" on Save): move the old file away first.
 
+- **Five small fixes (23 Nov 2026):**
+  - **A BCE range read as CE.** In "in 408–407 BCE", "c. 1275–1274 BCE", "from 1200 to 1150 BCE" or "between 1274 and
+    1269 BCE" the first year was read as CE, so a dated event named beside the range lost its link. ENC_FN.near
+    (encyclopedia-links.js) and EncNear (scripts/lib/enc-fn.ps1) now give the first year the era of the second
+    ("and" joins a range only after "between"). scripts/tests/linker-years.js runs both on the same sentences.
+    Carried through: 6 state links (relink-states.js over the 293 entries dated BCE; three namesakes excluded),
+    11 profile links on 8 profiles (rescanned), 29 links in the built pages. All read; none wrong.
+  - **A person is not linked by the plural of their name** (build-pages.ps1 LinkDesc; the pattern's length is kept as
+    `pl`): "Herders move seasonally" linked Herder, "St Davids" King David, "the Solomons" Solomon, "the Pampas"
+    Adikavi Pampa, "the Banas" Banabhatta, "the Bogomils" the priest. 73 links came off. Five were right (a name's
+    own form in -s: Wasusarmas, Awarikus, Teias, Hamilcar Barcas, Magnus Lagabøtes): give such a form to the entry as
+    a pattern. Profiles (generator.html) do not have the rule.
+  - **scripts/entry-more-nolink.tsv:** the second column may be `entry=Link text`, which takes off only the links with
+    that text ("the young Duke of Bouillon" on Godefroy Maurice's page; his father's earlier link stays).
+  - **Six entry names said "BC"** (three consuls, the two battles of Coronea, Beneventum): now BCE; the addresses keep
+    "-bc". A renamed entry needs its name changed in encyclopedia-data.js, its link row, its preview card and its
+    search row (written with its slug, since the slug no longer follows from the name).
+  - **Lady Hyegyeong had two entries.** lady-hyegyong (wave a7w4) is folded into lady-hyegyeong (wave a7m): removed
+    from encyclopedia-data.js, added-entries.json, the preview cards, the search index and its facets row (the same
+    place in the list); its link row keeps its place with text that matches nothing; the kept entry has the pattern
+    "Lady Hyegyŏng"; /encyclopedia/lady-hyegyong answers 301 (root .htaccess). The builder deletes the stale page.
+  - "ivory" (the Ivory trade, 544 links) was read and left: about three quarters are trade contexts.
+  - Tools kept outside the repository: %LOCALAPPDATA%\epoch-tools\gaps (build-diff.js: the links a build gained and
+    lost, by page and place; where.js: every link to an entry on the built pages; prof-diff.js for the profiles).
+
 ## Connections map and the states register
 - `data/polities.json` — register of every state (incl. the modern Levant: Israel, the State of Palestine, Jordan, Lebanon, Syria — added by hand Oct 2026, successor links to the mandates): nodes {id, n name, t type, b broad region, s/e years, a aka, m mode, c capital, mo modern countries, p profile url} and links {s, t, r relation, f/u years}. Successions stored one way (successor-of). Built from regional research files by the scratchpad states/merge.ps1 (dedupe, relation resolution, validation report).
 - `connections` page + `connections-map.js` (no D3; radial layout, timeline, year slider, outliers). Empire pages include a lazy-loaded mini map (section #connections).

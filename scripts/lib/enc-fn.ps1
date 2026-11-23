@@ -32,6 +32,9 @@ function EncYears([string]$s) {
 }
 $script:EncYR = New-Object Text.RegularExpressions.Regex('(?:\b(?:AD|CE)\s+(\d{1,4})\b)|(?:\b(\d{1,4})\s*(BCE|BC|CE|AD)\b)|(?:\b(?:in|by|from|until|till|to|c\.|ca\.|circa|around|about|before|after|since|between|and)\s+(\d{3,4})\b(?!\s*(?:BCE|BC|men|soldiers|troops|people|ships|horses|km|kilometres|miles|years)\b))|(?:(?<![\d,.])\b(1\d{3}|20\d{2})(?![\d,]|\s*(?:BCE|BC|men|soldiers|troops|people|ships|horses|km|kilometres|miles)\b))', 'CultureInvariant')
 $script:EncSent = New-Object Text.RegularExpressions.Regex('[.!?]["\u2019\u201D)]?\s+(?=[A-Z\u201C"\u2018(])', 'CultureInvariant')
+# the first year of a range takes the era of the second: "in 408–407 BCE", "from 1200 to 1150 BCE", "between 480 and 479 BCE"
+$script:EncRng = New-Object Text.RegularExpressions.Regex('^\s*(?:[\u2013\-/]|to)\s*(?:c\.\s*)?\d{1,4}\s*(?:BCE|BC)\b', 'CultureInvariant')
+$script:EncRngAnd = New-Object Text.RegularExpressions.Regex('^\s*and\s*(?:c\.\s*)?\d{1,4}\s*(?:BCE|BC)\b', 'CultureInvariant')
 function EncNear([string]$text, [int]$s, [int]$e) {
   $a = [Math]::Max(0, $s - 300); $b = [Math]::Min($text.Length, $e + 300)
   $m = $script:EncSent.Match($text, $a); while ($m.Success -and $m.Index -lt $s) { $a = $m.Index + $m.Length; $m = $m.NextMatch() }
@@ -40,6 +43,7 @@ function EncNear([string]$text, [int]$s, [int]$e) {
   foreach ($m in $script:EncYR.Matches($w)) {
     $g = $m.Groups
     $y = if ($g[1].Success) { [int]$g[1].Value } elseif ($g[2].Success) { if ($g[3].Value -cmatch 'BC') { - [int]$g[2].Value } else { [int]$g[2].Value } } elseif ($g[4].Success) { [int]$g[4].Value } else { [int]$g[5].Value }
+    if ($g[4].Success -or $g[5].Success) { $rest = $w.Substring($m.Index + $m.Length, [Math]::Min(26, $w.Length - $m.Index - $m.Length)); if ($script:EncRng.IsMatch($rest) -or ($m.Value -match '^between\b' -and $script:EncRngAnd.IsMatch($rest))) { $y = - $y } }
     $ts = $a + $m.Index; $te = $ts + $m.Length; $d = if ($te -le $s) { $s - $te } elseif ($ts -ge $e) { $ts - $e } else { 0 }
     if ($ts -lt $e -and $te -gt $s) { continue }
     if (-not $best -or $d -lt $best.d) { $best = @{ y = $y; d = $d } }
