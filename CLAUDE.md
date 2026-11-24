@@ -3804,6 +3804,31 @@ then declutter. Answers: about 100 each; all sections; menus by subject plus hub
     of a block (Ney's attack at Waterloo, Anderson at Gettysburg).
   - scripts/battles/closeup.js <dir> <slug> --at=<phases> [--light] [--phone]: one phase full width, for judging the
     drawing. The step buttons wrap (.bf-dots).
+- **The field as a map, the battle as a film (24 Nov 2026, later; the user chose: military map symbols, ranks of marks,
+  a topographic map with a legend, and marching, fighting, continuous play with pause and a camera).** battle-map.js was
+  rewritten; this replaces the "Ground" and "Pictures by age" paragraphs above (shaded relief, tree crowns and the
+  shield, musket and ship pictures are gone). The plans are unchanged: nothing here adds a fact.
+  - **Ground (terrain, groundKey, GROUND):** contours over a height tint (every third heavier; more and closer on a
+    mountain), woodland as a tint with tree signs, marsh as the tuft sign, water blue with a bank line, cased roads,
+    walls with towers, ditches, buildings as black blocks, forts with bastions, bridges and fords across their river.
+    The legend (ul.bf-key) lists the sides, the kinds of formation on the field (li.bf-key-u) and only the ground the
+    field has (li.bf-key-gr). scripts/battles/css-field.js writes the whole style block of shared.css (re-runnable).
+  - **Formations (BODY, body, markEl, TAG, tag):** rows of marks in the side's colour, no box; spacing and mark by
+    kind (close squares for foot, loose dots for light troops and archers, ovals for horse, hulls for ships, a gun,
+    tank or tent sign). Beside the name a framed symbol: crossed lines infantry, one diagonal cavalry, a dot
+    artillery, an oval armour (the military-map signs); the others are made in their manner and named in the legend.
+    Hidden: faint, with a dashed outline of the ground held; broken: the marks scatter; destroyed: they lie grey.
+  - **The film:** every frame is a function of the time alone (render(t)); phase i is reached by a march (MOVE[i]) and
+    then held while its words are read (HOLD[i], by the text's length). Play runs on, Pause holds, the time bar
+    (input.bf-scrub) goes to any moment, the numbered steps go to a phase's hold, Next plays one march. Play from the
+    opening starts moving within a second. Routes are shallow curves (ROUTE); a formation faces the way it marches
+    and its marks lag a little; trails, strike arrows, a flash where lines meet, shots in arcs for archers, guns,
+    ships, armour and (from 1500) foot, smoke from 1400 (data.y), a lunge and recoil in close fighting (buildFx, runFx).
+  - **Camera (camOf, setView):** the viewBox moves in on what changes in a phase (never closer than about twice; a
+    phase that spans the field shows it whole); names scale and stay in view (--bf-fs, --bf-z). "Whole field"
+    (button.bf-cam) turns it off. Reduced motion: no film, no camera, no time bar: steps at once.
+  - **API for tests** (root._bf): go, seek, time, total, starts, phase, playing, camera(on), view. A slowed phone (4x)
+    spends 6-8 ms of script a frame on the fullest fields (about 600 marks). scripts/tests/battle-maps.js (18 checks).
 
 ## Connections map and the states register
 - `data/polities.json` — register of every state (incl. the modern Levant: Israel, the State of Palestine, Jordan, Lebanon, Syria — added by hand Oct 2026, successor links to the mandates): nodes {id, n name, t type, b broad region, s/e years, a aka, m mode, c capital, mo modern countries, p profile url} and links {s, t, r relation, f/u years}. Successions stored one way (successor-of). Built from regional research files by the scratchpad states/merge.ps1 (dedupe, relation resolution, validation report).

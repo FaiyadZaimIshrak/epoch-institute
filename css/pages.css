@@ -3022,8 +3022,8 @@ body.has-tab-bar .consent-bar { bottom: calc(68px + env(safe-area-inset-bottom, 
 .start-tag { display: inline-block; margin-left: 8px; vertical-align: 2px; font-family: var(--font-ui); font-size: 10px; font-weight: 700;
   font-style: normal; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1; padding: 3px 6px; border-radius: 3px;
   color: var(--gold); border: 1px solid var(--gold); }
-.battle-field { --bf-a: #3f8ae6; --bf-b: #e2604e; --bf-c: #c98500; --bf-d: #2f9e44; --bf-ground: #1a1e17; --bf-tuft: #3a4430; --bf-water: #24507a; --bf-bank: #122a40; --bf-glint: #6fa3cf; --bf-hill: #343225; --bf-hill-hi: #5a5539; --bf-shade: #000; --bf-wood: #16281b; --bf-crown: #2b5236; --bf-crown-hi: #3f7350; --bf-crown-edge: #142418; --bf-marsh: #1f302c; --bf-sand: #6b6549; --bf-roof: #9a5f47; --bf-road: #57523f; --bf-line: #6d6a5c; --bf-ink: #0b0c10; }
-[data-theme="light"] .battle-field { --bf-a: #2466c2; --bf-b: #c23b2a; --bf-c: #8a5a00; --bf-d: #1f7a34; --bf-ground: #e9e2c9; --bf-tuft: #b9b48a; --bf-water: #8fbadb; --bf-bank: #5f8fb5; --bf-glint: #eaf4fb; --bf-hill: #cdbf99; --bf-hill-hi: #f1e8cc; --bf-shade: #5b4a25; --bf-wood: #a9c392; --bf-crown: #86ad6f; --bf-crown-hi: #add090; --bf-crown-edge: #55794a; --bf-marsh: #c3d3bd; --bf-sand: #f3e9c4; --bf-roof: #b9674b; --bf-road: #f7f0dc; --bf-line: #8d8266; --bf-ink: #fffaf0; }
+.battle-field { --bf-a: #5aa0f2; --bf-b: #ef6f5c; --bf-c: #d99a1c; --bf-d: #46b35c; --bf-ground: #20241d; --bf-tint: #2e2c1f; --bf-contour: #8a7650; --bf-water: #2c5f8f; --bf-bank: #6fa8dc; --bf-wood: #24382a; --bf-tree: #6fae7c; --bf-marsh: #223a3a; --bf-reed: #63b0b8; --bf-built: #d8d2c0; --bf-road: #20241d; --bf-line: #8f8a78; --bf-ink: #0b0c10; --bf-smoke: #d8d8d0; }
+[data-theme="light"] .battle-field { --bf-a: #1f5fbd; --bf-b: #c0392b; --bf-c: #8a5a00; --bf-d: #1f7a34; --bf-ground: #f3eedd; --bf-tint: #ebdfbd; --bf-contour: #a8763c; --bf-water: #a8cdec; --bf-bank: #3f7fb8; --bf-wood: #d3e6c2; --bf-tree: #3f8a45; --bf-marsh: #dcecec; --bf-reed: #2f7f8c; --bf-built: #2a2620; --bf-road: #fffdf5; --bf-line: #6f6650; --bf-ink: #fffaf0; --bf-smoke: #6f6a60; }
 .battle-field { margin: 0 0 36px; }
 .bf-lede { color: var(--muted); margin: 0 0 14px; }
 .bf-box { border: 1px solid var(--border); border-radius: var(--radius, 10px); background: var(--surface); overflow: hidden; }
@@ -3032,53 +3032,39 @@ body.has-tab-bar .consent-bar { bottom: calc(68px + env(safe-area-inset-bottom, 
 .bf-ground { fill: var(--bf-ground); }
 .bf-ground.bf-sea { fill: var(--bf-water); }
 .bf-ground-tex { pointer-events: none; }
-.bf-tuft { stroke: var(--bf-tuft); stroke-width: 1.3; stroke-linecap: round; opacity: .8; }
-.bf-wave { stroke: var(--bf-glint); stroke-width: 1.3; stroke-linecap: round; opacity: .35; }
-.bf-g-hi { stop-color: var(--bf-hill-hi); }
-.bf-g-lo { stop-color: var(--bf-hill); }
-.bf-g-v0 { stop-color: #000; stop-opacity: 0; }
-.bf-g-v1 { stop-color: #000; stop-opacity: .16; }
-.bf-vig { pointer-events: none; }
-.bf-t-sh { fill: var(--bf-shade); opacity: .22; }
-.bf-t-base { stroke: var(--bf-line); stroke-width: 1; }
-.bf-t-hach { stroke: var(--bf-line); stroke-width: 1.1; stroke-linecap: round; opacity: .75; }
-.bf-t-in { fill: var(--bf-hill-hi); fill-opacity: .3; stroke: var(--bf-line); stroke-width: .8; stroke-opacity: .55; }
-.bf-t-mountain .bf-t-in { fill-opacity: .24; stroke-opacity: .7; }
-.bf-t-wood .bf-t-floor { fill: var(--bf-wood); }
-.bf-crown { fill: var(--bf-crown); stroke: var(--bf-crown-edge); stroke-width: .9; }
-.bf-crown-hi { fill: var(--bf-crown-hi); opacity: .8; }
-.bf-t-marsh .bf-t-floor { fill: var(--bf-marsh); }
-.bf-reed { stroke: var(--bf-crown-edge); stroke-width: 1.3; stroke-linecap: round; opacity: .85; }
-.bf-pool { stroke: var(--bf-water); stroke-width: 2.6; stroke-linecap: round; opacity: .9; }
-.bf-t-sea .bf-t-floor, .bf-t-lake .bf-t-floor { fill: var(--bf-water); }
-.bf-shore { stroke: var(--bf-sand); stroke-width: 9; stroke-linejoin: round; opacity: .75; }
-.bf-wavel { stroke: var(--bf-glint); stroke-width: 1.1; stroke-dasharray: 16 12; opacity: .4; }
-.bf-t-land .bf-t-floor { fill: var(--bf-ground); }
-.bf-surf { stroke: var(--bf-sand); stroke-width: 10; stroke-linejoin: round; opacity: .8; }
-.bf-t-grain { pointer-events: none; }
-.bf-bank, .bf-water, .bf-glint, .bf-road-c, .bf-road-f, .bf-wall, .bf-wall-t, .bf-ditch, .bf-ditch-h { fill: none; stroke-linecap: round; stroke-linejoin: round; }
-.bf-t-river .bf-bank { stroke: var(--bf-bank); stroke-width: 15; }
-.bf-t-river .bf-water { stroke: var(--bf-water); stroke-width: 11; }
-.bf-glint { stroke: var(--bf-glint); stroke-width: 1.3; stroke-dasharray: 18 26; opacity: .6; }
-.bf-t-stream .bf-bank { stroke: var(--bf-bank); stroke-width: 7.5; }
-.bf-t-stream .bf-water { stroke: var(--bf-water); stroke-width: 4.5; }
-.bf-road-c { stroke: var(--bf-line); stroke-width: 5.5; }
-.bf-road-f { stroke: var(--bf-road); stroke-width: 3.2; }
-.bf-wall { stroke: var(--text); stroke-width: 5; stroke-linecap: butt; }
-.bf-wall-t { stroke: var(--text); stroke-width: 12; stroke-linecap: butt; stroke-dasharray: 8 26; }
-.bf-ditch { stroke: var(--bf-shade); stroke-width: 7; opacity: .3; }
-.bf-ditch-h { stroke: var(--bf-line); stroke-width: 7; stroke-linecap: butt; stroke-dasharray: 1.5 4; }
-.bf-house { fill: var(--bf-roof); stroke: var(--bf-ink); stroke-width: .9; }
-.bf-ridge { stroke: var(--bf-ink); stroke-width: .9; opacity: .6; fill: none; }
-.bf-fort { fill: var(--muted); stroke: var(--bf-ink); stroke-width: 1; }
-.bf-fort-in { fill: var(--bf-ground); stroke: none; }
-.bf-deck { fill: var(--bf-road); stroke: var(--text); stroke-width: 1.4; }
-.bf-rail { stroke: var(--text); stroke-width: 1.8; stroke-linecap: round; }
-.bf-ford-l { stroke: var(--bf-sand); stroke-width: 2.2; stroke-dasharray: 2 4; stroke-linecap: round; }
-.bf-pool-f { fill: var(--bf-water); stroke: var(--bf-bank); stroke-width: 1.2; }
-.bf-ripple { stroke: var(--bf-water); stroke-width: 1.4; opacity: .7; }
-.bf-t-point circle { fill: var(--text); stroke: none; }
-.bf-tl, .bf-edge, .bf-n text { font-size: calc(var(--bf-fs, 15px) * .92); font-style: italic; fill: var(--muted); paint-order: stroke; stroke: var(--bf-ground); stroke-width: 4px; stroke-linejoin: round; }
+.bf-wave { stroke: var(--bf-bank); stroke-width: 1.2; stroke-linecap: round; opacity: .45; }
+.bf-frame { stroke: var(--bf-line); stroke-width: 2; opacity: .55; pointer-events: none; }
+.bf-t-tint { fill: var(--bf-tint); stroke: none; }
+.bf-t-ct { stroke: var(--bf-contour); stroke-width: .9; opacity: .8; }
+.bf-t-ci { stroke-width: 1.7; opacity: 1; }
+.bf-t-wood .bf-t-floor { fill: var(--bf-wood); stroke: var(--bf-tree); stroke-width: 1; stroke-dasharray: 1 4; stroke-linecap: round; }
+.bf-tree { stroke: var(--bf-tree); stroke-width: 1.25; stroke-linecap: round; }
+.bf-t-marsh .bf-t-floor { fill: var(--bf-marsh); stroke: none; }
+.bf-reed { stroke: var(--bf-reed); stroke-width: 1.25; stroke-linecap: round; }
+.bf-t-sea .bf-t-floor, .bf-t-lake .bf-t-floor { fill: var(--bf-water); stroke: none; }
+.bf-t-land .bf-t-floor { fill: var(--bf-ground); stroke: none; }
+.bf-shore { stroke: var(--bf-bank); stroke-width: 1.6; stroke-linejoin: round; }
+.bf-wavel { stroke: var(--bf-bank); stroke-width: 1; stroke-dasharray: 14 10; opacity: .6; }
+.bf-bank, .bf-water, .bf-road-c, .bf-road-f, .bf-wall, .bf-wall-t, .bf-ditch, .bf-ditch-h { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.bf-t-river .bf-bank { stroke: var(--bf-bank); stroke-width: 11; }
+.bf-t-river .bf-water { stroke: var(--bf-water); stroke-width: 8; }
+.bf-t-stream .bf-bank { stroke: var(--bf-bank); stroke-width: 3.2; }
+.bf-t-stream .bf-water { stroke: var(--bf-water); stroke-width: 1.2; }
+.bf-road-c { stroke: var(--bf-built); stroke-width: 5; }
+.bf-road-f { stroke: var(--bf-road); stroke-width: 2.6; }
+.bf-wall { stroke: var(--bf-built); stroke-width: 4.5; stroke-linecap: butt; }
+.bf-wall-t { stroke: var(--bf-built); stroke-width: 11; stroke-linecap: butt; stroke-dasharray: 7 26; }
+.bf-ditch { stroke: var(--bf-built); stroke-width: 1.4; }
+.bf-ditch-h { stroke: var(--bf-built); stroke-width: 7; stroke-linecap: butt; stroke-dasharray: 1.4 5; opacity: .8; }
+.bf-bld { fill: var(--bf-built); stroke: none; }
+.bf-fort { fill: var(--bf-ground); stroke: var(--bf-built); stroke-width: 2; stroke-linejoin: miter; }
+.bf-deck { fill: var(--bf-road); stroke: var(--bf-built); stroke-width: 1.3; }
+.bf-rail { stroke: var(--bf-built); stroke-width: 1.8; stroke-linecap: round; }
+.bf-ford-l { stroke: var(--bf-built); stroke-width: 1.8; stroke-dasharray: 3 3; }
+.bf-pool-f { fill: var(--bf-water); stroke: var(--bf-bank); stroke-width: 1.4; }
+.bf-spring-t { stroke: var(--bf-bank); stroke-width: 1.6; stroke-linecap: round; }
+.bf-t-point circle { fill: var(--bf-built); stroke: none; }
+.bf-tl, .bf-edge, .bf-n text { font-size: calc(var(--bf-fs, 15px) * .92); font-style: italic; fill: var(--muted); paint-order: stroke; stroke: var(--bf-ground); stroke-width: calc(4px * var(--bf-z, 1)); stroke-linejoin: round; }
 .bf-edge { font-style: normal; letter-spacing: .04em; }
 .bf-n path { stroke: var(--muted); stroke-width: 2; }
 .bf-n text { font-style: normal; font-weight: 700; }
@@ -3087,34 +3073,42 @@ body.has-tab-bar .consent-bar { bottom: calc(68px + env(safe-area-inset-bottom, 
 .bf-s2 { --c: var(--bf-c); }
 .bf-s3 { --c: var(--bf-d); }
 .bf-s9 { --c: var(--muted); }
-.bf-blk { fill: var(--c); stroke: var(--bf-ink); stroke-width: 1.6; }
-.bf-u { filter: drop-shadow(0 2px 1.5px rgba(0, 0, 0, .4)); }
-.bf-u.is-hidden, .bf-u.is-routed, .bf-u.is-destroyed { filter: none; }
-.bf-camp { fill: none; stroke: var(--c); stroke-width: 3; }
-.bf-mk { stroke: var(--bf-ink); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
-.bf-mk-f { fill: var(--bf-ink); stroke: none; }
-.bf-ic-c { stroke: var(--c); stroke-width: 2; stroke-linecap: round; fill: none; }
-.bf-ic-t { stroke-width: 1; }
-.bf-u.is-hidden .bf-ic-c, .bf-u.is-routed .bf-ic-c, .bf-u.is-destroyed .bf-ic-c { display: none; }
-.bf-u.is-hidden .bf-blk { fill-opacity: .25; stroke: var(--c); stroke-dasharray: 5 4; }
-.bf-u.is-hidden .bf-mk { stroke: var(--c); }
-.bf-u.is-hidden .bf-mk-f { fill: var(--c); }
-.bf-u.is-routed .bf-blk { stroke: var(--c); stroke-width: 2; stroke-dasharray: 4 3; fill-opacity: .38; }
-.bf-u.is-routed .bf-mk { stroke: var(--c); }
-.bf-u.is-routed .bf-mk-f { fill: var(--c); }
-.bf-ul { font-size: var(--bf-fs, 15px); font-weight: 650; fill: var(--text); paint-order: stroke; stroke: var(--bf-ground); stroke-width: 4.5px; stroke-linejoin: round; }
+.bf-m { fill: var(--c); stroke: var(--bf-ink); stroke-width: .8; }
+.bf-m-l { fill: none; stroke: var(--c); stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round; }
+.bf-m-o { fill: var(--bf-ground); stroke: var(--c); stroke-width: 1.8; stroke-linejoin: round; }
+.bf-hold { display: none; fill: var(--c); fill-opacity: .1; stroke: var(--c); stroke-width: 1.4; stroke-dasharray: 5 4; }
+.bf-u.is-hidden .bf-hold { display: block; }
+.bf-u.is-hidden .bf-m { fill-opacity: .35; stroke-opacity: .3; }
+.bf-u.is-hidden .bf-m-l, .bf-u.is-hidden .bf-m-o { stroke-opacity: .45; }
+.bf-u.is-routed .bf-m { stroke: none; }
+.bf-u.is-destroyed .bf-m { fill: var(--muted); stroke: none; fill-opacity: .75; }
+.bf-u.is-destroyed .bf-m-l, .bf-u.is-destroyed .bf-m-o { stroke: var(--muted); }
+.bf-ul { font-size: var(--bf-fs, 15px); font-weight: 650; fill: var(--text); paint-order: stroke; stroke: var(--bf-ground); stroke-width: calc(4.5px * var(--bf-z, 1)); stroke-linejoin: round; }
 .bf-ul.bf-ld { font-weight: 400; font-style: italic; font-size: calc(var(--bf-fs, 15px) * .9); fill: var(--c); }
+.bf-tag-f { fill: var(--bf-ground); stroke: var(--c); stroke-width: 2; }
+.bf-tag-l { stroke-dasharray: 4 2.5; }
+.bf-tag-g { stroke: var(--c); stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; }
+.bf-tag-d { fill: var(--c); }
+.bf-ring { stroke: var(--c); stroke-width: calc(3px * var(--bf-z, 1)); }
+.bf-lg.is-hidden { opacity: .75; }
+.bf-lg.is-destroyed { opacity: .7; }
+.bf-tie { stroke: var(--muted); stroke-width: 1.2; stroke-dasharray: 2 3; }
 .bf-ar { stroke: var(--c); stroke-linecap: round; }
 .bf-ah { fill: var(--c); }
-.bf-ar-hit { stroke-width: 4.5; }
-.bf-ar-move { stroke-width: 2.4; opacity: .75; }
-.bf-ar-back { stroke-width: 2.4; stroke-dasharray: .04 .035; opacity: .8; }
-.bf-ar-feint { stroke-width: 2.4; stroke-dasharray: .012 .03; opacity: .9; }
+.bf-ar-hit { stroke-width: 4.2; }
+.bf-ar-move { stroke-width: 2.2; stroke-dasharray: 1 6; }
+.bf-ar-back { stroke-width: 2.2; stroke-dasharray: 5 6; }
+.bf-ar-feint { stroke-width: 2.2; stroke-dasharray: 1.5 4; }
+.bf-clash { fill: var(--c); stroke: var(--bf-ground); stroke-width: 1.5; }
+.bf-shot { fill: var(--c); stroke: var(--bf-ink); stroke-width: .6; }
+.bf-smoke { fill: var(--bf-smoke); }
 .bf-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 10px 14px; border-top: 1px solid var(--border); }
 .bf-btn, .bf-dot { font: inherit; font-family: var(--font-ui, inherit); font-size: .92rem; color: var(--text); background: transparent; border: 1px solid var(--field-border, var(--border)); border-radius: 999px; padding: 6px 14px; min-height: 36px; cursor: pointer; }
 .bf-btn:disabled { opacity: .4; cursor: default; }
 .bf-play { background: var(--gold); border-color: var(--gold); color: var(--bg); font-weight: 700; min-width: 84px; }
-.bf-dots { display: flex; flex-wrap: wrap; gap: 6px; margin-left: auto; }
+.bf-cam[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
+.bf-scrub { flex: 1 1 160px; min-width: 120px; height: 36px; margin: 0; accent-color: var(--gold); cursor: pointer; }
+.bf-dots { display: flex; flex-wrap: wrap; gap: 6px; width: 100%; }
 .bf-dot { width: 36px; padding: 0; text-align: center; }
 .bf-dot.is-done { border-color: var(--gold); }
 .bf-dot.is-on { background: var(--text); color: var(--bg); border-color: var(--text); font-weight: 700; }
@@ -3126,31 +3120,23 @@ body.has-tab-bar .consent-bar { bottom: calc(68px + env(safe-area-inset-bottom, 
 .bf-key li { display: flex; align-items: center; gap: 7px; }
 .bf-key-s { color: var(--text); font-weight: 600; }
 .bf-sw { width: 22px; height: 12px; border-radius: 3px; background: var(--c); }
-.bf-key-g { width: 30px; height: 16px; }
+.bf-sw-hid { background: transparent; border: 1.5px dashed var(--muted); box-sizing: border-box; }
+.bf-key-g { width: 38px; height: 21px; border-radius: 3px; background: var(--bf-ground); }
+.bf-key-t { width: 30px; height: 26px; background: none; }
 .bf-note { margin: 0; padding: 0 16px 12px; font-size: .85rem; color: var(--muted); }
 .bf-on .bf-phases { display: none; }
 .bf-phases { padding-left: 1.3em; }
 .bf-phases li { margin: 0 0 10px; }
 .bf-phases b { display: block; }
 @media (max-width: 600px) {
-.bf-dots { margin-left: 0; width: 100%; }
 .bf-cap { min-height: 11.5em; }
 .bf-btn { padding: 6px 12px; }
+.bf-scrub { flex-basis: 100%; order: 5; }
 }
 @media print {
 .bf-box { display: none; }
 .bf-on .bf-phases { display: block; }
 }
-.bf-ring { stroke: var(--c); stroke-width: 3; }
-.bf-lg.is-hidden { opacity: .75; }
-.bf-sw-hid { background: transparent; border: 1.5px dashed var(--muted); box-sizing: border-box; }
-.bf-tie { stroke: var(--muted); stroke-width: 1.2; stroke-dasharray: 2 3; }
-.bf-clash { fill: var(--c); stroke: var(--bf-ground); stroke-width: 1.5; }
-.bf-x { display: none; fill: none; stroke: var(--c); stroke-width: 3.5; stroke-linecap: round; }
-.bf-u.is-destroyed .bf-blk { fill: none; stroke: var(--c); stroke-width: 1.6; stroke-dasharray: 2 4; }
-.bf-u.is-destroyed .bf-mk, .bf-u.is-destroyed .bf-mk-f { display: none; }
-.bf-u.is-destroyed .bf-x { display: block; }
-.bf-lg.is-destroyed { opacity: .7; }
 :root[data-skin="winter"]:not([data-kids="1"]) {
   --bg: #0a1320; --surface: #101c2c; --border: #24384e; --field-border: #5f7a94; --text: #e6edf3; --muted: #94a6b8;
   --gold: #d4b55c; --gold-light: #efd48c; --gold-rgb: 212,181,92; --gold-light-rgb: 239,212,140;

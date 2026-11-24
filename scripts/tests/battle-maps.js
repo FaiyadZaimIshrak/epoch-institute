@@ -17,7 +17,7 @@ let fails = 0; const ok = (n, c, x) => { console.log((c ? 'ok   ' : 'FAIL ') + n
   ok('each battle page holds its phases as a list, and its data file exists', !noList.length, noList.slice(0, 5));
   const data = drawn.map(p => JSON.parse(fs.readFileSync(path.join(R, 'data', 'battles', p.slug + '.json'), 'utf8')));
   ok('the data files carry no quotations, and no portrait of a person never depicted', data.every(d => !JSON.stringify(d).includes('"quote"')) && data.every(d => d.units.every(u => !u.pic || !/\/(muhammad|ali|ali-ibn-abi-talib)\.jpg$/.test(u.pic))));
-  ok('wired: the cache rule, the deploy list and the stylesheet know the player', /battle-map\\\.js/.test(fs.readFileSync(path.join(R, '.htaccess'), 'utf8')) && /data\/battles/.test(fs.readFileSync(path.join(R, 'scripts', 'deploy.sh'), 'utf8')) && fs.readFileSync(path.join(R, 'css', 'pages.css'), 'utf8').includes('.bf-blk'));
+  ok('wired: the cache rule, the deploy list and the stylesheet know the player', /battle-map\\\.js/.test(fs.readFileSync(path.join(R, '.htaccess'), 'utf8')) && /data\/battles/.test(fs.readFileSync(path.join(R, 'scripts', 'deploy.sh'), 'utf8')) && fs.readFileSync(path.join(R, 'css', 'pages.css'), 'utf8').includes('.bf-m ') && fs.readFileSync(path.join(R, 'css', 'pages.css'), 'utf8').includes('.bf-t-ct'));
 
   const srv = await serve(8793), b = await edge(), base = 'http://localhost:8793';
   try {
@@ -38,14 +38,26 @@ let fails = 0; const ok = (n, c, x) => { console.log((c ? 'ok   ' : 'FAIL ') + n
     const playing = await pg.evaluate(() => document.querySelector('#how-it-was-fought .bf-play').textContent);
     ok('Play moves on by itself and can be paused', s.phase >= 1 && playing === 'Pause', [s.phase, playing]);
     await pg.click('#how-it-was-fought .bf-play'); await pg.screenshot({ path: path.join(out, 'battle-field-desktop.png') });
+    // the film: Pause holds the moment; the time bar goes to any moment; the end is the last phase; the legend lists what the field has
+    const film = await pg.evaluate(async () => { const e = document.getElementById('how-it-was-fought'), m = e._bf, wait = ms => new Promise(r => setTimeout(r, ms)), t1 = m.time(); await wait(500); const t2 = m.time(), held = !m.playing();
+      const sc = e.querySelector('.bf-scrub'); sc.value = 500; sc.dispatchEvent(new Event('input')); const mid = m.time(), midPhase = m.phase(), want = m.starts.filter(x => x <= mid + 1).length - 1, moving = m.starts.findIndex(x => x > mid);
+      m.seek(m.total); const end = m.phase(); m.camera(true); m.seek(m.starts[1] - 300); const zoomed = m.view()[2]; e.querySelector('.bf-cam').click(); const whole = m.view()[2];
+      return { held, same: Math.abs(t2 - t1) < 1, mid: Math.abs(mid - m.total / 2) < m.total * 0.01, midOk: midPhase === want || midPhase === moving, end, n: m.phases, zoomed, whole, pressed: e.querySelector('.bf-cam').getAttribute('aria-pressed') }; });
+    ok('Pause holds the film, the time bar goes to any moment, and the film ends on the last phase', film.held && film.same && film.mid && film.midOk && film.end === film.n - 1, film);
+    ok('the camera moves in on the fighting, and "Whole field" shows all of it', film.zoomed <= 1000 && film.whole === 1000 && film.pressed === 'true', [film.zoomed, film.whole]);
+    const leg = await pg.evaluate(() => { const e = document.getElementById('how-it-was-fought'); return { ground: [...e.querySelectorAll('.bf-key-gr')].map(l => l.textContent), units: [...e.querySelectorAll('.bf-key-u')].map(l => l.textContent), marks: e.querySelectorAll('.bf-u .bf-m').length, tags: e.querySelectorAll('.bf-lg .bf-tag').length, blocks: e.querySelectorAll('.bf-u').length }; });
+    const GR = { hill: 'High ground (contours)', ridge: 'High ground (contours)', mountain: 'High ground (contours)', wood: 'Woodland', marsh: 'Marsh', river: 'River', stream: 'Stream', sea: 'Sea', lake: 'Lake', road: 'Road', wall: 'Wall', ditch: 'Ditch', town: 'Town', village: 'Village', fort: 'Fort', bridge: 'Bridge', ford: 'Ford', spring: 'Spring' };
+    const wantG = [...new Set((first.terrain || []).map(x => GR[x.k]).filter(Boolean))].sort(), wantU = new Set(first.units.map(u => u.k)).size;
+    ok('the legend lists the ground this field has and its kinds of formation, each formation is ranks of marks with its symbol', leg.ground.slice().sort().join('|') === wantG.join('|') && leg.units.length === wantU && leg.tags === leg.blocks && leg.marks >= leg.blocks * 3, leg);
     ok('no script error on the page', !pg._errs.length, pg._errs.slice(0, 2)); await ctx.close();
 
     // every plan: mounts, and no block or name leaves the field in any phase
     const all = await mk({ viewport: { width: 1280, height: 900 } }), bad = [];
     for (const p of drawn) {
       const q = await open(all, p.slug);
-      const r = await q.evaluate(() => { const e = document.getElementById('how-it-was-fought'), m = e._bf, svg = e.querySelector('.bf-svg'), box = svg.getBoundingClientRect(), outs = [];
-        for (let i = 0; i < m.phases; i++) { m.go(i); for (const g of svg.querySelectorAll('.bf-u, .bf-lg')) { if (g.style.display === 'none' || +g.style.opacity === 0) continue; const r = g.getBoundingClientRect(); if (r.width && (r.left < box.left - 2 || r.right > box.right + 2 || r.top < box.top - 2 || r.bottom > box.bottom + 2)) outs.push(i + 1); } }
+      const r = await q.evaluate(() => { const e = document.getElementById('how-it-was-fought'), m = e._bf, svg = e.querySelector('.bf-svg'), box = svg.getBoundingClientRect(), outs = []; m.camera(false);   // the whole field: with the camera in, what is out of view is rightly out of the picture
+        for (let i = 0; i < m.phases; i++) { m.go(i); for (const g of svg.querySelectorAll('.bf-u, .bf-lg')) { if (g.style.display === 'none' || +g.style.opacity === 0) continue; const r = g.getBoundingClientRect(), tol = g.classList.contains('bf-u') ? 30 : 2;   // the scattered marks of a broken formation may pass the edge by a little (the plan is clipped there); a name may not
+          if (r.width && (r.left < box.left - tol || r.right > box.right + tol || r.top < box.top - tol || r.bottom > box.bottom + tol)) outs.push(i + 1); } }
         return [...new Set(outs)]; });
       if (r.length || q._errs.length) bad.push(p.slug + ': phases ' + r.join(',') + (q._errs.length ? ' ' + q._errs[0] : '')); await q.close();
     }
