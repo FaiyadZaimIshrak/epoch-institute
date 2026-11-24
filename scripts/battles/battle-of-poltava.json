@@ -255,15 +255,30 @@
    }
   },
   {
-   "title": "The Swedish wings pass the redoubts",
-   "text": "Roos' column overran the first two redoubts but stalled at the third. Lewenhaupt's battalions on the right and Hamilton's cavalry on the left went past the redoubts, and the Russian cavalry retreated.",
-   "quote": "The cavalry on the left wing, commanded by Major General Hamilton and an infantry regiment, advanced by passing the redoubts on the left and charged the Russian cavalry, forcing them to retreat.",
+   "title": "Roos overruns two redoubts and stalls at the third",
+   "when": "By 4:30 a.m.",
+   "text": "The Swedes in Roos' column quickly overran the first two redoubts and killed every Russian soldier inside them. By 4:30 a.m. their attempts to take the third redoubt had stalled.",
+   "quote": "The Swedes in Carl Gustaf Roos' column quickly overran the first two redoubts, killing every Russian soldier inside them, but by 4:30 a.m. the attempts to take the third redoubt stalled.",
    "at": {
     "roos": [
      56,
      35,
      0
-    ],
+    ]
+   },
+   "hits": [
+    [
+     "roos",
+     "redoubts"
+    ]
+   ]
+  },
+  {
+   "title": "The Swedish wings pass the redoubts",
+   "when": "5:00 a.m.",
+   "text": "Lewenhaupt's ten battalions on the right bypassed the first four redoubts. Hamilton's cavalry on the left passed the redoubts and charged the Russian cavalry, forcing it to retreat.",
+   "quote": "The cavalry on the left wing, commanded by Major General Hamilton and an infantry regiment, advanced by passing the redoubts on the left and charged the Russian cavalry, forcing them to retreat.",
+   "at": {
     "lew": [
      72,
      21,
@@ -285,10 +300,6 @@
    },
    "hits": [
     [
-     "roos",
-     "redoubts"
-    ],
-    [
      "ham",
      "mcav",
      -0.1
@@ -296,9 +307,9 @@
    ]
   },
   {
-   "title": "Lewenhaupt withdraws west and Roos is cut off",
-   "when": "About 5:00 a.m. to 6:00 a.m.",
-   "text": "Rehnskiöld stopped the pursuit and ordered Lewenhaupt to withdraw to the west, where the wings waited for Roos' battalions. Roos led his remaining 1,500 men into the Yakovetski woods to the east.",
+   "title": "Lewenhaupt is ordered back to the west",
+   "when": "About 5:00 a.m.",
+   "text": "Rehnskiöld ordered his cavalry to stop the pursuit and Lewenhaupt to withdraw to the west. There the wings waited for Roos' battalions for two hours.",
    "quote": "Rehnskiöld ordered his cavalry to stop their pursuit and Lewenhaupt, already advancing towards the fort, to withdraw to the west.",
    "at": {
     "lew": [
@@ -310,7 +321,18 @@
      24,
      22,
      0
-    ],
+    ]
+   },
+   "how": {
+    "lew": "retreat"
+   }
+  },
+  {
+   "title": "Roos takes his men into the Yakovetski woods",
+   "when": "6:00 a.m.",
+   "text": "Roos and six battalions, a third of the Swedish infantry, had become isolated at the third redoubt. After severe casualties he led the remaining 1,500 of his original 2,600 men into the Yakovetski woods to the east.",
+   "quote": "General Roos and six battalions (one-third of the Swedish infantry) became isolated while attempting to take the third Russian redoubt.",
+   "at": {
     "roos": [
      89,
      26,
@@ -318,14 +340,13 @@
     ]
    },
    "how": {
-    "lew": "retreat",
     "roos": "retreat"
    }
   },
   {
-   "title": "Roos is driven back and surrenders",
-   "when": "7:00 a.m. to 9:30 a.m.",
-   "text": "The Russians retook the first two redoubts and attacked Roos with ten regiments. He fell back towards Poltava, took refuge in an abandoned fort and surrendered at 9:30 a.m.",
+   "title": "The Russians attack Roos and drive him back",
+   "when": "About 7:00 a.m.",
+   "text": "The Russians reoccupied the first two redoubts and launched a two-pronged attack by ten regiments. Roos was forced to retreat towards Poltava.",
    "quote": "The Russians reoccupied the first two redoubts and launched a two-pronged attack by ten regiments around 7:00 a.m., forcing Roos to retreat towards Poltava",
    "at": {
     "regs": [
@@ -335,12 +356,31 @@
     ],
     "roos": [
      86,
-     51,
+     46,
      180
     ]
    },
    "how": {
     "roos": "retreat"
+   },
+   "hits": [
+    [
+     "regs",
+     "roos"
+    ]
+   ]
+  },
+  {
+   "title": "Roos takes refuge in a fort and surrenders",
+   "when": "9:00 a.m. to 9:30 a.m.",
+   "text": "Roos could not reach the Swedish siege works and took refuge in an abandoned fort by 9:00 a.m. He was forced to surrender at 9:30 a.m.",
+   "quote": "take refuge in an abandoned fort by 9:00 a.m. when he could not make it to the Swedish siege works. Roos was forced to surrender at 9:30 a.m.",
+   "at": {
+    "roos": [
+     86,
+     52,
+     180
+    ]
    },
    "state": {
     "roos": "destroyed"
@@ -353,10 +393,9 @@
    ]
   },
   {
-   "title": "Peter advances and the Swedish line moves forward",
-   "when": "From 9:45 a.m.",
-   "text": "Peter led his infantry out of the camp, with dragoons on his right and Menshikov's cavalry on his left. Rehnskiöld ordered Lewenhaupt and the Swedish line forward, and the Russian first line retreated towards its second line.",
-   "quote": "At 09:45, Rehnskiöld ordered Lewenhaupt and the Swedish line to move forward, advancing towards the Russian line",
+   "title": "Peter leads the Russian infantry out of the camp",
+   "text": "Peter led his infantry out of the fortified camp, with dragoons under Bauer on his right and cavalry under Menshikov on his left. West of the camp they faced the Swedish infantry, with Creutz's cavalry in the rear.",
+   "quote": "Ten regiments of dragoons formed under Lieutenant General Adolf Fredrik Bauer on the Russian right",
    "at": {
     "rinf": [
      46,
@@ -373,14 +412,22 @@
      14,
      180
     ],
-    "lew": [
-     42,
-     21,
-     0
-    ],
     "creutz": [
      40,
      32,
+     0
+    ]
+   }
+  },
+  {
+   "title": "The Swedes advance and the Russian first line gives way",
+   "when": "From 9:45 a.m.",
+   "text": "Rehnskiöld ordered Lewenhaupt and the Swedish line forward. The Swedes fired a volley, charged with muskets and pikemen, and the Russian first line retreated towards its second line.",
+   "quote": "At 09:45, Rehnskiöld ordered Lewenhaupt and the Swedish line to move forward, advancing towards the Russian line",
+   "at": {
+    "lew": [
+     42,
+     21,
      0
     ]
    },
@@ -398,22 +445,12 @@
   },
   {
    "title": "The Swedish left flank breaks",
-   "text": "The Russian line was longer, and the Swedish infantry on the left flank threw down their weapons and fled. A gap opened in the Swedish line, the Russians filled it, and Menshikov's cavalry attacked the Swedes from the rear.",
+   "text": "The Russian line was longer, and the Swedish infantry on the left flank lagged behind the right and finally threw down their weapons and fled. A gap opened in the Swedish line and the Russians filled it.",
    "quote": "With the Russian line longer than the Swedish line, the Swedish infantry on the left flank lagged behind the right and finally threw down their weapons and fled.",
    "at": {
     "lleft": [
      33,
      16,
-     0
-    ],
-    "mcav": [
-     58,
-     39,
-     180
-    ],
-    "creutz": [
-     46,
-     27,
      0
     ]
    },
@@ -429,13 +466,32 @@
      "lew"
     ],
     [
-     "mcav",
-     "creutz"
-    ],
-    [
      "bauer",
      "lleft",
      -0.2
+    ]
+   ]
+  },
+  {
+   "title": "Creutz is checked and Menshikov takes the Swedes in the rear",
+   "text": "Barely able to gather his squadrons, Creutz tried to advance on the right flank, but the Russian battalions formed hollow squares. Menshikov's cavalry outflanked the Swedes and attacked them from the rear.",
+   "quote": "Barely able to gather his cavalry squadrons, Creutz tried to advance on the right flank, but the Russian battalions were able to form into hollow squares, while Menshikov's cavalry outflanked the Swedes and attacked them from the rear.",
+   "at": {
+    "creutz": [
+     42,
+     29,
+     0
+    ],
+    "mcav": [
+     58,
+     39,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "mcav",
+     "creutz"
     ]
    ]
   },

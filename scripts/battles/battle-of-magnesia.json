@@ -321,9 +321,9 @@
    ]
   },
   {
-   "title": "Antiochus attacks on the right",
-   "text": "Antiochus led his cataphracts and agema cavalry against the Latin infantry while the argyraspides engaged the legionaries. The Roman infantry broke ranks and retreated to their camp, where the Thracians and Macedonians reinforced them.",
-   "quote": "The Roman infantry broke ranks retreating to their camp where they were reinforced by the Thracians and Macedonians",
+   "title": "Antiochus attacks and the Roman infantry retreats",
+   "text": "Antiochus led the attack with the cataphracts and agema cavalry against the Latin infantry, while the argyraspides engaged the Roman legionaries. The Roman infantry broke ranks and retreated to their camp.",
+   "quote": "Antiochus led the attack with the cataphracts and agema cavalry facing the Latin infantry",
    "at": {
     "sr": [
      30,
@@ -333,11 +333,6 @@
     "rl": [
      12,
      13,
-     270
-    ],
-    "rrear": [
-     16,
-     24,
      270
     ]
    },
@@ -352,15 +347,57 @@
    ]
   },
   {
-   "title": "The phalanx breaks",
-   "text": "The phalanx held against the Roman infantry but could not drive off the archers and slingers who shot at it. It began a slow retreat, the elephants between its units panicked, and the phalangites threw down their weapons and left the field.",
-   "quote": "The phalangites discarded their weapons and abandoned the battlefield.",
+   "title": "The Romans are reinforced and rallied at their camp",
+   "text": "The Thracians and Macedonians reinforced the Roman infantry at their camp, and the tribune Marcus Aemilius Lepidus rallied them. Antiochus's cavalry was unsuitable for taking the camp and became bogged down in the fighting.",
+   "quote": "Antiochus's cavalry was unsuitable for taking the camp and he became bogged down in the fighting",
+   "at": {
+    "rrear": [
+     16,
+     24,
+     270
+    ],
+    "sr": [
+     26,
+     22,
+     270
+    ]
+   }
+  },
+  {
+   "title": "The phalanx holds, then begins to retreat",
+   "text": "The phalanx held its ground against the Roman infantry but was not mobile enough to dislodge the archers and slingers who bombarded it with projectiles. It began a slow organised retreat.",
+   "quote": "the Seleucid phalanx held its ground against the Roman infantry",
    "at": {
     "rlight": [
      52,
      30,
      90
     ],
+    "phalanx": [
+     66,
+     28,
+     270
+    ]
+   },
+   "how": {
+    "phalanx": "retreat"
+   },
+   "hits": [
+    [
+     "rlight",
+     "phalanx"
+    ],
+    [
+     "rc",
+     "phalanx"
+    ]
+   ]
+  },
+  {
+   "title": "The elephants panic and the phalanx breaks",
+   "text": "The war elephants between the units of the phalanx panicked at the projectiles, and the phalanx broke formation. The phalangites discarded their weapons and abandoned the battlefield.",
+   "quote": "causing the phalanx to break formation. The phalangites discarded their weapons and abandoned the battlefield.",
+   "at": {
     "phalanx": [
      76,
      28,

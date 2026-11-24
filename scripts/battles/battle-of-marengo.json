@@ -14,7 +14,7 @@
    }
   ]
  },
- "note": "The accounts give the places of the villages only as a triangle (Marengo west, Castel Ceriolo north, San Giuliano Vecchio east), so distances here are schematic. The accounts do not say where Kellermann's cavalry stood before its last charge; it is placed on the northern side of the Austrian column. Frimont's cavalry, which destroyed the Guard, is drawn with the Austrian left wing, with which the accounts have him act.",
+ "note": "The accounts give the places of the villages only as a triangle (Marengo west, Castel Ceriolo north, San Giuliano Vecchio east), so distances here are schematic. The accounts do not say where Kellermann's cavalry stood before its last charge; it is placed on the northern side of the Austrian column. Frimont's cavalry, which destroyed the Guard, is drawn with the Austrian left wing, with which the accounts have him act. The accounts do not say where the supporting dragoons stood; they are placed beside the Austrian column on its northern side, with Pilatti’s troopers drawn as part of the same block.",
  "terrain": [
   {
    "k": "river",
@@ -225,6 +225,24 @@
    "leader": "Desaix",
    "w": 10,
    "quote": "his force (6,000 men and 9 guns of Boudet's division) was not far behind"
+  },
+  {
+   "id": "agren",
+   "side": "a",
+   "k": "infantry",
+   "name": "Lattermann's grenadiers",
+   "short": "Grenadiers",
+   "w": 8,
+   "quote": "Zach brought forward GM Lattermann's grenadier brigade in line and renewed the attack."
+  },
+  {
+   "id": "adrag",
+   "side": "a",
+   "k": "cavalry",
+   "name": "Austrian supporting dragoons",
+   "short": "Dragoons",
+   "w": 7,
+   "quote": "supported by a dragoon regiment"
   }
  ],
  "phases": [
@@ -335,10 +353,10 @@
    ]
   },
   {
-   "title": "Victor withdraws from Marengo",
-   "when": "About 12:30 pm to 2:30 pm",
-   "text": "The Austrians bridged the Fontanone and took Marengo. Victor could no longer hold his positions and fell back south-east to the vine belt, with Lannes mirroring the move, while O'Reilly took Stortiglione.",
-   "quote": "However, Victor could no longer hold his positions and withdrew southeast to the main vine belt",
+   "title": "The Austrians bridge the Fontanone and take Stortiglione",
+   "when": "Toward 12:30 pm to 2:00 pm",
+   "text": "A small bridge was thrown over the Fontanone under cover of reserve artillery, and Lattermann's grenadiers crossed to attack the French defending Marengo village. O'Reilly took Stortiglione by 2:00 pm.",
+   "quote": "A Laufbrücke (small bridge) was thrown over the Fontanone and supported by reserve artillery.",
    "at": {
     "acentre": [
      32,
@@ -349,7 +367,21 @@
      30,
      52,
      90
-    ],
+    ]
+   },
+   "hits": [
+    [
+     "acentre",
+     "victor"
+    ]
+   ]
+  },
+  {
+   "title": "Victor withdraws to the vines",
+   "when": "About 2:30 pm",
+   "text": "Victor could no longer hold his positions and fell back south-east to the main belt of vines, with Lannes mirroring the move.",
+   "quote": "However, Victor could no longer hold his positions and withdrew southeast to the main vine belt",
+   "at": {
     "victor": [
      50,
      42,
@@ -364,29 +396,66 @@
    "how": {
     "victor": "retreat",
     "lannes": "retreat"
-   },
-   "hits": [
-    [
-     "acentre",
-     "victor"
-    ]
-   ]
+   }
   },
   {
-   "title": "The French fall back and the Guard is destroyed",
-   "when": "About 4:00 pm",
-   "text": "Ott defeated Monnier, and two thirds of his division retreated north-east. The Guard, sent to delay Schellenberg's column, was surprised and destroyed. The French fell back about 3 km towards San Giuliano as the Austrian centre formed a pursuit column.",
-   "quote": "The French fell back c. 3 km and attempted to regroup to hold the village of San Giuliano.",
+   "title": "Ott defeats Monnier",
+   "when": "About 2:00 pm",
+   "text": "Ott, aided by Frimont, defeated Monnier's division and forced two thirds of it to retreat to the north-east, away from the main French army.",
+   "quote": "Aided by Frimont, Ott defeated Monnier and forced two-thirds of his command to retreat to the northeast.",
    "at": {
     "aleft": [
-     58,
-     20,
+     60,
+     11,
      180
     ],
     "monnier": [
      80,
      12,
      270
+    ]
+   },
+   "how": {
+    "monnier": "retreat"
+   },
+   "hits": [
+    [
+     "aleft",
+     "monnier"
+    ]
+   ]
+  },
+  {
+   "title": "The Consular Guard is destroyed",
+   "when": "About 4:00 pm",
+   "text": "Bonaparte sent his main Guard battalion and its artillery to flank the Austrian column and delay it. After a firefight of fifteen minutes the Guard was surprised and destroyed by Frimont's cavalry.",
+   "quote": "After a 15-minute firefight around 4:00 pm the Guard were surprised and destroyed by Frimont's cavalry.",
+   "at": {
+    "aleft": [
+     62,
+     14,
+     180
+    ]
+   },
+   "state": {
+    "guard": "destroyed"
+   },
+   "hits": [
+    [
+     "aleft",
+     "guard"
+    ]
+   ]
+  },
+  {
+   "title": "The French fall back towards San Giuliano",
+   "text": "The French fell back about 3 km and tried to regroup at San Giuliano. The Austrian centre formed into a pursuit column to chase them off the field.",
+   "quote": "The French fell back c. 3 km and attempted to regroup to hold the village of San Giuliano.",
+   "at": {
+    "aleft": [
+     58,
+     20,
+     180
     ],
     "victor": [
      68,
@@ -415,24 +484,10 @@
     ]
    },
    "how": {
-    "monnier": "retreat",
     "victor": "retreat",
     "lannes": "retreat",
     "kell": "retreat"
-   },
-   "state": {
-    "guard": "destroyed"
-   },
-   "hits": [
-    [
-     "aleft",
-     "monnier"
-    ],
-    [
-     "aleft",
-     "guard"
-    ]
-   ]
+   }
   },
   {
    "title": "Desaix's force arrives and meets the column",
@@ -459,23 +514,117 @@
    ]
   },
   {
-   "title": "Kellermann's charge breaks the Austrian centre",
-   "text": "Kellermann's heavy cavalry charged the left flank of the Austrian grenadier brigade, which disintegrated. The Austrian centre lost heart and rushed to the rear while the French infantry line advanced westward.",
+   "title": "Lattermann's grenadiers renew the attack",
+   "text": "The Austrian staff brought up Lattermann's grenadier brigade in line and renewed the attack, with a dragoon regiment in support.",
+   "quote": "Zach brought forward GM Lattermann's grenadier brigade in line and renewed the attack.",
+   "at": {
+    "agren": [
+     62,
+     38,
+     90
+    ],
+    "adrag": [
+     50,
+     26,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "agren",
+     "desaix"
+    ]
+   ]
+  },
+  {
+   "title": "Desaix is sent forward and the cavalry is ordered in",
+   "text": "Faced with a crisis, Napoleon sent Desaix forward again and ordered the cavalry charge that Desaix had asked for.",
+   "quote": "Faced with a crisis, Napoleon sent Desaix forward again and ordered a cavalry charge requested by Desaix.",
+   "at": {
+    "desaix": [
+     72,
+     36,
+     270
+    ],
+    "kell": [
+     74,
+     24,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "desaix",
+     "agren"
+    ]
+   ]
+  },
+  {
+   "title": "Kellermann's charge breaks the grenadiers",
+   "text": "Lattermann's formation was charged on its left flank by Kellermann's heavy cavalry, about 400 men, and disintegrated.",
    "quote": "Lattermann's formation was charged on its left flank by Kellermann's heavy cavalry (ca. 400 men) and disintegrated.",
    "at": {
     "kell": [
-     56,
-     26,
+     60,
+     27,
      180
     ],
+    "agren": [
+     58,
+     53,
+     270
+    ]
+   },
+   "how": {
+    "agren": "rout"
+   },
+   "state": {
+    "agren": "routed"
+   },
+   "hits": [
+    [
+     "kell",
+     "agren"
+    ]
+   ]
+  },
+  {
+   "title": "The supporting dragoons are routed",
+   "text": "Murat and Kellermann at once attacked the supporting Liechtenstein Dragoons, which were too slow to respond, and routed them. The fleeing horsemen crashed into Pilatti's troopers and carried them away.",
+   "quote": "Murat and Kellermann immediately pounced on the supporting Liechtenstein Dragoons who were too slow to respond and routed them as well.",
+   "at": {
+    "kell": [
+     66,
+     18,
+     270
+    ],
+    "adrag": [
+     38,
+     16,
+     270
+    ]
+   },
+   "how": {
+    "adrag": "rout"
+   },
+   "state": {
+    "adrag": "routed"
+   },
+   "hits": [
+    [
+     "kell",
+     "adrag"
+    ]
+   ]
+  },
+  {
+   "title": "The Austrian main body breaks and the French advance",
+   "text": "As the terrified cavalry stampeded past, the exhausted Austrian infantry of the main body lost heart and rushed to the rear. The whole French infantry line advanced westward.",
+   "quote": "the exhausted Austrian infantry of the main body lost heart, provoking a wild rush to the rear.",
+   "at": {
     "acentre": [
      36,
      38,
-     270
-    ],
-    "desaix": [
-     70,
-     36,
      270
     ],
     "lannes": [
@@ -487,6 +636,11 @@
      62,
      48,
      270
+    ],
+    "desaix": [
+     70,
+     36,
+     270
     ]
    },
    "how": {
@@ -496,10 +650,6 @@
     "acentre": "routed"
    },
    "hits": [
-    [
-     "kell",
-     "acentre"
-    ],
     [
      "desaix",
      "acentre"

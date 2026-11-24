@@ -288,7 +288,7 @@
   {
    "title": "The Mongol columns approach Baghdad",
    "when": "December 1257",
-   "text": "Hulegu led the main force, with the Golden Horde princes on the right and Kitbuqa on the left. Baiju crossed the Tigris at Mosul and headed south, while Baghdad held a garrison of its own.",
+   "text": "Hulegu led the main force, with the Golden Horde princes on the right and Kitbuqa on the left. After a council of war in mid-December Baiju returned to the vanguard at Irbil, while Baghdad held a garrison of its own.",
    "quote": "his commanders dispersed to carry out different tasks",
    "at": {
     "hulegu": [
@@ -324,9 +324,22 @@
    }
   },
   {
+   "title": "Baiju crosses at Mosul and marches south",
+   "when": "Mid-January 1258",
+   "text": "Baiju crossed the Tigris at Mosul with the help of its emir and headed south. He reached the Nahr Isa canal, and his deputy Sughunchaq pushed the advance party to about 40 km from the city.",
+   "quote": "Baiju reached the Nahr Isa canal in mid-January 1258, whereupon his deputy Sughunchaq pushed the advance party",
+   "at": {
+    "baiju": [
+     32,
+     10,
+     270
+    ]
+   }
+  },
+  {
    "title": "The dawatdar's army marches out",
    "when": "16 January 1258",
-   "text": "Baiju's advance party came within about 40 km of the city. The dawatdar met it with 20,000 infantry and forced it to retreat, and the caliphal army pursued.",
+   "text": "The dawatdar met the advance party with 20,000 infantry and forced it to retreat, and the caliphal army pursued.",
    "quote": "On 16 January, Sughunchaq was confronted by the dawatdar with 20,000 infantry and forced to retreat",
    "at": {
     "baiju": [
@@ -352,13 +365,32 @@
   },
   {
    "title": "The canal dykes are broken and the camp flooded",
-   "when": "16-17 January 1258",
-   "text": "That night Baiju's forces broke the dykes of the Dujayl Canal and flooded the camp of the celebrating Abbasid army. Many drowned and next morning the rest were routed; only a few, the dawatdar among them, reached Baghdad.",
+   "when": "Night of 16 January 1258",
+   "text": "That night Baiju's forces broke the dykes of the Dujayl Canal and flooded the camp of the celebrating Abbasid army. Many drowned.",
    "quote": "that night Baiju's forces broke the dykes of the Dujayl Canal and flooded the camp of the celebrating Abbasid army",
    "at": {
     "baiju": [
      26,
      12,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "baiju",
+     "dawatdar"
+    ]
+   ]
+  },
+  {
+   "title": "Baiju's army routs the survivors",
+   "when": "17 January 1258",
+   "text": "Baiju's army engaged the remainder the next morning. They were routed, and only a few, the dawatdar among them, got back to Baghdad.",
+   "quote": "the remainder were engaged by Baiju's army the following morning",
+   "at": {
+    "baiju": [
+     30,
+     18,
      90
     ],
     "dawatdar": [
@@ -402,9 +434,28 @@
    }
   },
   {
-   "title": "The assault takes the east wall",
-   "when": "29 January to 4 February 1258",
-   "text": "The assault began on 29 or 30 January. A first breach on 1 February was driven back, but further breaches over the next two days gave the Mongols the east battlements by 4 February.",
+   "title": "The first breach is driven back",
+   "when": "29 January to 1 February 1258",
+   "text": "The assault on the walls began on 29 or 30 January. The first breach, in the southeast Ajami tower near Hulegu's camp, was made on 1 February, but the Mongols were driven back.",
+   "quote": "but the Mongols were driven back",
+   "at": {
+    "hulegu": [
+     70,
+     31,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "hulegu",
+     "garrison"
+    ]
+   ]
+  },
+  {
+   "title": "The Mongols take the east battlements",
+   "when": "2 to 4 February 1258",
+   "text": "Further breaches over the next two days let the Mongols reach the east battlements, and they seized control of them by 4 February.",
    "quote": "further breaches over the next two days enabled them to access and seize control of the east battlements by 4 February",
    "at": {
     "hulegu": [
@@ -444,9 +495,28 @@
    ]
   },
   {
+   "title": "Unarmed men who came out are executed",
+   "when": "7 February 1258",
+   "text": "A large number of unarmed soldiers and inhabitants came out of the city, apparently hoping to be spared and allowed to settle in Syria. They were divided into groups and executed.",
+   "quote": "a large number of unarmed soldiers and inhabitants emerged from the city",
+   "at": {
+    "hulegu": [
+     63,
+     31,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "hulegu",
+     "garrison"
+    ]
+   ]
+  },
+  {
    "title": "The caliph surrenders the city",
-   "when": "7 to 10 February 1258",
-   "text": "On 7 February a large number of unarmed soldiers and inhabitants came out and were executed. On 10 February the caliph surrendered, bringing his family and 3,000 dignitaries.",
+   "when": "10 February 1258",
+   "text": "After envoys had failed to win terms, the caliph surrendered the city on 10 February, bringing his family and 3,000 dignitaries.",
    "quote": "the caliph surrendered on 10 February, bringing his family and 3,000 dignitaries",
    "at": {
     "hulegu": [

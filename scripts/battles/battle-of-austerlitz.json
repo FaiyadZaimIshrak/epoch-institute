@@ -444,18 +444,13 @@
    }
   },
   {
-   "title": "The Allied columns attack the French right",
+   "title": "The Allies attack Telnitz and drive the French out",
    "when": "About 8 am",
-   "text": "The first Allied lines attacked Telnitz and drove the French across the Goldbach. The first men of Davout's corps arrived and threw the Allies out of the village, and French artillery checked further attacks.",
-   "quote": "The first men of Davout's corps arrived at this time and threw the Allies out of Telnitz before they, too, were attacked by hussars and re-abandoned the town.",
+   "text": "The first Allied lines attacked Telnitz, which the 3rd Line Regiment defended. Several heavy Allied charges evicted the French from the village and forced them onto the other side of the Goldbach.",
+   "quote": "This battlefield sector witnessed heavy fighting in this early action as several ferocious Allied charges evicted the French from the town and forced them onto the other side of the Goldbach.",
    "at": {
-    "davout": [
-     23,
-     53,
-     90
-    ],
     "buxh": [
-     42,
+     41,
      50,
      270
     ]
@@ -464,11 +459,52 @@
     [
      "buxh",
      "legrand"
+    ]
+   ]
+  },
+  {
+   "title": "Davout's men retake Telnitz",
+   "text": "The first men of Davout's corps arrived and threw the Allies out of Telnitz. Allied hussars attacked them and the Allies left the village again, and further Allied attacks out of Telnitz were checked by French artillery.",
+   "quote": "The first men of Davout's corps arrived at this time and threw the Allies out of Telnitz before they, too, were attacked by hussars and re-abandoned the town.",
+   "at": {
+    "davout": [
+     23,
+     53,
+     90
     ],
+    "buxh": [
+     43,
+     50,
+     270
+    ]
+   },
+   "how": {
+    "buxh": "retreat"
+   },
+   "hits": [
     [
      "davout",
      "buxh",
      0.15
+    ]
+   ]
+  },
+  {
+   "title": "The fight for Sokolnitz",
+   "text": "The second and third Allied columns attacked Sokolnitz and its castle. The French were forced out, counterattacked and regained the village, and were thrown out again until Friant's division of Davout's corps retook it.",
+   "quote": "Conflict in this area ended temporarily when Friant's division (part of III Corps) retook the village.",
+   "at": {
+    "buxh": [
+     44,
+     48,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "buxh",
+     "davout",
+     0.2
     ]
    ]
   },
@@ -490,17 +526,59 @@
   {
    "title": "Soult's corps climbs the Heights",
    "when": "About 9 am",
-   "text": "As the mist cleared, Napoleon ordered the attack. Soult's corps went up the slope and the Allies sent the delayed detachments of the fourth column into the fight. After over an hour of fighting the French bayoneted the Allies off the Heights.",
+   "text": "The mist was clearing and Napoleon ordered the attack. St. Hilaire's division led the climb, and as it ascended the sun tore the mist apart. The Russians on top of the Heights were stunned to see so many French troops coming.",
    "quote": "A dense fog helped to cloud the advance of St. Hilaire's French division, but as they ascended the slope, the legendary 'Sun of Austerlitz' ripped the mist apart and encouraged them forward.",
    "at": {
     "soult": [
-     47,
+     46,
      34,
      90
     ]
    },
    "state": {
     "soult": "shown"
+   }
+  },
+  {
+   "title": "The Allies drive the French back down the slope",
+   "text": "Allied commanders brought some delayed detachments of the fourth column into the struggle, and men of the second column joined them. After over an hour of fighting they forced the French to withdraw down the slopes.",
+   "quote": "Allied commanders moved some of the delayed detachments of the fourth column into this bitter struggle.",
+   "at": {
+    "soult": [
+     44,
+     33,
+     90
+    ]
+   },
+   "how": {
+    "soult": "retreat"
+   },
+   "hits": [
+    [
+     "kut",
+     "soult",
+     0.1
+    ]
+   ]
+  },
+  {
+   "title": "The French bayonet the Allies off the Heights",
+   "text": "Gripped by desperation, St. Hilaire's men struck hard again and bayoneted the Allies out of the Heights, and the Allied IV Corps fell back from them.",
+   "quote": "However, gripped by desperation, St. Hilaire's men struck hard again and bayoneted the Allies out of the heights.",
+   "at": {
+    "soult": [
+     52,
+     34,
+     90
+    ],
+    "kut": [
+     65,
+     41,
+     270
+    ]
+   },
+   "how": {
+    "kut": "retreat"
    },
    "hits": [
     [
@@ -510,27 +588,23 @@
    ]
   },
   {
-   "title": "The Russian Guard counterattacks and breaks",
-   "text": "Grand Duke Constantine's Guard counterattacked in Vandamme's section and forced a bloody effort. French Guard cavalry and Bernadotte's I Corps came up, and the Russians broke and were pursued for about a quarter of a mile.",
-   "quote": "The Russians broke, and many died as they were pursued by the reinvigorated French cavalry for about a quarter of a mile.",
+   "title": "The Russian Guard counterattacks",
+   "text": "Grand Duke Constantine's Guard counterattacked in Vandamme's section, forcing a bloody effort and taking a French standard. Napoleon sent in his heavy Guard cavalry, and with large masses of cavalry on both sides no victory was clear.",
+   "quote": "Sensing trouble, Napoleon ordered his own heavy Guard cavalry forward.",
    "at": {
+    "ruguard": [
+     68,
+     30,
+     90
+    ],
     "reserve": [
      52,
      22,
      90
-    ],
-    "ruguard": [
-     72,
-     36,
-     90
     ]
    },
-   "how": {
-    "ruguard": "rout"
-   },
    "state": {
-    "reserve": "shown",
-    "ruguard": "routed"
+    "reserve": "shown"
    },
    "hits": [
     [
@@ -546,38 +620,51 @@
    ]
   },
   {
-   "title": "In the north the French drive off the cavalry and Bagration",
-   "text": "Liechtenstein's heavy cavalry attacked Murat's lighter cavalry, and French cuirassiers finished off the Russian cavalry after a long and bitter mêlée. Lannes then led his corps against Bagration and drove him off the field.",
-   "quote": "On Napoleon's orders, Lannes then led his V Corps against Bagration's men and, after hard fighting, drove the skilled Russian commander off the field.",
+   "title": "The Russian Guard breaks",
+   "text": "Drouet's division deployed on the flank and let the French cavalry rally behind it. The horse artillery of the Guard hurt the Russian cavalry and fusiliers, and the Russians broke and were pursued for about a quarter of a mile.",
+   "quote": "The Russians broke, and many died as they were pursued by the reinvigorated French cavalry for about a quarter of a mile.",
+   "at": {
+    "ruguard": [
+     74,
+     36,
+     90
+    ]
+   },
+   "how": {
+    "ruguard": "rout"
+   },
+   "state": {
+    "ruguard": "routed"
+   },
+   "hits": [
+    [
+     "reserve",
+     "ruguard",
+     0.1
+    ]
+   ]
+  },
+  {
+   "title": "Liechtenstein's cavalry is beaten in the north",
+   "text": "Liechtenstein's heavy cavalry attacked Murat's lighter cavalry. Caffarelli's infantry halted the Russian assaults, and Murat sent in two cuirassier divisions, which won the long and bitter mêlée.",
+   "quote": "The ensuing mêlée was bitter and long, but the French ultimately prevailed.",
    "at": {
     "murat": [
      74,
      21,
      90
     ],
-    "lannes": [
-     64,
-     14,
-     90
-    ],
     "liech": [
      84,
      29,
      90
-    ],
-    "bag": [
-     86,
-     12,
-     90
     ]
    },
    "how": {
-    "liech": "rout",
-    "bag": "rout"
+    "liech": "rout"
    },
    "state": {
-    "liech": "routed",
-    "bag": "routed"
+    "liech": "routed"
    },
    "hits": [
     [
@@ -588,7 +675,32 @@
      "murat",
      "liech",
      0.2
+    ]
+   ]
+  },
+  {
+   "title": "Lannes drives Bagration off the field",
+   "text": "On Napoleon's orders Lannes led his corps against Bagration's men and, after hard fighting, drove Bagration off the field. Napoleon called off a pursuit.",
+   "quote": "On Napoleon's orders, Lannes then led his V Corps against Bagration's men and, after hard fighting, drove the skilled Russian commander off the field.",
+   "at": {
+    "lannes": [
+     64,
+     14,
+     90
     ],
+    "bag": [
+     86,
+     12,
+     90
+    ]
+   },
+   "how": {
+    "bag": "rout"
+   },
+   "state": {
+    "bag": "routed"
+   },
+   "hits": [
     [
      "lannes",
      "bag"

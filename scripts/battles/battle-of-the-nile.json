@@ -317,9 +317,9 @@
    ]
   },
   {
-   "title": "The seaward ships anchor and Culloden grounds",
+   "title": "The seaward ships anchor and the centre is engaged",
    "when": "18:40",
-   "text": "Vanguard, Minotaur and Defence anchored on the seaward side of the French van, which was now caught on both sides. Bellerophon and Majestic went on to the French centre. Culloden ran onto the shoal near Aboukir Island.",
+   "text": "Vanguard, Minotaur and Defence anchored on the seaward side of the French van at 18:40, which was now caught on both sides. Bellerophon and Majestic passed the melee and went on to the unengaged French centre.",
    "quote": "With the French vanguard now heavily outnumbered, the following British ships, HMS Bellerophon and HMS Majestic, passed by the melee and advanced on the so far unengaged French centre.",
    "at": {
     "bout": [
@@ -336,11 +336,6 @@
      61.5,
      30.5,
      216
-    ],
-    "culloden": [
-     17.5,
-     8,
-     270
     ]
    },
    "hits": [
@@ -361,6 +356,18 @@
      "ftonn"
     ]
    ]
+  },
+  {
+   "title": "Culloden runs onto the shoal",
+   "text": "Culloden, the last ship of the British line, sailed too close to Aboukir Island in the growing darkness and stuck fast on the shoal. Her boats, the brig Mutine and Leander could not move her.",
+   "quote": "sailed too close to Aboukir Island in the growing darkness and became stuck fast on the shoal",
+   "at": {
+    "culloden": [
+     17.5,
+     8,
+     270
+    ]
+   }
   },
   {
    "title": "Bellerophon drifts out and the last ships join",
@@ -416,10 +423,10 @@
    ]
   },
   {
-   "title": "Orient explodes and the centre gives way",
-   "when": "21:00 to 22:10",
-   "text": "A fire on Orient reached her magazines at 22:00 and the ship blew up. Tonnant, Heureux and Mercure had already cut their cables and drifted south. Franklin fought on after the lull and was forced to surrender.",
-   "quote": "At 22:00 the fire reached the magazines, and the Orient was destroyed by a massive explosion.",
+   "title": "Fire breaks out on Orient",
+   "when": "21:00",
+   "text": "A fire was seen on Orient's lower decks and Swiftsure fired into the blaze, which spread through the stern. The nearest British ships edged away, and Tonnant, Heureux and Mercure cut their cables and drifted south.",
+   "quote": "At 21:00, the British observed a fire on the lower decks of the Orient, the French flagship.",
    "at": {
     "ftonn": [
      51.5,
@@ -436,14 +443,38 @@
     "ftonn": "retreat",
     "fcentre": "retreat"
    },
-   "state": {
-    "forient": "destroyed",
-    "ffrank": "destroyed"
-   },
    "hits": [
     [
      "late",
      "forient"
+    ]
+   ]
+  },
+  {
+   "title": "Orient explodes",
+   "when": "22:00",
+   "text": "At 22:00 the fire reached the magazines and Orient was destroyed by a massive explosion. Flaming wreckage fell over the nearest ships, and for ten minutes afterwards there was no firing.",
+   "quote": "At 22:00 the fire reached the magazines, and the Orient was destroyed by a massive explosion.",
+   "state": {
+    "forient": "destroyed"
+   }
+  },
+  {
+   "title": "Franklin fights on and surrenders",
+   "when": "From 22:10",
+   "text": "Franklin restarted the engagement by firing on Swiftsure. Isolated and battered, she was dismasted, and the wounded Blanquet surrendered to the combined fire of Swiftsure and Defence.",
+   "quote": "At 22:10, Franklin restarted the engagement by firing on Swiftsure.",
+   "state": {
+    "ffrank": "destroyed"
+   },
+   "hits": [
+    [
+     "ffrank",
+     "late"
+    ],
+    [
+     "late",
+     "ffrank"
     ],
     [
      "bout",
@@ -452,26 +483,82 @@
    ]
   },
   {
-   "title": "The French rear stands out to sea",
-   "when": "04:00 to 11:00 on 2 August",
-   "text": "Firing began again between the French southern ships and Alexander and Majestic. Heureux and Mercure had drifted onto the shoal and surrendered, Tonnant was driven ashore, and the surviving French ships stood out to sea.",
-   "quote": "The surviving French ships of the line, covering their retreat with gunfire, gradually pulled to the east away from the shore at 06:00.",
+   "title": "Tonnant fights on alone and drifts south",
+   "when": "Midnight to 03:00",
+   "text": "By midnight only Tonnant remained engaged, fighting Majestic until about 03:00, when she was a dismasted hulk. She then drifted southwards away from the action towards Villeneuve's division.",
+   "quote": "gradually drifted southwards away from the action to join the southern division under Villeneuve",
+   "at": {
+    "ftonn": [
+     50.5,
+     44,
+     36
+    ]
+   },
+   "how": {
+    "ftonn": "retreat"
+   },
+   "hits": [
+    [
+     "bmaj",
+     "ftonn"
+    ],
+    [
+     "ftonn",
+     "bmaj"
+    ]
+   ]
+  },
+  {
+   "title": "Firing begins again at dawn",
+   "when": "04:00 on 2 August",
+   "text": "As the sun rose, firing broke out again between the French southern division and the battered Alexander and Majestic.",
+   "quote": "firing broke out once again between the French southern division of Guillaume Tell, Tonnant, Généreux and Timoléon and the battered Alexander and Majestic",
    "at": {
     "late": [
      65,
      37.5,
      216
+    ]
+   },
+   "hits": [
+    [
+     "late",
+     "frear"
     ],
+    [
+     "bmaj",
+     "frear",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "Heureux and Mercure surrender on the shoal",
+   "text": "Heureux and Mercure had cut their cables to escape the exploding Orient and had drifted onto the shoal. Alexander and three other British ships attacked them, and both surrendered within minutes.",
+   "quote": "Alexander, Goliath, Theseus and Leander attacked the stranded and defenceless ships, and both surrendered within minutes",
+   "at": {
     "fcentre": [
      55,
      49.5,
      36
-    ],
-    "ftonn": [
-     50.5,
-     44,
-     36
-    ],
+    ]
+   },
+   "state": {
+    "fcentre": "destroyed"
+   },
+   "hits": [
+    [
+     "late",
+     "fcentre"
+    ]
+   ]
+  },
+  {
+   "title": "Tonnant is driven ashore and the French rear stands out",
+   "when": "About 11:00",
+   "text": "Villeneuve brought most of the surviving French ships to the mouth of the bay at 11:00. The dismasted Tonnant could not make the speed and was driven ashore by her crew, while the others stood out to sea.",
+   "quote": "As the ship was unable to make the required speed it was driven ashore by its crew.",
+   "at": {
     "frear": [
      84,
      36,
@@ -482,24 +569,8 @@
     "frear": "retreat"
    },
    "state": {
-    "fcentre": "destroyed",
     "ftonn": "destroyed"
-   },
-   "hits": [
-    [
-     "bmaj",
-     "frear",
-     -0.2
-    ],
-    [
-     "late",
-     "frear"
-    ],
-    [
-     "late",
-     "fcentre"
-    ]
-   ]
+   }
   }
  ]
 }

@@ -307,7 +307,7 @@
   },
   {
    "title": "The Roman right routs the Macedonian left",
-   "text": "The Roman right joined the legions after it had routed the Macedonian left. Seeing the battle turn, Perseus fled with the cavalry on the Macedonian right.",
+   "text": "The Roman right succeeded in routing the Macedonian left, and it then joined the legions, who were already fighting the phalangites on their exposed flanks.",
    "quote": "They were soon joined by the Roman right, which had succeeded in routing the Macedonian left.",
    "at": {
     "rrc": [
@@ -319,20 +319,13 @@
      66,
      53,
      90
-    ],
-    "mrc": [
-     78,
-     9,
-     90
     ]
    },
    "how": {
-    "mll": "rout",
-    "mrc": "rout"
+    "mll": "rout"
    },
    "state": {
-    "mll": "routed",
-    "mrc": "routed"
+    "mll": "routed"
    },
    "hits": [
     [
@@ -340,6 +333,21 @@
      "mll"
     ]
    ]
+  },
+  {
+   "title": "Perseus flees with the right-wing cavalry",
+   "text": "Seeing the tide of battle turn, Perseus fled with the cavalry on the Macedonian right, leaving the infantry still fighting on the field.",
+   "quote": "Seeing the tide of battle turn, Perseus fled with the cavalry on the Macedonian right.",
+   "at": {
+    "mrc": [
+     78,
+     9,
+     90
+    ]
+   },
+   "how": {
+    "mrc": "retreat"
+   }
   },
   {
    "title": "The Guard fights to the death",

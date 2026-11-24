@@ -1964,30 +1964,61 @@ body.has-tab-bar .consent-bar { bottom: calc(68px + env(safe-area-inset-bottom, 
 .start-tag { display: inline-block; margin-left: 8px; vertical-align: 2px; font-family: var(--font-ui); font-size: 10px; font-weight: 700;
   font-style: normal; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1; padding: 3px 6px; border-radius: 3px;
   color: var(--gold); border: 1px solid var(--gold); }
-.battle-field { --bf-a: #3f8ae6; --bf-b: #e2604e; --bf-c: #c98500; --bf-d: #2f9e44; --bf-ground: #171a16; --bf-water: #1f3d5c; --bf-hill: #2a2a22; --bf-wood: #1d3323; --bf-marsh: #23332f; --bf-line: #6d6a5c; --bf-ink: #0b0c10; }
-[data-theme="light"] .battle-field { --bf-a: #2466c2; --bf-b: #c23b2a; --bf-c: #8a5a00; --bf-d: #1f7a34; --bf-ground: #ece5d2; --bf-water: #a9c8e2; --bf-hill: #d9cfb4; --bf-wood: #bcd1a7; --bf-marsh: #cbd8c6; --bf-line: #8d8266; --bf-ink: #fffaf0; }
+.battle-field { --bf-a: #3f8ae6; --bf-b: #e2604e; --bf-c: #c98500; --bf-d: #2f9e44; --bf-ground: #1a1e17; --bf-tuft: #3a4430; --bf-water: #24507a; --bf-bank: #122a40; --bf-glint: #6fa3cf; --bf-hill: #343225; --bf-hill-hi: #5a5539; --bf-shade: #000; --bf-wood: #16281b; --bf-crown: #2b5236; --bf-crown-hi: #3f7350; --bf-crown-edge: #142418; --bf-marsh: #1f302c; --bf-sand: #6b6549; --bf-roof: #9a5f47; --bf-road: #57523f; --bf-line: #6d6a5c; --bf-ink: #0b0c10; }
+[data-theme="light"] .battle-field { --bf-a: #2466c2; --bf-b: #c23b2a; --bf-c: #8a5a00; --bf-d: #1f7a34; --bf-ground: #e9e2c9; --bf-tuft: #b9b48a; --bf-water: #8fbadb; --bf-bank: #5f8fb5; --bf-glint: #eaf4fb; --bf-hill: #cdbf99; --bf-hill-hi: #f1e8cc; --bf-shade: #5b4a25; --bf-wood: #a9c392; --bf-crown: #86ad6f; --bf-crown-hi: #add090; --bf-crown-edge: #55794a; --bf-marsh: #c3d3bd; --bf-sand: #f3e9c4; --bf-roof: #b9674b; --bf-road: #f7f0dc; --bf-line: #8d8266; --bf-ink: #fffaf0; }
 .battle-field { margin: 0 0 36px; }
 .bf-box { border: 1px solid var(--border); border-radius: var(--radius, 10px); background: var(--surface); overflow: hidden; }
 .bf-fig { aspect-ratio: 1000 / 620; background: var(--bf-ground); }
 .bf-svg { display: block; width: 100%; height: 100%; font-family: var(--font-ui, 'Source Sans 3', Arial, sans-serif); }
 .bf-ground { fill: var(--bf-ground); }
 .bf-ground.bf-sea { fill: var(--bf-water); }
-.bf-t path, .bf-t rect, .bf-t circle { stroke: var(--bf-line); stroke-width: 1.2; }
-.bf-t-hill path, .bf-t-ridge path, .bf-t-mountain path { fill: var(--bf-hill); }
-.bf-t path.bf-t-in { fill: none; stroke-width: 1; opacity: .7; }
-.bf-t-wood path { fill: var(--bf-wood); stroke-dasharray: 2 5; stroke-linecap: round; stroke-width: 2.4; }
-.bf-t-marsh path { fill: var(--bf-marsh); stroke-dasharray: 9 5; }
-.bf-t-sea path, .bf-t-lake path { fill: var(--bf-water); }
-.bf-t-land path { fill: var(--bf-ground); }
-.bf-t-river path { stroke: var(--bf-water); stroke-width: 9; stroke-linecap: round; }
-.bf-t-stream path { stroke: var(--bf-water); stroke-width: 4.5; stroke-linecap: round; }
-.bf-t-road path { stroke: var(--bf-line); stroke-width: 2; stroke-dasharray: 10 7; }
-.bf-t-wall path { stroke: var(--text); stroke-width: 6; stroke-linecap: butt; }
-.bf-t-ditch path { stroke: var(--bf-line); stroke-width: 3; stroke-dasharray: 3 3; }
-.bf-t-town rect, .bf-t-village rect, .bf-t-fort path { fill: var(--muted); stroke: none; }
-.bf-t-spring circle { fill: var(--bf-water); stroke: var(--text); }
+.bf-ground-tex { pointer-events: none; }
+.bf-tuft { stroke: var(--bf-tuft); stroke-width: 1.3; stroke-linecap: round; opacity: .8; }
+.bf-wave { stroke: var(--bf-glint); stroke-width: 1.3; stroke-linecap: round; opacity: .35; }
+.bf-g-hi { stop-color: var(--bf-hill-hi); }
+.bf-g-lo { stop-color: var(--bf-hill); }
+.bf-g-v0 { stop-color: #000; stop-opacity: 0; }
+.bf-g-v1 { stop-color: #000; stop-opacity: .16; }
+.bf-vig { pointer-events: none; }
+.bf-t-sh { fill: var(--bf-shade); opacity: .22; }
+.bf-t-base { stroke: var(--bf-line); stroke-width: 1; }
+.bf-t-hach { stroke: var(--bf-line); stroke-width: 1.1; stroke-linecap: round; opacity: .75; }
+.bf-t-in { fill: var(--bf-hill-hi); fill-opacity: .3; stroke: var(--bf-line); stroke-width: .8; stroke-opacity: .55; }
+.bf-t-mountain .bf-t-in { fill-opacity: .24; stroke-opacity: .7; }
+.bf-t-wood .bf-t-floor { fill: var(--bf-wood); }
+.bf-crown { fill: var(--bf-crown); stroke: var(--bf-crown-edge); stroke-width: .9; }
+.bf-crown-hi { fill: var(--bf-crown-hi); opacity: .8; }
+.bf-t-marsh .bf-t-floor { fill: var(--bf-marsh); }
+.bf-reed { stroke: var(--bf-crown-edge); stroke-width: 1.3; stroke-linecap: round; opacity: .85; }
+.bf-pool { stroke: var(--bf-water); stroke-width: 2.6; stroke-linecap: round; opacity: .9; }
+.bf-t-sea .bf-t-floor, .bf-t-lake .bf-t-floor { fill: var(--bf-water); }
+.bf-shore { stroke: var(--bf-sand); stroke-width: 9; stroke-linejoin: round; opacity: .75; }
+.bf-wavel { stroke: var(--bf-glint); stroke-width: 1.1; stroke-dasharray: 16 12; opacity: .4; }
+.bf-t-land .bf-t-floor { fill: var(--bf-ground); }
+.bf-surf { stroke: var(--bf-sand); stroke-width: 10; stroke-linejoin: round; opacity: .8; }
+.bf-t-grain { pointer-events: none; }
+.bf-bank, .bf-water, .bf-glint, .bf-road-c, .bf-road-f, .bf-wall, .bf-wall-t, .bf-ditch, .bf-ditch-h { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.bf-t-river .bf-bank { stroke: var(--bf-bank); stroke-width: 15; }
+.bf-t-river .bf-water { stroke: var(--bf-water); stroke-width: 11; }
+.bf-glint { stroke: var(--bf-glint); stroke-width: 1.3; stroke-dasharray: 18 26; opacity: .6; }
+.bf-t-stream .bf-bank { stroke: var(--bf-bank); stroke-width: 7.5; }
+.bf-t-stream .bf-water { stroke: var(--bf-water); stroke-width: 4.5; }
+.bf-road-c { stroke: var(--bf-line); stroke-width: 5.5; }
+.bf-road-f { stroke: var(--bf-road); stroke-width: 3.2; }
+.bf-wall { stroke: var(--text); stroke-width: 5; stroke-linecap: butt; }
+.bf-wall-t { stroke: var(--text); stroke-width: 12; stroke-linecap: butt; stroke-dasharray: 8 26; }
+.bf-ditch { stroke: var(--bf-shade); stroke-width: 7; opacity: .3; }
+.bf-ditch-h { stroke: var(--bf-line); stroke-width: 7; stroke-linecap: butt; stroke-dasharray: 1.5 4; }
+.bf-house { fill: var(--bf-roof); stroke: var(--bf-ink); stroke-width: .9; }
+.bf-ridge { stroke: var(--bf-ink); stroke-width: .9; opacity: .6; fill: none; }
+.bf-fort { fill: var(--muted); stroke: var(--bf-ink); stroke-width: 1; }
+.bf-fort-in { fill: var(--bf-ground); stroke: none; }
+.bf-deck { fill: var(--bf-road); stroke: var(--text); stroke-width: 1.4; }
+.bf-rail { stroke: var(--text); stroke-width: 1.8; stroke-linecap: round; }
+.bf-ford-l { stroke: var(--bf-sand); stroke-width: 2.2; stroke-dasharray: 2 4; stroke-linecap: round; }
+.bf-pool-f { fill: var(--bf-water); stroke: var(--bf-bank); stroke-width: 1.2; }
+.bf-ripple { stroke: var(--bf-water); stroke-width: 1.4; opacity: .7; }
 .bf-t-point circle { fill: var(--text); stroke: none; }
-.bf-t-bridge path, .bf-t-ford path { stroke: var(--text); stroke-width: 2.4; }
 .bf-tl, .bf-edge, .bf-n text { font-size: calc(var(--bf-fs, 15px) * .92); font-style: italic; fill: var(--muted); paint-order: stroke; stroke: var(--bf-ground); stroke-width: 4px; stroke-linejoin: round; }
 .bf-edge { font-style: normal; letter-spacing: .04em; }
 .bf-n path { stroke: var(--muted); stroke-width: 2; }
@@ -1998,6 +2029,8 @@ body.has-tab-bar .consent-bar { bottom: calc(68px + env(safe-area-inset-bottom, 
 .bf-s3 { --c: var(--bf-d); }
 .bf-s9 { --c: var(--muted); }
 .bf-blk { fill: var(--c); stroke: var(--bf-ink); stroke-width: 1.6; }
+.bf-u { filter: drop-shadow(0 2px 1.5px rgba(0, 0, 0, .4)); }
+.bf-u.is-hidden, .bf-u.is-routed, .bf-u.is-destroyed { filter: none; }
 .bf-camp { fill: none; stroke: var(--c); stroke-width: 3; }
 .bf-mk { stroke: var(--bf-ink); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
 .bf-mk-f { fill: var(--bf-ink); stroke: none; }
@@ -2022,7 +2055,7 @@ body.has-tab-bar .consent-bar { bottom: calc(68px + env(safe-area-inset-bottom, 
 .bf-btn, .bf-dot { font: inherit; font-family: var(--font-ui, inherit); font-size: .92rem; color: var(--text); background: transparent; border: 1px solid var(--field-border, var(--border)); border-radius: 999px; padding: 6px 14px; min-height: 36px; cursor: pointer; }
 .bf-btn:disabled { opacity: .4; cursor: default; }
 .bf-play { background: var(--gold); border-color: var(--gold); color: var(--bg); font-weight: 700; min-width: 84px; }
-.bf-dots { display: flex; gap: 6px; margin-left: auto; }
+.bf-dots { display: flex; flex-wrap: wrap; gap: 6px; margin-left: auto; }
 .bf-dot { width: 36px; padding: 0; text-align: center; }
 .bf-dot.is-done { border-color: var(--gold); }
 .bf-dot.is-on { background: var(--text); color: var(--bg); border-color: var(--text); font-weight: 700; }
@@ -2049,9 +2082,6 @@ body.has-tab-bar .consent-bar { bottom: calc(68px + env(safe-area-inset-bottom, 
 .bf-box { display: none; }
 .bf-on .bf-phases { display: block; }
 }
-.bf-tree { fill: var(--bf-line); opacity: .38; }
-.bf-reed { stroke: var(--bf-line); stroke-width: 1.6; opacity: .6; fill: none; }
-.bf-t path.bf-t-tex { stroke: none; }
 .bf-ring { stroke: var(--c); stroke-width: 3; }
 .bf-lg.is-hidden { opacity: .75; }
 .bf-sw-hid { background: transparent; border: 1.5px dashed var(--muted); box-sizing: border-box; }

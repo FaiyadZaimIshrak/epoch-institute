@@ -271,6 +271,24 @@
    "leader": "Lobau",
    "w": 8,
    "quote": "a reserve including Lobau's VI Corps with 6,000 men"
+  },
+  {
+   "id": "dlhs",
+   "side": "f",
+   "k": "infantry",
+   "name": "Rallied I Corps elements",
+   "short": "13e Légère",
+   "w": 6,
+   "quote": "rallied elements of D'Erlon's I Corps, spearheaded by the 13th Légère"
+  },
+  {
+   "id": "yg",
+   "side": "f",
+   "k": "guard",
+   "name": "Young Guard",
+   "short": "Y. Guard",
+   "w": 6,
+   "quote": "Napoleon had dispatched all eight battalions of the Young Guard to reinforce Lobau"
   }
  ],
  "phases": [
@@ -330,19 +348,13 @@
    }
   },
   {
-   "title": "Hougoumont is attacked and I Corps advances",
-   "when": "About 13:30",
-   "text": "The grande batterie bombarded the centre and Reille's corps attacked Hougoumont. D'Erlon then advanced his divisions against Wellington's left wing.",
-   "quote": "d'Erlon started to advance his three other divisions, some 14,000 men over a front of about 1,000 metres (1,100 yards), against Wellington's left wing",
+   "title": "Hougoumont is attacked and the grande batterie fires",
+   "text": "Reille's corps pressed in on Hougoumont, which the Guards light companies and others held, and the fighting there lasted all afternoon. The 80 guns of the grande batterie fired on Wellington's centre.",
+   "quote": "Fighting continued around Hougoumont all afternoon.",
    "at": {
     "reille": [
      28,
      37,
-     0
-    ],
-    "derlon": [
-     70,
-     33,
      0
     ]
    },
@@ -354,7 +366,22 @@
     [
      "reille",
      "wright"
-    ],
+    ]
+   ]
+  },
+  {
+   "title": "I Corps advances against Wellington's left",
+   "when": "About 13:30",
+   "text": "D'Erlon advanced some 14,000 men against Wellington's left wing, where about 6,000 stood in the first line. His divisions reached the sunken Ohain road and pushed back Bylandt's brigade.",
+   "quote": "d'Erlon started to advance his three other divisions, some 14,000 men over a front of about 1,000 metres (1,100 yards), against Wellington's left wing",
+   "at": {
+    "derlon": [
+     70,
+     33,
+     0
+    ]
+   },
+   "hits": [
     [
      "derlon",
      "wleft"
@@ -362,8 +389,8 @@
    ]
   },
   {
-   "title": "The British heavy cavalry charge",
-   "text": "Uxbridge's two heavy brigades crossed the crest and charged downhill. I Corps was driven back across the valley in rout, and some of the cavalry went on to attack the guns of the grande batterie.",
+   "title": "The British heavy cavalry charge and I Corps breaks",
+   "text": "Uxbridge ordered his two heavy brigades, formed unseen behind the ridge, to charge. They crossed the crest and went downhill, and I Corps was driven back across the valley in rout.",
    "quote": "The Household Brigade crossed the crest of the Anglo-allied position and charged downhill.",
    "at": {
     "hcav": [
@@ -388,11 +415,50 @@
     [
      "hcav",
      "derlon"
-    ],
+    ]
+   ]
+  },
+  {
+   "title": "Some of the cavalry ride on to the French guns",
+   "text": "The British horsemen lost their cohesion and found themselves before the main French lines, on blown horses. Some attacked the guns of the grande batterie and put many of them out of action.",
+   "quote": "Some attacked nearby gun batteries of the Grande Battery.",
+   "at": {
+    "hcav": [
+     60.5,
+     41,
+     180
+    ]
+   },
+   "hits": [
     [
      "hcav",
-     "gbat",
-     0.2
+     "gbat"
+    ]
+   ]
+  },
+  {
+   "title": "The French cavalry counter-charge",
+   "text": "Napoleon ordered a counter-attack by cuirassiers and lancers. They caught the scattered British cavalry in the valley and drove the Union Brigade from it, with very heavy losses.",
+   "quote": "Milhaud's and Jaquinot's cavalrymen drove the Union Brigade from the valley.",
+   "at": {
+    "fcav": [
+     58,
+     47,
+     0
+    ],
+    "hcav": [
+     59,
+     29,
+     0
+    ]
+   },
+   "how": {
+    "hcav": "retreat"
+   },
+   "hits": [
+    [
+     "fcav",
+     "hcav"
     ]
    ]
   },
@@ -404,7 +470,7 @@
    "at": {
     "fcav": [
      56,
-     33,
+     34,
      0
     ]
    },
@@ -414,6 +480,24 @@
    "hits": [
     [
      "fcav",
+     "wcentre"
+    ]
+   ]
+  },
+  {
+   "title": "La Haye Sainte falls to the French",
+   "text": "Rallied elements of I Corps, led by the 13th Légère, renewed the attack on La Haye Sainte and took it once the German garrison's ammunition ran out. The French then brought skirmishers and guns up towards the centre.",
+   "quote": "renewed the attack on La Haye Sainte and this time were successful",
+   "at": {
+    "dlhs": [
+     46,
+     33,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "dlhs",
      "wcentre"
     ]
    ]
@@ -443,20 +527,56 @@
    ]
   },
   {
+   "title": "The Young Guard fights for Plancenoit",
+   "text": "Napoleon sent the Young Guard to reinforce Lobau, who was hard pressed. It secured Plancenoit and was driven out, and two battalions of the Middle or Old Guard then recaptured the village.",
+   "quote": "The Young Guard counter-attacked and, after very hard fighting, secured Plancenoit, but were themselves counter-attacked and driven out.",
+   "at": {
+    "yg": [
+     82,
+     57,
+     0
+    ],
+    "prussb": [
+     92,
+     50,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "yg",
+     "prussb"
+    ]
+   ]
+  },
+  {
+   "title": "Zieten's I Corps attacks the French right",
+   "text": "Zieten's Prussian I Corps came up in strength north of La Haie and attacked the French troops before Papelotte. By 19:30 the French position was bent into a rough horseshoe.",
+   "quote": "I Corps proceeded to attack the French troops before Papelotte and by 19:30 the French position was bent into a rough horseshoe shape.",
+   "at": {
+    "prussz": [
+     88,
+     33,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "prussz",
+     "derlon"
+    ]
+   ]
+  },
+  {
    "title": "The Imperial Guard attacks and I Corps breaks",
    "when": "Around 19:30",
-   "text": "Napoleon committed the Imperial Guard against Wellington's centre, led by Ney. As it went forward Zieten's Prussian I Corps attacked the French right, and d'Erlon's corps broke and fled.",
+   "text": "Napoleon committed the Imperial Guard against Wellington's centre, led by Ney. As it went forward the rest of d'Erlon's corps broke and fled.",
    "quote": "This attack, mounted at around 19:30, was intended to break through Wellington's centre and roll up his line away from the Prussians.",
    "at": {
     "guard": [
      37,
-     34,
+     33,
      0
-    ],
-    "prussz": [
-     93,
-     23,
-     270
     ],
     "derlon": [
      67,
@@ -474,10 +594,6 @@
     [
      "guard",
      "wcentre"
-    ],
-    [
-     "prussz",
-     "derlon"
     ]
    ]
   },
@@ -497,7 +613,7 @@
      180
     ],
     "wleft": [
-     70,
+     72,
      31,
      180
     ],
@@ -508,7 +624,7 @@
     ],
     "prussb": [
      80,
-     56,
+     50,
      270
     ]
    },

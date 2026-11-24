@@ -466,16 +466,37 @@
    ]
   },
   {
-   "title": "The final assault begins at the Blachernae walls",
+   "title": "The Ottoman first waves attack at Blachernae",
    "when": "Shortly after midnight, 29 May",
-   "text": "The Christian troops of the Ottoman Empire attacked first, followed by irregular azaps and Anatolian Turkmen, who focused on a damaged section of the Blachernae walls. The Turkmen breached it and entered the city but were quickly pushed back.",
-   "quote": "The Christian troops of the Ottoman Empire attacked first, followed by successive waves of the irregular azaps, who were poorly trained and equipped and Anatolian Turkmen beylik forces who focused on a section of the damaged Blachernae walls in the north-west part of the city.",
+   "text": "The Christian troops of the Ottoman Empire attacked first, followed by waves of irregular azaps and Anatolian Turkmen. They focused on a damaged section of the Blachernae walls in the north-west part of the city.",
+   "quote": "The Christian troops of the Ottoman Empire attacked first, followed by successive waves of the irregular azaps",
    "at": {
     "waves": [
-     35,
+     30,
      27,
      90
     ]
+   },
+   "hits": [
+    [
+     "waves",
+     "ven"
+    ]
+   ]
+  },
+  {
+   "title": "The Turkmen breach the wall and are pushed back",
+   "text": "The Turkmen mercenaries breached this older, weaker section of the walls and entered the city, but the defenders pushed them back just as quickly.",
+   "quote": "The Turkmen mercenaries managed to breach this section of walls and entered the city but they were just as quickly pushed back by the defenders.",
+   "at": {
+    "waves": [
+     43,
+     27,
+     90
+    ]
+   },
+   "how": {
+    "waves": "feint"
    },
    "hits": [
     [
@@ -490,15 +511,28 @@
    ]
   },
   {
-   "title": "The Janissaries attack and the Genoese give way",
-   "text": "The last wave, the elite Janissaries, attacked the walls. Giustiniani was grievously wounded and his evacuation caused panic among the defenders. His Genoese retreated into the city and towards the harbour, while Constantine's men held their ground.",
-   "quote": "Finally, the last wave consisting of elite Janissaries, attacked the city walls. The Genoese general in charge of the defenders on land, Giovanni Giustiniani, was grievously wounded during the attack, and his evacuation from the ramparts caused a panic in the ranks of the defenders.",
+   "title": "The Janissaries attack and Giustiniani is wounded",
+   "text": "The last wave, the elite Janissaries, attacked the city walls. Giustiniani, the Genoese general in charge of the defenders on land, was grievously wounded, and his evacuation from the ramparts caused a panic in the ranks of the defenders.",
+   "quote": "Finally, the last wave consisting of elite Janissaries, attacked the city walls.",
    "at": {
     "jan": [
      34,
      43.5,
      90
-    ],
+    ]
+   },
+   "hits": [
+    [
+     "jan",
+     "giust"
+    ]
+   ]
+  },
+  {
+   "title": "The Genoese retreat and Constantine holds",
+   "text": "Giustiniani's Genoese troops retreated into the city and towards the harbour. Constantine and his men, left to their own devices, continued to hold their ground against the Janissaries.",
+   "quote": "With Giustiniani's Genoese troops retreating into the city and towards the harbour, Constantine and his men, now left to their own devices, continued to hold their ground against the Janissaries.",
+   "at": {
     "giust": [
      64,
      38,
@@ -516,9 +550,9 @@
    ]
   },
   {
-   "title": "The Ottomans enter the city",
-   "text": "The defenders were overwhelmed at several points along the wall, and the Janissaries pressed forward. The Venetians retreated to their ships, which left the Horn, and the Ottoman navy held the Golden Horn by midday.",
-   "quote": "Constantine's men eventually could not prevent the Ottomans from entering the city and the defenders were overwhelmed at several points along the wall. Janissaries, led by Ulubatlı Hasan, pressed forward. Many Greek soldiers ran back home to protect their families, the Venetians retreated to their ships and a few of the Genoese escaped to Galata.",
+   "title": "The defenders are overwhelmed and the Venetians fall back",
+   "text": "Constantine's men could not prevent the Ottomans from entering the city, and the defenders were overwhelmed at several points along the wall. Janissaries pressed forward, many Greek soldiers ran back home, and the Venetians retreated to their ships.",
+   "quote": "Constantine's men eventually could not prevent the Ottomans from entering the city and the defenders were overwhelmed at several points along the wall.",
    "at": {
     "jan": [
      46,
@@ -534,18 +568,10 @@
      67,
      31,
      90
-    ],
-    "fleet": [
-     80,
-     20,
-     270
     ]
    },
    "how": {
     "ven": "retreat"
-   },
-   "state": {
-    "bfleet": "gone"
    },
    "hits": [
     [
@@ -557,6 +583,23 @@
      "ven"
     ]
    ]
+  },
+  {
+   "title": "The Venetians leave and the Ottoman navy holds the Horn",
+   "when": "By midday",
+   "text": "The Venetian captain had the gate of the Golden Horn broken open, and the Venetians left in ships filled with soldiers and refugees. A few Genoese ships and the Emperor's ships followed them. The Ottoman navy took control of the Golden Horn by midday.",
+   "quote": "This fleet narrowly escaped prior to the Ottoman navy assuming control over the Golden Horn, which was accomplished by midday.",
+   "at": {
+    "fleet": [
+     80,
+     20,
+     270
+    ]
+   },
+   "state": {
+    "ven": "gone",
+    "bfleet": "gone"
+   }
   }
  ]
 }

@@ -66,7 +66,10 @@ A skip is a good answer. Never fill a gap from what you know from elsewhere.
 - Only fighting formations and their camps. No block for clergy, servants, onlookers or baggage that took no part.
 
 ## 6. Phases
-Three to seven. Each phase:
+Three to fourteen: one for every distinct movement the article tells in order (an attack, its repulse, a counter-attack,
+a march round a flank, an arrival, a withdrawal, a commander's fall), and no more. A battle the article tells in four
+movements has four phases; never pad, and never fold two movements the article tells one after the other into one phase
+(the limit was seven until 24 Nov 2026, and many plans bundled). Each phase:
 - `title`: at most 60 characters, no full stop. What happened, plainly ("The Roman centre pushes forward").
 - `when`: only if the article gives it ("About midday", "2 August 216 BCE").
 - `text`: one to three sentences, 110 to 340 characters, past tense. What moved and why it mattered to the fight.

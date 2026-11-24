@@ -202,15 +202,25 @@
    ]
   },
   {
-   "title": "The Lithuanians retreat and the Poles are attacked",
-   "text": "After more than an hour the Lithuanian light cavalry began a full retreat. Six of Wallenrode's banners did not pursue but joined Kuno's attack on the Polish side, and the second Polish line came up.",
+   "title": "The Lithuanian light cavalry retreats",
+   "text": "After more than an hour of heavy fighting the Lithuanian light cavalry began a full retreat from the left flank of the Teutonic forces.",
    "quote": "After more than an hour of heavy fighting, the Lithuanian light cavalry began a full retreat.",
    "at": {
     "lit": [
      80,
      54,
      180
-    ],
+    ]
+   },
+   "how": {
+    "lit": "retreat"
+   }
+  },
+  {
+   "title": "Heavy fighting breaks out between Poles and the Order",
+   "text": "While the Lithuanians were retreating, Kuno von Lichtenstein's force fell on the Polish side. Six of Wallenrode's banners did not pursue the Lithuanians but joined the attack, and the royal banner of Kraków was lost and soon recaptured.",
+   "quote": "Six of von Walenrode's banners did not pursue the retreating Lithuanians, instead joining the attack on the right flank.",
+   "at": {
     "tev6": [
      58,
      34,
@@ -225,15 +235,7 @@
      46,
      40,
      0
-    ],
-    "pol2": [
-     36,
-     50,
-     0
     ]
-   },
-   "how": {
-    "lit": "retreat"
    },
    "hits": [
     [
@@ -244,7 +246,21 @@
      "tev6",
      "polM",
      0.2
-    ],
+    ]
+   ]
+  },
+  {
+   "title": "The king deploys his second line",
+   "text": "Władysław II Jagiełło deployed his reserves, the second line of his army, against the Teutonic force that was pressing the Polish side.",
+   "quote": "Władysław II Jagiełło deployed his reserves — the second line of his army.",
+   "at": {
+    "pol2": [
+     36,
+     50,
+     0
+    ]
+   },
+   "hits": [
     [
      "pol2",
      "tevC",
@@ -254,7 +270,7 @@
   },
   {
    "title": "The Grand Master's 16 banners and the last reserves",
-   "text": "The royal banner of Kraków was lost and recaptured. Von Jungingen led 16 banners to the Polish side and the king committed his third line, and the fighting reached the Polish command.",
+   "text": "Von Jungingen led 16 banners, almost a third of the original Teutonic strength, to the Polish side, and the king committed his third line. The fighting reached the Polish command.",
    "quote": "The melee reached the Polish command",
    "at": {
     "tevG": [
@@ -303,8 +319,31 @@
    ]
   },
   {
-   "title": "Von Jungingen is killed and the Order retreats",
-   "text": "Von Jungingen tried to break through the Lithuanian lines and was killed. Surrounded and leaderless, the Order began to retreat, and part of the routed units made for their camp.",
+   "title": "Von Jungingen is killed",
+   "text": "Von Jungingen tried to break through the Lithuanian lines and was killed. By one account a lance through the neck killed him.",
+   "quote": "As von Jungingen attempted to break through the Lithuanian lines, he was killed.",
+   "at": {
+    "tevG": [
+     62,
+     17,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "tevG",
+     "lit"
+    ],
+    [
+     "lit",
+     "tevG",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The leaderless Order retreats",
+   "text": "Surrounded and leaderless, the Order began to retreat. Part of the routed units made for their camp. The Order had by then been outnumbered by the Polish knights and the Lithuanian cavalry.",
    "quote": "Surrounded and leaderless, the Teutonic Order began to retreat.",
    "at": {
     "tevC": [
@@ -332,13 +371,7 @@
     "tevC": "routed",
     "tev6": "routed",
     "tevG": "routed"
-   },
-   "hits": [
-    [
-     "lit",
-     "tevG"
-    ]
-   ]
+   }
   },
   {
    "title": "The camp is broken",

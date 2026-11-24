@@ -21,7 +21,7 @@
    }
   ]
  },
- "note": "The battle lasted six days and the plan shows its main phases. The accounts give the Byzantine centre as the armies of Dairjan and Vahan together; Dairjan's army is placed on the left centre, where they name him, and the Armenian army of Vahan on the right centre by judgement. Where the bridge at Ayn Dhakar lay along the ravine, and where the Byzantine cavalry stood in the rear, the accounts do not say. Accounts differ on the length of the battle: some say it lasted a day, others six days.",
+ "note": "The battle lasted six days and the plan shows its main phases. The accounts give the Byzantine centre as the armies of Dairjan and Vahan together; Dairjan's army is placed on the left centre, where they name him, and the Armenian army of Vahan on the right centre by judgement. Where the bridge at Ayn Dhakar lay along the ravine, and where the Byzantine cavalry stood in the rear, the accounts do not say. Accounts differ on the length of the battle: some say it lasted a day, others six days. The third day, when the Byzantines again attacked the Muslim right and Khalid again struck their flanks, is not drawn apart from the fourth day, which repeats it.",
  "terrain": [
   {
    "k": "river",
@@ -280,13 +280,32 @@
    "short": "Cavalry",
    "w": 12,
    "quote": "each army deploying its infantry at the forefront and its cavalry as a reserve in the rear."
+  },
+  {
+   "id": "bha",
+   "side": "b",
+   "k": "horse-archers",
+   "name": "Byzantine horse-archers",
+   "short": "H. archers",
+   "w": 6,
+   "quote": "Byzantine horse-archers had taken to the field"
+  },
+  {
+   "id": "ikrimah",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Ikrimah's 400 cavalry",
+   "short": "Ikrimah",
+   "leader": "Ikrimah",
+   "w": 5,
+   "quote": "Ikrimah covered the retreat of the Muslims with his 400 members of the cavalry by attacking the Byzantine front"
   }
  ],
  "phases": [
   {
    "title": "The two armies stand facing each other",
    "when": "15 August 636",
-   "text": "The Byzantines faced east and the Muslims west, on fronts of about 13 and 12 kilometres. Each side had four sections, and each Byzantine army kept its cavalry in the rear. On the first day a third of the Byzantine infantry attacked and neither side gained ground.",
+   "text": "The Byzantines faced east and the Muslims west, on fronts of about 13 and 12 kilometres. Each side had four sections, and each Byzantine army kept its cavalry in the rear.",
    "quote": "Vahan deployed the Imperial Army facing east, with a front about 13 kilometres (8.1 mi) long",
    "at": {
     "mr": [
@@ -342,9 +361,55 @@
    }
   },
   {
-   "title": "The Byzantine wings drive the Muslim wings back",
+   "title": "A third of the Byzantine infantry attacks",
+   "when": "Midday, 15 August",
+   "text": "After duels between champions, Vahan ordered a limited attack with a third of his infantry to test the Muslim line. The assault lacked determination, and neither side gained ground.",
+   "quote": "Vahan ordered a limited attack with a third of his infantry forces to test the strength and strategy of the Muslim army",
+   "at": {
+    "bl": [
+     52,
+     12,
+     90
+    ],
+    "blc": [
+     52,
+     25,
+     90
+    ],
+    "brc": [
+     52,
+     38,
+     90
+    ],
+    "br": [
+     52,
+     51,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "bl",
+     "mr"
+    ],
+    [
+     "blc",
+     "mrc"
+    ],
+    [
+     "brc",
+     "mlc"
+    ],
+    [
+     "br",
+     "ml"
+    ]
+   ]
+  },
+  {
+   "title": "The Byzantine left wing drives back the Muslim right",
    "when": "16 August",
-   "text": "The Byzantine centre only pinned the Muslim centre. On the wings Qanatir's Slavs and Gregory's army attacked in force, and the Muslim wings fell back towards their camps.",
+   "text": "The Byzantine centre did not press hard, meaning to pin the Muslim centre in place. Qanatir, with mainly Slavs on the Byzantine left, attacked in force, and the Muslim infantry on the right wing had to retreat.",
    "quote": "Qanatir, commanding the Byzantine left flank, which consisted of mainly Slavs, attacked in force, and the Muslim infantry on the right flank had to retreat.",
    "at": {
     "bl": [
@@ -357,20 +422,19 @@
      12,
      270
     ],
-    "br": [
-     57,
-     51,
+    "blc": [
+     45,
+     25,
      90
     ],
-    "ml": [
-     72,
-     51,
-     270
+    "brc": [
+     45,
+     38,
+     90
     ]
    },
    "how": {
-    "mr": "retreat",
-    "ml": "retreat"
+    "mr": "retreat"
    },
    "hits": [
     [
@@ -378,8 +442,12 @@
      "mr"
     ],
     [
-     "br",
-     "ml"
+     "blc",
+     "mrc"
+    ],
+    [
+     "brc",
+     "mlc"
     ]
    ]
   },
@@ -390,8 +458,8 @@
    "quote": "The three-pronged attack forced the Byzantine left wing to abandon the Muslim positions they had gained on, and Amr regained his lost ground",
    "at": {
     "guard": [
-     54,
-     21,
+     55,
+     16,
      0
     ],
     "mr": [
@@ -420,9 +488,65 @@
    ]
   },
   {
-   "title": "Qanatir presses the right again and Khalid flanks the centre",
+   "title": "Gregory overruns the Muslim left wing",
+   "text": "The Byzantines were more numerous on the south, where the Muslim left wing under Yazid had no help from the mobile guard. Its positions were overrun and its soldiers fell back towards their camps.",
+   "quote": "the numerical advantage the Byzantines enjoyed caused the Muslim positions to be overrun, with soldiers retreating towards base camps.",
+   "at": {
+    "br": [
+     57,
+     51,
+     90
+    ],
+    "ml": [
+     72,
+     51,
+     270
+    ]
+   },
+   "how": {
+    "ml": "retreat"
+   },
+   "hits": [
+    [
+     "br",
+     "ml"
+    ]
+   ]
+  },
+  {
+   "title": "Khalid's guard relieves the Muslim left",
+   "text": "Khalid ordered the mobile guard to relieve the battered left wing, and it attacked Gregory's flank. Under attack from the front and the flank, the Byzantines fell back, but more slowly because they had to keep their formation.",
+   "quote": "Here again, under simultaneous attacks from the front and flanks, the Byzantines fell back but more slowly because they had to maintain their formation.",
+   "at": {
+    "guard": [
+     54,
+     43,
+     180
+    ],
+    "br": [
+     50,
+     51,
+     90
+    ]
+   },
+   "how": {
+    "br": "retreat"
+   },
+   "hits": [
+    [
+     "guard",
+     "br"
+    ],
+    [
+     "ml",
+     "br"
+    ]
+   ]
+  },
+  {
+   "title": "Qanatir presses the Muslim right again",
    "when": "18 August",
-   "text": "Qanatir led his Slavs, with help from Armenians and Jabalah's Christian Arabs, against the Muslim right wing and right centre, which fell back. Khalid sent the mobile guard at the flanks of the Byzantine left centre while Abu Ubayda and Yazid attacked on the left.",
+   "text": "Qanatir led his Slavs, with help from Armenians and Jabalah's Christian Arabs, against the Muslim right wing and right centre, which fell back. Khalid then ordered Abu Ubayda and Yazid to attack on the left to stall the Byzantine front.",
    "quote": "Qanatir led two armies of Slavs against the Muslim right wing and right centre with some assistance from the Armenians and Christian Arabs led by Jabalah.",
    "at": {
     "bl": [
@@ -439,11 +563,6 @@
      72,
      26,
      270
-    ],
-    "guard": [
-     52,
-     19,
-     180
     ],
     "ml": [
      64,
@@ -465,16 +584,134 @@
      "mrc"
     ],
     [
-     "guard",
-     "blc"
-    ],
-    [
      "mlc",
      "brc"
     ],
     [
      "ml",
      "br"
+    ]
+   ]
+  },
+  {
+   "title": "Khalid's guard flanks the Byzantine left centre",
+   "text": "Khalid divided the mobile guard into two and attacked the flanks of the Byzantine left centre, while the Muslim right centre attacked from the front. The left centre fell back, and the exposed left wing fell back with it.",
+   "quote": "Khalid divided his mobile guard into two divisions and attacked the flanks of the Byzantine left centre, and the infantry of the Muslim right centre attacked from the front.",
+   "at": {
+    "guard": [
+     54,
+     19,
+     180
+    ],
+    "mrc": [
+     64,
+     25,
+     270
+    ],
+    "mr": [
+     64,
+     12,
+     270
+    ],
+    "blc": [
+     40,
+     25,
+     90
+    ],
+    "bl": [
+     46,
+     10,
+     90
+    ]
+   },
+   "how": {
+    "blc": "retreat",
+    "bl": "retreat"
+   },
+   "hits": [
+    [
+     "guard",
+     "blc"
+    ],
+    [
+     "mrc",
+     "blc"
+    ],
+    [
+     "mr",
+     "bl"
+    ]
+   ]
+  },
+  {
+   "title": "The Day of Lost Eyes",
+   "text": "Byzantine horse-archers took the field and shot at the troops of Abu Ubayda and Yazid so heavily that they could not press the Byzantine lines. The Muslim armies fell back, except one regiment on the left of Abu Ubayda's corps.",
+   "quote": "Byzantine horse-archers had taken to the field and subjected Abu Ubayda and Yazid's troops to intense archery preventing them from penetrating their Byzantine lines.",
+   "at": {
+    "bha": [
+     54,
+     46,
+     90
+    ],
+    "mlc": [
+     72,
+     38,
+     270
+    ],
+    "ml": [
+     72,
+     51,
+     270
+    ],
+    "ikrimah": [
+     62,
+     45,
+     270
+    ]
+   },
+   "how": {
+    "mlc": "retreat",
+    "ml": "retreat"
+   },
+   "hits": [
+    [
+     "bha",
+     "mlc"
+    ],
+    [
+     "bha",
+     "ml"
+    ]
+   ]
+  },
+  {
+   "title": "Ikrimah covers the retreat",
+   "text": "Ikrimah covered the retreat with his 400 cavalry by attacking the Byzantine front. All of his men were seriously injured or dead that day, and he himself was mortally wounded.",
+   "quote": "Ikrimah covered the retreat of the Muslims with his 400 members of the cavalry by attacking the Byzantine front",
+   "at": {
+    "ikrimah": [
+     60,
+     45,
+     270
+    ]
+   },
+   "state": {
+    "ikrimah": "destroyed"
+   },
+   "hits": [
+    [
+     "ikrimah",
+     "brc"
+    ],
+    [
+     "bha",
+     "ikrimah",
+     0.2
+    ],
+    [
+     "brc",
+     "ikrimah",
+     -0.2
     ]
    ]
   },
@@ -508,17 +745,34 @@
      11,
      27,
      90
+    ],
+    "blc": [
+     44,
+     25,
+     90
+    ],
+    "mlc": [
+     64,
+     38,
+     270
+    ],
+    "ml": [
+     64,
+     51,
+     270
     ]
    },
    "state": {
-    "dhirar": "shown"
+    "dhirar": "shown",
+    "bha": "gone",
+    "ikrimah": "gone"
    }
   },
   {
-   "title": "The cavalry sweeps round the left and routs the horse",
+   "title": "The cavalry rides round the left wing and it collapses",
    "when": "20 August",
-   "text": "Khalid galloped his cavalry round the Byzantine left wing and attacked its rear while the Muslim right wing pressed from the front, and the left wing collapsed. He then wheeled back upon the Byzantine cavalry as it formed and routed it to the north.",
-   "quote": "Khalid had wheeled his cavalry back to attack the concentrating Byzantine cavalry squadrons, falling upon them from the front and the flank while they were still moving into formation.",
+   "text": "Khalid galloped his cavalry round the Byzantine left wing and attacked its rear while the Muslim right wing pressed from the front. The left wing fell back and collapsed onto the left centre, disordering it, and the Muslim right centre attacked that centre's front.",
+   "quote": "Under the two-pronged attack, the Byzantine left wing fell back and collapsed and fell back to the Byzantine left centre, greatly disordering it.",
    "at": {
     "guard": [
      35,
@@ -539,6 +793,38 @@
      47,
      12,
      90
+    ]
+   },
+   "how": {
+    "bl": "rout"
+   },
+   "state": {
+    "bl": "routed"
+   },
+   "hits": [
+    [
+     "guard",
+     "bl"
+    ],
+    [
+     "mr",
+     "bl"
+    ],
+    [
+     "mrc",
+     "blc"
+    ]
+   ]
+  },
+  {
+   "title": "The Byzantine cavalry is routed",
+   "text": "Vahan ordered his cavalry to group, but too slowly. Khalid wheeled his cavalry back and fell on the squadrons from the front and the flank while they were still forming, and they were routed and dispersed to the north.",
+   "quote": "Khalid had wheeled his cavalry back to attack the concentrating Byzantine cavalry squadrons, falling upon them from the front and the flank while they were still moving into formation.",
+   "at": {
+    "guard": [
+     30,
+     20,
+     0
     ],
     "bcav": [
      20,
@@ -547,25 +833,15 @@
     ]
    },
    "how": {
-    "bl": "rout",
     "bcav": "rout"
    },
    "state": {
-    "bl": "routed",
     "bcav": "routed"
    },
    "hits": [
     [
      "guard",
-     "bl"
-    ],
-    [
-     "guard",
      "bcav"
-    ],
-    [
-     "mrc",
-     "blc"
     ]
    ]
   },

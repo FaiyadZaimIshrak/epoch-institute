@@ -6,20 +6,8 @@
   "north": 0,
   "ground": "sea",
   "edges": [
-   {
-    "name": "to Bairiki →",
-    "at": [
-     96,
-     44
-    ]
-   },
-   {
-    "name": "open ocean ↓",
-    "at": [
-     14,
-     58
-    ]
-   }
+   {"name": "to Bairiki →", "at": [96, 44]},
+   {"name": "open ocean ↓", "at": [14, 58]}
   ]
  },
  "note": "The plan shows the whole four-day operation on Betio, not a single field. Each block stands for the Marines or defenders of a stretch of the island, so positions are rough. The accounts give no place for the warships; they are drawn offshore. The accounts do not say how the defenders were spread along the island, so the Japanese blocks are placed by the beaches and the pocket the accounts name. The Japanese pocket between Red 1 and Red 2 is drawn as the whole garrison's remnant, which the accounts do not claim.",
@@ -27,178 +15,64 @@
   {
    "k": "land",
    "name": "Betio",
-   "at": [
-    [
-     8,
-     27
-    ],
-    [
-     30,
-     25.5
-    ],
-    [
-     60,
-     26.5
-    ],
-    [
-     88,
-     30
-    ],
-    [
-     88,
-     33
-    ],
-    [
-     60,
-     39
-    ],
-    [
-     30,
-     40
-    ],
-    [
-     8,
-     38
-    ]
-   ],
-   "lab": [
-    74,
-    36.5
-   ],
+   "at": [[8, 27], [30, 25.5], [60, 26.5], [88, 30], [88, 33], [60, 39], [30, 40], [8, 38]],
+   "lab": [74, 36.5],
    "quote": "Shaped roughly like a long, thin triangle, the tiny island is approximately 2 miles (3.2 km) long."
   },
   {
    "k": "wall",
    "name": "Sea wall",
    "unnamed": true,
-   "at": [
-    [
-     12,
-     27.2
-    ],
-    [
-     30,
-     26.2
-    ],
-    [
-     60,
-     27
-    ],
-    [
-     86,
-     30.2
-    ]
-   ],
-   "lab": [
-    76,
-    28
-   ],
+   "at": [[12, 27.2], [30, 26.2], [60, 27], [86, 30.2]],
+   "lab": [76, 28],
    "quote": "pinned down against the log wall along the beach"
   },
   {
    "k": "road",
    "name": "Pier",
-   "at": [
-    [
-     56,
-     27
-    ],
-    [
-     56,
-     17
-    ]
-   ],
-   "lab": [
-    60,
-    20
-   ],
+   "at": [[56, 27], [56, 17]],
+   "lab": [60, 20],
    "quote": "A long pier was constructed jutting out from the north shore"
   },
   {
    "k": "road",
    "name": "Airstrip",
-   "at": [
-    [
-     14,
-     32.5
-    ],
-    [
-     50,
-     32.5
-    ],
-    [
-     84,
-     32.5
-    ]
-   ],
-   "lab": [
-    74,
-    32.5
-   ],
+   "at": [[14, 32.5], [50, 32.5], [84, 32.5]],
+   "lab": [74, 32.5],
    "quote": "An airfield was cut into the bush straight down the center of the island."
   },
   {
    "k": "point",
    "name": "Red 1",
-   "at": [
-    16,
-    26.5
-   ],
-   "lab": [
-    16,
-    24
-   ],
+   "at": [16, 26.5],
+   "lab": [16, 24],
    "quote": "Red Beach 1 on the far west of the island, Red Beach 2 in the center just west of the pier, and Red Beach 3 to the east of the pier"
   },
   {
    "k": "point",
    "name": "Red 2",
-   "at": [
-    44,
-    26.5
-   ],
-   "lab": [
-    44,
-    24.2
-   ],
+   "at": [44, 26.5],
+   "lab": [44, 24.2],
    "quote": "Red Beach 2 in the center just west of the pier, and Red Beach 3 to the east of the pier"
   },
   {
    "k": "point",
    "name": "Red 3",
-   "at": [
-    68,
-    28
-   ],
-   "lab": [
-    68,
-    25.5
-   ],
+   "at": [68, 28],
+   "lab": [68, 25.5],
    "quote": "Red Beach 1 on the far west of the island, Red Beach 2 in the center just west of the pier, and Red Beach 3 to the east of the pier"
   },
   {
    "k": "point",
    "name": "Green Beach",
-   "at": [
-    8,
-    33
-   ],
-   "lab": [
-    6,
-    40
-   ],
+   "at": [8, 33],
+   "lab": [6, 40],
    "quote": "Green Beach was a contingency landing beach on the western shoreline"
   }
  ],
  "sides": [
-  {
-   "id": "us",
-   "name": "United States"
-  },
-  {
-   "id": "jp",
-   "name": "Japan"
-  }
+  {"id": "us", "name": "United States"},
+  {"id": "jp", "name": "Japan"}
  ],
  "units": [
   {
@@ -305,39 +179,12 @@
    "text": "Warships and aircraft shelled the island for about three hours before the landing. The Marines waited in the lagoon to land on the north beaches, while the defenders sat in their pillboxes and firing pits.",
    "quote": "the naval bombardment of the island began in earnest and was sustained for the next three hours",
    "at": {
-    "ships": [
-     50,
-     52,
-     0
-    ],
-    "m": [
-     46,
-     12,
-     180
-    ],
-    "j1": [
-     28,
-     31,
-     0
-    ],
-    "j2": [
-     66,
-     36,
-     180
-    ]
+    "ships": [50, 52, 0],
+    "m": [46, 12, 180],
+    "j1": [28, 31, 0],
+    "j2": [66, 36, 180]
    },
-   "hits": [
-    [
-     "ships",
-     "j1",
-     0.1
-    ],
-    [
-     "ships",
-     "j2",
-     -0.2
-    ]
-   ]
+   "hits": [["ships", "j1", 0.1], ["ships", "j2", -0.2]]
   },
   {
    "title": "The landing is pinned down at the sea wall",
@@ -345,122 +192,82 @@
    "text": "The tide was too low for the Higgins boats, and only the tracked LVTs crossed the reef. They could not clear the sea wall, so the first waves were pinned against it. Defenders from the south beaches were shifted to the north.",
    "quote": "Those LVTs that did make it in proved unable to clear the sea wall",
    "at": {
-    "m": [
-     46,
-     22,
-     180
-    ],
-    "j2": [
-     66,
-     31,
-     0
-    ]
+    "m": [46, 22, 180],
+    "j2": [66, 31, 0]
    },
-   "hits": [
-    [
-     "j1",
-     "m"
-    ],
-    [
-     "j2",
-     "m",
-     -0.1
-    ]
-   ]
+   "hits": [["j1", "m"], ["j2", "m", -0.1]]
   },
   {
    "title": "By nightfall the line is half-way across",
    "when": "Evening of 20 November",
-   "text": "Tanks that reached shore started the line moving, and by nightfall it was about half-way across the island. Ryan gathered men from other waves and took them to a more lightly defended part of Green Beach.",
+   "text": "The arrival of tanks started the line moving on Red 3 and the end of Red 2. By nightfall it was about half-way across the island, only a short distance from the main runway.",
    "quote": "by nightfall the line was about half-way across the island, only a short distance from the main runway",
    "at": {
-    "m": [
-     47,
-     29,
-     180
-    ],
-    "r": [
-     12,
-     30,
-     90
-    ]
+    "m": [47, 29, 180]
    },
-   "hits": [
-    [
-     "m",
-     "j1"
-    ],
-    [
-     "m",
-     "j2",
-     -0.1
-    ]
-   ]
+   "hits": [["m", "j1"], ["m", "j2", -0.1]]
   },
   {
-   "title": "The west is cleared and the south coast pressed",
-   "when": "21 to 22 November",
-   "text": "Ryan's force cleared the western end with naval gunfire, and Marines crossed the airstrip to the south side. On 22 November the 1st Battalion, 6th Marines attacked along the south coast, pushing the defenders east. Part of the 6th landed on Bairiki.",
+   "title": "Ryan's Orphans clear the western end",
+   "when": "20 November",
+   "text": "Major Ryan gathered remnants of his company with Marines and sailors from other waves and two Sherman tanks, and took them to a more lightly defended part of Green Beach. With naval gunfire they cleared the western end of the island.",
+   "quote": "arranged for naval gunfire and mounted an attack that cleared the island's western end.",
+   "at": {
+    "r": [12, 30, 90]
+   },
+   "hits": [["r", "j1"]]
+  },
+  {
+   "title": "The Marines cross the airstrip",
+   "when": "Early afternoon, 21 November",
+   "text": "Machine gun posts set up in the night had cut the Marines of Red 2 and Red 3 off from each other. By noon heavy machine guns put them out of action, and by early afternoon the Marines had crossed the airstrip to the south side.",
+   "quote": "By the early afternoon they had crossed the airstrip and had occupied abandoned defensive works on the south side.",
+   "at": {
+    "m": [47, 35, 180]
+   },
+   "hits": [["m", "j2", -0.1]]
+  },
+  {
+   "title": "Marines land on Bairiki",
+   "when": "From 16:55 on 21 November",
+   "text": "Word came that some defenders were crossing the sandbars to Bairiki. Portions of the 6th Marines landed there, with tanks and pack artillery, to seal off the retreat path. They found a single pillbox, which aircraft set on fire.",
+   "quote": "Portions of the 6th Marine Regiment were ordered to land on Bairiki to seal off the retreat path.",
+   "at": {
+    "b": [95, 35, 90]
+   }
+  },
+  {
+   "title": "The 1st Battalion, 6th Marines attacks along the south coast",
+   "when": "From 12:30 on 22 November",
+   "text": "The 1st Battalion, 6th Marines, formed up after landing on Green Beach, attacked at 12:30 and pressed the Japanese east along the south coast. By late afternoon it had reached the eastern end of the airfield and joined the line from Red 3.",
    "quote": "they pressed the Japanese forces across the southern coast of the island",
    "at": {
-    "m": [
-     47,
-     35,
-     180
-    ],
-    "a": [
-     60,
-     35,
-     90
-    ],
-    "b": [
-     95,
-     35,
-     90
-    ],
-    "j2": [
-     72,
-     31,
-     270
-    ]
+    "a": [60, 35, 90],
+    "j2": [72, 31, 270]
    },
    "how": {
     "j2": "retreat"
    },
-   "hits": [
-    [
-     "r",
-     "j1"
-    ],
-    [
-     "a",
-     "j2"
-    ]
-   ]
+   "hits": [["a", "j2"]]
   },
   {
-   "title": "The Japanese counterattack at night",
+   "title": "The Japanese counterattack is broken up",
+   "when": "About 19:30, 22 November",
+   "text": "That night the Japanese formed up for a counterattack and sent small units to infiltrate the American lines. Concentrated artillery fire broke up the assembling force, and the full assault never took place.",
+   "quote": "The assembling forces were broken up by concentrated artillery fire, and the assault never took place.",
+   "at": {
+    "j2": [68, 32, 270]
+   }
+  },
+  {
+   "title": "The banzai charge at night",
    "when": "Night of 22 to 23 November",
-   "text": "The Japanese formed up for a counterattack at about 19:30, but artillery broke it up. A banzai charge followed in the early hours of 23 November and killed 45 Americans before destroyers and artillery drove it back.",
+   "text": "A large banzai charge was made at 03:00 and met with some success, killing 45 Americans and wounding 128. With support from the destroyers Schroeder and Sigsbee, the Marines killed 325 Japanese attackers.",
    "quote": "A large banzai charge was made at 03:00 and met with some success, killing 45 Americans and wounding 128.",
    "at": {
-    "j2": [
-     66,
-     32,
-     270
-    ]
+    "j2": [66, 32, 270]
    },
-   "hits": [
-    [
-     "j2",
-     "a"
-    ],
-    [
-     "ships",
-     "j2",
-     -0.2
-    ]
-   ]
+   "hits": [["j2", "a"], ["ships", "j2", -0.2]]
   },
   {
    "title": "The Marines attack both pockets",
@@ -468,26 +275,10 @@
    "text": "The 3rd Battalion, 6th Marines relieved the first battalion and attacked the eastern end. The 3rd Battalion, 2nd and the 1st Battalion, 8th closed on the pocket between Red 1 and Red 2 from west and east.",
    "quote": "1/8 advanced on the pocket from the east (Red 2) while 3/2 advanced from the west (Red 1).",
    "at": {
-    "c": [
-     61,
-     35,
-     90
-    ],
-    "p": [
-     18,
-     30,
-     90
-    ],
-    "q": [
-     41,
-     30,
-     270
-    ],
-    "j2": [
-     80,
-     31,
-     270
-    ]
+    "c": [61, 35, 90],
+    "p": [18, 30, 90],
+    "q": [41, 30, 270],
+    "j2": [80, 31, 270]
    },
    "state": {
     "a": "gone"
@@ -495,20 +286,7 @@
    "how": {
     "j2": "rout"
    },
-   "hits": [
-    [
-     "c",
-     "j2"
-    ],
-    [
-     "p",
-     "j1"
-    ],
-    [
-     "q",
-     "j1"
-    ]
-   ]
+   "hits": [["c", "j2"], ["p", "j1"], ["q", "j1"]]
   },
   {
    "title": "The island is declared secure",
@@ -516,35 +294,14 @@
    "text": "By noon the pocket between Red 1 and Red 2 had been reduced. The 3rd Battalion, 6th Marines reached the eastern tip by 13:00, and the island was declared secure at 13:30.",
    "quote": "By 13:00 they had reached the eastern tip of Betio.",
    "at": {
-    "c": [
-     76,
-     33,
-     90
-    ],
-    "j2": [
-     84,
-     31,
-     270
-    ]
+    "c": [76, 33, 90],
+    "j2": [84, 31, 270]
    },
    "state": {
     "j1": "destroyed",
     "j2": "destroyed"
    },
-   "hits": [
-    [
-     "c",
-     "j2"
-    ],
-    [
-     "p",
-     "j1"
-    ],
-    [
-     "q",
-     "j1"
-    ]
-   ]
+   "hits": [["c", "j2"], ["p", "j1"], ["q", "j1"]]
   }
  ]
 }

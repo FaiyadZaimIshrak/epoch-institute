@@ -303,6 +303,29 @@
    ]
   },
   {
+   "title": "The British left takes the houses and mill",
+   "text": "On the left wing Townshend's regiments exchanged fire with the militia in the scrub and captured a small collection of houses and a gristmill to anchor the line. The defenders burned several houses as they left, and the smoke masked the British left.",
+   "quote": "captured a small collection of houses and gristmill to anchor the line",
+   "at": {
+    "brleft": [
+     44,
+     13,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "brleft",
+     "frmil"
+    ],
+    [
+     "frmil",
+     "brleft",
+     0.2
+    ]
+   ]
+  },
+  {
    "title": "Montcalm orders a general advance",
    "when": "About 10 a.m.",
    "text": "The French regulars moved against the British line. The British lines held their fire as the French approached.",
@@ -321,8 +344,36 @@
    }
   },
   {
-   "title": "The British fire two volleys and the French break",
-   "text": "The French fired two disorganised volleys. The British then fired at close range, marched forward a few paces and fired a second general volley, which sent the attackers into retreat.",
+   "title": "The French fire two volleys",
+   "text": "The British held their fire until the French came within about 30 yards, and for two or three minutes both armies waited. The French then fired two disorganised volleys.",
+   "quote": "The French finally fired two disorganized volleys.",
+   "at": {
+    "frcentre": [
+     47,
+     30,
+     270
+    ],
+    "frleft": [
+     47,
+     46,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "frcentre",
+     "brcentre",
+     0.3
+    ],
+    [
+     "frleft",
+     "brright"
+    ]
+   ]
+  },
+  {
+   "title": "The British fire twice and the French break",
+   "text": "The British fired at close range, marched forward a few paces and fired a second general volley, which shattered the attackers and sent them into retreat.",
    "quote": "the British lines marched forward a few paces towards the shocked French force and fired a second general volley that shattered the attackers and sent them into retreat.",
    "at": {
     "brleft": [
@@ -339,16 +390,6 @@
      40,
      46,
      90
-    ],
-    "frcentre": [
-     47,
-     30,
-     270
-    ],
-    "frleft": [
-     47,
-     46,
-     270
     ]
    },
    "hits": [
@@ -359,11 +400,6 @@
     [
      "brright",
      "frleft"
-    ],
-    [
-     "frcentre",
-     "brcentre",
-     0.3
     ]
    ]
   },
@@ -401,6 +437,32 @@
      "frmil",
      "hld",
      0.2
+    ]
+   ]
+  },
+  {
+   "title": "The Highlanders attack the militia on the flank",
+   "text": "Once gathered together, the Highlanders made a separate attack on a large body of Canadians posted on the flank in a small village and a bush of woods. They suffered great loss before driving them back under cover of their cannon.",
+   "quote": "they lay'd on a separate attack against a large body of Canadians on our flank",
+   "at": {
+    "hld": [
+     56,
+     18,
+     90
+    ],
+    "frmil": [
+     68,
+     10,
+     90
+    ]
+   },
+   "how": {
+    "frmil": "retreat"
+   },
+   "hits": [
+    [
+     "hld",
+     "frmil"
     ]
    ]
   },

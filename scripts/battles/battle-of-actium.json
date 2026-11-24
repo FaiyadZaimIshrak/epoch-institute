@@ -323,8 +323,35 @@
    }
   },
   {
-   "title": "Antony follows and the rest are taken",
-   "text": "Antony thought all was lost and followed the fleeing squadron. He moved to a smaller vessel and slipped away with a few ships as escort, and the ships left behind were captured or sunk.",
+   "title": "Antony follows the fleeing squadron",
+   "text": "Antony had not seen the signal. Believing that it was mere panic and that all was lost, he followed the fleeing squadron, and Cleopatra's ships were soon out of sight.",
+   "quote": "Antony had not observed the signal, and believing that it was mere panic and all was lost, followed the fleeing squadron.",
+   "state": {
+    "cleo": "gone"
+   }
+  },
+  {
+   "title": "Some fight on into the night",
+   "text": "Some of the ships fought on, and only long after nightfall, when many were blazing from the firebrands thrown upon them, was the work done.",
+   "quote": "Some fought on, and only long after nightfall, when many a ship was blazing from the firebrands thrown upon them, was the work done.",
+   "hits": [
+    [
+     "agr",
+     "ant"
+    ],
+    [
+     "arr",
+     "aoi"
+    ],
+    [
+     "lur",
+     "sos"
+    ]
+   ]
+  },
+  {
+   "title": "Antony escapes and the rest are taken",
+   "text": "Antony moved to a smaller vessel with his flag and slipped away with a few ships as escort to help break through Octavian's lines. The ships left behind were captured or sunk.",
    "quote": "Antony transferred to a smaller vessel with his flag and managed to escape, taking a few ships with him as an escort to help break through Octavian's lines. Those left behind were captured or sunk.",
    "at": {
     "esc": [
@@ -337,7 +364,6 @@
     "esc": "retreat"
    },
    "state": {
-    "cleo": "gone",
     "ant": "destroyed",
     "aoi": "destroyed",
     "sos": "destroyed"

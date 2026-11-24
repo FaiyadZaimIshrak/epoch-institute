@@ -28,7 +28,7 @@
    }
   ]
  },
- "note": "This plan shows the whole operation of about two weeks, not a single field: each block is an army, corps or division, and distances are schematic. The Wieprz is drawn much nearer Warsaw than it lay, and the accounts do not say where the Polish 1st Legions Division stood when it began its march, so it first appears near Białystok.",
+ "note": "This plan shows the whole operation of about two weeks, not a single field: each block is an army, corps or division, and distances are schematic. The Wieprz is drawn much nearer Warsaw than it lay, and the 1st Legions Division first appears at Lubartów, where the accounts say its march began, and its place there on the plan is schematic.",
  "terrain": [
   {
    "k": "river",
@@ -257,13 +257,22 @@
    "leader": "Budyonny",
    "w": 8,
    "quote": "Budyonny, commanding the 1st Cavalry Army, a unit much feared by Piłsudski and other Polish commanders"
+  },
+  {
+   "id": "uhl",
+   "side": "p",
+   "k": "cavalry",
+   "name": "Polish 203rd Uhlan Regiment",
+   "short": "203rd Uhl.",
+   "w": 4,
+   "quote": "the 203rd Uhlan Regiment managed to break through the Red Army lines and attack a Soviet command post"
   }
  ],
  "phases": [
   {
    "title": "The Red Army's final assault on Warsaw",
    "when": "12 August 1920",
-   "text": "The Soviet 16th Army attacked at Radzymin, east of Warsaw, while the 3rd and 15th Armies came up to Modlin. The Polish 5th Army had to face three Soviet armies at once.",
+   "text": "The Soviet 16th Army began the attack at Radzymin, east of Warsaw, in a frontal assault on the Praga bridgehead, while the 3rd and 15th Armies approached Modlin.",
    "quote": "The final Russian assault on Warsaw began on August 12.",
    "at": {
     "p5": [
@@ -329,6 +338,67 @@
    ]
   },
   {
+   "title": "Radzymin falls and the 5th Army line is broken",
+   "when": "14 August 1920",
+   "text": "Radzymin fell to the Red Army, and the lines of the Polish 5th Army were broken. The 5th Army had to fight three Soviet armies at once, the 3rd, 4th and 15th.",
+   "quote": "On August 14, Radzymin fell to the Red Army, and the lines of Sikorski's Polish 5th Army were broken.",
+   "at": {
+    "s16": [
+     58,
+     32,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "s16",
+     "p1"
+    ],
+    [
+     "s15",
+     "p5"
+    ],
+    [
+     "s4",
+     "p5"
+    ]
+   ]
+  },
+  {
+   "title": "The 203rd Uhlans raid a Soviet command post",
+   "when": "Around midnight",
+   "text": "The 203rd Uhlan Regiment broke through the Red Army lines and attacked a Soviet command post. The raid destroyed a radio station of the Soviet 4th Army, which had one station left.",
+   "quote": "the 203rd Uhlan Regiment managed to break through the Red Army lines and attack a Soviet command post, which resulted in the destruction of a radio station",
+   "at": {
+    "uhl": [
+     29,
+     17,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "uhl",
+     "s4"
+    ]
+   ]
+  },
+  {
+   "title": "The 4th Army marches on without orders",
+   "text": "The 4th Army was cut off from its headquarters. It continued marching towards Toruń and Płock, unaware of Tukhachevsky's order to turn south.",
+   "quote": "It thus lost contact with its headquarters and continued marching toward Toruń and Płock, unaware of Tukhachevsky's order to turn south.",
+   "at": {
+    "s4": [
+     17,
+     10,
+     270
+    ]
+   },
+   "state": {
+    "uhl": "gone"
+   }
+  },
+  {
    "title": "Budyonny's army marches on Lwów, not Warsaw",
    "text": "The Soviet High Command ordered the 1st Cavalry Army to advance on Warsaw from the south. It marched on Lwów instead and missed the battle, leaving only a weak Mazyr Group on the southern flank.",
    "quote": "Ultimately, Budyonny's forces marched on Lwów instead of Warsaw, and thus missed the battle.",
@@ -354,6 +424,33 @@
     "s15": [
      53,
      12,
+     270
+    ]
+   },
+   "how": {
+    "s15": "retreat"
+   },
+   "hits": [
+    [
+     "p5",
+     "s15"
+    ]
+   ]
+  },
+  {
+   "title": "The 5th Army pushes the Soviets back",
+   "when": "From 15 August 1920",
+   "text": "Sikorski's 5th Army pushed exhausted Soviet units away from Warsaw, with tanks, armoured cars and two armoured trains in support. It advanced about 30 km a day and disrupted the Soviet enveloping move in the north.",
+   "quote": "Sikorski's 5th Army pushed exhausted Soviet units away from Warsaw",
+   "at": {
+    "p5": [
+     44,
+     13,
+     90
+    ],
+    "s15": [
+     58,
+     11,
      270
     ]
    },
@@ -398,9 +495,41 @@
    ]
   },
   {
+   "title": "The Soviet retreat order comes too late",
+   "when": "18 August 1920",
+   "text": "Tukhachevsky ordered the Red Army to retreat and regroup, but his orders arrived too late or not at all. The 3rd Cavalry Corps continued to advance towards Pomerania, with its lines endangered by the Polish 5th Army.",
+   "quote": "Soviet General Bzhishkyan's 3rd Cavalry Corps continued to advance toward Pomerania, its lines endangered by the Polish 5th Army",
+   "at": {
+    "bz": [
+     12,
+     16,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "p5",
+     "bz",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "The 1st Legions Division sets out from Lubartów",
+   "text": "The Polish 1st Legions Infantry Division began a forced march from Lubartów towards Białystok to cut the enemy's retreat. It was on the move for up to 21 hours a day.",
+   "quote": "The Polish 1st Legions Infantry Division, in order to cut the enemy's retreat, carried out a forced march, going on the move for up to 21 hours a day",
+   "at": {
+    "leg": [
+     80,
+     47,
+     0
+    ]
+   }
+  },
+  {
    "title": "The Soviet 16th Army is cut off near Białystok",
    "when": "18 August 1920",
-   "text": "Tukhachevsky ordered a retreat, but his orders came too late or not at all. The Polish 1st Legions Division made a forced march and cut off the 16th Army, and most of its troops surrendered.",
+   "text": "The 1st Legions Division covered 262 km in six days and engaged the enemy twice. Its rapid advance let it intercept the 16th Army and cut it off near Białystok, and most of its troops surrendered.",
    "quote": "The division's rapid advance allowed it to intercept the 16th Soviet Army, cutting it off from reinforcements near Białystok and forcing most of its troops to surrender.",
    "at": {
     "s16": [

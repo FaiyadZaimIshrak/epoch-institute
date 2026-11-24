@@ -335,6 +335,52 @@
    ]
   },
   {
+   "title": "The Allied assaults on Probstheida are beaten back",
+   "when": "18 October",
+   "text": "Barclay's columns advanced on Probstheida, a village southeast of Leipzig held behind high garden walls. The Prussian and then the Russian assaults were driven back by French artillery and the Imperial Guard.",
+   "quote": "The Prussians conducted a series of attacks against the French positions at the village, but because the French artillery repulsed each attack, their efforts were in vain.",
+   "at": {
+    "bo": [
+     56,
+     49,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "bo",
+     "fs"
+    ]
+   ]
+  },
+  {
+   "title": "The Army of the North takes Paunsdorf and Schönefeld",
+   "when": "18 October",
+   "text": "Langeron's Russians and the Army of the North crossed the Parthe on the north-east and fought for Paunsdorf and Schönefeld. The Russians drove the French out of Schönefeld, and Ney ordered a withdrawal from Paunsdorf.",
+   "quote": "Repeated assaults by Russian musketeers and grenadiers under Langeron finally drove the French out of Schönefeld.",
+   "at": {
+    "cj": [
+     70,
+     20,
+     225
+    ],
+    "fe": [
+     58,
+     30,
+     90
+    ]
+   },
+   "how": {
+    "fe": "retreat"
+   },
+   "hits": [
+    [
+     "cj",
+     "fe"
+    ]
+   ]
+  },
+  {
    "title": "Bertrand drives the Austrians from Lindenau",
    "text": "On the western side the French IV Corps drove the Austrian III Corps away from Lindenau. This broke the encirclement and cleared the way for the French retreat.",
    "quote": "This broke the encirclement which the Allied forces earlier had made against the Grande Armée, clearing the way for its retreat which would take place later the next day.",

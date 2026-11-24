@@ -280,6 +280,24 @@
    "short": "XI Corps",
    "w": 10,
    "quote": "Prince George of Saxony and the Prussian XI Corps was assigned to the task"
+  },
+  {
+   "id": "d8",
+   "side": "g",
+   "k": "infantry",
+   "name": "Prussian 8th Infantry Division",
+   "short": "8th Div",
+   "w": 10,
+   "quote": "At 08:00 the Prussian 8th Infantry Division arrived"
+  },
+  {
+   "id": "d22",
+   "side": "g",
+   "k": "infantry",
+   "name": "German 22nd Division",
+   "short": "22nd Div",
+   "w": 10,
+   "quote": "the German 22nd Division turned Douay's left flank"
   }
  ],
  "phases": [
@@ -356,8 +374,32 @@
    ]
   },
   {
+   "title": "The 8th Division arrives and Bazeilles is stormed again",
+   "when": "From 08:00",
+   "text": "The Prussian 8th Infantry Division arrived at 08:00. Von der Tann had not been able to bring artillery to bear from long range, so he committed his last brigade to storm the town, supported by guns across the Meuse.",
+   "quote": "At 08:00 the Prussian 8th Infantry Division arrived, and von der Tann decided it was time for a decisive attack.",
+   "at": {
+    "d8": [
+     88,
+     49,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "bav",
+     "c12"
+    ],
+    [
+     "d8",
+     "c12",
+     0.25
+    ]
+   ]
+  },
+  {
    "title": "Wimpffen attacks the Saxons at La Moncelle",
-   "text": "Ducrot ordered a retreat but Wimpffen overruled him and threw his forces against the Saxons at La Moncelle. The French rallied briefly, then the counter-attack began to collapse as fresh Prussian troops arrived.",
+   "text": "Ducrot ordered a retreat but Wimpffen overruled him and threw his forces against the Saxons at La Moncelle. The French rallied briefly, drove back the artillery around the village and pressed the Saxons.",
    "quote": "Wimpffen then threw his forces against the Saxons at La Moncelle.",
    "at": {
     "c5": [
@@ -380,6 +422,62 @@
      "c1",
      "sax",
      -0.2
+    ]
+   ]
+  },
+  {
+   "title": "The French counter-attack collapses",
+   "text": "With Bazeilles taken and fresh waves of Prussian troops arriving, the French counter-attack began to collapse. The 8th Infantry Division was sent to reinforce the fighting at La Moncelle.",
+   "quote": "With the taking of Bazeilles at 08:00, and the arrival of fresh waves of Prussian troops, the counter-attack began to collapse.",
+   "at": {
+    "d8": [
+     69,
+     35,
+     270
+    ],
+    "c5": [
+     54,
+     34,
+     90
+    ],
+    "c1": [
+     55,
+     22,
+     90
+    ]
+   },
+   "how": {
+    "c5": "retreat",
+    "c1": "retreat"
+   },
+   "hits": [
+    [
+     "d8",
+     "c5"
+    ],
+    [
+     "sax",
+     "c1",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The 22nd Division turns Douay's left flank",
+   "when": "By 13:00",
+   "text": "Douay's left flank was dug in above Floing and its fire kept the Germans out of the village. By 13:00 the French artillery there had been defeated and the German 22nd Division turned the flank, defeating French counterattacks.",
+   "quote": "By 13:00, the French artillery in that area had been defeated and the German 22nd Division turned Douay's left flank, defeating all counterattacks by French infantry and lancers.",
+   "at": {
+    "d22": [
+     14,
+     28,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "d22",
+     "c7"
     ]
    ]
   },
@@ -408,10 +506,10 @@
    ]
   },
   {
-   "title": "The Germans close in and the Bois de la Garenne falls",
-   "when": "About 14:00 to 14:30",
-   "text": "German infantry reached the Calvaire and attacked from all sides. The 7th Corps broke and the 1st Corps was routed by artillery. When the Guards infantry captured the Bois de la Garenne at 14:30, the French inside surrendered.",
-   "quote": "when the Prussian Guards infantry captured the forest at 14:30, the French troops inside it surrendered.",
+   "title": "German infantry reach the Calvaire and the French break",
+   "when": "About 14:00",
+   "text": "By 14:00 German infantry stood on the Calvaire and attacked from all sides. The 7th Corps broke, seeking refuge in the Bois de la Garenne or Sedan, and the 1st Corps was routed by Saxon and Guards artillery.",
+   "quote": "The French 7th Corps under Douay broke, seeking refuge in the Bois de la Garenne or Sedan while fired upon by German artillery.",
    "at": {
     "xi": [
      14,
@@ -458,6 +556,30 @@
     ],
     [
      "sax",
+     "c1",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The Guards take the Bois de la Garenne",
+   "when": "14:30",
+   "text": "The Bois de la Garenne was under German artillery fire from several sides. When the Prussian Guards infantry captured the wood at 14:30, the French troops inside it surrendered.",
+   "quote": "when the Prussian Guards infantry captured the forest at 14:30, the French troops inside it surrendered.",
+   "at": {
+    "gds": [
+     43,
+     13,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "gds",
+     "c7"
+    ],
+    [
+     "gds",
      "c1",
      0.2
     ]

@@ -3782,6 +3782,28 @@ then declutter. Answers: about 100 each; all sections; menus by subject plus hub
     /past-games, My Passport (19 games). Kids mode leaves it off the lobby and the tabs (.gm-nokids), as conflicts are
     kept out of the other games there. Styles gm-bq-*. games.js?v=24, passport.js?v=17; scripts/tests/which-battle.js.
   - scripts/kinds/held2/edits/add-battle-game.js did the wiring once: the list of places a new daily game goes.
+- **Battle fields redrawn, and more steps (24 Nov 2026; the user: "the battles weren't that simple to have only 7 steps
+  … make the terrain details more realistic. Improve the icons as well"):**
+  - **Ground (battle-map.js terrain, curve, scatter, houses, across; the "ground" rules of shared.css, written once by
+    scripts/battles/css-ground.js):** hills, ridges and mountains with a cast shadow, a slope lit from the upper left
+    (radialGradient <pid>-relief), hachures and lighter levels; woods as scattered tree crowns over a floor, marshes as
+    reeds and pools (scatter(): seeded by the shape's own points, so every visit draws the same); rivers and streams
+    with banks and a glint; seas and lakes with a shore and ripples, land in a sea with surf; roads as tracks, walls
+    with towers, ditches; towns and villages as roofs askew (houses()), forts with corner towers, bridges and fords
+    turned across the nearest river (across()); a faint grain on the ground (waves on a sea field) and a vignette.
+    The ground is drawn from the bottom up (ORDER) and every name goes on top of it. Formations cast a small shadow.
+  - **Pictures by age:** make-battle-maps.js gives each field its year (data.y); iconOf(): foot and light troops a
+    sword and round shield before 1500, a musket to 1899, a helmet from 1900; ships galleys before 1580 (Lepanto was
+    galleys), sail to 1859, steamers from 1860. Spearmen, chariots, guns and tanks were redrawn.
+  - **Steps:** three to fourteen (check-battle-maps.js, BATTLE-MAPS-GUIDE.md section 6): one for every movement the
+    source tells in order, never padded. scripts/battles/more/JOB-MORE.md was each writer's brief (Sonnet, one or three
+    battles each, from the plan's own article): 99 plans revised, 5 left as they were (Adrianople, Issus, Raphia, the
+    second battle of Panipat, the Battle on the Ice: their sources tell no more), 649 steps became 1,026; every plan
+    clean; the editor read a sample of sheets and compared every revised plan with the old one for lost fields
+    (edit-more.js: two sentences). Fourteen formations stay the limit: several writers left a movement out for want
+    of a block (Ney's attack at Waterloo, Anderson at Gettysburg).
+  - scripts/battles/closeup.js <dir> <slug> --at=<phases> [--light] [--phone]: one phase full width, for judging the
+    drawing. The step buttons wrap (.bf-dots).
 
 ## Connections map and the states register
 - `data/polities.json` — register of every state (incl. the modern Levant: Israel, the State of Palestine, Jordan, Lebanon, Syria — added by hand Oct 2026, successor links to the mandates): nodes {id, n name, t type, b broad region, s/e years, a aka, m mode, c capital, mo modern countries, p profile url} and links {s, t, r relation, f/u years}. Successions stored one way (successor-of). Built from regional research files by the scratchpad states/merge.ps1 (dedupe, relation resolution, validation report).

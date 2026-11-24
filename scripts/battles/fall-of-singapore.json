@@ -233,6 +233,42 @@
    "leader": "Frank Simmons",
    "w": 10,
    "quote": "His forces consisted of elements of the 1st Malaya Infantry Brigade and the Straits Settlements Volunteer Force Brigade"
+  },
+  {
+   "id": "i12",
+   "side": "c",
+   "k": "infantry",
+   "name": "Indian 12th Brigade",
+   "short": "12th Bde",
+   "w": 6,
+   "quote": "sending two half-strength battalions from the 12th Indian Infantry Brigade"
+  },
+  {
+   "id": "armour",
+   "side": "j",
+   "k": "armour",
+   "name": "Guards armoured units",
+   "short": "Armour",
+   "w": 5,
+   "quote": "made it possible for Imperial Guards armoured units to land there unopposed"
+  },
+  {
+   "id": "i8",
+   "side": "c",
+   "k": "infantry",
+   "name": "Indian 8th Brigade",
+   "short": "8th Bde",
+   "w": 6,
+   "quote": "dispatched the 8th Indian Infantry Brigade from reserve, to retake the high ground to the south of the Causeway"
+  },
+  {
+   "id": "xb",
+   "side": "c",
+   "k": "infantry",
+   "name": "X Battalion",
+   "short": "X Bn",
+   "w": 4,
+   "quote": "a 200-strong ad hoc battalion of Australian reinforcements, known as X Battalion"
   }
  ],
  "phases": [
@@ -345,6 +381,19 @@
    ]
   },
   {
+   "title": "Indian battalions are sent to the Australians",
+   "when": "Around noon, 9 February",
+   "text": "Percival, who expected further landings in the north-east, sent no help until the morning of 9 February. Two half-strength battalions of the 12th Indian Brigade then reached Bennett around noon.",
+   "quote": "Percival did not reinforce the 22nd Brigade until the morning of 9 February, sending two half-strength battalions from the 12th Indian Infantry Brigade. The Indians reached Bennett around noon.",
+   "at": {
+    "i12": [
+     34,
+     44,
+     0
+    ]
+   }
+  },
+  {
    "title": "The Imperial Guards attack the 27th Brigade",
    "when": "Late on 9 February",
    "text": "The Guards crossed on the 27th Brigade's front, near the causeway, and some reached the shore. Mortars, machine-guns and burning oil on the water caused them severe casualties, and Yamashita ordered them to press on.",
@@ -390,10 +439,68 @@
    ]
   },
   {
-   "title": "The Japanese push on to Bukit Panjang and Bukit Timah",
+   "title": "Guards armour lands at Kranji; 8th Indian Brigade sent",
+   "text": "The withdrawal opened the Kranji shore, and Guards armoured units landed there unopposed and began ferrying across artillery and armour. Key sent the 8th Indian Brigade from reserve to retake the high ground south of the Causeway.",
+   "quote": "The opening at Kranji made it possible for Imperial Guards armoured units to land there unopposed, after which they were able to begin ferrying across their artillery and armour.",
+   "at": {
+    "armour": [
+     58,
+     26,
+     180
+    ],
+    "i8": [
+     91,
+     38,
+     0
+    ]
+   }
+  },
+  {
+   "title": "The Jurong Line collapses",
+   "when": "10 February",
+   "text": "Taylor misread his orders and withdrew the 22nd Brigade east. The 12th Indian Brigade was then pulled back to the road junction near Bukit Panjang, and the 44th Indian Brigade on the left of the line withdrew in the same way.",
+   "quote": "Jurong Line eventually collapsed after the 12th Indian Brigade was withdrawn by its commander, Brigadier Archie Paris, to the road junction near Bukit Panjang",
+   "at": {
+    "a22": [
+     52,
+     44,
+     0
+    ],
+    "i12": [
+     38,
+     39,
+     0
+    ],
+    "i44": [
+     22,
+     46,
+     0
+    ]
+   },
+   "how": {
+    "a22": "retreat",
+    "i12": "retreat",
+    "i44": "retreat"
+   }
+  },
+  {
+   "title": "X Battalion goes forward to Bukit Timah",
+   "when": "10 February",
+   "text": "Wavell ordered a counter-attack to retake the Jurong Line. Bennett allocated X Battalion, 200 poorly trained and equipped replacements, and it advanced to an assembly area near Bukit Timah, where it camped to wait.",
+   "quote": "The battalion, consisting of poorly trained and equipped replacements, advanced to an assembly area near Bukit Timah.",
+   "at": {
+    "xb": [
+     38,
+     48,
+     0
+    ]
+   }
+  },
+  {
+   "title": "The Japanese fall on X Battalion",
    "when": "Early on 11 February",
-   "text": "The 5th Division aimed at Bukit Panjang and the 18th Division at Bukit Timah. The 18th fell on the 22nd Brigade's area, and the Japanese captured the Bukit Timah area with the garrison's main food and fuel depots.",
-   "quote": "the 5th Division aimed its advance towards Bukit Panjang, while the 18th Division struck out towards Bukit Timah",
+   "text": "The 5th Division aimed at Bukit Panjang and the 18th Division at Bukit Timah. They fell on X Battalion in its assembly area, and two thirds of it were killed or wounded.",
+   "quote": "the 5th Division aimed its advance towards Bukit Panjang, while the 18th Division struck out towards Bukit Timah. They fell upon X Battalion, which had camped in its assembly area while waiting to launch its counter-attack, and two-thirds of the battalion was killed or wounded.",
    "at": {
     "d5": [
      28,
@@ -409,7 +516,37 @@
    "hits": [
     [
      "d18",
+     "xb"
+    ]
+   ]
+  },
+  {
+   "title": "The Japanese take the Bukit Timah area",
+   "when": "Later on 11 February",
+   "text": "The Japanese attacked the 22nd Brigade again around the Reformatory Road. Its fighting strength fell to a few hundred men, and the Japanese captured the Bukit Timah area with the garrison's main food and fuel depots.",
+   "quote": "The fighting strength of the 22nd Brigade—which had borne the brunt of the Japanese attacks—had been reduced to a few hundred men and the Japanese had captured the Bukit Timah area, including the main food and fuel depots of the garrison.",
+   "hits": [
+    [
+     "d18",
      "a22"
+    ]
+   ]
+  },
+  {
+   "title": "The 27th Brigade's counter-attack is repulsed",
+   "text": "The 27th Brigade was ordered to recapture Bukit Panjang as a first step towards retaking Bukit Timah. The Imperial Guards repulsed it, and the brigade was split in half on either side of the Bukit Timah Road.",
+   "quote": "the 27th Australian Brigade was later ordered to recapture Bukit Panjang as a preliminary move in retaking Bukit Timah. The counter-attack was repulsed by the Imperial Guards and the 27th Australian Brigade was split in half on either side of the Bukit Timah Road",
+   "at": {
+    "a27": [
+     62,
+     40,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "guards",
+     "a27"
     ]
    ]
   },

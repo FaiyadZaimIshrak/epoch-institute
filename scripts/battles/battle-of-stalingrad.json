@@ -14,7 +14,7 @@
    }
   ]
  },
- "note": "The plan shows the whole operation, not a single field: each block is an army, a corps or a pair or trio of armies, and the ground is the city and the two rivers. The accounts do not give map positions, so the places are placed by judgement to show who stood on which side of the city; north is taken as up, with the Volga to the east. Tank and mechanised armies are drawn as cavalry. The Romanian 4th Army is called the Romanian 4th Army Corps in one sentence. The Soviet northern and southern blocks are the armies of Operation Uranus; the final phase reuses them for the ring that closed in January, although the accounts do not name which armies.",
+ "note": "The plan shows the whole operation, not a single field: each block is an army, a corps or a pair or trio of armies, and the ground is the city and the two rivers. The accounts do not give map positions, so the places are placed by judgement to show who stood on which side of the city; north is taken as up, with the Volga to the east. Tank and mechanised armies are drawn as cavalry. The Romanian 4th Army is called the Romanian 4th Army Corps in one sentence. The Soviet northern and southern blocks are the armies of Operation Uranus; the last phases reuse them for the ring that closed in January, although the accounts do not name which armies. The part of the 62nd Army cut off on 14 October is drawn at the north by judgement; the accounts do not say where it stood.",
  "terrain": [
   {
    "k": "river",
@@ -112,6 +112,37 @@
     54
    ],
    "quote": "One thrust would come from the area of Kotelnikovo"
+  },
+  {
+   "k": "hill",
+   "name": "Mamayev Kurgan",
+   "at": [
+    [
+     74,
+     17
+    ],
+    [
+     78,
+     17
+    ],
+    [
+     79,
+     20.5
+    ],
+    [
+     75.5,
+     22
+    ],
+    [
+     73.5,
+     20.5
+    ]
+   ],
+   "lab": [
+    76.5,
+    14.5
+   ],
+   "quote": "split into two pockets north and south of Mamayev Kurgan, a prominent hill above the city."
   }
  ],
  "sides": [
@@ -205,6 +236,24 @@
    "short": "S armies",
    "w": 12,
    "quote": "a second Soviet offensive (two armies) was launched to the south of Stalingrad"
+  },
+  {
+   "id": "a62n",
+   "side": "s",
+   "k": "infantry",
+   "name": "62nd Army, split-off part",
+   "short": "62nd part",
+   "w": 5,
+   "quote": "splitting the 62nd Army into two"
+  },
+  {
+   "id": "g6n",
+   "side": "a",
+   "k": "infantry",
+   "name": "German northern pocket",
+   "short": "N pocket",
+   "w": 5,
+   "quote": "The northern pocket consisting of the VIIIth Corps"
   }
  ],
  "phases": [
@@ -249,6 +298,97 @@
     [
      "g6",
      "a62"
+    ]
+   ]
+  },
+  {
+   "title": "The attack on the city itself begins",
+   "when": "13 to 14 September 1942",
+   "text": "The German attack on the city overran the small hill where the 62nd Army headquarters stood. The railway station was captured and the Germans advanced far enough to threaten the Volga landing stage.",
+   "quote": "In addition, the railway station was captured, and German forces advanced far enough to threaten the Volga landing stage.",
+   "at": {
+    "g6": [
+     62,
+     26,
+     90
+    ],
+    "p4": [
+     62,
+     42,
+     90
+    ],
+    "a62": [
+     78,
+     27,
+     270
+    ],
+    "a64": [
+     78,
+     41,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "g6",
+     "a62"
+    ],
+    [
+     "p4",
+     "a64"
+    ]
+   ]
+  },
+  {
+   "title": "The Germans hold the south, the Soviets the centre and north",
+   "when": "By 27 September 1942",
+   "text": "The Germans made slow but steady progress through the city and by 27 September held its southern part. The Soviets held the centre and the north, and with them the ferries to their supplies on the east bank of the Volga.",
+   "quote": "By 27 September, the Germans occupied the southern portion of the city, but the Soviets held the centre and northern part.",
+   "at": {
+    "p4": [
+     66,
+     43,
+     90
+    ],
+    "a64": [
+     78,
+     42,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "p4",
+     "a64"
+    ]
+   ]
+  },
+  {
+   "title": "The factory assault splits the 62nd Army",
+   "when": "14 October 1942",
+   "text": "After an intense bombardment the German assault groups attacked towards the Stalingrad Tractor Factory. The forward group reached the Volga, splitting the 62nd Army into two.",
+   "quote": "the forward assault group reached the tractor factory before arriving at the Volga River, splitting the 62nd Army into two.",
+   "at": {
+    "g6": [
+     66,
+     25,
+     90
+    ],
+    "a62n": [
+     80,
+     13,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "g6",
+     "a62"
+    ],
+    [
+     "g6",
+     "a62n",
+     0.15
     ]
    ]
   },
@@ -383,10 +523,26 @@
    }
   },
   {
-   "title": "The ring tightens and the 6th Army capitulates",
-   "when": "10 January to 2 February 1943",
-   "text": "Operation Koltso opened on 10 January 1943 with a very large bombardment, and the Germans retreated from the suburbs to the city. On 2 February the 6th Army capitulated, having exhausted its ammunition and food.",
-   "quote": "On 2 February 1943, the 6th Army, having exhausted its ammunition and food, finally capitulated",
+   "title": "The relief attempt is abandoned",
+   "when": "23 December 1942",
+   "text": "The attempt to relieve Stalingrad was given up. Manstein's forces, including the LVII Panzer Corps, switched to the defensive.",
+   "quote": "On 23 December, the attempt to relieve Stalingrad was abandoned, and Manstein's forces switched over to the defensive",
+   "at": {
+    "lvii": [
+     32,
+     54,
+     90
+    ]
+   },
+   "how": {
+    "lvii": "retreat"
+   }
+  },
+  {
+   "title": "Operation Koltso begins",
+   "when": "10 January 1943",
+   "text": "Operation Koltso opened on 10 January 1943 with a very large bombardment of the German positions. The Germans retreated from the suburbs of Stalingrad to the city.",
+   "quote": "Operation Koltso launched on 10 January 1943 with what was the single largest bombardment of the war at that point",
    "at": {
     "north": [
      54,
@@ -404,6 +560,50 @@
      90
     ]
    },
+   "how": {
+    "g6": "retreat"
+   },
+   "hits": [
+    [
+     "north",
+     "g6"
+    ],
+    [
+     "south",
+     "g6"
+    ]
+   ]
+  },
+  {
+   "title": "The German forces are split into two pockets",
+   "when": "26 January 1943",
+   "text": "The German forces inside Stalingrad were split into two pockets, one north and one south of Mamayev Kurgan. The northern pocket was cut off from telephone communication with Paulus in the southern pocket.",
+   "quote": "On 26 January, the German forces inside Stalingrad were split into two pockets north and south of Mamayev Kurgan",
+   "at": {
+    "g6n": [
+     72,
+     13,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "north",
+     "g6n",
+     0.1
+    ],
+    [
+     "south",
+     "g6"
+    ]
+   ]
+  },
+  {
+   "title": "The southern and central pockets collapse",
+   "when": "31 January 1943",
+   "text": "The southern pocket collapsed on 31 January, and the central pocket under Heitz surrendered the same day. The northern pocket under Strecker held out for two more days.",
+   "quote": "The next day, the southern pocket in Stalingrad collapsed.",
+   "at": {},
    "state": {
     "g6": "destroyed"
    },
@@ -415,6 +615,28 @@
     [
      "south",
      "g6"
+    ]
+   ]
+  },
+  {
+   "title": "The northern pocket surrenders",
+   "when": "2 February 1943",
+   "text": "On 2 February General Strecker learned that one of his officers had gone to the Soviets to negotiate terms, and the northern pocket surrendered. The 6th Army, having exhausted its ammunition and food, had capitulated.",
+   "quote": "On 2 February 1943, the 6th Army, having exhausted its ammunition and food, finally capitulated",
+   "at": {},
+   "state": {
+    "g6n": "destroyed"
+   },
+   "hits": [
+    [
+     "north",
+     "g6n",
+     0.1
+    ],
+    [
+     "south",
+     "g6n",
+     0.1
     ]
    ]
   }

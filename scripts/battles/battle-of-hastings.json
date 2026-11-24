@@ -14,7 +14,7 @@
    }
   ]
  },
- "note": "Accounts differ on the exact site where the English stood (the abbey site or Caldbec Hill). The woods on the English flanks and the marshy ground in front of them are named in the accounts, which do not say exactly where they lay. The direction in which the beaten English fled is not given.",
+ "note": "Accounts differ on the exact site where the English stood (the abbey site or Caldbec Hill). The woods on the English flanks and the marshy ground in front of them are named in the accounts, which do not say exactly where they lay. The direction in which the beaten English fled is not given. The place of the English rally at the Malfosse is not known; it is drawn on their side of the field.",
  "terrain": [
   {
    "k": "hill",
@@ -268,6 +268,15 @@
    "short": "Cavalry",
    "w": 12,
    "quote": "The cavalry was held in reserve"
+  },
+  {
+   "id": "malf",
+   "side": "e",
+   "k": "infantry",
+   "name": "English rally at the Malfosse",
+   "short": "Malfosse",
+   "w": 5,
+   "quote": "some Englishmen rallied and seriously wounded Eustace of Boulogne before being defeated by the Normans"
   }
  ],
  "phases": [
@@ -310,16 +319,29 @@
    }
   },
   {
-   "title": "The Normans attack uphill",
+   "title": "The Norman archers shoot uphill",
    "when": "From about 9 am",
-   "text": "The Norman archers shot uphill at the shield wall with little effect. The spearmen went forward and met a barrage of spears, axes and stones, and the cavalry came up in support without making headway.",
-   "quote": "After the attack from the archers, William sent the spearmen forward to attack the English.",
+   "text": "The battle opened with the Norman archers shooting uphill at the English shield wall. The slope turned their arrows aside or sent them over the top of the hill, and they had little effect.",
+   "quote": "The battle opened with the Norman archers shooting uphill at the English shield wall, to little effect.",
    "at": {
     "archers": [
      50,
      24,
      0
-    ],
+    ]
+   },
+   "hits": [
+    [
+     "archers",
+     "english"
+    ]
+   ]
+  },
+  {
+   "title": "The spearmen go forward",
+   "text": "William sent the spearmen forward to attack the English. They met a barrage of spears, axes and stones and could not force an opening in the shield wall.",
+   "quote": "William sent the spearmen forward to attack the English.",
+   "at": {
     "bretons": [
      24,
      34,
@@ -334,7 +356,29 @@
      76,
      34,
      0
+    ]
+   },
+   "hits": [
+    [
+     "bretons",
+     "english"
     ],
+    [
+     "normans",
+     "english",
+     0.25
+    ],
+    [
+     "french",
+     "english"
+    ]
+   ]
+  },
+  {
+   "title": "The cavalry advance in support",
+   "text": "The Norman cavalry came up to support the infantry. They too failed to make any headway against the shield wall.",
+   "quote": "The infantry was unable to force openings in the shield wall, and the cavalry advanced in support.",
+   "at": {
     "cav": [
      50,
      45,
@@ -343,34 +387,25 @@
    },
    "hits": [
     [
-     "archers",
-     "english"
-    ],
-    [
-     "normans",
+     "cav",
      "english",
-     0.25
+     0.3
     ]
    ]
   },
   {
-   "title": "The Normans fall back and the English pursue",
-   "text": "A general retreat began, blamed on the Breton division on William's left, and a rumour that William had been killed added to the confusion. Some of the English left the wall to pursue the fleeing invaders.",
-   "quote": "The cavalry also failed to make headway, and a general retreat began, blamed on the Breton division on William's left.",
+   "title": "A general retreat begins",
+   "text": "The Normans fell back in a general retreat, blamed on the Breton division on William's left. A rumour that William had been killed added to the confusion.",
+   "quote": "a general retreat began, blamed on the Breton division on William's left. A rumour started that William had been killed",
    "at": {
-    "purs": [
+    "bretons": [
+     20,
      50,
-     28,
      180
     ],
     "archers": [
      24,
      39,
-     180
-    ],
-    "bretons": [
-     20,
-     50,
      180
     ],
     "normans": [
@@ -395,6 +430,18 @@
     "normans": "retreat",
     "french": "retreat",
     "cav": "retreat"
+   }
+  },
+  {
+   "title": "Some of the English pursue",
+   "text": "Some of the English left the wall to pursue the fleeing invaders. William rode through his forces, showing his face and shouting that he was still alive.",
+   "quote": "The English forces began to pursue the fleeing invaders, but William rode through his forces, showing his face and yelling that he was still alive.",
+   "at": {
+    "purs": [
+     50,
+     32,
+     180
+    ]
    },
    "hits": [
     [
@@ -590,6 +637,32 @@
      -0.2
     ]
    ]
+  },
+  {
+   "title": "A last stand at the Malfosse",
+   "text": "Except for a rearguard action at the Malfosse, the battle was over. There some Englishmen rallied and seriously wounded Eustace of Boulogne before the Normans defeated them.",
+   "quote": "except for a rearguard action at a site known as the \"Malfosse\", the battle was over.",
+   "at": {
+    "malf": [
+     68,
+     12,
+     180
+    ],
+    "normans": [
+     66,
+     26,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "normans",
+     "malf"
+    ]
+   ],
+   "state": {
+    "malf": "destroyed"
+   }
   }
  ]
 }

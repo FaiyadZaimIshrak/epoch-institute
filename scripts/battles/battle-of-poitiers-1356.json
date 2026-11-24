@@ -372,8 +372,8 @@
    ]
   },
   {
-   "title": "The first division is beaten and the second attacks",
-   "text": "The cavalry were driven back with heavy losses and the first division was forced to withdraw under the English archers' fire. The second division, 4,000 strong, then attacked at the hedge, and the Prince committed his reserve.",
+   "title": "The French cavalry and the first division are driven back",
+   "text": "The French cavalry took heavy casualties and withdrew; Audrehem was captured and Clermont killed. The longbowmen then forced the first division back as well, and its leader, Brienne, the constable of France, was killed.",
    "quote": "The French cavalry took heavy casualties and withdrew",
    "at": {
     "cava": [
@@ -390,16 +390,6 @@
      50,
      31,
      0
-    ],
-    "dau": [
-     64,
-     38,
-     180
-    ],
-    "pri": [
-     50,
-     47,
-     0
     ]
    },
    "how": {
@@ -415,12 +405,44 @@
    "hits": [
     [
      "war",
+     "cava"
+    ],
+    [
+     "sal",
+     "cavc"
+    ],
+    [
+     "war",
      "bri"
     ],
     [
      "sal",
      "bri"
+    ]
+   ]
+  },
+  {
+   "title": "The second division attacks at the hedge",
+   "text": "With no pursuit of the survivors, the English held their positions and reformed. The second French division, 4,000 strong, forced its way through the hedge and fought hand to hand for two hours, and the Prince committed almost all of his reserves.",
+   "quote": "This, 4,000 strong, attacked vigorously.",
+   "at": {
+    "dau": [
+     64,
+     38,
+     180
     ],
+    "pri": [
+     50,
+     47,
+     0
+    ]
+   },
+   "state": {
+    "cava": "gone",
+    "cavc": "gone",
+    "bri": "gone"
+   },
+   "hits": [
     [
      "dau",
      "sal"
@@ -428,15 +450,25 @@
    ]
   },
   {
-   "title": "The Dauphin's division withdraws, and Orléans leaves",
-   "text": "After two hours the Dauphin's division withdrew in order. Orléans marched away with half of the third division. The rest made a feeble attack that was easily repelled, and some of Warwick's men left their line in pursuit.",
-   "quote": "marched away from the battle with half of them",
+   "title": "The Dauphin's division withdraws",
+   "text": "Bourbon was killed and the Dauphin's standard-bearer captured, and the Dauphin's advisers took him and two brothers from the front line. The exhausted rest of the division withdrew as well, and the disengagement was orderly.",
+   "quote": "There was no panic and the disengagement was orderly.",
    "at": {
     "dau": [
      36,
      30,
      180
-    ],
+    ]
+   },
+   "how": {
+    "dau": "retreat"
+   }
+  },
+  {
+   "title": "Orléans marches away with half of the third division",
+   "text": "As the Dauphin's division recoiled there was confusion in the French ranks. Orléans marched away with half of the third division, and the 1,600 who stayed launched a feeble attack that was repelled easily.",
+   "quote": "marched away from the battle with half of them",
+   "at": {
     "orh": [
      76,
      20,
@@ -446,21 +478,10 @@
      56,
      36,
      180
-    ],
-    "purs": [
-     38,
-     41,
-     0
     ]
    },
    "how": {
-    "dau": "retreat",
     "orh": "retreat"
-   },
-   "state": {
-    "cava": "gone",
-    "cavc": "gone",
-    "bri": "gone"
    },
    "hits": [
     [
@@ -470,19 +491,26 @@
    ]
   },
   {
-   "title": "The King's division advances; the Captal rides round",
-   "text": "The King's division, swelled by survivors of the earlier attacks, marched across the gap with the Oriflamme unfurled. The Anglo-Gascons sent a small mounted force under the Captal de Buch round the French flank.",
+   "title": "Warwick's men pursue the French",
+   "text": "After the failed attack a number, possibly a large number, of men from Warwick's division left their positions and pursued the French, one motive being the ransom of prisoners.",
+   "quote": "a number, possibly a large number, of men from Warwick's division left their positions and pursued the French",
+   "at": {
+    "purs": [
+     38,
+     41,
+     0
+    ]
+   }
+  },
+  {
+   "title": "The King's division advances with the Oriflamme",
+   "text": "Survivors of the earlier attacks rallied to the King, and his division marched across the one-mile gap towards the exhausted Anglo-Gascons, all on foot. The Oriflamme was unfurled, the signal that no prisoners were to be taken.",
    "quote": "The King ordered the French sacred banner, the Oriflamme, to be unfurled",
    "at": {
     "kin": [
      58,
      28,
      180
-    ],
-    "cap": [
-     8,
-     56,
-     0
     ],
     "orh": [
      92,
@@ -495,13 +523,27 @@
    },
    "state": {
     "orl": "gone",
-    "cap": "hidden",
     "dau": "gone"
    }
   },
   {
+   "title": "The Captal de Buch rides round the flank",
+   "text": "The Anglo-Gascon commanders thought they would be defeated if they stood to face a fourth attack. They sent a small mounted group under the Captal de Buch on a circuitous march round the French flank to strike the rear.",
+   "quote": "send a small mounted group under the Gascon lord Jean, the Captal de Buch, on a circuitous march around the French flank",
+   "at": {
+    "cap": [
+     8,
+     56,
+     0
+    ]
+   },
+   "state": {
+    "cap": "hidden"
+   }
+  },
+  {
    "title": "The Prince orders a general advance",
-   "text": "The Black Prince ordered a general advance and the Anglo-Gascons moved out of their position. Warwick's men returning from the pursuit reinforced the line as the Captal's force worked round to the French rear.",
+   "text": "Concerned that his army would break, the Black Prince ordered a general advance, and the Anglo-Gascons moved forward out of their defensive positions. The French men-at-arms charged home into them.",
    "quote": "Concerned his army would break and rout in the face of the French assault, the Black Prince gave the order for a general advance.",
    "at": {
     "pri": [
@@ -524,11 +566,6 @@
      31,
      180
     ],
-    "purs": [
-     42,
-     36,
-     90
-    ],
     "cap": [
      12,
      26,
@@ -542,7 +579,21 @@
     [
      "kin",
      "pri"
-    ],
+    ]
+   ]
+  },
+  {
+   "title": "Warwick's men return and steady the line",
+   "text": "The Anglo-Gascon line was starting to break when men of Warwick's division returned from their pursuit and reinforced it. This heartened the Anglo-Gascons and discouraged the French.",
+   "quote": "The Anglo-Gascon line was starting to break when it was reinforced by men of Warwick's division returning from their pursuit.",
+   "at": {
+    "purs": [
+     42,
+     36,
+     90
+    ]
+   },
+   "hits": [
     [
      "purs",
      "kin"
@@ -554,15 +605,31 @@
    ]
   },
   {
-   "title": "The French are attacked from behind and break",
-   "text": "The Captal's 160 men struck the French rear. The division fell apart, and those still fighting around the King were forced into a loop of the River Miosson. They were surrounded, and John and his youngest son surrendered.",
-   "quote": "The French still fighting around their King were forced into a loop of the River Miosson",
+   "title": "The Captal's force arrives behind the French",
+   "text": "The Captal de Buch's 160 men arrived undetected in the French rear. His 100 archers dismounted and fired into it, and his 60 mounted men-at-arms charged into the back of the French line.",
+   "quote": "the Captal de Buch's 160 men arrived undetected in the French rear",
    "at": {
     "cap": [
      56,
      23,
      180
-    ],
+    ]
+   },
+   "state": {
+    "cap": "shown"
+   },
+   "hits": [
+    [
+     "cap",
+     "kin"
+    ]
+   ]
+  },
+  {
+   "title": "The French break and the King surrenders",
+   "text": "Some Frenchmen began to run, others copied them and the division fell apart. Those still fighting round the King were forced into a loop of the River Miosson and surrounded, and John and his youngest son surrendered.",
+   "quote": "The French still fighting around their King were forced into a loop of the River Miosson",
+   "at": {
     "kin": [
      78,
      28,
@@ -580,14 +647,9 @@
     ]
    },
    "state": {
-    "cap": "shown",
     "kin": "destroyed"
    },
    "hits": [
-    [
-     "cap",
-     "kin"
-    ],
     [
      "pri",
      "kin"

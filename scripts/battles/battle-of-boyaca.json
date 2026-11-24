@@ -321,9 +321,9 @@
    }
   },
   {
-   "title": "Flank attacks on the Royalist rearguard",
-   "text": "Anzoátegui ordered a flank attack: Barcelona and Bravos de Paez on the right and the British Legion and Rifles on the left. Arthur Sandes led the Rifles against the Royalist guns, and only one of the three could be put together before its carriage broke.",
-   "quote": "Arthur Sandes commander of Rifles Battalion charged the royalist artillery.",
+   "title": "Flank attack ordered on the Royalist rearguard",
+   "text": "Anzoátegui ordered a flank attack on the Royalist rearguard. Barcelona and Bravos de Paez were to attack on the right side and the British Legion and Rifles on the left, and the two groups moved up to the Royalist line.",
+   "quote": "battalions Barcelona and Bravos de Paez were to attack on the right side while the Legion Britanica and Rifles Battalion attacked on the left",
    "at": {
     "pright": [
      27,
@@ -335,13 +335,20 @@
      44,
      270
     ]
+   }
+  },
+  {
+   "title": "Sandes charges the Royalist guns",
+   "text": "Arthur Sandes, commander of the Rifles, charged the Royalist artillery. The charge disrupted the arming of the three guns, which had been carried unassembled. Only one was put together, and it fired three shots before its carriage broke.",
+   "quote": "This charge disrupted the arming of the 3 artillery pieces the Spanish possessed",
+   "at": {
+    "pleft": [
+     24,
+     40,
+     270
+    ]
    },
    "hits": [
-    [
-     "pright",
-     "k1",
-     -0.1
-    ],
     [
      "pleft",
      "art"
@@ -349,24 +356,40 @@
    ]
   },
   {
-   "title": "Lancers break the Royalist rearguard",
-   "text": "Bolívar ordered lancers against the centre of the Royalist infantry. The Mounted Grenadiers ran towards Samaca and the dragoons turned back, and panic spread among the infantry, which did not carry out its order to charge with the bayonet.",
-   "quote": "The charge of two patriot army cavalry squadrons caused panic amongst the Spanish troops",
+   "title": "Patriot lancers drive back the Royalist dragoons",
+   "text": "Bolívar ordered lancers to attack the centre of the Royalist infantry. The 3rd and 5th companies of the Granadan Dragoons charged the patriot cavalry, which turned to face them, and the dragoons retreated because the lancers' lances were longer.",
+   "quote": "the patriot cavalry conducted a turn face maneuver causing the dragoons to retreat as the patriot lancers had longer lances than they did",
    "at": {
     "lancers": [
      27,
      31,
      270
     ],
-    "gren": [
-     8,
-     6,
-     0
-    ],
     "drag": [
      10,
      55,
      180
+    ]
+   },
+   "how": {
+    "drag": "retreat"
+   },
+   "hits": [
+    [
+     "drag",
+     "lancers"
+    ]
+   ]
+  },
+  {
+   "title": "The Royalist infantry breaks in panic",
+   "text": "The Mounted Grenadiers ran towards Samaca. The charge of the two patriot cavalry squadrons caused panic among the infantry, which was formed in a column. It was ordered to charge with the bayonet but did not, and it broke.",
+   "quote": "The charge of two patriot army cavalry squadrons caused panic amongst the Spanish troops",
+   "at": {
+    "gren": [
+     8,
+     6,
+     0
     ],
     "k1": [
      8,
@@ -381,14 +404,13 @@
    },
    "how": {
     "gren": "rout",
-    "drag": "retreat",
     "k1": "rout",
     "k2": "rout"
    },
    "state": {
+    "gren": "routed",
     "k1": "routed",
-    "k2": "routed",
-    "gren": "routed"
+    "k2": "routed"
    },
    "hits": [
     [
@@ -404,8 +426,20 @@
    ]
   },
   {
+   "title": "Bejar fords the river behind the Royalist vanguard",
+   "text": "A kilometre and a half behind Casa de Teja, Bejar's detachment managed to ford the river and approached the rear of the Royalist vanguard on the far bank.",
+   "quote": "Bejar's Patriot vanguard managed to ford the river and was approaching the rear of the Royalist vanguard force",
+   "at": {
+    "bejar": [
+     82,
+     44,
+     0
+    ]
+   }
+  },
+  {
    "title": "Santander storms the bridge",
-   "text": "Bejar's detachment forded the river and came up on the rear of the Royalist vanguard, which it engaged. Santander led a bayonet charge across the bridge, and the Royalist vanguard fled, leaving its commander Colonel Juan Tolrá dead on the bridge.",
+   "text": "When Bejar's detachment reached the Royalist vanguard, the two engaged. Santander led a bayonet charge across the bridge, and the Royalist vanguard fled, leaving its commander Colonel Juan Tolrá dead on the bridge.",
    "quote": "Santander led a charge across the bridge by force, using bayonets.",
    "at": {
     "bejar": [

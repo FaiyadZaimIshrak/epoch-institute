@@ -190,9 +190,36 @@
    ]
   },
   {
-   "title": "The Spartan right holds, then is pushed back",
-   "text": "The Spartan line held long enough for the mortally wounded Cleombrotus to be carried off alive. It then fell back under the pressure of the Theban mass.",
+   "title": "The Spartan right holds while the Thebans press it",
+   "text": "The Spartan line held long enough for the mortally wounded Cleombrotus to be carried off the field still alive. The massed Thebans, with the Sacred Band in front, pressed against the Spartan right.",
    "quote": "the Spartan line was able to hold long enough for the mortally wounded Cleombrotus to be carried off the field still alive",
+   "at": {
+    "theb": [
+     52,
+     16,
+     90
+    ],
+    "sb": [
+     59,
+     16,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "theb",
+     "sp"
+    ],
+    [
+     "sb",
+     "sp"
+    ]
+   ]
+  },
+  {
+   "title": "The Spartan right falls back",
+   "text": "The Spartan right wing then fell back under the pressure of the Theban mass, which kept pushing against it with the Sacred Band in front.",
+   "quote": "fell back under the pressure of the Theban mass",
    "at": {
     "sp": [
      69,
@@ -225,19 +252,14 @@
    ]
   },
   {
-   "title": "The Spartan wing is routed and the left gives way",
-   "text": "The Spartan right wing was pushed back, turned, routed and fled. The Spartan left wing gave way when its men saw the right being pushed back.",
-   "quote": "when they saw that the right wing was being pushed back, gave way",
+   "title": "The Spartan right wing is turned and routed",
+   "text": "The Spartan right wing was pushed back, then turned, and in the end it was routed and fled. Many of the Spartan hippeis, the royal bodyguard, had been killed in the fighting.",
+   "quote": "The Spartan wing was eventually pushed back, then turned, was routed, and fled.",
    "at": {
     "sp": [
      82,
      14,
      90
-    ],
-    "sall": [
-     72,
-     44,
-     270
     ],
     "theb": [
      66,
@@ -251,8 +273,7 @@
     ]
    },
    "how": {
-    "sp": "rout",
-    "sall": "retreat"
+    "sp": "rout"
    },
    "state": {
     "sp": "routed"
@@ -263,6 +284,21 @@
      "sp"
     ]
    ]
+  },
+  {
+   "title": "The Spartan left wing gives way",
+   "text": "The men on the left wing of the Spartan army saw that the right wing was being pushed back and gave way, so both wings of the Spartan army had given way.",
+   "quote": "when they saw that the right wing was being pushed back, gave way",
+   "at": {
+    "sall": [
+     72,
+     44,
+     270
+    ]
+   },
+   "how": {
+    "sall": "retreat"
+   }
   }
  ]
 }

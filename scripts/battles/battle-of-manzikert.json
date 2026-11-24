@@ -374,15 +374,39 @@
    ]
   },
   {
-   "title": "The left wing is routed and the centre encircled",
-   "text": "The left wing under Bryennios held out a little longer but was soon routed. The Seljuks encircled what remained of the centre, including the emperor and the Varangian Guard, and Romanos was wounded and taken prisoner.",
-   "quote": "The left wing under Bryennios held out a little longer but was also soon routed. The remnants of the Byzantine centre, including the emperor and the Varangian Guard, were encircled by the Seljuks. Romanos was wounded and taken prisoner by the Seljuks.",
+   "title": "The left wing is routed",
+   "text": "The left wing under Bryennios held out a little longer, but it was also soon routed. The Seljuk upper wing was drawn against it.",
+   "quote": "The left wing under Bryennios held out a little longer but was also soon routed.",
    "at": {
     "bl": [
      30,
      11,
      270
     ],
+    "sn": [
+     56,
+     12,
+     270
+    ]
+   },
+   "how": {
+    "bl": "rout"
+   },
+   "state": {
+    "bl": "routed"
+   },
+   "hits": [
+    [
+     "sn",
+     "bl"
+    ]
+   ]
+  },
+  {
+   "title": "The centre is encircled and the emperor taken",
+   "text": "The Seljuks encircled the remnants of the Byzantine centre, including the emperor and the Varangian Guard. Romanos was wounded and taken prisoner.",
+   "quote": "The remnants of the Byzantine centre, including the emperor and the Varangian Guard, were encircled by the Seljuks. Romanos was wounded and taken prisoner by the Seljuks.",
+   "at": {
     "sc": [
      66,
      31,
@@ -399,17 +423,7 @@
      315
     ]
    },
-   "how": {
-    "bl": "rout"
-   },
-   "state": {
-    "bl": "routed"
-   },
    "hits": [
-    [
-     "sn",
-     "bl"
-    ],
     [
      "sc",
      "bc"

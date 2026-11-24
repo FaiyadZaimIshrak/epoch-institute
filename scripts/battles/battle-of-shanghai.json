@@ -278,6 +278,19 @@
     54
    ],
    "quote": "a town located on the northern bank of Hangzhou Bay"
+  },
+  {
+   "k": "fort",
+   "name": "Sihang Warehouse",
+   "at": [
+    40,
+    38.5
+   ],
+   "lab": [
+    46,
+    41.5
+   ],
+   "quote": "The building was situated on the Suzhou Creek across from the International Settlement"
   }
  ],
  "sides": [
@@ -366,23 +379,28 @@
    "leader": "Heisuke Yanagawa",
    "w": 12,
    "quote": "the Japanese 10th Army, composed of units diverted from the Battle of Taiyuan"
+  },
+  {
+   "id": "sih",
+   "side": "c",
+   "k": "infantry",
+   "name": "Sihang Warehouse garrison",
+   "short": "Sihang",
+   "leader": "Xie Jinyuan",
+   "w": 6,
+   "quote": "the 1st Battalion of the 524th Regiment rallied some 411 men and officers to make a stand in the five-story"
   }
  ],
  "phases": [
   {
-   "title": "The Chinese assault on the Japanese garrison in the city",
-   "when": "13 to 22 August 1937",
-   "text": "Chinese divisions attacked the Japanese naval landing force in Zhabei and towards the Huangpu docks, and the 36th Division joined them. The Japanese Third Fleet shelled the attackers from the river, and the Chinese were halted short of the water.",
-   "quote": "By August 21, 1937, Chinese tanks had managed to punch through to Broadway, the last street before the Huangpu.",
+   "title": "The first Chinese attack is halted",
+   "when": "14 August 1937",
+   "text": "The 88th Division attacked the Japanese positions in downtown Shanghai in the late afternoon. Direct fire from the entrenched Japanese and bombardment by the Third Fleet in the Huangpu halted it.",
+   "quote": "the Chinese 88th Division attacked Japanese positions in downtown Shanghai, but was halted by direct fire from the entrenched Japanese and heavy bombardments from the Japanese Third Fleet moored in the Huangpu.",
    "at": {
     "cmain": [
      50,
      30,
-     90
-    ],
-    "c36": [
-     58,
-     20,
      90
     ],
     "snlf": [
@@ -402,6 +420,50 @@
      "snlf"
     ],
     [
+     "fleet",
+     "cmain",
+     0.3
+    ]
+   ]
+  },
+  {
+   "title": "Operation Iron Fist",
+   "when": "17 to 18 August 1937",
+   "text": "The 88th and 87th Divisions shelled the Japanese positions and then charged with infantry. Poor coordination between infantry and artillery and the shelling from the ships kept them from a major breakthrough, and by 18 August the attack was called off.",
+   "quote": "the 88th and 87th Divisions launched Iron Fist, first intensely shelling the Japanese positions and then charging with infantry.",
+   "at": {
+    "cmain": [
+     54,
+     30,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "cmain",
+     "snlf"
+    ],
+    [
+     "fleet",
+     "cmain",
+     0.3
+    ]
+   ]
+  },
+  {
+   "title": "The 36th Division attacks towards the docks",
+   "when": "From 19 August 1937",
+   "text": "The newly arrived 36th Division was sent in on 19 August, half of it towards the Hueishan docks on the northern side of the Huangpu, to cut the Japanese forces in two. It fought through the streets under fire from the buildings and from the Third Fleet.",
+   "quote": "On August 19, two regiments of the 36th Division began their assault towards the wharf, enduring withering fire from Japanese defenders positioned on the roofs and upper floors of the buildings lining the streets.",
+   "at": {
+    "c36": [
+     58,
+     22,
+     90
+    ]
+   },
+   "hits": [
+    [
      "c36",
      "snlf"
     ],
@@ -409,6 +471,42 @@
      "fleet",
      "c36",
      0.3
+    ]
+   ]
+  },
+  {
+   "title": "Chinese tanks reach Broadway but the wharf holds",
+   "when": "21 to 22 August 1937",
+   "text": "The Japanese were pushed back towards the docks, and by 21 August Chinese tanks had reached Broadway, the last street before the Huangpu. The Japanese held the high walls of the wharf and the Chinese could not finish the breakthrough.",
+   "quote": "By August 21, 1937, Chinese tanks had managed to punch through to Broadway, the last street before the Huangpu.",
+   "at": {
+    "c36": [
+     62,
+     24,
+     90
+    ],
+    "cmain": [
+     58,
+     30,
+     90
+    ],
+    "snlf": [
+     68,
+     31,
+     270
+    ]
+   },
+   "how": {
+    "snlf": "retreat"
+   },
+   "hits": [
+    [
+     "cmain",
+     "snlf"
+    ],
+    [
+     "c36",
+     "snlf"
     ]
    ]
   },
@@ -437,6 +535,33 @@
    ]
   },
   {
+   "title": "Baoshan falls",
+   "when": "4 to 6 September 1937",
+   "text": "Chinese troops held the walled town of Baoshan against several Japanese assaults. The Japanese surrounded it, a tank assault with air support broke through the gate, and the town fell on 6 September.",
+   "quote": "On the next day, September 6, 1937, Baoshan fell.",
+   "at": {
+    "sef": [
+     76,
+     12,
+     270
+    ],
+    "chn": [
+     66,
+     16,
+     90
+    ]
+   },
+   "how": {
+    "chn": "retreat"
+   },
+   "hits": [
+    [
+     "sef",
+     "chn"
+    ]
+   ]
+  },
+  {
    "title": "The fight for Luodian",
    "when": "11 to 30 September 1937",
    "text": "The Chinese concentrated around Luodian and the Japanese came inland against them with naval gunfire, tanks and aircraft. The Chinese were bled almost dry and gave up the town by the end of September.",
@@ -452,6 +577,38 @@
      14,
      90
     ]
+   },
+   "hits": [
+    [
+     "sef",
+     "chn"
+    ],
+    [
+     "chn",
+     "sef",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "Liujiahang and Gujiazhai fall",
+   "when": "12 September to 2 October 1937",
+   "text": "The Japanese 3rd Division attacked the Liujiahang and Gujiazhai positions on the right wing of the Chinese group army, while the 11th Division pursued it. After days of attacks and counterattacks the Chinese retreated.",
+   "quote": "On October 1, Liujiahang was occupied by the 34th Infantry Regiment. The next day, the 8th and 16th Divisions also retreated, and the Japanese army occupied Gujiazhai.",
+   "at": {
+    "sef": [
+     46,
+     18,
+     270
+    ],
+    "chn": [
+     34,
+     20,
+     90
+    ]
+   },
+   "how": {
+    "chn": "retreat"
    },
    "hits": [
     [
@@ -557,27 +714,69 @@
    ]
   },
   {
-   "title": "The Japanese cross the creek and land at Jinshanwei",
-   "when": "30 October to 5 November 1937",
-   "text": "The Japanese crossed the Suzhou Creek, and the Chinese were in danger of encirclement. On 5 November the Japanese 10th Army landed at Jinshanwei on Hangzhou Bay, behind the Chinese line.",
-   "quote": "to land easily in Jinshanwei on November 5, 1937",
+   "title": "The Sihang Warehouse is held",
+   "when": "27 October to 1 November 1937",
+   "text": "A battalion of the 88th Division, some 411 men under Xie Jinyuan, made a stand in the Sihang Warehouse on the Suzhou Creek. Its thick walls and the nearness of the International Settlement nullified Japanese firepower, and several attacks were beaten back.",
+   "quote": "Between October 27 and November 1, 1937, the 1st Battalion defended Sihang Warehouse against multiple attacks from the Japanese.",
+   "at": {
+    "sih": [
+     40,
+     36,
+     0
+    ],
+    "snlf": [
+     44,
+     28,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "snlf",
+     "sih"
+    ],
+    [
+     "sih",
+     "snlf",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The Japanese cross the Suzhou Creek",
+   "when": "30 to 31 October 1937",
+   "text": "On 30 October the Japanese crossed the Suzhou Creek, and the Chinese troops were in danger of encirclement. The Japanese 3rd Division began landing on the east side of the creek on 31 October.",
+   "quote": "On October 30, the Japanese crossed Suzhou River and the Chinese troops were in danger of encirclement.",
    "at": {
     "sef": [
-     30,
+     28,
      39,
      180
-    ],
-    "j10": [
-     44,
-     54,
-     0
     ]
    },
    "hits": [
     [
      "sef",
      "chn"
-    ],
+    ]
+   ]
+  },
+  {
+   "title": "The 10th Army lands at Jinshanwei",
+   "when": "5 November 1937",
+   "text": "On 5 November the Japanese 10th Army, made up of units diverted from the Battle of Taiyuan, landed at Jinshanwei on Hangzhou Bay, a position held by only two companies of the 63rd Division.",
+   "quote": "to land easily in Jinshanwei on November 5, 1937",
+   "at": {
+    "j10": [
+     44,
+     54,
+     0
+    ]
+   },
+   "state": {
+    "sih": "gone"
+   },
+   "hits": [
     [
      "j10",
      "cmain",

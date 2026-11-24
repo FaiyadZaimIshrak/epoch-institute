@@ -10,58 +10,22 @@
   {
    "k": "river",
    "name": "Asopos",
-   "at": [
-    [
-     4,
-     32
-    ],
-    [
-     28,
-     31
-    ],
-    [
-     52,
-     32.5
-    ],
-    [
-     76,
-     31
-    ],
-    [
-     96,
-     32
-    ]
-   ],
-   "lab": [
-    12,
-    29.5
-   ],
+   "at": [[4, 32], [28, 31], [52, 32.5], [76, 31], [96, 32]],
+   "lab": [12, 29.5],
    "quote": "from their positions on the Cithaeron could observe the Persian lines 4 kilometres (2.5 mi) across the Asopos river"
   },
   {
    "k": "point",
    "name": "Temple of Hera",
-   "at": [
-    30,
-    54
-   ],
-   "lab": [
-    30,
-    57
-   ],
+   "at": [30, 54],
+   "lab": [30, 57],
    "quote": "ended up advancing 1.8 kilometres (1.1 mi) past the island to arrive at the Temple of Hera"
   },
   {
    "k": "point",
    "name": "Temple of Demeter",
-   "at": [
-    93,
-    55
-   ],
-   "lab": [
-    91,
-    58
-   ],
+   "at": [93, 55],
+   "lab": [91, 58],
    "quote": "The Spartans and Tegeans had by now reached the Temple of Demeter."
   }
  ],
@@ -180,41 +144,13 @@
    "text": "The Persians lined up north of the river with their left wing facing the Spartans and Tegeans. Next to them stood the Medes and their neighbours, then the Boeotians and other Greek allies of Persia facing the Athenians.",
    "quote": "The Greek units were camped in order of their positions in the phalanx, so that the formation could be set up easily at the start of battle.",
    "at": {
-    "gspar": [
-     74,
-     42,
-     0
-    ],
-    "gcent": [
-     50,
-     42,
-     0
-    ],
-    "gath": [
-     26,
-     42,
-     0
-    ],
-    "pers": [
-     74,
-     22,
-     180
-    ],
-    "medes": [
-     50,
-     22,
-     180
-    ],
-    "boeot": [
-     26,
-     22,
-     180
-    ],
-    "pcamp": [
-     92,
-     7,
-     0
-    ]
+    "gspar": [74, 42, 0],
+    "gcent": [50, 42, 0],
+    "gath": [26, 42, 0],
+    "pers": [74, 22, 180],
+    "medes": [50, 22, 180],
+    "boeot": [26, 22, 180],
+    "pcamp": [92, 7, 0]
    }
   },
   {
@@ -222,61 +158,24 @@
    "text": "The Greek centre moved off late at night and went too far, ending at the Temple of Hera. The Spartans and Tegeans had not begun to move by daybreak, and a lochos under Amompharetus was left behind. The Athenians were blocked by the scattered centre.",
    "quote": "However, the retreat went awry. The Allied contingents in the centre began their movement late at night, and perhaps because they were not aware of the new terrain, ended up advancing 1.8 kilometres (1.1 mi) past the island to arrive at the Temple of Hera.",
    "at": {
-    "gcent": [
-     44,
-     52,
-     0
-    ],
-    "amomph": [
-     88,
-     42,
-     0
-    ]
+    "gcent": [44, 52, 0],
+    "amomph": [88, 42, 0]
    },
    "how": {
     "gcent": "retreat"
    }
   },
   {
-   "title": "Mardonius hurries after the Greeks",
-   "text": "Mardonius learned of the retreat and rushed to Pausanias's position with the Persian left wing. The Persian cavalry attacked the Spartans and Tegeans, who had reached the Temple of Demeter, and the Athenians were engaged by the Boeotians.",
-   "quote": "Meanwhile, Mardonius had learned of the Greek retreat and rushed to Pausanias' position with the Persian left wing he was personally commanding.",
+   "title": "The Spartans reach the Temple of Demeter under attack",
+   "text": "The Spartans and Tegeans reached the Temple of Demeter, and the lochos under Amompharetus began to withdraw from the ridge to join them. The first units of the Persian cavalry started attacking them.",
+   "quote": "The Spartans and Tegeans had by now reached the Temple of Demeter. The rearguard under Amompharetus began to withdraw from the ridge to join them.",
    "at": {
-    "gspar": [
-     72,
-     50,
-     0
-    ],
-    "amomph": [
-     86,
-     48,
-     0
-    ],
-    "pers": [
-     72,
-     38,
-     180
-    ],
-    "pcav": [
-     90,
-     40,
-     180
-    ],
-    "boeot": [
-     26,
-     34,
-     180
-    ]
+    "gspar": [72, 50, 0],
+    "amomph": [86, 48, 0],
+    "pcav": [90, 40, 180]
    },
    "hits": [
-    [
-     "pcav",
-     "gspar"
-    ],
-    [
-     "boeot",
-     "gath"
-    ]
+    ["pcav", "gspar"]
    ],
    "how": {
     "gspar": "retreat",
@@ -284,31 +183,32 @@
    }
   },
   {
+   "title": "Mardonius hurries after the Greeks",
+   "text": "Mardonius learned of the retreat and rushed to Pausanias's position with the Persian left wing. When the Persian infantry arrived, the cavalry drew back to rest its mounts. The Athenians were engaged by the Boeotians.",
+   "quote": "Meanwhile, Mardonius had learned of the Greek retreat and rushed to Pausanias' position with the Persian left wing he was personally commanding.",
+   "at": {
+    "pers": [72, 38, 180],
+    "pcav": [95, 40, 180],
+    "boeot": [26, 34, 180]
+   },
+   "hits": [
+    ["boeot", "gath"]
+   ],
+   "how": {
+    "pcav": "retreat"
+   }
+  },
+  {
    "title": "The Tegeans and Spartans charge",
    "text": "The Tegeans ran at the Persian line as arrows fell, and once Pausanias had favourable omens the Spartans charged too. Artabazos brought up 40,000 men in a tight formation, slowly. Amompharetus's men had joined the Spartans.",
    "quote": "Pausanias finally received favorable omens and ordered the Spartans to also charge the Persian lines.",
    "at": {
-    "gspar": [
-     72,
-     43,
-     0
-    ],
-    "artab": [
-     56,
-     30,
-     180
-    ]
+    "gspar": [72, 43, 0],
+    "artab": [56, 30, 180]
    },
    "hits": [
-    [
-     "gspar",
-     "pers"
-    ],
-    [
-     "pers",
-     "gspar",
-     0.25
-    ]
+    ["gspar", "pers"],
+    ["pers", "gspar", 0.25]
    ],
    "state": {
     "amomph": "gone"
@@ -316,45 +216,16 @@
   },
   {
    "title": "Mardonius is killed and the Persian line breaks",
-   "text": "Aeimnestus killed Mardonius with a stone. His guards broke and retreated and the rest of the army followed. The Athenians still fought the Thebans until they too retreated. Artabazos led his men away to Phocis, avoiding the camp.",
+   "text": "Aeimnestus killed Mardonius with a stone. His guards broke and retreated and the rest of the army followed. Artabazos led his men away to Phocis, avoiding the camp.",
    "quote": "Mardonius' death hit the morale of his guards, and once they broke their lines and retreated, the rest of the Persian army did so too.",
    "at": {
-    "pers": [
-     72,
-     15,
-     180
-    ],
-    "medes": [
-     58,
-     14,
-     180
-    ],
-    "boeot": [
-     30,
-     14,
-     180
-    ],
-    "gath": [
-     26,
-     38,
-     0
-    ],
-    "artab": [
-     8,
-     24,
-     270
-    ]
+    "pers": [72, 15, 180],
+    "medes": [58, 14, 180],
+    "artab": [8, 24, 270]
    },
-   "hits": [
-    [
-     "gath",
-     "boeot"
-    ]
-   ],
    "how": {
     "pers": "rout",
     "medes": "retreat",
-    "boeot": "retreat",
     "artab": "retreat"
    },
    "state": {
@@ -362,35 +233,41 @@
    }
   },
   {
-   "title": "The Greeks follow to the Persian camp",
-   "text": "The Spartans reached the camp first and waited for the Athenians, who knew how to scale walls. The Tegeans were the first to breach them. The Persians could not form up and took heavy losses.",
-   "quote": "The Greeks chased the Persians to their camp after the latter's defeat.",
+   "title": "The Athenians outlast the Thebans",
+   "text": "The Athenians still had to fight the Thebans who stood against them. Eventually the Thebans retreated. Meanwhile the Persian cavalry did not let the Greeks pursue and outflank the retreating Persian army.",
+   "quote": "However, the Athenians still had to fight the Thebans who were pitted up against them. Eventually, the Thebans retreated.",
    "at": {
-    "gspar": [
-     90,
-     25,
-     0
-    ],
-    "gath": [
-     66,
-     25,
-     0
-    ]
+    "gath": [26, 38, 0],
+    "boeot": [30, 14, 180]
    },
    "hits": [
-    [
-     "gspar",
-     "pcamp"
-    ],
-    [
-     "gath",
-     "pcamp",
-     -0.3
-    ]
+    ["gath", "boeot"]
    ],
+   "how": {
+    "boeot": "retreat"
+   }
+  },
+  {
+   "title": "The Greeks chase the Persians to their camp",
+   "text": "The Greeks chased the Persians to their camp. The Spartans arrived first and waited for the Athenians, who knew how to scale the walls.",
+   "quote": "The Spartans arrived first and waited for the Athenians, who knew how to scale the walls.",
+   "at": {
+    "gspar": [86, 22, 0],
+    "gath": [66, 25, 0]
+   },
    "state": {
     "artab": "gone"
    }
+  },
+  {
+   "title": "The Tegeans breach the camp walls",
+   "text": "The Tegeans were the first to breach the walls. The Persians could not get into formation and took heavy losses.",
+   "quote": "The Tegeans were the first ones to breach the walls. The Persians could not get into formation and took heavy losses",
+   "at": {},
+   "hits": [
+    ["gspar", "pcamp"],
+    ["gath", "pcamp", -0.3]
+   ]
   }
  ]
 }

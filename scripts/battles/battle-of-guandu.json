@@ -248,7 +248,7 @@
   {
    "title": "Yuan Shao advances into trench warfare",
    "when": "Eighth month",
-   "text": "Yuan Shao's army moved slowly south from Yangwu and fought Cao Cao's men from behind earthen embankments that both sides made. Neither side overcame the other and the fight became a stalemate.",
+   "text": "Yuan Shao's army moved slowly south from Yangwu and fought Cao Cao's men in trench warfare, from behind earthen embankments that both sides made around their positions.",
    "quote": "Yuan Shao's army slowly advanced southward from Yangwu and engaged Cao Cao's men in trench warfare, behind the earthen embankments that both sides made.",
    "at": {
     "ymain": [
@@ -267,6 +267,23 @@
      "cmain",
      "ymain",
      -0.2
+    ]
+   ]
+  },
+  {
+   "title": "Siege engines and tunnels at Guandu",
+   "text": "Yuan Shao raised siege ramps and high platforms to shoot arrows onto Cao Cao's men, who answered with traction trebuchets that destroyed the platforms. A ditch dug within Cao Cao's lines blocked Yuan Shao's tunnels, and neither side overcame the other.",
+   "quote": "Yuan Shao had erected siege-ramps and high platforms which allowed his men to rain arrows onto Cao Cao's forces. In response, Cao Cao's men had to carry their shields above their heads, and retaliated with traction trebuchets that destroyed the archer platforms. Yuan Shao also tried to tunnel under Cao Cao's fort, but Cao Cao had a large ditch dug within his lines to block the tunnels.",
+   "hits": [
+    [
+     "ymain",
+     "cmain",
+     0.3
+    ],
+    [
+     "cmain",
+     "ymain",
+     -0.3
     ]
    ]
   },
@@ -322,15 +339,29 @@
    }
   },
   {
-   "title": "Wuchao burns while Yuan Shao strikes at Guandu",
-   "text": "Cao Cao's raiders overran Chunyu Qiong's defences and set his forts on fire. Yuan Shao sent Zhang He and Gao Lan with his main army against the camp at Guandu and only a small cavalry unit to Wuchao.",
+   "title": "Wuchao's defences are overrun and its forts burn",
+   "text": "Cao Cao's army, disguised as a reinforcement unit from Yuan Shao, attacked Wuchao. Chunyu Qiong's first defences were overrun, and he fell back to his forts, which Cao Cao attacked and set on fire.",
    "quote": "Chunyu Qiong's initial defences were overrun, and he retreated to hold his forts, which Cao Cao attacked and set on fire.",
    "at": {
     "craid": [
      27,
      33,
      270
-    ],
+    ]
+   },
+   "hits": [
+    [
+     "craid",
+     "ywuchao",
+     0.1
+    ]
+   ]
+  },
+  {
+   "title": "Yuan Shao sends his main army against Guandu",
+   "text": "Zhang He urged help for Wuchao, but Guo Tu urged an attack on Guandu. Yuan Shao sent Zhang He and Gao Lan with his main army against Cao Cao's camp, and only a small cavalry unit to Wuchao. Cao Cao held his men at Guandu.",
+   "quote": "Yuan Shao used Guo Tu's idea and sent Zhang He and Gao Lan to lead his main army to attack Cao Cao's main camp at Guandu, while only sending a small cavalry unit to reinforce Wuchao.",
+   "at": {
     "yassault": [
      78,
      30,
@@ -339,11 +370,6 @@
    },
    "hits": [
     [
-     "craid",
-     "ywuchao",
-     0.1
-    ],
-    [
      "yassault",
      "cmain",
      0.1
@@ -351,18 +377,38 @@
    ]
   },
   {
-   "title": "Zhang He and Gao Lan surrender; Cao Cao attacks",
-   "text": "Zhang He and Gao Lan failed to break through at Guandu and surrendered to Cao Hong. Cao Cao's forces then launched a full attack on Yuan Shao's army.",
-   "quote": "Zhang He and Gao Lan surrendered to Cao Hong and destroyed their weapons. Cao Cao's forces seized the opportunity to launch the full attack on Yuan's army.",
+   "title": "Wuchao is taken and its supplies burn",
+   "text": "The raid on Wuchao inflicted over a thousand casualties. Yue Jin captured Chunyu Qiong, and almost all of Yuan Shao's food supplies there were burnt.",
+   "quote": "Chunyu Qiong was captured by Yue Jin and had his nose cut off. Almost all of Yuan Shao's food supplies at Wuchao were burnt.",
+   "state": {
+    "ywuchao": "destroyed"
+   },
+   "hits": [
+    [
+     "craid",
+     "ywuchao",
+     0.1
+    ]
+   ]
+  },
+  {
+   "title": "Zhang He and Gao Lan surrender at Guandu",
+   "text": "Zhang He and Gao Lan failed to break through Cao Cao's lines at Guandu. After the news from Wuchao they surrendered to Cao Hong and destroyed their weapons.",
+   "quote": "Zhang He and Gao Lan surrendered to Cao Hong and destroyed their weapons.",
+   "state": {
+    "yassault": "gone"
+   }
+  },
+  {
+   "title": "Cao Cao attacks Yuan Shao's army",
+   "text": "Cao Cao's forces seized the opportunity and launched a full attack on Yuan Shao's army, whose men were already shaken by the loss of their supplies.",
+   "quote": "Cao Cao's forces seized the opportunity to launch the full attack on Yuan's army.",
    "at": {
     "cmain": [
      58,
      37,
      0
     ]
-   },
-   "state": {
-    "yassault": "gone"
    },
    "hits": [
     [

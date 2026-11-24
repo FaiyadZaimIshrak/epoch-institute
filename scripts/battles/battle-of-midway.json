@@ -169,16 +169,24 @@
    }
   },
   {
-   "title": "The Japanese strike Midway, and Midway's bombers strike back",
+   "title": "The Japanese strike Midway",
    "when": "4 June 1942, from 04:30",
-   "text": "Nagumo launched his first attack on Midway at 04:30. Bombers that had taken off from the atoll before the Japanese arrived attacked his carriers. The Japanese repelled them, and the strike on Midway left its defences largely intact.",
-   "quote": "Having taken off prior to the Japanese attack, American bombers based on Midway made several attacks on the Japanese carrier force.",
+   "text": "Nagumo launched his first attack on Midway at 04:30, with 36 dive bombers and 36 torpedo bombers escorted by 36 Zeros. Marine fighters from the island intercepted it, and the base was bombed from 06:34, though most of its defences stayed intact.",
+   "quote": "At 04:30 on 4 June, Nagumo launched his initial attack on Midway, consisting of 36 D3As and 36 B5Ns, escorted by 36 Zero fighters.",
    "at": {},
    "hits": [
     [
      "cd1",
      "mid"
-    ],
+    ]
+   ]
+  },
+  {
+   "title": "Midway's bombers attack the carriers",
+   "text": "American bombers that had taken off from Midway before the Japanese attack made several attacks on the Japanese carrier force. The Japanese repelled them, losing only three Zero fighters.",
+   "quote": "Having taken off prior to the Japanese attack, American bombers based on Midway made several attacks on the Japanese carrier force.",
+   "at": {},
+   "hits": [
     [
      "mid",
      "cd1",
@@ -187,19 +195,27 @@
    ]
   },
   {
+   "title": "The American carriers launch their strikes",
+   "when": "From about 07:00",
+   "text": "Enterprise and Hornet began launching a few minutes after 07:00, steaming away from the Japanese to launch into the wind, and Yorktown followed at 08:00. Spruance sent his aircraft off piecemeal rather than wait for them to assemble.",
+   "quote": "The first plane took off from Spruance's carriers Enterprise and Hornet a few minutes after 07:00.",
+   "at": {
+    "tf16": [
+     72,
+     22,
+     90
+    ]
+   }
+  },
+  {
    "title": "American torpedo squadrons are shot down",
-   "when": "From about 09:20",
-   "text": "The American carriers had launched from 07:00, and their torpedo squadrons reached the Japanese carriers without fighter escort. Most were shot down and none of their torpedoes hit, but the attacks drew the Japanese fighters out of position.",
+   "when": "From 09:20",
+   "text": "Torpedo Squadron 8 sighted the Japanese carriers and attacked at 09:20 without fighter escort, and all 15 of its aircraft were shot down. Torpedo Squadron 6 lost 9 of its 14. All their torpedoes missed or failed to explode.",
    "quote": "Without fighter escort, all 15 TBD Devastators of VT-8 were shot down without being able to inflict any damage.",
    "at": {
     "tf16": [
      60,
      24,
-     270
-    ],
-    "tf17": [
-     66,
-     32,
      270
     ]
    },
@@ -208,7 +224,22 @@
      "tf16",
      "cd2",
      -0.2
-    ],
+    ]
+   ]
+  },
+  {
+   "title": "Yorktown's torpedo squadron draws the fighters off",
+   "when": "About 10:00",
+   "text": "Yorktown's torpedo squadron VT-3 attacked from the southeast, and 10 of its 12 aircraft were shot down without a hit. Its appearance drew most of the Japanese fighter patrol to that side of the fleet, leaving it out of position.",
+   "quote": "The appearance at 10:00 of a third torpedo plane attack from the southeast by VT-3 from Yorktown, led by Lieutenant Commander Lance Edward Massey, quickly drew the majority of the Japanese CAP to the southeast quadrant of the fleet.",
+   "at": {
+    "tf17": [
+     66,
+     32,
+     270
+    ]
+   },
+   "hits": [
     [
      "tf17",
      "cd2",
@@ -217,10 +248,22 @@
    ]
   },
   {
-   "title": "Dive bombers hit three of the four carriers",
+   "title": "Dive bombers set Kaga ablaze",
    "when": "From 10:22",
-   "text": "Dive bombers from Enterprise and Yorktown arrived while the Japanese fighters were drawn off. Kaga and Akagi were hit and set on fire, and Sōryū was hit too. All three were eventually abandoned and scuttled.",
-   "quote": "Within six minutes, Sōryū and Kaga were ablaze from stem to stern.",
+   "text": "Both of Enterprise's dive-bomber squadrons dived at Kaga by mistake, and she took three to five direct hits. One bomb killed her captain and most of her senior officers, and she was ablaze from stem to stern within six minutes.",
+   "quote": "Coming under an onslaught of bombs from almost two full squadrons, Kaga sustained three to five direct hits, which caused heavy damage and ignited multiple conflagrations.",
+   "at": {},
+   "hits": [
+    [
+     "tf16",
+     "cd1"
+    ]
+   ]
+  },
+  {
+   "title": "Akagi and Sōryū are hit",
+   "text": "Lieutenant Best and his two wingmen dived on Akagi, which took a single bomb that exploded among the armed and fuelled aircraft. At the same time Yorktown's VB-3 hit Sōryū at least three times. All three carriers were eventually abandoned and scuttled.",
+   "quote": "Simultaneously, Yorktown's VB-3, commanded by Lieutenant Max Leslie, went for Sōryū, scoring at least three hits and causing extensive damage.",
    "at": {},
    "state": {
     "cd1": "destroyed"
@@ -237,14 +280,27 @@
    ]
   },
   {
-   "title": "Hiryū strikes Yorktown",
-   "text": "Hiryū, the one carrier still operating, sent two waves after the American aircraft. Three bombs hit Yorktown in the first, and two torpedoes crippled her in the second. Fletcher moved his command staff to the cruiser Astoria.",
-   "quote": "Hiryū, the sole surviving Japanese aircraft carrier, wasted little time in counterattacking.",
+   "title": "Hiryū's first wave hits Yorktown",
+   "text": "Hiryū, the one carrier still operating, sent 18 dive bombers and 6 Zeros after the retreating American aircraft. They found Yorktown and hit her with three bombs, and Fletcher moved his command staff to the heavy cruiser Astoria.",
+   "quote": "Hiryū's first attack wave, consisting of 18 D3As and 6 Zeros, followed the retreating American aircraft and attacked the first carrier they encountered, Yorktown, hitting her with three bombs",
    "at": {},
    "hits": [
     [
      "cd2",
      "tf17"
+    ]
+   ]
+  },
+  {
+   "title": "Hiryū's second wave cripples Yorktown",
+   "text": "About an hour later ten torpedo bombers and six Zeros arrived. Yorktown's repairs had been so effective that the Japanese pilots took her for a different carrier. Two torpedoes crippled her, and she lost all power and listed 23 degrees to port.",
+   "quote": "They attacked, crippling Yorktown with two torpedoes; she lost all power and developed a 23-degree list to port.",
+   "at": {},
+   "hits": [
+    [
+     "cd2",
+     "tf17",
+     0.2
     ]
    ]
   },
@@ -271,29 +327,55 @@
    ]
   },
   {
-   "title": "Both sides draw back",
-   "when": "Night of 4 June and after",
-   "text": "Spruance withdrew to the east during the night, fearing a night encounter with Japanese surface ships. Yamamoto had detached a cruiser force to bombard Midway, then ordered a general withdrawal to the west, and the cruisers turned back.",
-   "quote": "The Japanese surface forces failed to make contact with the Americans because Spruance had briefly withdrawn eastward, and Yamamoto ordered a general withdrawal to the west.",
+   "title": "Spruance withdraws to the east",
+   "when": "Night of 4 June",
+   "text": "Spruance, fearing a possible night encounter with Japanese surface forces, changed course and withdrew to the east. He turned back west towards the Japanese at midnight.",
+   "quote": "Spruance changed course and withdrew to the east, turning back west towards the Japanese at midnight.",
    "at": {
     "tf16": [
      66,
      16,
      90
+    ]
+   },
+   "how": {
+    "tf16": "retreat"
+   }
+  },
+  {
+   "title": "Yamamoto sends his ships east",
+   "text": "Yamamoto at first decided to continue the engagement and sent his remaining surface forces searching eastward for the American carriers. At the same time he detached a cruiser raiding force to bombard Midway.",
+   "quote": "Yamamoto initially decided to continue the engagement and sent his remaining surface forces searching eastward for the American carriers.",
+   "at": {
+    "main": [
+     26,
+     12,
+     90
     ],
+    "raid": [
+     32,
+     48,
+     90
+    ]
+   }
+  },
+  {
+   "title": "Yamamoto orders a general withdrawal",
+   "text": "The Japanese surface forces failed to make contact with the Americans, and Yamamoto ordered a general withdrawal to the west. His main body and the cruiser force turned back.",
+   "quote": "The Japanese surface forces failed to make contact with the Americans because Spruance had briefly withdrawn eastward, and Yamamoto ordered a general withdrawal to the west.",
+   "at": {
     "main": [
      8,
      14,
      270
     ],
     "raid": [
-     26,
-     16,
+     22,
+     48,
      270
     ]
    },
    "how": {
-    "tf16": "retreat",
     "main": "retreat",
     "raid": "retreat"
    }

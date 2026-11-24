@@ -2,362 +2,31 @@
  "slug": "battle-of-kohima",
  "name": "Battle of Kohima",
  "article": "battles2/wp/battle-of-kohima",
- "field": {
-  "north": 0,
-  "edges": [
-   {
-    "name": "to Dimapur ↑",
-    "at": [
-     68,
-     5
-    ]
-   },
-   {
-    "name": "to Imphal ↓",
-    "at": [
-     70,
-     58
-    ]
-   }
-  ]
- },
+ "field": {"north": 0, "edges": [{"name": "to Dimapur ↑", "at": [68, 5]}, {"name": "to Imphal ↓", "at": [70, 58]}]},
  "note": "The plan shows the siege and the fight for the ridge in outline, not every position. The compass directions are only rough (the ridge runs north and south, Naga Village lies north of it, GPT Ridge and Aradura Spur south and west). Jotsoma, Mount Pulebadze, Kuki Picquet and the tennis court are placed by judgement: the accounts do not say exactly where they lay. Garrison Hill is not drawn as a feature; the garrison and 6th Brigade stand on it. The 5th Brigade's side of Naga Village and the point of the summit from which the tank was dragged down are not given.",
  "terrain": [
-  {
-   "k": "ridge",
-   "name": "Kohima Ridge",
-   "at": [
-    [
-     46,
-     24
-    ],
-    [
-     52,
-     22
-    ],
-    [
-     58,
-     26
-    ],
-    [
-     58,
-     40
-    ],
-    [
-     54,
-     48
-    ],
-    [
-     48,
-     46
-    ],
-    [
-     46,
-     34
-    ]
-   ],
-   "lab": [
-    64,
-    34
-   ],
-   "quote": "Kohima Ridge itself runs roughly north and south."
-  },
-  {
-   "k": "ridge",
-   "name": "GPT Ridge",
-   "at": [
-    [
-     30,
-     44
-    ],
-    [
-     38,
-     42
-    ],
-    [
-     46,
-     44
-    ],
-    [
-     46,
-     50
-    ],
-    [
-     36,
-     52
-    ],
-    [
-     30,
-     50
-    ]
-   ],
-   "lab": [
-    26,
-    41
-   ],
-   "quote": "South and west of Kohima Ridge were GPT Ridge and the jungle-covered Aradura Spur."
-  },
-  {
-   "k": "ridge",
-   "name": "Aradura Spur",
-   "at": [
-    [
-     22,
-     55
-    ],
-    [
-     32,
-     54
-    ],
-    [
-     44,
-     55
-    ],
-    [
-     44,
-     58
-    ],
-    [
-     32,
-     59
-    ],
-    [
-     22,
-     59
-    ]
-   ],
-   "lab": [
-    54,
-    57
-   ],
-   "quote": "South and west of Kohima Ridge were GPT Ridge and the jungle-covered Aradura Spur."
-  },
-  {
-   "k": "mountain",
-   "name": "Mount Pulebadze",
-   "at": [
-    [
-     4,
-     42
-    ],
-    [
-     12,
-     40
-    ],
-    [
-     18,
-     44
-    ],
-    [
-     18,
-     52
-    ],
-    [
-     10,
-     56
-    ],
-    [
-     4,
-     52
-    ]
-   ],
-   "lab": [
-    11,
-    48
-   ],
-   "quote": "having made a long flank march around Mount Pulebadze to approach Kohima Ridge from the south-west"
-  },
-  {
-   "k": "road",
-   "name": "Dimapur road",
-   "unnamed": true,
-   "at": [
-    [
-     66,
-     4
-    ],
-    [
-     60,
-     14
-    ],
-    [
-     60,
-     30
-    ],
-    [
-     62,
-     46
-    ],
-    [
-     64,
-     58
-    ]
-   ],
-   "lab": [
-    74,
-    28
-   ],
-   "quote": "The road from Dimapur to Imphal climbs to its northern end and runs along its eastern face."
-  },
-  {
-   "k": "village",
-   "name": "Naga Village",
-   "at": [
-    50,
-    12
-   ],
-   "lab": [
-    50,
-    7
-   ],
-   "quote": "North of the ridge lay the densely inhabited area of Naga Village"
-  },
-  {
-   "k": "village",
-   "name": "Jotsoma",
-   "at": [
-    16,
-    32
-   ],
-   "lab": [
-    16,
-    26
-   ],
-   "quote": "who were themselves cut off 2 miles (3.2 km) away at Jotsoma"
-  },
-  {
-   "k": "point",
-   "name": "Tennis court",
-   "at": [
-    50,
-    28
-   ],
-   "lab": [
-    42,
-    26
-   ],
-   "quote": "The tennis court became a no man's land"
-  },
-  {
-   "k": "point",
-   "name": "Kuki Picquet",
-   "at": [
-    47,
-    42
-   ],
-   "lab": [
-    38,
-    36
-   ],
-   "quote": "Other Japanese captured Kuki Picquet, cutting the garrison in two."
-  }
+  {"k": "ridge", "name": "Kohima Ridge", "at": [[46, 24], [52, 22], [58, 26], [58, 40], [54, 48], [48, 46], [46, 34]], "lab": [64, 34], "quote": "Kohima Ridge itself runs roughly north and south."},
+  {"k": "ridge", "name": "GPT Ridge", "at": [[30, 44], [38, 42], [46, 44], [46, 50], [36, 52], [30, 50]], "lab": [26, 41], "quote": "South and west of Kohima Ridge were GPT Ridge and the jungle-covered Aradura Spur."},
+  {"k": "ridge", "name": "Aradura Spur", "at": [[22, 55], [32, 54], [44, 55], [44, 58], [32, 59], [22, 59]], "lab": [54, 57], "quote": "South and west of Kohima Ridge were GPT Ridge and the jungle-covered Aradura Spur."},
+  {"k": "mountain", "name": "Mount Pulebadze", "at": [[4, 42], [12, 40], [18, 44], [18, 52], [10, 56], [4, 52]], "lab": [11, 48], "quote": "having made a long flank march around Mount Pulebadze to approach Kohima Ridge from the south-west"},
+  {"k": "road", "name": "Dimapur road", "unnamed": true, "at": [[66, 4], [60, 14], [60, 30], [62, 46], [64, 58]], "lab": [74, 28], "quote": "The road from Dimapur to Imphal climbs to its northern end and runs along its eastern face."},
+  {"k": "village", "name": "Naga Village", "at": [50, 12], "lab": [50, 7], "quote": "North of the ridge lay the densely inhabited area of Naga Village"},
+  {"k": "village", "name": "Jotsoma", "at": [16, 32], "lab": [16, 26], "quote": "who were themselves cut off 2 miles (3.2 km) away at Jotsoma"},
+  {"k": "point", "name": "Tennis court", "at": [50, 28], "lab": [42, 26], "quote": "The tennis court became a no man's land"},
+  {"k": "point", "name": "Kuki Picquet", "at": [47, 42], "lab": [38, 36], "quote": "Other Japanese captured Kuki Picquet, cutting the garrison in two."}
  ],
- "sides": [
-  {
-   "id": "j",
-   "name": "Japanese 31st Division"
-  },
-  {
-   "id": "b",
-   "name": "British and Indian forces"
-  }
- ],
+ "sides": [{"id": "j", "name": "Japanese 31st Division"}, {"id": "b", "name": "British and Indian forces"}],
  "units": [
-  {
-   "id": "garr",
-   "side": "b",
-   "k": "infantry",
-   "name": "Kohima garrison",
-   "short": "Garrison",
-   "leader": "Colonel Hugh Richards",
-   "w": 9,
-   "quote": "The garrison numbered about 2,500, of which about 1,000 were non-combatants and was commanded by Colonel Hugh Richards"
-  },
-  {
-   "id": "b161",
-   "side": "b",
-   "k": "infantry",
-   "name": "161st Indian Brigade",
-   "short": "161st Bde",
-   "leader": "Brigadier Dermot Warren",
-   "w": 10,
-   "quote": "They had artillery support from the main body of 161st Brigade"
-  },
-  {
-   "id": "tanks",
-   "side": "b",
-   "k": "armour",
-   "name": "Tanks of 149 Regiment RAC",
-   "short": "Tanks",
-   "w": 5,
-   "quote": "tanks of the 149 Regiment Royal Armoured Corps"
-  },
-  {
-   "id": "b6",
-   "side": "b",
-   "k": "infantry",
-   "name": "British 6th Brigade",
-   "short": "6th Bde",
-   "w": 10,
-   "quote": "While the British 6th Brigade defended Garrison Hill"
-  },
-  {
-   "id": "b5",
-   "side": "b",
-   "k": "infantry",
-   "name": "British 5th Brigade",
-   "short": "5th Bde",
-   "w": 9,
-   "quote": "On 4 May, the British 5th Brigade secured a foothold in the outskirts of Naga Village"
-  },
-  {
-   "id": "b4",
-   "side": "b",
-   "k": "infantry",
-   "name": "British 4th Brigade",
-   "short": "4th Bde",
-   "w": 9,
-   "quote": "attacked GPT Ridge in driving rain and captured part of the ridge by surprise"
-  },
-  {
-   "id": "b7",
-   "side": "b",
-   "k": "infantry",
-   "name": "7th Indian Division",
-   "short": "7th Div",
-   "leader": "Frank Messervy",
-   "w": 10,
-   "quote": "the division concentrated on recapturing the Naga Village from the north"
-  },
-  {
-   "id": "jleft",
-   "side": "j",
-   "k": "infantry",
-   "name": "Left Force",
-   "short": "Left Force",
-   "leader": "Miyazaki",
-   "w": 10,
-   "quote": "Their Left Force under Miyazaki held Kohima Ridge with four battalions."
-  },
-  {
-   "id": "jtc",
-   "side": "j",
-   "k": "infantry",
-   "name": "Japanese at the tennis court",
-   "short": "Tennis ct",
-   "w": 8,
-   "quote": "with the Japanese and the defenders of Kohima dug in on opposite sides"
-  },
-  {
-   "id": "jcen",
-   "side": "j",
-   "k": "infantry",
-   "name": "Centre Force and divisional HQ",
-   "short": "Centre",
-   "leader": "Colonel Shiraishi",
-   "w": 10,
-   "quote": "The divisional HQ under Sato himself and the Centre Force under Colonel Shiraishi held Naga Village with another four battalions."
-  }
+  {"id": "garr", "side": "b", "k": "infantry", "name": "Kohima garrison", "short": "Garrison", "leader": "Colonel Hugh Richards", "w": 9, "quote": "The garrison numbered about 2,500, of which about 1,000 were non-combatants and was commanded by Colonel Hugh Richards"},
+  {"id": "b161", "side": "b", "k": "infantry", "name": "161st Indian Brigade", "short": "161st Bde", "leader": "Brigadier Dermot Warren", "w": 10, "quote": "They had artillery support from the main body of 161st Brigade"},
+  {"id": "tanks", "side": "b", "k": "armour", "name": "Tanks of 149 Regiment RAC", "short": "Tanks", "w": 5, "quote": "tanks of the 149 Regiment Royal Armoured Corps"},
+  {"id": "b6", "side": "b", "k": "infantry", "name": "British 6th Brigade", "short": "6th Bde", "w": 10, "quote": "While the British 6th Brigade defended Garrison Hill"},
+  {"id": "b5", "side": "b", "k": "infantry", "name": "British 5th Brigade", "short": "5th Bde", "w": 9, "quote": "On 4 May, the British 5th Brigade secured a foothold in the outskirts of Naga Village"},
+  {"id": "b4", "side": "b", "k": "infantry", "name": "British 4th Brigade", "short": "4th Bde", "w": 9, "quote": "attacked GPT Ridge in driving rain and captured part of the ridge by surprise"},
+  {"id": "b7", "side": "b", "k": "infantry", "name": "7th Indian Division", "short": "7th Div", "leader": "Frank Messervy", "w": 10, "quote": "the division concentrated on recapturing the Naga Village from the north"},
+  {"id": "jleft", "side": "j", "k": "infantry", "name": "Left Force", "short": "Left Force", "leader": "Miyazaki", "w": 10, "quote": "Their Left Force under Miyazaki held Kohima Ridge with four battalions."},
+  {"id": "jtc", "side": "j", "k": "infantry", "name": "Japanese at the tennis court", "short": "Tennis ct", "w": 8, "quote": "with the Japanese and the defenders of Kohima dug in on opposite sides"},
+  {"id": "jcen", "side": "j", "k": "infantry", "name": "Centre Force and divisional HQ", "short": "Centre", "leader": "Colonel Shiraishi", "w": 10, "quote": "The divisional HQ under Sato himself and the Centre Force under Colonel Shiraishi held Naga Village with another four battalions."}
  ],
  "phases": [
   {
@@ -365,219 +34,96 @@
    "when": "From 6 April 1944",
    "text": "The Japanese took GPT Ridge on the first day and pressed the garrison from the south and from the north, around the tennis court. The 161st Brigade, cut off at Jotsoma, could only support it with artillery.",
    "quote": "was slowly driven into a small perimeter on Garrison Hill.",
-   "at": {
-    "garr": [
-     52,
-     36,
-     0
-    ],
-    "b161": [
-     16,
-     34,
-     90
-    ],
-    "jleft": [
-     38,
-     47,
-     45
-    ],
-    "jtc": [
-     52,
-     20,
-     180
-    ]
-   },
-   "hits": [
-    [
-     "jleft",
-     "garr"
-    ],
-    [
-     "jtc",
-     "garr",
-     0.2
-    ]
-   ]
+   "at": {"garr": [52, 36, 0], "b161": [16, 34, 90], "jleft": [38, 47, 45], "jtc": [52, 20, 180]},
+   "hits": [["jleft", "garr"], ["jtc", "garr", 0.2]]
   },
   {
    "title": "The Japanese cut the garrison in two",
    "when": "Night of 17/18 April",
    "text": "The Japanese took the area of the Deputy Commissioner's bungalow and Kuki Picquet, cutting the garrison in two. They did not go on to attack Garrison Hill, being exhausted by hunger and the fighting.",
    "quote": "On the night of 17/18 April, the Japanese finally captured the DC's bungalow area.",
-   "at": {
-    "jtc": [
-     52,
-     25,
-     180
-    ],
-    "jleft": [
-     42,
-     44,
-     30
-    ]
-   },
-   "hits": [
-    [
-     "jtc",
-     "garr"
-    ],
-    [
-     "jleft",
-     "garr"
-    ]
-   ]
+   "at": {"jtc": [52, 25, 180], "jleft": [42, 44, 30]},
+   "hits": [["jtc", "garr"], ["jleft", "garr"]]
   },
   {
    "title": "The relief force breaks through",
    "when": "18 April",
    "text": "The 161st Brigade, with air, artillery and armour support, attacked towards Kohima from Jotsoma. After a day of heavy fighting its leading troops and tanks broke through and began to relieve the garrison.",
    "quote": "After a day's heavy fighting, the leading troops of the Brigade",
-   "at": {
-    "b161": [
-     32,
-     34,
-     90
-    ],
-    "tanks": [
-     38,
-     28,
-     90
-    ]
-   },
-   "hits": [
-    [
-     "b161",
-     "jleft",
-     -0.2
-    ],
-    [
-     "tanks",
-     "jleft"
-    ]
-   ]
+   "at": {"b161": [32, 34, 90], "tanks": [38, 28, 90]},
+   "hits": [["b161", "jleft", -0.2], ["tanks", "jleft"]]
   },
   {
    "title": "The 6th Brigade takes over Garrison Hill",
    "when": "19 and 20 April",
    "text": "The 6th Brigade replaced the original garrison, and Colonel Richards handed over command at 06:00 on 20 April. The Japanese went on trying to capture Garrison Hill for several more nights.",
    "quote": "Miyazaki continued to try to capture Garrison Hill",
-   "at": {
-    "b6": [
-     52,
-     36,
-     0
-    ]
-   },
-   "state": {
-    "garr": "gone"
-   },
-   "hits": [
-    [
-     "jleft",
-     "b6"
-    ]
-   ]
+   "at": {"b6": [52, 36, 0]},
+   "state": {"garr": "gone"},
+   "hits": [["jleft", "b6"]]
   },
   {
    "title": "The Japanese defend; two brigades try to outflank them",
    "when": "4 May",
    "text": "The Japanese held Kohima Ridge with the Left Force and Naga Village with the Centre Force. The 5th Brigade took a foothold in Naga Village and lost it to a counter-attack, while the 4th Brigade marched round Mount Pulebadze and took part of GPT Ridge by surprise.",
    "quote": "the other two brigades of 2nd Division tried to outflank both ends of the Japanese position",
-   "at": {
-    "jcen": [
-     50,
-     16,
-     180
-    ],
-    "b5": [
-     68,
-     14,
-     270
-    ],
-    "b4": [
-     26,
-     47,
-     45
-    ]
-   },
-   "hits": [
-    [
-     "b5",
-     "jcen"
-    ],
-    [
-     "b4",
-     "jleft"
-    ]
-   ]
+   "at": {"jcen": [50, 16, 180], "b5": [68, 14, 270], "b4": [26, 47, 45]},
+   "hits": [["b5", "jcen"], ["b4", "jleft"]]
   },
   {
-   "title": "The ridge is cleared",
-   "when": "11 and 13 May",
-   "text": "Both outflanking moves failed, and the 2nd Division attacked along the ridge itself. Jail Hill and Kuki Picquet fell on 11 May. On 13 May a tank was dragged to the summit and crashed onto the tennis court, destroying the Japanese trenches there, and the ridge was cleared.",
+   "title": "Jail Hill and Kuki Picquet are captured",
+   "when": "11 May",
+   "text": "Both outflanking moves failed, and the 2nd Division attacked along Kohima Ridge itself. After a barrage of smoke shells blinded the Japanese machine-gunners, Jail Hill and Kuki Picquet were captured on 11 May.",
+   "quote": "Jail Hill, together with Kuki Picquet, FSD and DIS, was finally captured on 11 May",
+   "hits": [["b6", "jleft"]]
+  },
+  {
+   "title": "The 7th Indian Division turns on Naga Village",
+   "when": "12 May",
+   "text": "The 7th Indian Division arrived in stages from the Arakan, and with the 161st Brigade under its command it concentrated on recapturing Naga Village from the north.",
+   "quote": "the division concentrated on recapturing the Naga Village from the north",
+   "at": {"b7": [32, 12, 90]},
+   "hits": [["b7", "jcen"]]
+  },
+  {
+   "title": "A tank clears the tennis court",
+   "when": "13 May",
+   "text": "After several failed attempts to outflank or storm the position, a track was bulldozed to the summit above it. A Lee tank was dragged up and crashed down onto the tennis court, destroying the Japanese trenches and bunkers, and the ridge was cleared.",
    "quote": "A Lee tank crashed down onto the tennis court and destroyed the Japanese trenches and bunkers there.",
-   "at": {
-    "tanks": [
-     58,
-     31,
-     270
-    ],
-    "b7": [
-     32,
-     12,
-     90
-    ]
-   },
-   "hits": [
-    [
-     "b6",
-     "jleft"
-    ],
-    [
-     "tanks",
-     "jtc"
-    ],
-    [
-     "b7",
-     "jcen"
-    ]
-   ],
-   "state": {
-    "jtc": "destroyed"
-   }
+   "at": {"tanks": [58, 31, 270]},
+   "hits": [["tanks", "jtc"]],
+   "state": {"jtc": "destroyed"}
   },
   {
-   "title": "Satō abandons Naga Village and the Japanese retreat",
-   "when": "31 May to 22 June",
-   "text": "Satō left Naga Village and the positions north of the road on 31 May, which let XXXIII Corps outflank the Aradura Spur position. The 2nd Division then followed the retreat down the road and met troops from Imphal at Milestone 109 on 22 June.",
-   "quote": "This allowed XXXIII Corps to outflank Miyazaki's position on Aradura Spur and begin pushing south.",
-   "at": {
-    "jcen": [
-     78,
-     50,
-     180
-    ],
-    "jleft": [
-     82,
-     36,
-     90
-    ],
-    "b5": [
-     58,
-     50,
-     180
-    ]
-   },
-   "how": {
-    "jcen": "retreat",
-    "jleft": "retreat"
-   },
-   "hits": [
-    [
-     "b5",
-     "jcen"
-    ]
-   ]
+   "title": "The attacks on Naga Village and Aradura Spur fail",
+   "when": "16 to 29 May",
+   "text": "The Japanese kept defending Naga Village and Aradura Spur. Attacks on 16 May and on Naga Hill on 24/25 May gained no ground, and an attack on both ends of Aradura Spur on 28/29 May was repulsed.",
+   "quote": "Another attack, mounted against both ends of Aradura Spur on the night of 28/29 May was even more decisively repulsed.",
+   "hits": [["b7", "jcen"]]
+  },
+  {
+   "title": "Satō abandons Naga Village",
+   "when": "31 May",
+   "text": "Satō left Naga Village and the other positions north of the road on 31 May, against the orders of Mutaguchi to hold on. This let XXXIII Corps outflank Miyazaki's position on Aradura Spur.",
+   "quote": "he abandoned Naga Village and other positions north of the road",
+   "at": {"jcen": [78, 50, 180]},
+   "how": {"jcen": "retreat"}
+  },
+  {
+   "title": "Miyazaki is driven off the road",
+   "when": "June",
+   "text": "Miyazaki's detachment fought rearguard actions and demolished bridges along the road to Imphal, but was eventually driven off the road and forced to retreat eastwards.",
+   "quote": "was eventually driven off the road and forced to retreat eastwards",
+   "at": {"jleft": [82, 36, 90]},
+   "how": {"jleft": "retreat"}
+  },
+  {
+   "title": "The two relief forces meet at Milestone 109",
+   "when": "22 June",
+   "text": "The 2nd Division followed the retreat down the main road. On 22 June its leading troops met the 5th Indian Division, advancing north from Imphal, at Milestone 109, which ended the siege of Imphal.",
+   "quote": "met the main body of 5th Indian Infantry Division advancing north from Imphal at Milestone 109",
+   "at": {"b5": [58, 50, 180]},
+   "hits": [["b5", "jcen"]]
   }
  ]
 }

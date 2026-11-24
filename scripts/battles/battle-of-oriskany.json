@@ -401,7 +401,7 @@
   },
   {
    "title": "The warriors leave to protect their camps",
-   "text": "A guard ran to the field to warn the warriors, who broke off with the Seneca signal to retire and headed for the camps. This forced the smaller number of German and Loyalist fighters to withdraw as well.",
+   "text": "A guard ran to the field to warn the warriors that their camps were being raided. They broke off with the Seneca signal to retire and headed for the camps to protect their women and possessions.",
    "quote": "They disengaged with cries of \"Oonah, oonah!\", the Seneca signal to retire, and headed for the camps to protect their women and possessions.",
    "at": {
     "north": [
@@ -413,7 +413,18 @@
      32,
      55,
      270
-    ],
+    ]
+   },
+   "how": {
+    "north": "retreat",
+    "south": "retreat"
+   }
+  },
+  {
+   "title": "The Germans and Loyalists withdraw",
+   "text": "With the warriors gone, the smaller number of German and Loyalist combatants was forced to withdraw as well, and the fighting at the ravine ended.",
+   "quote": "This forced the smaller number of German and Loyalist combatants to also withdraw.",
+   "at": {
     "ry": [
      22,
      31,
@@ -421,8 +432,6 @@
     ]
    },
    "how": {
-    "north": "retreat",
-    "south": "retreat",
     "ry": "retreat"
    }
   }

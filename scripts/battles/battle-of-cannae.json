@@ -2,133 +2,30 @@
  "slug": "battle-of-cannae",
  "name": "Battle of Cannae",
  "article": "battles1/wp/battle-of-cannae",
- "field": {
-  "north": 0
- },
+ "field": {"north": 0},
  "note": "The Carthaginian left lay to the south by the Aufidus and the Romans faced east, so north is drawn at the top. The day falls on 2 August 216 BCE by the Roman calendar and on 1 July by one modern reckoning, so no date is shown. Varro held the Roman left and Paullus the right by the usual telling, though Samuels doubted who commanded where. Where the village of Cannae lay is not stated, so the village is not drawn. The paths of the cavalry are drawn straight; the accounts do not give their routes.",
  "terrain": [
   {
    "k": "river",
    "name": "Aufidus",
-   "at": [
-    [
-     4,
-     58
-    ],
-    [
-     30,
-     56.5
-    ],
-    [
-     55,
-     57.5
-    ],
-    [
-     80,
-     56
-    ],
-    [
-     96,
-     58
-    ]
-   ],
-   "lab": [
-    78,
-    53
-   ],
+   "at": [[4, 58], [30, 56.5], [55, 57.5], [80, 56], [96, 58]],
+   "lab": [78, 53],
    "quote": "hemmed in on their right flank by the river Aufidus"
   }
  ],
  "sides": [
-  {
-   "id": "r",
-   "name": "Romans and their allies"
-  },
-  {
-   "id": "c",
-   "name": "Carthaginians and their allies"
-  }
+  {"id": "r", "name": "Romans and their allies"},
+  {"id": "c", "name": "Carthaginians and their allies"}
  ],
  "units": [
-  {
-   "id": "rleft",
-   "side": "r",
-   "k": "cavalry",
-   "name": "Roman allied cavalry",
-   "short": "Allies",
-   "leader": "Terentius Varro",
-   "w": 10,
-   "quote": "attack the socii cavalry still fighting the Numidians"
-  },
-  {
-   "id": "rcentre",
-   "side": "r",
-   "k": "infantry",
-   "name": "Roman heavy infantry",
-   "short": "Legions",
-   "leader": "Geminus Servilius",
-   "w": 16,
-   "quote": "the center was not commanded by either of the two consuls, but by Geminus Servilius"
-  },
-  {
-   "id": "rright",
-   "side": "r",
-   "k": "cavalry",
-   "name": "Roman right-wing cavalry",
-   "short": "R. horse",
-   "leader": "Aemilius Paullus",
-   "w": 10,
-   "quote": "did not chase the retreating Roman right wing"
-  },
-  {
-   "id": "num",
-   "side": "c",
-   "k": "cavalry",
-   "name": "Numidian cavalry",
-   "short": "Numidians",
-   "leader": "Hanno",
-   "w": 8,
-   "quote": "On the other flank the Numidians engaged in a way that merely kept the Roman allied cavalry occupied"
-  },
-  {
-   "id": "afn",
-   "side": "c",
-   "k": "infantry",
-   "name": "African infantry, north wing",
-   "short": "Africans",
-   "w": 8,
-   "quote": "infantry from Punic Africa was on the wings at the very edge of his infantry line"
-  },
-  {
-   "id": "ccentre",
-   "side": "c",
-   "k": "infantry",
-   "name": "Hispanic and Gallic infantry",
-   "short": "Centre",
-   "leader": "Hannibal",
-   "w": 12,
-   "quote": "He placed his Iberians, Celtiberians and Gauls in the middle",
-   "leaderEntry": "hannibal"
-  },
-  {
-   "id": "afs",
-   "side": "c",
-   "k": "infantry",
-   "name": "African infantry, south wing",
-   "short": "Africans",
-   "w": 8,
-   "quote": "infantry from Punic Africa was on the wings at the very edge of his infantry line"
-  },
-  {
-   "id": "has",
-   "side": "c",
-   "k": "cavalry",
-   "name": "Hispanic and Gallic cavalry",
-   "short": "Hasdrubal",
-   "leader": "Hasdrubal",
-   "w": 8,
-   "quote": "Hasdrubal led the Hispanic and Gallic cavalry on the left"
-  }
+  {"id": "rleft", "side": "r", "k": "cavalry", "name": "Roman allied cavalry", "short": "Allies", "leader": "Terentius Varro", "w": 10, "quote": "attack the socii cavalry still fighting the Numidians"},
+  {"id": "rcentre", "side": "r", "k": "infantry", "name": "Roman heavy infantry", "short": "Legions", "leader": "Geminus Servilius", "w": 16, "quote": "the center was not commanded by either of the two consuls, but by Geminus Servilius"},
+  {"id": "rright", "side": "r", "k": "cavalry", "name": "Roman right-wing cavalry", "short": "R. horse", "leader": "Aemilius Paullus", "w": 10, "quote": "did not chase the retreating Roman right wing"},
+  {"id": "num", "side": "c", "k": "cavalry", "name": "Numidian cavalry", "short": "Numidians", "leader": "Hanno", "w": 8, "quote": "On the other flank the Numidians engaged in a way that merely kept the Roman allied cavalry occupied"},
+  {"id": "afn", "side": "c", "k": "infantry", "name": "African infantry, north wing", "short": "Africans", "w": 8, "quote": "infantry from Punic Africa was on the wings at the very edge of his infantry line"},
+  {"id": "ccentre", "side": "c", "k": "infantry", "name": "Hispanic and Gallic infantry", "short": "Centre", "leader": "Hannibal", "w": 12, "quote": "He placed his Iberians, Celtiberians and Gauls in the middle", "leaderEntry": "hannibal"},
+  {"id": "afs", "side": "c", "k": "infantry", "name": "African infantry, south wing", "short": "Africans", "w": 8, "quote": "infantry from Punic Africa was on the wings at the very edge of his infantry line"},
+  {"id": "has", "side": "c", "k": "cavalry", "name": "Hispanic and Gallic cavalry", "short": "Hasdrubal", "leader": "Hasdrubal", "w": 8, "quote": "Hasdrubal led the Hispanic and Gallic cavalry on the left"}
  ],
  "phases": [
   {
@@ -136,239 +33,100 @@
    "text": "The Romans faced east with the Aufidus on their right and massed their infantry deep in the centre. Hannibal put the Hispanic and Gallic infantry in the middle, the African infantry at the ends of the infantry line and the cavalry on the flanks.",
    "quote": "The Romans followed this convention fairly closely, but chose extra depth rather than breadth for the infantry in hopes of breaking quickly through the center of Hannibal's line.",
    "at": {
-    "rleft": [
-     34,
-     12,
-     90
-    ],
-    "rcentre": [
-     34,
-     30,
-     90
-    ],
-    "rright": [
-     34,
-     46,
-     90
-    ],
-    "num": [
-     55,
-     9,
-     270
-    ],
-    "afn": [
-     55,
-     18,
-     270
-    ],
-    "ccentre": [
-     50,
-     30,
-     270
-    ],
-    "afs": [
-     55,
-     41,
-     270
-    ],
-    "has": [
-     55,
-     50,
-     270
-    ]
+    "rleft": [34, 12, 90],
+    "rcentre": [34, 30, 90],
+    "rright": [34, 46, 90],
+    "num": [55, 9, 270],
+    "afn": [55, 18, 270],
+    "ccentre": [50, 30, 270],
+    "afs": [55, 41, 270],
+    "has": [55, 50, 270]
    }
   },
   {
-   "title": "The cavalry clash and the centres advance",
-   "text": "The battle opened with a fierce cavalry fight on both flanks. In the centre Hannibal moved the Hispanic and Gallic infantry forward in a curve, keeping the Africans back.",
-   "quote": "The battle began with a fierce cavalry engagement on the flanks.",
+   "title": "Hannibal advances his centre in a crescent",
+   "text": "As the armies advanced, Hannibal took the Hispanic and Gallic companies forward from the middle of his line. The flanking companies fell back behind them, so that the line curved out towards the Romans and the Africans were kept in reserve.",
+   "quote": "he took the central companies of Hispanics and Celts and advanced with them",
    "at": {
-    "rleft": [
-     38,
-     12,
-     90
-    ],
-    "rcentre": [
-     40,
-     30,
-     90
-    ],
-    "rright": [
-     38,
-     47,
-     90
-    ],
-    "num": [
-     48,
-     9,
-     270
-    ],
-    "ccentre": [
-     45,
-     30,
-     270
-    ],
-    "has": [
-     48,
-     50,
-     270
-    ]
-   },
-   "hits": [
-    [
-     "has",
-     "rright"
-    ],
-    [
-     "num",
-     "rleft"
-    ],
-    [
-     "ccentre",
-     "rcentre"
-    ]
-   ]
+    "rcentre": [40, 30, 90],
+    "ccentre": [45, 30, 270]
+   }
   },
   {
-   "title": "The Roman cavalry is driven off",
-   "text": "The Carthaginian horse got the upper hand on the Roman right. Hasdrubal did not chase them but rode to the other side of the field, and the allied cavalry broke between him and the Numidians.",
+   "title": "The cavalry clash on both flanks",
+   "text": "The battle opened with a fierce cavalry fight on the flanks. On the Roman right the Hispanic and Gallic horse fought hard, and on the other flank the Numidians kept the Roman allied cavalry busy.",
+   "quote": "The battle began with a fierce cavalry engagement on the flanks.",
+   "at": {
+    "rleft": [38, 12, 90],
+    "rright": [38, 47, 90],
+    "num": [48, 9, 270],
+    "has": [48, 50, 270]
+   },
+   "hits": [["has", "rright"], ["num", "rleft"]]
+  },
+  {
+   "title": "The Roman right wing is driven back",
+   "text": "The Carthaginian horse got the upper hand and cut down the Roman cavalry on the right without giving quarter. The Roman right wing retreated, and Hasdrubal did not chase it.",
+   "quote": "When the Carthaginian cavalry got the upper hand, they cut down their Roman opponents without giving quarter.",
+   "at": {
+    "rright": [20, 52, 270]
+   },
+   "how": {"rright": "rout"},
+   "state": {"rright": "routed"},
+   "hits": [["has", "rright"]]
+  },
+  {
+   "title": "Hasdrubal rides across and the allied cavalry breaks",
+   "text": "Hasdrubal led his victorious horse to the other side of the field to attack the allied cavalry. Assailed from both sides, the allies broke before he reached them, and the Numidians pursued them off the field.",
    "quote": "Instead, he led them to the other side of the field to attack the socii cavalry still fighting the Numidians.",
    "at": {
-    "rright": [
-     20,
-     50,
-     270
-    ],
-    "has": [
-     30,
-     20,
-     90
-    ],
-    "rleft": [
-     24,
-     6,
-     0
-    ],
-    "num": [
-     38,
-     8,
-     270
-    ]
+    "has": [30, 20, 90],
+    "rleft": [24, 6, 0],
+    "num": [38, 8, 270]
    },
-   "how": {
-    "rright": "rout",
-    "rleft": "rout"
-   },
-   "state": {
-    "rright": "routed",
-    "rleft": "routed"
-   },
-   "hits": [
-    [
-     "has",
-     "rleft"
-    ],
-    [
-     "num",
-     "rleft",
-     0.2
-    ]
-   ]
+   "how": {"rleft": "rout"},
+   "state": {"rleft": "routed"},
+   "hits": [["has", "rleft"], ["num", "rleft", 0.2]]
   },
   {
    "title": "The centre gives way step by step",
    "text": "The Roman heavy infantry pressed forward and Hannibal held his men together in a controlled retreat. The curve buckled inwards as the Romans advanced and reserve lines pushed into the gaps.",
    "quote": "The crescent of Hispanic and Gallic troops buckled inwards as they gradually withdrew step by step.",
    "at": {
-    "rcentre": [
-     47,
-     30,
-     90
-    ],
-    "ccentre": [
-     61,
-     30,
-     270
-    ]
+    "rcentre": [47, 30, 90],
+    "ccentre": [61, 30, 270]
    },
-   "how": {
-    "ccentre": "retreat"
-   },
-   "hits": [
-    [
-     "rcentre",
-     "ccentre"
-    ]
-   ]
+   "how": {"ccentre": "retreat"},
+   "hits": [["rcentre", "ccentre"]]
   },
   {
-   "title": "The Africans turn in and the cavalry takes the rear",
-   "text": "The Carthaginian cavalry attacked the Roman centre from behind. Hannibal then ordered the African infantry to turn inwards against the Roman flanks, which formed a pincer.",
+   "title": "The Carthaginian cavalry attacks the Roman rear",
+   "text": "With the Roman cavalry driven off on both flanks, the Carthaginian horse had time to ride round and attack the Roman centre from behind.",
+   "quote": "This also gave the Carthaginian cavalry time to drive the Roman cavalry off on both flanks and attack the Roman center in the rear.",
+   "at": {
+    "has": [38, 30, 90]
+   },
+   "hits": [["has", "rcentre"]]
+  },
+  {
+   "title": "The Africans turn in against the Roman flanks",
+   "text": "Hannibal ordered the African infantry to turn inwards and advance against the Roman flanks. Together with the cavalry behind, this formed a pincer round the Roman infantry.",
    "quote": "At this decisive point, Hannibal ordered his African infantry to turn inwards and advance against the Roman flanks, creating an encirclement in one of the earliest known examples of a pincer movement.",
    "at": {
-    "afn": [
-     49,
-     17,
-     180
-    ],
-    "afs": [
-     49,
-     43,
-     0
-    ],
-    "has": [
-     34,
-     22,
-     60
-    ]
+    "afn": [49, 17, 180],
+    "afs": [49, 43, 0]
    },
-   "hits": [
-    [
-     "afn",
-     "rcentre"
-    ],
-    [
-     "afs",
-     "rcentre"
-    ],
-    [
-     "has",
-     "rcentre"
-    ]
-   ]
+   "hits": [["afn", "rcentre"], ["afs", "rcentre"]]
   },
   {
    "title": "The Romans are enclosed and killed",
    "text": "Enclosed in a pocket with no means of escape, the Roman infantry was cut down by the cavalry behind it, the African infantry on both sides and the centre in front.",
    "quote": "The Romans were henceforth enclosed in a pocket with no means of escape. The Carthaginians created a wall and began to systematically massacre them.",
    "at": {
-    "ccentre": [
-     58,
-     30,
-     270
-    ]
+    "ccentre": [58, 30, 270]
    },
-   "state": {
-    "rcentre": "destroyed"
-   },
-   "hits": [
-    [
-     "ccentre",
-     "rcentre"
-    ],
-    [
-     "afn",
-     "rcentre"
-    ],
-    [
-     "afs",
-     "rcentre"
-    ],
-    [
-     "has",
-     "rcentre"
-    ]
-   ]
+   "state": {"rcentre": "destroyed"},
+   "hits": [["ccentre", "rcentre"], ["afn", "rcentre"], ["afs", "rcentre"], ["has", "rcentre"]]
   }
  ]
 }

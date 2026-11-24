@@ -257,16 +257,24 @@
    ]
   },
   {
-   "title": "The Russian main group turns north; the Japanese reverse",
-   "when": "14:50 to 15:18",
-   "text": "With the Japanese overtaking the Russian battleships heading east-south-east, Aleksandr III turned north with Borodino and Oryol following. The 1st division made a U-turn on the spot to head west-north-west, while the 2nd division attacked the secondary Russian warships.",
-   "quote": "Mikasa and the 5 ships make an immediate left U-turn on the spot, and head WNW in reverse order (Nisshin first, Mikasa last).",
+   "title": "Aleksandr III turns the Russian main group north",
+   "when": "14:50",
+   "text": "With the Japanese 1st division completely overtaking the Russian battleships heading east-south-east, Aleksandr III turned to the north, with Borodino and Oryol following.",
+   "quote": "With the Japanese 1st Battle Div. completely overtaking the Russian battleships heading ESE, Aleksandr turns to the North with Borodino and Oryol following.",
    "at": {
     "rm": [
      38,
      30,
      0
-    ],
+    ]
+   }
+  },
+  {
+   "title": "The Japanese 1st division reverses; the 2nd attacks",
+   "when": "14:55",
+   "text": "The 1st division made an immediate left U-turn on the spot to head west-north-west, in reverse order. The 2nd division continued south-east and then south-west, attacking the secondary Russian warships.",
+   "quote": "Mikasa and the 5 ships make an immediate left U-turn on the spot, and head WNW in reverse order (Nisshin first, Mikasa last).",
+   "at": {
     "j1": [
      62,
      24,
@@ -288,6 +296,62 @@
      "j2",
      "ra",
      0.2
+    ]
+   ]
+  },
+  {
+   "title": "Aleksandr III turns south-east",
+   "when": "15:14",
+   "text": "Aleksandr III, apparently giving up fleeing north, turned south-east, with Borodino and Oryol following. The Russian main group thus reversed its northward course and stood on the opposite heading to the Japanese line.",
+   "quote": "Aleksandr, apparently giving up fleeing North, turns SE with Borodino and Oryol following.",
+   "at": {
+    "rm": [
+     44,
+     34,
+     135
+    ]
+   }
+  },
+  {
+   "title": "The 1st division loses sight of the main group",
+   "when": "15:50",
+   "text": "Nisshin and the five ships made another immediate left U-turn, and the 1st division headed north-east in normal order, with Mikasa first and Nisshin last. The 1st division lost sight of the Russian main group in the smoke and mist.",
+   "quote": "Japanese 1st battle div. loses sight of the Russian main group in the battle, due to the smoke and mist.",
+   "at": {
+    "j1": [
+     50,
+     20,
+     45
+    ]
+   },
+   "state": {
+    "rm": "hidden"
+   }
+  },
+  {
+   "title": "The 2nd division finds the main group",
+   "when": "17:00",
+   "text": "The Japanese 2nd division found the Russian main group close to where the 3rd Squadron, the 5th and 6th divisions, was attacking the Russian auxiliaries protected by cruisers.",
+   "quote": "Japanese 2nd battle div. finds the Russian main group close to where the Japanese 3rd Squadron (5th and 6th battle divs.) was attacking the Russian auxiliaries protected by cruisers.",
+   "at": {
+    "j2": [
+     66,
+     36,
+     270
+    ],
+    "j5": [
+     36,
+     52,
+     90
+    ]
+   },
+   "state": {
+    "rm": "shown"
+   },
+   "hits": [
+    [
+     "j5",
+     "ra"
     ]
    ]
   },
@@ -384,10 +448,10 @@
    ]
   },
   {
-   "title": "The Russian remnant is surrounded and surrenders",
-   "when": "28 May, about 10:30",
-   "text": "Tōgō's battleships surrounded Nebogatov's remaining squadron, the 1st division approaching from the north. Nebogatov signalled surrender at 10:34, and Tōgō accepted it at 10:45.",
-   "quote": "Tōgō's battleships proceeded to surround Nebogatov's remaining squadron south of the island of Takeshima and commenced main battery fire at 12,000 meters.",
+   "title": "The Russian remnant is sighted and surrounded",
+   "when": "28 May, from 05:23",
+   "text": "The remaining Russian ships were sighted heading north-east. Tōgō's battleships moved to surround Nebogatov's remaining squadron south of the island of Takeshima, the 1st division approaching from the north.",
+   "quote": "At 05:23 on 28 May, what remained of the Russian fleet was sighted heading northeast.",
    "at": {
     "j1": [
      86,
@@ -410,17 +474,31 @@
      45
     ]
    },
-   "hits": [
-    [
-     "j1",
-     "rn"
-    ]
-   ],
    "state": {
     "rm": "gone",
     "rl": "gone",
     "ra": "gone",
     "jd": "gone"
+   }
+  },
+  {
+   "title": "Nebogatov surrenders",
+   "when": "About 10:30 to 10:45",
+   "text": "The Japanese battleships opened main battery fire at 12,000 metres. Nebogatov signalled surrender at 10:34, and Tōgō accepted it at 10:45 once the Russian ships had stopped.",
+   "quote": "Nebogatov ordered the four battleships remaining under his command to surrender.",
+   "hits": [
+    [
+     "j1",
+     "rn"
+    ],
+    [
+     "j2",
+     "rn",
+     0.2
+    ]
+   ],
+   "state": {
+    "rn": "destroyed"
    }
   }
  ]

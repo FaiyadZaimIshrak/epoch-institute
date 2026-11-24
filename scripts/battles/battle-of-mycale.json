@@ -255,8 +255,27 @@
    ]
   },
   {
-   "title": "The right comes up and breaks the shield wall",
-   "text": "The other Greek wing, under heavy arrow fire, chose to fight at close quarters and broke the wall by shoving. Tigranes and Mardontes died in the fighting.",
+   "title": "The Greek right comes up under arrow fire",
+   "text": "The Greek right, under heavy arrow fire, decided to fight at close quarters. The Persians kept their shield wall unbroken and held their position.",
+   "quote": "The Greek right, under heavy arrow fire, decided to fight in close quarters.",
+   "at": {
+    "right": [
+     44,
+     26,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "wall",
+     "right",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "The right breaks the shield wall",
+   "text": "The contingents of the right encouraged each other, saying the victory should belong to them and not to the Spartans, and broke through the wall by shoving. Tigranes and Mardontes died in the fighting.",
    "quote": "They increased their efforts, and managed to break through the wall by shoving.",
    "at": {
     "right": [
@@ -284,7 +303,7 @@
   },
   {
    "title": "The Persians flee to their camp",
-   "text": "The Persians broke their lines and escaped to their camp. The Greek soldiers followed them in, and most of the Persian troops fled from the camp. The ethnic Persians grouped together and fought those who entered.",
+   "text": "The Persians fought back at first, then broke their lines and escaped to their camp, pursued by the Greek right.",
    "quote": "The Persians fought back initially, but then broke their lines and escaped to their camp.",
    "at": {
     "wall": [
@@ -307,7 +326,30 @@
    "hits": [
     [
      "right",
+     "wall"
+    ]
+   ]
+  },
+  {
+   "title": "The right follows them into the camp",
+   "text": "The soldiers of the right wing followed the Persians into the camp. The ethnic Persian troops grouped together and fought the Greeks who entered.",
+   "quote": "The soldiers of the right wing followed them into the camp",
+   "at": {
+    "right": [
+     72,
+     43,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "right",
      "camp"
+    ],
+    [
+     "wall",
+     "right",
+     0.25
     ]
    ]
   },

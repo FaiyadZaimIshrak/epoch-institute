@@ -303,8 +303,44 @@
    ]
   },
   {
-   "title": "The Persian cavalry is driven back and breaks",
-   "text": "The Macedonian cavalry and the light infantry among them forced the Persian cavalry back, first on the left where Alexander was fighting. Then the centre broke and the Persian cavalry on both wings fled.",
+   "title": "The Persian left is forced back where Alexander fights",
+   "text": "The Macedonian cavalry and the light infantry interspersed with them forced back the Persian cavalry. This began on the Persian left flank, where Alexander was fighting.",
+   "quote": "the Macedonian cavalry and the light infantry which was interspersed with them forced back the Persian cavalry. This began on the Persian left flank where Alexander was fighting.",
+   "at": {
+    "right": [
+     58,
+     50,
+     90
+    ],
+    "amyn": [
+     57,
+     40,
+     90
+    ],
+    "pleft": [
+     66,
+     52,
+     270
+    ]
+   },
+   "how": {
+    "pleft": "retreat"
+   },
+   "hits": [
+    [
+     "right",
+     "pleft"
+    ],
+    [
+     "amyn",
+     "pleft",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The Persian centre breaks and both wings flee",
+   "text": "Then the centre was broken and the Persian cavalry on both wings fled, leaving the Greek mercenaries at their first position.",
    "quote": "Then the centre was broken and the Persian cavalry on both wings fled.",
    "at": {
     "right": [

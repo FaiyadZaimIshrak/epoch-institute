@@ -176,6 +176,16 @@
    "quote": "Hamza approached and called on Ubayda ibn al-Harith and Ali ibn Abi Talib to join him"
   },
   {
+   "id": "qaswad",
+   "side": "q",
+   "k": "infantry",
+   "name": "Meccan champion al-Aswad",
+   "short": "al-Aswad",
+   "leader": "al-Aswad ibn Abd al-Asad",
+   "w": 4,
+   "quote": "al-Aswad ibn Abd al-Asad, one of the men from Abu Jahl's clan, the Banu Makhzum"
+  },
+  {
    "id": "quray",
    "side": "q",
    "k": "infantry",
@@ -220,8 +230,34 @@
    }
   },
   {
-   "title": "Duels before the lines meet",
-   "text": "Men came out from each side to fight singly. Hamza, Ubayda and Ali met three Meccans who came out of the Quraysh ranks. Ali and Hamza each killed an opponent quickly.",
+   "title": "Al-Aswad challenges for the well",
+   "text": "Al-Aswad, a man of Abu Jahl's clan, swore to drink from the Muslims' well or destroy it or die for it. Hamza came out and fought him. Hamza struck his leg and then dealt a second blow that killed him.",
+   "quote": "In response to his cries, Hamza ibn Abd al-Muttalib, one of Muhammad's uncles, came out and they began fighting in a duel.",
+   "at": {
+    "mduel": [
+     78,
+     32,
+     180
+    ],
+    "qaswad": [
+     78,
+     39,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "mduel",
+     "qaswad"
+    ]
+   ],
+   "state": {
+    "qaswad": "destroyed"
+   }
+  },
+  {
+   "title": "Three Meccans challenge and are answered",
+   "text": "Utba, his brother Shayba and his son al-Walid came out of the Meccan ranks. Hamza, Ubayda and Ali went out to meet them. Ali killed al-Walid and Hamza killed Shayba, while Ubayda was seriously wounded.",
    "quote": "The first two duels between Ali and al-Walid and Hamza and Shayba were quick with both managing to kill their opponents swiftly.",
    "at": {
     "mduel": [
@@ -241,6 +277,21 @@
      "qduel"
     ]
    ]
+  },
+  {
+   "title": "Ubayda is carried back to the Muslim lines",
+   "text": "Hamza found Ubayda seriously wounded after the fight between Ali and al-Walid. Ali and Hamza then carried him back into the Muslim lines.",
+   "quote": "Ali and Hamza then carried Ubayda back into the Muslim lines.",
+   "at": {
+    "mduel": [
+     64,
+     26,
+     180
+    ]
+   },
+   "how": {
+    "mduel": "retreat"
+   }
   },
   {
    "title": "The Meccans charge",

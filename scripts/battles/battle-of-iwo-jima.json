@@ -290,7 +290,7 @@
   {
    "title": "The Marines land on the southeastern coast",
    "when": "19 February 1945",
-   "text": "The 5th Marine Division landed in the southern sector and the 4th in the northern. The Japanese let the beach fill for just over an hour before they opened fire from their fortified positions.",
+   "text": "The first wave of Marines landed on the southeastern beaches, the 5th Marine Division in the southern sector and the 4th in the northern. The beach soon became congested with men and materiel on the loose volcanic ash.",
    "quote": "the first wave of Marines landed on the beaches of the southeastern coast of Iwo Jima",
    "at": {
     "fleet": [
@@ -324,6 +324,22 @@
      90
     ]
    }
+  },
+  {
+   "title": "The Japanese open fire on the crowded beach",
+   "text": "The Japanese held their fire for just over an hour while the Americans crowded the beach, then opened fire from their fortified positions on the landing force.",
+   "quote": "After allowing the Americans to concentrate men and materiel on the beach for just over an hour, throughout which they maintained cohesive fire discipline, the Japanese opened fire.",
+   "hits": [
+    [
+     "jsouth",
+     "d5"
+    ],
+    [
+     "jnorth",
+     "d4",
+     0.2
+    ]
+   ]
   },
   {
    "title": "The 28th Marines cross the island; the 25th hit the Quarry",
@@ -425,6 +441,25 @@
    "state": {
     "inouye": "gone"
    }
+  },
+  {
+   "title": "The 5th Marine Division faces the northern gorge",
+   "when": "21 to 24 March 1945",
+   "text": "The 5th Marine Division still faced the main stronghold in a gorge at the northwestern end of the island. On 21 March the Marines destroyed the command post there with explosives, and on 24 March they sealed the remaining caves at the northern tip.",
+   "quote": "the 5th Marine Division still faced Kuribayashi's main stronghold, located in a gorge 640 m (700 yd) long at the northwestern end of the island. On 21 March, the Marines destroyed the command post in the gorge with four tons of explosives",
+   "at": {
+    "d5": [
+     55,
+     17,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "d5",
+     "jnorth"
+    ]
+   ]
   },
   {
    "title": "The last Japanese counterattack",

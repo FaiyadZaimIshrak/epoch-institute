@@ -14,7 +14,7 @@
    }
   ]
  },
- "note": "This plan shows the whole operation, not a single field: the formations are corps, groups and divisions, drawn as a schematic of a front about 40 miles long. The Eighth Army stood in the east and faced west; the coast lay to the north and the Qattara Depression to the south. The minefields, the Devil's gardens and the successive lines are not drawn. The accounts do not give an exact position for each division inside its corps, so the corps are drawn as single blocks, the northern one standing for the four infantry divisions of XXX Corps. The Kidney feature and Tel el Aqqaqir are placed from their stated distances from each other, and Point 29 near the coast, only roughly. The paths of the moves are drawn straight, and where the accounts say a move was repulsed or left positions unchanged the block is drawn at its furthest point. The Axis infantry line stands for the German and Italian infantry alternating along the front, with the Folgore division drawn apart because the accounts name it in the south. Ariete is counted in the southern armoured group, of which the accounts say one third went north.",
+ "note": "This plan shows the whole operation, not a single field: the formations are corps, groups and divisions, drawn as a schematic of a front about 40 miles long. The Eighth Army stood in the east and faced west; the coast lay to the north and the Qattara Depression to the south. The minefields, the Devil's gardens and the successive lines are not drawn. The accounts do not give an exact position for each division inside its corps, so the corps are drawn as single blocks, the northern one standing for the four infantry divisions of XXX Corps. The Kidney feature, Tel el Aqqaqir, Woodcock and Snipe are placed from their stated distances from each other, the 7th Motor Brigade's two battalions are drawn as one block, and Point 29 near the coast, only roughly. The paths of the moves are drawn straight, and where the accounts say a move was repulsed or left positions unchanged the block is drawn at its furthest point. The Axis infantry line stands for the German and Italian infantry alternating along the front, with the Folgore division drawn apart because the accounts name it in the south. Ariete is counted in the southern armoured group, of which the accounts say one third went north.",
  "terrain": [
   {
    "k": "sea",
@@ -147,6 +147,32 @@
    ],
    "quote": "the Australians were attacking Point 29",
    "note": "The accounts put it south-west of Tel el Eisa near the coast; its place here is rough."
+  },
+  {
+   "k": "point",
+   "name": "Woodcock",
+   "at": [
+    60.3,
+    32.3
+   ],
+   "lab": [
+    56,
+    30
+   ],
+   "quote": "A mile north-west of the feature was Outpost Woodcock and roughly the same distance south-west lay Outpost Snipe."
+  },
+  {
+   "k": "point",
+   "name": "Snipe",
+   "at": [
+    60.3,
+    35.7
+   ],
+   "lab": [
+    56,
+    38.5
+   ],
+   "quote": "A mile north-west of the feature was Outpost Woodcock and roughly the same distance south-west lay Outpost Snipe."
   }
  ],
  "sides": [
@@ -271,6 +297,15 @@
    "short": "Trieste",
    "w": 8,
    "quote": "in reserve close to the coast"
+  },
+  {
+   "id": "m7",
+   "side": "b",
+   "k": "infantry",
+   "name": "7th Motor Brigade battalions",
+   "short": "7th Motor",
+   "w": 6,
+   "quote": "An attack was planned on these areas using two battalions from 7th Motor Brigade."
   }
  ],
  "phases": [
@@ -361,9 +396,9 @@
    ]
   },
   {
-   "title": "Axis tanks counter-attack and the Australians strike north",
-   "when": "24 to 26 October 1942",
-   "text": "At dusk on 24 October tanks of the northern group advanced from the Kidney feature against the 1st Armoured Division. Over 100 tanks fought and half were destroyed by dark, with neither position altered. The Australians attacked Point 29 at midnight on 25 October.",
+   "title": "Axis tanks counter-attack from the Kidney feature",
+   "when": "24 October 1942, dusk",
+   "text": "At dusk tanks of the 15th Panzer and Littorio Divisions advanced from the Kidney feature against the 1st Armoured Division. Over 100 tanks fought and half were destroyed by dark, with neither position altered.",
    "quote": "Over 100 tanks were involved and half were destroyed by dark; neither position was altered.",
    "at": {
     "narm": [
@@ -375,7 +410,21 @@
      42,
      32,
      90
-    ],
+    ]
+   },
+   "hits": [
+    [
+     "narm",
+     "xc"
+    ]
+   ]
+  },
+  {
+   "title": "The Australians attack Point 29",
+   "when": "25 October 1942, midnight",
+   "text": "Montgomery turned XXX Corps north towards the coast with the 9th Australian Division. The 26th Australian Brigade attacked Point 29 at midnight with artillery and 30 tanks, and took the position and 240 prisoners.",
+   "quote": "The 26th Australian Brigade attacked at midnight, supported by artillery and 30 tanks of the 40th Royal Tank Regiment.",
+   "at": {
     "aus": [
      47,
      7,
@@ -384,12 +433,27 @@
    },
    "hits": [
     [
-     "narm",
-     "xc"
-    ],
-    [
      "aus",
      "axinf"
+    ]
+   ]
+  },
+  {
+   "title": "Rommel counter-attacks at Point 29",
+   "when": "26 October 1942, 15:00",
+   "text": "Rommel, convinced that the main assault would come in the north, ordered the 15th Panzer and 164th Light Divisions, with part of the Italian XX Corps, to retake Point 29. Under constant artillery and air attack the counter-attack came to nothing.",
+   "quote": "He ordered a counter-attack against it by the 15th Panzer Division and the 164th Light Division, with part of the Italian XX Corps to begin at 15:00",
+   "at": {
+    "narm": [
+     62,
+     13,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "narm",
+     "aus"
     ]
    ]
   },
@@ -410,6 +474,57 @@
      270
     ]
    }
+  },
+  {
+   "title": "A night attack on Woodcock and Snipe",
+   "when": "26 October 1942, 23:00",
+   "text": "The 2nd Battalion, The Rifle Brigade attacked Snipe and the 2nd Battalion, King's Royal Rifle Corps attacked Woodcock. Both had difficulty finding their way in the dark and dust: the KRRC dug in short of its objective, the Rifle Brigade where it judged Snipe lay.",
+   "quote": "At 23:00 on 26 October 2 Battalion, The Rifle Brigade would attack Snipe and 2nd Battalion King's Royal Rifle Corps (KRRC) would attack Woodcock.",
+   "at": {
+    "m7": [
+     56,
+     34,
+     90
+    ]
+   }
+  },
+  {
+   "title": "Rommel's attacks at Snipe and Point 29 fail",
+   "when": "27 October 1942",
+   "text": "At 16:00 German and Italian tanks attacked the Rifle Brigade at Snipe, which held its ground and destroyed 22 German and 10 Italian tanks, and was withdrawn that evening. The 90th Light Division's attack on Point 29 was broken up by artillery and bombing before it reached the Australians.",
+   "quote": "At 16:00, Rommel launched his major attack. German and Italian tanks moved forward against the Rifle Brigade",
+   "at": {
+    "l90": [
+     60,
+     9,
+     270
+    ],
+    "narm": [
+     68,
+     32,
+     270
+    ],
+    "sarm": [
+     63,
+     40,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "sarm",
+     "m7"
+    ],
+    [
+     "narm",
+     "m7",
+     0.2
+    ],
+    [
+     "l90",
+     "aus"
+    ]
+   ]
   },
   {
    "title": "Operation Supercharge and the charge of the 9th Armoured",
@@ -437,7 +552,10 @@
      "a9",
      "axinf"
     ]
-   ]
+   ],
+   "state": {
+    "m7": "gone"
+   }
   },
   {
    "title": "The Axis tanks counter-attack and fail",

@@ -283,6 +283,18 @@
    }
   },
   {
+   "title": "The relief force arrives and camps on a hill",
+   "text": "The Gallic relief force reached the field and camped on a hill one mile from the Roman works. The next day the Gauls camped nearer the town.",
+   "quote": "Meanwhile, the Gallic relief force arrived and encamped on a hill one mile from the Roman fortification.",
+   "at": {
+    "relief": [
+     92,
+     35,
+     270
+    ]
+   }
+  },
+  {
    "title": "The relief force and the besieged attack together",
    "text": "The relief force arrived and attacked the outer line while the besieged Gauls attacked the inner line at the same moment. The combined attack failed.",
    "quote": "They then attacked the outer Roman fortification. The besieged Gauls simultaneously attacked the inner Roman fortification.",
@@ -310,8 +322,35 @@
    ]
   },
   {
-   "title": "A night attack fails and the Gauls withdraw",
-   "text": "The Gauls attacked again at night. The relief force withdrew at first light for fear of being surrounded, and the besieged, delayed by filling the Roman trenches, returned to the town.",
+   "title": "The Gauls attack again at night",
+   "text": "The next day the Gauls attacked again at night, the relief force against the outer line and the besieged against the inner one.",
+   "quote": "The next day the Gauls attacked at night.",
+   "at": {
+    "relief": [
+     87,
+     35,
+     270
+    ],
+    "besieged": [
+     46,
+     35,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "relief",
+     "router"
+    ],
+    [
+     "besieged",
+     "rinner"
+    ]
+   ]
+  },
+  {
+   "title": "The Gauls withdraw at first light",
+   "text": "At first light the relief force withdrew, fearing a Roman sally that would surround it. The besieged, delayed by having to fill trenches dug by the Romans, went back into the town.",
    "quote": "At the first light of day, the Gallic relief forces, fearing being surrounded by a Roman sally, withdrew.",
    "at": {
     "relief": [
@@ -328,13 +367,7 @@
    "how": {
     "relief": "retreat",
     "besieged": "retreat"
-   },
-   "hits": [
-    [
-     "relief",
-     "router"
-    ]
-   ]
+   }
   },
   {
    "title": "Sixty thousand Gauls attack the weak camp",
@@ -395,6 +428,23 @@
    ]
   },
   {
+   "title": "Caesar marches to Labienus and sends the cavalry round",
+   "text": "Caesar marched to help Labienus with four cohorts. He ordered part of the cavalry to follow him and part to leave the outer line and attack the relief force from the rear.",
+   "quote": "Caesar then marched to the assistance of Labienus, drafting four cohorts and ordering part of the cavalry to follow him and part of it to leave the outer fortification and attack the Gallic relief force from the rear.",
+   "at": {
+    "caesar": [
+     71,
+     24,
+     0
+    ],
+    "rcav": [
+     84,
+     44,
+     0
+    ]
+   }
+  },
+  {
    "title": "Roman cavalry takes the Gauls in the rear",
    "text": "Part of the Roman cavalry left the outer line and appeared at the rear of the Gauls. The Roman troops advanced rapidly, the Gauls fled, and the cavalry intercepted them. The besieged Gauls were pulled back from the fortification.",
    "quote": "The Roman cavalry was suddenly seen at the rear of the Gauls, the Roman troops advanced rapidly and the Gauls fled.",
@@ -429,6 +479,32 @@
     ],
     [
      "caesar",
+     "vercass"
+    ]
+   ]
+  },
+  {
+   "title": "The Roman cavalry pursues at midnight",
+   "text": "At midnight the Roman cavalry was sent after the Gauls who had fled. Many were killed and many escaped to the lands they had come from.",
+   "quote": "At midnight the Roman cavalry was sent to pursue them.",
+   "at": {
+    "rcav": [
+     86,
+     17,
+     90
+    ],
+    "vercass": [
+     96,
+     19,
+     90
+    ]
+   },
+   "how": {
+    "vercass": "rout"
+   },
+   "hits": [
+    [
+     "rcav",
      "vercass"
     ]
    ]

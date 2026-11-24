@@ -5,7 +5,7 @@
  "field": {
   "north": null
  },
- "note": "The accounts do not give compass directions, so the armies are drawn facing each other with Caesar on the left of the plan; his right wing is therefore at the bottom and Scipio's left wing faces it. The accounts do not say where the town, the marsh or the Optimate camp lay on the field, so they are placed on Caesar's side of the plan and the distances are only a guide. The five cohorts of the fifth legion are drawn behind Caesar's left flank; the other half of the legion, kept behind the other flank, and Caesar's left-flank archers and cavalry are not drawn. The cavalry's destruction of the fortified camp is not drawn. A tradition cited from Plutarch, that Caesar had an epileptic seizure before the lines advanced, is not drawn.",
+ "note": "The accounts do not give compass directions, so the armies are drawn facing each other with Caesar on the left of the plan; his right wing is therefore at the bottom and Scipio's left wing faces it. The accounts do not say where the town, the marsh or the Optimate camp lay on the field, so they are placed on Caesar's side of the plan and the distances are only a guide. The five cohorts of the fifth legion are drawn behind Caesar's left flank; the other half of the legion, kept behind the other flank, and Caesar's left-flank archers and cavalry are not drawn. The cavalry's destruction of the fortified camp is not drawn. A tradition cited from Plutarch, that Caesar had an epileptic seizure before the lines advanced, is not drawn. Juba's allied troops are drawn beside Afranius' camp; the accounts do not say where they stood. The garrison of Thapsus is drawn at the town.",
  "terrain": [
   {
    "k": "town",
@@ -173,6 +173,24 @@
    "short": "Camp",
    "w": 6,
    "quote": "attacked and overran Afranius' camp"
+  },
+  {
+   "id": "gar",
+   "side": "s",
+   "k": "infantry",
+   "name": "Garrison of Thapsus",
+   "short": "Garrison",
+   "w": 5,
+   "quote": "the garrison of Thapsus sallied out, attacking Caesar's siege works"
+  },
+  {
+   "id": "juba",
+   "side": "s",
+   "k": "infantry",
+   "name": "Juba's allied troops",
+   "short": "Juba",
+   "w": 6,
+   "quote": "Juba's allied troops abandoned the site and the battle was decided."
   }
  ],
  "phases": [
@@ -346,9 +364,60 @@
    ]
   },
   {
-   "title": "Scipio's left breaks, then the rest",
-   "text": "After the elephants were lost, Scipio began to lose ground. His left broke first and the rest of his army followed, with Caesar's lines pressing after it.",
-   "quote": "After the loss of the elephants, Metellus Scipio started to lose ground, his left broke first the rest followed.",
+   "title": "The elephants crash into their own right flank",
+   "text": "The elephants that Caesar's fifth legion had turned back ran towards their own lines and crashed into Scipio's right flank.",
+   "quote": "They crashed into their own right flank.",
+   "at": {
+    "eup": [
+     52,
+     7,
+     90
+    ]
+   }
+  },
+  {
+   "title": "Scipio's left breaks",
+   "text": "After the elephants were lost, Scipio began to lose ground. His left broke first, on the wing that faced Caesar's right.",
+   "quote": "Metellus Scipio started to lose ground, his left broke first",
+   "at": {
+    "cflank": [
+     46,
+     54,
+     90
+    ],
+    "cright": [
+     46,
+     44,
+     90
+    ],
+    "sleft": [
+     68,
+     54,
+     270
+    ]
+   },
+   "how": {
+    "sleft": "rout"
+   },
+   "state": {
+    "sleft": "routed"
+   },
+   "hits": [
+    [
+     "cflank",
+     "sleft"
+    ],
+    [
+     "cright",
+     "sleft",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The rest of Scipio's army follows",
+   "text": "The rest of Scipio's army followed his left in breaking. The legions of the centre and the right flank gave way before Caesar's advancing lines.",
+   "quote": "his left broke first the rest followed.",
    "at": {
     "cleft": [
      46,
@@ -359,21 +428,6 @@
      46,
      30,
      90
-    ],
-    "cright": [
-     46,
-     44,
-     90
-    ],
-    "cflank": [
-     46,
-     54,
-     90
-    ],
-    "sleft": [
-     68,
-     54,
-     270
     ],
     "scentre": [
      68,
@@ -387,20 +441,14 @@
     ]
    },
    "how": {
-    "sleft": "rout",
     "scentre": "rout",
     "sright": "rout"
    },
    "state": {
-    "sleft": "routed",
     "scentre": "routed",
     "sright": "routed"
    },
    "hits": [
-    [
-     "cflank",
-     "sleft"
-    ],
     [
      "cright",
      "scentre",
@@ -413,9 +461,52 @@
    ]
   },
   {
-   "title": "The siege legions overrun Afranius' camp",
-   "text": "The two legions left at the siege marched south to the troops fortified opposite Afranius and Juba's camp. Together they attacked and overran Afranius' camp.",
-   "quote": "Having done so these legionaries marched south to reinforce the troops fortified opposite Afranius and Juba's camp and together they attacked and overran Afranius' camp.",
+   "title": "The garrison of Thapsus sallies out",
+   "text": "During the battle the garrison of Thapsus sallied out and attacked Caesar's siege works. The two legions he had left to continue the siege forced it back.",
+   "quote": "the garrison of Thapsus sallied out, attacking Caesar's siege works",
+   "at": {
+    "gar": [
+     14,
+     22,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "gar",
+     "siege"
+    ],
+    [
+     "siege",
+     "gar",
+     0.3
+    ]
+   ]
+  },
+  {
+   "title": "The siege legions march south",
+   "text": "Having forced the garrison back, the two legions marched south to reinforce the troops fortified opposite Afranius and Juba's camp.",
+   "quote": "these legionaries marched south to reinforce the troops fortified opposite Afranius and Juba's camp",
+   "at": {
+    "siege": [
+     25,
+     41,
+     180
+    ],
+    "juba": [
+     8,
+     50,
+     270
+    ]
+   },
+   "state": {
+    "gar": "gone"
+   }
+  },
+  {
+   "title": "Afranius' camp is overrun",
+   "text": "Together with the troops fortified there, the legions attacked and overran Afranius' camp. They then prepared to attack the Numidians.",
+   "quote": "and together they attacked and overran Afranius' camp.",
    "at": {
     "siege": [
      22,
@@ -432,6 +523,24 @@
      "afcamp"
     ]
    ]
+  },
+  {
+   "title": "Juba's allied troops leave the site",
+   "text": "Before the legions could attack the Numidians, Juba's allied troops abandoned the site, and with that the battle was decided.",
+   "quote": "Juba's allied troops abandoned the site and the battle was decided.",
+   "at": {
+    "juba": [
+     6,
+     40,
+     270
+    ]
+   },
+   "how": {
+    "juba": "retreat"
+   },
+   "state": {
+    "juba": "gone"
+   }
   }
  ]
 }

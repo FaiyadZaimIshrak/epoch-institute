@@ -3,7 +3,16 @@
  "name": "Battle of Sagrajas",
  "article": "battles2/wp/battle-of-sagrajas",
  "field": {
-  "north": null
+  "north": null,
+  "edges": [
+   {
+    "name": "← to Badajoz",
+    "at": [
+     5,
+     52
+    ]
+   }
+  ]
  },
  "note": "The accounts name the commanders of each division but give no compass directions and no exact lines, so the two armies are drawn facing each other across the river with the divisions in the order the accounts list them. Which side of the Christian army each division stood on, where the Christian camp lay and the nearby hill are placed on their side of the field; the accounts do not say exactly where they lay. The accounts also describe the Muslim vanguard both as ten thousand Almoravid cavalry assisting Al-Mu'tamid and as a separate Almoravid force under Dawud ibn Aisha; it is drawn as one block. European accounts call the first phase of the fighting the Battle of Rueda and the second the Battle of Sacralias.",
  "terrain": [
@@ -243,6 +252,15 @@
    "short": "Camp",
    "w": 6,
    "quote": "He advanced with his reserve forces and attacked the Castilian camp"
+  },
+  {
+   "id": "fug",
+   "side": "m",
+   "k": "cavalry",
+   "name": "Andalusian leaders who fled",
+   "short": "Fugitives",
+   "w": 5,
+   "quote": "Some Andalusian leaders fled to the city of Badajoz upon recognizing their imminent defeat"
   }
  ],
  "phases": [
@@ -334,15 +352,43 @@
    ]
   },
   {
-   "title": "Alfonso attacks and Sir's battalion is sent",
-   "text": "Alfonso then attacked the Almoravids with Al-Mu'tamid. Dawud ibn Aisha sent word to Yusuf ibn Tashfin, who dispatched a battalion that broke into the Castilian army and linked up with Al-Mu'tamid's forces.",
-   "quote": "This battalion successfully penetrated the heart of the Castilian army, linking up with Al-Mu'tamid's forces",
+   "title": "The Andalusian front line gives ground",
+   "text": "The Castilian assault and its better weapons forced Al-Mu'tamid's front line back. Some Andalusian leaders fled to Badajoz, but Al-Mu'tamid and the knights of Seville held their ground, though surrounded.",
+   "quote": "Some Andalusian leaders fled to the city of Badajoz upon recognizing their imminent defeat. However, Al-Mu'tamid and the knights of Seville managed to maintain their positions despite being encircled by thousands of Castilian troops.",
+   "at": {
+    "fug": [
+     12,
+     45,
+     270
+    ]
+   },
+   "how": {
+    "fug": "retreat"
+   }
+  },
+  {
+   "title": "Alfonso attacks the Almoravids with Al-Mu'tamid",
+   "text": "Alfonso then turned on the Almoravid horsemen supporting Al-Mu'tamid, the contingent of Dawud ibn Aisha. The pressure on Dawud and his knights grew.",
+   "quote": "Alfonso decided to attack the Almoravid forces supporting Al-Mu'tamid, specifically targeting the contingent led by Dawud ibn Aisha.",
    "at": {
     "alf": [
      50,
      29,
      180
-    ],
+    ]
+   },
+   "hits": [
+    [
+     "alf",
+     "vang"
+    ]
+   ]
+  },
+  {
+   "title": "Sir's battalion breaks into the Castilian army",
+   "text": "Dawud ibn Aisha sent word to Yusuf ibn Tashfin, who dispatched a battalion under Sir ibn Abi Bakr. It broke into the heart of the Castilian army and linked up with Al-Mu'tamid's forces.",
+   "quote": "This battalion successfully penetrated the heart of the Castilian army, linking up with Al-Mu'tamid's forces",
+   "at": {
     "sir": [
      34,
      30,
@@ -350,10 +396,6 @@
     ]
    },
    "hits": [
-    [
-     "alf",
-     "vang"
-    ],
     [
      "sir",
      "alf",
@@ -409,15 +451,25 @@
    ]
   },
   {
-   "title": "Alfonso turns back and the Muslims counter-attack",
-   "text": "Alfonso gave up the pursuit and withdrew to save his camp. Al-Mu'tamid ordered an attack, and Sir ibn Abi Bakr's men charged Alfonso's forces as they fell back.",
+   "title": "Alfonso halts his pursuit and falls back",
+   "text": "Alfonso learned of the chaos in his camp and gave up the chase of Al-Mu'tamid, withdrawing to save his stronghold.",
    "quote": "Alfonso halted his pursuit of Al-Mu'tamid and retreated to save his stronghold from disaster",
    "at": {
     "alf": [
      68,
      28,
      0
-    ],
+    ]
+   },
+   "how": {
+    "alf": "retreat"
+   }
+  },
+  {
+   "title": "Al-Mu'tamid orders an attack and Sir charges",
+   "text": "Al-Mu'tamid ordered his companions to attack as Alfonso fell back, and Sir ibn Abi Bakr and his men charged. The soldiers who had fled to Badajoz came back into the fight.",
+   "quote": "Commander Sir ibn Abi Bakr and his men charged at Alfonso's forces, increasing the pressure and continuing the rout.",
+   "at": {
     "vang": [
      42,
      38,
@@ -427,10 +479,12 @@
      56,
      31,
      0
+    ],
+    "fug": [
+     28,
+     40,
+     0
     ]
-   },
-   "how": {
-    "alf": "retreat"
    },
    "hits": [
     [
@@ -441,30 +495,24 @@
     [
      "sir",
      "alf"
+    ],
+    [
+     "fug",
+     "alf",
+     -0.2
     ]
    ]
   },
   {
-   "title": "The Takrur cavalry charge and Alfonso leaves the field",
-   "text": "Yusuf ibn Tashfin ordered 4,000 black cavalry from Takrur to charge. Their charge broke the Christian cavalry, and Alfonso retreated with a small contingent to a nearby hill and escaped after dark.",
+   "title": "The Takrur cavalry charge",
+   "text": "Yusuf ibn Tashfin ordered 4,000 black cavalry from Takrur to charge. Their charge destroyed the Christian cavalry.",
    "quote": "The turning point occurred when Ibn Tashfin ordered 4,000 black cavalry from Takrur to charge into the fray.",
    "at": {
     "tak": [
-     68,
-     32,
+     63,
+     34,
      0
-    ],
-    "alf": [
-     66,
-     9,
-     180
     ]
-   },
-   "how": {
-    "alf": "rout"
-   },
-   "state": {
-    "alf": "routed"
    },
    "hits": [
     [
@@ -477,6 +525,24 @@
      0.3
     ]
    ]
+  },
+  {
+   "title": "Alfonso retreats to a hill and escapes at night",
+   "text": "As the sun began to set, Alfonso retreated with a small contingent to a nearby hill and later escaped in the dark.",
+   "quote": "As the sun began to set and realizing defeat was imminent, Alfonso retreated with a small contingent to a nearby hill",
+   "at": {
+    "alf": [
+     66,
+     9,
+     180
+    ]
+   },
+   "how": {
+    "alf": "rout"
+   },
+   "state": {
+    "alf": "routed"
+   }
   }
  ]
 }

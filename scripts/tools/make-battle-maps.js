@@ -44,6 +44,7 @@ for (const f of fs.readdirSync(DIR).filter(x => x.endsWith('.json')).sort()) {
     phases: sc.phases.map(p => { const o = { title: p.title, text: p.text }; for (const k of ['when', 'at', 'how', 'state', 'hits']) if (p[k] && (Array.isArray(p[k]) ? p[k].length : typeof p[k] === 'string' || Object.keys(p[k]).length)) o[k] = p[k]; return o; }) };
   if (sc.note) data.note = sc.note;
   if (YEAR.get(sc.name) >= 1500) data.gun = 1;
+  if (YEAR.get(sc.name) != null) data.y = YEAR.get(sc.name);   // the battle's year: the player draws ships and foot as of their age
   const text = JSON.stringify(data), v = crypto.createHash('sha1').update(text).digest('hex').slice(0, 10);
   write(path.join(R, 'data', 'battles', slug + '.json'), text);
   out[sc.name] = [slug, v, sc.phases.map(p => [p.title, p.text])]; n++;

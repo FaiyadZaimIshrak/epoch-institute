@@ -255,6 +255,16 @@
    "leaderEntry": "george-armstrong-custer"
   },
   {
+   "id": "weir",
+   "side": "u",
+   "k": "cavalry",
+   "name": "Weir's D, M and K troops",
+   "short": "Weir",
+   "leader": "Capt. Weir",
+   "w": 5,
+   "quote": "D, M and K advanced a mile to what is today Weir Peaks or Weir Point, and dismounted."
+  },
+  {
    "id": "yates",
    "side": "u",
    "k": "cavalry",
@@ -421,6 +431,45 @@
      0
     ]
    }
+  },
+  {
+   "title": "Weir's troops advance to Weir Peaks",
+   "when": "Around 5:00 pm",
+   "text": "Captain Weir and Company D moved out to contact Custer, and troops D, M and K advanced a mile north to Weir Peaks and dismounted. From there Weir could see the size of the camps and warriors moving about in the distance.",
+   "quote": "D, M and K advanced a mile to what is today Weir Peaks or Weir Point, and dismounted.",
+   "at": {
+    "weir": [
+     52,
+     29,
+     0
+    ]
+   }
+  },
+  {
+   "title": "Weir's troops are attacked and fall back to Reno Hill",
+   "text": "The three troops on Weir Peaks were attacked by warriors, who increasingly came from the finished fight with Custer. On Reno's order they withdrew, and all seven companies fell back to Reno Hill.",
+   "quote": "The three troops (D, M, K) which had dismounted and remained at Weir Peaks (RCOI figure 9) were soon attacked by native hostiles",
+   "at": {
+    "weir": [
+     55,
+     43,
+     0
+    ],
+    "warriors": [
+     40,
+     27,
+     90
+    ]
+   },
+   "how": {
+    "weir": "retreat"
+   },
+   "hits": [
+    [
+     "warriors",
+     "weir"
+    ]
+   ]
   },
   {
    "title": "Yates' companies appear at the mouth of Medicine Tail Coulee",

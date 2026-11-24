@@ -14,7 +14,7 @@
    }
   ]
  },
- "note": "The Marathas blocked the Afghans' northward path and were themselves blocked from going south, so they are drawn to the north and the Afghans to the south. The Maratha left is then the east and the Afghan left the west. The accounts differ in places: Pasand Khan is placed both on the Afghan left wing and against the Maratha left, and which Rohillas fell back first is not clear, so the Rohillas of the Afghan right centre are shown. The kind of troops of Holkar and Sindhia and the route of the contingent that escaped are not given, and the positions of the cavalry under Vinchurkar and Gaikwad are placed by judgement. The line is drawn short; the accounts give the Maratha line as some 12 km across.",
+ "note": "The Marathas blocked the Afghans' northward path and were themselves blocked from going south, so they are drawn to the north and the Afghans to the south. The Maratha left is then the east and the Afghan left the west. The accounts differ in places: Pasand Khan is placed both on the Afghan left wing and against the Maratha left, and which Rohillas fell back first is not clear, so the Rohillas of the Afghan right centre are shown. The kind of troops of Holkar and Sindhia and the route of the contingent that escaped are not given, and the positions of the cavalry under Vinchurkar and Gaikwad are placed by judgement. The line is drawn short; the accounts give the Maratha line as some 12 km across. The 4,000 reserve troops sent to the Rohillas are drawn between the reserve and the Rohillas; the accounts do not say which way they came.",
  "terrain": [
   {
    "k": "road",
@@ -146,6 +146,15 @@
    "short": "Reserve",
    "w": 10,
    "quote": "He sent his bodyguards to call up his 15,000 reserve troops from his camp"
+  },
+  {
+   "id": "rres",
+   "side": "a",
+   "k": "guard",
+   "name": "Reserve sent to the Rohillas",
+   "short": "Reserve 2",
+   "w": 5,
+   "quote": "These extra troops, along with 4,000 of his reserve troops, went to support the broken ranks of the Rohillas on the right."
   }
  ],
  "phases": [
@@ -197,15 +206,22 @@
    }
   },
   {
-   "title": "The Gardis advance and the Rohillas fall back",
-   "text": "The Maratha left, under Ibrahim Khan, advanced its infantry against the Rohillas. Point-blank salvos sent the Rohillas reeling back to their lines, and the Gardi musketeers held the field for three hours.",
-   "quote": "The resulting carnage sent the Rohillas reeling back to their lines, leaving the battlefield in the hands of Ibrahim for the next three hours",
+   "title": "The Gardis advance",
+   "text": "The Maratha left, under Ibrahim Khan, advanced its infantry in formation against the Rohillas and Shah Pasand Khan. The first salvos from the Maratha artillery went over the Afghans' heads and did little damage.",
+   "quote": "who advanced his infantry in formation against the Rohillas and Shah Pasand Khan",
    "at": {
     "gardis": [
      76,
      27,
      180
-    ],
+    ]
+   }
+  },
+  {
+   "title": "The first Afghan attack breaks and the Rohillas fall back",
+   "text": "The first Afghan attack was broken by Maratha bowmen, pikemen and Gardi musketeers. Later salvos at point-blank range sent the Rohillas reeling back, and the Gardis held the field for three hours.",
+   "quote": "The resulting carnage sent the Rohillas reeling back to their lines, leaving the battlefield in the hands of Ibrahim for the next three hours",
+   "at": {
     "rohilla": [
      78,
      43,
@@ -241,20 +257,15 @@
    ]
   },
   {
-   "title": "Scindia attacks Najib and the Afghan reserve is called up",
+   "title": "Scindia attacks Najib",
    "when": "By noon",
-   "text": "The Marathas under Scindia attacked Najib, who fought a defensive action and kept them at bay. Meanwhile Ahmad Shah called up his 15,000 reserve troops from his camp.",
+   "text": "The Marathas under Scindia attacked Najib on the Afghan left. Najib fought a defensive action and kept Scindia's forces at bay, so that the Afghan left flank still held its own.",
    "quote": "The Marathas, under Scindia, attacked Najib. Najib successfully fought a defensive action, however, keeping Scindia's forces at bay.",
    "at": {
     "mright": [
      20,
      28,
      180
-    ],
-    "reserve": [
-     40,
-     52,
-     0
     ]
    },
    "hits": [
@@ -265,9 +276,34 @@
    ]
   },
   {
-   "title": "The Afghan reserves charge",
+   "title": "Ahmad Shah calls up his reserve",
+   "when": "By noon",
+   "text": "Ahmad Shah, who had watched the battle from his tent, sent his bodyguards to call up his 15,000 reserve troops from his camp. He arranged them as a column in front of his cavalry of musketeers.",
+   "quote": "He sent his bodyguards to call up his 15,000 reserve troops from his camp",
+   "at": {
+    "reserve": [
+     40,
+     52,
+     0
+    ]
+   }
+  },
+  {
+   "title": "Part of the reserve goes to the Rohillas",
+   "text": "By then the Afghan right was almost destroyed. Ahmad Shah sent 4,000 of his reserve troops to support the broken ranks of the Rohillas on the right.",
+   "quote": "went to support the broken ranks of the Rohillas on the right",
+   "at": {
+    "rres": [
+     58,
+     50,
+     0
+    ]
+   }
+  },
+  {
+   "title": "The rest of the reserve charges with Shah Wali",
    "when": "About 14:00",
-   "text": "Fresh reserves went to support Shah Wali against Bhau in the centre. Some 7,000 Maratha cavalry and infantry were killed before the hand-to-hand fighting began.",
+   "text": "The remaining 10,000 of the reserve were sent to the aid of Shah Wali against Bhau in the centre. Some 7,000 Maratha cavalry and infantry were killed before the hand-to-hand fighting began.",
    "quote": "Some 7,000 Maratha cavalry and infantry were killed before the hand-to-hand fighting began at around 14:00 hrs.",
    "at": {
     "reserve": [
@@ -289,19 +325,14 @@
    ]
   },
   {
-   "title": "The Gardis are encircled",
-   "text": "The Maratha cavalry guarding the Gardis broke its position and went out against the Rohillas. The Rohilla riflemen fired on it, then encircled the Gardis and outflanked the Maratha centre while Shah Wali pressed the front.",
-   "quote": "This gave the Rohillas the opportunity to encircle the Gardis and outflank the Maratha centre while Shah Wali pressed on attacking the front.",
+   "title": "The Maratha cavalry breaks its position",
+   "text": "The cavalry that Bhau had ordered to protect the Gardis broke its position and went all out on the Rohillas. The Rohilla riflemen fired accurately on it, as it carried only swords.",
+   "quote": "they broke their position and went all out on the Rohillas",
    "at": {
     "vinch": [
      90,
      29,
      180
-    ],
-    "rohilla": [
-     74,
-     37,
-     0
     ]
    },
    "hits": [
@@ -313,7 +344,21 @@
      "rohilla",
      "vinch",
      -0.2
-    ],
+    ]
+   ]
+  },
+  {
+   "title": "The Gardis are encircled",
+   "text": "The Rohillas then encircled the Gardis and outflanked the Maratha centre while Shah Wali pressed the front. The Gardis were left defenceless and fell one by one.",
+   "quote": "This gave the Rohillas the opportunity to encircle the Gardis and outflank the Maratha centre while Shah Wali pressed on attacking the front.",
+   "at": {
+    "rohilla": [
+     74,
+     37,
+     0
+    ]
+   },
+   "hits": [
     [
      "rohilla",
      "gardis"

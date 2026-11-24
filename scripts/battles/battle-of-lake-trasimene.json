@@ -358,23 +358,15 @@
    ]
   },
   {
-   "title": "The trapped Romans fight on and are beaten down",
-   "text": "Some Roman groups fought hard, especially in the centre, where the attacking Gauls suffered heavy casualties. After three hours the trapped Romans collapsed, and men who went into the lake were cut down or drowned.",
+   "title": "Some Roman groups fight hard, most of all in the centre",
+   "text": "Some of the clustered Roman groups put up a stiff fight, especially in the centre, where the attacking Gauls suffered heavy casualties. The fighting went on for three hours.",
    "quote": "Other groups of Romans put up a stiff fight, especially in the centre, where the attacking Gauls suffered heavy casualties before beating down the trapped Romans after three hours of heavy combat.",
    "at": {
-    "ccav": [
-     28,
-     50,
-     180
-    ],
     "rmain": [
      40,
      46,
      90
     ]
-   },
-   "state": {
-    "rmain": "destroyed"
    },
    "hits": [
     [
@@ -382,13 +374,34 @@
      "rmain"
     ],
     [
+     "cafr",
+     "rmain",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The trapped Romans collapse and some go into the lake",
+   "text": "After three hours the trapped part of the Roman army collapsed. Men who tried to swim the lake drowned, and others waded out until the water reached their necks, where Carthaginian cavalrymen swam their horses out to cut at them.",
+   "quote": "The trapped portion of the Roman army collapsed. Men attempted to swim across the lake and drowned; others waded out until the water was up to their necks and the Carthaginian cavalrymen swam their horses out to chop at their exposed heads.",
+   "at": {
+    "ccav": [
+     28,
+     50,
+     180
+    ]
+   },
+   "state": {
+    "rmain": "destroyed"
+   },
+   "hits": [
+    [
      "ccav",
      "rmain"
     ],
     [
-     "cafr",
-     "rmain",
-     0.2
+     "cgauls",
+     "rmain"
     ]
    ]
   },

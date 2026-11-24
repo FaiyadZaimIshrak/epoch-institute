@@ -14,7 +14,7 @@
    }
   ]
  },
- "note": "The accounts do not give compass directions or distances, so the forts, the city, the maguey field and every formation are placed by judgement on the sides the story needs. The accounts say the French columns joined and split into three; the plan draws two blocks, the zouaves and a second column. The accounts do not say who made up the second column or the Mexican force on the French left, which is not drawn.",
+ "note": "The accounts do not give compass directions or distances, so the forts, the city, the maguey field and every formation are placed by judgement on the sides the story needs. The accounts say the French columns joined and split into three; the plan draws the zouaves and a second column, and a third column where it reaches the east side. The accounts do not say who made up the second column or the Mexican force on the French left, which is not drawn.",
  "terrain": [
   {
    "k": "hill",
@@ -202,6 +202,15 @@
    "quote": "when another French column came to the support of the retreating troops"
   },
   {
+   "id": "fcol3",
+   "side": "f",
+   "k": "infantry",
+   "name": "Third French column",
+   "short": "3rd column",
+   "w": 8,
+   "quote": "The third French column which reached the east side just as the others were repulsed was also defeated."
+  },
+  {
    "id": "negrete",
    "side": "m",
    "k": "infantry",
@@ -324,14 +333,14 @@
    ]
   },
   {
-   "title": "The first ascent is turned back",
-   "text": "The column met two Mexican battalions halfway up, then turned towards the gap between the forts and came under fire from both. Berriozábal was sent to reinforce the hills, and the French fell back under attack from infantry and cavalry.",
-   "quote": "The ascending column now turned diagonally towards the right, as if going between the two forts, and the two forts now took advantage of the opportunity to fire upon the French troops.",
+   "title": "The French meet two Mexican battalions halfway up",
+   "text": "The zouaves climbed with little opposition and had gone halfway when two Mexican battalions met them, exchanged shots with the sharpshooters and returned to their position. Berriozábal was ordered to reinforce the two hills.",
+   "quote": "They had completed half of the ascent when they were met by two battalions of Mexican infantry, which after exchanging shots with French sharpshooters, returned to their position.",
    "at": {
     "zouaves": [
-     62,
-     30,
-     110
+     54,
+     32,
+     90
     ],
     "berri": [
      82,
@@ -343,15 +352,28 @@
     [
      "minf",
      "zouaves"
+    ]
+   ]
+  },
+  {
+   "title": "The column turns between the forts and is fired on",
+   "text": "The ascending column turned diagonally to the right, as if to go between the two forts, and both forts fired on the French troops. Mexican infantry under cover of the maguey field kept firing as well.",
+   "quote": "The ascending column now turned diagonally towards the right, as if going between the two forts, and the two forts now took advantage of the opportunity to fire upon the French troops.",
+   "at": {
+    "zouaves": [
+     62,
+     30,
+     110
+    ]
+   },
+   "hits": [
+    [
+     "minf",
+     "zouaves"
     ],
     [
      "negrete",
      "zouaves"
-    ],
-    [
-     "mcav",
-     "zouaves",
-     -0.3
     ]
    ]
   },
@@ -426,7 +448,7 @@
   },
   {
    "title": "The columns are repulsed",
-   "text": "The columns that went up from the north were routed. Diaz checked and drove away the French columns marching against the Mexican positions, and the third column, which reached the east side as the others were repulsed, was also defeated.",
+   "text": "The columns that went up from the north were routed. Diaz, with part of his brigade and two guns, checked and drove away the French columns marching against the Mexican positions.",
    "quote": "The two columns which attempted an assault on the hill from the north again were completely routed.",
    "at": {
     "zouaves": [
@@ -458,6 +480,24 @@
      "fcol2"
     ]
    ]
+  },
+  {
+   "title": "The third column is defeated on the east side",
+   "text": "The third French column reached the east side just as the other two were being repulsed, and it was also defeated there.",
+   "quote": "The third French column which reached the east side just as the others were repulsed was also defeated.",
+   "at": {
+    "fcol3": [
+     62,
+     10,
+     270
+    ]
+   },
+   "how": {
+    "fcol3": "rout"
+   },
+   "state": {
+    "fcol3": "routed"
+   }
   },
   {
    "title": "The Mexican cavalry charge and the French withdraw",

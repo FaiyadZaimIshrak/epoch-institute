@@ -314,6 +314,24 @@
    }
   },
   {
+   "title": "Pulleine draws the firing line closer to the camp",
+   "text": "After about twenty minutes of firing, Pulleine made his one change to the original dispositions. He brought the companies in the firing line slightly closer to the camp.",
+   "quote": "Pulleine only made one change to the original disposition after about 20 minutes of firing, bringing in the companies in the firing line slightly closer to the camp.",
+   "at": {
+    "b24": [
+     46,
+     38,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "b24",
+     "zc"
+    ]
+   ]
+  },
+  {
    "title": "Volleys pin the centre while the left horn swings out",
    "text": "For an hour or so the British volleys and the artillery held the Zulu centre. Meanwhile the left horn moved to outflank and envelop the British right.",
    "quote": "the left horn of the Zulu advance was moving to outflank and envelop the British right",
@@ -347,8 +365,8 @@
    ]
   },
   {
-   "title": "Durnford's withdrawal exposes the British flank",
-   "text": "Durnford's men, who had fought the longest, began to withdraw. This exposed the right flank of the regulars, and G Company was overrun. Pulleine ordered the rest back to the camp, and they fell back fighting.",
+   "title": "Durnford's men withdraw and G Company is overrun",
+   "text": "Durnford's men, who had fought the longest, began to withdraw and their rate of fire fell. Their retreat exposed the flank of G Company, which the Zulu left horn overran relatively quickly.",
    "quote": "Durnford's retreat, however, exposed the flank of G Company, 2nd/24th, which was overrun relatively quickly.",
    "at": {
     "dur": [
@@ -356,30 +374,14 @@
      46,
      0
     ],
-    "b24": [
-     44,
-     50,
-     0
-    ],
     "zl": [
-     62,
-     30,
-     180
-    ],
-    "zc": [
-     48,
-     34,
-     180
-    ],
-    "zr": [
-     26,
-     38,
+     70,
+     32,
      180
     ]
    },
    "how": {
-    "dur": "retreat",
-    "b24": "retreat"
+    "dur": "retreat"
    },
    "hits": [
     [
@@ -394,6 +396,37 @@
    "state": {
     "gco": "destroyed"
    }
+  },
+  {
+   "title": "The 24th falls back to the camp",
+   "text": "Durnford's withdrawal exposed the right flank of the regulars and the Zulu threatened to encircle them, so Pulleine ordered a withdrawal to the camp. The men of the 24th fell back fighting, in order and with discipline.",
+   "quote": "The regulars' retreat was performed with order and discipline and the men of the 24th conducted a fighting withdrawal into the camp.",
+   "at": {
+    "b24": [
+     44,
+     50,
+     0
+    ],
+    "zc": [
+     48,
+     34,
+     180
+    ],
+    "zr": [
+     26,
+     38,
+     180
+    ]
+   },
+   "how": {
+    "b24": "retreat"
+   },
+   "hits": [
+    [
+     "zc",
+     "b24"
+    ]
+   ]
   },
   {
    "title": "The Zulu close in on the camp",

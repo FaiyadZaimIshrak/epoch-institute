@@ -272,8 +272,8 @@
    "quote": "The evidence strongly indicates the Mongols arrived first and took up their positions: when Baybars reached a nearby height, he found their camp already in place.",
    "at": {
     "camp": [
-     64,
-     31,
+     70,
+     19,
      0
     ],
     "mongols": [
@@ -357,9 +357,45 @@
    ]
   },
   {
-   "title": "The feigned retreat",
-   "text": "After another heavy Mongol assault Baibars and his men pretended to break and rode for the highlands. Kitbuqa did not suspect a trick and followed with all his troops.",
-   "quote": "his men feigned a final retreat to draw the Mongols into the highlands to be ambushed by the rest of the Mamluk forces concealed among the trees",
+   "title": "Baibars feigns a final retreat",
+   "text": "After another heavy Mongol assault Baibars and his men pretended to break and rode back towards the highlands. The aim was to draw the Mongols after them into an ambush.",
+   "quote": "When the Mongols carried out another heavy assault, Baibars, who it is said had laid out the overall strategy of the battle since he had spent much time in that region earlier in his life as a fugitive, and his men feigned a final retreat to draw the Mongols into the highlands to be ambushed",
+   "at": {
+    "baibars": [
+     29,
+     29.5,
+     270
+    ],
+    "mongols": [
+     40,
+     29.5,
+     270
+    ],
+    "vassals": [
+     44,
+     15.5,
+     270
+    ],
+    "syrians": [
+     45,
+     39,
+     270
+    ]
+   },
+   "how": {
+    "baibars": "feint"
+   },
+   "hits": [
+    [
+     "mongols",
+     "baibars"
+    ]
+   ]
+  },
+  {
+   "title": "Kitbuqa follows with all his troops",
+   "text": "Kitbuqa, already provoked by the constant flight of Baibars and his men, did not suspect a trick. He marched forward with all of his troops on the trail of the fleeing Mamluks.",
+   "quote": "Instead of suspecting a trick, Kitbuqa decided to march forward with all of his troops on the trail of the fleeing Mamluks.",
    "at": {
     "baibars": [
      23,
@@ -381,9 +417,6 @@
      39,
      270
     ]
-   },
-   "how": {
-    "baibars": "feint"
    }
   },
   {
@@ -427,9 +460,9 @@
    ]
   },
   {
-   "title": "The Mongols break the left, and Qutuz charges",
-   "text": "The Mongols fought hard to break out and nearly destroyed the Mamluk left wing. Qutuz threw off his helmet so that his men could see him and led his own unit towards the weakened side.",
-   "quote": "When Qutuz saw the left wing of the Mamluk army almost destroyed by the Mongol attack, he threw away his combat helmet",
+   "title": "The Mongols fight to break out",
+   "text": "The Mongol army fought aggressively to break out of the ring. Their attack almost destroyed the Mamluk left wing, which gave way before it.",
+   "quote": "The Mongol army fought aggressively to break out.",
    "at": {
     "mongols": [
      33,
@@ -445,25 +478,33 @@
      25,
      48,
      60
-    ],
+    ]
+   },
+   "how": {
+    "left": "retreat"
+   },
+   "hits": [
+    [
+     "mongols",
+     "left"
+    ]
+   ]
+  },
+  {
+   "title": "Qutuz throws away his helmet and charges",
+   "text": "Qutuz saw the left wing almost destroyed. He threw away his combat helmet so that his warriors could recognise him, then rushed towards the weakened side, followed by his own unit.",
+   "quote": "he threw away his combat helmet, so that his warriors could recognize him",
+   "at": {
     "qutuz": [
      16,
      41,
      80
     ]
    },
-   "how": {
-    "left": "retreat"
-   },
    "state": {
-    "left": "routed",
     "qutuz": "shown"
    },
    "hits": [
-    [
-     "mongols",
-     "left"
-    ],
     [
      "qutuz",
      "mongols"
@@ -471,9 +512,9 @@
    ]
   },
   {
-   "title": "Flight towards Baysan",
-   "text": "The Mongols were pushed back and fled towards Baysan with Qutuz’s men behind them. They rallied and counter-attacked, but the fight turned against them and Kitbuqa was killed with most of his army.",
-   "quote": "The Mongols were pushed back and fled to a vicinity of Beisan, followed by Qutuz's forces, but they managed to reorganize and to return to the battlefield, making a successful counterattack.",
+   "title": "The Mongols are pushed back towards Baysan",
+   "text": "The Mongols were pushed back by the Mamluk attack and fled to the neighbourhood of Baysan. Qutuz’s forces followed them eastwards across the field.",
+   "quote": "The Mongols were pushed back and fled to a vicinity of Beisan, followed by Qutuz's forces",
    "at": {
     "mongols": [
      79,
@@ -494,6 +535,67 @@
      67,
      31,
      90
+    ]
+   },
+   "how": {
+    "mongols": "rout",
+    "vassals": "rout",
+    "syrians": "rout"
+   },
+   "hits": [
+    [
+     "qutuz",
+     "mongols"
+    ]
+   ]
+  },
+  {
+   "title": "The Mongols reorganise and counter-attack",
+   "text": "The Mongols managed to reorganise and returned to the battlefield, where they made a successful counter-attack.",
+   "quote": "they managed to reorganize and to return to the battlefield, making a successful counterattack",
+   "at": {
+    "mongols": [
+     72,
+     31,
+     270
+    ],
+    "vassals": [
+     74,
+     19,
+     270
+    ],
+    "syrians": [
+     78,
+     40,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "mongols",
+     "qutuz"
+    ]
+   ]
+  },
+  {
+   "title": "The battle turns and Kitbuqa dies",
+   "text": "The battle then shifted towards the Mamluks, who held the advantage of ground and morale. Some of the Mongols were forced to retreat, and Kitbuqa perished with almost all the rest of the army that remained in the region.",
+   "quote": "the battle shifted toward the Mamluks, who now had both the geographic and psychological advantage",
+   "at": {
+    "mongols": [
+     72,
+     31,
+     270
+    ],
+    "vassals": [
+     83,
+     19,
+     90
+    ],
+    "syrians": [
+     86,
+     40,
+     90
     ],
     "right": [
      62,
@@ -507,12 +609,11 @@
     ]
    },
    "how": {
-    "mongols": "rout",
     "vassals": "rout",
     "syrians": "rout"
    },
    "state": {
-    "mongols": "routed",
+    "mongols": "destroyed",
     "vassals": "routed",
     "syrians": "routed"
    },

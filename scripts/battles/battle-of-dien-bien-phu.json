@@ -6,7 +6,7 @@
   "north": 0,
   "edges": []
  },
- "note": "The plan shows the whole siege, not a single day: the blocks are the strong points and the Viet Minh divisions. The positions of the strong points follow the compass directions the accounts give; the distances are not to scale except that Isabelle stands furthest south. The accounts do not say where each Viet Minh division stood before it attacked, so each is placed in the hills on the side of the strong point it is said to have attacked. Claudine, Eliane and the other numbered works are not drawn singly. Isabelle's end is told only as a breakout, so its block is left as it was.",
+ "note": "The plan shows the whole siege, not a single day: the blocks are the strong points and the Viet Minh divisions. The positions of the strong points follow the compass directions the accounts give; the distances are not to scale except that Isabelle stands furthest south. The accounts do not say where each Viet Minh division stood before it attacked, so each is placed in the hills on the side of the strong point it is said to have attacked. Claudine, Eliane and the other numbered works are not drawn singly. Isabelle's end is told only as a breakout, so its block is left as it was. The relief column from Isabelle and the tanks are drawn as small parts of the garrison where they are named.",
  "terrain": [
   {
    "k": "hill",
@@ -214,6 +214,24 @@
    "short": "Artillery",
    "w": 8,
    "quote": "including the 351st Heavy Division, which was an artillery formation"
+  },
+  {
+   "id": "tk",
+   "side": "f",
+   "k": "armour",
+   "name": "French tanks",
+   "short": "Tanks",
+   "w": 4,
+   "quote": "a few French tanks arrived from the central garrison"
+  },
+  {
+   "id": "isc",
+   "side": "f",
+   "k": "infantry",
+   "name": "Isabelle relief column",
+   "short": "Relief",
+   "w": 5,
+   "quote": "Reinforcements were sent north from Isabelle, but were attacked en route and fell back to Isabelle."
   }
  ],
  "phases": [
@@ -308,9 +326,9 @@
    ]
   },
   {
-   "title": "Gabrielle falls and Anne-Marie is given up",
-   "when": "14 to 17 March 1954",
-   "text": "The 308th Division attacked Gabrielle on the night of 14 March, and the Algerian battalion fell back at 08:00 the next day. On 17 March most of the Tai troops left or defected, and Anne-Marie was abandoned.",
+   "title": "Gabrielle falls",
+   "when": "14 to 15 March 1954",
+   "text": "The 308th Division attacked Gabrielle from 20:00 on the night of 14 March after a heavy barrage. A French counterattack failed to relieve it, and the Algerian battalion fell back at 08:00 the next day.",
    "quote": "At 08:00 the next day, the Algerian battalion fell back, abandoning Gabrielle to the Viet Minh.",
    "at": {
     "v308": [
@@ -328,8 +346,7 @@
     "gab": "retreat"
    },
    "state": {
-    "gab": "routed",
-    "ann": "gone"
+    "gab": "routed"
    },
    "hits": [
     [
@@ -344,16 +361,51 @@
    ]
   },
   {
-   "title": "Attacks on the eastern and western positions",
+   "title": "Anne-Marie is given up",
+   "when": "17 March 1954",
+   "text": "The fall of Béatrice and Gabrielle had demoralised the Tai troops. On the morning of 17 March, under cover of fog, most of them left or defected, and the French and the few Tais who remained withdrew from Anne-Marie.",
+   "quote": "On the morning of 17 March, under the cover of fog, the bulk of the Tais left or defected.",
+   "state": {
+    "ann": "gone"
+   },
+   "at": {
+    "ann": [
+     26,
+     14,
+     315
+    ]
+   }
+  },
+  {
+   "title": "Dominique 1 and 2 are captured",
    "when": "30 March 1954",
-   "text": "The 312th Division took Dominique 1 and 2 and the 316th Division took Eliane 1. In the west the 308th Division nearly broke through at Huguette 7, but the breach was sealed.",
+   "text": "At 19:00 the 312th Division captured Dominique 1 and 2, outflanking all positions east of the river. French howitzers firing at zero elevation and anti-aircraft machine guns near the airfield then forced the attackers to retreat.",
    "quote": "At 19:00 on 30 March, the Viet Minh 312th Division captured Dominique 1 and 2",
    "at": {
     "v312": [
      77,
      25,
      270
+    ]
+   },
+   "hits": [
+    [
+     "v312",
+     "east"
     ],
+    [
+     "east",
+     "v312",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "Eliane 1 falls and Huguette 7 holds",
+   "when": "30 March 1954",
+   "text": "The 316th Division captured Eliane 1 and half of Eliane 2 by midnight. In the west the 308th Division attacked Huguette 7 and nearly broke through, but a French sergeant took charge of the defenders and sealed the breach.",
+   "quote": "The 316th Division captured Eliane 1 from its Moroccan defenders, and half of Eliane 2 by midnight.",
+   "at": {
     "v316": [
      77,
      37,
@@ -361,6 +413,218 @@
     ],
     "v308": [
      22,
+     32,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "v316",
+     "east"
+    ],
+    [
+     "v308",
+     "hug"
+    ]
+   ]
+  },
+  {
+   "title": "The French counterattack in the east",
+   "when": "31 March to 1 April 1954",
+   "text": "The French retook Eliane 2 just after midnight. On the afternoon of 1 April a counterattack by everybody left who could be trusted to fight retook Dominique 2 and Eliane 1.",
+   "quote": "The counterattacks allowed the French to retake Dominique 2 and Eliane 1",
+   "at": {
+    "v312": [
+     80,
+     25,
+     270
+    ],
+    "v316": [
+     80,
+     37,
+     270
+    ]
+   },
+   "how": {
+    "v312": "retreat",
+    "v316": "retreat"
+   },
+   "hits": [
+    [
+     "east",
+     "v312"
+    ],
+    [
+     "east",
+     "v316"
+    ]
+   ]
+  },
+  {
+   "title": "The Viet Minh renew the assault",
+   "when": "1 April 1954",
+   "text": "The Viet Minh assaulted again and the exhausted French, who had no reserves, fell back from both positions late in the afternoon. A column sent north from Isabelle was attacked on the way and fell back to Isabelle.",
+   "quote": "The French, who were exhausted and without reserves, fell back from both positions late in the afternoon.",
+   "at": {
+    "v312": [
+     75,
+     25,
+     270
+    ],
+    "v316": [
+     75,
+     37,
+     270
+    ],
+    "east": [
+     64,
+     30,
+     90
+    ],
+    "isc": [
+     46,
+     45,
+     0
+    ]
+   },
+   "how": {
+    "east": "retreat"
+   },
+   "hits": [
+    [
+     "v312",
+     "east"
+    ],
+    [
+     "v316",
+     "east"
+    ]
+   ]
+  },
+  {
+   "title": "Eliane 2 holds and Huguette 7 is retaken",
+   "when": "Night of 31 March 1954",
+   "text": "The 316th Division attacked Eliane 2 and a few French tanks arrived from the central garrison and helped push it back. The Viet Minh briefly captured Huguette 7, then were pushed back by a French counterattack at dawn on 1 April.",
+   "quote": "Just as it appeared the French were about to be overrun, a few French tanks arrived from the central garrison, and helped push the Viet Minh back.",
+   "at": {
+    "tk": [
+     55,
+     33,
+     90
+    ],
+    "v316": [
+     77,
+     37,
+     270
+    ],
+    "v308": [
+     20,
+     32,
+     90
+    ]
+   },
+   "how": {
+    "v316": "retreat",
+    "v308": "retreat"
+   },
+   "state": {
+    "isc": "gone"
+   },
+   "hits": [
+    [
+     "v316",
+     "east"
+    ],
+    [
+     "tk",
+     "v316"
+    ],
+    [
+     "v308",
+     "hug"
+    ],
+    [
+     "hug",
+     "v308",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "Sapping, and Eliane 1 retaken",
+   "when": "5 to 12 April 1954",
+   "text": "After heavy losses in the open on 5 April, Giáp turned to entrenchment and sapping. On 10 April the French retook Eliane 1 after it changed hands several times, and a Viet Minh attempt to regain it on 12 April was pushed back.",
+   "quote": "Eliane 1 changed hands several times that day, but by the next morning the French had control of the strong point.",
+   "at": {
+    "v312": [
+     74,
+     25,
+     270
+    ],
+    "v316": [
+     74,
+     37,
+     270
+    ],
+    "east": [
+     66,
+     30,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "east",
+     "v316"
+    ],
+    [
+     "v316",
+     "east"
+    ]
+   ]
+  },
+  {
+   "title": "Huguette 1 is overrun",
+   "when": "11 to 22 April 1954",
+   "text": "Viet Minh trenches almost surrounded Huguette 1 and 6. French sorties to supply Huguette 6 cost heavy casualties, the defenders of Huguette 6 broke out on 18 April, and Huguette 1 was overrun on 22 April.",
+   "quote": "The Viet Minh repeated the isolation and probing attacks against Huguette 1, and overran the fort on the morning of 22 April.",
+   "at": {
+    "v308": [
+     25,
+     32,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "v308",
+     "hug"
+    ],
+    [
+     "hug",
+     "v308",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "Eliane 1, Dominique 3 and Huguette 5 fall",
+   "when": "1 May 1954",
+   "text": "The Viet Minh attacked the exhausted defenders in mass on the night of 1 May and overran Eliane 1, Dominique 3 and Huguette 5. The French beat back the attacks on Eliane 2.",
+   "quote": "overrunning Eliane 1, Dominique 3, and Huguette 5, although the French managed to beat back attacks on Eliane 2.",
+   "at": {
+    "v312": [
+     70,
+     25,
+     270
+    ],
+    "v316": [
+     70,
+     37,
+     270
+    ],
+    "v308": [
+     27,
      32,
      90
     ]
@@ -381,51 +645,18 @@
    ]
   },
   {
-   "title": "Trenches and sapping",
-   "when": "5 to 22 April 1954",
-   "text": "After heavy losses in open ground on 5 April, Giáp turned to entrenchment and sapping. The Viet Minh trenches almost surrounded Huguette 1 and 6, and Huguette 1 was overrun on 22 April.",
-   "quote": "he decided to employ entrenchment and sapping to achieve it.",
-   "at": {
-    "v312": [
-     74,
-     25,
-     270
-    ],
-    "v316": [
-     74,
-     37,
-     270
-    ],
-    "v308": [
-     24,
-     32,
-     90
-    ]
-   },
-   "hits": [
-    [
-     "v308",
-     "hug"
-    ],
-    [
-     "v316",
-     "east"
-    ]
-   ]
-  },
-  {
-   "title": "The eastern positions are overrun",
-   "when": "1 to 6 May 1954",
-   "text": "On the night of 1 May the Viet Minh overran Eliane 1 and Dominique 3, and on 6 May they attacked Eliane 2 with Katyusha rockets. A mine under Eliane 2 was detonated and within a few hours the defenders were overrun.",
+   "title": "Eliane 2 is mined and overrun",
+   "when": "6 May 1954",
+   "text": "The Viet Minh attacked Eliane 2 with Katyusha rockets and French artillery broke the first wave. Later that night a mine under Eliane 2 was detonated and within a few hours the defenders were overrun.",
    "quote": "the Viet Minh detonated a mine under Eliane 2, with devastating effect",
    "at": {
     "v312": [
-     72,
+     66,
      25,
      270
     ],
     "v316": [
-     72,
+     66,
      37,
      270
     ]

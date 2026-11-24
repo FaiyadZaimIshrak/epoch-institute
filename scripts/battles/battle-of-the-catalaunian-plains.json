@@ -196,8 +196,20 @@
    }
   },
   {
+   "title": "Attila's forces take the right of the ridge",
+   "text": "Attila's forces reached the ridge first and held its far right side, before the Visigoths could take that position. The Amali Goths stood forward on the ridge there.",
+   "quote": "Attila's forces arrived on the ridge first, on the far right side, before the Visigoths could take that position.",
+   "at": {
+    "amal": [
+     78,
+     31,
+     180
+    ]
+   }
+  },
+  {
    "title": "The Romans take the left and repulse the Gepids",
-   "text": "Attila's forces reached the right side of the ridge first. The Romans then arrived on the left side and drove back the Gepids as they came up.",
+   "text": "The Romans then arrived on the left side of the ridge and drove back the Gepids as they came up, so that the Romans held the left side of the ridge.",
    "quote": "Then Aetius's Romans arrived on the left side of the ridge, and repulsed the Gepids as they came up.",
    "at": {
     "rom": [
@@ -296,23 +308,30 @@
    ]
   },
   {
-   "title": "Attila withdraws into his camp as night falls",
-   "text": "Attila sought refuge in his wagon camp. When night fell, Thorismund, returning towards friendly lines, entered the camp by mistake and was wounded in the fighting there.",
-   "quote": "Thorismund, son of king Theodoric, returning to friendly lines, mistakenly entered Attila's encampment.",
+   "title": "Attila withdraws into his camp",
+   "text": "The Hunnic centre fell back, and Attila was forced to seek refuge in his own camp, which he had fortified with wagons.",
+   "quote": "Attila was forced to seek refuge in his own camp, which he had fortified with wagons.",
    "at": {
     "hun": [
      73,
      16,
      180
-    ],
+    ]
+   },
+   "how": {
+    "hun": "retreat"
+   }
+  },
+  {
+   "title": "Thorismund enters the camp by mistake at night",
+   "text": "When night fell, Thorismund, returning towards friendly lines, entered Attila's encampment by mistake and was wounded in the fighting there.",
+   "quote": "Thorismund, son of king Theodoric, returning to friendly lines, mistakenly entered Attila's encampment.",
+   "at": {
     "thor": [
      91,
      17,
      0
     ]
-   },
-   "how": {
-    "hun": "retreat"
    },
    "hits": [
     [

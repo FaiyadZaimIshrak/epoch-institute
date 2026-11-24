@@ -551,6 +551,85 @@
    ]
   },
   {
+   "title": "The offensive of 19 April meets the Japanese defences",
+   "when": "19 April 1945",
+   "text": "General Hodge launched a new offensive with a barrage of 324 guns, joined by ships and by 650 aircraft. The Japanese waited on reverse slopes, and a tank assault round Kakazu Ridge failed, so there was no breakthrough.",
+   "quote": "Hodge launched a new offensive on 19 April with a barrage of 324 guns, the largest ever in the Pacific Ocean Theater.",
+   "at": {
+    "xxiv": [
+     52,
+     33,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "xxiv",
+     "j32",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The Japanese counter-offensive of 4 May fails",
+   "when": "4 May 1945",
+   "text": "Ushijima attempted amphibious assaults on the coasts behind the American lines, and his artillery moved into the open to support it. American counter-battery fire destroyed dozens of guns, and the attack failed.",
+   "quote": "On 4 May, the 32nd Army launched another counter-offensive.",
+   "at": {
+    "j32": [
+     55,
+     41,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "j32",
+     "xxiv"
+    ]
+   ]
+  },
+  {
+   "title": "Conical Hill and Sugar Loaf Hill are taken",
+   "when": "13 May 1945",
+   "text": "The 96th Infantry Division took Conical Hill, the eastern anchor of the main Japanese defences, while the 1st and 6th Marine Divisions fought for Sugar Loaf Hill on the opposite coast. Their capture exposed the Japanese round Shuri on both sides.",
+   "quote": "The capture of these two key positions exposed the Japanese around Shuri on both sides.",
+   "at": {
+    "m6": [
+     40,
+     42.5,
+     180
+    ],
+    "m1": [
+     47,
+     46.5,
+     0
+    ],
+    "xxiv": [
+     56,
+     34,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "xxiv",
+     "j32",
+     0.2
+    ],
+    [
+     "m1",
+     "j32",
+     0.25
+    ],
+    [
+     "m6",
+     "j32",
+     0.25
+    ]
+   ]
+  },
+  {
    "title": "Shuri is left and the army withdraws south",
    "when": "24 to 30 May 1945",
    "text": "The 6th Marine Division occupied the ruins of Naha, and Marines of the 1st Marine Division took Shuri Castle on 29 May, which the Thirty-Second Army had left. The army moved nearly 30,000 men to the Kiyan Peninsula.",
@@ -577,20 +656,15 @@
    }
   },
   {
-   "title": "The last pocket in the south",
-   "when": "4 to 22 June 1945",
-   "text": "Elements of the 6th Marine Division landed on the Oroku Peninsula, and the naval troops died by suicide in their tunnels on 13 June. By 17 June the rest of the Thirty-Second Army was in a small pocket in the far south.",
-   "quote": "By 17 June, the remnants of Ushijima's shattered 32nd Army were pushed into a small pocket in the far south of the island to the southeast of Itoman.",
+   "title": "The Oroku Peninsula is taken",
+   "when": "4 to 13 June 1945",
+   "text": "Elements of the 6th Marine Division launched an amphibious assault on the Oroku Peninsula. The 4,000 Japanese sailors, including Admiral Ōta, killed themselves in the tunnels of their underground headquarters on 13 June.",
+   "quote": "On 4 June, elements of the 6th Marine Division launched an amphibious assault on the peninsula.",
    "at": {
     "m6x": [
      32,
      51,
      90
-    ],
-    "j32": [
-     53,
-     55,
-     0
     ]
    },
    "state": {
@@ -600,7 +674,22 @@
     [
      "m6x",
      "navy"
-    ],
+    ]
+   ]
+  },
+  {
+   "title": "The last pocket in the south",
+   "when": "17 to 22 June 1945",
+   "text": "By 17 June the remnants of Ushijima’s Thirty-Second Army were pushed into a small pocket in the far south of the island, to the southeast of Itoman.",
+   "quote": "By 17 June, the remnants of Ushijima's shattered 32nd Army were pushed into a small pocket in the far south of the island to the southeast of Itoman.",
+   "at": {
+    "j32": [
+     53,
+     55,
+     0
+    ]
+   },
+   "hits": [
     [
      "m1",
      "j32",

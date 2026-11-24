@@ -432,6 +432,54 @@
    ]
   },
   {
+   "title": "Sa'd orders a second counterattack",
+   "when": "16 November 636, afternoon",
+   "text": "By afternoon the Persian attacks on the Muslim left had been beaten back. Sa'd ordered another counterattack and the Muslim cavalry charged from the flanks. Rustam went into the fray himself and the attacks were repulsed.",
+   "quote": "The Muslim cavalry then charged from the flanks with full force, a tactic known as Karr wa farr.",
+   "at": {
+    "jar": [
+     52,
+     50,
+     90
+    ],
+    "ash": [
+     52,
+     58,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "jar",
+     "pl"
+    ],
+    [
+     "ash",
+     "pl",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "The elephants are driven off the field",
+   "when": "18 November 636",
+   "text": "On the third day the Muslims blinded the elephants and severed their trunks until they were driven off. The frightened elephants rushed through the Sasanian ranks towards the river, and by noon none were left on the field.",
+   "quote": "The frightened elephant corps rushed through the Sasanian ranks and made for the river.",
+   "at": {
+    "ele": [
+     80,
+     24,
+     90
+    ]
+   },
+   "how": {
+    "ele": "rout"
+   },
+   "state": {
+    "ele": "routed"
+   }
+  },
+  {
    "title": "Qa'qa leads the left centre forward",
    "when": "19 November 636",
    "text": "The elephants had been driven from the field on 18 November. On the fourth day the Muslim left centre surged forward and the other corps followed. By noon Qa'qa and his men had pierced the Sasanian centre but could not break the army.",
@@ -474,6 +522,38 @@
      "mr",
      "pl",
      0.3
+    ]
+   ]
+  },
+  {
+   "title": "The Sasanian right wing counterattacks",
+   "text": "The Sasanian right wing counterattacked and regained its lost position. The Muslim left wing retreated to its original position, and the left centre, denied its support, also fell back to where it had stood.",
+   "quote": "The Sasanian right wing counter-attacked and regained its lost position",
+   "at": {
+    "pr": [
+     50,
+     10,
+     270
+    ],
+    "ml": [
+     36,
+     10,
+     90
+    ],
+    "mlc": [
+     36,
+     22,
+     90
+    ]
+   },
+   "how": {
+    "ml": "retreat",
+    "mlc": "retreat"
+   },
+   "hits": [
+    [
+     "pr",
+     "ml"
     ]
    ]
   },

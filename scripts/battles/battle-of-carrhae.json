@@ -5,13 +5,7 @@
  "field": {
   "north": null,
   "edges": [
-   {
-    "name": "← to Carrhae",
-    "at": [
-     8,
-     57
-    ]
-   }
+   {"name": "← to Carrhae", "at": [8, 57]}
   ]
  },
  "note": "The accounts do not give the compass directions, the width of the stream or where the hills and the town of Carrhae lay, so these are placed on the side the story needs and the plan is schematic. The Roman force is drawn as one hollow square although each side was formed by twelve cohorts. The date is given as 9 June by Ovid.",
@@ -20,129 +14,36 @@
    "k": "stream",
    "name": "Stream",
    "unnamed": true,
-   "at": [
-    [
-     46,
-     6
-    ],
-    [
-     48,
-     22
-    ],
-    [
-     45,
-     38
-    ],
-    [
-     47,
-     56
-    ]
-   ],
-   "lab": [
-    40,
-    4
-   ],
+   "at": [[46, 6], [48, 22], [45, 38], [47, 56]],
+   "lab": [40, 4],
    "quote": "The Roman forces advanced and came to a stream."
   },
   {
    "k": "hill",
    "name": "Hill of Publius's last stand",
    "unnamed": true,
-   "at": [
-    [
-     66,
-     10
-    ],
-    [
-     72,
-     7
-    ],
-    [
-     80,
-     9
-    ],
-    [
-     84,
-     14
-    ],
-    [
-     80,
-     20
-    ],
-    [
-     72,
-     21
-    ],
-    [
-     66,
-     17
-    ]
-   ],
-   "lab": [
-    75,
-    6
-   ],
+   "at": [[66, 10], [72, 7], [80, 9], [84, 14], [80, 20], [72, 21], [66, 17]],
+   "lab": [75, 6],
    "quote": "They eventually retreated to a hill, where Publius and his officers threw themselves on their swords."
   },
   {
    "k": "hill",
    "name": "Hill of the lost cohorts",
    "unnamed": true,
-   "at": [
-    [
-     54,
-     49
-    ],
-    [
-     62,
-     46
-    ],
-    [
-     72,
-     48
-    ],
-    [
-     76,
-     53
-    ],
-    [
-     70,
-     58
-    ],
-    [
-     60,
-     58
-    ],
-    [
-     54,
-     55
-    ]
-   ],
-   "lab": [
-    66,
-    59
-   ],
+   "at": [[54, 49], [62, 46], [72, 48], [76, 53], [70, 58], [60, 58], [54, 55]],
+   "lab": [66, 59],
    "quote": "Four Roman cohorts got lost in the dark and were surrounded on a hill by the Parthians"
   },
   {
    "k": "town",
    "name": "Carrhae",
-   "at": [
-    10,
-    52
-   ],
+   "at": [10, 52],
    "quote": "He ordered a disorganised, ragged retreat to the nearby town of Carrhae"
   }
  ],
  "sides": [
-  {
-   "id": "r",
-   "name": "Romans"
-  },
-  {
-   "id": "p",
-   "name": "Parthians"
-  }
+  {"id": "r", "name": "Romans"},
+  {"id": "p", "name": "Parthians"}
  ],
  "units": [
   {
@@ -227,34 +128,22 @@
  "phases": [
   {
    "title": "The Romans form a hollow square",
-   "text": "Crassus first agreed to a line with infantry in the centre and cavalry on the wings, then redeployed his men into a hollow square. The Parthian cataphracts advanced, their armour covered in cloths.",
+   "text": "Cassius advised a line with infantry in the centre and cavalry on the wings. Crassus at first agreed, then changed his mind and redeployed his men into a hollow square, each side formed by twelve cohorts.",
    "quote": "he soon changed his mind and redeployed his men into a hollow square, each side formed by twelve cohorts",
    "at": {
-    "rsq": [
-     26,
-     31,
-     90
-    ],
-    "rskir": [
-     26,
-     48,
-     90
-    ],
-    "pha": [
-     66,
-     28,
-     270
-    ],
-    "cat": [
-     70,
-     42,
-     270
-    ],
-    "cam": [
-     84,
-     20,
-     270
-    ]
+    "rsq": [26, 31, 90],
+    "rskir": [26, 48, 90],
+    "pha": [66, 28, 270],
+    "cat": [70, 42, 270],
+    "cam": [84, 20, 270]
+   }
+  },
+  {
+   "title": "The cataphracts show their armour",
+   "text": "The Parthians beat hollow drums, and Surena ordered his cataphracts to cover their armour in cloths and advance. Within sight of the Romans they dropped the cloths together and showed their shining armour.",
+   "quote": "When they were within sight of the Romans, they simultaneously dropped the cloths and revealed their shining armour.",
+   "at": {
+    "cat": [56, 38, 270]
    }
   },
   {
@@ -262,85 +151,71 @@
    "text": "Surena sent his horse archers round the Roman square, beyond the range of the pila. Crassus sent his skirmishers out to drive them off, and the archers' arrows drove the skirmishers back.",
    "quote": "he sent his horse archers to surround the Roman square, remaining beyond the range of the Roman pila javelins",
    "at": {
-    "pha": [
-     38,
-     31,
-     270
-    ],
-    "rskir": [
-     32,
-     48,
-     90
-    ]
+    "pha": [38, 31, 270],
+    "rskir": [32, 48, 90]
    },
    "hits": [
-    [
-     "pha",
-     "rsq"
-    ],
-    [
-     "pha",
-     "rskir",
-     0.1
-    ]
+    ["pha", "rskir", 0.1]
    ]
+  },
+  {
+   "title": "The horse archers shoot into the square",
+   "text": "The horse archers then engaged the legionaries. The legionaries' large shields and armour could not cover the whole body, and arrows struck them as the archers circled the square.",
+   "quote": "The horse archers then engaged the legionaries.",
+   "at": {
+    "pha": [30, 20, 180]
+   },
+   "hits": [
+    ["pha", "rsq"]
+   ]
+  },
+  {
+   "title": "The Romans advance and the archers withdraw",
+   "text": "The Romans repeatedly advanced towards the Parthians to fight at close quarters. The horse archers always retreated safely and shot as they withdrew.",
+   "quote": "The Romans repeatedly advanced towards the Parthians to attempt to engage in close-quarters fighting",
+   "at": {
+    "rsq": [30, 31, 90],
+    "pha": [46, 24, 270]
+   },
+   "how": {
+    "pha": "retreat"
+   }
   },
   {
    "title": "The cataphracts charge the testudo",
    "text": "The legionaries locked their shields in the testudo, which limited their fighting in melee. The cataphracts repeatedly charged the line, and when the Romans loosened their formation the cataphracts drew back and the horse archers shot again.",
    "quote": "The Parthian cataphracts exploited that weakness and repeatedly charged the Roman line, which caused panic and inflicted heavy casualties.",
    "at": {
-    "cat": [
-     40,
-     36,
-     270
-    ],
-    "pha": [
-     26,
-     18,
-     180
-    ]
+    "cat": [40, 36, 270],
+    "pha": [26, 18, 180]
    },
    "hits": [
-    [
-     "cat",
-     "rsq"
-    ],
-    [
-     "pha",
-     "rsq"
-    ]
+    ["cat", "rsq"],
+    ["pha", "rsq"]
    ]
   },
   {
+   "title": "Crassus sends Publius against the archers",
+   "text": "Crassus hoped his men could hold out until the Parthians ran out of arrows, but camels resupplied the horse archers. He then dispatched his son Publius with Gallic cavalry, archers and eight cohorts to drive them off.",
+   "quote": "Upon this realisation, Crassus dispatched his son Publius with 1,300 Gallic cavalry, 500 archers and eight cohorts of legionaries to drive off the horse archers.",
+   "at": {
+    "rpub": [42, 25, 90],
+    "cam": [80, 34, 270]
+   }
+  },
+  {
    "title": "Publius is drawn away",
-   "text": "Crassus sent his son Publius with Gallic cavalry, archers and eight cohorts to drive off the horse archers. They feigned retreat and drew Publius away from the main army, shooting at his force as it followed.",
+   "text": "The horse archers feigned retreat and drew Publius away from the main army. His force suffered heavy casualties from arrow fire as it followed.",
    "quote": "The horse archers feigned retreat and drew off Publius' force, which suffered heavy casualties from arrow fire.",
    "at": {
-    "rpub": [
-     52,
-     10,
-     90
-    ],
-    "pha2": [
-     64,
-     8,
-     270
-    ],
-    "cam": [
-     48,
-     20,
-     270
-    ]
+    "rpub": [52, 10, 90],
+    "pha2": [64, 8, 270]
    },
    "how": {
     "pha2": "feint"
    },
    "hits": [
-    [
-     "pha2",
-     "rpub"
-    ]
+    ["pha2", "rpub"]
    ]
   },
   {
@@ -348,106 +223,62 @@
    "text": "Once Publius was well apart from the army, the cataphracts confronted his force and the horse archers cut off its retreat. The Gauls retreated to a hill, where Publius and his officers killed themselves. Only 500 Gauls were taken alive.",
    "quote": "the Parthian cataphracts confronted them while the horse archers cut off their retreat",
    "at": {
-    "rpub": [
-     76,
-     14,
-     90
-    ],
-    "cat": [
-     62,
-     26,
-     270
-    ],
-    "pha2": [
-     56,
-     6,
-     0
-    ]
+    "rpub": [76, 14, 90],
+    "cat": [62, 26, 270],
+    "pha2": [56, 6, 0]
    },
    "hits": [
-    [
-     "cat",
-     "rpub"
-    ],
-    [
-     "pha2",
-     "rpub"
-    ]
+    ["cat", "rpub"],
+    ["pha2", "rpub"]
    ],
    "state": {
     "rpub": "destroyed"
    }
   },
   {
-   "title": "The Romans advance and are attacked until nightfall",
-   "text": "Crassus ordered a general advance and was shown his son's head on a spear. The horse archers shot at the Romans from all directions and the cataphracts charged in a series of attacks that went on until nightfall.",
+   "title": "Crassus orders a general advance",
+   "text": "Crassus did not know his son's fate but saw that Publius was in danger, and ordered a general advance. He was then shown his son's head on a spear.",
+   "quote": "Crassus, unaware of his son's fate but realising that Publius was in danger, ordered a general advance.",
+   "at": {
+    "rsq": [34, 31, 90]
+   }
+  },
+  {
+   "title": "The Parthians attack until nightfall",
+   "text": "The horse archers began to surround the Roman infantry and shot at them from all directions. The cataphracts mounted a series of charges that disorganised the Romans, and the onslaught went on until nightfall.",
    "quote": "The Parthian onslaught did not cease until nightfall.",
    "at": {
-    "rsq": [
-     34,
-     31,
-     90
-    ],
-    "pha": [
-     34,
-     16,
-     180
-    ],
-    "cat": [
-     45,
-     33,
-     270
-    ]
+    "pha": [34, 16, 180],
+    "cat": [45, 33, 270]
    },
    "hits": [
-    [
-     "pha",
-     "rsq"
-    ],
-    [
-     "cat",
-     "rsq"
-    ]
+    ["pha", "rsq"],
+    ["cat", "rsq"]
    ]
   },
   {
    "title": "The retreat towards Carrhae",
-   "text": "Crassus ordered a disorganised retreat towards Carrhae, leaving 4,000 wounded behind. Four cohorts lost their way in the dark and were surrounded on a hill, where only 20 Romans survived.",
-   "quote": "Four Roman cohorts got lost in the dark and were surrounded on a hill by the Parthians; only 20 Romans survived.",
+   "text": "Crassus ordered a disorganised, ragged retreat to the town of Carrhae. He left behind 4,000 wounded, who were killed by the Parthians the next morning.",
+   "quote": "He ordered a disorganised, ragged retreat to the nearby town of Carrhae leaving behind 4,000 wounded, who were killed by the Parthians the next morning.",
    "at": {
-    "rsq": [
-     24,
-     40,
-     90
-    ],
-    "rlost": [
-     64,
-     53,
-     90
-    ],
-    "pha": [
-     74,
-     40,
-     270
-    ],
-    "cat": [
-     56,
-     40,
-     180
-    ]
+    "rsq": [24, 40, 90]
    },
    "how": {
     "rsq": "retreat"
+   }
+  },
+  {
+   "title": "Four cohorts are lost on a hill",
+   "text": "Four Roman cohorts lost their way in the dark and were surrounded on a hill by the Parthians. Only 20 Romans survived.",
+   "quote": "Four Roman cohorts got lost in the dark and were surrounded on a hill by the Parthians; only 20 Romans survived.",
+   "at": {
+    "rlost": [64, 53, 90],
+    "pha": [74, 40, 270],
+    "cat": [56, 40, 180]
    },
    "hits": [
-    [
-     "pha",
-     "rlost"
-    ],
-    [
-     "cat",
-     "rlost"
-    ]
+    ["pha", "rlost"],
+    ["cat", "rlost"]
    ],
    "state": {
     "rlost": "destroyed"

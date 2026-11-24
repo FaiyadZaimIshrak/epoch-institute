@@ -272,16 +272,30 @@
    }
   },
   {
-   "title": "Both German pincers attack",
+   "title": "The 9th Army attacks in the north",
    "when": "5 July 1943",
-   "text": "The 9th Army attacked the Central Front in the north, and in the south the 4th Panzer Army and Army Detachment Kempf attacked across the Voronezh Front's sector. Each broke into the first belt of the Soviet defences.",
+   "text": "The 9th Army opened its attack on the Central Front at 05:30 after a preliminary bombardment. It broke into the first belt of the Soviet defences and reached the small town of Ponyri in the second belt on the first day.",
    "quote": "Following a preliminary bombardment and Red Army counter bombardments, the 9th Army opened its attack at 05:30 on 5 July.",
    "at": {
     "g9": [
      50,
      14,
      180
-    ],
+    ]
+   },
+   "hits": [
+    [
+     "g9",
+     "sc"
+    ]
+   ]
+  },
+  {
+   "title": "The southern pincer attacks",
+   "when": "5 July 1943",
+   "text": "In the south the 4th Panzer Army and Army Detachment Kempf attacked the Voronezh Front after a bombardment. By the end of the day a wedge had been created in the first belt of the Soviet defences.",
+   "quote": "By the end of 5 July, a wedge had been created in the first belt of the Soviet defences.",
+   "at": {
     "g4": [
      50,
      48,
@@ -295,10 +309,6 @@
    },
    "hits": [
     [
-     "g9",
-     "sc"
-    ],
-    [
      "g4",
      "sv"
     ],
@@ -310,14 +320,38 @@
    ]
   },
   {
-   "title": "The northern attack is held at Ponyri and Olkhovatka",
-   "when": "6 to 10 July 1943",
-   "text": "Model put the weight of the 9th Army on Ponyri and Olkhovatka, and the Central Front counterattacked and held both. By 10 July the Soviets had completely halted the German advance in the north.",
-   "quote": "By 10 July, the Soviets had completely halted the German advance.",
+   "title": "The Central Front counterattacks and holds",
+   "when": "6 July 1943",
+   "text": "The Soviet 16th Tank Corps counterattacked and was forced back by Tiger tanks. The Germans then attacked at Olkhovatka and Ponyri, but the Central Front held both places.",
+   "quote": "but it failed to break the Red Army defence at Olkhovatka, and the Germans suffered heavy casualties.",
    "at": {
     "g9": [
      48,
-     15.5,
+     16,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "sc",
+     "g9",
+     -0.3
+    ],
+    [
+     "g9",
+     "sc"
+    ]
+   ]
+  },
+  {
+   "title": "The northern attack is halted at Ponyri",
+   "when": "7 to 10 July 1943",
+   "text": "Model put the weight of the 9th Army on Ponyri and Olkhovatka, and control of Ponyri changed hands several times. By 10 July the Soviets had completely halted the German advance in the north.",
+   "quote": "By 10 July, the Soviets had completely halted the German advance.",
+   "at": {
+    "g9": [
+     47,
+     17,
      180
     ]
    },
@@ -334,21 +368,57 @@
    ]
   },
   {
-   "title": "Soviet reserves arrive and the II SS turns to Prokhorovka",
-   "when": "7 to 11 July 1943",
-   "text": "The 5th Guards Tank Army left the Steppe Front for Prokhorovka on 7 July. On 10 July Hoth turned the II SS Panzer Corps of the 4th Panzer Army north-east towards it, and on 11 July Army Detachment Kempf broke through.",
+   "title": "The 5th Guards Tank Army moves to Prokhorovka",
+   "when": "7 July 1943",
+   "text": "The 5th Guards Tank Army, from the Steppe Front, began advancing to Prokhorovka to reinforce the Voronezh Front.",
    "quote": "On 7 July, the 5th Guards Tank Army began advancing to Prokhorovka.",
    "at": {
     "sg": [
      82,
      43,
      270
-    ],
+    ]
+   }
+  },
+  {
+   "title": "The Voronezh Front counterattacks in pieces",
+   "when": "8 July 1943",
+   "text": "Vatutin ordered a counterattack on the II SS Panzer Corps, but poor coordination made it a series of piecemeal attacks. It still stalled the II SS Panzer Corps for the day.",
+   "quote": "Although a fiasco, the Soviet counterattack succeeded in stalling the advance of the II SS Panzer Corps throughout the day.",
+   "hits": [
+    [
+     "sv",
+     "g4",
+     0.25
+    ]
+   ]
+  },
+  {
+   "title": "The II SS Panzer Corps turns to Prokhorovka",
+   "when": "10 July 1943",
+   "text": "Hoth turned the II SS Panzer Corps of the 4th Panzer Army away from Oboyan to attack north-east towards Prokhorovka. This move had been part of the plan since the start of the offensive.",
+   "quote": "At this point, Hoth turned the II SS Panzer Corps away from Oboyan to attack toward the northeast in the direction of Prokhorovka.",
+   "at": {
     "g4": [
      58,
      44,
      45
-    ],
+    ]
+   },
+   "hits": [
+    [
+     "g4",
+     "sv",
+     0.25
+    ]
+   ]
+  },
+  {
+   "title": "Army Detachment Kempf breaks through",
+   "when": "11 July 1943",
+   "text": "In a surprise night attack the 6th Panzer Division seized a bridge across the Donets. Army Detachment Kempf then pushed troops across for an advance on Prokhorovka from the south.",
+   "quote": "On 11 July, Army Detachment Kempf finally achieved a breakthrough.",
+   "at": {
     "gk": [
      73,
      49,
@@ -357,9 +427,9 @@
    },
    "hits": [
     [
-     "g4",
+     "gk",
      "sv",
-     0.25
+     0.2
     ]
    ]
   },
@@ -393,10 +463,10 @@
    ]
   },
   {
-   "title": "Kutuzov opens in the north and Citadel ends in the south",
-   "when": "12 to 17 July 1943",
-   "text": "The Bryansk and Western Fronts began Operation Kutuzov against the Orel salient, threatening the 9th Army's flank and rear, so that it went over fully to the defensive. In the south the II SS Panzer Corps was ordered on 17 July to end its offensive and begin to withdraw.",
-   "quote": "As the German momentum in the north slowed, the Soviets launched Operation Kutuzov on 12 July against Army Group Centre in the Orel salient, directly north of the Kursk salient.",
+   "title": "Operation Kutuzov opens against the Orel salient",
+   "when": "12 July 1943",
+   "text": "The Bryansk and Western Fronts began Operation Kutuzov against the Orel salient. The thrusts endangered German supply routes and threatened the 9th Army with encirclement, so that it went over fully to the defensive.",
+   "quote": "These thrusts endangered German supply routes and threatened the 9th Army with encirclement.",
    "at": {
     "wf": [
      30,
@@ -407,15 +477,7 @@
      82,
      14,
      270
-    ],
-    "g4": [
-     50,
-     54,
-     0
     ]
-   },
-   "how": {
-    "g4": "retreat"
    },
    "hits": [
     [
@@ -427,6 +489,22 @@
      "g9"
     ]
    ]
+  },
+  {
+   "title": "The II SS Panzer Corps ends its offensive",
+   "when": "17 July 1943",
+   "text": "The southern offensive went on with Operation Roland from 14 July. On 17 July the II SS Panzer Corps was ordered to end its offensive operations and begin to withdraw.",
+   "quote": "the II SS Panzer Corps was ordered to end its offensive operations and begin to withdraw",
+   "at": {
+    "g4": [
+     50,
+     54,
+     0
+    ]
+   },
+   "how": {
+    "g4": "retreat"
+   }
   },
   {
    "title": "Operation Rumyantsev drives south to Belgorod",

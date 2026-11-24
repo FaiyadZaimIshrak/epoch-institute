@@ -327,6 +327,47 @@
    ]
   },
   {
+   "title": "The Indian cavalry sallies again and is repulsed",
+   "text": "While the elephants fought the phalanx, the Indian horsemen attempted another sally. Alexander's cavalry squadrons, which had all massed together, repulsed them once again.",
+   "quote": "Meanwhile, the Indian horsemen attempted another sally, only to be repulsed once again by Alexander's cavalry squadrons, who had all massed together.",
+   "at": {
+    "rcav": [
+     64,
+     18,
+     270
+    ],
+    "lcav": [
+     62,
+     46,
+     270
+    ],
+    "comp": [
+     54,
+     48,
+     90
+    ],
+    "coenus": [
+     56,
+     20,
+     90
+    ]
+   },
+   "state": {
+    "rcav": "shown",
+    "lcav": "shown"
+   },
+   "hits": [
+    [
+     "comp",
+     "lcav"
+    ],
+    [
+     "coenus",
+     "rcav"
+    ]
+   ]
+  },
+  {
    "title": "The elephants are driven back into their own lines",
    "text": "The elephants were repulsed and fled back to their own lines. Many of their mahouts had been struck down, and the maddened animals trampled many of their own infantry and cavalry.",
    "quote": "The elephants were eventually repulsed and fled back to their own lines.",
@@ -346,7 +387,7 @@
   },
   {
    "title": "The phalanx advances and the cavalry charges from behind",
-   "text": "The Macedonian foot locked their shields and advanced on the confused enemy mass while the cavalry charged from the rear. The whole Indian army was routed, and Craterus's force, having crossed the river, pursued the fleeing Indians.",
+   "text": "The Macedonian foot locked their shields and advanced on the confused enemy mass while the cavalry charged from the rear. The whole Indian army was put to rout.",
    "quote": "Finally, the Macedonian pezhetairoi locked their shields and advanced upon the confused enemy mass",
    "at": {
     "phalanx": [
@@ -363,11 +404,6 @@
      82,
      24,
      270
-    ],
-    "crat": [
-     14,
-     31,
-     90
     ]
    },
    "state": {
@@ -387,6 +423,25 @@
     [
      "coenus",
      "inf"
+    ]
+   ]
+  },
+  {
+   "title": "Craterus crosses and pursues the fleeing Indians",
+   "text": "Meanwhile Craterus and his force in the base camp had succeeded in crossing the river. They arrived at the right moment and conducted a thorough pursuit of the fleeing Indians.",
+   "quote": "Meanwhile, Craterus and his force in the base camp had succeeded in crossing the river",
+   "at": {
+    "crat": [
+     28,
+     22,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "crat",
+     "inf",
+     -0.1
     ]
    ]
   }

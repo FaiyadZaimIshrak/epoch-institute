@@ -14,7 +14,7 @@
    }
   ]
  },
- "note": "The battle lasted three days (1 to 3 July 1863) and the plan draws it at the scale of corps on one plan, so distances are not to scale: the accounts put the two ridges about a mile apart. Positions on the town side and the lie of the hills are placed by judgement from the directions the accounts give. Ewell's attacks on Culp's Hill and East Cemetery Hill on 2 July, Hood's fight at Little Round Top and the cavalry action southwest of town are left out. The accounts do not say what became of Buford's cavalry after the first morning, so it is taken off the plan once the I Corps has fallen back.",
+ "note": "The battle lasted three days (1 to 3 July 1863) and the plan draws it at the scale of corps on one plan, so distances are not to scale: the accounts put the two ridges about a mile apart. Positions on the town side and the lie of the hills are placed by judgement from the directions the accounts give. Ewell's attacks on Culp's Hill and East Cemetery Hill on 2 July and the cavalry action southwest of town are left out. The accounts do not say what became of Buford's cavalry after the first morning, so it is taken off the plan once the I Corps has fallen back.",
  "terrain": [
   {
    "k": "town",
@@ -448,6 +448,24 @@
    "leader": "J. E. B. Stuart",
    "w": 8,
    "quote": "Stuart's cavalry division (three brigades), with the assistance of Jenkins' brigade, was sent to guard the Confederate left flank"
+  },
+  {
+   "id": "hood",
+   "side": "c",
+   "k": "infantry",
+   "name": "Hood's division",
+   "short": "Hood",
+   "w": 6,
+   "quote": "Hood's division moved more to the east than intended, losing its alignment with the Emmitsburg Road, attacking Devil's Den and Little Round Top."
+  },
+  {
+   "id": "v",
+   "side": "u",
+   "k": "infantry",
+   "name": "Union V Corps",
+   "short": "V Corps",
+   "w": 8,
+   "quote": "Meade was forced to send 20,000 reinforcements: the entire V Corps"
   }
  ],
  "phases": [
@@ -506,6 +524,55 @@
      "hill",
      "buford",
      -0.2
+    ]
+   ]
+  },
+  {
+   "title": "Davis and Archer are repelled on McPherson Ridge",
+   "text": "North of the pike Davis won a brief success against Cutler's brigade but was repelled with heavy losses near an unfinished railroad cut. South of it Archer's brigade attacked through Herbst Woods and the Iron Brigade captured him.",
+   "quote": "North of the pike, Davis gained a temporary success against Brigadier General Lysander Cutler's brigade but was repelled with heavy losses in an action around an unfinished railroad bed cut in the ridge.",
+   "at": {
+    "hill": [
+     14,
+     20,
+     90
+    ]
+   },
+   "how": {
+    "hill": "retreat"
+   },
+   "hits": [
+    [
+     "hill",
+     "i"
+    ],
+    [
+     "i",
+     "hill",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "Pettigrew and Pender drive the I Corps back",
+   "text": "Heth's whole division engaged, with Pettigrew's brigade flanking the Union line, and Pender's division was added to the assault. The I Corps was driven back through the Seminary grounds and the streets of Gettysburg.",
+   "quote": "Hill added Major General William Dorsey Pender's division to the assault, and the I Corps was driven back through the grounds of the Lutheran Seminary and Gettysburg streets.",
+   "at": {
+    "hill": [
+     20,
+     20,
+     90
+    ],
+    "i": [
+     29,
+     26,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "hill",
+     "i"
     ]
    ]
   },
@@ -645,6 +712,78 @@
    ]
   },
   {
+   "title": "Hood attacks Devil's Den and Little Round Top",
+   "text": "Meade sent in the V Corps among other reinforcements. Hood's division moved further east than intended and attacked Devil's Den and Little Round Top.",
+   "quote": "Hood's division moved more to the east than intended, losing its alignment with the Emmitsburg Road, attacking Devil's Den and Little Round Top.",
+   "at": {
+    "hood": [
+     47,
+     55,
+     90
+    ],
+    "v": [
+     61,
+     54,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "hood",
+     "iii"
+    ],
+    [
+     "hood",
+     "v"
+    ]
+   ]
+  },
+  {
+   "title": "McLaws overwhelms the III Corps at the Peach Orchard",
+   "text": "McLaws, coming in on Hood's left, drove several attacks into the thinly stretched III Corps in the Wheatfield and overwhelmed it in the Peach Orchard. The III Corps was virtually destroyed as a combat unit.",
+   "quote": "McLaws, coming in on Hood's left, drove multiple attacks into the thinly stretched III Corps in the Wheatfield and overwhelmed them in Sherfy's Peach Orchard.",
+   "at": {
+    "longstreet": [
+     43,
+     46,
+     70
+    ]
+   },
+   "hits": [
+    [
+     "longstreet",
+     "iii"
+    ]
+   ]
+  },
+  {
+   "title": "The Pennsylvania Reserves beat McLaws back",
+   "text": "McLaws's attack reached Plum Run Valley before the Pennsylvania Reserves division of the V Corps, coming down from Little Round Top, beat it back.",
+   "quote": "before being beaten back by the Pennsylvania Reserves division of the V Corps, moving down from Little Round Top",
+   "at": {
+    "v": [
+     57,
+     53,
+     270
+    ],
+    "longstreet": [
+     38,
+     49,
+     70
+    ]
+   },
+   "how": {
+    "longstreet": "retreat"
+   },
+   "hits": [
+    [
+     "v",
+     "longstreet",
+     0.25
+    ]
+   ]
+  },
+  {
    "title": "Pickett's Charge crosses the open ground",
    "when": "Around 3 p.m., 3 July",
    "text": "After a long bombardment, Pickett's division and brigades from Hill's corps stepped off the ridge and advanced to Cemetery Ridge. To the northeast Stuart's cavalry met Gregg's division and Custer's brigade, who stopped it reaching the rear of the Union infantry.",
@@ -674,6 +813,28 @@
     [
      "stuart",
      "gregg"
+    ]
+   ]
+  },
+  {
+   "title": "The charge is repelled at the Angle",
+   "text": "The Union line wavered and broke for a time at the Angle, but reinforcements rushed into the breach and the Confederate attack was repelled. Nearly half of the attackers did not return to their own lines.",
+   "quote": "Although the Union line wavered and broke temporarily at a jog called The Angle in a low stone fence, just north of a patch of vegetation called the Copse of Trees, reinforcements rushed into the breach, and the Confederate attack was repelled.",
+   "at": {
+    "pickett": [
+     57,
+     38,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "pickett",
+     "ii"
+    ],
+    [
+     "ii",
+     "pickett"
     ]
    ]
   }

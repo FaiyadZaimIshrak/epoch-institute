@@ -264,8 +264,8 @@
    ]
   },
   {
-   "title": "Bayezid's counterattack routs the Serbian infantry",
-   "text": "Bayezid led a counterattack that drove the Serbian forces back, and later in the day the Ottomans routed the Serbian infantry. Both flanks still held, and the Bosnians drifted toward the centre to cover the losses.",
+   "title": "Bayezid's counterattack pushes the Serbs back",
+   "text": "The Ottomans, in a ferocious counterattack led by Bayezid, pushed the Serbian forces back. The Janissaries came forward again in the centre.",
    "quote": "The Ottomans, in a ferocious counterattack led by Bayezid, pushed the Serbian forces back and then prevailed later in the day, routing the Serbian infantry.",
    "at": {
     "oa": [
@@ -279,21 +279,19 @@
      270
     ],
     "sc": [
-     36,
+     38,
      31,
      90
     ],
     "sv": [
-     44,
-     22,
+     48,
+     15,
      90
     ]
    },
    "how": {
-    "sc": "rout"
-   },
-   "state": {
-    "sc": "routed"
+    "sc": "retreat",
+    "sv": "retreat"
    },
    "hits": [
     [
@@ -307,23 +305,73 @@
    ]
   },
   {
-   "title": "Branković leaves and the rest yield the field",
-   "text": "Branković saw no hope of victory and withdrew with as many men as he could. Some time afterwards the remaining Bosnian and Serbian forces gave up the field.",
-   "quote": "Sometime after Branković's retreat from the battle, the remaining Bosnian and Serb forces yielded the field",
+   "title": "The Serbian infantry is routed",
+   "text": "Later in the day the Ottomans prevailed and routed the Serbian infantry, which broke and fell back from the centre of the field.",
+   "quote": "then prevailed later in the day, routing the Serbian infantry.",
+   "at": {
+    "oj": [
+     50,
+     29,
+     270
+    ],
+    "sc": [
+     30,
+     31,
+     90
+    ]
+   },
+   "how": {
+    "sc": "rout"
+   },
+   "state": {
+    "sc": "routed"
+   },
+   "hits": [
+    [
+     "oj",
+     "sc"
+    ]
+   ]
+  },
+  {
+   "title": "The Bosnians drift towards the centre",
+   "text": "Both flanks still held. Vuković's Bosnian troops drifted toward the centre to make up for the heavy losses of the Serbian infantry.",
+   "quote": "Both flanks still held, with Vuković's Bosnian troops drifting toward the center to compensate for the heavy losses inflicted on the Serbian infantry.",
+   "at": {
+    "sv": [
+     44,
+     19,
+     90
+    ]
+   }
+  },
+  {
+   "title": "Branković withdraws",
+   "text": "Branković saw that there was no hope of victory and withdrew from the field with as many of his men as he could save.",
+   "quote": "saw that there was no hope for victory and fled to save as many men as he could",
    "at": {
     "sr": [
      16,
      52,
      90
-    ],
+    ]
+   },
+   "how": {
+    "sr": "retreat"
+   }
+  },
+  {
+   "title": "The remaining forces yield the field",
+   "text": "Some time after Branković's retreat the remaining Bosnian and Serbian forces gave up the field, believing that victory was no longer possible.",
+   "quote": "Sometime after Branković's retreat from the battle, the remaining Bosnian and Serb forces yielded the field",
+   "at": {
     "sv": [
-     32,
-     20,
+     34,
+     17,
      90
     ]
    },
    "how": {
-    "sr": "retreat",
     "sv": "retreat"
    }
   }

@@ -292,19 +292,14 @@
    }
   },
   {
-   "title": "The first day: archers, then the Medes",
+   "title": "Xerxes's archers shoot first",
    "when": "First day",
-   "text": "Xerxes ordered 5,000 archers to shoot, but the arrows were deflected. He then sent 10,000 Medes and Cissians forward in a frontal assault against the Greeks, who fought in front of the wall.",
-   "quote": "The Persians soon launched a frontal assault, in waves of around 10,000 men, on the Greek position.",
+   "text": "On the first day Xerxes ordered 5,000 archers to shoot a barrage of arrows. They shot from at least 100 yards away, and the Greeks' wooden shields and bronze helmets deflected the arrows.",
+   "quote": "First, he ordered 5,000 archers to shoot a barrage of arrows, but they were ineffective",
    "at": {
     "archers": [
      56,
      12,
-     270
-    ],
-    "medes": [
-     48,
-     24,
      270
     ]
    },
@@ -312,7 +307,22 @@
     [
      "archers",
      "sparta"
-    ],
+    ]
+   ]
+  },
+  {
+   "title": "The Medes attack the Greek line",
+   "when": "First day",
+   "text": "Xerxes sent 10,000 Medes and Cissians forward, and the Persians launched a frontal assault in waves of about 10,000 men. The Greeks fought in front of the Phocian wall, at the narrowest part of the pass.",
+   "quote": "The Persians soon launched a frontal assault, in waves of around 10,000 men, on the Greek position.",
+   "at": {
+    "medes": [
+     48,
+     24,
+     270
+    ]
+   },
+   "hits": [
     [
      "medes",
      "sparta"
@@ -339,10 +349,10 @@
    ]
   },
   {
-   "title": "Ephialtes shows the mountain path",
-   "when": "Evening of the second day",
-   "text": "Xerxes stopped the assault and withdrew to his camp. A Trachinian named Ephialtes then told him of the mountain path, and Hydarnes set out that evening with the Immortals to encircle the Greeks.",
-   "quote": "Xerxes sent his commander Hydarnes that evening, with the men under his command, the Immortals, to encircle the Greeks via the path.",
+   "title": "Xerxes withdraws to his camp",
+   "when": "Second day",
+   "text": "Xerxes stopped the assault and withdrew to his camp, as the Persians had had no more success than on the first day.",
+   "quote": "Xerxes at last stopped the assault and withdrew to his camp",
    "at": {
     "archers": [
      64,
@@ -356,7 +366,7 @@
     ],
     "imm": [
      76,
-     54,
+     38,
      270
     ]
    },
@@ -367,13 +377,26 @@
    }
   },
   {
-   "title": "The Persians pass the Phocians",
+   "title": "Ephialtes shows the mountain path",
+   "when": "Evening of the second day",
+   "text": "A Trachinian named Ephialtes told Xerxes of the mountain path around Thermopylae. Hydarnes set out that evening with the Immortals to encircle the Greeks.",
+   "quote": "Xerxes sent his commander Hydarnes that evening, with the men under his command, the Immortals, to encircle the Greeks via the path.",
+   "at": {
+    "imm": [
+     76,
+     54,
+     270
+    ]
+   }
+  },
+  {
+   "title": "The Phocians see the Persian column",
    "when": "Daybreak of the third day",
-   "text": "The Phocians guarding the path saw the Persian column and withdrew to a nearby hill to make a stand. The Persians shot a volley of arrows at them and went on with the encirclement.",
+   "text": "The Phocians guarding the path became aware of the outflanking Persian column. They retreated to a nearby hill to make their stand, assuming the Persians had come to attack them.",
    "quote": "The Phocians retreated to a nearby hill to make their stand",
    "at": {
     "imm": [
-     38,
+     50,
      54,
      270
     ],
@@ -381,6 +404,21 @@
      22,
      56,
      90
+    ]
+   },
+   "how": {
+    "phoc": "retreat"
+   }
+  },
+  {
+   "title": "The Persians bypass the Phocians",
+   "text": "Not wishing to be delayed, the Persians merely shot a volley of arrows at the Phocians. They then went on past them with the encirclement of the main Greek force.",
+   "quote": "not wishing to be delayed, the Persians merely shot a volley of arrows at them, before bypassing them",
+   "at": {
+    "imm": [
+     38,
+     54,
+     270
     ]
    },
    "hits": [
@@ -391,15 +429,29 @@
    ]
   },
   {
-   "title": "The Greeks sally from the wall",
-   "text": "Leonidas let his allies leave, and many did. The Spartans and Thespians marched out from the wall into the wider part of the pass and met a Persian force of 10,000 light infantry and cavalry. Leonidas was killed.",
-   "quote": "The Greeks this time sallied forth from the wall to meet the Persians in the wider part of the pass",
+   "title": "Leonidas lets his allies leave",
+   "text": "Learning that his army had been encircled, Leonidas told his allies that they could leave if they wanted to. Many did, and around 2,000 soldiers stayed behind.",
+   "quote": "Upon discovering that his army had been encircled, Leonidas told his allies that they could leave if they wanted to.",
    "at": {
     "allies": [
      8,
      44,
      270
-    ],
+    ]
+   },
+   "how": {
+    "allies": "retreat"
+   },
+   "state": {
+    "allies": "gone"
+   }
+  },
+  {
+   "title": "The Greeks sally from the wall",
+   "when": "Dawn of the third day",
+   "text": "A Persian force of 10,000 light infantry and cavalry charged the front of the Greek formation. The Spartans and Thespians marched out from the wall to meet it in the wider part of the pass. Leonidas was killed.",
+   "quote": "The Greeks this time sallied forth from the wall to meet the Persians in the wider part of the pass",
+   "at": {
     "sparta": [
      44,
      34,
@@ -416,12 +468,6 @@
      270
     ]
    },
-   "how": {
-    "allies": "retreat"
-   },
-   "state": {
-    "allies": "gone"
-   },
    "hits": [
     [
      "light",
@@ -434,8 +480,46 @@
    ]
   },
   {
+   "title": "The Greeks withdraw to the hill",
+   "text": "As the Immortals approached, the Greeks withdrew from the wall and took a stand on a hill behind it. The Spartans and Thespians moved there together.",
+   "quote": "As the Immortals approached, the Greeks withdrew and took a stand on a hill behind the wall.",
+   "at": {
+    "sparta": [
+     12,
+     24,
+     90
+    ],
+    "thesp": [
+     12,
+     32,
+     90
+    ],
+    "imm": [
+     30,
+     46,
+     270
+    ]
+   },
+   "how": {
+    "sparta": "retreat",
+    "thesp": "retreat"
+   }
+  },
+  {
+   "title": "The Thebans surrender",
+   "text": "The Thebans moved away from their companions and advanced towards the Persians with their hands upraised. A few were killed before their surrender was accepted.",
+   "quote": "a few were slain before their surrender was accepted",
+   "at": {
+    "thebes": [
+     44,
+     16,
+     90
+    ]
+   }
+  },
+  {
    "title": "The last stand on the hill",
-   "text": "As the Immortals approached, the Greeks withdrew to a hill behind the wall. Most of the Thebans surrendered. Xerxes had part of the wall torn down and the hill surrounded, and the Persians shot arrows until the Greeks on it were dead.",
+   "text": "Xerxes had part of the wall torn down and the hill surrounded, and the Persians shot arrows until every last Greek was dead.",
    "quote": "Tearing down part of the wall, Xerxes ordered the hill surrounded, and the Persians rained down arrows until every last Greek was dead.",
    "at": {
     "sparta": [

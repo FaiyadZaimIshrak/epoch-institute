@@ -12,56 +12,14 @@
    "k": "sea",
    "name": "The bay",
    "unnamed": true,
-   "at": [
-    [
-     6,
-     6
-    ],
-    [
-     50,
-     3
-    ],
-    [
-     94,
-     6
-    ],
-    [
-     96,
-     32
-    ],
-    [
-     94,
-     58
-    ],
-    [
-     50,
-     60
-    ],
-    [
-     6,
-     58
-    ],
-    [
-     4,
-     32
-    ]
-   ],
-   "lab": [
-    86,
-    10
-   ],
+   "at": [[6, 6], [50, 3], [94, 6], [96, 32], [94, 58], [50, 60], [6, 58], [4, 32]],
+   "lab": [86, 10],
    "quote": "ships to be chained together, forming a long string within the bay"
   }
  ],
  "sides": [
-  {
-   "id": "s",
-   "name": "Southern Song"
-  },
-  {
-   "id": "y",
-   "name": "Yuan"
-  }
+  {"id": "s", "name": "Southern Song"},
+  {"id": "y", "name": "Yuan"}
  ],
  "units": [
   {
@@ -146,41 +104,13 @@
    "text": "The Song ships lay chained in a long string in the bay, with the emperor's boat in the middle. Zhang Hongfan split his ships into four parts: three for the Song's east, north and south sides, and one under his own command a short way off.",
    "quote": "The next day Zhang Hongfan split his naval forces into four parts",
    "at": {
-    "fn": [
-     50,
-     22,
-     90
-    ],
-    "emp": [
-     50,
-     32,
-     90
-    ],
-    "fs": [
-     50,
-     42,
-     90
-    ],
-    "yn": [
-     50,
-     8,
-     180
-    ],
-    "ye": [
-     74,
-     32,
-     270
-    ],
-    "ys": [
-     50,
-     54,
-     0
-    ],
-    "hf": [
-     24,
-     32,
-     90
-    ]
+    "fn": [50, 22, 90],
+    "emp": [50, 32, 90],
+    "fs": [50, 42, 90],
+    "yn": [50, 8, 180],
+    "ye": [74, 32, 270],
+    "ys": [50, 54, 0],
+    "hf": [24, 32, 90]
    },
    "state": {}
   },
@@ -189,103 +119,67 @@
    "text": "The Yuan north squadron engaged the Song fleet first and was driven back. The Song ships stayed chained where they lay, and the rest of the Yuan force held its places.",
    "quote": "First, the north flank engaged the Song forces but were repulsed.",
    "at": {
-    "yn": [
-     50,
-     7,
-     180
-    ]
+    "yn": [50, 7, 180]
    },
    "how": {
     "yn": "retreat"
    },
-   "hits": [
-    [
-     "yn",
-     "fn"
-    ]
-   ]
+   "hits": [["yn", "fn"]]
   },
   {
    "title": "Zhang Hongfan attacks from the front",
    "when": "Noon",
-   "text": "After the Yuan played festive music, which led the Song to think they were feasting, Zhang Hongfan attacked from the front with more soldiers hidden under cloth. Waves of arrows hit the Song ships, and seven ships were lost at once.",
+   "text": "The Yuan played festive music, which led the Song to think they were feasting and to lower their guard. At noon Zhang Hongfan attacked from the front, with more soldiers hidden under large pieces of cloth.",
    "quote": "At noon Zhang Hongfan attacked from the front, hiding additional soldiers under large pieces of cloth.",
    "at": {
-    "hf": [
-     30,
-     32,
-     90
-    ]
+    "hf": [30, 32, 90]
+   }
+  },
+  {
+   "title": "The horn sounds and arrows fall on the Song ships",
+   "text": "Once Zhang Hongfan's boats neared the Song fleet, the Yuan sounded the horn of battle and the soldiers under the cloth were seen. Waves of arrows hit the Song ships, which lost seven ships at once.",
+   "quote": "Once Zhang Hongfan's boats neared the Song fleet, the Yuan sounded the horn of battle, revealing the soldiers under the fabric.",
+   "at": {
+    "hf": [33, 32, 90]
    },
-   "hits": [
-    [
-     "hf",
-     "fn",
-     0.2
-    ]
-   ]
+   "hits": [["hf", "fn", 0.2]]
+  },
+  {
+   "title": "Close fighting on the chained ships",
+   "text": "The ill and weakened Song soldiers were no match for the Yuan troops in close combat, and the chaos made command impossible. The chained Song ships could not support the middle or retreat.",
+   "quote": "The ill and weakened Song soldiers were no match for the Yuan troops in close combat",
+   "at": {
+    "hf": [36, 32, 90]
+   },
+   "hits": [["hf", "fn", 0.2], ["hf", "fs", -0.2]]
   },
   {
    "title": "Zhang Shijie tries to break out",
    "text": "The chained Song ships could neither support the middle nor retreat, and command broke down. Zhang Shijie cut about a dozen ships from the formation in an attempt to save the emperor.",
    "quote": "The chained Song ships could neither support the middle nor retreat.",
    "at": {
-    "out": [
-     60,
-     40,
-     270
-    ],
-    "ye": [
-     70,
-     32,
-     270
-    ],
-    "ys": [
-     50,
-     53,
-     0
-    ],
-    "hf": [
-     36,
-     32,
-     90
-    ]
+    "out": [60, 40, 270],
+    "ye": [70, 32, 270],
+    "ys": [50, 53, 0],
+    "hf": [36, 32, 90]
    },
    "state": {
     "out": "shown"
    },
-   "hits": [
-    [
-     "ye",
-     "out"
-    ],
-    [
-     "ys",
-     "fs"
-    ]
-   ]
+   "hits": [["ye", "out"], ["ys", "fs"]]
   },
   {
    "title": "The Yuan reach the emperor's boat",
    "text": "The Yuan advanced quickly to the centre and to Zhao Bing, killing everyone in their way. Lu Xiufu took the boy emperor and jumped into the sea, and both drowned. Zhang Shijie escaped the battle.",
    "quote": "The Yuan forces quickly advanced to the center and to Zhao Bing, killing everyone in their way.",
    "at": {
-    "hf": [
-     44,
-     32,
-     90
-    ]
+    "hf": [44, 32, 90]
    },
    "state": {
     "emp": "destroyed",
     "out": "gone"
    },
-   "hits": [
-    [
-     "hf",
-     "emp"
-    ]
-   ]
+   "hits": [["hf", "emp"]]
   }
  ]
 }

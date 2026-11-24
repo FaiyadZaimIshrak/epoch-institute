@@ -391,23 +391,13 @@
    ]
   },
   {
-   "title": "Fresh French cavalry charge",
-   "text": "The attack was beaten off, and Alençon was among those killed. A fresh body of French cavalry repeated the charge over ground littered with dead men and horses, and Edward sent a detachment from his reserve to help.",
-   "quote": "Fresh forces of French cavalry moved into position at the foot of the hill and repeated Alençon's charge.",
+   "title": "The first charge is beaten off",
+   "text": "The English men-at-arms and spearmen received a charge that had lost much of its force, and the hand-to-hand fighting that followed was fierce. Alençon was among those killed, and the French attack was beaten off.",
+   "quote": "Alençon was among those killed. The French attack was beaten off.",
    "at": {
     "alencon": [
      16,
      46,
-     180
-    ],
-    "lorraine": [
-     37,
-     35,
-     0
-    ],
-    "detach": [
-     47,
-     22,
      180
     ]
    },
@@ -415,8 +405,26 @@
     "alencon": "rout"
    },
    "state": {
-    "alencon": "routed",
-    "detach": "shown"
+    "alencon": "routed"
+   },
+   "hits": [
+    [
+     "wales",
+     "alencon",
+     0.3
+    ]
+   ]
+  },
+  {
+   "title": "Fresh French cavalry repeat the charge",
+   "text": "A fresh body of French cavalry moved up to the foot of the hill and charged over ground littered with dead and wounded men and horses. They were too disordered to break into the English formation, and a long mêlée followed.",
+   "quote": "Fresh forces of French cavalry moved into position at the foot of the hill and repeated Alençon's charge.",
+   "at": {
+    "lorraine": [
+     37,
+     35,
+     0
+    ]
    },
    "hits": [
     [
@@ -428,7 +436,24 @@
      "archw",
      "lorraine",
      -0.15
-    ],
+    ]
+   ]
+  },
+  {
+   "title": "Edward sends a detachment from the reserve",
+   "text": "With the Prince of Wales hard pressed, Edward sent forward a detachment from his reserve battle to rescue the situation, and the French were repulsed again.",
+   "quote": "Edward sent forward a detachment from his reserve battle to rescue the situation.",
+   "at": {
+    "detach": [
+     47,
+     22,
+     180
+    ]
+   },
+   "state": {
+    "detach": "shown"
+   },
+   "hits": [
     [
      "detach",
      "lorraine",

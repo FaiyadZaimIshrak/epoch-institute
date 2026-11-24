@@ -353,9 +353,9 @@
    ]
   },
   {
-   "title": "The five beaches are landed on",
-   "when": "06:30 to 07:30",
-   "text": "The 4th Division landed at Utah at 06:30, south of its intended place. Omaha's obstacles were largely undamaged and its fire from the cliffs was heavy. Gold was landed from 07:25, Sword from 07:30, and Juno after a delay.",
+   "title": "Utah and Omaha are landed on",
+   "when": "From 06:30",
+   "text": "The 8th Infantry Regiment of the 4th Division landed first at Utah at 06:30, about 1,800 metres south of its intended place. At Omaha, where the 1st and 29th Divisions came ashore, obstacles were largely undamaged and fire from the cliffs was heavy.",
    "quote": "Members of the 8th Infantry Regiment of the 4th Infantry Division were the first to land, arriving at 06:30.",
    "at": {
     "utah": [
@@ -367,7 +367,30 @@
      42,
      24.5,
      180
+    ]
+   },
+   "hits": [
+    [
+     "utah",
+     "g919"
     ],
+    [
+     "omaha",
+     "g352"
+    ],
+    [
+     "g352",
+     "omaha",
+     0.3
+    ]
+   ]
+  },
+  {
+   "title": "Gold, Sword and Juno are landed on",
+   "when": "From 07:25",
+   "text": "Landings at Gold were set for 07:25 and infantry began disembarking at Sword at 07:30. At Juno the landing was delayed by choppy seas, and the men arrived ahead of their supporting armour and suffered many casualties.",
+   "quote": "The first landings on Gold Beach were set for 07:25 because of the differences in the tide between there and the US beaches.",
+   "at": {
     "gold": [
      57,
      24.5,
@@ -386,19 +409,6 @@
    },
    "hits": [
     [
-     "utah",
-     "g919"
-    ],
-    [
-     "omaha",
-     "g352"
-    ],
-    [
-     "g352",
-     "omaha",
-     0.3
-    ],
-    [
      "gold",
      "g716"
     ],
@@ -414,21 +424,59 @@
    ]
   },
   {
-   "title": "The beachheads push inland",
-   "when": "Through the day",
-   "text": "Combat teams left Utah from about 09:00 and met the airborne troops. At Omaha barely 600 men had reached the higher ground by late morning. At Gold, Juno and Sword fortified towns were cleared house by house and one battalion came within a few kilometres of Caen.",
-   "quote": "Exit from the beach was possible only via five heavily defended gullies, and by late morning barely 600 men had reached the higher ground.",
+   "title": "Combat teams leave Utah Beach",
+   "when": "From about 09:00",
+   "text": "Combat teams began to leave Utah at around 09:00, some infantry wading through flooded fields. They skirmished with the 919th Grenadier Regiment through the day, and the 4th Division made a rendezvous with the airborne troops.",
+   "quote": "Combat teams began to exit the beach at around 09:00, with some infantry wading through the flooded fields rather than travelling on the single road.",
    "at": {
     "utah": [
      12,
      36,
      180
     ],
+    "usair": [
+     11,
+     43,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "utah",
+     "g919",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "Barely 600 men reach the heights at Omaha",
+   "when": "Late morning",
+   "text": "Exit from Omaha was possible only through five heavily defended gullies, and by late morning barely 600 men had reached the higher ground. By noon the Americans were able to clear some lanes on the beaches.",
+   "quote": "Exit from the beach was possible only via five heavily defended gullies, and by late morning barely 600 men had reached the higher ground.",
+   "at": {
     "omaha": [
      42,
      27.5,
      180
+    ]
+   },
+   "hits": [
+    [
+     "omaha",
+     "g352"
     ],
+    [
+     "g352",
+     "omaha",
+     0.3
+    ]
+   ]
+  },
+  {
+   "title": "Fortified towns are cleared at Gold, Juno and Sword",
+   "text": "At Gold, Juno and Sword the fortified towns were cleared in house-to-house fighting. The 2nd Battalion, King's Shropshire Light Infantry advanced on Caen to within a few kilometres of the town but had to withdraw for lack of armour support.",
+   "quote": "At Gold, Juno, and Sword, several fortified towns were cleared in house-to-house fighting",
+   "at": {
     "gold": [
      57,
      27.5,
@@ -443,28 +491,9 @@
      82,
      37,
      180
-    ],
-    "usair": [
-     11,
-     43,
-     0
     ]
    },
    "hits": [
-    [
-     "utah",
-     "g919",
-     0.2
-    ],
-    [
-     "omaha",
-     "g352"
-    ],
-    [
-     "g352",
-     "omaha",
-     0.3
-    ],
     [
      "gold",
      "g716"

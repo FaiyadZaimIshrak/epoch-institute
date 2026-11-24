@@ -14,7 +14,7 @@
    }
   ]
  },
- "note": "The Takeda order of battle (four lines in the fish-scale formation) is the one given in the Kōyō Gunkan, a Takeda family record. The accounts do not give the Tokugawa formations' exact places beyond a line with Honda Tadakatsu's segment on the right, a left and a centre, and the Oda reinforcements alongside. The Oda force is placed at the right rear and the arquebusiers in front of the line by judgement. The plain lay just north of Hamamatsu; the Takeda are drawn at the top and the spacing of their lines is schematic. The first and second Takeda lines are drawn as one cavalry body.",
+ "note": "The Takeda order of battle (four lines in the fish-scale formation) is the one given in the Kōyō Gunkan, a Takeda family record. The accounts do not give the Tokugawa formations' exact places beyond a line with Honda Tadakatsu's segment on the right, a left and a centre, and the Oda reinforcements alongside. The Oda force is placed at the right rear and the arquebusiers in front of the line by judgement. The plain lay just north of Hamamatsu; the Takeda are drawn at the top and the spacing of their lines is schematic. The first and second Takeda lines are drawn as one cavalry body. The Takeda right wing that advanced on the Tokugawa left is not placed in the accounts: it is drawn at its first appearance on the western flank, as cavalry like the other attacks, though the accounts do not say what troops it held.",
  "terrain": [],
  "sides": [
   {
@@ -65,6 +65,15 @@
    "short": "Main body",
    "w": 14,
    "quote": "the footsoldier-heavy main body of the Takeda army"
+  },
+  {
+   "id": "tkr",
+   "side": "t",
+   "k": "cavalry",
+   "name": "Takeda right wing",
+   "short": "T. right",
+   "w": 7,
+   "quote": "shrugged off the advance of the Takeda right, preventing an encirclement of the Tokugawa center"
   },
   {
    "id": "arq",
@@ -203,13 +212,13 @@
    ]
   },
   {
-   "title": "The Oda force is routed and the rear is charged",
-   "text": "The Takeda horsemen turned on the Oda reinforcements, who were quickly overrun and routed, and then charged the Tokugawa rear.",
-   "quote": "Takeda horsemen exploited the opening and rapidly assaulted the accompanying Oda reinforcements before charging the Tokugawa rear.",
+   "title": "The Oda reinforcements are routed",
+   "text": "Takeda horsemen exploited the opening and quickly assaulted the Oda reinforcements, who were overrun and routed. Their officer Hirate Hirohide was killed, and Sakuma Nobumori and Takigawa Kazumasu fled the battle.",
+   "quote": "Oda forces were quickly overrun and routed, with officer Hirate Hirohide killed, and Sakuma Nobumori and Takigawa Kazumasu fleeing the battle.",
    "at": {
     "tka": [
-     72,
-     55,
+     84,
+     48,
      180
     ],
     "oda": [
@@ -229,7 +238,21 @@
      "tka",
      "oda",
      0.2
-    ],
+    ]
+   ]
+  },
+  {
+   "title": "The Takeda horse charge the Tokugawa rear",
+   "text": "Having exploited the opening and assaulted the Oda reinforcements, the Takeda horsemen went on to charge the Tokugawa rear, which put them behind the Tokugawa centre.",
+   "quote": "Takeda horsemen exploited the opening and rapidly assaulted the accompanying Oda reinforcements before charging the Tokugawa rear.",
+   "at": {
+    "tka": [
+     72,
+     55,
+     180
+    ]
+   },
+   "hits": [
     [
      "tka",
      "toc",
@@ -238,15 +261,48 @@
    ]
   },
   {
-   "title": "A second Takeda attack breaks the line",
-   "text": "Shingen withdrew his vanguard to rest and sent fresh horsemen under Katsuyori in a two-pronged charge, closely followed by the main body. Their weight drove the Tokugawa army into a disorderly retreat.",
-   "quote": "They were closely followed by the footsoldier-heavy main body of the Takeda army, whose combined weight drove the already battered Tokugawa army into a disorderly retreat.",
+   "title": "The attack on the Tokugawa left is thrown back",
+   "text": "A similar attack on the Tokugawa left was thwarted. The Tokugawa units there refused to yield ground and shrugged off the advance of the Takeda right, which prevented an encirclement of the centre.",
+   "quote": "A similar attack on the left was thwarted as Tokugawa units refused to yield ground and shrugged off the advance of the Takeda right, preventing an encirclement of the Tokugawa center.",
+   "at": {
+    "tkr": [
+     22,
+     34,
+     180
+    ]
+   },
+   "hits": [
+    [
+     "tkr",
+     "tol"
+    ]
+   ]
+  },
+  {
+   "title": "Shingen rests his vanguard and brings up fresh horse",
+   "text": "Shingen withdrew his vanguard to rest. He brought forward a new set of horsemen from the main body of the army, under Takeda Katsuyori, Obata Masamori and Saegusa Moritomo.",
+   "quote": "Shingen then withdrew his vanguard, offering them an opportunity to rest.",
    "at": {
     "tka": [
      84,
      28,
      0
     ],
+    "tkb": [
+     36,
+     26,
+     180
+    ]
+   },
+   "how": {
+    "tka": "retreat"
+   }
+  },
+  {
+   "title": "A two-pronged charge and the main body break the line",
+   "text": "The fresh horsemen led a two-pronged cavalry charge into the weakening Tokugawa line, closely followed by the main body. Their combined weight drove the already battered Tokugawa army into a disorderly retreat.",
+   "quote": "They were closely followed by the footsoldier-heavy main body of the Takeda army, whose combined weight drove the already battered Tokugawa army into a disorderly retreat.",
+   "at": {
     "tkb": [
      36,
      33,
@@ -269,7 +325,6 @@
     ]
    },
    "how": {
-    "tka": "retreat",
     "toc": "retreat",
     "tol": "retreat"
    },
@@ -292,8 +347,8 @@
   },
   {
    "title": "Ieyasu flees and his units are overrun",
-   "text": "Ieyasu left the field, and several of his retainers died as their units were encircled and overrun. The Takeda vanguard under Baba Nobuharu and Yamagata Masakage came on and stopped short of Hamamatsu to make camp for the night.",
-   "quote": "they mistakenly assumed that Ieyasu had planned a trap and stopped to make camp for the night at their present position short of Hamamatsu.",
+   "text": "Convinced by his retainers that his life was too important, Ieyasu fled the field. Several of his retainers died as their units were encircled and overrun by the Takeda forces.",
+   "quote": "Convinced by his retainers that as head of the Tokugawa clan his life was too important, Ieyasu fled the field.",
    "at": {
     "toc": [
      34,
@@ -303,11 +358,6 @@
     "tol": [
      20,
      54,
-     180
-    ],
-    "tkd": [
-     46,
-     50,
      180
     ]
    },
@@ -331,24 +381,28 @@
    ]
   },
   {
-   "title": "A night raid and the Takeda withdrawal",
+   "title": "The Takeda vanguard stops short of Hamamatsu",
+   "text": "Ieyasu returned to Hamamatsu with five men and ordered the gates left open and braziers lit. The Takeda vanguard under Baba Nobuharu and Yamagata Masakage took this for a trap and stopped to make camp for the night short of the town.",
+   "quote": "they mistakenly assumed that Ieyasu had planned a trap and stopped to make camp for the night at their present position short of Hamamatsu.",
+   "at": {
+    "tkd": [
+     46,
+     50,
+     180
+    ]
+   }
+  },
+  {
+   "title": "A night raid throws the Takeda vanguard into confusion",
    "when": "That night",
-   "text": "A small band of Tokugawa foot soldiers and gunners attacked the Takeda camp and threw the vanguard into confusion. Shingen, uncertain of the Tokugawa strength, decided to withdraw to his own territories.",
+   "text": "A band of about one hundred Tokugawa foot soldiers and 16 matchlock gunners under Ōkubo Tadayo and Amano Yasukage attacked the Takeda camp and threw the vanguard of the Takeda army into confusion.",
    "quote": "attacked the Takeda camp, throwing the vanguard of the Takeda army into confusion.",
    "at": {
     "raid": [
      56,
      56,
      0
-    ],
-    "tkd": [
-     60,
-     46,
-     0
     ]
-   },
-   "how": {
-    "tkd": "retreat"
    },
    "hits": [
     [
@@ -356,6 +410,45 @@
      "tkd"
     ]
    ]
+  },
+  {
+   "title": "Shingen decides to withdraw",
+   "text": "Uncertain of the Tokugawa strength, and worried that reinforcements from Oda Nobunaga or Uesugi Kenshin were on their way, Shingen decided to withdraw his forces to his own territories.",
+   "quote": "Uncertain of the remaining strength of the Tokugawa forces, and worried that reinforcements from Oda Nobunaga or Uesugi Kenshin were on their way, Takeda Shingen decided to withdraw his forces back to his own territories.",
+   "at": {
+    "tka": [
+     84,
+     12,
+     0
+    ],
+    "tkb": [
+     38,
+     14,
+     0
+    ],
+    "tkc": [
+     66,
+     12,
+     0
+    ],
+    "tkd": [
+     62,
+     25,
+     0
+    ],
+    "tkr": [
+     22,
+     20,
+     0
+    ]
+   },
+   "how": {
+    "tka": "retreat",
+    "tkb": "retreat",
+    "tkc": "retreat",
+    "tkd": "retreat",
+    "tkr": "retreat"
+   }
   }
  ]
 }

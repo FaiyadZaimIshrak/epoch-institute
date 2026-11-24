@@ -434,16 +434,30 @@
    ]
   },
   {
-   "title": "The tower reaches the wall and the crusaders enter",
+   "title": "The tower is pushed up against the wall",
    "when": "Midday, 15 July 1099",
-   "text": "The attack was resumed, and when the tower was pushed up against the wall the crusaders got into the city. Godfrey and Tancred led the way, and the defenders near Mount Zion fought on against Raymond's men.",
-   "quote": "When the tower was pushed right up against the wall, the cursaders were able to enter the city.",
+   "text": "The attack was resumed at midday on Friday 15 July. The southern army pushed the siege tower right up against the wall, after the ram had been abandoned the day before.",
+   "quote": "When the tower was pushed right up against the wall",
    "at": {
     "tower": [
      40,
      45,
      0
-    ],
+    ]
+   },
+   "hits": [
+    [
+     "tower",
+     "garrison"
+    ]
+   ]
+  },
+  {
+   "title": "The crusaders enter the city",
+   "when": "15 July 1099",
+   "text": "The crusaders were able to enter the city, with Godfrey and Tancred in the vanguard. Near Mount Zion the defenders still fought fiercely against Raymond's men.",
+   "quote": "the cursaders were able to enter the city",
+   "at": {
     "godfrey": [
      64,
      37,
@@ -461,10 +475,6 @@
     ]
    },
    "hits": [
-    [
-     "tower",
-     "garrison"
-    ],
     [
      "godfrey",
      "garrison"

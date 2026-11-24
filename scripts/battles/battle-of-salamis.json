@@ -15,7 +15,7 @@
    }
   ]
  },
- "note": "The accounts do not say which shore lay on which side. Salamis is drawn on the west and the mainland with Mount Aigaleo on the east, which fits a Greek line running north to south with the Persian Phoenicians on the right next to Mount Aigaleo. The accounts give the fleets as lines, not as separate squadrons, so each block stands for a wing or the centre. One ancient account puts the Allied line north to south, another east to west, which is thought unlikely. The Allied right is probably the Spartans, though another account names the Megareans and Aeginetans. The Persians may have entered the straits at nightfall or only at dawn. Where the Aeginetans stood and where the detachment of Aristides set out from are not given, so they are placed by judgement. The Egyptian squadron sent round Salamis is left out, as only one account has it. The wedge that split the Persian centre is shown by the Allied centre pressing into it; the accounts do not place it more closely.",
+ "note": "The accounts do not say which shore lay on which side. Salamis is drawn on the west and the mainland with Mount Aigaleo on the east, which fits a Greek line running north to south with the Persian Phoenicians on the right next to Mount Aigaleo. The accounts give the fleets as lines, not as separate squadrons, so each block stands for a wing or the centre. One ancient account puts the Allied line north to south, another east to west, which is thought unlikely. The Allied right is probably the Spartans, though another account names the Megareans and Aeginetans. The Persians may have entered the straits at nightfall or only at dawn. Where the Aeginetans stood and where the detachment of Aristides set out from are not given, so they are placed by judgement. The Egyptian squadron sent round Salamis is left out, as only one account has it. The wedge that split the Persian centre is shown by the Allied centre pressing into it; the accounts do not place it more closely. The first ship to ram is drawn ahead of the Allied centre; the accounts do not say whose ship it was.",
  "terrain": [
   {
    "k": "land",
@@ -272,6 +272,15 @@
    "short": "Psyttaleia",
    "w": 5,
    "quote": "Xerxes had also positioned around 400 troops on the island known as Psyttaleia"
+  },
+  {
+   "id": "lead",
+   "side": "g",
+   "k": "ships",
+   "name": "First Greek ship to ram",
+   "short": "First ship",
+   "w": 4,
+   "quote": "a single ship shot forward to ram the nearest Persian vessel"
   }
  ],
  "phases": [
@@ -367,8 +376,26 @@
    }
   },
   {
-   "title": "One ship rams and the whole line follows",
-   "text": "A single ship shot forward to ram the nearest Persian vessel, and the whole Greek line followed it towards the disordered Persian line. The Athenians and the Aeginetans each claimed the first ship as theirs.",
+   "title": "One ship shoots forward to ram",
+   "text": "While the Allies were backing water, a single ship shot forward to ram the nearest Persian vessel. The Athenians claimed it as the ship of Ameinias of Pallene, and the Aeginetans as one of theirs.",
+   "quote": "a single ship shot forward to ram the nearest Persian vessel",
+   "at": {
+    "lead": [
+     44,
+     24,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "lead",
+     "pcentre"
+    ]
+   ]
+  },
+  {
+   "title": "The whole Greek line follows",
+   "text": "The whole Greek line followed the first ship and made straight for the Persian battle line, which had become disorganised and cramped in the narrow water.",
    "quote": "The whole Greek line then followed suit and made straight for the disordered Persian battle line.",
    "at": {
     "athens": [
@@ -386,6 +413,9 @@
      44,
      90
     ]
+   },
+   "state": {
+    "lead": "gone"
    },
    "hits": [
     [
@@ -452,9 +482,9 @@
    ]
   },
   {
-   "title": "The Persian fleet retreats towards Phalerum",
-   "text": "The Persian fleet began to retreat towards Phalerum, and the Aeginetans ambushed it as it tried to leave the straits. The remaining ships limped back to the harbour and the shelter of the Persian army.",
-   "quote": "The Persian fleet began to retreat towards Phalerum, but according to Herodotus, the Aeginetans ambushed them as they tried to leave the Straits.",
+   "title": "The Persian fleet begins to retreat",
+   "text": "The Persian fleet began to retreat towards Phalerum, the centre and the Ionians turning back towards the exit from the straits.",
+   "quote": "The Persian fleet began to retreat towards Phalerum",
    "at": {
     "pcentre": [
      76,
@@ -465,7 +495,18 @@
      80,
      54,
      90
-    ],
+    ]
+   },
+   "how": {
+    "pcentre": "retreat",
+    "ionian": "retreat"
+   }
+  },
+  {
+   "title": "The Aeginetans ambush the retreating ships",
+   "text": "According to Herodotus the Aeginetans ambushed the Persians as they tried to leave the straits. The remaining Persian ships limped back to the harbour of Phalerum and the shelter of the Persian army.",
+   "quote": "the Aeginetans ambushed them as they tried to leave the Straits. The remaining Persian ships limped back to the harbour of Phalerum and the shelter of the Persian army.",
+   "at": {
     "gcentre": [
      66,
      30,
@@ -481,10 +522,6 @@
      55,
      90
     ]
-   },
-   "how": {
-    "pcentre": "retreat",
-    "ionian": "retreat"
    },
    "hits": [
     [

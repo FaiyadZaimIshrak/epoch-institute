@@ -259,9 +259,9 @@
    ]
   },
   {
-   "title": "Alexander's wedge strikes the Persian centre",
-   "text": "Alexander drew his Companions out of the fight, formed a large wedge with other units and led it into the Persian centre, while the phalanx kept the Persian infantry engaged. By the widely held view, Darius then broke and fled.",
-   "quote": "the widely held modern view is that he now broke and ran, with the rest of his army following him",
+   "title": "Alexander's wedge smashes into the Persian centre",
+   "text": "Alexander drew his Companions out of the fight and formed a large wedge with other units. He led it into the weakened Persian centre while the phalanx kept the Persian infantry engaged, and it took out Darius' royal guard and the Greek mercenaries.",
+   "quote": "This large wedge then smashed into the weakened Persian center, taking out Darius' royal guard and the Greek mercenaries.",
    "at": {
     "alex": [
      64,
@@ -272,18 +272,7 @@
      46,
      26,
      0
-    ],
-    "darius": [
-     50,
-     6,
-     0
     ]
-   },
-   "how": {
-    "darius": "rout"
-   },
-   "state": {
-    "darius": "routed"
    },
    "hits": [
     [
@@ -297,8 +286,26 @@
    ]
   },
   {
-   "title": "Parmenion is hard pressed and a gap opens",
-   "text": "Parmenion's wing was apparently encircled and sent desperate messages, and Alexander turned back to help instead of pursuing Darius. A gap had opened in the phalanx, and Persian and Indian cavalry broke through towards the camp.",
+   "title": "Darius turns and flees",
+   "text": "Darius was in danger of being cut off. By the widely held modern view he now broke and ran, with the rest of his army following him.",
+   "quote": "the widely held modern view is that he now broke and ran, with the rest of his army following him",
+   "at": {
+    "darius": [
+     50,
+     6,
+     0
+    ]
+   },
+   "how": {
+    "darius": "rout"
+   },
+   "state": {
+    "darius": "routed"
+   }
+  },
+  {
+   "title": "Parmenion is hard pressed and Alexander turns back",
+   "text": "Parmenion's wing was apparently encircled by the Persian right and sent desperate messages. Alexander could have pursued Darius but turned back to help Parmenion instead.",
    "quote": "Parmenion's wing was apparently encircled by the cavalry of the Persian right wing; being attacked from all sides, it was in a state of confusion.",
    "at": {
     "mazaeus": [
@@ -310,7 +317,20 @@
      21,
      28,
      270
-    ],
+    ]
+   },
+   "hits": [
+    [
+     "mazaeus",
+     "parm"
+    ]
+   ]
+  },
+  {
+   "title": "A gap opens and raiders ride for the camp",
+   "text": "A gap had opened between the left and centre of the phalanx. The Persian and Indian cavalry broke through it and rode on towards the Macedonian camp to loot.",
+   "quote": "The Persian and Indian cavalry in the center with Darius broke through.",
+   "at": {
     "raiders": [
      34,
      42,
@@ -319,25 +339,40 @@
    },
    "hits": [
     [
-     "mazaeus",
-     "parm"
-    ],
-    [
      "raiders",
      "camp"
     ]
    ]
   },
   {
-   "title": "The raiders are dispersed and the Persian right gives way",
-   "text": "The rear reserve phalanx attacked and dispersed the raiders as they looted. Alexander fought the Persian right-wing cavalry and Mazaeus began to pull his forces back, and they fell into disorder under the Thessalian charge.",
+   "title": "The reserve phalanx disperses the raiders",
+   "text": "The rear reserve phalanx attacked the raiders as they were looting and dispersed them. They had not taken the phalanx or Parmenion in the rear.",
    "quote": "These raiders were in turn attacked and dispersed by the rear reserve phalanx as they were looting.",
    "at": {
     "raiders": [
      33,
      53,
      180
-    ],
+    ]
+   },
+   "how": {
+    "raiders": "rout"
+   },
+   "state": {
+    "raiders": "routed"
+   },
+   "hits": [
+    [
+     "reserve",
+     "raiders"
+    ]
+   ]
+  },
+  {
+   "title": "Alexander fights the Persian right and Mazaeus pulls back",
+   "text": "Alexander and his Companions met the cavalry of the Persian right in what was the fiercest fighting of the battle. Alexander prevailed, and Mazaeus began to pull his forces back, as Bessus had on the other wing.",
+   "quote": "Alexander prevailed, however, and Mazaeus also began to pull his forces back as Bessus had.",
+   "at": {
     "alex": [
      30,
      33,
@@ -355,23 +390,34 @@
     ]
    },
    "how": {
-    "raiders": "rout",
     "mazaeus": "retreat",
     "bessus": "retreat"
    },
-   "state": {
-    "raiders": "routed",
-    "mazaeus": "routed"
-   },
    "hits": [
-    [
-     "reserve",
-     "raiders"
-    ],
     [
      "alex",
      "mazaeus"
-    ],
+    ]
+   ]
+  },
+  {
+   "title": "The Persian right falls into disorder",
+   "text": "Unlike the Persians on the left with Bessus, those on the right soon fell into disorder as the Thessalians and other cavalry units charged forward at their fleeing enemy.",
+   "quote": "However, unlike on the left with Bessus, the Persians soon fell into disorder as the Thessalians and other cavalry units charged forward at their fleeing enemy.",
+   "at": {
+    "mazaeus": [
+     8,
+     22,
+     0
+    ]
+   },
+   "how": {
+    "mazaeus": "rout"
+   },
+   "state": {
+    "mazaeus": "routed"
+   },
+   "hits": [
     [
      "parm",
      "mazaeus"

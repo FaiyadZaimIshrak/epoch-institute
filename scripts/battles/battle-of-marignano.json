@@ -264,23 +264,30 @@
    ]
   },
   {
-   "title": "Night fighting by moonlight",
-   "text": "Smoke and darkness hid the fighting. French cavalry charges, often led by the king, threw back temporary Swiss gains, and the pursuing horse of the first counter-attack fell back a full kilometre after heavy losses.",
-   "quote": "Furious French cavalry charges, often led by the king himself, with Bayard at his side, succeeded time and again in throwing back temporary Swiss gains.",
+   "title": "The pursuing French horse fall back",
+   "text": "The French horse that chased the forlorn hope were themselves forced to retreat a full kilometre after taking heavy losses.",
+   "quote": "The pursuing French horse were themselves forced to retreat back a full kilometer after taking heavy losses.",
    "at": {
     "bourbon": [
      47,
      9,
      270
-    ],
+    ]
+   },
+   "how": {
+    "bourbon": "retreat"
+   }
+  },
+  {
+   "title": "Night fighting by moonlight",
+   "text": "Smoke and darkness hid the fighting. French cavalry charges, often led by the king himself with Bayard at his side, threw back temporary Swiss gains time and again, and the outcome hung in the balance.",
+   "quote": "Furious French cavalry charges, often led by the king himself, with Bayard at his side, succeeded time and again in throwing back temporary Swiss gains.",
+   "at": {
     "king": [
      50,
      38,
      270
     ]
-   },
-   "how": {
-    "bourbon": "retreat"
    },
    "state": {
     "hope": "gone"
@@ -294,10 +301,36 @@
    ]
   },
   {
+   "title": "The fighting stops in the darkest hours",
+   "text": "In the darkest hours the fighting stopped and both armies drew apart and reorganised. During the night some Swiss soldiers, and even whole units, slipped away from the field.",
+   "quote": "In the darkest hours, the fighting stopped, and both armies extracted themselves and reorganized.",
+   "at": {
+    "van": [
+     20,
+     31,
+     90
+    ],
+    "king": [
+     58,
+     33,
+     270
+    ],
+    "lands": [
+     40,
+     31,
+     270
+    ]
+   },
+   "how": {
+    "van": "retreat",
+    "king": "retreat"
+   }
+  },
+  {
    "title": "The Swiss charge the guns again at dawn",
    "when": "The morning of 14 September",
-   "text": "The Swiss reformed their largest phalanx and charged the reassembled battery. Point-blank cannon fire slowed it and stopped it pushing farther, though the Landsknechts were again driven back, and a cavalry charge led by Bayard forced the Swiss to give ground.",
-   "quote": "Still another French cavalry charge, this time led by Bayard, forced the attacking Swiss to give ground.",
+   "text": "The Swiss reformed their largest phalanx and charged the reassembled battery once more. Massed cannon fire slowed it, and though the Landsknechts were again driven back, the guns at point blank range stopped it pushing farther.",
+   "quote": "Again, the defending German landsknechts were driven back; but the massed fire of the guns at point blank range prevented the Swiss from pushing farther forward.",
    "at": {
     "van": [
      30,
@@ -322,7 +355,29 @@
      "guns",
      "van",
      0.15
+    ]
+   ]
+  },
+  {
+   "title": "Bayard's cavalry charge forces the Swiss back",
+   "text": "Another French cavalry charge, this time led by Bayard, forced the attacking Swiss to give ground after the guns had checked their advance at point blank range.",
+   "quote": "Still another French cavalry charge, this time led by Bayard, forced the attacking Swiss to give ground.",
+   "at": {
+    "king": [
+     51,
+     36,
+     270
     ],
+    "van": [
+     26,
+     31,
+     90
+    ]
+   },
+   "how": {
+    "van": "retreat"
+   },
+   "hits": [
     [
      "king",
      "van",
@@ -349,23 +404,30 @@
    ]
   },
   {
-   "title": "The Venetians arrive and the Swiss withdraw",
+   "title": "The Venetians arrive",
    "when": "Mid-morning",
-   "text": "The Venetian forces under d'Alviano arrived and turned the tide. With their attacks repulsed everywhere, the Swiss gave ground and withdrew in a single large open square.",
-   "quote": "they grudgingly gave ground and withdrew by forming a single gigantic open square, maintaining extraordinary discipline in their retreat",
+   "text": "Allied Venetian forces under d'Alviano arrived in the mid-morning and turned the tide against the Swiss, whose attacks had been repulsed everywhere.",
+   "quote": "Only the mid-morning arrival of allied Venetian forces commanded by the condottiero Bartolomeo d'Alviano turned the tide against the Swiss.",
    "at": {
     "ven": [
      82,
      54,
      270
-    ],
+    ]
+   }
+  },
+  {
+   "title": "The Swiss withdraw in a single square",
+   "text": "With their ranks in bloody shambles, the Swiss gave ground grudgingly and withdrew by forming a single large open square, keeping strict discipline in their retreat.",
+   "quote": "they grudgingly gave ground and withdrew by forming a single gigantic open square, maintaining extraordinary discipline in their retreat",
+   "at": {
     "van": [
      20,
      31,
      90
     ],
     "div2": [
-     22,
+     20,
      17,
      90
     ],
@@ -377,6 +439,7 @@
    },
    "how": {
     "van": "retreat",
+    "div2": "retreat",
     "div3": "retreat"
    }
   }

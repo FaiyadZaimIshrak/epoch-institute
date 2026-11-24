@@ -14,7 +14,7 @@
    }
   ]
  },
- "note": "This plan shows the whole siege of 1521, not a single field: the blocks are divisions, fleets and the Mexica defenders. Directions follow the routes the accounts name (Tlacopan west, Coyohuacan and Iztapalapa south, Tlatelolco north, Texcoco east of the lake); they give no map, so the causeways and the camps are placed by judgement. They place Sandoval at Iztapalapa and also names the Tepeaquilla causeway for his sloops; the causeway drawn to the south-east stands for both.",
+ "note": "This plan shows the whole siege of 1521, not a single field: the blocks are divisions, fleets and the Mexica defenders. Directions follow the routes the accounts name (Tlacopan west, Coyohuacan and Iztapalapa south, Tlatelolco north, Texcoco east of the lake); they give no map, so the causeways and the camps are placed by judgement. They place Sandoval at Iztapalapa and also names the Tepeaquilla causeway for his sloops; the causeway drawn to the south-east stands for both. Alvarado's charge at the Tacuba Causeway is drawn on his own division. The battle at Colhuacatonco is drawn on Olid's division, in whose camp Cortés had stayed; the accounts do not say which camp was struck.",
  "terrain": [
   {
    "k": "lake",
@@ -319,8 +319,25 @@
    }
   },
   {
+   "title": "Alvarado and Olid march to Chapultepec",
+   "text": "Alvarado and Olid marched first towards Chapultepec to cut the Mexica off from their water supply. Springs there fed much of the city by aqueduct, and the rest of its water came in by canoe.",
+   "quote": "The forces under Alvarado and Olid marched first towards Chapultepec to disconnect the Aztecs from their water supply.",
+   "at": {
+    "alvarado": [
+     12,
+     44,
+     180
+    ],
+    "olid": [
+     22,
+     52,
+     270
+    ]
+   }
+  },
+  {
    "title": "Alvarado and Olid are pushed back at Tlacopan",
-   "text": "Alvarado and Olid marched to Chapultepec to cut the city's spring water, then tried to cross the Tlacopan causeway. The Mexica drove them back with attacks by land and by canoe.",
+   "text": "Alvarado and Olid then tried to bring their forces over the causeway at Tlacopan. The Mexica drove them back and halted the assault with a hard-fought counterattack by land and by canoe.",
    "quote": "The two generals then tried to bring their forces over the causeway at Tlacopan, resulting in the Battle of Tlacopan. The Aztec forces managed to push back the Spanish and halt this assault on the capital with a determined and hard-fought land and naval counterattack.",
    "at": {
     "alvarado": [
@@ -464,6 +481,35 @@
    }
   },
   {
+   "title": "The Mexica ambush two Spanish launches",
+   "text": "The Mexica set an ambush with thirty pirogues in water where they had fixed impaling stakes. They captured two Spanish launches and killed Captains Juan de la Portilla and Pedro Barba.",
+   "quote": "the Aztecs were successful in setting an ambush with thirty of their pirogues in an area in which they had placed impaling stakes. They captured two Spanish launches, killing Captains Juan de la Portilla and Pedro Barba.",
+   "at": {
+    "canoes": [
+     59,
+     35,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "canoes",
+     "cortes"
+    ]
+   ]
+  },
+  {
+   "title": "The Spaniards spring a counter-ambush",
+   "text": "After capturing two chieftains, Cortés learned of a plot to ambush his launches with forty pirogues. He met it with six launches, killing many warriors and taking many prisoners, and the Mexica laid no more ambushes.",
+   "quote": "Cortés then organized a counter-ambush with six of his launches, which was successful, \"killing many warriors and taking many prisoners.\"",
+   "hits": [
+    [
+     "cortes",
+     "canoes"
+    ]
+   ]
+  },
+  {
    "title": "Cuauhtemoc attacks all three camps",
    "when": "Feast day of St. John",
    "text": "Cuauhtemoc attacked all three Spanish camps at once with his entire army. The Spanish kept their camps on the causeways.",
@@ -491,34 +537,96 @@
    ]
   },
   {
-   "title": "The camps close on Tlatelolco and the canoes are cut off",
-   "text": "The three camps advanced together towards the Tlatelolco marketplace, and the defending army was destroyed. As hundreds of canoes fled the city, Cortés sent the sloops to intercept them.",
-   "quote": "Cortés ordered Sandoval to attack that part of the city in which Cuauhtémoc had retreated. As hundreds of canoes filled the lake fleeing the doomed city, Cortés sent his brigantines out to intercept them.",
+   "title": "Alvarado's charge on the Tacuba Causeway is cut off",
+   "when": "Feast day of St. John",
+   "text": "Alvarado charged his cavalry across a gap in the Tacuba Causeway. As he came out on the other side with the infantry behind, Aztec canoes filled the gap. He was wounded along with eight men, and five of his men were captured.",
+   "quote": "Pedro de Alvarado made a mad cavalry charge across a gap in the Causeway. As Alvarado and his cavalry emerged on the other side of the gap with the infantry behind, Aztec canoes filled the gap.",
    "at": {
     "alvarado": [
-     42,
+     40,
+     29,
+     90
+    ],
+    "canoes": [
+     65,
+     22,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "canoes",
+     "alvarado"
+    ]
+   ]
+  },
+  {
+   "title": "Cortés pushes on to the market and is thrown back",
+   "text": "Cortés pushed forward towards the Mexican market square but did not fill in a channel as he advanced. The Mexica counter-attacked, Cortés was wounded and almost captured, and sixty-five Spanish soldiers were taken alive.",
+   "quote": "Cortés then decided to push forward a simultaneous attack towards the Mexican market square, resulting in what is now known as the Battle of Colhuacatonco. However, he neglected to fill in a channel as he advanced, and when the Aztec counter-attacked, Cortés was wounded and almost captured.",
+   "at": {
+    "olid": [
+     37,
+     43,
+     35
+    ]
+   },
+   "hits": [
+    [
+     "defenders",
+     "olid"
+    ]
+   ]
+  },
+  {
+   "title": "Alvarado reaches Tlatelolco first",
+   "text": "Cortés ordered all three camps to advance together on the Tlatelolco marketplace. Alvarado's company arrived first, and Gutierrez de Badajoz climbed the Huichilopotzli temple, set it on fire and planted Spanish banners.",
+   "quote": "Cortés then ordered a simultaneous advance of all three camps towards the Tlatelolco marketplace. Alvarado's company made it there first, and Gutierrez de Badajoz advanced to the top of the Huichilopotzli cu, setting it afire and planting their Spanish banners.",
+   "at": {
+    "alvarado": [
+     36,
      18,
      60
+    ]
+   }
+  },
+  {
+   "title": "Cortés's and Sandoval's men join Alvarado",
+   "when": "After four more days of fighting",
+   "text": "The men of Cortés and Sandoval joined Alvarado's company after four more days of fighting. The Spaniards and their allies went on into the city, and the Mexica, though they inflicted heavy casualties, could not halt them.",
+   "quote": "Cortés' and Sandoval's men were able to join them there after four more days of fighting.",
+   "at": {
+    "olid": [
+     38,
+     38,
+     35
+    ],
+    "sandoval": [
+     62,
+     38,
+     325
     ],
     "sl_a": [
      32,
      32,
      90
     ],
-    "olid": [
-     38,
-     38,
-     35
-    ],
     "sl_o": [
      28,
      42,
      45
-    ],
-    "sandoval": [
-     62,
-     38,
-     325
+    ]
+   }
+  },
+  {
+   "title": "Sandoval attacks and the sloops intercept the canoes",
+   "text": "Cortés ordered Sandoval to attack the part of the city where Cuauhtemoc had retreated. Hundreds of canoes fled the city and Cortés sent the sloops to intercept them, and the Mexica forces were destroyed.",
+   "quote": "Cortés ordered Sandoval to attack that part of the city in which Cuauhtémoc had retreated. As hundreds of canoes filled the lake fleeing the doomed city, Cortés sent his brigantines out to intercept them.",
+   "at": {
+    "alvarado": [
+     42,
+     18,
+     60
     ],
     "cortes": [
      70,

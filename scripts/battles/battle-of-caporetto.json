@@ -362,9 +362,27 @@
    }
   },
   {
-   "title": "Gas and the bombardment",
-   "when": "24 October 1917",
-   "text": "At 02:00 gas projectors fired near Bovec, and the defenders fled their trenches. At 06:41 2,200 guns opened fire on the front.",
+   "title": "Gas near Bovec",
+   "when": "24 October 1917, 02:00",
+   "text": "In the north, near Bovec, 894 tubes were fired electrically and smothered the Italian trenches in poison gas. The defenders fled, and 500 to 600 of them were killed.",
+   "quote": "smothering the Italian trenches in a dense cloud of poison gas",
+   "hits": [
+    [
+     "below",
+     "iv",
+     -0.1
+    ],
+    [
+     "below",
+     "xxvii",
+     0.1
+    ]
+   ]
+  },
+  {
+   "title": "Mortars and the guns open fire",
+   "when": "24 October 1917, 06:41",
+   "text": "After a quiet spell, mortars bombarded the Italian wire and trenches at 06:00. At 06:41 2,200 guns opened fire, many aimed at the valley road along which Italian reserves were advancing.",
    "quote": "At 06:41, 2,200 guns opened fire, many targeting the valley road along which reserves were advancing to plug the gap.",
    "hits": [
     [
@@ -428,24 +446,31 @@
    }
   },
   {
-   "title": "The Italian retreat to the Tagliamento",
+   "title": "Cadorna orders the retreat",
    "when": "30 October 1917",
-   "text": "Cadorna ordered most of the Italian force to retreat across the Tagliamento, and it took four days to cross. The Central Powers followed closely and ambushed the defenders whenever they could.",
+   "text": "Cadorna ordered most of the Italian force to retreat across the Tagliamento, which took four full days. The attackers were close behind.",
    "quote": "Finally, on 30 October 1917, Cadorna ordered the majority of the Italian force to retreat to the other side of the Tagliamento.",
    "at": {
     "main": [
-     28,
+     43,
      31,
      90
-    ],
-    "below": [
-     44,
-     31,
-     270
     ]
    },
    "how": {
     "main": "retreat"
+   }
+  },
+  {
+   "title": "The pursuers ambush the retreating Italians",
+   "text": "The German and Austro-Hungarian armies were on the heels of the Italians and ambushed the defenders whenever they could.",
+   "quote": "the German and Austro-Hungarian armies were on their heels, ambushing the defenders whenever they could",
+   "at": {
+    "below": [
+     49,
+     31,
+     270
+    ]
    },
    "hits": [
     [
@@ -453,6 +478,21 @@
      "main"
     ]
    ]
+  },
+  {
+   "title": "The Italians break through the encirclement",
+   "text": "The retreating Italian soldiers broke through the Austro-German encirclement and reached the Tagliamento, where the crossing continued.",
+   "quote": "the retreating Italian soldiers were able to break through the Austro-German encirclement and retreat to the Tagliamento",
+   "at": {
+    "main": [
+     28,
+     31,
+     90
+    ]
+   },
+   "how": {
+    "main": "retreat"
+   }
   },
   {
    "title": "A bridgehead over the Tagliamento",

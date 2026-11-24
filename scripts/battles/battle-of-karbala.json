@@ -340,15 +340,45 @@
    ]
   },
   {
-   "title": "The tents are burned and Husayn's companions are encircled",
-   "text": "Because the Kufans could approach only from the front, Ibn Sa'd ordered the tents burned, except the one Husayn and his family used. The flames hindered the Umayyad advance for a while. After noon prayers Husayn's companions were encircled.",
-   "quote": "Ibn Sa'd ordered all of the tents, except the one which Husayn and his family were using, to be burned.",
+   "title": "Husayn's cavalrymen dismount",
+   "text": "Arrows wounded the horses of Husayn's cavalrymen, who dismounted and fought on foot. The Kufan archers kept shooting at both of Husayn's flanks.",
+   "quote": "After their horses were wounded by arrows, Husayn's cavalrymen dismounted and fought on foot.",
+   "hits": [
+    [
+     "arch",
+     "hl",
+     -0.2
+    ],
+    [
+     "arch",
+     "hr",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The tents are burned",
+   "text": "Because the Kufans could approach only from the front, Ibn Sa'd ordered the tents burned, except the one Husayn and his family used. The flames hindered the Umayyad advance for a while.",
+   "quote": "The plan backfired and the flames hindered the Umayyad advance for a while.",
    "at": {
     "cav": [
      50,
      31,
      90
-    ],
+    ]
+   },
+   "hits": [
+    [
+     "cav",
+     "tents"
+    ]
+   ]
+  },
+  {
+   "title": "Husayn's companions are encircled",
+   "text": "After noon prayers Husayn's companions were encircled, and almost all of them were killed. The Kufan wings closed on the two flanks from north and south.",
+   "quote": "After noon prayers, Husayn's companions were encircled, and almost all of them were killed.",
+   "at": {
     "kl": [
      64,
      10,
@@ -362,10 +392,6 @@
    },
    "hits": [
     [
-     "cav",
-     "tents"
-    ],
-    [
      "kl",
      "hr"
     ],
@@ -376,26 +402,59 @@
    ]
   },
   {
-   "title": "Husayn's relatives fight and Husayn is killed",
-   "text": "Husayn's relatives, who had not fought until then, joined the battle, and among those slain was his son Ali al-Akbar. Shimr advanced with foot soldiers, the Kufans rushed at Husayn, and he was killed.",
-   "quote": "The Kufan soldiers then rushed at Husayn and wounded him on his hand and shoulder.",
+   "title": "Husayn's relatives join the fighting",
+   "text": "Husayn's relatives, who had not fought until then, joined the battle. His son Ali al-Akbar was killed, then his half-brothers, including Abbas, and sons of Aqil ibn Abi Talib, Ja'far ibn Abi Talib and Hasan ibn Ali.",
+   "quote": "Husayn's relatives, who had not taken part in the fighting so far, joined the battle.",
    "at": {
     "rel": [
      56,
      31,
      270
-    ],
-    "sf": [
-     77,
-     13,
-     180
     ]
    },
    "hits": [
     [
      "rel",
      "cav"
-    ],
+    ]
+   ]
+  },
+  {
+   "title": "Husayn goes towards the river",
+   "text": "The Umayyad soldiers hesitated to attack Husayn directly, but he was struck in the mouth by an arrow as he went to the river to drink. Later he was surrounded and struck on the head by Malik ibn Nusayr.",
+   "quote": "he was struck in the mouth by an arrow as he went to the river to drink",
+   "at": {
+    "husayn": [
+     76,
+     46,
+     180
+    ]
+   }
+  },
+  {
+   "title": "Shimr advances on Husayn",
+   "text": "Few people were left on Husayn's side. Shimr advanced towards him with a group of foot soldiers, and a young boy from Husayn's camp tried to defend him from a sword stroke.",
+   "quote": "Shimr advanced towards Husayn with a group of foot soldiers",
+   "at": {
+    "sf": [
+     76,
+     36,
+     180
+    ]
+   }
+  },
+  {
+   "title": "Husayn is killed",
+   "text": "Shimr urged the Kufan soldiers on, and they rushed at Husayn and wounded him on his hand and shoulder. He fell face-down and was then stabbed and decapitated by Sinan ibn Anas.",
+   "quote": "The Kufan soldiers then rushed at Husayn and wounded him on his hand and shoulder.",
+   "at": {
+    "sf": [
+     76,
+     41,
+     180
+    ]
+   },
+   "hits": [
     [
      "sf",
      "husayn"
@@ -405,7 +464,10 @@
      "husayn",
      0.3
     ]
-   ]
+   ],
+   "state": {
+    "husayn": "destroyed"
+   }
   }
  ]
 }

@@ -449,16 +449,30 @@
    }
   },
   {
-   "title": "Kilpatrick advances and the British take the larger tank",
-   "when": "About 15:00",
-   "text": "Major Kilpatrick advanced on his own with two companies and two field pieces towards the French position. Clive brought up the rest of the army behind him, and the French artillery retreated to the redoubt.",
-   "quote": "Clive himself then led the army against St. Frais' position, which was taken at 15:00 when the French artillery retreated to the redoubt of the entrenchment",
+   "title": "Kilpatrick advances on his own",
+   "when": "About 14:00",
+   "text": "Seeing the Nawab’s forces retire, Major Kilpatrick, left in charge while Clive rested in the hunting lodge, took two companies and two field pieces and advanced towards St. Frais’ position.",
+   "quote": "he took two companies of the 39th Regiment and two field pieces and advanced towards St. Frais' position",
    "at": {
     "kilp": [
      34,
      30,
      0
-    ],
+    ]
+   },
+   "hits": [
+    [
+     "kilp",
+     "french"
+    ]
+   ]
+  },
+  {
+   "title": "Clive leads the army against the French position",
+   "when": "About 15:00",
+   "text": "Clive hurried to the detachment and had Kilpatrick bring up the rest of the army from the grove. He then led the army against St. Frais, whose artillery retreated to the redoubt of the entrenchment.",
+   "quote": "Clive himself then led the army against St. Frais' position, which was taken at 15:00 when the French artillery retreated to the redoubt of the entrenchment",
+   "at": {
     "euro": [
      20,
      40,
@@ -484,10 +498,6 @@
     "french": "retreat"
    },
    "hits": [
-    [
-     "kilp",
-     "french"
-    ],
     [
      "euro",
      "french",
@@ -519,9 +529,33 @@
    ]
   },
   {
+   "title": "The British cannonade the camp from the larger tank",
+   "text": "British field pieces cannonaded the Nawab’s camp from the mound of the larger tank, and many of his troops and guns came out of the entrenchment. Clive moved half his troops and guns to the smaller tank and half to rising ground.",
+   "quote": "Meanwhile, the British field pieces began a cannonade on the Nawab's camp from the mound of the larger tank.",
+   "at": {
+    "euro": [
+     24,
+     27,
+     0
+    ],
+    "sepl": [
+     14,
+     42,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "euro",
+     "madan",
+     0.15
+    ]
+   ]
+  },
+  {
    "title": "The British take the hill and the redoubt",
-   "when": "16:30 to 17:00",
-   "text": "Clive ordered a three-pronged attack on the redoubt and the hill east of it. Major Coote's grenadiers took the hill at 16:30, the redoubt fell after St. Frais retreated, and by 17:00 the British held the entrenchment and the camp.",
+   "when": "16:30",
+   "text": "Clive ordered a three-pronged attack on the redoubt and the hill east of it. Major Coote’s grenadiers took the hill at 16:30 after the enemy fled without firing a shot, and the redoubt fell after St. Frais was forced to retreat.",
    "quote": "Clive ordered a three-pronged attack with simultaneous attacks by two detachments on the redoubt and the hill supported by the main force in the centre.",
    "at": {
     "coote": [
@@ -538,7 +572,29 @@
      10,
      12,
      0
+    ]
+   },
+   "how": {
+    "french": "retreat"
+   },
+   "hits": [
+    [
+     "coote",
+     "french"
     ],
+    [
+     "euro",
+     "french",
+     0.25
+    ]
+   ]
+  },
+  {
+   "title": "The British hold the entrenchment and the camp",
+   "when": "By 17:00",
+   "text": "By 17:00 the British occupied the entrenchment and the camp left by a dispersing army. The Nawab’s divisions broke up and left the field.",
+   "quote": "By 17:00, the British occupied the entrenchment and the camp left by a dispersing army.",
+   "at": {
     "madan": [
      54,
      22,
@@ -556,7 +612,6 @@
     ]
    },
    "how": {
-    "french": "retreat",
     "madan": "rout",
     "rd": "rout",
     "ylk": "rout"
@@ -565,18 +620,7 @@
     "madan": "routed",
     "rd": "routed",
     "ylk": "routed"
-   },
-   "hits": [
-    [
-     "coote",
-     "french"
-    ],
-    [
-     "euro",
-     "french",
-     0.25
-    ]
-   ]
+   }
   }
  ]
 }

@@ -230,9 +230,9 @@
    }
   },
   {
-   "title": "The French advance and the cavalry charge the squares",
-   "text": "The French moved south in echelon and Desaix sent a detachment to occupy Biktil. Murad meant to hold them on his fortified flanks and strike their centre with cavalry, and repeated charges were made against the squares.",
-   "quote": "Murad’s plan was to hold the French on his fortified flanks and then strike their centre with cavalry. Repeated cavalry charges were directed against the French squares.",
+   "title": "The French advance and occupy Biktil",
+   "text": "The French moved south in echelon, each division holding its square, and Desaix sent a detachment to occupy the village of Biktil on Murad Bey’s left, where he had placed additional guns.",
+   "quote": "Desaix also sent a detachment to occupy the nearby village of Biktil.",
    "at": {
     "desaix": [
      14,
@@ -263,7 +263,14 @@
      14,
      36,
      180
-    ],
+    ]
+   }
+  },
+  {
+   "title": "Mamluk cavalry charge the squares",
+   "text": "Murad meant to hold the French on his fortified flanks and strike their centre with cavalry, and repeated charges were directed against the squares.",
+   "quote": "Repeated cavalry charges were directed against the French squares.",
+   "at": {
     "cav": [
      46,
      34,
@@ -280,7 +287,7 @@
   {
    "title": "The mass assault of about 15:30",
    "when": "About 15:30",
-   "text": "Murad ordered his defterdar, Ayyub Bey, to lead a mass assault. The divisions of Desaix, Reynier and Dugua held and repelled the horsemen with musketry and artillery, and some Mamluks who attacked Desaix’s detachment failed.",
+   "text": "Murad ordered his defterdar, Ayyub Bey, to lead a mass assault. The divisions of Desaix, Reynier and Dugua held firm and repelled the horsemen with musketry and artillery.",
    "quote": "At about 15:30 Murad ordered his defterdar, Ayyub Bey, to lead a mass assault.",
    "at": {
     "cav": [
@@ -302,11 +309,24 @@
     [
      "cav",
      "dugua"
-    ],
+    ]
+   ]
+  },
+  {
+   "title": "The Mamluks attack Desaix’s detachment",
+   "text": "After the assault failed, some of the Mamluks then attempted to attack Desaix’s detached force near Biktil, but without success.",
+   "quote": "Some of the Mamluks then attempted to attack Desaix’s detached force, but without success.",
+   "at": {
+    "cav": [
+     28,
+     38,
+     0
+    ]
+   },
+   "hits": [
     [
      "cav",
-     "detach",
-     -0.2
+     "detach"
     ]
    ]
   },

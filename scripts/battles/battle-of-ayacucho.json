@@ -311,23 +311,36 @@
    ]
   },
   {
-   "title": "Villalobos is pushed back and Monet is surrounded",
-   "text": "Córdova's fire pushed back Villalobos' scattered men. Monet crossed the ravine without waiting for his cavalry, formed two battalions and was surrounded by the independentist division before the rest of his troops could form.",
-   "quote": "he was surrounded before the rest of his troops could also form into battle order",
+   "title": "Córdova's fire pushes back Villalobos",
+   "text": "Córdova's division, firing steadily on the royalist formations, pushed back the scattered men of Villalobos' Second Division, who had come down onto the plain.",
+   "quote": "whose effective fire on the royalist formations pushed back the scattered fighters of Villalobos' Second Division",
    "at": {
     "villa": [
      80,
      12,
      180
-    ],
+    ]
+   },
+   "how": {
+    "villa": "retreat"
+   },
+   "hits": [
+    [
+     "cordoba",
+     "villa"
+    ]
+   ]
+  },
+  {
+   "title": "Monet crosses the ravine and is surrounded",
+   "text": "Seeing his left in trouble, Monet crossed the ravine without waiting for his cavalry and led his First Division against Córdova. He formed two battalions, but the independentist division surrounded him before the rest could form.",
+   "quote": "crossed the ravine and led his First division against Córdova, managing to form two of his battalions into battle order",
+   "at": {
     "monet": [
      62,
      30,
      180
     ]
-   },
-   "how": {
-    "villa": "retreat"
    },
    "hits": [
     [
@@ -341,8 +354,8 @@
    ]
   },
   {
-   "title": "Monet's division breaks and Ferraz charges",
-   "text": "Monet was wounded and his scattered divisions dragged the militia with them. Ferraz's cavalry charged the squadrons pursuing Monet's broken left, but crossfire from the infantry caused heavy casualties.",
+   "title": "Monet's division breaks",
+   "text": "Monet was wounded and three of his commanders were killed. The scattered royalist divisions dragged the masses of militia with them.",
    "quote": "the scattered divisions of the royalists dragged with them the masses of militia",
    "at": {
     "monet": [
@@ -354,11 +367,6 @@
      84,
      9,
      180
-    ],
-    "ferraz": [
-     68,
-     22,
-     270
     ]
    },
    "how": {
@@ -368,34 +376,17 @@
    "state": {
     "monet": "routed",
     "villa": "routed"
-   },
-   "hits": [
-    [
-     "ferraz",
-     "miller",
-     0.2
-    ]
-   ]
+   }
   },
   {
-   "title": "Valdés attacks the isolated building",
-   "text": "On the other flank, La Mar and Lara stopped the assault of Valdés' veterans, who had gone forward to take the isolated building. The independentists were reinforced and attacked again, helped by Córdova's division.",
-   "quote": "stopped the assault made by the veterans of Valdés' vanguard, who had launched themselves to take an isolated building",
+   "title": "Ferraz's cavalry charges and is driven off",
+   "text": "Ferraz's cavalry charged the squadrons pursuing Monet's broken left. Confusion and crossfire from the infantry caused heavy casualties, and the survivors hurriedly left the field.",
+   "quote": "The royalist cavalry under Valentín Ferraz y Barrau charged upon the enemy squadrons that pursued Monet's broken left",
    "at": {
-    "lara": [
-     42,
-     34,
-     0
-    ],
-    "cordoba": [
-     52,
-     30,
-     270
-    ],
     "ferraz": [
-     92,
-     19,
-     180
+     84,
+     22,
+     270
     ]
    },
    "how": {
@@ -406,11 +397,48 @@
    },
    "hits": [
     [
+     "ferraz",
+     "miller",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "La Mar and Lara stop Valdés' assault",
+   "text": "At the other end of the line, La Mar's and Lara's divisions together stopped the assault of Valdés' veterans, who had launched themselves at the isolated building held by some independentist companies.",
+   "quote": "stopped the assault made by the veterans of Valdés' vanguard, who had launched themselves to take an isolated building",
+   "at": {
+    "lara": [
+     42,
+     34,
+     0
+    ]
+   },
+   "hits": [
+    [
      "valdes",
      "lamar"
     ],
     [
      "lara",
+     "valdes"
+    ]
+   ]
+  },
+  {
+   "title": "Reinforced, the independentists attack again",
+   "text": "Defeated at first, the independentists were soon reinforced and went back to the attack, helped in the end by Córdova's victorious division.",
+   "quote": "the independentists were soon reinforced and went back to the attack, eventually helped by the victorious Córdova's division",
+   "at": {
+    "cordoba": [
+     52,
+     30,
+     270
+    ]
+   },
+   "hits": [
+    [
+     "lamar",
      "valdes"
     ],
     [

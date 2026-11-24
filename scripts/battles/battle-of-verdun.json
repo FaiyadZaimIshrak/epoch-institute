@@ -270,6 +270,24 @@
    "short": "Offensive",
    "w": 12,
    "quote": "the French began the First Offensive Battle of Verdun"
+  },
+  {
+   "id": "f129",
+   "side": "f",
+   "k": "infantry",
+   "name": "French 129th Infantry Regiment",
+   "short": "129th Inf",
+   "w": 6,
+   "quote": "the 129th Infantry Regiment reached the fort in a few minutes and managed to get in through the west and south sides"
+  },
+  {
+   "id": "fsouv",
+   "side": "f",
+   "k": "infantry",
+   "name": "Souville machine-gunners",
+   "short": "Souville",
+   "w": 5,
+   "quote": "sixty French machine-gunners, who had emerged from the fort and taken positions on the superstructure"
   }
  ],
  "phases": [
@@ -387,9 +405,47 @@
    ]
   },
   {
-   "title": "Fort Vaux is taken",
-   "when": "1 to 7 June",
-   "text": "The German attack shifted back to the right bank, south of Fort Douaumont. About 10,000 men assaulted Fort Vaux and the top was occupied on 2 June. Fighting continued underground until the garrison surrendered on 7 June.",
+   "title": "The French attack Fort Douaumont",
+   "when": "22 May",
+   "text": "After a bombardment begun on 17 May, the French attacked the fort. The 129th Infantry Regiment reached it in a few minutes and got in through the west and south sides, and by nightfall about half of the fort was recaptured.",
+   "quote": "the 129th Infantry Regiment reached the fort in a few minutes and managed to get in through the west and south sides",
+   "at": {
+    "f129": [
+     66,
+     37,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "f129",
+     "gparty"
+    ]
+   ]
+  },
+  {
+   "title": "The French in the fort are cut off",
+   "when": "23 to 25 May",
+   "text": "The 34th Division was sent to reinforce the French in the fort, but the attempt failed. German reserves cut off the French troops inside and forced them to surrender, and 1,000 French prisoners were taken.",
+   "quote": "German reserves managed to cut off the French troops inside and force them to surrender",
+   "hits": [
+    [
+     "geast",
+     "f129"
+    ],
+    [
+     "gparty",
+     "f129"
+    ]
+   ],
+   "state": {
+    "f129": "destroyed"
+   }
+  },
+  {
+   "title": "The top of Fort Vaux is occupied",
+   "when": "1 to 2 June",
+   "text": "The German attack shifted back to the right bank, south of Fort Douaumont. After a final assault by about 10,000 men on 1 June, the top of Fort Vaux was occupied on 2 June.",
    "quote": "After a final assault on 1 June by about 10,000 German troops, the top of Fort Vaux was occupied on 2 June.",
    "at": {
     "geast": [
@@ -408,20 +464,48 @@
      0
     ]
    },
-   "state": {
-    "fvaux": "destroyed"
-   },
    "hits": [
     [
      "gvaux",
      "fvaux"
+    ]
+   ],
+   "state": {
+    "f129": "gone"
+   }
+  },
+  {
+   "title": "The garrison of Fort Vaux surrenders",
+   "when": "2 to 7 June",
+   "text": "Fighting went on underground until the garrison ran out of water. The 574 survivors surrendered on 7 June, and when news reached Verdun the Line of Panic was occupied.",
+   "quote": "Fighting went on underground until the garrison ran out of water, the 574 survivors surrendering on 7 June",
+   "hits": [
+    [
+     "gvaux",
+     "fvaux"
+    ]
+   ],
+   "state": {
+    "fvaux": "destroyed"
+   }
+  },
+  {
+   "title": "Gas shells fall on the French guns",
+   "when": "22 June",
+   "text": "German artillery fired over 116,000 Diphosgene gas shells at French artillery positions. They caused over 1,600 casualties and silenced many of the French guns.",
+   "quote": "German artillery fired over 116,000 Diphosgene (Green Cross) gas shells at French artillery positions",
+   "hits": [
+    [
+     "gart",
+     "fart",
+     0.1
     ]
    ]
   },
   {
    "title": "The German salient towards Fort Souville",
    "when": "23 June",
-   "text": "After a gas bombardment the Germans attacked on a front of 5 km and drove a salient of 3 by 2 km into the French defences. They came within 5 km of the Verdun citadel before the French recaptured Chapelle Sainte-Fine and the advance stopped.",
+   "text": "At 5:00 a.m. the Germans attacked on a front of 5 km and drove a salient of 3 by 2 km into the French defences. They came within 5 km of the Verdun citadel before the French recaptured Chapelle Sainte-Fine and the advance stopped.",
    "quote": "the Germans attacked on a 3.1 mi (5 km) front and drove a 1.9 by 1.2 mi (3 by 2 km) salient into the French defences",
    "at": {
     "geast": [
@@ -432,13 +516,36 @@
    }
   },
   {
-   "title": "The French offensives regain the ground",
-   "when": "20 October to 5 November",
-   "text": "After a six-day bombardment French divisions attacked on 20 October and recaptured Fort Douaumont on 24 October. The Germans evacuated Fort Vaux on 2 November, and by 5 November the French were back at the front line of 24 February.",
-   "quote": "on 5 November, the French reached the front line of 24 February and offensive operations ceased until December",
+   "title": "The attack on Fort Souville",
+   "when": "11 to 12 July",
+   "text": "Three German divisions attacked, but the infantry bunched on the path to the fort and came under French artillery fire and under sixty machine-gunners who had come out of the fort. Thirty men reached the top on 12 July.",
+   "quote": "An attack by three German divisions began on 11 July, but German infantry bunched on the path leading to Fort Souville",
+   "at": {
+    "fsouv": [
+     60,
+     52,
+     0
+    ]
+   },
+   "hits": [
+    [
+     "geast",
+     "fsouv"
+    ],
+    [
+     "fsouv",
+     "geast"
+    ]
+   ]
+  },
+  {
+   "title": "The French retake Fort Douaumont",
+   "when": "20 to 25 October",
+   "text": "After a six-day bombardment French divisions attacked on 20 October behind a creeping barrage. The Germans had partly evacuated Fort Douaumont, and French marines and colonial infantry recaptured it on 24 October.",
+   "quote": "The Germans had partly evacuated Douaumont and it was recaptured on 24 October by French marines and colonial infantry",
    "at": {
     "foff": [
-     68,
+     62,
      40,
      0
     ],
@@ -446,6 +553,31 @@
      56,
      24,
      180
+    ]
+   },
+   "how": {
+    "geast": "retreat"
+   },
+   "state": {
+    "gparty": "gone"
+   },
+   "hits": [
+    [
+     "foff",
+     "geast"
+    ]
+   ]
+  },
+  {
+   "title": "The Germans evacuate Fort Vaux",
+   "when": "2 to 5 November",
+   "text": "An attempt on Fort Vaux failed, but the heaviest French artillery bombarded it for a week. On 2 November the Germans evacuated the fort, and by 5 November the French were back at the front line of 24 February.",
+   "quote": "on 5 November, the French reached the front line of 24 February and offensive operations ceased until December",
+   "at": {
+    "foff": [
+     70,
+     43,
+     0
     ],
     "gvaux": [
      82,
@@ -454,18 +586,12 @@
     ]
    },
    "how": {
-    "geast": "retreat",
     "gvaux": "retreat"
    },
    "state": {
-    "fvaux": "gone",
-    "gparty": "gone"
+    "fvaux": "gone"
    },
    "hits": [
-    [
-     "foff",
-     "geast"
-    ],
     [
      "foff",
      "gvaux"

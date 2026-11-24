@@ -30,18 +30,21 @@ var BattleMap = (function () {
   // f a filled shape, s a stroked line, c a line cut out of a filled shape (in the block's own colour), o a filled dot,
   // r a ring. A block holds one to four of them in a rank; each stands in a group that update() keeps upright.
   var IC = {
-    infantry: [['f', 'M-7 -10H7V0C7 6 3 9 0 11C-3 9 -7 6 -7 0Z'], ['c', 'M0 -8V8M-5 -3H5']],
+    infantry: [['s', 'M-8 -11V7M-11.5 3.5H-4.5'], ['o', -8, 9.6, 1.5], ['o', 3.5, 1, 7.5], ['c', 'M3.5 -3.6A4.6 4.6 0 1 1 3.49 -3.6'], ['c', 'M3.5 1h.01']],   // a sword upright beside a round shield with its boss
     light: [['o', -2, 2, 6], ['c', 'M-2 2h.01'], ['s', 'M-9 10L9 -9'], ['f', 'M11 -11L9.5 -5L5 -9.5Z']],
-    spears: [['o', -4, 3, 5.5], ['s', 'M4 11V-6'], ['f', 'M4 -12L7 -5H1Z']],
+    spears: [['s', 'M7 11V-7'], ['f', 'M7 -12.5L9.8 -6H4.2Z'], ['f', 'M-9 -7H2V1C2 5 -1 8 -3.5 10C-6 8 -9 5 -9 1Z'], ['c', 'M-3.5 -5V7.5']],   // a long shield and a spear
     pikes: [['s', 'M-6 11V-6M0 11V-6M6 11V-6'], ['f', 'M-6 -12L-3.6 -5H-8.4ZM0 -12L2.4 -5H-2.4ZM6 -12L8.4 -5H3.6Z']],
     archers: [['s', 'M-5 -10C6 -6 6 6 -5 10'], ['t', 'M-5 -10V10'], ['s', 'M-9 0H7'], ['f', 'M11 0L6 -3V3Z']],
     cavalry: [['f', 'M-8 11H9V7C9 0 6 -6 0 -9L-1 -12L-4 -9C-7 -7 -10 -3 -11 0L-9 3L-5 1C-5 4 -7 6 -8 8Z'], ['c', 'M-5 -4h.01']],
     'horse-archers': [['f', 'M-11 11H3V8C3 2 1 -3 -4 -6L-5 -8L-7 -6C-9 -4 -11 -1 -12 1L-10 3L-7 2C-7 4 -9 6 -10 8Z'], ['s', 'M6 -10C12 -7 12 1 6 4'], ['t', 'M6 -10V4'], ['s', 'M2 -3H10']],
     elephants: [['f', 'M-11 4V-3C-11 -7 -8 -9 -4 -9H4C9 -9 12 -6 12 -2V6C12 8 9.5 8 9.5 6V1C9.5 0 8.5 -1 7 -1H6V10H2V4H-5V10H-9V4Z'], ['c', 'M7 -5h.01']],
-    chariots: [['r', 0, 0, 8], ['s', 'M-8 0H8M0 -8V8M-5.7 -5.7L5.7 5.7M-5.7 5.7L5.7 -5.7'], ['o', 0, 0, 2.2]],
-    artillery: [['f', 'M-10 0L8 -9L10 -5L-8 4Z'], ['r', -3, 5, 5.5], ['o', -3, 5, 1.6]],
-    armour: [['f', 'M-11 2H11L8.5 9H-8.5Z'], ['f', 'M-5 2V-3C-5 -4 -4 -5 -3 -5H3C4 -5 5 -4 5 -3V2Z'], ['s', 'M5 -2H12']],
-    ships: [['f', 'M-10 4H10L7 10H-7Z'], ['s', 'M0 4V-11'], ['f', 'M1.5 -10L9 2H1.5ZM-1.5 -7L-7 2H-1.5Z']],
+    chariots: [['r', -3, 4, 6.5], ['s', 'M-3 -2.5V10.5M-9.5 4H3.5M-7.6 -0.6L1.6 8.6M-7.6 8.6L1.6 -0.6'], ['f', 'M-10 -2H4V-10H1.5V-5H-10Z'], ['s', 'M4 -3H12']],   // the car over its wheel, the pole before it
+    artillery: [['f', 'M-11 -1L7 -10L10 -5L-8 4Z'], ['s', 'M-8 2L-12 9'], ['r', -2, 5, 5.5], ['s', 'M-2 -0.5V10.5M-7.5 5H3.5'], ['o', -2, 5, 1.6]],
+    armour: [['f', 'M-10 3H10C12.6 3 12.6 10 10 10H-10C-12.6 10 -12.6 3 -10 3Z'], ['c', 'M-7.5 6.5h.01M-2.5 6.5h.01M2.5 6.5h.01M7.5 6.5h.01'], ['f', 'M-9 3L-7 -1H7L9 3Z'], ['f', 'M-4 -1V-4.5C-4 -5.5 -3 -6 -2 -6H3C4 -6 5 -5.5 5 -4.5V-1Z'], ['s', 'M5 -3.5H12.5']],
+    ships: [['f', 'M-11 4H11L8 10H-8Z'], ['s', 'M-3 4V-11M4 4V-8'], ['f', 'M-2 -10C2 -8 3 -2 -2 2ZM5 -7C8 -5 9 -1 5 2Z'], ['s', 'M-11 4L-13 1']],   // under sail, 1500 to about 1860
+    galleys: [['f', 'M-12 1H8L12 -2V2C10 6 7 7 4 7H-8C-10.5 7 -12 4.5 -12 1Z'], ['s', 'M-7 7L-9.5 11.5M-3 7L-5.5 11.5M1 7L-1.5 11.5M5 7L2.5 11.5'], ['s', 'M-1 1V-11'], ['f', 'M-7 -10H5V-3H-7Z']],   // oars, a ram and one square sail: before 1500
+    steamers: [['f', 'M-12 3H12L9 10H-9Z'], ['f', 'M-6 3V-1H6V3Z'], ['f', 'M-3.5 -1V-8H-1V-1ZM1 -1V-7H3.5V-1Z'], ['s', 'M6 1H12M-6 1H-12'], ['t', 'M-2.2 -9.5C-1 -11 1 -10 0.5 -12']],   // funnels and guns: from about 1860
+    helmet: [['f', 'M-9 2C-9 -5 -5 -9 0 -9C5 -9 9 -5 9 2L11.5 5.5H-11.5Z'], ['c', 'M-9 2H9'], ['s', 'M-6 9H6']],   // foot from 1900 on
     guard: [['s', 'M-6 11V-11'], ['f', 'M-6 -10H9L5 -5L9 0H-6Z']],
     wagons: [['f', 'M-10 -6H10V3H-10Z'], ['r', -5, 6, 3.5], ['r', 5, 6, 3.5]],
     rifles: [['f', 'M-11 11L-4 8L-7 4Z'], ['s', 'M-7 7L6 -6'], ['t', 'M6 -6L11 -11']]   // foot from 1500 on: a musket and its bayonet
@@ -65,28 +68,97 @@ var BattleMap = (function () {
     if (u.k === 'camp') return el('path', { d: 'M' + (-w / 2) + ' ' + (d / 2) + 'L0 ' + (-d / 2) + 'L' + (w / 2) + ' ' + (d / 2) + 'ZM0 ' + (-d / 2) + 'V' + (d / 2), 'class': 'bf-blk bf-camp' });
     return el('rect', { x: -w / 2, y: -d / 2, width: w, height: d, rx: 3, 'class': 'bf-blk' });
   }
-  function terrain(t, pid) {
-    var g = el('g', { 'class': 'bf-t bf-t-' + t.k }), c, x, y;
+  // points along the smooth line through p, k to a segment (in pixels): what smooth() draws, for placing things on it
+  function curve(p, closed, k) {
+    var n = p.length, out = [], i, j; if (n < 3) return p.map(function (q) { return [q[0] * U, q[1] * U]; });
+    var g = function (i) { return closed ? p[(i + n) % n] : p[Math.max(0, Math.min(n - 1, i))]; };
+    for (i = 0; i < (closed ? n : n - 1); i++) {
+      var a = g(i - 1), b = g(i), c = g(i + 1), e = g(i + 2), x1 = b[0] + (c[0] - a[0]) / 6, y1 = b[1] + (c[1] - a[1]) / 6, x2 = c[0] - (e[0] - b[0]) / 6, y2 = c[1] - (e[1] - b[1]) / 6;
+      for (j = 0; j < k; j++) { var t = j / k, m = 1 - t; out.push([(m * m * m * b[0] + 3 * m * m * t * x1 + 3 * m * t * t * x2 + t * t * t * c[0]) * U, (m * m * m * b[1] + 3 * m * m * t * y1 + 3 * m * t * t * y2 + t * t * t * c[1]) * U]); }
+    }
+    if (!closed) out.push([p[n - 1][0] * U, p[n - 1][1] * U]);
+    return out;
+  }
+  function inside(x, y, poly) { var c = false; for (var i = 0, j = poly.length - 1; i < poly.length; j = i++) { var a = poly[i], b = poly[j]; if ((a[1] > y) !== (b[1] > y) && x < (b[0] - a[0]) * (y - a[1]) / (b[1] - a[1]) + a[0]) c = !c; } return c; }
+  function area(poly) { var s = 0; for (var i = 0, j = poly.length - 1; i < poly.length; j = i++) s += (poly[j][0] + poly[i][0]) * (poly[j][1] - poly[i][1]); return Math.abs(s / 2); }
+  // the same scatter on every visit: a small generator seeded by the shape's own points
+  function seeded(at) { var s = 7; (typeof at[0] === 'number' ? [at] : at).forEach(function (q) { s = (s * 31 + Math.round(q[0] * 10) * 7 + Math.round(q[1] * 10)) | 0; }); return function () { s = (s + 0x6D2B79F5) | 0; var t = Math.imul(s ^ (s >>> 15), 1 | s); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+  function scatter(poly, rnd, every, most) {   // points inside a shape, about one to `every` square pixels, top to bottom
+    var x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9, out = []; poly.forEach(function (q) { x0 = Math.min(x0, q[0]); y0 = Math.min(y0, q[1]); x1 = Math.max(x1, q[0]); y1 = Math.max(y1, q[1]); });
+    var n = Math.min(most, Math.round(area(poly) / every)), tries = n * 6;
+    while (out.length < n && tries-- > 0) { var x = x0 + rnd() * (x1 - x0), y = y0 + rnd() * (y1 - y0); if (inside(x, y, poly)) out.push([x, y]); }
+    return out.sort(function (a, b) { return a[1] - b[1]; });
+  }
+  function scaled(at, m, s) { return at.map(function (q) { return [m[0] + (q[0] - m[0]) * s, m[1] + (q[1] - m[1]) * s]; }); }
+  // the way the nearest river or stream runs at a point (degrees), so that a bridge or ford lies across it
+  function across(x, y, all) {
+    var best = 1e9, ang = 90; (all || []).forEach(function (t) {
+      if (t.k !== 'river' && t.k !== 'stream') return; var p = curve(t.at, false, 8);
+      for (var i = 0; i < p.length - 1; i++) { var d = Math.pow(p[i][0] - x, 2) + Math.pow(p[i][1] - y, 2); if (d < best) { best = d; ang = Math.atan2(p[i + 1][1] - p[i][1], p[i + 1][0] - p[i][0]) * 180 / Math.PI + 90; } }
+    });
+    return ang;
+  }
+  function houses(g, x, y, n, rnd) {   // a town or village: roofs set close and askew, each with its ridge
+    var cols = n > 4 ? 3 : 2, rows = Math.ceil(n / cols), step = n > 4 ? 13 : 12;
+    for (var i = 0; i < n; i++) {
+      var hx = x + ((i % cols) - (cols - 1) / 2) * step + (rnd() - 0.5) * 6, hy = y + (Math.floor(i / cols) - (rows - 1) / 2) * (step - 2) + (rnd() - 0.5) * 5, w = 8 + rnd() * 4, d = 6 + rnd() * 2.5, r = Math.round((rnd() - 0.5) * 44);
+      g.appendChild(el('g', { transform: 'translate(' + hx.toFixed(1) + ' ' + hy.toFixed(1) + ') rotate(' + r + ')' }, [el('rect', { x: (-w / 2).toFixed(1), y: (-d / 2).toFixed(1), width: w.toFixed(1), height: d.toFixed(1), 'class': 'bf-house' }), el('path', { d: 'M' + (-w / 2).toFixed(1) + ' 0H' + (w / 2).toFixed(1), 'class': 'bf-ridge' })]));
+    }
+  }
+  function terrain(t, pid, all) {
+    var g = el('g', { 'class': 'bf-t bf-t-' + t.k }), c, x, y, d, rnd = seeded(t.at), add = function (cls, dd, more) { var a = { d: dd || d, 'class': cls }; for (var k in more || {}) a[k] = more[k]; var e = el('path', a); g.appendChild(e); return e; };
     if (t.k === 'river' || t.k === 'stream' || t.k === 'road' || t.k === 'wall' || t.k === 'ditch') {
-      g.appendChild(el('path', { d: smooth(t.at, false), fill: 'none' })); c = t.lab || t.at[Math.floor(t.at.length / 2)];
+      d = smooth(t.at, false);
+      if (t.k === 'river' || t.k === 'stream') { add('bf-bank'); add('bf-water'); if (t.k === 'river') add('bf-glint'); }
+      else if (t.k === 'road') { add('bf-road-c'); add('bf-road-f'); }
+      else if (t.k === 'wall') { add('bf-wall'); add('bf-wall-t'); }
+      else { add('bf-ditch'); add('bf-ditch-h'); }
+      c = t.lab || t.at[Math.floor(t.at.length / 2)];
     } else if (typeof t.at[0] === 'number') {   // a place: town, village, fort, spring, bridge, ford, point
       x = t.at[0] * U; y = t.at[1] * U;
-      if (t.k === 'spring') g.appendChild(el('circle', { cx: x, cy: y, r: 7 }));
-      else if (t.k === 'fort') g.appendChild(el('path', { d: 'M' + (x - 11) + ' ' + (y + 9) + 'V' + (y - 9) + 'h6v5h5v-5h5v5h6V' + (y + 9) + 'Z' }));
-      else if (t.k === 'bridge' || t.k === 'ford') g.appendChild(el('path', { d: 'M' + (x - 12) + ' ' + (y - 5) + 'h24M' + (x - 12) + ' ' + (y + 5) + 'h24', fill: 'none' }));
-      else if (t.k === 'town' || t.k === 'village') { for (var i = 0, n = t.k === 'town' ? 6 : 3; i < n; i++) g.appendChild(el('rect', { x: x - 14 + (i % 3) * 10, y: y - 9 + Math.floor(i / 3) * 10, width: 7, height: 7 })); }
-      else g.appendChild(el('circle', { cx: x, cy: y, r: 3 }));
-      c = t.lab || [t.at[0], t.at[1] + 2.9];
-    } else {   // an area: hill, ridge, mountain, wood, marsh, sea, lake, land
-      g.appendChild(el('path', { d: smooth(t.at, true) }));
-      if (t.k === 'wood' || t.k === 'marsh') g.appendChild(el('path', { d: smooth(t.at, true), 'class': 'bf-t-tex', style: 'fill:url(#' + pid + '-' + t.k + ')' }));
-      if (t.k === 'hill' || t.k === 'ridge' || t.k === 'mountain') {
-        var m = centre(t.at); [0.72, 0.44].forEach(function (s) { g.appendChild(el('path', { d: smooth(t.at.map(function (q) { return [m[0] + (q[0] - m[0]) * s, m[1] + (q[1] - m[1]) * s]; }), true), 'class': 'bf-t-in' })); });
+      if (t.k === 'spring') { g.appendChild(el('circle', { cx: x, cy: y, r: 9, 'class': 'bf-ripple', fill: 'none' })); g.appendChild(el('circle', { cx: x, cy: y, r: 5, 'class': 'bf-pool-f' })); }
+      else if (t.k === 'fort') {
+        add('bf-fort', 'M' + (x - 10) + ' ' + (y - 9) + 'h20v18h-20Z'); add('bf-fort-in', 'M' + (x - 6) + ' ' + (y - 5) + 'h12v10h-12Z');   // a walled square, a round tower at each corner
+        [[-1, -1], [1, -1], [1, 1], [-1, 1]].forEach(function (q) { g.appendChild(el('circle', { cx: x + q[0] * 10, cy: y + q[1] * 9, r: 4.2, 'class': 'bf-fort' })); });
+      } else if (t.k === 'bridge' || t.k === 'ford') {
+        var bg = el('g', { transform: 'translate(' + x + ' ' + y + ') rotate(' + across(x, y, all).toFixed(0) + ')' });
+        if (t.k === 'bridge') { bg.appendChild(el('rect', { x: -15, y: -4.5, width: 30, height: 9, 'class': 'bf-deck' })); bg.appendChild(el('path', { d: 'M-18 -7.5l3 3h30l3 -3M-18 7.5l3 -3h30l3 3', 'class': 'bf-rail', fill: 'none' })); }
+        else bg.appendChild(el('path', { d: 'M-14 -4h28M-14 0h28M-14 4h28', 'class': 'bf-ford-l', fill: 'none' }));
+        g.appendChild(bg);
       }
+      else if (t.k === 'town' || t.k === 'village') houses(g, x, y, t.k === 'town' ? 9 : 4, rnd);
+      else g.appendChild(el('circle', { cx: x, cy: y, r: 3 }));
+      c = t.lab || [t.at[0], t.at[1] + (t.k === 'town' ? 3.6 : 2.9)];
+    } else {   // an area: hill, ridge, mountain, wood, marsh, sea, lake, land
+      d = smooth(t.at, true); var m = centre(t.at), poly = curve(t.at, true, 6);
+      if (t.k === 'hill' || t.k === 'ridge' || t.k === 'mountain') {
+        // relief: a cast shadow, the slope lit from the upper left, each higher level a little lighter, hachures down the slope
+        add('bf-t-sh', d, { transform: 'translate(7 9)' }); add('bf-t-base', d, { style: 'fill:url(#' + pid + '-relief)' });
+        var hd = ''; poly.forEach(function (q, i) { if (i % 2) return; var f = 0.07 + rnd() * 0.05; hd += 'M' + q[0].toFixed(1) + ' ' + q[1].toFixed(1) + 'L' + (q[0] + (m[0] * U - q[0]) * f).toFixed(1) + ' ' + (q[1] + (m[1] * U - q[1]) * f).toFixed(1); });
+        add('bf-t-hach', hd, { fill: 'none' });
+        (t.k === 'mountain' ? [0.8, 0.62, 0.45, 0.3, 0.16] : [0.74, 0.5, 0.28]).forEach(function (s) { add('bf-t-in', smooth(scaled(t.at, m, s), true)); });
+      } else if (t.k === 'wood') {
+        add('bf-t-floor');
+        scatter(poly, rnd, 150, 520).forEach(function (q) { var r = 6 + rnd() * 4.5; g.appendChild(el('circle', { cx: q[0].toFixed(1), cy: q[1].toFixed(1), r: r.toFixed(1), 'class': 'bf-crown' })); g.appendChild(el('circle', { cx: (q[0] - r * 0.28).toFixed(1), cy: (q[1] - r * 0.3).toFixed(1), r: (r * 0.46).toFixed(1), 'class': 'bf-crown-hi' })); });
+      } else if (t.k === 'marsh') {
+        add('bf-t-floor'); var rd = '', pd = '';
+        scatter(poly, rnd, 520, 150).forEach(function (q, i) { var X = q[0].toFixed(1), Y = q[1].toFixed(1); if (i % 3 === 2) pd += 'M' + X + ' ' + Y + 'h' + (7 + rnd() * 7).toFixed(1); else rd += 'M' + X + ' ' + Y + 'l-3 -7M' + X + ' ' + Y + 'v-9M' + X + ' ' + Y + 'l3 -7'; });
+        add('bf-pool', pd, { fill: 'none' }); add('bf-reed', rd, { fill: 'none' });
+      } else if (t.k === 'sea' || t.k === 'lake') {
+        add('bf-shore', d, { fill: 'none' }); add('bf-t-floor'); [0.88, 0.74].forEach(function (s) { add('bf-wavel', smooth(scaled(t.at, m, s), true), { fill: 'none' }); });
+      } else { add('bf-surf', d, { fill: 'none' }); add('bf-t-floor'); add('bf-t-grain', d, { style: 'fill:url(#' + pid + '-grain)' }); }   // land in a sea: its surf, then the ground
       c = t.lab || centre(t.at);
     }
-    if (t.name) g.appendChild(el('text', { x: c[0] * U, y: c[1] * U, 'class': 'bf-tl', 'text-anchor': 'middle' }, [tx(t.name)]));
+    if (t.name) g._lab = el('text', { x: c[0] * U, y: c[1] * U, 'class': 'bf-tl', 'text-anchor': 'middle' }, [tx(t.name)]);   // the names go on top of all the ground (mount)
     return g;
+  }
+  // which picture a kind of formation takes in the battle's age (data.y, its year; data.gun for files without it)
+  function iconOf(k, data) {
+    var y = data.y != null ? data.y : data.gun ? 1700 : 0;
+    if (k === 'infantry') return y >= 1900 ? 'helmet' : y >= 1500 ? 'rifles' : k;
+    if (k === 'light') return y >= 1900 ? 'helmet' : y >= 1500 ? 'rifles' : k;
+    if (k === 'ships') return y >= 1860 ? 'steamers' : y >= 1580 ? 'ships' : 'galleys';   // Lepanto (1571) was still a battle of galleys
+    return k;
   }
 
   function mount(root, data) {
@@ -109,19 +181,26 @@ var BattleMap = (function () {
     var fig = h('div', { 'class': 'bf-fig' }), svg = el('svg', { viewBox: '0 0 ' + W + ' ' + H, 'class': 'bf-svg', role: 'img', 'aria-label': 'Plan of the ' + data.name + ', phase by phase. Each phase is told in the words under the plan.' });
     var defs = el('defs', {});
     for (var ai = 0; ai < 4; ai++) defs.appendChild(el('marker', { id: pid + '-ah' + ai, viewBox: '0 0 10 10', refX: 8, refY: 5, markerWidth: 6.5, markerHeight: 6.5, orient: 'auto-start-reverse' }, [el('path', { d: 'M0 0L10 5L0 10z', 'class': 'bf-ah bf-s' + ai })]));
-    defs.appendChild(el('pattern', { id: pid + '-wood', width: 26, height: 22, patternUnits: 'userSpaceOnUse' }, [el('circle', { cx: 7, cy: 7, r: 4.2, 'class': 'bf-tree' }), el('circle', { cx: 20, cy: 17, r: 3.6, 'class': 'bf-tree' })]));
-    defs.appendChild(el('pattern', { id: pid + '-marsh', width: 30, height: 18, patternUnits: 'userSpaceOnUse' }, [el('path', { d: 'M3 6h10M17 14h10', 'class': 'bf-reed' })]));
+    defs.appendChild(el('pattern', { id: pid + '-grain', width: 173, height: 131, patternUnits: 'userSpaceOnUse' }, [el('path', { d: 'M14 22l1.5 -5M16 22l-.5 -6M18 22l-2 -4M97 41l1.5 -5M99 41l-.5 -6M52 96l1.5 -4M54 96l-1 -5M141 108l1 -4M143 108l-1.5 -5M128 14l1 -4M70 58h.01M33 70h.01M155 62h.01M110 84h.01M84 118h.01M22 112h.01M60 12h.01M162 28h.01', 'class': 'bf-tuft', fill: 'none' })]));
+    defs.appendChild(el('pattern', { id: pid + '-wave', width: 48, height: 26, patternUnits: 'userSpaceOnUse' }, [el('path', { d: 'M3 8q4 -4 8 0t8 0M27 21q4 -4 8 0t8 0', 'class': 'bf-wave', fill: 'none' })]));
+    defs.appendChild(el('radialGradient', { id: pid + '-relief', cx: 0.32, cy: 0.26, r: 0.85 }, [el('stop', { offset: 0, 'class': 'bf-g-hi' }), el('stop', { offset: 1, 'class': 'bf-g-lo' })]));
+    defs.appendChild(el('radialGradient', { id: pid + '-vig', cx: 0.5, cy: 0.5, r: 0.75 }, [el('stop', { offset: 0.55, 'class': 'bf-g-v0' }), el('stop', { offset: 1, 'class': 'bf-g-v1' })]));
     svg.appendChild(defs);
     svg.appendChild(el('rect', { x: 0, y: 0, width: W, height: H, 'class': 'bf-ground' + (data.field && data.field.ground === 'sea' ? ' bf-sea' : '') }));
+    svg.appendChild(el('rect', { x: 0, y: 0, width: W, height: H, 'class': 'bf-ground-tex', style: 'fill:url(#' + pid + (data.field && data.field.ground === 'sea' ? '-wave' : '-grain') + ')' }));
     var gT = el('g', {}), gTrail = el('g', {}), gU = el('g', {}), gA = el('g', {}), gL = el('g', {});
-    (data.terrain || []).forEach(function (t) { gT.appendChild(terrain(t, pid)); });
+    // the ground from the bottom up: water and marsh, then roads, then relief, woods, and what people built
+    var labs = [], ORDER = { sea: 0, lake: 0, land: 1, marsh: 2, river: 3, stream: 3, ditch: 4, road: 5, hill: 6, ridge: 6, mountain: 6, wood: 7, wall: 8, bridge: 9, ford: 9 };
+    (data.terrain || []).map(function (t, i) { return [t, i]; }).sort(function (a, b) { return (ORDER[a[0].k] != null ? ORDER[a[0].k] : 10) - (ORDER[b[0].k] != null ? ORDER[b[0].k] : 10) || a[1] - b[1]; }).forEach(function (q) { var tg = terrain(q[0], pid, data.terrain); gT.appendChild(tg); if (tg._lab) labs.push(tg._lab); });
+    gT.appendChild(el('rect', { x: 0, y: 0, width: W, height: H, 'class': 'bf-vig', style: 'fill:url(#' + pid + '-vig)' }));
+    labs.forEach(function (l) { gT.appendChild(l); });
     if (data.field && data.field.north != null) gT.appendChild(el('g', { 'class': 'bf-n', transform: 'translate(' + (W - 44) + ' 50) rotate(' + data.field.north + ')' }, [el('path', { d: 'M0 18V-14M-6 -6L0 -16L6 -6', fill: 'none' }), el('text', { x: 0, y: -22, 'text-anchor': 'middle' }, [tx('N')])]));
     (data.field && data.field.edges || []).forEach(function (e) {   // "to Baysan": a place off the plan
       gT.appendChild(el('text', { x: e.at[0] * U, y: e.at[1] * U, 'class': 'bf-edge', 'text-anchor': e.at[0] > 80 ? 'end' : e.at[0] < 20 ? 'start' : 'middle' }, [tx(e.name)]));
     });
     var node = {};
     units.forEach(function (u, i) {
-      var inner = el('g', {}, [shape(u)].concat(mark(data.gun && (u.k === 'infantry' || u.k === 'light') ? 'rifles' : u.k, u.w * U, u.d * U), [el('path', { d: 'M-9 -9L9 9M9 -9L-9 9', 'class': 'bf-x' })]));
+      var inner = el('g', {}, [shape(u)].concat(mark(iconOf(u.k, data), u.w * U, u.d * U), [el('path', { d: 'M-9 -9L9 9M9 -9L-9 9', 'class': 'bf-x' })]));
       var g = el('g', { 'class': 'bf-u bf-s' + side[u.side] + ' bf-k-' + u.k }, [inner, el('title', {}, [tx(u.name + (u.leader ? ' (' + u.leader + ')' : ''))])]);
       var lab = el('text', { 'class': 'bf-ul' }), lead = u.leader ? el('text', { 'class': 'bf-ul bf-ld' }, [tx(u.leader)]) : null, pic = null, ring = null;
       if (u.pic) {
@@ -148,7 +227,7 @@ var BattleMap = (function () {
     units.forEach(function (u) { if (kinds.indexOf(u.k) < 0 && KIND[u.k]) kinds.push(u.k); });
     kinds.forEach(function (k) {
       var ship = k === 'ships', li = h('li', {});
-      li.appendChild(el('svg', { viewBox: '-24 -16 48 30', 'class': 'bf-key-g bf-s9', 'aria-hidden': 'true' }, [el('g', {}, [shape({ k: k, w: ship ? 3.2 : 3.6, d: ship ? 1.4 : 1.8 })].concat(mark(data.gun && (k === 'infantry' || k === 'light') ? 'rifles' : k, ship ? 32 : 36, ship ? 14 : 18)))]));
+      li.appendChild(el('svg', { viewBox: '-24 -16 48 30', 'class': 'bf-key-g bf-s9', 'aria-hidden': 'true' }, [el('g', {}, [shape({ k: k, w: ship ? 3.2 : 3.6, d: ship ? 1.4 : 1.8 })].concat(mark(iconOf(k, data), ship ? 32 : 36, ship ? 14 : 18)))]));
       li.appendChild(tx(KIND[k])); key.appendChild(li);
     });
     if (S.some(function (st) { for (var id in st) if (st[id].s === 'hidden') return true; })) { var lh = h('li', {}); lh.appendChild(h('i', { 'class': 'bf-sw bf-sw-hid' })); lh.appendChild(tx('Hidden')); key.appendChild(lh); }

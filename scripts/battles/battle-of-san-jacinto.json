@@ -332,9 +332,22 @@
    }
   },
   {
-   "title": "The Twin Sisters fire and the Texians rush the camp",
+   "title": "The Twin Sisters open the battle",
    "when": "4:30",
-   "text": "The Twin Sisters fired and began the battle. After a single volley the Texians broke ranks and swarmed over the breastworks, and the surprised Mexican officers shouted conflicting orders.",
+   "text": "The Texian guns, within 200 yards of the Mexican breastworks, fired the Twin Sisters at 4:30 and began the battle.",
+   "quote": "The Texian Twin Sisters fired at 4:30, beginning the battle.",
+   "at": {},
+   "hits": [
+    [
+     "art",
+     "mex",
+     0.2
+    ]
+   ]
+  },
+  {
+   "title": "The Texians swarm over the breastworks",
+   "text": "After a single volley the Texians broke ranks and swarmed over the breastworks to fight hand to hand. The Mexican soldiers were taken by surprise, and Santa Anna and his officers shouted conflicting orders.",
    "quote": "After a single volley, Texians broke ranks and swarmed over the Mexican breastworks",
    "at": {
     "sherman": [
@@ -360,11 +373,6 @@
    },
    "hits": [
     [
-     "art",
-     "mex",
-     0.2
-    ],
-    [
      "burleson",
      "mex"
     ],
@@ -381,18 +389,18 @@
    ]
   },
   {
-   "title": "The breastworks fall and the Mexican troops flee",
-   "text": "The Texian infantry advanced until they held the woodland and the breastworks. Within 18 minutes the Mexican soldiers left their camp and fled. Santa Anna escaped towards Vince's Bridge.",
-   "quote": "Within 18 minutes, Mexican soldiers abandoned their campsite and fled for their lives.",
+   "title": "The Texian infantry take the woodland and the breastwork",
+   "text": "The Texian infantry advanced without halt until they held the woodland and the Mexican breastwork. The right wing of Burleson's force and the left wing of Millard's took the breastwork.",
+   "quote": "The Texian infantry forces advanced without halt until they had possession of the woodland and the Mexican breastwork",
    "at": {
     "sherman": [
      32,
-     21,
+     22,
      0
     ],
     "burleson": [
      44,
-     21,
+     22,
      0
     ],
     "millard": [
@@ -404,7 +412,25 @@
      44,
      29,
      0
+    ]
+   },
+   "hits": [
+    [
+     "burleson",
+     "mex"
     ],
+    [
+     "sherman",
+     "mex",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "The Mexican troops abandon the camp and flee",
+   "text": "Within 18 minutes the Mexican soldiers abandoned their campsite and fled. Santa Anna escaped towards Vince's Bridge.",
+   "quote": "Within 18 minutes, Mexican soldiers abandoned their campsite and fled for their lives.",
+   "at": {
     "mex": [
      34,
      10,
@@ -422,18 +448,7 @@
    },
    "state": {
     "mex": "routed"
-   },
-   "hits": [
-    [
-     "burleson",
-     "mex"
-    ],
-    [
-     "sherman",
-     "mex",
-     -0.2
-    ]
-   ]
+   }
   },
   {
    "title": "Pursuit to Peggy Lake",

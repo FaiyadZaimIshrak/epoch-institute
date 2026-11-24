@@ -248,8 +248,8 @@
    }
   },
   {
-   "title": "The English move up and shoot first",
-   "text": "Henry ordered his army forward and the stakes were pulled up and set again in the new position. The English longbowmen then shot from extreme range, and the French cavalry charged only after this first volley.",
+   "title": "The English move up and reset their stakes",
+   "text": "Henry ordered his army forward and the stakes were pulled out of the ground, carried to the new position and set again to protect the archers.",
    "quote": "Henry ordered his army to advance and to start a battle that, given the state of his army, he would have preferred to avoid",
    "at": {
     "ela": [
@@ -267,7 +267,12 @@
      17,
      180
     ]
-   },
+   }
+  },
+  {
+   "title": "The longbowmen shoot from extreme range",
+   "text": "The English longbowmen began to shoot at the French from extreme range, about 300 yards. The French cavalry did not charge until after this first volley.",
+   "quote": "charged only after the initial volley of arrows from the English",
    "hits": [
     [
      "ela",
@@ -350,7 +355,7 @@
   },
   {
    "title": "The French men-at-arms reach the English line",
-   "text": "The surviving French men-at-arms reached the front of the English line and pushed it back, while the longbowmen on the flanks went on shooting at close range. When their arrows ran out the archers attacked the French with hatchets, swords, spears and mallets.",
+   "text": "The surviving French men-at-arms reached the front of the English line and pushed it back, while the longbowmen on the flanks went on shooting, now at close range.",
    "quote": "The surviving French men-at-arms reached the front of the English line and pushed it back, while the longbowmen on the flanks continued to shoot, now at close range.",
    "at": {
     "fv": [
@@ -379,6 +384,35 @@
      "fv",
      "emd"
     ],
+    [
+     "ela",
+     "fv",
+     0.2
+    ],
+    [
+     "era",
+     "fv",
+     -0.2
+    ]
+   ]
+  },
+  {
+   "title": "The archers drop their bows and attack",
+   "text": "When their arrows ran out the archers dropped their bows and attacked the disordered, tired and wounded French men-at-arms with hatchets, swords, spears and the mallets they had used to drive in their stakes.",
+   "quote": "When the archers ran out of arrows, they dropped their bows and, using hatchets, swords, spears and the mallets they had used to drive their stakes in",
+   "at": {
+    "ela": [
+     37,
+     18,
+     135
+    ],
+    "era": [
+     63,
+     18,
+     225
+    ]
+   },
+   "hits": [
     [
      "ela",
      "fv",

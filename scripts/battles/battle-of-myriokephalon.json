@@ -372,9 +372,9 @@
    ]
   },
   {
-   "title": "The trap closes on the right wing and baggage",
-   "text": "With the first two divisions out of the pass and the rear about to enter, the Turks attacked from the heights. The right wing broke and Baldwin was killed. The Turks then shot down the draught animals of the baggage and siege trains and choked the road.",
-   "quote": "The Turks then concentrated their attacks on the baggage and siege trains, shooting down the draught animals and choking the roadway.",
+   "title": "The Turks close the trap on the right wing",
+   "text": "With the first two divisions out of the pass and the rear about to enter, the Turks attacked from the heights. The right wing lost cohesion and broke, and its commander Baldwin was killed.",
+   "quote": "The Turkish attack, descending from the heights, fell especially heavily on the Byzantine right wing.",
    "at": {
     "sel": [
      66,
@@ -385,11 +385,6 @@
      72,
      38,
      90
-    ],
-    "sel2": [
-     16,
-     41,
-     20
     ]
    },
    "how": {
@@ -402,7 +397,21 @@
     [
      "sel",
      "right"
-    ],
+    ]
+   ]
+  },
+  {
+   "title": "The baggage and siege trains are shot down",
+   "text": "The Turks then concentrated their attacks on the baggage and siege trains. They shot down the draught animals and choked the road.",
+   "quote": "The Turks then concentrated their attacks on the baggage and siege trains, shooting down the draught animals and choking the roadway.",
+   "at": {
+    "sel": [
+     56,
+     20,
+     160
+    ]
+   },
+   "hits": [
     [
      "sel",
      "bag",
@@ -411,15 +420,28 @@
    ]
   },
   {
-   "title": "The left wing is struck and a dust-storm falls",
-   "text": "The left wing also took heavy casualties and John Kantakouzenos was killed. The remaining Byzantine troops panicked as the Turks began to attack the rear, a dust-storm came down, and Manuel sat down to await his fate.",
-   "quote": "The remaining Byzantine troops were panicked by the carnage in front of them and the realisation that the Turks had also begun to attack their rear.",
+   "title": "The left wing is struck and Kantakouzenos falls",
+   "text": "The left wing also suffered significant casualties. One of its leaders, John Kantakouzenos, was killed while fighting alone against a band of Seljuk soldiers.",
+   "quote": "The left-wing division also suffered significant casualties and one of its leaders, John Kantakouzenos, was slain when fighting alone against a band of Seljuk soldiers.",
    "at": {
     "sel": [
      48,
      21,
      170
-    ],
+    ]
+   },
+   "hits": [
+    [
+     "sel",
+     "left"
+    ]
+   ]
+  },
+  {
+   "title": "The rear is attacked and a dust-storm falls",
+   "text": "The remaining Byzantine troops panicked at the carnage ahead and as the Turks began to attack their rear. A blinding dust-storm fell, and Manuel sat down to await his fate.",
+   "quote": "The remaining Byzantine troops were panicked by the carnage in front of them and the realisation that the Turks had also begun to attack their rear.",
+   "at": {
     "sel2": [
      26,
      38,
@@ -427,10 +449,6 @@
     ]
    },
    "hits": [
-    [
-     "sel",
-     "left"
-    ],
     [
      "sel2",
      "rear",
@@ -440,7 +458,7 @@
   },
   {
    "title": "Manuel forms up and leaves the pass",
-   "text": "Roused by his officers, Manuel restored discipline and formed a defensive order. His troops pushed past the wrecked baggage and out of the pass to the van and main divisions, who had built a fortified camp. The rear division arrived later with few casualties.",
+   "text": "Roused by his officers, Manuel restored discipline and formed a defensive order. His troops pushed past the wrecked baggage and out of the pass to join the van and main divisions, who had built a fortified camp.",
    "quote": "when formed up, they pushed their way past the wreck of the baggage and out of the pass.",
    "at": {
     "camp": [
@@ -478,10 +496,22 @@
    ]
   },
   {
-   "title": "The camp is attacked and counterattacks follow",
-   "when": "Night and the following day",
-   "text": "The Seljuk mounted archers attacked the camp through the night and were repulsed. Next day the Turks circled the camp shooting arrows, and Manuel ordered two counterattacks, but there was no renewal of a general action.",
-   "quote": "The following day, the Turks circled the camp firing arrows; Manuel ordered two counterattacks",
+   "title": "The rear division reaches the camp",
+   "text": "The rear division under Andronikos Kontostephanos arrived at the camp somewhat later than the emperor, having suffered few casualties.",
+   "quote": "The rear division, under Andronikos Kontostephanos, arrived at the camp somewhat later than the emperor, having suffered few casualties.",
+   "at": {
+    "rear": [
+     66,
+     31,
+     90
+    ]
+   }
+  },
+  {
+   "title": "The camp repulses attacks through the night",
+   "when": "Night",
+   "text": "Seljuk mounted archers attacked the camp again and again through the night, and the Byzantines repulsed them each time.",
+   "quote": "The night was spent in successfully repulsing further attacks by Seljuk mounted archers.",
    "at": {
     "sel": [
      88,
@@ -492,11 +522,6 @@
      88,
      48,
      0
-    ],
-    "rear": [
-     66,
-     31,
-     90
     ]
    },
    "hits": [
@@ -507,7 +532,27 @@
     [
      "sel2",
      "camp"
+    ]
+   ]
+  },
+  {
+   "title": "The Turks circle the camp and two counterattacks follow",
+   "when": "The following day",
+   "text": "The Turks circled the camp firing arrows, and Manuel ordered two counterattacks, but there was no renewal of a general action.",
+   "quote": "The following day, the Turks circled the camp firing arrows; Manuel ordered two counterattacks",
+   "at": {
+    "sel": [
+     80,
+     14,
+     180
     ],
+    "sel2": [
+     80,
+     48,
+     0
+    ]
+   },
+   "hits": [
     [
      "main",
      "sel2",

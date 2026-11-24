@@ -54,7 +54,7 @@ for (const f of fs.readdirSync(dir).filter(x => x.endsWith('.json')).sort()) {
     if (u.leader && !art.includes(norm(u.leader).replace(/^(sultan|king|emperor|general|duke|prince|count|lord|sir|marshal|admiral|consul) /, ''))) E.push(lab + ': the leader ' + u.leader + ' is not named in the article');
     quote(u.quote, lab);
   }
-  const P = sc.phases || []; if (P.length < 3 || P.length > 7) E.push('three to seven phases (' + P.length + ')');
+  const P = sc.phases || []; if (P.length < 3 || P.length > 14) E.push('three to fourteen phases (' + P.length + ')');
   const pos = {}, state = {};
   P.forEach((p, i) => {
     const lab = 'phase ' + (i + 1);

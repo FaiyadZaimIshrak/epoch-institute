@@ -269,10 +269,10 @@
  ],
  "phases": [
   {
-   "title": "The Bructeri strike the strung-out column",
-   "when": "Late morning, 8 September",
-   "text": "The Roman army moved through thick forest, its line of march stretched over 15 to 20 kilometres. The Bructeri attacked along its length with javelins, a brief skirmish meant to tire the Romans and damage their supplies. The Angrivarii lay hidden at Kalkriese.",
-   "quote": "his Bructerii allies attacked the Roman army along its length in the late morning.",
+   "title": "The column strings out through the forest",
+   "when": "Morning, 8 September",
+   "text": "On the morning of 8 September the Roman army decamped and went on through the area’s thick forest, which slowed movement and strung the army out until the line of march ran 15 to 20 kilometres. The Angrivarii lay hidden at Kalkriese.",
+   "quote": "the Roman army decamped and continued snaking its way through the area’s thick forest, which slowed movement and strung the army out at an increasing distance.",
    "at": {
     "roman": [
      16,
@@ -284,11 +284,6 @@
      36,
      90
     ],
-    "bruct": [
-     20,
-     24,
-     180
-    ],
     "angriv": [
      72,
      22,
@@ -297,6 +292,19 @@
    },
    "state": {
     "angriv": "hidden"
+   }
+  },
+  {
+   "title": "The Bructeri strike the strung-out column",
+   "when": "Late morning, 8 September",
+   "text": "The Bructeri attacked the Roman army along its length and rained javelins on it. It was a brief skirmish, meant to tire the Romans and do the most damage to their supplies.",
+   "quote": "his Bructerii allies attacked the Roman army along its length in the late morning.",
+   "at": {
+    "bruct": [
+     20,
+     24,
+     180
+    ]
    },
    "hits": [
     [
@@ -306,19 +314,14 @@
    ]
   },
   {
-   "title": "The Bructeri withdraw and the Romans camp",
-   "text": "The Bructeri withdrew quickly. A torrential downpour left the Romans unable to advance, and Varus ordered the army to make camp. Losses reported were light, but the baggage trains and scout cavalry were shown to be vulnerable.",
-   "quote": "Unable to advance, Varus ordered the army to make camp.",
+   "title": "The Bructeri withdraw",
+   "text": "The Bructeri withdrew quickly, likely taking with them the Cheruscii spies who had been embedded in the Roman army. The skirmish had been brief.",
+   "quote": "The Bructerii withdrew quickly, likely taking the Cheruscii spies embedded in the Roman army with them.",
    "at": {
     "bruct": [
      20,
      15,
      180
-    ],
-    "camp": [
-     48,
-     36,
-     0
     ]
    },
    "how": {
@@ -326,6 +329,18 @@
    },
    "state": {
     "bruct": "gone"
+   }
+  },
+  {
+   "title": "A downpour halts the Romans and they camp",
+   "text": "A torrential downpour began and the Romans, unable to advance, made camp on Varus’s order. A sturdy camp was erected and a war council called. Losses were light, but the baggage trains and scout cavalry were shown to be vulnerable.",
+   "quote": "Unable to advance, Varus ordered the army to make camp.",
+   "at": {
+    "camp": [
+     48,
+     36,
+     0
+    ]
    }
   },
   {
@@ -381,23 +396,30 @@
    ]
   },
   {
-   "title": "Vala rides off and is overtaken",
-   "text": "The highest-ranking officer next to Varus, Numonius Vala, abandoned the troops by riding off with the cavalry. Germanic cavalry overtook him and he was killed shortly afterwards, according to Velleius Paterculus.",
-   "quote": "abandoned the troops by riding off with the cavalry. His retreat was in vain, however, as he was overtaken by the Germanic cavalry and killed shortly thereafter",
+   "title": "Vala rides off with the cavalry",
+   "text": "The highest-ranking officer next to Varus, Numonius Vala, abandoned the troops by riding off with the cavalry after the failed attempt on the wall.",
+   "quote": "abandoned the troops by riding off with the cavalry.",
    "at": {
     "cav": [
      34,
-     42,
-     270
-    ],
-    "gcav": [
-     48,
      42,
      270
     ]
    },
    "how": {
     "cav": "retreat"
+   }
+  },
+  {
+   "title": "Germanic cavalry overtake Vala",
+   "text": "Vala’s retreat was in vain. The Germanic cavalry overtook him and he was killed shortly afterwards, according to Velleius Paterculus.",
+   "quote": "His retreat was in vain, however, as he was overtaken by the Germanic cavalry and killed shortly thereafter",
+   "at": {
+    "gcav": [
+     48,
+     42,
+     270
+    ]
    },
    "state": {
     "cav": "destroyed"

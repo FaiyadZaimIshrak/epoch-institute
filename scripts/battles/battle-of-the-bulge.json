@@ -388,19 +388,14 @@
    ]
   },
   {
-   "title": "The northern shoulder holds and Peiper turns south",
+   "title": "The northern shoulder holds",
    "when": "17 to 19 December 1944",
-   "text": "The 99th and 2nd Divisions kept the Sixth Panzer Army from the ridge and the roads west of it. Peiper turned south round Hünningen and reached Stavelot, where the Americans delayed him.",
+   "text": "The 99th and 2nd Divisions repelled an advance by volksgrenadier and armoured units of the Sixth Panzer Army. This forced the German spearhead onto less favourable routes further south and slowed its advance.",
    "quote": "forcing them to divert their offensive spearhead onto less favorable routes further south",
    "at": {
     "g6": [
      76,
      12,
-     270
-    ],
-    "peiper": [
-     60,
-     22,
      270
     ]
    },
@@ -412,6 +407,46 @@
     [
      "an",
      "g6"
+    ]
+   ]
+  },
+  {
+   "title": "Peiper turns south and attacks Stavelot",
+   "when": "17 and 18 December 1944",
+   "text": "Peiper turned south to detour round Hünningen and arrived in front of Stavelot. He attacked it on 18 December, but the Americans evacuated a large fuel depot before he could take the town.",
+   "quote": "Kampfgruppe Peiper attacked Stavelot on 18 December but was unable to capture the town before the Americans evacuated a large fuel depot.",
+   "at": {
+    "peiper": [
+     60,
+     22,
+     270
+    ]
+   }
+  },
+  {
+   "title": "The defenders fall back to Elsenborn Ridge",
+   "when": "18 December 1944",
+   "text": "The 12th SS Panzer Division renewed its advance into Krinkelt, and the defenders were ordered to break contact and abandon the twin villages. They reestablished their positions on Elsenborn Ridge.",
+   "quote": "the defenders were ordered to break contact, abandon the twin villages and reestablish positions on the strategic boomerang shaped Elsenborn Ridge.",
+   "at": {
+    "g6": [
+     74,
+     12,
+     270
+    ],
+    "an": [
+     62,
+     11,
+     90
+    ]
+   },
+   "how": {
+    "an": "retreat"
+   },
+   "hits": [
+    [
+     "g6",
+     "an"
     ]
    ]
   },
@@ -444,16 +479,56 @@
    ]
   },
   {
-   "title": "Bastogne is surrounded",
-   "when": "19 to 21 December 1944",
-   "text": "The 101st Airborne Division reached Bastogne by truck on 19 December. The panzer columns swung past on either side and the Germans had surrounded the town by 21 December.",
-   "quote": "The panzer columns swung past on either side, cutting off Bastogne on 20 December",
+   "title": "St. Vith is evacuated",
+   "when": "21 December 1944",
+   "text": "At Montgomery's orders the town of St. Vith was evacuated on 21 December. The American troops fell back to entrenched positions in the area, which presented an obstacle to the German advance.",
+   "quote": "At Montgomery's orders, St. Vith was evacuated on 21 December; U.S. troops fell back to entrenched positions in the area",
+   "at": {
+    "astv": [
+     47,
+     34,
+     90
+    ]
+   },
+   "how": {
+    "astv": "retreat"
+   }
+  },
+  {
+   "title": "The defenders retreat west of the Salm",
+   "when": "23 December 1944",
+   "text": "By 23 December the Germans had shattered the flanks of the defenders and their position became untenable. The American troops were ordered to retreat west of the Salm River.",
+   "quote": "the defenders' position became untenable and U.S. troops were ordered to retreat west of the Salm River",
+   "at": {
+    "astv": [
+     41,
+     32,
+     90
+    ]
+   },
+   "how": {
+    "astv": "retreat"
+   }
+  },
+  {
+   "title": "The 101st Airborne reaches Bastogne",
+   "when": "19 December 1944",
+   "text": "The struggle for the villages and strong points slowed the German attack enough for the 101st Airborne Division to reach Bastogne by truck on the morning of 19 December.",
+   "quote": "to reach Bastogne by truck on the morning of 19 December.",
    "at": {
     "abas": [
      46,
      46,
      90
-    ],
+    ]
+   }
+  },
+  {
+   "title": "Bastogne is cut off",
+   "when": "20 to 21 December 1944",
+   "text": "The panzer columns swung past on either side and cut Bastogne off on 20 December, but did not secure the crossroads. By 21 December the Germans had surrounded the town.",
+   "quote": "The panzer columns swung past on either side, cutting off Bastogne on 20 December",
+   "at": {
     "g5": [
      56,
      42,
@@ -468,21 +543,43 @@
    ]
   },
   {
-   "title": "The advance stops short of the Meuse; Bastogne is relieved",
-   "when": "24 to 26 December 1944",
-   "text": "Parts of the 2nd Panzer Division came in sight of the Meuse at Foy-Notre-Dame on 24 December, and the U.S. 2nd Armored Division attacked them there. On 26 December the 4th Armored Division broke through to Bastogne.",
-   "quote": "On 24 December, German forces made their furthest penetration west.",
+   "title": "The 2nd Panzer Division reaches Foy-Notre-Dame",
+   "when": "22 to 24 December 1944",
+   "text": "On 22 and 23 December German forces reached the woods of Foy-Notre-Dame, a few kilometres ahead of Dinant. On 24 December parts of the 2nd Panzer Division were in sight of the Meuse, the furthest German advance west.",
+   "quote": "On 22/23 December German forces reached the woods of Foy-Notre-Dame, only a few kilometers ahead of Dinant.",
    "at": {
     "g2p": [
      24,
      32,
      270
-    ],
+    ]
+   }
+  },
+  {
+   "title": "The 2nd Armored Division attacks the spearheads",
+   "when": "Christmas Eve, 24 December 1944",
+   "text": "The U.S. 2nd Armored Division attacked in an attempt to cut off the spearheads of the 2nd Panzer Division at the Meuse. As a result parts of the 2nd Panzer Division were cut off.",
+   "quote": "the 2nd Armored Division attempted to attack and cut off the spearheads of the 2nd Panzer Division at the Meuse",
+   "at": {
     "a2ad": [
      32,
      26,
      270
-    ],
+    ]
+   },
+   "hits": [
+    [
+     "a2ad",
+     "g2p"
+    ]
+   ]
+  },
+  {
+   "title": "The 4th Armored Division breaks through to Bastogne",
+   "when": "26 December 1944",
+   "text": "On 26 December the spearhead of the 4th Armored Division, supplemented by the 26th Infantry Division, broke through and opened a corridor to Bastogne. The siege had lasted barely a week.",
+   "quote": "the spearhead of Gen. Patton's 4th Armored Division, supplemented by the 26th (Yankee) Infantry Division, broke through",
+   "at": {
     "a3": [
      40,
      53,
@@ -490,10 +587,6 @@
     ]
    },
    "hits": [
-    [
-     "a2ad",
-     "g2p"
-    ],
     [
      "a3",
      "g5"

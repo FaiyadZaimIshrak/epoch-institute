@@ -355,9 +355,9 @@
    ]
   },
   {
-   "title": "The South Lancashires work round the line",
+   "title": "The South Lancashires swing behind the line",
    "when": "6 May 1942",
-   "text": "The South Lancashires went round the Vichy defences through the swamps and rough ground, and swung behind the line. They fired on the defences from behind and took a radio station and a barracks.",
+   "text": "The South Lancashires worked round the Vichy defences, but the swamps and bad terrain broke the unit into groups. It swung behind the Vichy line and caused chaos, and fire was poured on the defences from behind.",
    "quote": "It swung behind the Vichy line and caused chaos.",
    "at": {
     "slr": [
@@ -375,9 +375,19 @@
    "note": "The accounts do not say by which side of the line they went; the plan places them behind it."
   },
   {
+   "title": "The South Lancashires take the radio station and withdraw",
+   "when": "6 May 1942",
+   "text": "From behind the line the South Lancashires captured the radio station and a barracks, and 200 prisoners were taken in all. They then had to withdraw when the radio set failed and contact with the main force was lost.",
+   "quote": "the radio station and a barracks were captured.",
+   "at": {},
+   "state": {
+    "slr": "gone"
+   }
+  },
+  {
    "title": "Marines land in the rear and the line is broken",
    "when": "6 May 1942",
-   "text": "HMS Anthony ran past the harbour defences and landed fifty Royal Marines among the Vichy rear. The 17th Brigade broke through the defences. The South Lancashires withdrew after their radio failed.",
+   "text": "HMS Anthony ran past the Antisarane harbour defences and landed fifty Royal Marines from Ramillies in the Vichy rear area. At the same time the 17th Brigade broke through the defences.",
    "quote": "At the same time, the 17th Infantry Brigade had broken through the defences and was soon in the town.",
    "at": {
     "anthony": [
@@ -395,9 +405,6 @@
      34,
      90
     ]
-   },
-   "state": {
-    "slr": "gone"
    },
    "hits": [
     [

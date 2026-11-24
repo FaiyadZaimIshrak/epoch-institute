@@ -206,43 +206,52 @@
    "leader": "Mago",
    "w": 5,
    "quote": "had his younger brother Mago take 1,000 cavalry and 1,000 infantry during the night"
+  },
+  {
+   "id": "num",
+   "side": "c",
+   "k": "cavalry",
+   "name": "Numidian cavalry",
+   "short": "Numidians",
+   "w": 5,
+   "quote": "Hannibal sent his Numidian cavalry across the river"
   }
  ],
  "phases": [
   {
-   "title": "The armies form up on the west bank",
-   "when": "22 or 23 December 218 BCE",
-   "text": "After the Romans waded the Trebia, both armies drew up symmetrically, infantry in the centre and cavalry on the wings. Mago's force had been put in a watercourse to the south in the night and stayed out of sight.",
-   "quote": "The Carthaginian army formed up symmetrically: the 8,000 Gallic infantry were in the centre;",
+   "title": "The Numidians provoke the Romans",
+   "when": "Shortly before daybreak, 22 or 23 December 218 BCE",
+   "text": "Hannibal sent his Numidian cavalry across the river to force back the Roman pickets and provoke a fight. Mago had already taken 1,000 cavalry and 1,000 infantry in the night to an old watercourse, where they hid.",
+   "quote": "Shortly before daybreak Hannibal sent his Numidian cavalry across the river to force back the Roman pickets and provoke a fight.",
    "at": {
     "rcavn": [
-     60,
+     96,
      8,
      270
     ],
     "alln": [
-     60,
+     96,
      18,
      270
     ],
     "rcentre": [
-     60,
+     96,
      30,
      270
     ],
     "alls": [
-     60,
+     96,
      41,
      270
     ],
     "rcavs": [
-     60,
+     96,
      51,
      270
     ],
     "vel": [
-     72,
-     32,
+     89,
+     31,
      270
     ],
     "cavn": [
@@ -279,15 +288,192 @@
      52,
      56,
      0
+    ],
+    "num": [
+     88,
+     40,
+     90
     ]
    },
    "state": {
     "mago": "hidden"
+   },
+   "hits": [
+    [
+     "num",
+     "rcavs"
+    ]
+   ]
+  },
+  {
+   "title": "The Romans ford the Trebia after the Numidians",
+   "text": "Sempronius sent out his cavalry, then the velites and then the whole army. The Numidians drew back slowly, and the Romans followed them through the icy, chest-high water of the Trebia.",
+   "quote": "The Numidians withdrew slowly and Sempronius pushed his whole army after them",
+   "at": {
+    "rcavn": [
+     76,
+     8,
+     270
+    ],
+    "alln": [
+     76,
+     18,
+     270
+    ],
+    "rcentre": [
+     76,
+     30,
+     270
+    ],
+    "alls": [
+     76,
+     41,
+     270
+    ],
+    "rcavs": [
+     76,
+     51,
+     270
+    ],
+    "vel": [
+     68,
+     32,
+     270
+    ],
+    "num": [
+     60,
+     32,
+     90
+    ]
+   },
+   "how": {
+    "num": "retreat"
    }
   },
   {
+   "title": "The armies form up on the west bank",
+   "when": "22 or 23 December 218 BCE",
+   "text": "The Romans organised themselves in battle formation west of the Trebia, facing the Carthaginian army, which had formed up symmetrically. The light infantry of both sides stood between the lines. Mago's force lay hidden in a watercourse to the south.",
+   "quote": "The Carthaginian army formed up symmetrically: the 8,000 Gallic infantry were in the centre;",
+   "at": {
+    "rcavn": [
+     60,
+     8,
+     270
+    ],
+    "alln": [
+     60,
+     18,
+     270
+    ],
+    "rcentre": [
+     60,
+     30,
+     270
+    ],
+    "alls": [
+     60,
+     41,
+     270
+    ],
+    "rcavs": [
+     60,
+     51,
+     270
+    ],
+    "vel": [
+     54,
+     32,
+     270
+    ],
+    "cavn": [
+     40,
+     8,
+     90
+    ],
+    "afn": [
+     40,
+     18,
+     90
+    ],
+    "gauls": [
+     40,
+     30,
+     90
+    ],
+    "afs": [
+     40,
+     41,
+     90
+    ],
+    "cavs": [
+     40,
+     51,
+     90
+    ],
+    "light": [
+     46,
+     32,
+     90
+    ],
+    "mago": [
+     52,
+     56,
+     0
+    ]
+   },
+   "state": {
+    "mago": "hidden",
+    "num": "gone"
+   }
+  },
+  {
+   "title": "The Carthaginian skirmishers drive back the velites",
+   "text": "The velites had used many javelins against the cavalry and were unfed, tired and cold, while the Carthaginian slingers outranged them. The Carthaginians got the better of the skirmishing and drove the velites back through the gaps in their heavy infantry.",
+   "quote": "For these reasons the Carthaginians got the better of the initial skirmishing and drove the velites back through the gaps in their supporting heavy infantry.",
+   "at": {
+    "light": [
+     48,
+     32,
+     90
+    ],
+    "vel": [
+     72,
+     32,
+     270
+    ]
+   },
+   "how": {
+    "vel": "retreat"
+   },
+   "hits": [
+    [
+     "light",
+     "vel"
+    ]
+   ]
+  },
+  {
+   "title": "The skirmishers harass the Roman cavalry",
+   "text": "The Carthaginian light infantry moved towards the flanks of their army and harassed the Roman cavalry with their missiles. The Roman horses were already tired from chasing the Numidians.",
+   "quote": "The Carthaginian light infantry then moved towards the flanks of their army and harassed the Roman cavalry with their missiles",
+   "at": {
+    "light": [
+     53,
+     46,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "light",
+     "rcavs"
+    ]
+   ]
+  },
+  {
    "title": "The Roman cavalry flees and the infantry lines close",
-   "text": "On each wing 5,000 Carthaginian horse charged the 2,000 Roman horse, which fled back over the Trebia. Most of the Carthaginian cavalry pursued them while the heavy infantry lines met in the centre.",
+   "text": "On each wing 5,000 Carthaginian horse charged the 2,000 Roman horse, which fled back over the Trebia. Most of the Carthaginian cavalry pursued them while the heavy infantry lines met in the centre. The skirmishers fell back behind their cavalry.",
    "quote": "Both encounters ended rapidly, with the Romans fleeing back over the Trebia and most of the Carthaginian cavalry pursuing them.",
    "at": {
     "rcavn": [

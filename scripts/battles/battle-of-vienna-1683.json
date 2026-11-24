@@ -345,6 +345,22 @@
    ]
   },
   {
+   "title": "The Ottomans counterattack and assault the city",
+   "when": "By midday",
+   "text": "By midday the imperial army had done significant damage and come close to a breakthrough. Mustafa Pasha counterattacked with most of his forces but held back elite Janissary and Sipahi units for an assault on the city.",
+   "quote": "Mustafa Pasha launched counterattacks with most of his forces, but held back some of the elite Janissary and Sipahi units for a simultaneous assault on the city",
+   "hits": [
+    [
+     "omain",
+     "impl"
+    ],
+    [
+     "oassault",
+     "gar"
+    ]
+   ]
+  },
+  {
    "title": "Polish infantry advances on the Ottoman right",
    "when": "Early afternoon",
    "text": "Polish infantry advanced against the Ottoman right flank. Parts of the Ottoman army kept attacking the city, which let the Poles move forward, and by 4:00 pm they held Gersthof.",
@@ -431,12 +447,30 @@
   {
    "title": "The cavalry charges down the hills",
    "when": "About 6:00 pm",
-   "text": "The king ordered the cavalry to attack in four contingents. The charge broke the Ottoman lines, the Ottomans retreated, and the horsemen rode for the camps and headquarters while the Viennese garrison sallied out to join in.",
+   "text": "The king ordered the cavalry to attack in four contingents, three Polish and one from the Holy Roman Empire. The horsemen charged down the hills towards the Ottoman lines.",
+   "quote": "the Polish king ordered the cavalry to attack in four contingents, three Polish groups and one from the Holy Roman Empire",
+   "at": {
+    "pcav": [
+     34,
+     40,
+     90
+    ]
+   },
+   "hits": [
+    [
+     "pcav",
+     "oright"
+    ]
+   ]
+  },
+  {
+   "title": "The Ottoman lines break",
+   "text": "The charge quickly broke the battle lines of the Ottomans, who were already exhausted and demoralised, and they began to retreat from the battlefield. The hussars of the probing charge left the plan.",
    "quote": "The charge quickly broke the battle lines of the Ottomans, who were already exhausted and demoralized and began to retreat from the battlefield.",
    "at": {
     "pcav": [
-     40,
      42,
+     40,
      90
     ],
     "omain": [
@@ -445,13 +479,8 @@
      0
     ],
     "oright": [
-     48,
+     44,
      50,
-     0
-    ],
-    "gar": [
-     80,
-     45,
      0
     ]
    },
@@ -468,11 +497,29 @@
     [
      "pcav",
      "omain"
+    ]
+   ]
+  },
+  {
+   "title": "The cavalry rides for the camps",
+   "text": "The cavalry headed directly towards the Ottoman camps and the headquarters of Kara Mustafa, while the remaining Viennese garrison sallied out of its defences to join in the assault.",
+   "quote": "The cavalry headed directly towards the Ottoman camps and Kara Mustafa's headquarters, while the remaining Viennese garrison sallied out of its defenses to join in the assault.",
+   "at": {
+    "pcav": [
+     53,
+     50,
+     90
     ],
+    "gar": [
+     80,
+     45,
+     0
+    ]
+   },
+   "hits": [
     [
      "pcav",
-     "ocamp",
-     0.2
+     "ocamp"
     ],
     [
      "gar",

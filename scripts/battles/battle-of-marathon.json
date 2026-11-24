@@ -294,9 +294,9 @@
    ]
   },
   {
-   "title": "The Persian wings collapse and the Greek wings turn in",
-   "text": "The Athenian wings quickly routed the Persian levies on the flanks. They then turned inwards to surround the Persian centre, which had been more successful against the thin Greek centre.",
-   "quote": "The Athenian wings quickly routed the inferior Persian levies on the flanks, before turning inwards to surround the Persian centre",
+   "title": "The Persian wings are routed",
+   "text": "The Athenian and Plataean wings quickly routed the Persian levies on the flanks, which were of poorer quality than the troops in the centre.",
+   "quote": "The Athenian wings quickly routed the inferior Persian levies on the flanks",
    "at": {
     "pl": [
      14,
@@ -307,7 +307,32 @@
      86,
      46,
      180
+    ]
+   },
+   "how": {
+    "pl": "rout",
+    "pr": "rout"
+   },
+   "state": {
+    "pl": "routed",
+    "pr": "routed"
+   },
+   "hits": [
+    [
+     "al",
+     "pl"
     ],
+    [
+     "ar",
+     "pr"
+    ]
+   ]
+  },
+  {
+   "title": "The Greek wings turn inwards on the centre",
+   "text": "The Athenian wings then turned inwards to surround the Persian centre, which had been more successful against the thin Greek centre.",
+   "quote": "before turning inwards to surround the Persian centre, which had been more successful against the thin Greek centre.",
+   "at": {
     "al": [
      31,
      19,
@@ -318,14 +343,6 @@
      19,
      270
     ]
-   },
-   "how": {
-    "pl": "rout",
-    "pr": "rout"
-   },
-   "state": {
-    "pl": "routed",
-    "pr": "routed"
    },
    "hits": [
     [

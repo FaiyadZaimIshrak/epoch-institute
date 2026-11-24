@@ -294,9 +294,21 @@
    ]
   },
   {
-   "title": "A second Hittite counter-attack meets new arrivals",
-   "text": "As the retreat reached the river, Muwatalli ordered another thousand chariots to counter-attack towards the camp. The Ne'arin from Amurru arrived and surprised them, and the Ptah division arrived from the south and threatened the Hittite rear.",
-   "quote": "As the Hittite forces approached the same Egyptian camp again, the Ne'arin troop contingent from Amurru suddenly arrived, surprising the Hittites.",
+   "title": "Muwatalli sends another thousand chariots",
+   "text": "As the retreat reached the river, Muwatalli, who still held a large reserve of chariots and infantry and the walls of Kadesh, ordered another thousand chariots to counter-attack. High nobles close to the king led them.",
+   "quote": "he ordered another thousand chariots to counter-attack, led by high nobles close to the king.",
+   "at": {
+    "hcount": [
+     40,
+     21,
+     180
+    ]
+   }
+  },
+  {
+   "title": "The Ne'arin surprise the Hittites at the camp",
+   "text": "As the Hittite force approached the same Egyptian camp again, the Ne'arin from Amurru arrived without warning and surprised them.",
+   "quote": "the Ne'arin troop contingent from Amurru suddenly arrived, surprising the Hittites.",
    "at": {
     "hcount": [
      38,
@@ -312,11 +324,6 @@
      80,
      34,
      270
-    ],
-    "ptah": [
-     66,
-     56,
-     0
     ]
    },
    "hits": [
@@ -328,7 +335,21 @@
      "nearin",
      "hcount",
      0.2
-    ],
+    ]
+   ]
+  },
+  {
+   "title": "The Ptah division arrives from the south",
+   "text": "Finally the Ptah division arrived from the south. It came up behind the Hittite force that was pressing on the camp and threatened its rear.",
+   "quote": "Finally, the Ptah division arrived from the south, threatening the Hittite rear.",
+   "at": {
+    "ptah": [
+     66,
+     56,
+     0
+    ]
+   },
+   "hits": [
     [
      "ptah",
      "hcount",

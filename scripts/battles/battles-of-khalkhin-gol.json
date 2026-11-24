@@ -231,16 +231,24 @@
    }
   },
   {
-   "title": "The relief and the break-out fail",
-   "when": "26 and 27 August",
-   "text": "A Japanese counterattack to relieve the 23rd Division failed on 26 August. On 27 August the division tried to break out of the encirclement and also failed.",
-   "quote": "On 26 August, a Japanese counterattack to relieve the 23rd Division failed. On 27 August, the 23rd Division attempted to break out of the encirclement but failed.",
+   "title": "A Japanese counterattack fails to relieve the division",
+   "when": "26 August",
+   "text": "A Japanese force came up from outside the ring to relieve the trapped 23rd Division. The counterattack failed, and the division stayed inside the encirclement.",
+   "quote": "On 26 August, a Japanese counterattack to relieve the 23rd Division failed.",
    "at": {
     "jrel": [
      92,
      31,
      270
-    ],
+    ]
+   }
+  },
+  {
+   "title": "The 23rd Division fails to break out",
+   "when": "27 August",
+   "text": "The 23rd Division tried to break out of the encirclement the next day. It pushed east against the Soviet wings and failed to get through.",
+   "quote": "On 27 August, the 23rd Division attempted to break out of the encirclement but failed.",
+   "at": {
     "j23": [
      63,
      31,
