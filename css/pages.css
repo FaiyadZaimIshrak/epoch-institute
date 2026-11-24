@@ -1848,6 +1848,8 @@ html[data-kids="1"] .page-useful { display: none; }
 @media (max-width: 560px) {
 .hub-group .hub-grid { grid-template-columns: minmax(0, 1fr); }
 }
+.kx-sur { margin: 0 0 18px; }
+.kx-map a:hover .map-dot-p, .kx-map a:focus .map-dot-p { stroke: var(--gold-light); stroke-width: 11px; }
 .home-map { margin: 0; }
 .home-map > a { display: block; border: 0.5px solid var(--border); border-radius: 3px; background: radial-gradient(ellipse at 50% 45%, rgba(var(--gold-rgb), 0.09), transparent 70%), var(--surface); transition: border-color 0.2s; }
 .home-map > a:hover { border-color: var(--gold); }

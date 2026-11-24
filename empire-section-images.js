@@ -3161,7 +3161,7 @@ var SECTION_IMAGES = {
     structure:{slug:"wang-xizhi",name:"Wang Xizhi",img:"/images/encyclopedia/wang-xizhi.jpg",artist:"Unknown Chinese artist",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Portraits_of_Famous_Men_-_Wang_Xizhi_(cropped).jpg"},
     speakers:{slug:"xuanzang",name:"Xuanzang",img:"/images/encyclopedia/xuanzang.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Xuanzang_w.jpg"},
     literature:{slug:"records-of-the-grand-historian",name:"Records of the Grand Historian",img:"/images/encyclopedia/records-of-the-grand-historian.jpg",artist:"Zhonghua Book Company",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%E5%8F%B2%E8%AE%B0.jpg"},
-    change:{slug:"hu-shi",name:"Hu Shi",img:"/images/encyclopedia/hu-shi.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hu_Shih_1960_color_Crop.jpg"},
+    change:{slug:"hu-shih",name:"Hu Shih",img:"/images/encyclopedia/hu-shih.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hu_Shih_1960_color_Crop.jpg"},
     legacy:{slug:"analects",name:"Analects",img:"/images/encyclopedia/analects.jpg",artist:"Confucius and his disciples",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Rongo_Analects_02.jpg"}
   },
   "Confucianism": {

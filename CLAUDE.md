@@ -62,6 +62,19 @@ structuring issue?"): Discover · Encyclopedia · People ▾ · Places ▾ · Ev
   - build-pages.ps1 runs both tools after /today (they need /encyclopedia/wars and /research built) and lists the
     sixteen pages in the sitemaps; a file named index in a profile folder is not a profile ($PROF leaves it out).
     Both tools take --check. Re-run them by a build after profiles are added.
+  - **The same day:** each subject page opens with a pick of the day (a.hub-pick: a pool of sixty profiles of the subject's
+    kinds baked into the page, chosen by the UTC day in an inline script right after the box, which keeps its height)
+    and Surprise me (a profile of the subject's kinds from /search-profiles.js, read on the press; Play opens one of its
+    cards). The index pages of cities, battles and lives have a world map of linked dots (the own entry's point, a
+    life's birthplace; figure.kx-map) and every index page has Surprise me. split-css.js counts the explore pages
+    into css/research.css. scripts/tests/subject-pages.js.
+  - **Two duplicate entries folded** (scripts/entries/fold-entry.js <old> <kept>, the tool for it from now on): Hu Shi into
+    Hu Shih, Francis I into Francis I of France. It removes the old line, card and search row, keeps the old link row's
+    place, moves names, groups and forms, points the source files at the kept slug and adds the 301. A kept entry
+    of added-entries.json needs the old name in its own links there too, or apply-added-entries.ps1 sets the row back.
+    Then rescan the profiles that named either. Dropped site-wide: "Council of Ministers" (it linked the Council of the
+    European Union on Togo, the UAE, the Nguyen dynasty) and "Yale" (the Welsh commote Ial, now found by Ial, Iâl,
+    "Bromfield and Yale", "lordship of Yale", "commote of Yale"). Victor Hugo's entry names his novel in English.
 The paragraphs below describe the earlier menus.
 Regrouped by theme on 31 Oct 2026 (the user: Explore had grown to 22 items and looked cramped):
 Since 21 Nov 2026: Discover · Encyclopedia · Profiles · Maps & Time ▾ · Themes ▾ · Play ▾ · More ▾ (Today in History

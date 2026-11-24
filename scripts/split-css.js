@@ -105,7 +105,10 @@ const groups = [];
 }
 for (const h of HAND) {
   const f = path.join(R, h); if (!fs.existsSync(f)) continue;
-  const u = new Set(), refs = new Set(); addPage(f, u, refs); addScripts(refs, u);
+  const u = new Set(), refs = new Set(); addPage(f, u, refs);
+  // the subject pages (/explore/<subject>, scripts/tools/make-explore.js) are written from /research and link its stylesheet
+  if (h === 'research') for (const x of pagesIn(path.join(R, 'explore'))) addPage(x, u, refs);
+  addScripts(refs, u);
   groups.push({ name: h.replace(/\.html$/, ''), who: '/' + (h === 'index' ? '' : h.replace(/\.html$/, '')), u });
 }
 function present(name, u, stems) {

@@ -42,6 +42,26 @@ const oldTitle = (head0.match(/<title>([^<]*)<\/title>/) || [])[1], oldDesc = (h
 if (!oldTitle || !oldDesc) throw new Error('title or description of the template not found');
 const regSlug = r => SD.toSlug(r.replace(/&/g, 'and'));
 const thumb = e => { const f = path.join(R, 'logos', 'thumbs', e.name + '.png'); return fs.existsSync(f) ? '<img src="/logos/thumbs/' + encodeURIComponent(e.name).replace(/'/g, '%27') + '.png" alt="" loading="lazy" width="44" height="44">' : '<span class="ph ph-place" aria-hidden="true"></span>'; };
+// A world map of dots for the kinds whose profiles have a place: a city's and a battle's own entry (entry-coords.tsv),
+// a life's birthplace (entry-places.tsv). Equal Earth in the atlas's plane (atlas.js EE.fwd; maps/world.svg is 10000 x 4393).
+const LINKS = new Function(read('encyclopedia-links.js') + ';return ENC_LINKS')();
+const COORD = {}, BORN = {};
+for (const l of read('scripts/entry-coords.tsv').split(/\r?\n/)) { const p = l.split('\t'); if (p.length >= 3 && !l.startsWith('#') && p[1] !== '' && isFinite(+p[1]) && isFinite(+p[2])) COORD[p[0]] = [+p[1], +p[2]]; }
+for (const l of read('scripts/entry-places.tsv').split(/\r?\n/)) { const p = l.split('\t'); if (p[1] === 'b' && p[4] && p[5] && isFinite(+p[4]) && isFinite(+p[5])) BORN[p[0]] = [+p[4], +p[5]]; }
+const EE = (() => { const D = Math.PI / 180, A1 = 1.340264, A2 = -0.081106, A3 = 0.000893, A4 = 0.003796, M = Math.sqrt(3) / 2, PW = 1000;
+  const raw = (lng, lat) => { const l = Math.asin(M * Math.sin(lat * D)), l2 = l * l, l6 = l2 * l2 * l2; return [lng * D * Math.cos(l) / (M * (A1 + 3 * A2 * l2 + l6 * (7 * A3 + 9 * A4 * l2))), l * (A1 + A2 * l2 + l6 * (A3 + A4 * l2))]; };
+  const S = PW / (2 * Math.PI / (M * A1)), PH = 2 * raw(0, 90)[1] * S; return (lng, lat) => { const r = raw(lng, lat); return [Math.round((PW / 2 + r[0] * S) * 10), Math.round((PH / 2 - r[1] * S) * 10)]; }; })();
+const MAPS = { city: [COORD, 'Where the cities stand', 'each dot is a city: choose one to open its profile'], battle: [COORD, 'Where the battles were fought', 'each dot is a battle: choose one to open its profile'], life: [BORN, 'Where they were born', 'each dot is a birthplace, as Wikidata records it: choose one to open the life'] };
+const mapOf = (kind, list, h) => { const M = MAPS[kind]; if (!M) return ''; const pts = [];
+  for (const e of list) { const s = LINKS.self[e.name], c = s && M[0][s]; if (!c) continue; const q = EE(c[1], c[0]); if (q[1] < 0 || q[1] > 4393) continue; pts.push([e, q]); }
+  if (pts.length < list.length / 2) return '';
+  return '<figure class="cen-map kx-map"><svg class="map map-world" viewBox="0 0 10000 4393" role="group" aria-label="World map: ' + esc(M[1].toLowerCase()) + '"><image href="/maps/world.svg" x="0" y="0" width="10000" height="4393"/>' +
+    '<path class="map-dot-bg" d="' + pts.map(p => 'M' + p[1][0] + ' ' + p[1][1] + 'h0').join('') + '"/>' +
+    pts.map(p => '<a href="' + SD.profileUrl(p[0]) + '"><title>' + esc(p[0].name) + '</title><path class="map-dot-p" d="M' + p[1][0] + ' ' + p[1][1] + 'h0"/></a>').join('') +
+    '</svg><figcaption>' + esc(M[1]) + ': ' + pts.length + ' of the ' + list.length + ' ' + esc(h.toLowerCase()) + '; ' + esc(M[2]) + '.</figcaption></figure>\n'; };
+// "Surprise me": one of the page's own profiles
+const SURPRISE = '<p class="profile-more-row kx-sur"><button type="button" class="profile-more" id="kx-surprise">Surprise me</button></p>\n';
+const SURJS = '<script>(function(){var b=document.getElementById("kx-surprise");if(!b)return;b.addEventListener("click",function(){var a=document.querySelectorAll("main .enc-seealso a[href]");if(a.length)location.href=a[Math.floor(Math.random()*a.length)].getAttribute("href")})})();</script>\n';
 let written = 0, bad = 0; const CHECK = process.argv.includes('--check');
 for (const [kind, [title0, h, what, holds]] of Object.entries(KINDS)) {
   const K = SD.PROFILE_KINDS[kind]; if (!K) throw new Error('no kind ' + kind);
@@ -66,8 +86,9 @@ for (const [kind, [title0, h, what, holds]] of Object.entries(KINDS)) {
   const main = '<main id="main" class="enc-page ref-page">\n<div class="enc-wrap">\n' +
     '<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li aria-current="page">' + esc(h) + '</li></ol></nav>\n' +
     '<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">' + esc(h) + '</h1><p class="ref-lede">' + n + ' ' + esc(what) + ', region by region and oldest first. Each profile gives ' + esc(holds) + '. To see them as cards, on a timeline or with filters, open <a href="/profiles?kind=' + (kind === 'polity' ? 'polity' : kind) + '">All Profiles</a>.</p></header>\n' +
+    SURPRISE + mapOf(kind, list, h) +
     (regions.length > 1 ? '<nav class="ref-letters hs-regions" aria-label="Regions">' + regions.map(r => '<a href="#' + regSlug(r) + '">' + esc(r) + '</a>').join('') + '</nav>\n' : '') +
-    groups.join('\n') + '\n</div>\n';
+    groups.join('\n') + '\n</div>\n' + SURJS;
   const page = head + '</head>\n<body data-nav="profiles">\n\n\n' + main + tail, f = path.join(R, K.path, 'index');
   if (CHECK) { if (!fs.existsSync(f) || fs.readFileSync(f, 'utf8') !== page) { console.log('out of date: /' + K.path + '/'); bad++; } continue; }
   if (!fs.existsSync(f) || fs.readFileSync(f, 'utf8') !== page) { fs.writeFileSync(f, page); written++; }
