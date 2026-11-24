@@ -1296,4 +1296,10 @@ const SEARCH_PROFILES=[
 ["Ājīvika","/religion/ajivika","Religion"],
 ["Native American Church","/religion/native-american-church","Religion"],
 ["Spiritism","/religion/spiritism","Religion"],
+["Juche","/ideology/juche","Ideology"],
+["Potala Palace","/work/potala-palace","Great work"],
+["Inca religion","/religion/inca-religion","Religion"],
+["Serer religion","/religion/serer-religion","Religion"],
+["Battle of Adrianople","/battle/battle-of-adrianople","Battle"],
+["Battle of the Somme","/battle/battle-of-the-somme","Battle"],
 ];

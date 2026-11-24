@@ -1,0 +1,279 @@
+{
+ "slug": "battle-of-the-somme",
+ "name": "Battle of the Somme",
+ "article": "held2/wp/battle-of-the-somme",
+ "field": {
+  "north": 0,
+  "edges": [
+   {"name": "to Bapaume →", "at": [90, 12]},
+   {"name": "to Péronne →", "at": [91, 58]}
+  ]
+ },
+ "note": "This plan shows the whole operation of July to November 1916, not a single field: each block is a corps or an army, and the villages stand for places the accounts name, with schematic spacing. The accounts give the corps on both sides only for 1 July 1916 (the German corps and the British corps from north to south); the blocks stay where they stood then, and the later phases show only how far the front moved, so the accounts do not say which corps made the attacks of July and September or which German formations faced them, except the German 1st Army at Morval. The French Sixth Army is one block on both banks of the Somme. The Reserve Army is placed beside the Albert–Bapaume road because its cavalry assembled west of Albert; its place on 1 July and its moves are otherwise schematic. The Ancre and the villages are placed only roughly.",
+ "terrain": [
+  {
+   "k": "river",
+   "name": "Somme",
+   "at": [[8, 54], [26, 54], [44, 53], [60, 51], [78, 49], [92, 47]],
+   "lab": [20, 57],
+   "quote": "on both sides of the upper reaches of the river Somme in France"
+  },
+  {
+   "k": "river",
+   "name": "Ancre",
+   "at": [[8, 18], [30, 18], [52, 18], [76, 18], [92, 18]],
+   "lab": [20, 15.5],
+   "quote": "attacked between Thiepval and the Ancre River against Schwaben Redoubt"
+  },
+  {
+   "k": "road",
+   "name": "Albert–Bapaume road",
+   "at": [[10, 32], [30, 30], [52, 27], [78, 23], [90, 20]],
+   "lab": [74, 26],
+   "quote": "from the Albert–Bapaume road to Gommecourt the British attack was a disaster"
+  },
+  {
+   "k": "village",
+   "name": "Gommecourt",
+   "at": [52, 8],
+   "lab": [52, 5],
+   "quote": "north of the Ancre opposite Serre and Gommecourt"
+  },
+  {
+   "k": "village",
+   "name": "Thiepval",
+   "at": [58, 22],
+   "lab": [58, 20.5],
+   "quote": "failed opposite Thiepval and had a great but temporary success"
+  },
+  {
+   "k": "village",
+   "name": "Pozières",
+   "at": [58, 27],
+   "lab": [58, 30],
+   "quote": "north-west along the crest of the ridge to Pozières on the Albert–Bapaume road"
+  },
+  {
+   "k": "village",
+   "name": "Combles",
+   "at": [70, 50],
+   "lab": [70, 47],
+   "quote": "to encircle Combles and a supporting attack on the south bank of the Somme"
+  }
+ ],
+ "sides": [
+  {"id": "a", "name": "Anglo-French armies"},
+  {"id": "g", "name": "German army"}
+ ],
+ "units": [
+  {
+   "id": "french",
+   "side": "a",
+   "k": "infantry",
+   "name": "French Sixth Army",
+   "short": "French",
+   "w": 8,
+   "quote": "The French Sixth Army, with one corps on the north bank from Maricourt to the Somme and two corps on the south bank southwards to Foucaucourt"
+  },
+  {
+   "id": "xiii",
+   "side": "a",
+   "k": "infantry",
+   "name": "British XIII Corps",
+   "short": "XIII",
+   "w": 6,
+   "quote": "The southern flank of the British line was held by XIII Corps, which attacked Montauban"
+  },
+  {
+   "id": "xv",
+   "side": "a",
+   "k": "infantry",
+   "name": "British XV Corps",
+   "short": "XV",
+   "w": 6,
+   "quote": "XV Corps was to attack either side of the village, to isolate the defenders."
+  },
+  {
+   "id": "iii",
+   "side": "a",
+   "k": "infantry",
+   "name": "British III Corps",
+   "short": "III",
+   "w": 6,
+   "quote": "The III Corps attack on both sides of the Albert–Bapaume road was a disaster"
+  },
+  {
+   "id": "x",
+   "side": "a",
+   "k": "infantry",
+   "name": "British X Corps",
+   "short": "X",
+   "w": 6,
+   "quote": "X Corps captured part of the Leipzig redoubt"
+  },
+  {
+   "id": "viii",
+   "side": "a",
+   "k": "infantry",
+   "name": "British VIII Corps",
+   "short": "VIII",
+   "w": 6,
+   "quote": "On the north bank of the Ancre, the attack of VIII Corps was another costly failure"
+  },
+  {
+   "id": "vii",
+   "side": "a",
+   "k": "infantry",
+   "name": "British VII Corps",
+   "short": "VII",
+   "w": 6,
+   "quote": "was to mount a diversion north of the Fourth Army area, with VII Corps."
+  },
+  {
+   "id": "reserve",
+   "side": "a",
+   "k": "cavalry",
+   "name": "Reserve Army",
+   "short": "Reserve",
+   "leader": "Hubert Gough",
+   "w": 8,
+   "quote": "The cavalry, which had assembled 5 mi (8.0 km) west of Albert"
+  },
+  {
+   "id": "xvii",
+   "side": "g",
+   "k": "infantry",
+   "name": "German XVII Corps",
+   "short": "XVII",
+   "leader": "Günther von Pannewitz",
+   "w": 6,
+   "quote": "The German defence of the south bank of the Somme was the responsibility of XVII Corps"
+  },
+  {
+   "id": "xivr",
+   "side": "g",
+   "k": "infantry",
+   "name": "German XIV Reserve Corps",
+   "short": "XIV Res.",
+   "leader": "Hermann von Stein",
+   "w": 16,
+   "quote": "the XIV Reserve Corps (Generalleutnant Hermann von Stein) with two divisions held the line from the Somme to the Ancre"
+  },
+  {
+   "id": "guard",
+   "side": "g",
+   "k": "guard",
+   "name": "German Guard Corps",
+   "short": "Guard",
+   "leader": "Karl von Plettenberg",
+   "w": 12,
+   "quote": "the Guard Corps (General Karl von Plettenberg) with three divisions held the ground north of the Ancre opposite Serre and Gommecourt"
+  },
+  {
+   "id": "german1",
+   "side": "g",
+   "k": "infantry",
+   "name": "German 1st Army",
+   "short": "German 1st",
+   "w": 10,
+   "quote": "Morval, Gueudecourt and Lesboeufs held by the German 1st Army"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The corps stand along the front",
+   "when": "1 July 1916",
+   "text": "From north to south the British VII, VIII, X, III, XV and XIII Corps and the French Sixth Army faced three corps of the German 2nd Army. The Reserve Army's cavalry waited west of Albert.",
+   "quote": "the XIV Reserve Corps (Generalleutnant Hermann von Stein) with two divisions held the line from the Somme to the Ancre and the Guard Corps (General Karl von Plettenberg) with three divisions held the ground north of the Ancre opposite Serre and Gommecourt.",
+   "at": {
+    "french": [38, 54, 90],
+    "xiii": [38, 46, 90],
+    "xv": [38, 38, 90],
+    "iii": [38, 30, 90],
+    "x": [38, 22, 90],
+    "viii": [38, 14, 90],
+    "vii": [38, 7, 90],
+    "reserve": [18, 30, 90],
+    "xvii": [60, 55, 270],
+    "xivr": [60, 40, 270],
+    "guard": [60, 11, 270]
+   }
+  },
+  {
+   "title": "The first day: success in the south, disaster in the north",
+   "when": "1 July 1916",
+   "text": "The French, XIII Corps and XV Corps took their objectives, and a German retreat began south of the Somme. North of the Albert–Bapaume road the attacks failed, or won ground that was mostly lost again.",
+   "quote": "The German defence south of the road mostly collapsed and the French had complete success on both banks of the Somme",
+   "at": {
+    "french": [42, 54, 90],
+    "xiii": [42, 46, 90],
+    "xv": [42, 38, 90],
+    "xvii": [66, 55, 270]
+   },
+   "how": {
+    "xvii": "retreat"
+   },
+   "hits": [
+    ["french", "xvii"],
+    ["xiii", "xivr"],
+    ["xv", "xivr"],
+    ["iii", "xivr"],
+    ["x", "xivr", 0.15],
+    ["viii", "guard"],
+    ["vii", "guard"]
+   ]
+  },
+  {
+   "title": "The Fourth Army attacks the second position",
+   "when": "14–17 July 1916",
+   "text": "Four divisions attacked at 3:25 a.m. after a five-minute bombardment on a front of 6,000 yards. Most of the objective was captured, but the attack was not followed up.",
+   "quote": "The attack was made by four divisions on a front of 6,000 yd (5.5 km) at 3:25 a.m. after a five-minute hurricane artillery bombardment.",
+   "at": {
+    "xiii": [46, 46, 90],
+    "xv": [46, 38, 90]
+   }
+  },
+  {
+   "title": "The Reserve Army takes Pozières",
+   "when": "From 23 July 1916",
+   "text": "The 1st Australian Division of the Reserve Army captured Pozières, the only British success of a general attack on 22 and 23 July. German bombardments and counter-attacks continued until 7 August.",
+   "quote": "The Battle of Pozières began with the capture of the village by the 1st Australian Division (Australian Imperial Force) of the Reserve Army",
+   "at": {
+    "reserve": [54, 30, 90]
+   }
+  },
+  {
+   "title": "The third general offensive and the attack on Combles",
+   "when": "15–22 September 1916",
+   "text": "The British attacked an intermediate line and the German third line, while a French attack aimed to encircle Combles. The front line moved forward by 2,500 to 3,500 yards, but no breakthrough came.",
+   "quote": "the front line being advanced by 2,500–3,500 yards (2,300–3,200 m) and many casualties were inflicted on the German defenders",
+   "at": {
+    "french": [47, 54, 90],
+    "xiii": [50, 46, 90],
+    "xv": [50, 38, 90]
+   }
+  },
+  {
+   "title": "Morval and Thiepval Ridge",
+   "when": "25–28 September 1916",
+   "text": "The Fourth Army attacked Morval, Gueudecourt and Lesboeufs, held by the German 1st Army, and took them with Combles, while the French made slower progress. The Reserve Army began its attack on Thiepval Ridge a day later.",
+   "quote": "Combles, Morval, Lesboeufs and Gueudecourt were captured and a small number of tanks joined in the battle later in the afternoon.",
+   "at": {
+    "french": [50, 54, 90],
+    "xiii": [54, 46, 90],
+    "xv": [54, 38, 90],
+    "reserve": [54, 24, 90],
+    "german1": [84, 38, 270]
+   }
+  },
+  {
+   "title": "The Fifth Army attacks into the Ancre valley",
+   "when": "13–18 November 1916",
+   "text": "The Fifth Army, as the Reserve Army was now named, attacked into the Ancre valley. Beaumont Hamel and Beaucourt were captured, though the attack on Serre failed. It was the last big British operation of the year.",
+   "quote": "The Fifth (formerly Reserve) Army attacked into the Ancre valley to exploit German exhaustion after the Battle of the Ancre Heights",
+   "at": {
+    "reserve": [54, 17, 90]
+   }
+  }
+ ]
+}

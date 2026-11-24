@@ -27,11 +27,12 @@
     ['Six Degrees', '/games#six', 'From one entry to another by its links', d0(10, 6), function (n) { var r = G['sixd-' + n]; return r ? [r.gave ? 'Route shown' : r.done ? 'Solved in ' + r.c + ' clicks' : 'In progress', !!(r.done || r.gave)] : null; }],
     ['Quote Cipher', '/games#cipher', 'A quotation in code', d0(10, 14), function (n) { var r = G['cipher-' + n]; return r ? [r.gave ? 'Answer shown' : r.done ? 'Solved' : 'In progress', !!(r.done || r.gave)] : null; }],
     ['Finish the Line', '/games#line', 'Which line of the song comes next?', d0(10, 15), five('line-')],
-    ['Whose Life?', '/games#whose', 'A great life in five clues', d0(10, 24), function (n) { var r = G['whose-' + n]; return r && r.g && r.g.length ? [r.done ? (r.w ? 'Found on clue ' + r.g.length : 'Not found') : 'In progress', !!r.done] : null; }]
+    ['Whose Life?', '/games#whose', 'A great life in five clues', d0(10, 24), function (n) { var r = G['whose-' + n]; return r && r.g && r.g.length ? [r.done ? (r.w ? 'Found on clue ' + r.g.length : 'Not found') : 'In progress', !!r.done] : null; }],
+    ['Which Battle Is This?', '/games#battle', 'A battle\u2019s field without its names', d0(10, 27), function (n) { var r = G['battleq-' + n]; return r && r.g && r.g.length ? [r.done ? (r.w ? 'Found on clue ' + r.g.length : 'Not found') : 'In progress', !!r.done] : null; }]
   ];
   var quiz = null; try { quiz = JSON.parse(localStorage.getItem('epoch-quiz') || 'null'); } catch (e) {}
   var rows = [['Daily Quiz', '/quiz', 'Name it from the clues', quiz && quiz.day === Q ? [quiz.done ? (quiz.won ? 'Solved' : 'Not this time') : 'In progress', !!quiz.done] : null]]
-    .concat(GAMES.map(function (g) { var n = Math.max(1, Q - g[3] + 1); return [g[0], g[1], g[2], g[4](n, Q)]; }));
+    .concat(GAMES.filter(function (g) { return !kids || g[1] !== '/games#battle'; }).map(function (g) { var n = Math.max(1, Q - g[3] + 1); return [g[0], g[1], g[2], g[4](n, Q)]; }));
   var done = rows.filter(function (r) { return r[3] && r[3][1]; }).length;
   $('td-games').innerHTML = rows.map(function (r) {
     return '<li><a class="td-game' + (r[3] && r[3][1] ? ' is-done' : '') + '" href="' + r[1] + '"><span class="td-game-n">' + esc(r[0]) + '</span><span class="td-game-d">' + esc(r[2]) + '</span>' +

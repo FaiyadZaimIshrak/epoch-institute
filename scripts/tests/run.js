@@ -7,7 +7,7 @@
 // starts its own server.
 const { spawnSync } = require('child_process'), fs = require('fs'), path = require('path'), os = require('os');
 const ROOT = path.resolve(__dirname, '..', '..'), out = fs.mkdtempSync(path.join(os.tmpdir(), 'epoch-tests-'));
-const TESTS = ['looks', 'advent', 'birthday', 'games-lobby', 'games-tabs', 'past-games', 'longer-or-shorter', 'quote-cipher', 'finish-the-line', 'history-now', 'page-toc', 'long-lists', 'phone-bar', 'menus', 'page-useful', 'quotations', 'religions', 'whose-life', 'family-trees', 'journeys', 'cities-battles', 'subject-pages', 'home-recovers', 'home-globe', 'howto', 'discover', 'today-page', 'born-where', 'atlas-born', 'atlas-today', 'safe-keys', 'linker-years', 'battle-maps', 'mail'];
+const TESTS = ['looks', 'advent', 'birthday', 'games-lobby', 'games-tabs', 'past-games', 'longer-or-shorter', 'quote-cipher', 'finish-the-line', 'history-now', 'page-toc', 'long-lists', 'phone-bar', 'menus', 'page-useful', 'quotations', 'religions', 'whose-life', 'which-battle', 'family-trees', 'journeys', 'cities-battles', 'subject-pages', 'home-recovers', 'home-globe', 'howto', 'discover', 'today-page', 'born-where', 'atlas-born', 'atlas-today', 'safe-keys', 'linker-years', 'battle-maps', 'mail'];
 const want = process.argv.slice(2), list = want.length ? TESTS.filter(t => want.includes(t)) : TESTS;
 let failed = [];
 for (const t of list) {

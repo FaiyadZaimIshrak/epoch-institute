@@ -1033,7 +1033,9 @@ var GAME_IDEAS = [
 ["/religion/etruscan-religion","Etruscan religion","Religion",-900,"c. 900 BCE","/images/encyclopedia/liber-linteus.jpg","SpeedyGonsales · CC BY 3.0","https://commons.wikimedia.org/wiki/File:Lanena_knjiga_(Liber_linteus_Zagrebiensis).jpg",1],
 ["/religion/hawaiian-religion","Hawaiian religion","Religion",800,"c. 800 CE","/images/encyclopedia/kamehameha-i.jpg","Louis Choris · Public domain","https://commons.wikimedia.org/wiki/File:Louis_Choris_(1795-1828)_-_Kamehameha,_King_of_the_Sandwich_Islands_by_Louis_Choris,_(Russian),_pen_and_watercolor.jpg",1],
 ["/religion/korean-shamanism","Korean shamanism","Religion",1100,"c. 1100 CE","/images/encyclopedia/samguk-sagi.jpg","Gomanari · Public domain","https://commons.wikimedia.org/wiki/File:Samguk.JPG",1],
-["/religion/ajivika","Ājīvika","Religion",-500,"c. 500 BCE","/images/encyclopedia/ajivika.jpg","Daderot · CC0","https://commons.wikimedia.org/wiki/File:Four_Scenes_from_the_Life_of_the_Buddha_-_Parinirvana_-_Kushan_dynasty,_late_2nd_to_early_3rd_century_AD,_Gandhara,_schist_-_Freer_Gallery_of_Art_-_DSC05119.JPG",1]
+["/religion/ajivika","Ājīvika","Religion",-500,"c. 500 BCE","/images/encyclopedia/ajivika.jpg","Daderot · CC0","https://commons.wikimedia.org/wiki/File:Four_Scenes_from_the_Life_of_the_Buddha_-_Parinirvana_-_Kushan_dynasty,_late_2nd_to_early_3rd_century_AD,_Gandhara,_schist_-_Freer_Gallery_of_Art_-_DSC05119.JPG",1],
+["/work/potala-palace","Potala Palace","Great work",1645,"1645 CE","/images/encyclopedia/potala-palace.jpg","Lhasa Government · CC BY-SA 4.0","https://commons.wikimedia.org/wiki/File:Potala_Palace_HQ.jpg",1],
+["/religion/inca-religion","Inca religion","Religion",1200,"c. 1200 CE","/images/encyclopedia/coricancha.jpg","Diego Delso · CC BY-SA 4.0","https://commons.wikimedia.org/wiki/File:Coricancha,_Cusco,_Per%C3%BA,_2015-07-31,_DD_68.JPG",1]
 ];
 var GAME_SPANS = [
 ["/empire/elamite-confederation","Elamite Confederation",-2700,-539,"/logos/Elamite%20Confederation.png"],

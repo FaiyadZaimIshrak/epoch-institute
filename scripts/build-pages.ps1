@@ -4529,6 +4529,11 @@ if (Test-Path "$Repo\data\quotes.json") {
   # (scripts/whose-life.tsv, append only), which writes whose-data.js and stamps its ?v= into /games (WHOSE_SRC)
   foreach ($whoL in (& $songExe "$PSScriptRoot\tools\make-whose-life.js")) { Say $whoL }
   if ($LASTEXITCODE) { throw 'Whose Life?: scripts/tools/make-whose-life.js failed (above)' }
+  # Which Battle Is This? (Nov 2026): a battle a day shown as its field with the names taken off, dealt by
+  # scripts/tools/make-battle-game.js (scripts/battle-game.tsv, append only) from the fields make-battle-maps.js wrote;
+  # it writes battleq-data.js and stamps its ?v= into /games (BATTLEQ_SRC)
+  foreach ($bqL in (& $songExe "$PSScriptRoot\tools\make-battle-game.js")) { Say $bqL }
+  if ($LASTEXITCODE) { throw 'Which Battle Is This?: scripts/tools/make-battle-game.js failed (above)' }
 }
 # The Kids corner: scripts/kids-corner.tsv (@theme lines, entry lines with a line for young readers, ! facts)
 $kdThemes = New-Object Collections.Generic.List[object]; $kdFacts = New-Object Collections.Generic.List[string]; $kdBad = New-Object Collections.Generic.List[string]; $kdT = $null
@@ -4613,7 +4618,7 @@ $SECTIONS = [ordered]@{
   today        = @{ t = 'Today in History'; h = '/today-in-history/'; k = $nTih.ToString('N0') + ' events'; d = 'What happened on each day of the year, across five thousand years.'; pic = @('mesoamerican-long-count-calendar', 'anglo-saxon-chronicle') }
   glossary     = @{ t = 'Glossary'; h = '/encyclopedia/glossary'; k = "$($TERMS.Count) terms"; d = 'Offices, institutions, laws and ideas of the past, each explained in a sentence.'; pic = @('code-of-hammurabi', 'corpus-juris-civilis', 'domesday-book') }
   quiz         = @{ t = 'History Quiz'; h = '/quiz'; k = 'New every day'; d = 'Guess the empire, person, event or place from four clues, or practise as long as you like.'; pic = @('rosetta-stone', 'sphinx', 'great-sphinx-of-giza') }
-  games        = @{ t = 'Games'; h = '/games'; k = 'Eighteen games'; d = 'Picture puzzles, word hunts, timelines, the ranks of past societies, a globe, a daily Connections and a daily Crossword: games with real pictures and real dates, for every age.'; pic = @('pythian-games') }
+  games        = @{ t = 'Games'; h = '/games'; k = 'Nineteen games'; d = 'Picture puzzles, word hunts, timelines, the ranks of past societies, a globe, a daily Connections and a daily Crossword: games with real pictures and real dates, for every age.'; pic = @('pythian-games') }
   inventions   = @{ t = 'Inventions Tree'; h = '/inventions'; k = "$($INVN.Count) inventions"; d = 'From stone tools to the World Wide Web: when and where each invention and discovery first appeared, what it built on and what it led to.'; pic = @('printing-press', 'magnetic-compass') }
   songs        = @{ t = 'Songs in History'; h = '/songs/'; k = "$($SONGS.Count) songs"; d = 'Hymns, anthems, laments and folk songs handed down through history: who made them, what they say, their words in the original and in English, and a performance.'; pic = @('cantigas-de-santa-maria', 'god-save-the-king') }
   societies    = @{ t = 'Social Ladders'; h = '/societies/'; k = "$($SOCS.Count) societies"; d = 'From emperor to enslaved: how societies ranked their people, how many stood on each rung and how they rose or fell. Be born into one by chance.'; pic = @('feudalism', 'standard-of-ur') }

@@ -48,7 +48,7 @@
     S.saidPlayed = Object.keys(games).filter(function (k) { var g = games[k]; return /^said-\d+$/.test(k) && g && g.done; }).length;
     S.cwClean = Object.keys(games).some(function (k) { var g = games[k]; return /^cw-\d+$/.test(k) && g && g.done && !g.gave && !g.c && !g.r; });
     var played = { pairs: games.pairs, order: games.order, year: games.year, puzzle: games['pz-solved'] };
-    Object.keys(games).forEach(function (k) { if (k === 'hunt-born') played.born = 1; else if (/^hunt-/.test(k)) played.hunt = 1; if (k === 'first-lasted') played.lasted = 1; else if (/^(first-|daily-\d)/.test(k)) played.first = 1; if (/^words-(?!theme)/.test(k)) played.words = 1; if (/^conn-\d/.test(k)) played.conn = 1; if (/^cw-\d/.test(k)) played.cross = 1; if (/^said-\d/.test(k)) played.said = 1; if (/^songq-k?\d/.test(k)) played.songq = 1; if (/^ranks\d$/.test(k)) played.ranks = 1; if (/^sixd-\d/.test(k)) played.six = 1; if (/^cipher-\d/.test(k)) played.cipher = 1; if (/^line-\d/.test(k)) played.line = 1; if (/^whose-\d/.test(k)) played.whose = 1; });
+    Object.keys(games).forEach(function (k) { if (k === 'hunt-born') played.born = 1; else if (/^hunt-/.test(k)) played.hunt = 1; if (k === 'first-lasted') played.lasted = 1; else if (/^(first-|daily-\d)/.test(k)) played.first = 1; if (/^words-(?!theme)/.test(k)) played.words = 1; if (/^conn-\d/.test(k)) played.conn = 1; if (/^cw-\d/.test(k)) played.cross = 1; if (/^said-\d/.test(k)) played.said = 1; if (/^songq-k?\d/.test(k)) played.songq = 1; if (/^ranks\d$/.test(k)) played.ranks = 1; if (/^sixd-\d/.test(k)) played.six = 1; if (/^cipher-\d/.test(k)) played.cipher = 1; if (/^line-\d/.test(k)) played.line = 1; if (/^whose-\d/.test(k)) played.whose = 1; if (/^battleq-\d/.test(k)) played.battle = 1; });
     S.games = Object.keys(played).filter(function (k) { return played[k]; }).length;
     S.lasted = +games['first-lasted'] || 0;   // Longer or Shorter?: the best streak
     var adv = get('epoch-advent', {}) || {}; S.advent = 0;   // the Advent calendar: the most doors opened in one year
@@ -123,7 +123,7 @@
       ['Crossword', S.cwSolved ? S.cwSolved + ' solved' + (S.cw.n > 1 ? ', ' + S.cw.n + ' days in a row' : '') : 'Not solved yet', '/games#cross'],
       ['Test yourself', S.tests ? S.testsPassed + ' passed of ' + S.tests + ' taken' : 'At the foot of every profile, century and path', '/profiles'],
       ['Who Said It?', S.saidPlayed ? S.saidPlayed + ' played' + (S.said.n > 1 ? ', ' + S.said.n + ' days in a row' : '') : 'Not played yet', '/games#said'],
-      ['Games', S.games + ' of 18 played', '/games']
+      ['Games', S.games + ' of 19 played', '/games']
     ];
     $('pass-play').innerHTML = play.map(function (p) { return '<li><a href="' + p[2] + '"><span class="pass-play-t">' + esc(p[0]) + '</span><span class="pass-play-d">' + esc(p[1]) + '</span></a></li>'; }).join('');
     var rec = get('epoch-recent', []);
@@ -136,7 +136,7 @@
   // data/spans/<c>.json (written by build-pages.ps1, which stamps SPANS_V; only the files these pages need), the
   // profiles from EMPIRES (profileSpan), centuries, people by century and years from their addresses. Lanes on one
   // axis of years, coloured by kind (the --cat slots), drawn when the section nears the screen; a list for the same.
-  var SPANS_V = '24f782671a';
+  var SPANS_V = '7564d9d29f';
   var TLK = [['Profiles', 1, 'Profiles', 'Profile'], ['Encyclopedia entries', 0, 'Entries', 'Encyclopedia entry'], ['States', 2, 'States', 'State'], ['Centuries, years, countries and speeches', 3, 'Other pages', '']];   // [label, colour slot, short, one]
   var PROF = {}; if (typeof EMPIRES !== 'undefined' && typeof profileUrl === 'function') EMPIRES.forEach(function (e) { PROF[profileUrl(e)] = e; });
   function yl(y) { return y < 0 ? -y + ' BCE' : y < 1000 ? y + ' CE' : String(y); }

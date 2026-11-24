@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Battle of the Somme: The Two Sides, the Fighting and What Followed</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="British Empire and French armies attacked the German Second Army on both sides of the upper Somme from 1 July to 18 November 1916, gaining about 10 km at…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Battle of the Somme: The Two Sides, the Fighting and What Followed">
+<meta property="og:description" content="British Empire and French armies attacked the German Second Army on both sides of the upper Somme from 1 July to 18 November 1916, gaining about 10 km at…">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://the-epoch-institute.org/battle/battle-of-the-somme">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/battle-of-the-somme.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/battle-of-the-somme.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/battle/battle-of-the-somme">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+.empire-page { padding-top: 80px; min-height: 100vh; }
+.info-share-row { display:flex; gap:10px; margin:20px 0 0; }
+.info-share-btn { display:flex; align-items:center; gap:6px; font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); background:none; border:0.5px solid var(--border); padding:7px 14px; cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:2px; font-weight: 600;}
+.info-share-btn:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-row { display:flex; justify-content:space-between; align-items:center; padding:0 40px 0; max-width:900px; margin:0 auto 24px; flex-wrap:wrap; gap:12px; }
+.empire-view-explorer { font-family:var(--font-ui); font-size:12px; letter-spacing: 0.06em; text-transform:uppercase; color:var(--muted); text-decoration:none; border:0.5px solid var(--border); padding:7px 14px; border-radius:2px; transition:border-color 0.2s,color 0.2s; font-weight: 600;}
+.empire-view-explorer:hover { border-color:var(--gold); color:var(--gold); }
+.empire-nav-acts { display:flex; flex-wrap:wrap; gap:8px; }
+.empire-nav-row .ref-crumbs { margin:0; }
+@media (max-width:600px) { .empire-nav-row { padding:0 16px; } .profile-detail-inner { padding:20px 16px 0; } }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Profiles","item":"https://the-epoch-institute.org/profiles"},{"@type":"ListItem","position":3,"name":"Battles","item":"https://the-epoch-institute.org/profiles?kind=battle"},{"@type":"ListItem","position":4,"name":"Battle of the Somme"}]},{"@type":"Article","headline":"Battle of the Somme","description":"British Empire and French armies attacked the German Second Army on both sides of the upper Somme from 1 July to 18 November 1916, gaining about 10 km at…","url":"https://the-epoch-institute.org/battle/battle-of-the-somme","mainEntityOfPage":"https://the-epoch-institute.org/battle/battle-of-the-somme","inLanguage":"en-GB","dateModified":"2026-10-23","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"Thing","name":"Battle of the Somme"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/og/battle-of-the-somme.jpg","width":1200,"height":630}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+
+<div class="read-progress" aria-hidden="true"><span id="read-progress"></span></div>
+<main id="main" class="empire-page">
+  <div class="empire-nav-row">
+    <nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/profiles">Profiles</a></li><li><a href="/profiles?kind=battle">Battles</a></li><li aria-current="page">Battle of the Somme</li></ol></nav>
+  </div>
+
+  <div class="profile-detail-inner">
+    <div class="profile-detail-header">
+      <img class="profile-detail-logo" id="detail-logo" src="/logos/Battle%20of%20the%20Somme.png" alt="Battle of the Somme" width="100" height="100" onerror="this.style.display='none'">
+      <div>
+        <p class="profile-detail-region">Battle · Europe</p>
+        <h1 class="profile-detail-name">Battle of the Somme</h1>
+        <div class="info-stats" style="margin-top:10px;">
+          <div class="info-stat"><span class="info-stat-label">Date</span><span class="info-stat-val">1 July – 18 November 1916 (141 days)</span></div>
+          <div class="info-stat"><span class="info-stat-label">Place</span><span class="info-stat-val">Both sides of the upper reaches of the river Somme in <a class="enc-link" href="/encyclopedia/picardy">Picardy</a>, northern <a class="enc-link" href="/encyclopedia/france">France</a></span></div>
+          <div class="info-stat"><span class="info-stat-label">The two sides</span><span class="info-stat-val">The British Fourth Army under Sir Henry Rawlinson, with the Third Army and later the Reserve Army under Hubert Gough, and the French Sixth Army under Émile Fayolle, under the overall direction of Douglas Haig and Joseph Joffre, against the German Second Army under Fritz von Below; more than three million men fought in all</span></div>
+          <div class="info-stat"><span class="info-stat-label">Outcome</span><span class="info-stat-val">The <a class="enc-link" href="/encyclopedia/allies">Allies</a> advanced about 10 km along most of the front, their largest gain since the Marne in 1914, but did not take <a class="enc-link" href="/encyclopedia/peronne">Péronne</a> or Bapaume; casualties on all sides exceeded one million, and the German army withdrew to the Hindenburg Line in March 1917.</span></div>
+        </div>
+        <p class="empire-meta">6 min read</p>
+      </div>
+    </div>
+
+    <section class="empire-glance" id="at-a-glance" aria-labelledby="glance-title">
+      <div class="empire-glance-main"><h2 class="empire-glance-title" id="glance-title">At a glance</h2><ul><li>The first day, 1 July 1916, cost the British 57,470 casualties, 19,240 of them killed, the worst in the history of the British Army, most of them north of the Albert–Bapaume road; the French Sixth Army lost 1,590.</li><li>The plan changed as the war went on: <a class="enc-link" href="/encyclopedia/verdun">Verdun</a> drew off French divisions, so the offensive in which the French were to take the main part became a mainly British effort, and a hoped-for decisive victory was reduced to relieving Verdun and wearing down the German army.</li><li>Casualty counts are disputed: British 419,654 to 432,000, French about 200,000, and German anywhere from 400,000 to 680,000 depending on the historian and the method of counting.</li></ul></div>
+      <aside class="empire-dyk"><p class="empire-dyk-title">Did you know?</p><p>Before the attack on 1 July the British artillery fired more than 1.5 million shells in the preliminary bombardment, more than in the first year of the war, and the guns could be heard on Hampstead Heath, 165 miles (266 km) away.</p></aside>
+    </section>
+
+    <nav class="empire-toc" aria-label="On this page">
+      <p class="empire-toc-title">On this page</p>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#how-it-was-fought">How it was fought</a></li><li><a href="#background">Background</a></li><li><a href="#forces">The Two Sides</a></li><li><a href="#course">How It Went</a></li><li><a href="#aftermath">Aftermath</a></li><li><a href="#sources">How We Know</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
+    </nav>
+
+    <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
+      <h2 class="profile-section-title" id="timeline-title">Timeline</h2>
+      <ol class="rf-events"><li><span class="rf-year">1915</span><span class="rf-text">The Chantilly Conference agrees simultaneous Allied offensives for 1916 and the Franco-British contribution is planned for the Somme</span></li><li><span class="rf-year">1916</span><span class="rf-text">The German attack on <a class="enc-link" href="/encyclopedia/verdun">Verdun</a> begins on 21 February and French divisions meant for the Somme are diverted there</span></li><li><span class="rf-year">1916</span><span class="rf-text">On 1 July the British Fourth Army and the French Sixth Army attack the German Second Army after a bombardment that began on 24 June</span></li><li><span class="rf-year">1916</span><span class="rf-text">On 14 July the Fourth Army attacks the German second position at Bazentin Ridge after a five-minute hurricane bombardment</span></li><li><span class="rf-year">1916</span><span class="rf-text">On 15 September tanks, the Canadian Corps and the <a class="enc-link" href="/encyclopedia/new-zealand">New Zealand</a> Division make their debut on the Somme at Flers–Courcelette</span></li><li><span class="rf-year">1916</span><span class="rf-text">The last big British operation of the year, the Battle of the Ancre, is fought from 13 to 18 November</span></li><li><span class="rf-year">1917</span><span class="rf-text">British attacks on the Ancre from January force local German withdrawals, followed by Operation Alberich and the retirement to the Hindenburg Line from 16 March</span></li></ol>
+    </section>
+
+    <section class="battle-field" id="how-it-was-fought" data-battle="battle-of-the-somme" data-v="5babce95d4" aria-labelledby="battle-field-title">
+      <h2 class="profile-section-title" id="battle-field-title">How it was fought</h2>
+      <p class="bf-lede">The field and the armies, phase by phase. Press Play, or step through with Next and Back.</p>
+      <ol class="bf-phases"><li><b>The corps stand along the front</b> From north to south the British VII, VIII, X, III, XV and XIII Corps and the French Sixth Army faced three corps of the German 2nd Army. The Reserve Army's cavalry waited west of Albert.</li><li><b>The first day: success in the south, disaster in the north</b> The French, XIII Corps and XV Corps took their objectives, and a German retreat began south of the Somme. North of the Albert–Bapaume road the attacks failed, or won ground that was mostly lost again.</li><li><b>The Fourth Army attacks the second position</b> Four divisions attacked at 3:25 a.m. after a five-minute bombardment on a front of 6,000 yards. Most of the objective was captured, but the attack was not followed up.</li><li><b>The Reserve Army takes Pozières</b> The 1st Australian Division of the Reserve Army captured Pozières, the only British success of a general attack on 22 and 23 July. German bombardments and counter-attacks continued until 7 August.</li><li><b>The third general offensive and the attack on Combles</b> The British attacked an intermediate line and the German third line, while a French attack aimed to encircle Combles. The front line moved forward by 2,500 to 3,500 yards, but no breakthrough came.</li><li><b>Morval and Thiepval Ridge</b> The Fourth Army attacked Morval, Gueudecourt and Lesboeufs, held by the German 1st Army, and took them with Combles, while the French made slower progress. The Reserve Army began its attack on Thiepval Ridge a day later.</li><li><b>The Fifth Army attacks into the Ancre valley</b> The Fifth Army, as the Reserve Army was now named, attacked into the Ancre valley. Beaumont Hamel and Beaucourt were captured, though the attack on Serre failed. It was the last big British operation of the year.</li></ol>
+    </section>
+
+
+    <div class="profile-section-block" id="background">
+        <h2 class="profile-section-title">Background</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/german-general-staff"><img src="/images/encyclopedia/german-general-staff.jpg" alt="German General Staff" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/german-general-staff">German General Staff</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:Generalstabsgeb%C3%A4ude_(Berlin).jpg" target="_blank" rel="noopener">Unknown author, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>Allied strategy for 1916 was decided at the Chantilly Conference from 6 to 8 December 1915. Offensives by the Russian army on the Eastern Front, the Italian army on the Italian Front and the Franco-British armies on the Western Front were to be carried out at the same time, so that the <a class="enc-link" href="/encyclopedia/central-powers">Central Powers</a> had no time to move troops between fronts. That month General Sir Douglas Haig replaced Field Marshal Sir John French as Commander-in-Chief of the British Expeditionary Force (BEF) and favoured an offensive in <a class="enc-link" href="/encyclopedia/flanders">Flanders</a>. In February 1916 it was decided to attack first where the French and British armies met, astride the Somme in <a class="enc-link" href="/encyclopedia/picardy">Picardy</a>.</p><p>A week later the Germans began the <a class="enc-link" href="/encyclopedia/battle-of-verdun">Battle of Verdun</a>, on 21 February. The costly defence of <a class="enc-link" href="/encyclopedia/verdun">Verdun</a> forced the French to divert divisions intended for the Somme and eventually reduced their contribution to 13 divisions in the Sixth Army, against 20 British divisions. The British attack, first meant as support, became the principal effort. By 31 May the plan for a decisive victory had shrunk to a limited offensive to relieve pressure on the French at Verdun and inflict <a class="enc-link" href="/encyclopedia/attrition">attrition</a> on the German armies in the west, and on 16 June Haig defined the objectives in those terms.</p><p>The Chief of the <a class="enc-link" href="/encyclopedia/german-general-staff">German General Staff</a>, Erich von Falkenhayn, meant to end the war by splitting the Entente. He expected the French to suffer huge losses at Verdun and the British relief offensive to fall south of <a class="enc-link" href="/encyclopedia/arras">Arras</a> and be destroyed. The Brusilov offensive, which began on 4 June, absorbed forces that the German Second Army had asked for to make a spoiling attack on the Somme.</p></div>
+      </div>
+      <div class="profile-section-block" id="forces">
+        <h2 class="profile-section-title">The Two Sides</h2>
+        <div class="profile-section-body"><p>The British Fourth Army under General Sir Henry Rawlinson was to take 27,000 yards (25,000 m) of the German first line from Montauban to Serre after a five-day bombardment, with the Third Army making a diversion at Gommecourt. The BEF was made up largely of wartime volunteers of the Territorial Force and Kitchener's Army, with the remains of the pre-war army, and rapid expansion had lowered its average experience. The French Sixth Army had one corps on the north bank and two on the south, and made a subsidiary attack to guard the British right flank. The attack was made by five French divisions east of the Somme, eleven British divisions of the Fourth Army and two of the Third Army, against the German Second Army under General Fritz von Below.</p><p>German defences on the Somme had been built up since January 1915. <a class="enc-link" href="/encyclopedia/barbed-wire">Barbed wire</a> was laid in two belts about 30 yards deep, the front position had three trench lines 150 to 200 yards apart, dugouts had been deepened to 20 to 30 feet, and a line of strongpoints stood about 1,000 yards behind. A second position lay beyond the range of Allied <a class="enc-link" href="/encyclopedia/field-artillery">field artillery</a>. The front trenches were on a forward slope, lined with white chalk and easy to see, and the garrisons were crowded close to them. Research in German archives revealed in 2016 that two disgruntled soldiers had betrayed the date and place of the British offensive weeks before. Falkenhayn sent only four divisions to the Somme although an attack was certain by mid-June.</p></div>
+      </div>
+      <div class="profile-section-block" id="course">
+        <h2 class="profile-section-title">How It Went</h2>
+        <div class="profile-section-body"><p>The Allied bombardment began on 24 June, and the infantry attacked on 1 July on both banks of the Somme. The French Sixth Army and the right wing of the Fourth Army inflicted a considerable defeat on the German Second Army, but from the Albert–Bapaume road to Gommecourt the attack was a disaster, where most of the British casualties occurred. Haig, against Joffre's wishes, abandoned the offensive north of the road to reinforce success in the south. Fighting then became a series of attacks on fortified villages and woods. The Fourth Army attacked at Bazentin Ridge on 14 July at 3:25 a.m., after a five-minute hurricane bombardment. The 1st Australian Division captured Pozières on 23 July, and Delville Wood was held by the South African brigade from 15 to 20 July.</p><p>Guillemont was captured on 3 to 6 September and Ginchy on 9 September. On 15 September the Battle of Flers–Courcelette began: it was the third and final general offensive by the British Army, and the first appearance on the Somme of the Canadian Corps, the <a class="enc-link" href="/encyclopedia/new-zealand">New Zealand</a> Division and tanks. It advanced the front by 2,500 to 3,500 yards but did not achieve a breakthrough. Morval and Thiepval Ridge followed on 25 to 28 September. In October and November, with rain and mud, the Battles of Le Transloy and the Ancre Heights ran from 1 October to 11 November, and the Battle of the Ancre, from 13 to 18 November, was the last big British operation of the year.</p></div>
+      </div>
+      <div class="profile-section-block" id="aftermath">
+        <h2 class="profile-section-title">Aftermath</h2>
+        <div class="profile-section-body"><p>At the end of the battle British and French forces had penetrated 6.2 miles (10 km) into German-occupied territory along most of the front, their largest gain since the <a class="enc-link" href="/encyclopedia/first-battle-of-the-marne">First Battle of the Marne</a> in 1914. They had not captured <a class="enc-link" href="/encyclopedia/peronne">Péronne</a> or Bapaume, where the German armies held their positions over the winter. British casualties are put at 419,654 to 432,000, French at about 200,000 and German at 465,181 to 500,000 or perhaps 600,000. Falkenhayn was replaced by Hindenburg and Ludendorff at the end of August 1916, and on 5 September a conference at Cambrai decided to build a new defensive line well behind the Somme front.</p><p>British attacks in the Ancre valley resumed in January 1917 and forced local German withdrawals in February, eventually taking 5,284 prisoners. The Germans then carried out a strategic retreat of about 25 miles (40 km) to the Siegfriedstellung, or Hindenburg Line, in Operation Alberich, which began on 16 March 1917 although the new line was unfinished. The Somme defences held by the Germans after November 1916 were in poor condition and the garrisons were exhausted. For <a class="enc-link" href="/encyclopedia/britain">Britain</a> and its <a class="enc-link" href="/encyclopedia/dominion">dominions</a> the battle left a long memory, and some historians hold that it took the strategic initiative from the German army and began a process of <a class="enc-link" href="/encyclopedia/attrition">attrition</a> that led to its collapse in 1918.</p></div>
+      </div>
+      <div class="profile-section-block" id="sources">
+        <h2 class="profile-section-title">How We Know</h2>
+        <div class="profile-section-body"><p>The battle is documented in the official histories of the belligerents and in many later studies, and the figures are still argued. The Allied estimate made at the Chantilly Conference on 15 November 1916 gave German casualties as 630,000, against 485,000 for the British and French. Modern scholars hold that this was exaggerated: German Reichsarchiv tabulations give 237,159 casualties of all types for the 69 divisions involved. J. E. Edmonds, the British official historian, gave in 1932 British casualties of 419,654, French of 194,451 and German of about 445,322 with 27 per cent added; Wilfrid Miles in 1938 gave German losses of 660,000 to 680,000. M. J. Williams called Edmonds's addition spurious in 1964, and Gary Sheffield in 2003 called it discredited and quoted 500,000 as the official German figure. William Philpott gave the German total as disputed, 400,000 to 680,000.</p><p>French figures include 202,567 (Doughty) and 154,446 for the Sixth Army with 48,131 for the Tenth (Philpott's sources). German and French writing on the battle has largely not been translated, which leaves much of its detail out of English-language histories. Research in German archives revealed in 2016 that the British plan had been betrayed to German interrogators.</p></div>
+      </div>
+      <div class="profile-section-block" id="legacy">
+        <h2 class="profile-section-title">Legacy</h2>
+        <figure class="profile-section-fig"><a href="/encyclopedia/david-lloyd-george"><img src="/images/encyclopedia/david-lloyd-george.jpg" alt="David Lloyd George" loading="lazy" width="240"></a><figcaption><a href="/encyclopedia/david-lloyd-george">David Lloyd George</a><span class="profile-section-fig-credit"><a href="https://commons.wikimedia.org/wiki/File:David_Lloyd_George.jpg" target="_blank" rel="noopener">Harris &amp; Ewing, Public domain</a></span></figcaption></figure>
+        <div class="profile-section-body"><p>In the United Kingdom and <a class="enc-link" href="/encyclopedia/newfoundland">Newfoundland</a> the Battle of the Somme became the central memory of the <a class="enc-link" href="/encyclopedia/first-world-war">First World War</a>. The Royal British Legion, the British Embassy in <a class="enc-link" href="/encyclopedia/paris">Paris</a> and the Commonwealth War Graves Commission commemorate it each 1 July at the Thiepval Memorial to the Missing of the Somme. The 1st <a class="enc-link" href="/encyclopedia/royal-newfoundland-regiment">Newfoundland Regiment</a> was named the Royal Newfoundland Regiment by <a class="enc-link" href="/encyclopedia/george-v">George V</a> on 28 November 1917, and the island remembers the day on the Sunday nearest 1 July. Northern Ireland remembers the battle through the 36th (Ulster) Division. On 1 July 2016 the United Kingdom held a two-minute silence at 7:28 a.m., and 1,400 actors in replica uniforms played the part of soldiers who had died on the first day.</p><p>Until the 1930s the dominant English-language view was that the battle was a hard-fought victory against a brave, experienced opponent. In the 1930s a new orthodoxy of mud, blood and futility emerged, and gained emphasis in the 1960s. Churchill objected to the way it was fought in August 1916, and <a class="enc-link" href="/encyclopedia/david-lloyd-george">Lloyd George</a> condemned <a class="enc-link" href="/encyclopedia/attrition">attrition</a> warfare in his memoirs. John Terraine, Gary Sheffield, William Philpott and others hold that there was no strategic alternative for the British in 1916. In 2016 Peter Barton argued that the battle should be regarded as a German defensive victory.</p></div>
+      </div>
+
+    <p class="profile-summary" id="summary"><em>From 1 July to 18 November 1916 British and French armies attacked the German Second Army on both banks of the Somme. They gained about 10 km but did not take <a class="enc-link" href="/encyclopedia/peronne">Péronne</a> or Bapaume, and casualty counts are still disputed.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>R. A. Doughty, Pyrrhic Victory: French Strategy and Operation in the Great War (The Belknap Press of Harvard University, 2005)</li>
+        <li>C. Duffy, Through German Eyes: The British and the Somme 1916 (Weidenfeld &amp; Nicolson, 2006)</li>
+        <li>P. Hart, The Somme (Cassell, 2006)</li>
+        <li>W. Philpott, Bloody Victory: The Sacrifice on the Somme and the Making of the Twentieth Century (Little, Brown, 2009)</li>
+        <li>J. Sheldon, The German Army on the Somme 1914–1916 (Leo Cooper, 2006)</li>
+      </ul>
+    </div>
+
+    <section class="related-empires" aria-labelledby="related-title">
+      <p class="profile-references-title" id="related-title">Other battles</p>
+      <div class="related-grid"><a class="related-card" href="/battle/battle-of-jutland"><img src="/logos/thumbs/Battle%20of%20Jutland.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Jutland</span><span class="related-card-dates">31 May – 1 June 1916</span></a><a class="related-card" href="/battle/battle-of-verdun"><img src="/logos/thumbs/Battle%20of%20Verdun.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Verdun</span><span class="related-card-dates">21 February – 18 December 1916</span></a><a class="related-card" href="/battle/battle-of-caporetto"><img src="/logos/thumbs/Battle%20of%20Caporetto.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Caporetto</span><span class="related-card-dates">24 October – 19 November 1917</span></a><a class="related-card" href="/battle/first-battle-of-the-marne"><img src="/logos/thumbs/First%20Battle%20of%20the%20Marne.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">First Battle of the Marne</span><span class="related-card-dates">5 to 12 September 1914</span></a></div>
+      <div class="related-prevnext"><a class="related-card" href="/battle/battle-of-jutland"><span class="related-card-label">← Earlier</span><img src="/logos/thumbs/Battle%20of%20Jutland.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Jutland</span><span class="related-card-dates">31 May – 1 June 1916</span></a><a class="related-card" href="/battle/battle-of-verdun"><span class="related-card-label">Later →</span><img src="/logos/thumbs/Battle%20of%20Verdun.png" alt="" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'"><span class="related-card-name">Battle of Verdun</span><span class="related-card-dates">21 February – 18 December 1916</span></a></div>
+    </section>
+
+    <div class="detail-cite-row" id="detail-cite-row">
+      <button class="detail-cite-btn" id="detail-cite-btn"><span class="detail-cite-icon">"</span>Cite this profile</button>
+      <div class="cite-dropdown" id="cite-dropdown"></div>
+    </div>
+
+    <div class="info-share-row" style="margin-top:28px;padding-top:20px;border-top:0.5px solid var(--border);">
+      <button class="info-share-btn" id="save-shelf" aria-pressed="false">☆ Save</button>
+      <button class="info-share-btn" id="share-x"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Share on X</button>
+      <button class="info-share-btn" id="share-li"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Share on LinkedIn</button>
+    </div>
+  </div>
+</main>
+
+<script src="/shared-data.js"></script>
+<script src="/shared-nav.js"></script>
+<script>(function(){var el=document.querySelector(".battle-field[data-battle]");if(!el)return;var go=function(){var s=document.createElement("script");s.src="/battle-map.js";s.onload=function(){fetch("/data/battles/"+el.getAttribute("data-battle")+".json?v="+el.getAttribute("data-v")).then(function(r){return r.json();}).then(function(d){BattleMap.mount(el,d);}).catch(function(){});};document.head.appendChild(s);};if(location.hash==="#how-it-was-fought"||!("IntersectionObserver" in window))return go();var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();go();}},{rootMargin:"800px"});io.observe(el);})();</script>
+<script>
+(function(){
+  var name="Battle of the Somme",slug="battle-of-the-somme",url="https://the-epoch-institute.org/battle/battle-of-the-somme";
+  var now=new Date(),months=["January","February","March","April","May","June","July","August","September","October","November","December"];
+  var day=now.getDate(),month=months[now.getMonth()],year=now.getFullYear();
+  var cites=[
+    {label:"Harvard",text:"The Epoch Institute Research Team (2024). "+name+". The Epoch Institute. Retrieved "+day+" "+month+" "+year+", from "+url},
+    {label:"APA",text:"The Epoch Institute Research Team. (2024). "+name+" [Research profile]. The Epoch Institute. "+url},
+    {label:"Chicago",text:'The Epoch Institute Research Team. "'+name+'." The Epoch Institute, 2024. Accessed '+month+" "+day+", "+year+". "+url}
+  ];
+  var dropdown=document.getElementById("cite-dropdown");
+  dropdown.innerHTML=cites.map(function(c,i){return '<div class="cite-block"><div class="cite-block-header"><span class="cite-label">'+c.label+'</span><button class="cite-copy-btn" data-cite="'+i+'">Copy</button></div><p class="cite-text">'+escHtml(c.text)+'</p></div>';}).join("");
+  dropdown.dataset.cites=JSON.stringify(cites.map(function(c){return c.text;}));
+  document.getElementById("detail-cite-btn").addEventListener("click",function(){dropdown.classList.toggle("open");});
+  dropdown.addEventListener("click",function(e){var btn=e.target.closest(".cite-copy-btn");if(!btn)return;var texts=JSON.parse(dropdown.dataset.cites||"[]"),text=texts[+btn.dataset.cite];if(!text)return;navigator.clipboard.writeText(text).then(function(){var orig=btn.textContent;btn.textContent="Copied ✓";btn.style.color="var(--gold)";setTimeout(function(){btn.textContent=orig;btn.style.color="";},1800);});});
+})();
+document.getElementById("share-x").addEventListener("click",function(){window.open("https://twitter.com/intent/tweet?text="+encodeURIComponent("Exploring Battle of the Somme on The Epoch Institute — the two sides, the fighting and what followed. https://the-epoch-institute.org/battle/battle-of-the-somme #history #EpochInstitute"),"_blank");});
+document.getElementById("share-li").addEventListener("click",function(){window.open("https://www.linkedin.com/sharing/share-offsite/?url="+encodeURIComponent("https://the-epoch-institute.org/battle/battle-of-the-somme"),"_blank");});
+(function(){var b=document.getElementById("save-shelf");if(!b)return;function get(){try{var v=JSON.parse(localStorage.getItem("epoch-shelf")||"[]");return Array.isArray(v)?v:[]}catch(e){return[]}}
+function on(){return get().some(function(r){return r&&r.u===location.pathname})}
+function paint(){var s=on();b.textContent=s?"✓ Saved":"☆ Save";b.setAttribute("aria-pressed",String(s))}
+b.addEventListener("click",function(){try{var s=get().filter(function(r){return r&&r.u!==location.pathname});if(!on())s.unshift({u:location.pathname,n:"Battle of the Somme",t:"profile"});localStorage.setItem("epoch-shelf",JSON.stringify(s.slice(0,100)))}catch(e){}paint()});paint();})();
+initNav("profiles");
+(function(){var bar=document.getElementById("read-progress"),art=document.querySelector(".profile-detail-inner"),saved=0;if(!bar||!art)return;function upd(){var r=art.getBoundingClientRect(),total=r.height-window.innerHeight,p=total>0?Math.min(1,Math.max(0,-r.top/total)):1;bar.style.transform="scaleX("+p.toFixed(3)+")";var pct=Math.round(p*100);if(pct>=5&&Math.abs(pct-saved)>=5){saved=pct;try{localStorage.setItem("epoch-last",JSON.stringify({name:"Battle of the Somme",url:location.pathname,pct:pct,t:Date.now()}));}catch(e){}}}window.addEventListener("scroll",upd,{passive:true});upd();})();
+(function(){var links=document.querySelectorAll(".empire-toc a");if(!links.length||!("IntersectionObserver" in window))return;var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a;});var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){links.forEach(function(a){a.removeAttribute("aria-current");});var a=map[en.target.id];if(a)a.setAttribute("aria-current","true");}});},{rootMargin:"-20% 0px -70% 0px"});Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el);});})();
+</script>
+
+</body>
+</html>

@@ -144,7 +144,7 @@ initNav('games');
   })();
 
   // ── tabs: a sliding marker, an animated change of game, arrow keys, #pairs ... #year (#words-egypt picks a theme) ──
-  var GAMES = ['pairs', 'order', 'ranks', 'hunt', 'first', 'puzzle', 'words', 'year', 'conn', 'cross', 'said', 'songq', 'six', 'line', 'cipher', 'whose'], ink = document.querySelector('.gm-tab-ink'), current = null, MODS = {};
+  var GAMES = ['pairs', 'order', 'ranks', 'hunt', 'first', 'puzzle', 'words', 'year', 'conn', 'cross', 'said', 'songq', 'six', 'line', 'cipher', 'whose', 'battle'], ink = document.querySelector('.gm-tab-ink'), current = null, MODS = {};
   function moveInk(btn) { ink.style.width = btn.offsetWidth + 'px'; ink.style.height = btn.offsetHeight + 'px'; ink.style.transform = 'translate(' + btn.offsetLeft + 'px,' + btn.offsetTop + 'px)'; }
   // The lobby (Nov 2026): /games opens on a card for every game (a bar of fourteen tabs hid most of them on phones, and a new
   // game was not found); a card, a tab or an address with a game's name opens it, "All games" and Back return here.
@@ -172,6 +172,7 @@ initNav('games');
     if (g === 'line') { r = G['line-' + Math.max(1, dayNo(10, 15))]; return r && r.m ? ['Today: ' + ones(r.m) + '/5' + (r.m.length < 5 ? ' so far' : ''), r.m.length >= 5] : null; }
     if (g === 'cipher') { r = G['cipher-' + Math.max(1, dayNo(10, 14))]; return r ? [r.gave ? 'Answer shown today' : r.done ? 'Solved today' : 'In progress', !!(r.done || r.gave)] : null; }
     if (g === 'whose') { r = G['whose-' + Math.max(1, dayNo(10, 24))]; return r && r.g && r.g.length ? [r.done ? (r.w ? 'Found today on clue ' + r.g.length : 'Not found today') : 'In progress', !!r.done] : null; }
+    if (g === 'battle') { r = G['battleq-' + Math.max(1, dayNo(10, 27))]; return r && r.g && r.g.length ? [r.done ? (r.w ? 'Found today on clue ' + r.g.length : 'Not found today') : 'In progress', !!r.done] : null; }
     if (g === 'lasted') return G['first-lasted'] ? ['Your best: ' + G['first-lasted'] + ' in a row', false] : null;
     if (g === 'born') return G['hunt-born'] ? ['Your best: ' + G['hunt-born'] + ' of 500', false] : null;
     return null;
@@ -2254,6 +2255,116 @@ initNav('games');
   })();
   MODS.whose = Whose;
   window.epochWhose = Whose;
+
+  // ── Which Battle Is This? (#battle, Nov 2026): one battle a day, the same for everyone (UTC; #1 = 27 Nov 2026), from
+  // battleq-data.js (BATTLEQ, by scripts/tools/make-battle-game.js: the day's battle and seven others) and the battle's
+  // own field (data/battles/<slug>.json, drawn by battle-map.js as on its profile). The field is shown with its names
+  // taken off (masked); each wrong answer puts a kind of name back: the ground, the century and region, the two sides
+  // and their formations, the commanders. Five answers at most. epoch-games battleq-<number> {g: the battles chosen, in
+  // order, done, w}, battleq-streak {n, last, b}.
+  var BattleQ = (function () {
+    var D = null, N = 5, QDAY = Math.floor(Date.now() / 864e5), DAY0 = Math.floor(Date.UTC(2026, 10, 27) / 864e5), TODAY = Math.max(1, QDAY - DAY0 + 1);
+    var K = { num: 0, p: null, g: [], done: false, won: false, practice: false, F: null, bf: null, lv: -1 }, board = $('battle-board'), stage = $('battle-field'), V = '';
+    function key(num) { return 'battleq-' + num; }
+    function save() { setBest(key(K.num), { g: K.g, done: K.done, w: K.won ? 1 : 0 }); }
+    function choices(p) { return [p[0]].concat(p[1]).sort(function (a, b) { return D.b[a][0] < D.b[b][0] ? -1 : 1; }); }   // by name: the same order for everyone
+    function emblem(i) { return '/logos/thumbs/' + encodeURIComponent(D.b[i][0]).replace(/'/g, '%27') + '.png'; }
+    function level() { return K.done ? N : Math.min(N - 1, K.g.length); }
+    function masked(F, lv) {   // a copy of the field with the names of the levels not yet reached taken off
+      var d = JSON.parse(JSON.stringify(F)); if (lv >= N) return d;
+      d.name = 'battle of the day'; d.note = '';
+      d.phases.forEach(function (p) { p.title = ''; p.text = ''; delete p.when; });
+      if (lv < 1) { (d.terrain || []).forEach(function (t) { delete t.name; }); if (d.field) d.field.edges = []; }
+      if (lv < 3) { d.sides.forEach(function (s, i) { s.name = i ? 'The other side' : 'One side'; }); d.units.forEach(function (u) { u.name = ''; u.short = ''; }); }
+      if (lv < 4) d.units.forEach(function (u) { delete u.leader; delete u.pic; });
+      return d;
+    }
+    function field() {
+      var lv = level(); if (!K.F || typeof BattleMap === 'undefined' || lv === K.lv) return;
+      var at = K.bf && lv < N ? K.bf.phase() : 0; if (K.bf) K.bf.stop(); K.lv = lv;
+      stage.innerHTML = ''; var d = document.createElement('div'); d.className = 'battle-field' + (lv < N ? ' is-masked' : ''); stage.appendChild(d);
+      K.bf = BattleMap.mount(d, masked(K.F, lv)); if (at) K.bf.go(at);
+    }
+    function need(cb) {
+      if (typeof BattleMap !== 'undefined') return cb();
+      var s = document.createElement('script'); s.src = '/battle-map.js'; s.onload = cb;
+      s.onerror = function () { stage.innerHTML = '<p class="gm-howto">The field could not be loaded. Please try again later.</p>'; }; document.head.appendChild(s);
+    }
+    function load(num, practice) {
+      K.num = num; K.practice = practice; K.p = D.p[(num - 1) % D.p.length]; K.F = null; K.lv = -1; if (K.bf) { K.bf.stop(); K.bf = null; }
+      var sv = best(key(num)), ok = function (i) { return i === K.p[0] || K.p[1].indexOf(i) >= 0; };
+      K.g = sv && sv.g ? sv.g.filter(ok).slice(0, N) : []; K.won = K.g.indexOf(K.p[0]) >= 0; K.done = K.won || K.g.length >= N || !!(sv && sv.done);
+      $('battle-num').innerHTML = (practice ? 'Earlier: ' : 'Today: ') + 'Which Battle Is This? <b>#' + num + '</b>';
+      var sk = best('battleq-streak'); $('battle-best').textContent = sk && sk.n > 1 && sk.last >= QDAY - 1 ? 'Played ' + sk.n + ' days in a row' : '';
+      $('battle-done').hidden = true; $('battle-done').innerHTML = '';
+      stage.innerHTML = '<p class="gm-howto">The field is loading&hellip;</p>';
+      draw(); if (K.done) finish(true);
+      var p = K.p, slug = D.b[p[0]][1];
+      need(function () {
+        fetch('/data/battles/' + slug + '.json' + V).then(function (r) { return r.json(); }).then(function (F) { if (K.p !== p) return; K.F = F; field(); })
+          .catch(function () { if (K.p === p) stage.innerHTML = '<p class="gm-howto">The field could not be loaded. Please try again later.</p>'; });
+      });
+    }
+    function clues() {
+      var b = D.b[K.p[0]];
+      return ['The field as it was fought, with every name taken off. Press Play to watch it.', 'The names of the ground are back on the plan.',
+        'It was fought in the ' + b[4] + ', in this part of the world: ' + b[3] + '.', 'The two sides and their formations are named on the plan.', 'The commanders are named, where the plan names them.'];
+    }
+    function dots() { var h = '<ol class="gm-said-dots" aria-hidden="true">'; for (var k = 0; k < N; k++) h += '<li class="' + (k < K.g.length ? (K.g[k] === K.p[0] ? 'ok' : 'no') : k === K.g.length && !K.done ? 'now' : '') + '"></li>'; return h + '</ol>'; }
+    function draw() {
+      var c = clues(), shown = K.done ? N : Math.min(N, K.g.length + 1), h = dots() + '<ol class="gm-whose-clues">';
+      for (var k = 0; k < shown; k++) h += '<li' + (k === shown - 1 && !K.done ? ' class="is-new"' : '') + '><b>Clue ' + (k + 1) + '</b>' + escHtml(c[k]) + '</li>';
+      h += '</ol>';
+      if (!K.done) h += '<p class="gm-whose-ask" aria-live="polite">' + (K.g.length ? 'Not the ' + escHtml(D.b[K.g[K.g.length - 1]][0]) + '. ' : '') + 'Which battle is it? ' + (shown < N ? 'A wrong answer puts more names on the plan.' : 'This is the last clue.') + '</p>';
+      h += '<div class="gm-whose-opts gm-bq-opts" role="group" aria-label="Which battle is it?">' + choices(K.p).map(function (i) {
+        var was = K.g.indexOf(i) >= 0, right = i === K.p[0];
+        return '<button type="button" class="gm-whose-o' + (was && !right ? ' is-wrong' : '') + (K.done && right ? ' is-right' : '') + '" data-i="' + i + '"' + (was || K.done ? ' disabled' : '') + '><img src="' + emblem(i) + '" alt="" width="56" height="56" loading="lazy"><span>' + escHtml(D.b[i][0]) + '</span></button>';
+      }).join('') + '</div>';
+      board.innerHTML = h;
+    }
+    function pick(i) {
+      if (K.done || K.g.indexOf(i) >= 0) return; K.g.push(i); var ok = i === K.p[0]; Sfx.play(ok ? 'good' : 'bad');
+      if (ok || K.g.length >= N) { K.done = true; K.won = ok; save(); draw(); field(); finish(); return; }
+      save(); draw(); field();
+    }
+    board.addEventListener('click', function (e) { var b = e.target.closest('.gm-whose-o'); if (b && !b.disabled) pick(+b.getAttribute('data-i')); });
+    function finish(again) {
+      var l = D.b[K.p[0]], n = K.g.length, st = !K.won ? 0 : n <= 2 ? 3 : n === 3 ? 2 : 1, m = K.g.map(function (i) { return i === K.p[0] ? '1' : '0'; }).join('');
+      var squares = m.split('').map(function (x) { return x === '1' ? '🟩' : '🟥'; }).join(''), sk = best('battleq-streak') || { n: 0, last: 0 };
+      if (!K.practice && K.num === TODAY && sk.last !== QDAY) { var nb = sk.last === QDAY - 1 ? sk.n + 1 : 1; sk = { n: nb, last: QDAY, b: Math.max(sk.b || 0, nb) }; setBest('battleq-streak', sk); }
+      var dn = $('battle-done'), score = K.won ? n + '/' + N : 'X/' + N;
+      dn.innerHTML = '<div class="gm-done-card">' + stars(st) + '<p class="gm-done-t">' + (K.won ? (n === 1 ? 'From the bare field!' : 'Found on clue ' + n + ' of ' + N) : 'Not this time') + '</p>' +
+        '<p class="gm-whose-ans"><img src="' + emblem(K.p[0]) + '" alt="" width="72" height="72"><span><b>' + escHtml(l[0]) + '</b><i>' + escHtml(l[2]) + '</i><a href="/battle/' + encodeURIComponent(l[1]) + '">Read how it was fought &rarr;</a></span></p>' +
+        '<p class="gm-daily-sq" aria-label="Your answers">' + squares + '</p>' +
+        '<p class="gm-done-s">Which Battle Is This? #' + K.num + (K.practice ? ' (an earlier one)' : (sk.n > 1 ? ' · played ' + sk.n + ' days in a row' : '')) + ' · a new battle in <span data-countdown></span></p>' +
+        '<div class="gm-done-row">' + shareBtn() + '</div>' + (K.practice ? '' : newsletterPrompt('battle')) + '</div>';
+      share(dn, 'Epoch Which Battle Is This? #' + K.num + ': ' + score + '\n' + squares, 'battle', { title: 'Which Battle Is This? #' + K.num, score: score, unit: K.won ? (n === 1 ? 'clue needed' : 'clues needed') : 'not found today', stars: st, squares: m,
+        note: sk.n > 1 && !K.practice ? 'Played ' + sk.n + ' days in a row' : '', cta: 'A battle every day', url: 'the-epoch-institute.org/games#battle' });
+      dn.classList.add('gm-done-inline'); dn.hidden = false;
+      if (!again && K.won && n <= 3) { confetti(dn); Sfx.play('win'); }
+      var cd = dn.querySelector('[data-countdown]');
+      (function tick() { if (!cd.isConnected) return; var ms = (QDAY + 1) * 864e5 - Date.now(); if (ms <= 0) { cd.textContent = 'a moment'; return; } var h = Math.floor(ms / 36e5), mm = Math.floor(ms % 36e5 / 6e4); cd.textContent = (h ? h + ' h ' : '') + mm + ' min'; setTimeout(tick, 30000); })();
+    }
+    var pickEl = $('battle-pick');
+    function opts() {
+      var n = Math.min(TODAY - 1, 60), h = '<option value="' + TODAY + '">Today&rsquo;s battle (#' + TODAY + ')</option>';
+      for (var i = TODAY - 1; i >= Math.max(1, TODAY - n); i--) h += '<option value="' + i + '">#' + i + (best(key(i)) && best(key(i)).done ? ' (played)' : '') + '</option>';
+      pickEl.innerHTML = h; pickEl.parentNode.hidden = TODAY < 2;
+    }
+    pickEl.addEventListener('change', function () { WANT.battle = +pickEl.value; pastFirst('battle', pickEl, TODAY, load); });
+    var started = false;
+    return { show: function () {
+      if (started) return; started = true;
+      var s = document.createElement('script'); s.src = typeof BATTLEQ_SRC !== 'undefined' ? BATTLEQ_SRC : '/battleq-data.js'; V = (/\?v=\w+/.exec(s.src) || [''])[0];
+      s.onload = function () { D = typeof BATTLEQ !== 'undefined' ? BATTLEQ : null; if (!D || !D.p || !D.p.length) { stage.innerHTML = ''; board.innerHTML = '<p class="gm-howto">The battles are on their way.</p>'; return; } opts(); pastFirst('battle', pickEl, TODAY, load); };
+      s.onerror = function () { stage.innerHTML = ''; board.innerHTML = '<p class="gm-howto">The battles could not be loaded. Please try again later.</p>'; };
+      document.head.appendChild(s);
+    }, open: function () { if (D && WANT.battle) pastFirst('battle', pickEl, TODAY, load); },
+      state: function () { return { num: K.num, guesses: K.g.slice(), done: K.done, won: K.won, answer: K.p ? K.p[0] : null, choices: K.p ? choices(K.p) : [], name: K.p && D ? D.b[K.p[0]][0] : '', level: K.lv, field: !!K.bf, phases: K.bf ? K.bf.phases : 0 }; },
+      masked: masked };
+  })();
+  MODS.battle = BattleQ;
+  window.epochBattleQ = BattleQ;
 
   // open the game from the address (#words-egypt opens Word Hunt on Ancient Egypt), else the lobby with a card for each
   openHash(); started0 = true;

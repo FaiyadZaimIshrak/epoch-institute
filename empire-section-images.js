@@ -8637,5 +8637,25 @@ var SECTION_IMAGES = {
   },
   "Spiritism": {
     origins:{slug:"michael-faraday",name:"Michael Faraday",img:"/images/encyclopedia/michael-faraday.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Michael_Faraday_sitting_crop.jpg"}
+  },
+  "Potala Palace": {
+    origins:{slug:"5th-dalai-lama",name:"5th Dalai Lama",img:"/images/encyclopedia/5th-dalai-lama.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Thangka_of_the_5th_Dalai_Lama.jpg"},
+    making:{slug:"gushi-khan",name:"Güshi Khan",img:"/images/encyclopedia/gushi-khan.jpg",artist:"Photography: Brian J. McMorrow, fresco: Unknown",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jokhang,Gushi_Khan_Fresco.Color.jpg"},
+    survival:{slug:"zhou-enlai",name:"Zhou Enlai",img:"/images/encyclopedia/zhou-enlai.jpg",artist:"President (1969-1974 : Nixon). White House Photo Office. 1969-1974 …",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Premier_Chou_En-Lai_in_the_Great_Hall_of_the_People%27s_Banquet_Hall_-_DPLA_-_a40021a8100507bc7a244420481bf488.jpg"}
+  },
+  "Inca religion": {
+    origins:{slug:"coricancha",name:"Coricancha",img:"/images/encyclopedia/coricancha.jpg",artist:"Diego Delso",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Coricancha,_Cusco,_Per%C3%BA,_2015-07-31,_DD_68.JPG"},
+    spread:{slug:"pachacamac",name:"Pachacamac",img:"/images/encyclopedia/pachacamac.jpg",artist:"Apollo",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Pachacamac_-_51163366566.jpg"},
+    community:{slug:"huayna-capac",name:"Huayna Capac",img:"/images/encyclopedia/huayna-capac.jpg",artist:"Felipe Huaman Puma de Ayala",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Hp_inka11.jpg"},
+    legacy:{slug:"tupac-inca-yupanqui",name:"Túpac Inca Yupanqui",img:"/images/encyclopedia/tupac-inca-yupanqui.jpg",artist:"Felipe Huaman Puma de Ayala",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tupac-inca-yupanqui-small.png"}
+  },
+  "Battle of Adrianople": {
+    background:{slug:"valens",name:"Valens",img:"/images/encyclopedia/valens.jpg",artist:"АНО \"Международный нумизматический клуб",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:INC-3015-a_%D0%A1%D0%BE%D0%BB%D0%B8%D0%B4._%D0%92%D0%B0%D0%BB%D0%B5%D0%BD%D1%82_II._%D0%9E%D0%BA._364_%D0%B3._(%D0%B0%D0%B2%D0%B5%D1%80%D1%81).png"},
+    sources:{slug:"notitia-dignitatum",name:"Notitia Dignitatum",img:"/images/encyclopedia/notitia-dignitatum.jpg",artist:"Unknown author",licence:"CC BY 4.0",source:"https://commons.wikimedia.org/wiki/File:Bodl_Canon.Misc.378_roll159B_frame28.jpg"},
+    legacy:{slug:"theodosius-i",name:"Theodosius I",img:"/images/encyclopedia/theodosius-i.jpg",artist:"www.livius.org",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Theodosius_I.jpg"}
+  },
+  "Battle of the Somme": {
+    background:{slug:"german-general-staff",name:"German General Staff",img:"/images/encyclopedia/german-general-staff.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Generalstabsgeb%C3%A4ude_(Berlin).jpg"},
+    legacy:{slug:"david-lloyd-george",name:"David Lloyd George",img:"/images/encyclopedia/david-lloyd-george.jpg",artist:"Harris & Ewing",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:David_Lloyd_George.jpg"}
   }
 };

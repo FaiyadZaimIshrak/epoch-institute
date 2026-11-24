@@ -1,0 +1,5 @@
+const fs=require('fs');const rj=f=>JSON.parse(fs.readFileSync(f,'utf8')),wj=(f,j)=>fs.writeFileSync(f,JSON.stringify(j,null,1)+'\n');
+let j=rj('out/juche.json');const n=j.ev.length;j.ev=j.ev.filter(e=>e[0]!=='1965'&&e[0]!=='1976');if(j.ev.length!==n-2)throw 1;wj('out/juche.json',j);
+let t=fs.readFileSync('out/potala-palace.json','utf8');const a='some say twelve years, to 1694, others fifteen years, and one says until 1696.',b='some say twelve years, to 1694, others fifteen years, or until 1696.';if(t.split(a).length!==2)throw 2;fs.writeFileSync('out/potala-palace.json',t.replace(a,b));JSON.parse(t.replace(a,b));
+j=rj('out/inca-religion.json');j.end=1572;j.endCirca=true;wj('out/inca-religion.json',j);
+let m=fs.readFileSync('out/inca-religion.faith.tsv','utf8');if(m.split('\t1533\t').length!==3||m.split('\t1533\t1572').length!==2)throw 3;m=m.replace(/\t1438\t1533\t/,'\t1438\t1532\t').replace(/\t1200\t1533\t/,'\t1200\t1532\t').replace('\t1533\t1572','\t1532\t1572');fs.writeFileSync('out/inca-religion.faith.tsv',m);console.log('ok');

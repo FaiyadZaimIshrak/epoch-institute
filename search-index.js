@@ -34502,7 +34502,10 @@ var SEARCH_INDEX = [
 [0,"Samaritanism","idea","",0],
 [0,"Spiritism","idea","",3],
 [0,"Tenrikyo","idea","",0],
-[0,"Vedic religion","idea","",0]
+[0,"Vedic religion","idea","",0],
+[0,"Inca religion","idea","",0],
+[0,"Juche","idea","",0],
+[0,"Serer religion","idea","",0]
 ];
 (function () { for (var i = 0, r; i < SEARCH_INDEX.length; i++) { r = SEARCH_INDEX[i]; if (r[0] === 0) r[0] = r[1].normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''); } })();   // packed by scripts/build-pages.ps1: a slug written 0 is made from its name
 // states (register, /state/<id>): [id, name, type, aliases, 1 if it has a picture]. Generated from data/polities.json.

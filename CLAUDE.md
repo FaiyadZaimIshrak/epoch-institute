@@ -3758,6 +3758,31 @@ then declutter. Answers: about 100 each; all sections; menus by subject plus hub
     of the European Union and "Yale" the Welsh commote Ial wherever they stand; Victor Hugo's entry links his novel's title
     to the cathedral.
 
+- **The held items, written from a second source (24 Nov 2026; scripts/kinds/held2/):** seven of the items held back in
+  the waves above were written again from their own article plus a second saved one (held2/wp holds both joined; list.tsv
+  names the second articles): Juche (the famine and the human-rights record from their own articles; the power section cut
+  by the editor to what is attributed, edits/edit2.js; a sentence comparing a present-day leader removed; hidden from the
+  featured rotation; emblem 주), the Potala Palace, Inca religion (ends c. 1572; map years 1532, not 1533) and Serer
+  religion (both with faith maps, edits/faiths-add.js), the battles of Adrianople and the Somme with their plans
+  (scripts/battles; "article": "held2/wp/<slug>"), and the Oregon Trail (66 journeys; its stops carry no dates: the trail
+  as it was travelled, not one crossing). 1,302 profiles: 105 battles, 112 works, 44 ideologies, 53 religions. Nine link
+  exclusions (excl1.tsv). Still held: Sekigahara (no plan), Talas, Kulikovo, Bannockburn, Changping, Fei River, Chacabuco
+  and Stamford Bridge, and the journeys of Benjamin of Tudela, Ibn Jubayr and the Emin Pasha relief expedition.
+- **Which Battle Is This?** (/games#battle, 24 Nov 2026; the 19th game): one battle a day for everyone (UTC; #1 = 27 Nov
+  2026; before that day the page shows #1), shown as its own field (battle-map.js, data/battles/<slug>.json) with the
+  names taken off; eight battles to choose among; five answers. Each wrong answer puts a kind of name back: the ground,
+  the century and region (a line of text), the two sides and their formations, the commanders; the finish shows the
+  field in full with its words.
+  - scripts/tools/make-battle-game.js (run by build-pages.ps1 after Whose Life?): scripts/battle-game.tsv (APPEND only; no
+    battle again within sixty days, those never dealt first), battleq-data.js (BATTLEQ {d0, b: [[name, slug, date,
+    region, century]], p: [[battle, [seven others]]]}; the others: same region or age first) and BATTLEQ_SRC in /games.
+  - games.js BattleQ (MODS.battle, window.epochBattleQ; masked(field, level) makes the copy that is drawn, on a fresh
+    element each level since BattleMap.mount keeps one player per element; epoch-games battleq-<n> {g, done, w},
+    battleq-streak). Its tab, lobby card (New until 24 Dec), a column on My Week, a row on /today, its calendar on
+    /past-games, My Passport (19 games). Kids mode leaves it off the lobby and the tabs (.gm-nokids), as conflicts are
+    kept out of the other games there. Styles gm-bq-*. games.js?v=24, passport.js?v=17; scripts/tests/which-battle.js.
+  - scripts/kinds/held2/edits/add-battle-game.js did the wiring once: the list of places a new daily game goes.
+
 ## Connections map and the states register
 - `data/polities.json` — register of every state (incl. the modern Levant: Israel, the State of Palestine, Jordan, Lebanon, Syria — added by hand Oct 2026, successor links to the mandates): nodes {id, n name, t type, b broad region, s/e years, a aka, m mode, c capital, mo modern countries, p profile url} and links {s, t, r relation, f/u years}. Successions stored one way (successor-of). Built from regional research files by the scratchpad states/merge.ps1 (dedupe, relation resolution, validation report).
 - `connections` page + `connections-map.js` (no D3; radial layout, timeline, year slider, outliers). Empire pages include a lazy-loaded mini map (section #connections).

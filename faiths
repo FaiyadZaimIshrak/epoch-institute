@@ -10,12 +10,12 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="description" content="Watch fifty-one religions spread century by century, from Hinduism and Judaism to Islam and the Bahá’í Faith: where each began, spread and last lived on.">
+<meta name="description" content="Watch fifty-three religions spread century by century, from Hinduism and Judaism to Islam and the Bahá’í Faith: where each began, spread and last lived on.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://the-epoch-institute.org/faiths">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Faith Maps — The Epoch Institute">
-<meta property="og:description" content="Fifty-one religions on the map, century by century: where each began, how it spread, and where it last lived on.">
+<meta property="og:description" content="Fifty-three religions on the map, century by century: where each began, how it spread, and where it last lived on.">
 <meta property="og:url" content="https://the-epoch-institute.org/faiths">
 <meta property="og:site_name" content="The Epoch Institute">
 <meta property="og:locale" content="en_GB">
@@ -26,7 +26,7 @@
 <link rel="stylesheet" href="/css/faiths.css">
 <link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Faith Maps"}]},{"@type":"WebApplication","name":"Faith Maps","url":"https://the-epoch-institute.org/faiths","applicationCategory":"EducationalApplication","operatingSystem":"Any web browser","isAccessibleForFree":true,"description":"Animated maps of fifty-one religions century by century, from the religions of Mesopotamia and Egypt to Hinduism, Buddhism, Judaism, Christianity, Islam and the Bahá'í Faith, Tengrism, Bon and Haitian Vodou: where each began, spread, was a main faith or held communities, and last lived on.","inLanguage":"en-GB","publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Faith Maps"}]},{"@type":"WebApplication","name":"Faith Maps","url":"https://the-epoch-institute.org/faiths","applicationCategory":"EducationalApplication","operatingSystem":"Any web browser","isAccessibleForFree":true,"description":"Animated maps of fifty-three religions century by century, from the religions of Mesopotamia and Egypt to Hinduism, Buddhism, Judaism, Christianity, Islam and the Bahá'í Faith, Tengrism, Bon and Haitian Vodou: where each began, spread, was a main faith or held communities, and last lived on.","inLanguage":"en-GB","publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
 </head>
 <body>
@@ -37,7 +37,7 @@
 <header class="ref-head">
   <span class="hero-ornament"></span>
   <h1 class="research-title">Faith Maps</h1>
-  <p class="ref-lede">Fifty-one religions on the map, century by century: where each began, how it spread, where it was a main faith or held communities, and where it last lived on. Choose a faith, press Play and turn the globe, or lay a second faith over the first to compare them. Their founders, scriptures and followers stand <a href="/religions">side by side in one table</a>.</p>
+  <p class="ref-lede">Fifty-three religions on the map, century by century: where each began, how it spread, where it was a main faith or held communities, and where it last lived on. Choose a faith, press Play and turn the globe, or lay a second faith over the first to compare them. Their founders, scriptures and followers stand <a href="/religions">side by side in one table</a>.</p>
 <!-- build:howto -->
 <div class="howto" id="howto" hidden><p class="howto-h">How to use it</p><ol class="howto-steps"><li>Choose a faith.</li><li>Press Play, or move the century slider, to watch where it spread; drag the globe to turn it.</li><li>Compare with lays a second faith over the first; tap a glow, a route or a mark to read its note.</li></ol><button type="button" class="howto-x">Got it</button></div><button type="button" class="howto-open" id="howto-open" hidden aria-controls="howto">How to use it</button>
 <script>(function(){var k="faiths",d={};try{d=JSON.parse(localStorage.getItem('epoch-howto')||'{}')||{}}catch(e){}var h=document.getElementById('howto'),o=document.getElementById('howto-open');if(d[k])o.hidden=false;else h.hidden=false;function save(){try{localStorage.setItem('epoch-howto',JSON.stringify(d))}catch(e){}}h.querySelector('.howto-x').onclick=function(){h.hidden=true;o.hidden=false;d[k]=1;save();o.focus()};o.onclick=function(){h.hidden=false;o.hidden=true;delete d[k];save()}})();</script>
@@ -45,7 +45,7 @@
 </header>
 
 <nav class="write-langs faith-list" id="faith-list" aria-label="Choose a faith">
-  <noscript><p class="scribe-lede">The maps need JavaScript. Each one is also on its religion's profile: <a href="/profiles?kind=religion">the fifty-one religions</a>.</p></noscript>
+  <noscript><p class="scribe-lede">The maps need JavaScript. Each one is also on its religion's profile: <a href="/profiles?kind=religion">the fifty-three religions</a>.</p></noscript>
 </nav>
 
 <section aria-labelledby="faith-t">
@@ -66,7 +66,7 @@
 <script>initNav('faiths');</script>
 <script src="/faith-map.js?v=3"></script>
 <script>
-// /faiths: the fifty-one religions, oldest first; the faith, the one compared with it, the century and the flat map are
+// /faiths: the fifty-three religions, oldest first; the faith, the one compared with it, the century and the flat map are
 // kept in the address (?faith=buddhism&vs=christianity&c=7&view=flat) and the faith in this browser
 (function () {
   var F = EMPIRES.filter(function (e) { return e.kind === 'religion'; }).sort(function (a, b) { return a.start - b.start || (a.name < b.name ? -1 : 1); })

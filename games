@@ -16,7 +16,7 @@
 <link rel="canonical" href="https://the-epoch-institute.org/games">
 <meta property="og:type" content="website">
 <meta property="og:title" content="History Games — The Epoch Institute">
-<meta property="og:description" content="Eighteen games for every age: a daily crossword, Connections and Who Said It?, emblem pairs, timelines, the ranks of past societies, a globe hunt, which came first, picture puzzles, word hunts and guess the year.">
+<meta property="og:description" content="Nineteen games for every age: a daily crossword, Connections and Who Said It?, emblem pairs, timelines, the ranks of past societies, a globe hunt, which came first, picture puzzles, word hunts and guess the year.">
 <meta property="og:url" content="https://the-epoch-institute.org/games">
 <meta property="og:site_name" content="The Epoch Institute">
 <meta property="og:locale" content="en_GB">
@@ -41,7 +41,7 @@
   <header class="ref-head">
     <span class="hero-ornament"></span>
     <h1 class="research-title">History games</h1>
-    <p class="ref-lede">Eighteen games built from the collection, with real pictures and real dates. No sign-up and nothing to install; your best scores stay in this browser. Younger players will find more in the <a href="/kids">Kids corner</a>, and there is a daily <a href="/quiz">History Quiz</a> too.</p>
+    <p class="ref-lede">Nineteen games built from the collection, with real pictures and real dates. No sign-up and nothing to install; your best scores stay in this browser. Younger players will find more in the <a href="/kids">Kids corner</a>, and there is a daily <a href="/quiz">History Quiz</a> too.</p>
     <button type="button" class="gm-sound" id="gm-sound" aria-pressed="false"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path class="gm-sound-on" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path class="gm-sound-off" d="M16.5 9.5l5 5m0-5l-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Sound off</span></button>
   </header>
 
@@ -58,6 +58,7 @@
       <li><a class="gm-lc" href="#line" data-g="line" data-new="2026-12-09"><span class="gm-lc-ic" aria-hidden="true">&#9834;</span><span class="gm-lc-t">Finish the Line</span><span class="gm-lc-d">A few lines of a song from history: which line comes next?</span><span class="gm-lc-s">Today&rsquo;s five are waiting</span></a></li>
       <li><a class="gm-lc" href="#cipher" data-g="cipher" data-new="2026-12-08"><span class="gm-lc-ic" aria-hidden="true">&#9919;</span><span class="gm-lc-t">Quote Cipher</span><span class="gm-lc-d">A quotation with its letters swapped for others: work out the words and who said them.</span><span class="gm-lc-s">Today&rsquo;s cipher is waiting</span></a></li>
       <li><a class="gm-lc" href="#whose" data-g="whose" data-new="2026-12-23"><span class="gm-lc-ic" aria-hidden="true">&#9787;</span><span class="gm-lc-t">Whose Life?</span><span class="gm-lc-d">One great life in five clues, the hardest first: how soon can you name it?</span><span class="gm-lc-s">Today&rsquo;s life is waiting</span></a></li>
+      <li class="gm-nokids"><a class="gm-lc" href="#battle" data-g="battle" data-new="2026-12-24"><span class="gm-lc-ic" aria-hidden="true">&#9876;</span><span class="gm-lc-t">Which Battle Is This?</span><span class="gm-lc-d">A battle&rsquo;s field in motion with every name taken off: how soon can you tell which it is?</span><span class="gm-lc-s">Today&rsquo;s battle is waiting</span></a></li>
     </ul>
     <h2 class="gm-lobby-h">Play any time</h2>
     <ul class="gm-lcs">
@@ -93,6 +94,7 @@
     <button class="gm-tab" id="tab-line" role="tab" aria-selected="false" aria-controls="game-line" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9834;</span><span class="gm-tab-t">Finish the Line</span></button>
     <button class="gm-tab" id="tab-cipher" role="tab" aria-selected="false" aria-controls="game-cipher" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9919;</span><span class="gm-tab-t">Quote Cipher</span></button>
     <button class="gm-tab" id="tab-whose" role="tab" aria-selected="false" aria-controls="game-whose" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9787;</span><span class="gm-tab-t">Whose Life?</span></button>
+    <button class="gm-tab gm-nokids" id="tab-battle" role="tab" aria-selected="false" aria-controls="game-battle" tabindex="-1"><span class="gm-tab-ic" aria-hidden="true">&#9876;</span><span class="gm-tab-t">Which Battle?</span></button>
   </div>
 
   <!-- Emblem Pairs -->
@@ -384,18 +386,34 @@
     </div>
     <p class="gm-conn-more"><label>Play another <select id="whose-pick"></select></label></p>
   </section>
+  <section class="gm-game" id="game-battle" role="tabpanel" aria-labelledby="tab-battle" hidden>
+    <div class="gm-head">
+      <p class="gm-howto">One of the <a href="/battle/">battles</a> a day, the same for everyone, shown as its field in motion with every name taken off. Press Play, then choose among eight battles. A wrong answer puts a kind of name back: the ground, the century and region, the two sides, the commanders.</p>
+    </div>
+    <div class="gm-stats">
+      <span class="gm-stat" id="battle-num"></span>
+      <span class="gm-stat gm-stat-best" id="battle-best"></span>
+    </div>
+    <div class="gm-board gm-said gm-whose gm-bq">
+      <div id="battle-field" class="gm-bq-field"><p class="gm-howto">The field is loading&hellip;</p></div>
+      <div id="battle-board"></div>
+      <div class="gm-done" id="battle-done" hidden></div>
+    </div>
+    <p class="gm-conn-more"><label>Play another <select id="battle-pick"></select></label></p>
+  </section>
 </main>
 
 <script>var BORN_SRC = '/born-data.js?v=beb6d337c1';</script>
 <script>var HUNT_SRC = { land: '/maps/globe-land.js?v=a9637d50b2', data: '/maps/atlas-data.js?v=bba1c9e163' };</script>
 <script src="/games-emblems.js?v=1"></script>
-<script src="/games-data.js?v=ce256ae889"></script>
+<script src="/games-data.js?v=9c4d91a9a1"></script>
 <script src="/connections-data.js?v=2b682ac9fd"></script>
 <script src="/shared-nav.js"></script>
+<script>var BATTLEQ_SRC = '/battleq-data.js?v=14f45216';</script>
 <script>var WHOSE_SRC = '/whose-data.js?v=9c7b1930';</script>
-<script>var CW_SRC = '/crossword-data.js?v=a9adaaa787', SAID_SRC = '/said-data.js?v=9d9679644f', SONGQ_SRC = '/songq-data.js?v=b29491c186', LINE_SRC = '/line-data.js?v=51b7e13096', CIPHER_SRC = '/cipher-data.js?v=c651335308', SIXD_SRC = '/sixdeg-data.js?v=877fc9b47c';</script>
+<script>var CW_SRC = '/crossword-data.js?v=a9adaaa787', SAID_SRC = '/said-data.js?v=d3ffd4e75c', SONGQ_SRC = '/songq-data.js?v=b29491c186', LINE_SRC = '/line-data.js?v=51b7e13096', CIPHER_SRC = '/cipher-data.js?v=c651335308', SIXD_SRC = '/sixdeg-data.js?v=b248fcd620';</script>
 <script>var RANKS_SRC = '/ranks-data.js?v=6d0ab3ab45';</script>
-<script src="/games.js?v=23"></script>
+<script src="/games.js?v=24"></script>
 
 </body>
 </html>

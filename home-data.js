@@ -1218,7 +1218,11 @@ var HOME_PICS = {
   "Etruscan religion": {"img":"/images/encyclopedia/liber-linteus.jpg","name":"Liber Linteus","slug":"liber-linteus","credit":"SpeedyGonsales, CC BY 3.0"},
   "Hawaiian religion": {"img":"/images/encyclopedia/kamehameha-i.jpg","name":"Kamehameha I","slug":"kamehameha-i","credit":"Louis Choris, Public domain"},
   "Korean shamanism": {"img":"/images/encyclopedia/samguk-sagi.jpg","name":"Samguk sagi","slug":"samguk-sagi","credit":"Gomanari, Public domain"},
-  "Ājīvika": {"img":"/images/encyclopedia/ajivika.jpg","name":"Ajivika","slug":"ajivika","credit":"Daderot, CC0"}
+  "Ājīvika": {"img":"/images/encyclopedia/ajivika.jpg","name":"Ajivika","slug":"ajivika","credit":"Daderot, CC0"},
+  "Potala Palace": {"img":"/images/encyclopedia/potala-palace.jpg","name":"Potala Palace","slug":"potala-palace","credit":"Lhasa Government, CC BY-SA 4.0"},
+  "Inca religion": {"img":"/images/encyclopedia/coricancha.jpg","name":"Coricancha","slug":"coricancha","credit":"Diego Delso, CC BY-SA 4.0"},
+  "Battle of Adrianople": {"img":"/images/encyclopedia/valens.jpg","name":"Valens","slug":"valens","credit":"АНО \"Международный нумизматический клуб, CC BY-SA 4.0"},
+  "Battle of the Somme": {"img":"/images/encyclopedia/battle-of-the-somme.jpg","name":"Battle of the Somme","slug":"battle-of-the-somme","credit":"Ivor Castle, Public domain"}
 };
 
 var HOME_ENTRIES = [

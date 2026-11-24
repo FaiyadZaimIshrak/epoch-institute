@@ -107,6 +107,9 @@ const EMBLEMS = [
   ['Tenrikyo', '天', 'serif-cjk', 220], ['Samaritanism', 'S'], ['Maya religion', 'M'], ['Santería', 'S'], ['Catharism', 'C'], ['Vedic religion', 'व', 'Nirmala UI, Mangal, sans-serif', 220],
   ['Hittite religion', 'H'], ['Etruscan religion', 'E'], ['Hawaiian religion', 'H'], ['Korean shamanism', '무', 'Batang, "Malgun Gothic", serif', 220], ['Ājīvika', 'Ā'],
   ['Native American Church', 'N'], ['Spiritism', 'S'],
+  // the profiles held back in the waves of 23 Nov 2026 and written from a second source (24 Nov): Juche the first syllable of
+  // its own name in Hangul; letters for the two religions and for Adrianople, whose entry picture is a map
+  ['Juche', '주', 'Batang, "Malgun Gothic", serif', 220], ['Inca religion', 'I'], ['Serer religion', 'S'], ['Battle of Adrianople', 'A'],
 ];
 const argv = process.argv.slice(2), sheet = (argv.find(a => a.startsWith('--sheet=')) || '').slice(8);
 // --initial: a name not in EMBLEMS gets the monogram of its first distinctive word (the Kingdom of Kano: K), as the

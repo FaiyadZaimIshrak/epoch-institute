@@ -12,7 +12,7 @@
 // .htaccess). Uses escHtml from shared-nav.js if present.
 var FaithMap = (function () {
   'use strict';
-  var FAITHS_V = 'f35310aabf', GLOBE_V = 'a9637d50b2';
+  var FAITHS_V = 'de876cf0f0', GLOBE_V = 'a9637d50b2';
   var W = 10000, H = 4393, NOW = 2026, NS = 'http://www.w3.org/2000/svg', uid = 0;
   var D3_SRC = '/d3-geo.js?v=1', D2R = Math.PI / 180;
   var KM = 4.0075 / 6371;   // an area's radius is given in tenths of a map unit (about 4 km each): this many radians

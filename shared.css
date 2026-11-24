@@ -3851,6 +3851,13 @@ svg.map-here { cursor: crosshair; }
 .gm-whose-ans a { font-family: var(--font-ui); font-size: 14px; font-weight: 600; color: var(--gold-light); text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 900px) { .gm-whose-opts { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 480px) { .gm-whose-opts { grid-template-columns: repeat(2, minmax(0, 1fr)); } .gm-whose-o { flex-direction: row; justify-content: flex-start; text-align: left; padding: 8px 10px; } .gm-whose-o img { width: 40px; height: 40px; } .gm-whose-clues li { font-size: 16.5px; } }
+/* Which Battle Is This? (#battle, Nov 2026): the battle's own field (battle-map.js) with its names taken off, then eight battles to choose among */
+.gm-bq-field { margin: 0 0 14px; text-align: left; }
+.gm-bq-field .is-masked .bf-cap { min-height: 0; padding-bottom: 8px; }
+.gm-bq-field .is-masked .bf-cap-t, .gm-bq-field .is-masked .bf-cap-x { display: none; }
+.gm-bq-opts { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 900px) { .gm-bq-opts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+[data-kids="1"] .gm-nokids { display: none; }
 .gm-said-rq.gm-line-ls i { font-size: 13px; }
 /* /profiles' timeline view (Nov 2026): a bar per profile on a deep-time scale, by region; colours by kind */
 .tl-view { position: relative; margin: 0 40px; }
