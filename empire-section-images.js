@@ -8570,5 +8570,72 @@ var SECTION_IMAGES = {
     power:{slug:"ulysses-s-grant",name:"Ulysses S. Grant",img:"/images/encyclopedia/ulysses-s-grant.jpg",artist:"Brady-Handy Photograph Collection, Library of Congress",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ulysses_S._Grant_1870-1880_(cropped).jpg"},
     critiques:{slug:"abraham-lincoln",name:"Abraham Lincoln",img:"/images/encyclopedia/abraham-lincoln.jpg",artist:"Alexander Gardner",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Abraham_Lincoln_O-77_matte_collodion_print.jpg"},
     legacy:{slug:"theodore-roosevelt",name:"Theodore Roosevelt",img:"/images/encyclopedia/theodore-roosevelt.jpg",artist:"Adam Cuerden",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Theodore_Roosevelt_by_the_Pach_Bros_(4x5_cropped)_(3).jpg"}
+  },
+  "Mormonism": {
+    origins:{slug:"joseph-smith",name:"Joseph Smith",img:"/images/encyclopedia/joseph-smith.jpg",artist:"Likely William Warner Major see",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Joseph_Smith,_Jr._portrait_owned_by_Joseph_Smith_III.jpg"},
+    texts:{slug:"king-james-version",name:"King James Version",img:"/images/encyclopedia/king-james-version.jpg",artist:"Church of England",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:KJV-King-James-Version-Bible-first-edition-title-page-1611.jpg"},
+    spread:{slug:"brigham-young",name:"Brigham Young",img:"/images/encyclopedia/brigham-young.jpg",artist:"Charles William Carter (1832 - 1918) Details on Google Art Project",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Charles_William_Carter_-_Brigham_Young_-_Google_Art_Project_(3x4_cropped).jpg"},
+    community:{slug:"church-of-jesus-christ-of-latter-day-saints",name:"Church of Jesus Christ of Latter-day Saints",img:"/images/encyclopedia/church-of-jesus-christ-of-latter-day-saints.jpg",artist:"Diliff",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Salt_Lake_Temple,_Utah_-_Sept_2004-2.jpg"},
+    legacy:{slug:"book-of-mormon",name:"Book of Mormon",img:"/images/encyclopedia/book-of-mormon.jpg",artist:"101heather",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Mormon-book.jpg"}
+  },
+  "Rastafari": {
+    origins:{slug:"haile-selassie",name:"Haile Selassie",img:"/images/encyclopedia/haile-selassie.jpg",artist:"unknown; according to [1] and [2] an official portrait of which b/w copies were distributed by the Ethiopian government",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Haile_Selassie_in_full_dress_(3x4_cropped).jpg"},
+    texts:{slug:"kebra-nagast",name:"Kebra Nagast",img:"/images/encyclopedia/kebra-nagast.jpg",artist:"",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:COLLECTIE_TROPENMUSEUM_De_ontmoeting_tussen_Solomon_en_Sheba_TMnr_5956-6.jpg"},
+    spread:{slug:"bob-marley",name:"Bob Marley",img:"/images/encyclopedia/bob-marley.jpg",artist:"Not credited",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Bob_Marley_circa_1976_(cropped).jpg"}
+  },
+  "Gnosticism": {
+    origins:{slug:"gospel-of-john",name:"Gospel of John",img:"/images/encyclopedia/gospel-of-john.jpg",artist:"RylandsImaging",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:JRL19060215_(cropped).jpg"},
+    texts:{slug:"tertullian",name:"Tertullian",img:"/images/encyclopedia/tertullian.jpg",artist:"André Thevet",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Tertullian2.png"},
+    community:{slug:"mary-magdalene",name:"Mary Magdalene",img:"/images/encyclopedia/mary-magdalene.jpg",artist:"Sibeaster",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Noli_me_tangere_(Monreale).jpg"}
+  },
+  "Mandaeism": {
+    legacy:{slug:"dead-sea-scrolls",name:"Dead Sea Scrolls",img:"/images/encyclopedia/dead-sea-scrolls.jpg",artist:"Israel Museum",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Temple_Scroll.png"}
+  },
+  "Caodaism": {
+    origins:{slug:"victor-hugo",name:"Victor Hugo",img:"/images/encyclopedia/victor-hugo.jpg",artist:"Étienne Carjat",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Victor_Hugo_by_%C3%89tienne_Carjat_1876_-_full.jpg"},
+    texts:{slug:"gautama-buddha",name:"Gautama Buddha",img:"/images/encyclopedia/gautama-buddha.jpg",artist:"พระมหาเทวประภาส วชิรญาณเมธี (ผู้ถ่าย-ปล่อยสัญญาอนุญาตภาพให้นำไปใช้ได้เพื่อการศึกษาโดยอยู่ภา่ยใต้ cc-by-sa-3.0) …",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Buddha_in_Sarnath_Museum_(Dhammajak_Mutra).jpg"}
+  },
+  "Candomblé": {
+    legacy:{slug:"jorge-amado",name:"Jorge Amado",img:"/images/encyclopedia/jorge-amado.jpg",artist:"Bernard Gotfryd",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jorge_Amado,_gtfy.00010.jpg"}
+  },
+  "Samaritanism": {
+    beliefs:{slug:"torah",name:"Torah",img:"/images/encyclopedia/torah.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Тора._Нацыянальная_бібліятэка_Беларусі.jpg"},
+    texts:{slug:"talmud",name:"Talmud",img:"/images/encyclopedia/talmud.jpg",artist:"LGLou",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Talmud-Druck_von_Daniel_Bomberg_und_Ambrosius_Froben.jpg"}
+  },
+  "Maya religion": {
+    texts:{slug:"diego-de-landa",name:"Diego de Landa",img:"/images/encyclopedia/diego-de-landa.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Diego_de_Landa.jpg"},
+    spread:{slug:"palenque",name:"Palenque",img:"/images/encyclopedia/palenque.jpg",artist:"Ljuba brank at Slovenian Wikipedia",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:055_Palenque_Pakal_Maji_(29).JPG"}
+  },
+  "Catharism": {
+    spread:{slug:"montsegur",name:"Montségur",img:"/images/encyclopedia/montsegur.jpg",artist:"Obra pròpia, cedeixo tots els drets (domini públic)",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Montsegur.p%C3%B2g1.jpg"}
+  },
+  "Vedic religion": {
+    beliefs:{slug:"vedas",name:"Vedas",img:"/images/encyclopedia/vedas.jpg",artist:"Ms Sarah Welch",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:1500-1200_BCE_Rigveda,_manuscript_page_sample_i,_Mandala_1,_Hymn_1_(Sukta_1),_Adhyaya_1,_lines_1.1.1_to_1.1.9,_Sanskrit,_Devanagari.jpg"},
+    texts:{slug:"yajnavalkya",name:"Yajnavalkya",img:"/images/encyclopedia/yajnavalkya.jpg",artist:"எஸ். பி. கிருஷ்ணமூர்த்தி",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Yajnavalkya_and_Janaka.jpg"},
+    legacy:{slug:"upanishads",name:"Upanishads",img:"/images/encyclopedia/upanishads.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Guru_and_DiscipleI.jpg"}
+  },
+  "Hittite religion": {
+    texts:{slug:"hesiod",name:"Hesiod",img:"/images/encyclopedia/hesiod.jpg",artist:"Yair Haklai",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Hesiod_(%3F)-Ancient_Roman_busts_in_the_Neues_Museum.jpg"},
+    legacy:{slug:"puduhepa",name:"Puduhepa",img:"/images/encyclopedia/puduhepa.jpg",artist:"Klaus-Peter Simon; derivative work by Zunkir",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Puduhepa.jpg"}
+  },
+  "Etruscan religion": {
+    beliefs:{slug:"liber-linteus",name:"Liber Linteus",img:"/images/encyclopedia/liber-linteus.jpg",artist:"SpeedyGonsales",licence:"CC BY 3.0",source:"https://commons.wikimedia.org/wiki/File:Lanena_knjiga_(Liber_linteus_Zagrebiensis).jpg"},
+    texts:{slug:"cicero",name:"Cicero",img:"/images/encyclopedia/cicero.jpg",artist:"José Luiz",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Bust_of_Cicero_(1st-cent._BC)_-_Palazzo_Nuovo_-_Musei_Capitolini_-_Rome_2016.jpg"},
+    spread:{slug:"claudius",name:"Claudius",img:"/images/encyclopedia/claudius.jpg",artist:"",licence:"CC BY 2.5",source:"https://commons.wikimedia.org/wiki/File:Claudius_crop.jpg"}
+  },
+  "Hawaiian religion": {
+    spread:{slug:"kamehameha-i",name:"Kamehameha I",img:"/images/encyclopedia/kamehameha-i.jpg",artist:"Louis Choris",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Louis_Choris_(1795-1828)_-_Kamehameha,_King_of_the_Sandwich_Islands_by_Louis_Choris,_(Russian),_pen_and_watercolor.jpg"}
+  },
+  "Korean shamanism": {
+    origins:{slug:"samguk-sagi",name:"Samguk sagi",img:"/images/encyclopedia/samguk-sagi.jpg",artist:"Gomanari",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Samguk.JPG"}
+  },
+  "Ājīvika": {
+    origins:{slug:"makkhali-gosala",name:"Makkhali Gosala",img:"/images/encyclopedia/makkhali-gosala.jpg",artist:"Daderot",licence:"CC0",source:"https://commons.wikimedia.org/wiki/File:Four_Scenes_from_the_Life_of_the_Buddha_-_Parinirvana_-_Kushan_dynasty,_late_2nd_to_early_3rd_century_AD,_Gandhara,_schist_-_Freer_Gallery_of_Art_-_DSC05119.JPG"},
+    texts:{slug:"mahavira",name:"Mahavira",img:"/images/encyclopedia/mahavira.jpg",artist:"Dayodaya",licence:"CC BY-SA 3.0",source:"https://commons.wikimedia.org/wiki/File:Mahavir.jpg"},
+    spread:{slug:"bindusara",name:"Bindusara",img:"/images/encyclopedia/bindusara.jpg",artist:"Photo Dharma from Penang, Malaysia",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Lomas_Rishi_entrance.jpg"},
+    community:{slug:"ashoka",name:"Ashoka",img:"/images/encyclopedia/ashoka.jpg",artist:"Photo Dharma from Sadao, Thailand",licence:"CC BY 2.0",source:"https://commons.wikimedia.org/wiki/File:Ashoka%27s_visit_to_the_Ramagrama_stupa_Sanchi_Stupa_1_Southern_gateway.jpg"}
+  },
+  "Spiritism": {
+    origins:{slug:"michael-faraday",name:"Michael Faraday",img:"/images/encyclopedia/michael-faraday.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Michael_Faraday_sitting_crop.jpg"}
   }
 };

@@ -1454,3 +1454,451 @@ note	1805	The Catholic Church leaves Haiti (1805–1860), and Vodou becomes the 
 note	1915	The US occupation (1915–1934) stirs interest in Vodou; migrants take it to eastern Cuba and the United States, the Church-backed Operation Nettoyage destroys many temples (1941), and the 1987 constitution enshrines freedom of religion.
 note	2003	Vodou is officially recognised (2003); Vodouists are attacked after the 2010 earthquake, and major temples stand in Miami, New York and other US cities.
 src	Wikipedia: Haitian Vodou
+
+@mormonism
+area	Western New York	43.03,-77.23	100	1820	1831	1	where Joseph Smith said he received his visions and where the Church of Christ was organised in 1830
+area	Kirtland, Ohio	41.62,-81.36	80	1831	1838	1	Smith and the early members moved west here to avoid confrontation
+area	Jackson County, Missouri	39.09,-94.35	80	1833	1838	1	the place where Mormons hoped to establish a New Jerusalem or City of Zion; expelled in 1833
+area	Nauvoo, Illinois	40.54,-91.39	70	1839	1846	2	a small town the church bought and renamed, where it lived with a degree of peace and prosperity for a few years
+area	Utah	40.5,-111.9	300	1847		2	the territory to which the largest group followed Brigham Young after 1844; the base of the LDS Church
+route	1831	43.03,-77.23 > 41.62,-81.36	Smith and early members move west from Western New York to Kirtland, Ohio
+route	1833	41.62,-81.36 > 39.09,-94.35	Members settle in Jackson County, Missouri, then are expelled (1833)
+route	1839	38.6,-92.5 > 40.54,-91.39	Mormons driven from Missouri by the extermination order of 1838 settle in Illinois
+route	1847	40.54,-91.39 > 40.77,-111.89	The largest group follows Brigham Young to what became the Utah Territory
+mark	origin	1820	Western New York	43.03,-77.23	Joseph Smith said that God the Father and Jesus Christ appeared to him in a vision in the spring of 1820.
+mark	place	1833	Jackson County	39.09,-94.35	Mormons were expelled from the county in 1833.
+mark	place	1838	Missouri	38.6,-92.5	The governor issued an extermination order against the Mormons in 1838, forcing them to flee the state.
+mark	place	1839	Nauvoo	40.54,-91.39	The town the church bought and renamed under Smith's direction.
+note	1820	Joseph Smith says that in the spring of 1820 God the Father and Jesus Christ appeared to him and told him to join none of the existing churches.
+note	1830	Smith publishes the Book of Mormon, said to be translated from golden plates, and organises the Church of Christ.
+note	1833	Mormons are expelled from Jackson County, Missouri, after moving west from New York and Ohio.
+note	1838	After fighting between Missourians and Mormons the governor of Missouri issues an extermination order, and the Mormons flee the state.
+note	1844	Smith is killed by a mob, precipitating a succession crisis; the largest group follows Brigham Young to what became the Utah Territory.
+note	1890	Church president Wilford Woodruff announces the official end of plural marriage; several small groups later break away as Mormon fundamentalist denominations.
+note	1978	The LDS Church abandons the exclusion of black men from the priesthood.
+note	2018	The LDS Church begins a push to distance itself from the label Mormonism; membership is claimed at 16 million in 2020.
+src	Wikipedia: Mormonism
+
+@rastafari
+area	Kingston and Saint Catherine Parish	18.0,-76.9	80	1930		2	where preachers first proclaimed Haile Selassie the returned Jesus; Howell's Pinnacle community was in Saint Catherine
+area	Jamaica	18.15,-77.3	150	1930		2	the largest Rasta population; 29,026 people identified as Rastas in the 2011 census
+area	The eastern Caribbean	13.5,-61.0	450	1970		1	Rastafari spread through travel and reggae in the 1970s; Rastas were involved in Grenada's 1979 New Jewel Movement
+area	The United States and Canada	40.7,-74.0	700	1960		1	Jamaican migrants took Rastafari there in the 1960s and 1970s
+area	London and English cities	52.5,-1.5	300	1950		1	Caribbean migrants settled from the 1950s; about 5,000 Rastafari in England and Wales in 2001
+area	Ghana and West Africa	6.0,-1.0	500	1960		1	Caribbean Rastas first arrived in the 1960s; Ghanaian practitioners report social ostracism
+area	Shashamane, Ethiopia	7.2,38.6	100	1965		1	a Rasta settlement on land made available through the Ethiopian World Federation; peaked at 2,000
+area	South Africa	-29.0,25.0	500	2008		1	at least 12,000 Rastas in 2008
+route	1966	8.98,38.76 > 17.94,-76.79	Haile Selassie visits Jamaica (April 1966)
+route	1965	18.0,-76.8 > 7.2,38.6	Rastas settle at Shashamane, Ethiopia (1960s)
+route	1960	18.0,-76.8 > 40.7,-74.0	Jamaican migrants take Rastafari to the United States and Canada (1960s and 1970s)
+route	1955	18.0,-76.8 > 51.5,-0.12	Rastas settle in London among Caribbean migrants (1950s and 1960s)
+route	1970	18.0,-76.8 > 12.1,-61.7	Rastafari spreads across the eastern Caribbean (1970s)
+mark	origin	1930	Kingston	17.97,-76.79	Street preachers began claiming here that Haile Selassie was the returned Jesus.
+mark	place	1939	Pinnacle	17.95,-77.0	Leonard Howell formed a Rasta community here in 1939; the police raided it repeatedly and it closed in 1954.
+mark	place	1966	Palisadoes airport, Kingston	17.94,-76.79	Thousands of Rastas gathered to see Haile Selassie arrive in April 1966.
+mark	place	1965	Shashamane	7.2,38.6	A Rasta settlement in Ethiopia, which peaked at about 2,000 people.
+mark	place	1982	Toronto	43.65,-79.38	The first international assembly of Rastafari groups was held here in 1982.
+note	1930	Haile Selassie is crowned Emperor of Ethiopia in 1930, and Jamaican preachers, beginning in Kingston, proclaim him the returned Jesus; the message spreads among poor communities hit by the Great Depression.
+note	1950	Rastafari grows rapidly in Jamaica and spreads to other Caribbean islands, the United States and Britain; for its first thirty years it is in conflict with Jamaica's authorities.
+note	1960	Jamaican migrants take Rastafari to North America, and a Rasta settlement is established in Shashamane, Ethiopia (1960s).
+note	1966	Haile Selassie visits Jamaica in April 1966, and thousands of Rastas gather to see his arrival.
+note	1970	Through reggae, Rastafari gains visibility abroad and spreads across the eastern Caribbean; it gains respectability in Jamaica.
+note	1975	Haile Selassie dies in 1975, and Bob Marley in 1981; the number of Rastas in Jamaica declines during the 1980s.
+note	1982	The first international assembly of Rastafari groups meets in Toronto (1982), and international networks grow.
+note	2008	There are at least 12,000 Rastas in South Africa; worldwide an estimated 700,000 to 1,000,000 as of 2012.
+src	Wikipedia: Rastafari
+
+@jehovahs-witnesses
+area	Pittsburgh and the north-eastern United States	40.44,-79.99	300	1870	1909	1	Russell's Bible study group and the first Watch Tower congregations
+area	New York (Brooklyn, later Warwick)	41.0,-74.0	150	1909		2	the headquarters of the Watch Tower Society, in Brooklyn from 1909 until the planned move to Warwick in 2017
+area	United States	39.8,-98.6	1100	1912		1	Russell was the most distributed Christian author in the country by 1912; in 2016 the most racially diverse Christian denomination there
+route	1909	40.44,-79.99 > 40.69,-73.99	Russell moves the Society's headquarters to Brooklyn (1909)
+route	2017	40.69,-73.99 > 41.26,-74.36	Plans to move the headquarters' operations to Warwick (2017)
+mark	origin	1870	Pittsburgh	40.44,-79.99	Charles Taze Russell and others formed a group to study the Bible in 1870.
+mark	place	1909	Brooklyn	40.69,-73.99	Russell moved the Watch Tower Society's headquarters here in 1909; he named the volunteers' residence Bethel.
+mark	place	1931	Columbus, Ohio	39.96,-82.99	At a convention here on 26 July 1931 Rutherford introduced the name Jehovah's witnesses.
+mark	place	1933	Nazi Germany	51.16,10.45	About 20,000 Witnesses lived here in 1933, and about 10,000 were imprisoned.
+mark	place	2017	Warwick, New York	41.26,-74.36	The Society's planned new headquarters from 2017.
+note	1870	Charles Taze Russell and others form a Bible study group in Pittsburgh (1870); from 1879 supporters meet as autonomous congregations, and Zion's Watch Tower Tract Society follows in 1881.
+note	1909	Russell moves the Society's headquarters to Brooklyn (1909); by 1910 about 50,000 people worldwide are associated with the Bible Students.
+note	1917	Rutherford becomes president in 1917; tens of thousands leave in the decade that follows, and Watch Tower directors are jailed under the Espionage Act in 1918.
+note	1931	Rutherford introduces the name Jehovah's witnesses at Columbus, Ohio (1931), and in 1933 about 20,000 Witnesses live in Nazi Germany, about 10,000 of whom are imprisoned.
+note	1942	Knorr becomes president (1942) and expands missionary activity and branch offices worldwide; the full New World Translation follows in 1961.
+note	1966	Publications build expectation of 1975; baptisms rise from about 59,000 (1966) to more than 297,000 (1974), and membership falls after the prediction fails.
+note	1976	Doctrinal authority passes from the president to the Governing Body (1976).
+note	2017	The Brooklyn property is sold in 2016 and operations are planned to move to Warwick (2017); in 2025 the denomination reports about 9 million publishers.
+src	Wikipedia: Jehovah's Witnesses
+
+@gnosticism
+area	Alexandria and Egypt	30.50,30.50	350	150	400	1	Alexandria was central to the birth of Gnosticism; Basilidians lived in the Nile Delta until the end of the 4th century
+area	Rome	41.90,12.50	250	150	400	1	Marcion preached here around 150; Valentinus was a candidate for bishop
+area	Asia Minor and Syria	37.00,36.00	450	160	400	1	Valentinianism spread east to these regions
+area	Northwest Africa	35.50,7.00	450	160	400	1	Valentinianism spread to Northwest Africa
+area	Transjordan and the Jordan valley	32.00,35.70	250	150	400	1	the Elkesaites, a baptismal group active between 100 and 400
+area	Erbil	36.19,44.01	200	150	199	1	the Quqites, a Gnostic group of 2nd-century Erbil
+area	Lower Mesopotamia and Khuzestan	31.00,47.50	350	150		1	the Mandaeans, around the lower Karun, Euphrates and Tigris
+area	Armenia and the eastern Byzantine themes	39.50,41.50	400	650	872	1	the Paulicians, accused by medieval sources of being Gnostic
+route	150	42.03,35.15 > 41.90,12.50	Marcion of Sinope preaches in Rome and founds a congregation (about 150)
+route	160	31.20,29.92 > 36.85,10.33	Valentinianism spreads to Northwest Africa
+route	160	31.20,29.92 > 36.20,36.16	Valentinianism spreads east to Asia Minor and Syria
+mark	origin	150	Alexandria	31.20,29.92	Central to the birth of Gnosticism; the birthplace of Valentinus and home of Basilides.
+mark	place	150	Rome	41.90,12.50	Marcion preached here around 150 and Valentinus stood as a candidate for bishop.
+mark	place	367	Nag Hammadi	26.05,32.25	Twelve codices, perhaps buried after Athanasius's Festal Letter of 367, were found near here in 1945.
+mark	place	1890	Paris	48.86,2.35	Jules Doinel re-established a Gnostic church in France in 1890.
+note	150	By the mid-2nd century Gnostic systems are fully developed in the Mediterranean, with Alexandria central to their birth; Marcion preaches in Rome around 150.
+note	180	Valentinianism, an intellectually vibrant school, spreads to Northwest Africa, Egypt, Asia Minor and Syria, and Irenaeus writes against the Gnostics (c. 180–185).
+note	250	Sethianism is a main current of Gnosticism, and Plotinus and later Neoplatonists attack it; decline sets in during the 3rd century.
+note	367	Athanasius condemns non-canonical books in 367; the Nag Hammadi codices may have been buried soon after.
+note	400	Gnostic groups fade in the Mediterranean as orthodoxy settles; Basilidians in Egypt survive to the end of the 4th century and Gnosticism persists in the Near East until at least the 6th century.
+note	650	On the edge of the Byzantine world the Paulicians arise, accused by medieval sources of being Gnostic, and the Mandaeans continue in southern Mesopotamia.
+note	927	The Bogomils emerge in Bulgaria between 927 and 970; the Cathars are later accused of Gnostic traits, though a direct link is disputed.
+note	1209	The Albigensian Crusade (1209–1229) and conversion to Islam greatly reduce the remaining Gnostics.
+note	1890	Jules Doinel re-establishes a Gnostic church in France in 1890.
+note	1945	The discovery of the Nag Hammadi library renews interest, and modern Gnostic churches are founded; the Mandaeans, 60,000 to 70,000 worldwide, live in Iraq, Iran and diaspora communities.
+src	Wikipedia: Gnosticism
+src	Giovanni Filoramo, A History of Gnosticism (1990)
+src	Roelof van den Broek, Gnostic Religion in Antiquity (2013)
+
+@ahmadiyya
+area	Punjab and Qadian	31.82,75.38	200	1889		1	the movement begins around Qadian and Ludhiana; early followers are found especially in the Punjab
+area	United Provinces	26.85,80.95	300	1889		1	a region where Mirza Ghulam Ahmad gained considerable numbers of followers
+area	Sindh	25.4,68.4	250	1889		1	one of the three regions of the first following
+area	Lahore	31.55,74.34	80	1914		1	the Lahore Ahmadiyya Movement settles here after the split
+area	Rabwah	32.08,72.65	60	1948		1	city founded by the second Caliph that coordinates much of the Community's activity
+area	London	51.5,-0.12	150	1913		1	the first overseas mission opens at Putney in 1913; London becomes the headquarters in 1984
+area	West Africa	8.0,-1.0	700	1970		1	the third Caliph tours West Africa in 1970 and sets up the Nusrat Jehan Scheme
+area	East Africa	-1.0,36.8	700	2016		1	listed among the concentrations of Ahmadis in 2016
+area	Indonesia	-2.5,118.0	900	2016		1	listed among the concentrations of Ahmadis in 2016
+route	1913	31.82,75.38 > 51.46,-0.22	The first organised overseas mission goes from India to Putney, London (1913)
+route	1984	32.08,72.65 > 51.46,-0.22	The fourth Caliph leaves Pakistan for London after Ordinance XX (1984)
+route	2019	51.46,-0.22 > 51.18,-0.75	The fifth Caliph moves the headquarters to Islamabad, Tilford (2019)
+mark	origin	1889	Ludhiana	30.9,75.85	Mirza Ghulam Ahmad took the oath of allegiance from a number of companions at a home here on 23 March 1889.
+mark	place	1889	Qadian	31.82,75.38	Home town of Mirza Ghulam Ahmad, regarded by the Community as its spiritual headquarters.
+mark	place	1913	Putney, London	51.46,-0.22	The site of the first Ahmadiyya mission in the UK; the Fazl Mosque later became the Caliph's seat.
+mark	place	1914	Lahore	31.55,74.34	Settled by the Lahore Ahmadiyya Movement, formed after the dispute over the second Caliph's succession.
+mark	place	1948	Rabwah	32.08,72.65	Founded by the second Caliph on 20 September 1948 after the partition of India.
+mark	place	2019	Islamabad, Tilford	51.18,-0.75	The headquarters of the Community since 2019, on land bought in 1985.
+note	1889	Mirza Ghulam Ahmad takes the oath of allegiance at Ludhiana on 23 March 1889; followers gather in the United Provinces, the Punjab and Sindh.
+note	1900	The movement adopts the name Ahmadiyya in a manifesto of 4 November 1900.
+note	1908	After the death of Mirza Ghulam Ahmad, Hakeem Noor-ud-Din becomes the first Caliph (1908–1914).
+note	1913	The first organised overseas mission opens in Putney, London (1913).
+note	1914	Mirza Basheer-ud-Din Mahmood Ahmad becomes the second Caliph (1914–1965); a dissenting faction forms the Lahore Ahmadiyya Movement.
+note	1948	The second Caliph founds Rabwah in Pakistan after the partition of India (1948); under him missions reach 46 countries.
+note	1970	The third Caliph tours West Africa (1970) and sets up the Nusrat Jehan Scheme of schools and medical facilities.
+note	1973	The Organisation of Islamic Cooperation declares the Ahmadiyya not linked to Islam (1973).
+note	1984	After Pakistan promulgates Ordinance XX the fourth Caliph relocates to London (1984).
+note	2003	Mirza Masroor Ahmad is elected fifth Caliph in London (2003); by 2016 the Community is in 209 countries.
+src	Wikipedia: Ahmadiyya
+
+@mandaeism
+area	Southern Iraq (lower Tigris and Euphrates)	31.0,46.8	250	100		1	the rivers around the Shatt al-Arab, the main home of the faith; about 5,000 Mandaeans remained in Iraq by 2007
+area	Khuzestan and the lower Karun	31.3,48.7	150	100		1	the other region where the religion has primarily been practised
+area	Jordan	31.95,35.93	120	2003		1	about 2,500 Mandaeans, among those who left Iraq after 2003
+area	Worcester, Massachusetts	42.26,-71.8	150	2008		1	a community of about 2,500, most from Iraq
+route	100	31.78,35.22 > 36.86,39.03	Nasoraean disciples of John the Baptist leave Jerusalem for Haran or Hauran (1st century, by the Haran Gawaita)
+route	100	36.86,39.03 > 35.0,48.0	the emigrants continue to the Median hills in Iran
+route	100	35.0,48.0 > 31.0,46.8	they finally settle in southern Mesopotamia
+route	2003	33.3,44.4 > 31.95,35.93	many Mandaeans flee Iraq after the invasion of 2003
+mark	origin	100	Jerusalem	31.78,35.22	Where the Haran Gawaita places the Nasoraean disciples of John the Baptist before their migration.
+mark	place	1600	Basra	30.51,47.78	Discalced Carmelite missionaries here called the Mandaeans Christians of Saint John in the 16th and 17th centuries.
+mark	place	1831	Suq al-Shuyukh	30.88,46.63	After cholera at Shushtar in 1831 two acolytes reestablished the Mandaean priesthood here.
+mark	place	2008	Worcester	42.26,-71.8	Mandaeans began settling here in 2008, most of them from Iraq.
+note	100	By the account of the Haran Gawaita, Nasoraean disciples of John the Baptist leave Jerusalem for Haran or Hauran, then the Median hills and southern Mesopotamia; scholars dispute whether the origin lay in Israel or in Mesopotamia.
+note	200	The colophons of the Left Ginza attest Mandaeans in the late Parthian Empire, where they flourish under royal protection until the Sasanian emperor Bahram I and his high priest Kartir persecute non-Zoroastrians.
+note	640	At the Muslim conquest of Mesopotamia their leader Anush bar Danqa is said to have shown the Ginza Rabba to the Muslim authorities; the account is likely apocryphal.
+note	950	Al-Hasan ibn Bahlul, citing the vizier ibn Muqla, is the earliest source to call the Mandaeans Sabians, the name of the Quran's People of the Book.
+note	1290	The Dominican Riccoldo da Monte di Croce meets the Mandaeans in Mesopotamia, possibly the first European source on the religion.
+note	1600	Carmelite missionaries at Basra call the Mandaeans Christians of Saint John; in 1831 cholera at Shushtar destroys most of the religious authorities, and the priesthood is reestablished at Suq al-Shuyukh.
+note	2003	After the invasion of 2003 many Mandaeans flee Iraq, most to Iran, Syria and Jordan; by 2007 about 5,000 remain in Iraq.
+note	2008	Diaspora communities grow in Sweden, the Netherlands, Germany, Canada, New Zealand, the UK, the United States and above all Australia, where around 10,000 live.
+src	Wikipedia: Mandaeism
+src	Buckley, Jorunn J., The Mandaeans: Ancient Texts and Modern People (Oxford University Press, 2002)
+src	Lupieri, Edmondo, The Mandaeans: The Last Gnostics (Eerdmans, 2001)
+
+@caodaism
+area	Saigon	10.78,106.7	80	1925		1	the Spiritualist club AĂÂ founded by colonial clerks; Saigon fell to the communist forces in 1975
+area	Tây Ninh	11.31,106.1	80	1926		2	the Holy See, the seat of Caodaist authority and the major centre of pilgrimage
+area	Cochinchina	10.5,106.2	200	1940		1	the religion had gathered over a million members, a fifth to a quarter of the population
+area	Vietnam	16.0,107.0	500	1997		1	legal recognition granted after the ban of 1975; 11 sects recognised by July 2014
+route	1941	10.78,106.7 > -18.77,46.87	Phạm Công Tắc and other leaders jailed in French penal colonies in Madagascar (1941–1946)
+mark	origin	1925	Saigon	10.78,106.7	Cao Quỳnh Cư, Cao Hoài Sang, Lê Văn Trung and Phạm Công Tắc founded the Spiritualist club AĂÂ here to practise mediumship.
+mark	place	1926	Tây Ninh	11.31,106.1	The religion was officially established in this city in 1926; the Holy See and its Great Divine Temple stand here.
+mark	place	1941	Madagascar	-18.77,46.87	Caodaist leaders were jailed in French penal colonies here from 1941 to 1946.
+note	1925	A group of colonial clerks in Saigon found the Spiritualist club AĂÂ to practise mediumship and ouija sessions.
+note	1926	After a séance revelation, Ngô Văn Chiêu signs the Declaration of the Founding of the Cao Đài Religion on 7 October, and the religion is officially established at Tây Ninh.
+note	1934	Lê Văn Trung, the first and only ordained Pope of the Tây Ninh Holy See, dies; Phạm Công Tắc assumes the role. From 1934 to 1975 the religion splits into independent sects, sometimes as many as thirty.
+note	1940	The religion has over a million members, a fifth to a quarter of the population of Cochinchina.
+note	1941	Phạm Công Tắc and other leaders are arrested and jailed in French penal colonies in Madagascar until 1946.
+note	1975	Members of Cao Đài, active in the Indochina Wars, are repressed after the fall of Saigon, and the communist government bans the practice of Caodaism.
+note	1997	Caodaism is granted legal recognition and unrestricted practice once again; the Tây Ninh Executive Council is officially recognised.
+note	2015	About 2.5 million Caodaists are estimated in Vietnam by the United Nations (January 2015), with tens of thousands in a diaspora in North America, Cambodia, Europe and Australia.
+src	Wikipedia: Caodaism
+src	Blagov, Sergei A. (2012). Caodaism: Vietnamese Traditionalism and Its Leap Into Modernity. Nova Science Publishers.
+
+@candomble
+area	Bahia (Salvador)	-12.97,-38.51	200	1830		2	the region where Candomblé coalesced in the 19th century; Salvador is sometimes called "Black Rome" and 1,144 terreiros were recorded there in 1997
+area	Rio de Janeiro	-22.91,-43.17	120	1880		1	the first terreiros opened in the late 19th century in a city then expanding rapidly
+area	São Paulo	-23.55,-46.63	120	1960		1	Afro-Brazilian migration brought a rapid rise: from virtually no terreiros until the 1960s to over 4000 by the end of the century
+route	1890	-12.97,-38.51 > -22.91,-43.17	Candomblé spreads from Bahia to Rio de Janeiro (late 19th century)
+route	1960	-12.97,-38.51 > -23.55,-46.63	Growing emigration from Bahia carries it to São Paulo (20th century)
+mark	origin	1830	Salvador	-12.97,-38.51	By the founding myth, the Ilê Axé Iyá Nassô Oká was founded here in 1830 as the first terreiro.
+mark	place	1981	Ifẹ	7.47,4.56	Brazilians took part in the first International Congress of Orisha Tradition and Culture here in 1981.
+mark	place	1983	Salvador congress	-12.97,-38.51	The second International Congress of Orisha Tradition and Culture was held in Salvador in 1983.
+note	1830	Candomblé coalesces in Bahia in the 19th century from the religions of enslaved Yoruba, Fon and Bantu people and Roman Catholicism; the first terreiro, by the founding myth, is founded in Salvador in 1830.
+note	1891	The constitution of 1891 enshrines freedom of religion, although the Penal Code of 1890 prohibited talismans and much herbal medicine and authorities shut down terreiros.
+note	1930	Candomblé becomes increasingly public in the 1930s, and a decree under President Vargas recognises the legitimacy of terreiros.
+note	1960	Migration from Bahia brings a rapid rise of Candomblé in São Paulo, and groups form abroad.
+note	1981	Brazilians take part in the first International Congress of Orisha Tradition and Culture in Ifẹ, Nigeria (1981); some practitioners try to remove Roman Catholic elements.
+note	2000	Evangelical Protestant opposition grows in the 2000s, including attacks on terreiros, and Candomblecistas respond with protest marches.
+src	Wikipedia: Candomblé
+
+@tenrikyo
+area	Tenri City and the Jiba	34.6,135.84	80	1838		2	the Nakayama Residence, where Tenrikyo Church Headquarters stands and the place followers return to on pilgrimage
+area	Japan	36.0,138.0	500	1854		1	followers first recruited from 1854; 1,121,541 counted in 2025, down from a high of 2,298,420 in 1974
+mark	origin	1838	Nakayama Residence, Tenri	34.6,135.84	On 26 October 1838 by the lunar calendar God was revealed through Nakayama Miki, who was chosen as the Shrine of God.
+note	1838	God is revealed through Nakayama Miki, who is chosen as the Shrine of God (1838); in 1854 she begins to administer the Grant for Safe Childbirth and recruit her first followers.
+note	1887	Nakayama dies in 1887; Izo Iburi's oral revelations, collected as the Osashizu, continue to 1907.
+note	1908	Tenrikyo is recognised as one of the thirteen groups of Sect Shinto (1908), and becomes the first new religion in Japan to do social work.
+note	1945	The designation as a group of Sect Shinto ends (1945); followers in Japan reach a high of 2,298,420 in 1974.
+note	2002	Tenrikyo is estimated at over 2 million followers worldwide (2002); in Japan 1,121,541 are counted in 2025.
+src	Wikipedia: Tenrikyo
+
+@samaritanism
+area	Mount Gerizim and Samaria	32.2,35.27	90	-120		2	the Samaritans' holy place, which they hold to be the Israelites' original sanctuary; the Gerizim temple was destroyed around 120 BCE
+area	Holon	32.01,34.77	60	2025		1	the Samaritan community of Holon, Israel, has its own local priest
+mark	origin	-120	Mount Gerizim	32.2,35.27	The temple here, built in the 5th century BCE, was destroyed by John Hyrcanus around 120 BCE; Samaritans revere the mountain as God's holy place.
+mark	place	1624	Mount Gerizim (High Priest's residence)	32.2,35.27	The High Priest lives on Mount Gerizim; since 1624 the oldest member of the priestly family has been chosen for the office.
+mark	place	2025	Holon	32.01,34.77	The Samaritan community of Holon, Israel, has its own local priest.
+note	-120	John Hyrcanus destroys the temple on Mount Gerizim and brings Samaria under his control (around 120 BCE); mutual hostility between Jews and Samaritans lasts, and each comes to see the Samaritan faith as distinct from Judaism.
+note	1	By the time of Jesus, Samaritans and Jews deeply disparage one another, as the Parable of the Good Samaritan shows.
+note	400	The Byzantine Empire persecutes the Samaritans, practically annihilating them after their revolts of the 5th and 6th centuries.
+note	1000	Samaritan texts take shape: the legendary Aramaic Al-Asatir (11th and 12th centuries) and the halakhic Kitab at-Tabbah (12th century).
+note	1300	Abu'l-Fath writes a major work of Samaritan history in the 14th century, as does Yosef Al Ascar the halakhic Kitab al-Kafi.
+note	1600	Since 1624 the oldest member of the priestly family is chosen as High Priest, who lives on Mount Gerizim.
+note	2000	The priestly family is 28 percent of the community in 2003; as of 2025 there are approximately 900 registered communal Samaritans.
+src	Wikipedia: Samaritanism
+
+@maya-religion
+area	Yucatán lowlands	20.5,-89.0	300	-200		2	many kingdoms; the Yucatec village priest is the jmen, and Chichen Itza and Maní lay here
+area	Chiapas and Tabasco	17.0,-92.0	250	-200		2	Palenque in the Classic period; Tzotzil, Tzeltal and Ch'ol communities
+area	Guatemalan highlands and Petén	15.5,-90.5	300	-200		2	Tikal, Q'umarkaj and the K'iche' kingdom; Momostenango and Santiago Atitlán today
+area	Alta Verapaz	15.5,-90.0	100	-200		2	Q'eqchi' pilgrimages to thirteen sacred mountains; Xbalanque as a war deity
+area	Copan and Quirigua	15.2,-89.0	120	200		2	south-eastern Classic kingdoms where time was conceived as a relay of divine bearers
+area	Belize and western Honduras	16.8,-88.8	200	-200		1	within the area of the extant Maya peoples
+note	-500	Traditional Maya religion has existed for more than two and a half millennia as a recognisably distinct phenomenon, within the wider frame of Mesoamerican religion.
+note	-200	In the Late Preclassic period stone inscriptions are made, and a mural of about 100 BCE shows an underworld figure linked with caves.
+note	200	In the Classic period the many kingdoms practise rituals of kingship, bloodletting and the worship of ancestors, and nobles make pilgrimages to caves such as Naj Tunich.
+note	900	After 900 the Postclassic hieroglyphic books, the Dresden, Madrid and Paris codices, are made.
+note	1500	Around 1500 Chichen Itza draws pilgrims to its cenote and the Yucatec priesthood is hierarchically organised; Landa describes Yucatán about 1566.
+note	1712	After the conquest the religion merges with Roman Catholicism; the Tzeltal Rebellion of 1712 in Chiapas centres on the cult of the Virgin Mary.
+note	1880	In the late 19th century the 'Caste War' of eastern Yucatán revolves around a 'Talking Cross'.
+note	2000	Today the religion coexists with the Pan-Maya movement and Christianity, and daykeepers still use the 260-day calendar.
+mark	origin	-500	Maya area	16.5,-90.0	The Maya religion is a recognisably distinct tradition from this time, spread over many indigenous kingdoms.
+mark	place	700	Naj Tunich	16.25,-89.1	Noblemen from Classic kingdoms went on pilgrimage to its caves and had their visits recorded on its walls.
+mark	place	1500	Chichen Itza	20.68,-88.57	Pilgrims from the surrounding kingdoms came to its large cenote.
+mark	place	1712	Chiapas	16.75,-92.63	The Tzeltal Rebellion of 1712 centred on the cult of the Virgin Mary.
+route	1500	20.68,-88.57 > 20.4,-86.9	Pilgrims visit the shrines of Ix Chel and other goddesses on the islands off Yucatán's east coast (c. 1500)
+src	Wikipedia: Maya religion
+
+@santeria
+area	Havana and Matanzas provinces	22.9,-81.5	150	1880		2	the north-west of Cuba, where the religion is most common
+area	Western Cuba	22.4,-81.0	250	1880		1	the earliest houses emerged in the cities of the west
+area	Santiago de Cuba and the east	20.02,-75.82	150	1930		1	Santería probably arrived here in the 1930s
+area	Florida	26.0,-80.4	250	1960		1	Cuban emigration after the Revolution; clustered in Florida, California, New Jersey and New York
+area	New York and New Jersey	40.7,-74.0	200	1960		1	where Santería is often intertwined with Espiritismo
+route	1960	23.13,-82.38 > 25.77,-80.19	Cuban emigrants carry Santería to the United States after the Revolution of 1959
+route	1970	40.8,-73.95 > 32.6,-80.8	Walter King's followers move from Harlem to the Yoruba Village of Oyotunji, South Carolina (1970)
+mark	origin	1880	Western Cuba	22.8,-81.0	The earliest houses teaching Santería emerged in the cities here in the late 19th century.
+mark	place	1930	Santiago de Cuba	20.02,-75.82	Cuba's second largest city, which Santería probably reached in the 1930s.
+mark	place	1970	Oyotunji	32.6,-80.8	The Yoruba Village of Oyotunji, founded in Sheldon, South Carolina, by Walter King's followers in 1970.
+note	1880	Santería forms in western Cuba from Yoruba religion, Roman Catholicism and Spiritism, in the early houses of the cities.
+note	1898	Cuba becomes a republic in 1898 with freedom of religion, but Santería is marginalised and campaigns are launched against it through the first half of the 20th century.
+note	1930	Urban-to-rural migration has spread the religion across Cuba, and it probably reaches Santiago de Cuba in the 1930s.
+note	1942	Lachatañeré's Manuel de santería (1942) treats it as a religion and promotes the name Santería.
+note	1959	After the Revolution of 1959 practitioners face police harassment, and emigration spreads Santería to the United States, Puerto Rico, Mexico, Colombia and Venezuela.
+note	1987	The Ooni of Ife visits Cuba in 1987, and links grow with Yoruba religion and with Vodou and Candomblé.
+note	1992	Cuba is declared secular in 1992, and Santería begins to be practised more openly.
+src	Wikipedia: Santería
+
+@catharism
+area	Rhineland (Cologne)	50.94,6.96	150	1143	1200	1	Cathars appear in the Rhineland cities, particularly Cologne, in the mid-12th century
+area	Northern France (Champagne)	48.90,4.00	250	1150	1239	1	Cathars appear in northern France about the same time
+area	Languedoc	43.50,2.00	150	1150	1199	1	One of the two regions where Catharism attained its greatest popularity
+area	Languedoc	43.50,2.00	150	1200	1229	2	By 1207 many towns of Provence and its vicinity were almost wholly Cathar
+area	Languedoc	43.50,2.00	150	1230	1325	1	Persecuted by the Inquisition; survived in much reduced form to about 1325
+area	Northern Italy	45.20,9.50	250	1160	1350	1	The northern Italian cities, where the Cathars were extirpated by the Inquisitions of the 14th century
+area	Pyrenean foothills	42.90,1.60	100	1300	1321	1	A revival under Peire Autier, put down in 1310, with Bélibaste's group in the Languedoc until 1321
+route	1209	49.00,2.50 > 43.34,3.22	The crusade of the northern barons against the Languedoc (1209)
+route	1226	48.86,2.35 > 43.60,2.50	Louis VIII leads a royal force into south-eastern France (1226)
+mark	origin	1143	Cologne	50.94,6.96	The cleric Eberwin of Steinfeld reports the first confirmed group with similar beliefs
+mark	place	1167	Saint-Félix-Lauragais	43.45,1.85	A council attended by the Bogomil papa Nicetas, the Cathar bishop of northern France and a Lombard leader
+mark	place	1209	Béziers	43.34,3.22	Besieged on 22 July 1209; reportedly at least 7,000 people were killed, a number some scholars dispute
+mark	place	1239	Mont-Aimé, Champagne	48.87,4.00	183 men and women convicted of Catharism were burned at the stake on 13 May 1239
+mark	place	1244	Montségur	42.87,1.83	Fortress besieged from 1243; over 200 Perfects were burned on 16 March 1244
+mark	last	1310	Toulouse	43.60,1.44	Peire Autier, leader of a revival in the Pyrenean foothills, is captured and executed
+note	1143	Eberwin of Steinfeld reports a group with Cathar-like beliefs at Cologne, the first confirmed report of identifiable Catharism.
+note	1167	A council at Saint-Félix-Lauragais gathers Cathar leaders from the Languedoc, northern France and Lombardy with the Bogomil papa Nicetas.
+note	1207	Many towns of Provence and its vicinity are almost wholly Cathar, and the Pope turns to crusade after the legate Castelnau is murdered in 1208.
+note	1209	The Albigensian Crusade begins with the massacre at Béziers, and runs for twenty years of war in the Languedoc.
+note	1229	The Treaty of Paris ends the official war, but Catholic forces keep pursuing Cathars.
+note	1233	The Inquisition is established and works at Toulouse, Albi, Carcassonne and other towns through the 13th century and much of the 14th.
+note	1244	Montségur falls and over 200 Cathar Perfects are burned, while the survivors scatter as fugitives.
+note	1310	Peire Autier, leader of a revival in the Pyrenean foothills, is executed at Toulouse.
+note	1321	Guillaume Bélibaste, the last known Cathar Perfect in the Languedoc, is executed.
+note	1350	The Inquisition claims to have eradicated the Cathars; records after 1330 hold very few proceedings against them.
+src	Wikipedia: Catharism
+src	Antonio Sennis (ed.), Cathars in Question (2016), as named in the article
+
+@vedic-religion
+area	Punjab and the Indus valley	31.0,73.0	450	-1500	-500	2	the northwest where the Vedic religion developed in the early Vedic period
+area	The western Ganges plain	28.5,78.5	400	-1500	-500	2	where the religion existed in the early Vedic period
+area	The Kuru-Panchala realm	29.0,77.5	250	-1100	-500	2	the realm where Brahmanism developed as an ideology
+area	The Ganges basin	26.0,83.0	450	-1000	-500	1	where Brahmanism took shape around 1000 BCE
+route	-1500	37.0,64.0 > 31.0,73.0	Indo-Aryan tribes move from the Bactria–Margiana region to the northwest of the subcontinent
+route	-1100	31.0,73.0 > 27.5,79.0	Indo-Aryan people migrate into the Gangetic Plain and settle as farmers (after c. 1100 BCE)
+route	-1000	29.0,77.5 > 25.5,84.0	Brahmanism takes shape in the Ganges basin (c. 1000 BCE)
+mark	origin	-1500	Punjab	31.0,73.0	The Vedic religion develops in the northwest of the subcontinent in the early Vedic period.
+mark	place	-1000	Kuru-Panchala realm	29.0,77.5	Brahmanism develops here as an ideology that stresses ritual and the Brahmins' position.
+mark	place	-500	Magadha	25.2,85.0	The Magadha-based empires took in the Kuru-Panchala realm, and Brahmanism spread over a wider area.
+note	-1500	The Vedic religion develops in the northwest of the subcontinent as a variant of Indo-Aryan religion, influenced by the remnants of the Indus Valley Civilisation.
+note	-1100	Indo-Aryan people move into the Gangetic Plain and become settled farmers; the late Vedic period begins.
+note	-1000	Brahmanism takes shape in the Ganges basin, giving priests a central place in ritual and law.
+note	-800	The Upanishads of the late Vedic period begin to set out the ideas of karma and rebirth.
+note	-500	The Vedic period is held to end; Brahmanism spreads beyond the Kuru-Panchala realm, beside the rival Shramana traditions.
+src	Wikipedia: Historical Vedic religion
+src	Johannes Bronkhorst, "Brahmanism: Its place in ancient Indian society", Contributions to Indian Sociology 51 (3), 2017
+
+@hittite-religion
+area	Hatti, the Hittite heartland	40.02,34.62	350	-1600	-1180	2	the empire's centre, with the capital Hattusa and Arinna a day's march away
+area	Nerik and the north	41.0,35.2	180	-1600	-1180	2	a local storm god, son of the sun goddess of Arinna, sacred at Nerik and Mount Zaliyanu
+mark	origin	-1600	Hattusa	40.02,34.62	The capital of the Hittite empire, whose archives hold the cult inventories and ritual texts.
+mark	place	-1600	Nerik	41.0,35.2	A cult centre north of Hattusa, sacred to a local storm god and supplied from Hattusa with offerings.
+mark	last	-1180	Hattusa	40.02,34.62	The Hittite sites were burned at the end of the empire.
+note	-1600	The Hittites create an empire centred in Anatolia; the king is also priest, and the gods are many.
+note	-1250	Local cults keep their own storm-gods, and the queen and priestess Puduhepa works to organise and rationalise the religion.
+note	-1180	The Hittite empire ends and its sites are burned; little of its myth survives.
+src	Wikipedia: Hittite mythology and religion
+
+@etruscan-religion
+area	Etruria	43.0,11.5	220	-900	-264	2	the lands of the Etruscans in central Italy
+area	Etruria	43.0,11.5	220	-264	100	1	the religion assimilated into the Roman
+area	Tarquinia	42.25,11.76	70	-900	-264	2	the 9th century BCE shrine at Pian d’Civita; a college of 60 haruspices at Tarquinii
+area	Veii	42.02,12.40	70	-900	-264	2	the sanctuary at the Piazza d’Armi
+area	Rome	41.90,12.50	150	-264	100	1	the Senate adopted key elements of Etruscan religion; haruspices and noble families kept them
+route	-264	42.25,11.76 > 41.90,12.50	Etruscan religion taken up by Rome after the defeat of 264 BCE
+mark	origin	-900	Tarquinia	42.25,11.76	The shrine at Pian d’Civita is among the earliest evidence of Etruscan religious practice, in the Villanovan period.
+mark	place	-900	Veii	42.02,12.40	The sanctuary at the Piazza d’Armi grew into a fully developed sanctuary.
+mark	place	-525	Orvieto	42.72,12.11	A bronze statue base of 525–500 BCE at Campo della Fiera records a freedwoman’s dedication to a deity.
+note	-900	Etruscan religious practice appears in the Villanovan period, with shrines at Tarquinia and Veii and cremation burial in urns with grave goods.
+note	-700	Greek gods and heroes such as Aritimi, Hercle and Pacha join the Etruscan pantheon in the Orientalizing Period.
+note	-600	Etruscan sanctuaries become increasingly monumental, with major temples, expensive offerings and animal sacrifice.
+note	-264	After the defeat in the Roman–Etruscan Wars (264 BCE), the Roman Senate adopts key elements of Etruscan religion, kept by haruspices and noble families of Etruscan descent.
+note	-50	In the last years of the Roman Republic the religion falls out of favour and is satirized by Cicero.
+note	50	The Julio-Claudians keep some knowledge of the language and religion for a short time, then the practice ceases.
+src	Wikipedia: Etruscan religion
+src	Nancy Thomson De Grummond and Erika Simon (eds), The Religion of the Etruscans (2006)
+src	Jean-René Jannot, Religion in Ancient Etruria (2005)
+
+@hawaiian-religion
+area	Hawaiian Islands	20.5,-157.0	450	800	1819	2	the kapu system governs daily life among the eight islands
+area	Hawaiian Islands	20.5,-157.0	450	1819		1	after the kapu is overthrown, family ʻaumākua, bones and sacred places remain; some practise the old faith as a co-religion
+route	800	-9.0,-139.5 > 20.5,-157.0	Settlers from the Marquesas and greater Polynesia reach Hawaiʻi (by about 800)
+route	1200	-17.5,-149.5 > 20.5,-157.0	Pāʻao, a priest or chief from Tahiti, brings the kapu (about 1200)
+mark	origin	800	Hawaiian Islands	20.5,-157.0	Settled no later than 800 CE by people from the Marquesas and greater Polynesia, with a significant influx of Tahitians.
+mark	place	1200	Puʻuhonua o Hōnaunau	19.42,-155.91	A city of refuge where someone who broke the kapu could escape death.
+mark	place	1976	Kahoʻolawe	20.55,-156.6	The suit of 1976 over the Navy's use of the island forced it to protect cultural and religious sites.
+mark	place	1988	Maui	20.8,-156.33	The unearthing of 1,000 graves in 1988 moved a hotel inland.
+mark	place	2014	Mauna Kea	19.82,-155.47	Some Hawaiians regard it as the most sacred mountain; protests against a telescope began here in 2014.
+note	800	Settlers from the Marquesas and greater Polynesia reach the Hawaiian Islands by about 800 and bring their religious beliefs; immigration continues to about 1300.
+note	1200	By tradition Pāʻao, a priest or chief from Tahiti, arrives around 1200 and the kapu system comes with him.
+note	1819	After Kamehameha the Great dies, Kaʻahumanu, Keōpūolani and the kahuna nui Hewahewa persuade Kamehameha II to overthrow the kapu system (1819).
+note	1820	Protestant missionaries arrive from the United States (1820); most aliʻi convert, and laws against ancient practices follow.
+note	1930	Max Freedom Long originates Huna, which scholars regard as a New Age mix and not traditional Hawaiian religion.
+note	1976	During the Hawaiian Renaissance of the 1970s the religion resurges; a suit over Kahoʻolawe (1976) forces the Navy to protect religious sites.
+note	1988	The unearthing of 1,000 graves on Maui (1988) leads to a hotel's relocation inland.
+note	2014	Protests begin over the Thirty Meter Telescope on Mauna Kea (2014), which some Hawaiians regard as their most sacred mountain.
+src	Wikipedia: Hawaiian religion
+src	Martha Warren Beckwith, The Kumulipo: A Hawaiian Creation Chant (University of Hawaii Press, 1981)
+
+@korean-shamanism
+area	Northern and central Korean peninsula	38.5,126.8	250	1100		1	the kangsin-mu, mudang who are possessed by deities, were historically more common here
+area	Southern Korean peninsula	35.6,127.5	250	1100		1	the hereditary sesŭp-mu were historically more common below the Han River
+area	Jeju Island	33.4,126.55	80	1702		1	simbang serve here; the Yŏngdŭng gut at Ch'ilmŏri Shrine is on UNESCO's list
+area	Incheon	37.46,126.7	60	1950		1	mudang from Hwanghae resettled here and strongly influenced Musok there
+area	Mount Paektu	41.99,128.08	100	1990		1	mudang from South Korea make pilgrimages to the mountain held most sacred
+route	1950	38.5,125.8 > 37.46,126.7	Many mudang from Hwanghae resettle in Inchon after the Korean War (1950s)
+route	1990	37.57,126.98 > 41.99,128.08	Mudang from South Korea travel to China to make pilgrimages to Mount Paektu (since the 1990s)
+mark	origin	1100	The Korean peninsula	37.5,127.5	The first historical references to mu in Korea, in the Yisanggugjip and the Samguk sagi, date to the 12th century.
+mark	place	1702	Jeju Island	33.4,126.55	The governor Yi Hyŏngsang purged the island's simbang and destroyed 129 shrines in 1702.
+mark	place	1990	Mount Paektu	41.99,128.08	The mountain held most sacred in Musok, believed to channel ki to every other mountain on the peninsula.
+mark	place	2009	Ch'ilmŏri Shrine	33.5,126.52	The Yŏngdŭng gut performed here was added to UNESCO's Representative List in 2009.
+note	1100	The earliest historical references to mu in Korea, in the Yisanggugjip and the Samguk sagi, date to the 12th century; they describe spirit mediumship, exorcism, divination and ancestor veneration.
+note	1392	Under the Joseon dynasty (1392 to 1897) Confucian elites suppress the mudang, who belong to one of eight outcast groups expelled from the capital.
+note	1702	The Jeju governor Yi Hyŏngsang purges the island's simbang and destroys 129 shrines (1702).
+note	1896	Modernisers, many of them Christian, call Musok misin, superstition; in 1896 police arrest mudang, destroy shrines and burn paraphernalia.
+note	1910	Under Japanese occupation Musok is suppressed, while scholars begin to present it as Korea's ancient religion.
+note	1950	The Korean War and the division of Korea move many mudang about the peninsula; in North Korea mudang are labelled part of the hostile class.
+note	1970	New Community Movement policing of mudang in South Korea surges, while folklore studies lead more South Koreans to accept Musok as Korea's ancient religion.
+note	1990	Mudang from South Korea begin pilgrimages to Mount Paektu in China, and mudang advertise on the Internet.
+note	2009	South Korea recognises ten regional gut styles as intangible cultural heritage, and the Yŏngdŭng gut on Jeju is added to UNESCO's list.
+src	Wikipedia: Korean shamanism
+
+@ajivika
+area	Savatthi and the Ganges plain	27.5,82.0	300	-500	-200	1	hub of the Ājīvikas in Buddhist and Jain texts
+area	Magadha (Barabar Hills)	25.0,85.0	250	-300	-200	2	Ashoka's dedications of cave halls to the Ājīvikas
+area	Gujarat	22.3,71.5	300	-350	-200	1
+area	Sri Lanka	7.9,80.7	250	-350	-200	1	a Sangha Geham, a community centre, for the Ājīvikas
+area	Karnataka (Kolar district)	13.1,78.1	300	446	1346	1	inscriptions record a tax on Ājīvikas or Acuvas
+area	Tamil Nadu	11.0,78.5	300	446	1346	1	Tamil texts describe Ājīvika doctrine
+route	-350	27.5,82.0 > 22.3,71.5	Spread west to Gujarat by the 4th century BCE
+route	-350	27.5,82.0 > 7.9,80.7	Spread to Sri Lanka by the 4th century BCE
+route	446	25.0,85.0 > 13.1,78.1	Presence in the south, attested from about 446 CE
+mark	origin	-484	Savatthi (Śrāvastī)	27.51,82.05	Makkhali Gosala, born nearby, is generally considered the founder; the city was the hub of the Ājīvikas.
+mark	place	-258	Barabar Caves	25.0,85.06	Ashoka's dedications of cave halls to the Ājīvikas date from the 12th and 19th years of his reign.
+mark	place	446	Kolar	13.14,78.13	Inscriptions record a tax on the Ājīvikas, the last dated 1346 CE.
+mark	last	1346	Kolar district	13.14,78.13	The last dated inscription that records a tax on Ājīvikas or Acuvas.
+note	-500	Makkhali Gosala, a contemporary of the Buddha and Mahavira, is generally considered the founder of the Ājīvikas, who are known from Buddhist and Jain texts to have centred on Savatthi.
+note	-350	The Ājīvikas spread to Gujarat and to Sri Lanka, where they have a community centre, by the 4th century BCE.
+note	-258	Ashoka dedicates the Barabar Caves in Bihar to the Ājīvikas, whose school is said to have been favoured by his father Bindusara.
+note	-150	After the decline of the Maurya Empire the Ājīvikas find only occasional mention in Sanskrit literature.
+note	200	In northern India the Ājīvikas may have become insignificant, and references in the Vayu Purana suggest a rapid decline under the Guptas.
+note	446	Inscriptions in southern India, from the time of the Pallava king Simhavarman II, record a tax on Ājīvikas or Acuvas.
+note	1292	The Jain commentator Mallisena suggests that the Ājīvikas still exist, perhaps knowing those of southern India.
+note	1346	The last dated tax inscription, around Kolar, is set up; later references suggest survival to the 15th century at most.
+src	Wikipedia: Ājīvika
+src	A. L. Basham, History and Doctrines of the Ājīvikas (Luzac, 1951)
+src	Piotr Balcerowicz, Early Asceticism in India: Ājīvikism and Jainism (Routledge, 2015)
+
+@native-american-church
+area	Oklahoma Territory	35.5,-97.5	250	1890		2	the religion originates here in the late nineteenth century; the 1913 charter is enabled in the Oklahoma territory
+area	Southern Great Plains	36.0,-100.0	500	1890		2	peyote is introduced to the southern Great Plains from Mexico
+route	1890	24.0,-103.0 > 35.5,-97.5	Peyote is introduced to the southern Great Plains from Mexico (late nineteenth century)
+mark	origin	1890	Oklahoma Territory	35.5,-97.5	The religion originates here after peyote is introduced from Mexico.
+mark	place	1911	Oklahoma	35.47,-97.52	The church is incorporated under Oklahoma law in 1911, with Victor Griffin's help.
+mark	place	1890	South Texas	27.5,-98.5	The Carrizo and Coahuiltecan people introduced the language of the peyote songs.
+note	1890	The Native American Church originates in the Oklahoma Territory (1890–1907) after peyote is introduced to the southern Great Plains from Mexico.
+note	1911	The church is incorporated under Oklahoma law (1911), and a charter dates from 1913.
+note	1918	The Native American Church is officially created (1918); the Half-Moon way is introduced by James Seymour in 1914 or 1924.
+note	1970	The Controlled Substances Act (1970) prohibits peyote; the American Indian Religious Freedom Act (1978) and the Religious Freedom Restoration Act (1993) later protect its religious use.
+note	2000	Today the church has an estimated 300,000 adherents in the United States, Canada and Mexico.
+src	Wikipedia: Native American Church
+src	Stewart, Omer C., Peyote Religion: A History (University of Oklahoma Press, 1987)
+
+@spiritism
+area	France	47.0,2.5	400	1857		1	where the doctrine was founded; Kardec's Spiritist Society of Paris and the Revue Spirite
+area	Brazil	-15.8,-47.9	1000	1865		1	the country with the most Spiritists: about 3.8 million in the 2010 census, the third-largest religious group
+area	Mexico	19.4,-99.1	450	1860		1	reached Mexico in the decades of 1850-1860 and attracted the intellectual elite
+area	Spain	40.4,-3.7	300	1873		1	a pioneer, the Marquis of Flórida, read a bill for its official teaching in 1873
+area	Romania	45.1,25.7	250	1892		1	B. P. Hașdeu wrote Sic Cogito in 1892 and practised Spiritism at Câmpina
+area	Argentina	-34.6,-58.4	400	1946		1	where the Pan-American Spiritist Confederation was founded in 1946
+route	1865	48.86,2.35 > -22.91,-43.17	Spiritism reaches Brazil in the 1860s (1865 in the Brazilian Spiritist Federation's dating)
+route	1860	48.86,2.35 > 19.43,-99.13	Spiritism reaches Mexico in the decades of 1850-1860
+mark	origin	1857	Paris	48.86,2.35	The Spirits' Book is published on 18 April 1857 and Kardec coins the term spiritisme.
+mark	place	1884	Rio de Janeiro	-22.91,-43.17	The Brazilian Spiritist Federation is founded here on 2 January 1884.
+mark	place	1892	Câmpina	45.12,25.74	B. P. Hașdeu practised Spiritism at Iulia Hașdeu Castle after the loss of his daughter.
+mark	place	1992	Madrid	40.42,-3.70	The International Spiritist Council is constituted here on 28 November 1992.
+mark	place	2000	Porto Alegre	-30.03,-51.23	The Pan-American Spiritist Confederation has had its headquarters here since 13 October 2000.
+note	1857	Allan Kardec publishes The Spirits' Book in France (1857) and founds the Revue Spirite (1858); by his death in 1869 the doctrine has gained 7 million followers. It reaches Mexico, Spain, Brazil and Romania, and Brazil's penal code bans its practice in 1890.
+note	1925	The International Spiritist Congress meets in Paris in 1925. In Brazil the code of 1940 ends the official prohibition, and the Pan-American Spiritist Confederation is founded in Argentina in 1946.
+note	2000	The International Spiritist Council (1992) unites national movements; in Brazil the 2010 census counts about 3.8 million Spiritists, and about 13 million are reported worldwide.
+src	Wikipedia: Kardecist spiritism

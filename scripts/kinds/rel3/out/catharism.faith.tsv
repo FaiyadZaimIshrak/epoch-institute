@@ -1,0 +1,28 @@
+@catharism
+area	Rhineland (Cologne)	50.94,6.96	150	1143	1200	1	Cathars appear in the Rhineland cities, particularly Cologne, in the mid-12th century
+area	Northern France (Champagne)	48.90,4.00	250	1150	1239	1	Cathars appear in northern France about the same time
+area	Languedoc	43.50,2.00	150	1150	1199	1	One of the two regions where Catharism attained its greatest popularity
+area	Languedoc	43.50,2.00	150	1200	1229	2	By 1207 many towns of Provence and its vicinity were almost wholly Cathar
+area	Languedoc	43.50,2.00	150	1230	1325	1	Persecuted by the Inquisition; survived in much reduced form to about 1325
+area	Northern Italy	45.20,9.50	250	1160	1350	1	The northern Italian cities, where the Cathars were extirpated by the Inquisitions of the 14th century
+area	Pyrenean foothills	42.90,1.60	100	1300	1321	1	A revival under Peire Autier, put down in 1310, with Bélibaste's group in the Languedoc until 1321
+route	1209	49.00,2.50 > 43.34,3.22	The crusade of the northern barons against the Languedoc (1209)
+route	1226	48.86,2.35 > 43.60,2.50	Louis VIII leads a royal force into south-eastern France (1226)
+mark	origin	1143	Cologne	50.94,6.96	The cleric Eberwin of Steinfeld reports the first confirmed group with similar beliefs
+mark	place	1167	Saint-Félix-Lauragais	43.45,1.85	A council attended by the Bogomil papa Nicetas, the Cathar bishop of northern France and a Lombard leader
+mark	place	1209	Béziers	43.34,3.22	Besieged on 22 July 1209; reportedly at least 7,000 people were killed, a number some scholars dispute
+mark	place	1239	Mont-Aimé, Champagne	48.87,4.00	183 men and women convicted of Catharism were burned at the stake on 13 May 1239
+mark	place	1244	Montségur	42.87,1.83	Fortress besieged from 1243; over 200 Perfects were burned on 16 March 1244
+mark	last	1310	Toulouse	43.60,1.44	Peire Autier, leader of a revival in the Pyrenean foothills, is captured and executed
+note	1143	Eberwin of Steinfeld reports a group with Cathar-like beliefs at Cologne, the first confirmed report of identifiable Catharism.
+note	1167	A council at Saint-Félix-Lauragais gathers Cathar leaders from the Languedoc, northern France and Lombardy with the Bogomil papa Nicetas.
+note	1207	Many towns of Provence and its vicinity are almost wholly Cathar, and the Pope turns to crusade after the legate Castelnau is murdered in 1208.
+note	1209	The Albigensian Crusade begins with the massacre at Béziers, and runs for twenty years of war in the Languedoc.
+note	1229	The Treaty of Paris ends the official war, but Catholic forces keep pursuing Cathars.
+note	1233	The Inquisition is established and works at Toulouse, Albi, Carcassonne and other towns through the 13th century and much of the 14th.
+note	1244	Montségur falls and over 200 Cathar Perfects are burned, while the survivors scatter as fugitives.
+note	1310	Peire Autier, leader of a revival in the Pyrenean foothills, is executed at Toulouse.
+note	1321	Guillaume Bélibaste, the last known Cathar Perfect in the Languedoc, is executed.
+note	1350	The Inquisition claims to have eradicated the Cathars; records after 1330 hold very few proceedings against them.
+src	Wikipedia: Catharism
+src	Antonio Sennis (ed.), Cathars in Question (2016), as named in the article

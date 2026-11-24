@@ -1,0 +1,29 @@
+@gnosticism
+area	Alexandria and Egypt	30.50,30.50	350	150	400	1	Alexandria was central to the birth of Gnosticism; Basilidians lived in the Nile Delta until the end of the 4th century
+area	Rome	41.90,12.50	250	150	400	1	Marcion preached here around 150; Valentinus was a candidate for bishop
+area	Asia Minor and Syria	37.00,36.00	450	160	400	1	Valentinianism spread east to these regions
+area	Northwest Africa	35.50,7.00	450	160	400	1	Valentinianism spread to Northwest Africa
+area	Transjordan and the Jordan valley	32.00,35.70	250	150	400	1	the Elkesaites, a baptismal group active between 100 and 400
+area	Erbil	36.19,44.01	200	150	199	1	the Quqites, a Gnostic group of 2nd-century Erbil
+area	Lower Mesopotamia and Khuzestan	31.00,47.50	350	150		1	the Mandaeans, around the lower Karun, Euphrates and Tigris
+area	Armenia and the eastern Byzantine themes	39.50,41.50	400	650	872	1	the Paulicians, accused by medieval sources of being Gnostic
+route	150	42.03,35.15 > 41.90,12.50	Marcion of Sinope preaches in Rome and founds a congregation (about 150)
+route	160	31.20,29.92 > 36.85,10.33	Valentinianism spreads to Northwest Africa
+route	160	31.20,29.92 > 36.20,36.16	Valentinianism spreads east to Asia Minor and Syria
+mark	origin	150	Alexandria	31.20,29.92	Central to the birth of Gnosticism; the birthplace of Valentinus and home of Basilides.
+mark	place	150	Rome	41.90,12.50	Marcion preached here around 150 and Valentinus stood as a candidate for bishop.
+mark	place	367	Nag Hammadi	26.05,32.25	Twelve codices, perhaps buried after Athanasius's Festal Letter of 367, were found near here in 1945.
+mark	place	1890	Paris	48.86,2.35	Jules Doinel re-established a Gnostic church in France in 1890.
+note	150	By the mid-2nd century Gnostic systems are fully developed in the Mediterranean, with Alexandria central to their birth; Marcion preaches in Rome around 150.
+note	180	Valentinianism, an intellectually vibrant school, spreads to Northwest Africa, Egypt, Asia Minor and Syria, and Irenaeus writes against the Gnostics (c. 180–185).
+note	250	Sethianism is a main current of Gnosticism, and Plotinus and later Neoplatonists attack it; decline sets in during the 3rd century.
+note	367	Athanasius condemns non-canonical books in 367; the Nag Hammadi codices may have been buried soon after.
+note	400	Gnostic groups fade in the Mediterranean as orthodoxy settles; Basilidians in Egypt survive to the end of the 4th century and Gnosticism persists in the Near East until at least the 6th century.
+note	650	On the edge of the Byzantine world the Paulicians arise, accused by medieval sources of being Gnostic, and the Mandaeans continue in southern Mesopotamia.
+note	927	The Bogomils emerge in Bulgaria between 927 and 970; the Cathars are later accused of Gnostic traits, though a direct link is disputed.
+note	1209	The Albigensian Crusade (1209–1229) and conversion to Islam greatly reduce the remaining Gnostics.
+note	1890	Jules Doinel re-establishes a Gnostic church in France in 1890.
+note	1945	The discovery of the Nag Hammadi library renews interest, and modern Gnostic churches are founded; the Mandaeans, 60,000 to 70,000 worldwide, live in Iraq, Iran and diaspora communities.
+src	Wikipedia: Gnosticism
+src	Giovanni Filoramo, A History of Gnosticism (1990)
+src	Roelof van den Broek, Gnostic Religion in Antiquity (2013)

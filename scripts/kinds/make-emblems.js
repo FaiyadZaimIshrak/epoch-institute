@@ -101,6 +101,12 @@ const EMBLEMS = [
   ['Pacifism', 'P'], ['Trotskyism', 'T'], ['Christian democracy', 'C'], ['Secularism', 'S'], ['Social Darwinism', 'S'], ['Three Principles of the People', '三民', 'serif-cjk', 170],
   ['Syndicalism', 'S'], ["Ba'athism", 'B'], ['Pan-Slavism', 'P'], ['Pan-Islamism', 'P'], ['Mohism', '墨', 'serif-cjk', 220], ['African socialism', 'A'], ['Gandhism', 'G'],
   ['Antisemitism', 'A'], ['Manifest destiny', 'M'],
+  // religions, third wave (23 Nov 2026): the initial, or a character of the faith's own name (Tenrikyo 天, Korean shamanism 무, the
+  // Vedic religion a Devanagari va); never a sacred symbol of a living faith
+  ['Mormonism', 'M'], ['Rastafari', 'R'], ["Jehovah's Witnesses", 'J'], ['Gnosticism', 'G'], ['Ahmadiyya', 'A'], ['Mandaeism', 'M'], ['Caodaism', 'C'], ['Candomblé', 'C'],
+  ['Tenrikyo', '天', 'serif-cjk', 220], ['Samaritanism', 'S'], ['Maya religion', 'M'], ['Santería', 'S'], ['Catharism', 'C'], ['Vedic religion', 'व', 'Nirmala UI, Mangal, sans-serif', 220],
+  ['Hittite religion', 'H'], ['Etruscan religion', 'E'], ['Hawaiian religion', 'H'], ['Korean shamanism', '무', 'Batang, "Malgun Gothic", serif', 220], ['Ājīvika', 'Ā'],
+  ['Native American Church', 'N'], ['Spiritism', 'S'],
 ];
 const argv = process.argv.slice(2), sheet = (argv.find(a => a.startsWith('--sheet=')) || '').slice(8);
 // --initial: a name not in EMBLEMS gets the monogram of its first distinctive word (the Kingdom of Kano: K), as the

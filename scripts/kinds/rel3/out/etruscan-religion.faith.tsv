@@ -1,0 +1,19 @@
+@etruscan-religion
+area	Etruria	43.0,11.5	220	-900	-264	2	the lands of the Etruscans in central Italy
+area	Etruria	43.0,11.5	220	-264	100	1	the religion assimilated into the Roman
+area	Tarquinia	42.25,11.76	70	-900	-264	2	the 9th century BCE shrine at Pian d’Civita; a college of 60 haruspices at Tarquinii
+area	Veii	42.02,12.40	70	-900	-264	2	the sanctuary at the Piazza d’Armi
+area	Rome	41.90,12.50	150	-264	100	1	the Senate adopted key elements of Etruscan religion; haruspices and noble families kept them
+route	-264	42.25,11.76 > 41.90,12.50	Etruscan religion taken up by Rome after the defeat of 264 BCE
+mark	origin	-900	Tarquinia	42.25,11.76	The shrine at Pian d’Civita is among the earliest evidence of Etruscan religious practice, in the Villanovan period.
+mark	place	-900	Veii	42.02,12.40	The sanctuary at the Piazza d’Armi grew into a fully developed sanctuary.
+mark	place	-525	Orvieto	42.72,12.11	A bronze statue base of 525–500 BCE at Campo della Fiera records a freedwoman’s dedication to a deity.
+note	-900	Etruscan religious practice appears in the Villanovan period, with shrines at Tarquinia and Veii and cremation burial in urns with grave goods.
+note	-700	Greek gods and heroes such as Aritimi, Hercle and Pacha join the Etruscan pantheon in the Orientalizing Period.
+note	-600	Etruscan sanctuaries become increasingly monumental, with major temples, expensive offerings and animal sacrifice.
+note	-264	After the defeat in the Roman–Etruscan Wars (264 BCE), the Roman Senate adopts key elements of Etruscan religion, kept by haruspices and noble families of Etruscan descent.
+note	-50	In the last years of the Roman Republic the religion falls out of favour and is satirized by Cicero.
+note	50	The Julio-Claudians keep some knowledge of the language and religion for a short time, then the practice ceases.
+src	Wikipedia: Etruscan religion
+src	Nancy Thomson De Grummond and Erika Simon (eds), The Religion of the Etruscans (2006)
+src	Jean-René Jannot, Religion in Ancient Etruria (2005)

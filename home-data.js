@@ -1204,7 +1204,21 @@ var HOME_PICS = {
   "Pan-Slavism": {"img":"/images/encyclopedia/ivan-gundulic.jpg","name":"Ivan Gundulić","slug":"ivan-gundulic","credit":"anonymous, Public domain"},
   "Pan-Islamism": {"img":"/images/encyclopedia/jamal-al-din-al-afghani.jpg","name":"Jamal al-Din al-Afghani","slug":"jamal-al-din-al-afghani","credit":"Unknown author, Public domain"},
   "African socialism": {"img":"/images/encyclopedia/julius-nyerere.jpg","name":"Julius Nyerere","slug":"julius-nyerere","credit":"Rob Mieremet / Anefo, CC0"},
-  "Gandhism": {"img":"/images/encyclopedia/mahatma-gandhi.jpg","name":"Mahatma Gandhi","slug":"mahatma-gandhi","credit":"Elliott & Fry, Public domain"}
+  "Gandhism": {"img":"/images/encyclopedia/mahatma-gandhi.jpg","name":"Mahatma Gandhi","slug":"mahatma-gandhi","credit":"Elliott & Fry, Public domain"},
+  "Mormonism": {"img":"/images/encyclopedia/joseph-smith.jpg","name":"Joseph Smith","slug":"joseph-smith","credit":"Likely William Warner Major see, Public domain"},
+  "Rastafari": {"img":"/images/encyclopedia/rastafari.jpg","name":"Rastafari","slug":"rastafari","credit":"Oren neu dag, Public domain"},
+  "Caodaism": {"img":"/images/encyclopedia/caodaism.jpg","name":"Caodaism","slug":"caodaism","credit":"Public domain"},
+  "Candomblé": {"img":"/images/encyclopedia/candomble.jpg","name":"Candomblé","slug":"candomble","credit":"André Koehne, CC BY-SA 3.0"},
+  "Samaritanism": {"img":"/images/encyclopedia/torah.jpg","name":"Torah","slug":"torah","credit":"Unknown author, Public domain"},
+  "Maya religion": {"img":"/images/encyclopedia/palenque.jpg","name":"Palenque","slug":"palenque","credit":"Ljuba brank at Slovenian Wikipedia, CC BY-SA 3.0"},
+  "Santería": {"img":"/images/encyclopedia/santeria.jpg","name":"Santería","slug":"santeria","credit":"Jorge Royan, CC BY-SA 3.0"},
+  "Catharism": {"img":"/images/encyclopedia/catharism.jpg","name":"Catharism","slug":"catharism","credit":"Pedro Berruguete, Public domain"},
+  "Vedic religion": {"img":"/images/encyclopedia/vedas.jpg","name":"Vedas","slug":"vedas","credit":"Ms Sarah Welch, CC BY-SA 4.0"},
+  "Hittite religion": {"img":"/images/encyclopedia/puduhepa.jpg","name":"Puduhepa","slug":"puduhepa","credit":"Klaus-Peter Simon; derivative work by Zunkir, CC BY 3.0"},
+  "Etruscan religion": {"img":"/images/encyclopedia/liber-linteus.jpg","name":"Liber Linteus","slug":"liber-linteus","credit":"SpeedyGonsales, CC BY 3.0"},
+  "Hawaiian religion": {"img":"/images/encyclopedia/kamehameha-i.jpg","name":"Kamehameha I","slug":"kamehameha-i","credit":"Louis Choris, Public domain"},
+  "Korean shamanism": {"img":"/images/encyclopedia/samguk-sagi.jpg","name":"Samguk sagi","slug":"samguk-sagi","credit":"Gomanari, Public domain"},
+  "Ājīvika": {"img":"/images/encyclopedia/ajivika.jpg","name":"Ajivika","slug":"ajivika","credit":"Daderot, CC0"}
 };
 
 var HOME_ENTRIES = [

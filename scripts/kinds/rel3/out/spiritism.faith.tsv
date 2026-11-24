@@ -1,0 +1,18 @@
+@spiritism
+area	France	47.0,2.5	400	1857		1	where the doctrine was founded; Kardec's Spiritist Society of Paris and the Revue Spirite
+area	Brazil	-15.8,-47.9	1000	1865		1	the country with the most Spiritists: about 3.8 million in the 2010 census, the third-largest religious group
+area	Mexico	19.4,-99.1	450	1860		1	reached Mexico in the decades of 1850-1860 and attracted the intellectual elite
+area	Spain	40.4,-3.7	300	1873		1	a pioneer, the Marquis of Flórida, read a bill for its official teaching in 1873
+area	Romania	45.1,25.7	250	1892		1	B. P. Hașdeu wrote Sic Cogito in 1892 and practised Spiritism at Câmpina
+area	Argentina	-34.6,-58.4	400	1946		1	where the Pan-American Spiritist Confederation was founded in 1946
+route	1865	48.86,2.35 > -22.91,-43.17	Spiritism reaches Brazil in the 1860s (1865 in the Brazilian Spiritist Federation's dating)
+route	1860	48.86,2.35 > 19.43,-99.13	Spiritism reaches Mexico in the decades of 1850-1860
+mark	origin	1857	Paris	48.86,2.35	The Spirits' Book is published on 18 April 1857 and Kardec coins the term spiritisme.
+mark	place	1884	Rio de Janeiro	-22.91,-43.17	The Brazilian Spiritist Federation is founded here on 2 January 1884.
+mark	place	1892	Câmpina	45.12,25.74	B. P. Hașdeu practised Spiritism at Iulia Hașdeu Castle after the loss of his daughter.
+mark	place	1992	Madrid	40.42,-3.70	The International Spiritist Council is constituted here on 28 November 1992.
+mark	place	2000	Porto Alegre	-30.03,-51.23	The Pan-American Spiritist Confederation has had its headquarters here since 13 October 2000.
+note	1857	Allan Kardec publishes The Spirits' Book in France (1857) and founds the Revue Spirite (1858); by his death in 1869 the doctrine has gained 7 million followers. It reaches Mexico, Spain, Brazil and Romania, and Brazil's penal code bans its practice in 1890.
+note	1925	The International Spiritist Congress meets in Paris in 1925. In Brazil the code of 1940 ends the official prohibition, and the Pan-American Spiritist Confederation is founded in Argentina in 1946.
+note	2000	The International Spiritist Council (1992) unites national movements; in Brazil the 2010 census counts about 3.8 million Spiritists, and about 13 million are reported worldwide.
+src	Wikipedia: Kardecist spiritism

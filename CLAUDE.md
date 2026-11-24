@@ -3712,6 +3712,26 @@ then declutter. Answers: about 100 each; all sections; menus by subject plus hub
     Hitler, not the photograph of the dead child at Soweto. Home pictures set by hand where the first section picture
     did not stand for the subject; Nazism, Stalinism, antisemitism and Social Darwinism are hidden from the featured
     rotation.
+- **The third wave of religions (24 Nov 2026; 51 religions, 1,296 profiles; scripts/kinds/rel3/):**
+  - **Each religion:** one Sonnet writer with JOB-REL.md from one saved article: the profile (out/<slug>.json) and its
+    faith map (out/<slug>.faith.tsv). 27 were tried, 21 merged. Cheondoism and Māori religion were dropped as too thin;
+    Aztec and Akan religion were writers' skips and Inca and Serer religion are held (held/): their articles date almost
+    nothing, and no year may come from memory.
+  - **Maps:** writers gave years of their own to places the article does not date ("1950", "1960", "2015" for a
+    diaspora). edits/fix-maps.js takes those lines out or sets the year the article gives (29 lines). Mormonism's years
+    for Kirtland, Nauvoo and the Salt Lake Valley come from a second saved article (wp2/mormonism-history.txt).
+    edits/faiths-add.js appends the blocks to scripts/faiths.tsv after checking each line's fields, and gives
+    scripts/faiths-side.tsv the new works and lives (and the Vedic religion its row). A small or recent faith has few
+    areas (Hittite religion two, Samaritanism two): that is all its article supports.
+  - **Entries:** 13 had none (make-kind-entries.js, rel3/entries.json). "Ahmadiyya" alone is no pattern (a Sufi order
+    bears the name: the Salihiyya entry); the entry links by "Ahmadiyya Muslim Community", "Ahmadiyya movement", "Ahmadis".
+  - **Links:** 20 exclusions (excl1.tsv, excl2.tsv): Mirza Ghulam Ahmad as the ghulam, Sydney as the town in Nova
+    Scotia, Columbus, Ohio, as the navigator, the Witnesses' Bethel as the biblical town, ibn Bahlul as Bahlul Lodi, the
+    Caliph's electors as the prince-electors, "Black Rome" as Rome, the Gulf of Benin as the Benin Empire, a Maya New Year
+    ritual as the Babylonian akitu.
+  - **Emblems:** the initial, or a character of the faith's own name (天, 무, व); never a sacred symbol of a living
+    faith. **Pictures:** rel3/pics/rel-propose.js, three rounds: 35 on 16 profiles; no generic pictures of figures a
+    faith only names (Moses, Noah, the Kaaba). Five profiles have none.
   - Seen and left: the encyclopedia has two entries for Hu Shih (hu-shih and hu-shi); "Council of Ministers" links the Council
     of the European Union and "Yale" the Welsh commote Ial wherever they stand; Victor Hugo's entry links his novel's title
     to the cathedral.
