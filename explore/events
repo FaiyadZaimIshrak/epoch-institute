@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Events in History: Days, Battles, Wars, Centuries and Years</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="What happened and when: every day of the year, battles with their fields in motion, the wars with their battles and treaties, the world timeline, each.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Events in History: Days, Battles, Wars, Centuries and Years">
+<meta property="og:description" content="Profiles, encyclopedia, states, atlas, country histories, centuries, explorer, reading paths, quiz and open data.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the-epoch-institute.org/explore/events">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/explore/events">
+<link rel="stylesheet" href="/css/research.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+#research { min-height: auto; justify-content: flex-start; padding-top: 110px; }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Explore Everything","item":"https://the-epoch-institute.org/research"},{"@type":"ListItem","position":3,"name":"Events in History","item":"https://the-epoch-institute.org/explore/events"}]},{"@type":"CollectionPage","name":"Events in History: Days, Battles, Wars, Centuries and Years","description":"What happened and when: every day of the year, battles with their fields in motion, the wars with their battles and treaties, the world timeline, each.","url":"https://the-epoch-institute.org/explore/events","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
+<!-- Google tag (gtag.js) -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+<main id="main" data-no-toc>
+
+<section id="research">
+  <span class="hero-ornament"></span>
+  <h1 class="research-title">Events in History</h1>
+  <p class="research-subtitle">What happened and when: every day of the year, battles with their fields in motion, the wars with their battles and treaties, the world timeline, each century and each year.</p>
+<section class="hub-group" id="hub-events-cards" aria-label="Events"><ul class="hub-grid"><li><a class="hub-card" href="/today-in-history/"><span class="hub-card-img"><img src="/images/encyclopedia/mesoamerican-long-count-calendar.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">3,794 events</span><span class="hub-card-t">Today in History</span><span class="hub-card-d">What happened on each day of the year, across five thousand years.</span></span></a></li><li><a class="hub-card" href="/battle/"><span class="hub-card-img"><img src="/images/encyclopedia/battle-of-hastings.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">103 battles</span><span class="hub-card-t">Battles</span><span class="hub-card-d">The two sides, the ground and the fighting, with a plan of the field to play phase by phase.</span></span></a></li><li><a class="hub-card" href="/encyclopedia/wars"><span class="hub-card-img"><img src="/images/encyclopedia/thirty-years-war.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">Every war</span><span class="hub-card-t">Wars</span><span class="hub-card-d">The wars of the encyclopedia by region, oldest first, each with its battles, sieges and treaties.</span></span></a></li><li><a class="hub-card" href="/timeline"><span class="hub-card-img"><img src="/images/encyclopedia/standard-of-ur.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">Every state</span><span class="hub-card-t">World Timeline</span><span class="hub-card-d">Five thousand years of states and empires on one line, region by region: see who lived alongside whom.</span></span></a></li><li><a class="hub-card" href="/centuries/"><span class="hub-card-img"><img src="/images/encyclopedia/bayeux-tapestry.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">51 centuries</span><span class="hub-card-t">Centuries</span><span class="hub-card-d">World history one century at a time: the great powers, key events, people and a map.</span></span></a></li><li><a class="hub-card" href="/years/"><span class="hub-card-img"><img src="/images/encyclopedia/primary-chronicle.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">1,399 years</span><span class="hub-card-t">Year by Year</span><span class="hub-card-d">What happened in a single year: its events, the people born and the people who died, the states founded and ended.</span></span></a></li><li><a class="hub-card" href="/now"><span class="hub-card-img"><img src="/images/encyclopedia/rosetta-stone.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">In the news</span><span class="hub-card-t">History Now</span><span class="hub-card-d">History in the news with its background on the site, the anniversaries coming up, and what is new here.</span></span></a></li></ul></section>
+  <p class="research-subtitle">Other subjects: <a href="/explore/people">People</a> · <a href="/explore/places">Places</a> · <a href="/explore/ideas">Ideas</a> · <a href="/explore/play">Play</a> · <a href="/research">Everything on one page</a></p>
+</section>
+
+</main>
+
+<script src="/shared-nav.js"></script>
+<script>
+initNav('research');
+</script>
+
+</body>
+</html>

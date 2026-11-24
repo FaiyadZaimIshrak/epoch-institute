@@ -51,8 +51,17 @@ structuring issue?"): Discover · Encyclopedia · People ▾ · Places ▾ · Ev
   scripts/tests/menus.js checks the foot links, the hub's ids, and the footer's columns at 1366 and 390 px.
 - A patch script that holds backslashes is written with the Write tool, never through a shell heredoc (a quoted
   heredoc turned `'\\n'` into a line break again on 23 Nov 2026).
-- Still to come from the plan: a hub page of its own for each subject (/explore/<subject>; the groups of Explore
-  Everything stand in for them now) and an index page for each kind of profile.
+- **Subject hubs and kind index pages (24 Nov 2026, the plan's last part):**
+  - /explore/people, places, events, ideas, play: scripts/tools/make-explore.js copies each group of Explore Everything
+    (the hub block of /research, so the two cannot drift) under /research's head; css/research.css; explore/.htaccess is
+    written by the tool; /explore goes to /research. Each menu's "Everything in <subject>" link goes there.
+  - /empire/, /religion/, /language/, /culture/, /movement/, /government/, /ideology/, /work/, /life/, /city/, /battle/:
+    scripts/tools/make-kind-indexes.js writes <folder>/index (by region, oldest first, emblem and years; head and foot of
+    the built /encyclopedia/wars, with enc-page.js, which draws the header). The menus, the hub's cards and Today's Number
+    link these pages, no longer /profiles?kind=…, which stays as the filtered card view. /city → /city/ (root .htaccess).
+  - build-pages.ps1 runs both tools after /today (they need /encyclopedia/wars and /research built) and lists the
+    sixteen pages in the sitemaps; a file named index in a profile folder is not a profile ($PROF leaves it out).
+    Both tools take --check. Re-run them by a build after profiles are added.
 The paragraphs below describe the earlier menus.
 Regrouped by theme on 31 Oct 2026 (the user: Explore had grown to 22 items and looked cramped):
 Since 21 Nov 2026: Discover · Encyclopedia · Profiles · Maps & Time ▾ · Themes ▾ · Play ▾ · More ▾ (Today in History

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Places in History: Atlas, Cities, Countries, Empires and States</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Where history happened: the atlas of every state through time, the cities, the history of each present-day country, the empires and states with their.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Places in History: Atlas, Cities, Countries, Empires and States">
+<meta property="og:description" content="Profiles, encyclopedia, states, atlas, country histories, centuries, explorer, reading paths, quiz and open data.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the-epoch-institute.org/explore/places">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/explore/places">
+<link rel="stylesheet" href="/css/research.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+#research { min-height: auto; justify-content: flex-start; padding-top: 110px; }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Explore Everything","item":"https://the-epoch-institute.org/research"},{"@type":"ListItem","position":3,"name":"Places in History","item":"https://the-epoch-institute.org/explore/places"}]},{"@type":"CollectionPage","name":"Places in History: Atlas, Cities, Countries, Empires and States","description":"Where history happened: the atlas of every state through time, the cities, the history of each present-day country, the empires and states with their.","url":"https://the-epoch-institute.org/explore/places","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
+<!-- Google tag (gtag.js) -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+<main id="main" data-no-toc>
+
+<section id="research">
+  <span class="hero-ornament"></span>
+  <h1 class="research-title">Places in History</h1>
+  <p class="research-subtitle">Where history happened: the atlas of every state through time, the cities, the history of each present-day country, the empires and states with their connections, and journeys followed stop by stop on the globe.</p>
+<section class="hub-group" id="hub-places-cards" aria-label="Places"><ul class="hub-grid"><li><a class="hub-card" href="/atlas"><span class="hub-card-img"><img src="/images/encyclopedia/catalan-atlas.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">From 3500 BCE to today</span><span class="hub-card-t">Atlas</span><span class="hub-card-d">The world in any year: slide through five thousand years and watch states appear and vanish.</span></span></a></li><li><a class="hub-card" href="/city/"><span class="hub-card-img"><img src="/images/encyclopedia/constantinople.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">110 cities</span><span class="hub-card-t">Cities</span><span class="hub-card-d">Great cities through time: who founded them, who ruled them, how people lived there, and the sieges and disasters they came through.</span></span></a></li><li><a class="hub-card" href="/countries/"><span class="hub-card-img"><img src="/images/encyclopedia/great-wall-of-china.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">195 countries</span><span class="hub-card-t">Country Histories</span><span class="hub-card-d">The history of each present-day country, told through the states that lay on its soil.</span></span></a></li><li><a class="hub-card" href="/state/"><span class="hub-card-img"><img src="/images/encyclopedia/peace-of-westphalia.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">5,546 states</span><span class="hub-card-t">States</span><span class="hub-card-d">Every recorded kingdom, principality, republic and chiefdom, with its lineage and connections.</span></span></a></li><li><a class="hub-card" href="/journeys"><span class="hub-card-img"><img src="/images/encyclopedia/ibn-battuta.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">Stop by stop</span><span class="hub-card-t">Journeys on the Globe</span><span class="hub-card-d">Great journeys on a turning globe, one stop at a time: Alexander, Xuanzang, Ibn Battuta, Zheng He, Magellan and more.</span></span></a></li><li><a class="hub-card" href="/connections"><span class="hub-card-img"><img src="/images/encyclopedia/congress-of-berlin.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">11,383 links</span><span class="hub-card-t">Connections</span><span class="hub-card-d">Who succeeded, conquered, ruled or merged with whom: the states as one network.</span></span></a></li><li><a class="hub-card" href="/explorer"><span class="hub-card-img"><img src="/images/encyclopedia/pax-romana.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">Rise and fall charts</span><span class="hub-card-t">Power Curves</span><span class="hub-card-d">Compare the rise and fall of 556 states and empires on one timeline.</span></span></a></li></ul></section>
+  <p class="research-subtitle">Other subjects: <a href="/explore/people">People</a> · <a href="/explore/events">Events</a> · <a href="/explore/ideas">Ideas</a> · <a href="/explore/play">Play</a> · <a href="/research">Everything on one page</a></p>
+</section>
+
+</main>
+
+<script src="/shared-nav.js"></script>
+<script>
+initNav('research');
+</script>
+
+</body>
+</html>

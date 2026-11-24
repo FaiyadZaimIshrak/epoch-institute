@@ -728,24 +728,24 @@ function initNav(activePage) {
   const ADVENT_ON = (d => d.getUTCMonth() === 11 || (d.getUTCMonth() === 0 && d.getUTCDate() <= 6))(new Date());   // the calendar takes the Race's place in its season
   const MENUS = [
     ['people', 'People', [
-      ['', [['', '/profiles?kind=life', 'Great Lives', 'Rulers, thinkers and prophets in full', 1], ['people', '/people/', 'People by Century', 'Who lived when'],
-        ['dynasties', '/encyclopedia/dynasties', 'Ruling Houses', 'Dynasties and their family trees'], ['', '/profiles?kind=culture', 'Cultures and Peoples', 'From the first farmers to living peoples'],
+      ['', [['', '/life/', 'Great Lives', 'Rulers, thinkers and prophets in full', 1], ['people', '/people/', 'People by Century', 'Who lived when'],
+        ['dynasties', '/encyclopedia/dynasties', 'Ruling Houses', 'Dynasties and their family trees'], ['', '/culture/', 'Cultures and Peoples', 'From the first farmers to living peoples'],
         ['societies', '/societies/', 'Social Ladders', 'From emperor to enslaved'], ['', '/encyclopedia/quotations', 'Quotations', 'In their own words, with sources'],
         ['speeches', '/speeches/', 'Great Speeches', 'The words that moved history']]]]],
     ['places', 'Places', [
-      ['', [['atlas', '/atlas', 'Atlas', 'The world in any year', 1], ['', '/profiles?kind=city', 'Cities', 'Great cities through time'], ['countries', '/countries/', 'Country Histories', 'Each land through time'],
-        ['', '/profiles?kind=polity', 'Empires and States', 'The great powers in full'], ['states', '/state/', 'States Register', 'Every state on record'],
+      ['', [['atlas', '/atlas', 'Atlas', 'The world in any year', 1], ['', '/city/', 'Cities', 'Great cities through time'], ['countries', '/countries/', 'Country Histories', 'Each land through time'],
+        ['', '/empire/', 'Empires and States', 'The great powers in full'], ['states', '/state/', 'States Register', 'Every state on record'],
         ['journeys', '/journeys', 'Journeys on the Globe', 'Great journeys, stop by stop'], ['connections', '/connections', 'Connections', 'The states as a network'],
         ['explorer', '/explorer', 'Power Curves', 'Rise and fall compared']]]]],
     ['events', 'Events', [
-      ['', [['today', '/today-in-history/', 'Today in History', 'What happened on this day', 1], ['', '/profiles?kind=battle', 'Battles', 'The field in motion, phase by phase'],
+      ['', [['today', '/today-in-history/', 'Today in History', 'What happened on this day', 1], ['', '/battle/', 'Battles', 'The field in motion, phase by phase'],
         ['', '/encyclopedia/wars', 'Wars', 'Every war, with its battles and treaties'], ['timeline', '/timeline', 'World Timeline', 'Every state on one line'],
         ['centuries', '/centuries/', 'Centuries', 'One century at a time'], ['years', '/years/', 'Year by Year', 'What happened in any year'],
         ['', MONTH_URL, 'This Month in History', 'Its events, festivals and people'], ['', '/now', 'History Now', 'In the news, coming anniversaries']]]]],
     ['ideas', 'Ideas', [
       ['', [['religions', '/religions', 'Faiths Side by Side', 'The religions in one table', 1], ['faiths', '/faiths', 'Faith Maps', 'How the religions spread'],
-        ['governance', '/governance', 'Forms of Government', 'Who should rule, and how'], ['', '/profiles?kind=ideology', 'Ideologies', 'From liberalism to Legalism'],
-        ['', '/profiles?kind=movement', 'Movements', 'Causes that changed their world'], ['', '/profiles?kind=work', 'Great Works', 'Texts and monuments in full'],
+        ['governance', '/governance', 'Forms of Government', 'Who should rule, and how'], ['', '/ideology/', 'Ideologies', 'From liberalism to Legalism'],
+        ['', '/movement/', 'Movements', 'Causes that changed their world'], ['', '/work/', 'Great Works', 'Texts and monuments in full'],
         ['inventions', '/inventions', 'Inventions Tree', 'What led to what, and who made it first'], ['songs', '/songs/', 'Songs in History', 'Hymns, anthems and folk songs handed down']]]]],
     ['play', 'Play', [
       ['', [['games', '/games', 'History Games', 'Puzzles, word hunts and the globe', 1], ['quiz', '/quiz', 'History Quiz', 'A new puzzle every day'],
@@ -763,7 +763,7 @@ function initNav(activePage) {
         ['contributors', '/contributors', 'Write for Us', 'Take part in the Institute'], ['', '/#newsletter-section', 'Newsletter', 'A weekly letter of history'],
         ['support', '/support', 'Support the Institute', 'Keep the Institute free'], ['contact', '/contact', 'Contact', 'Corrections, ideas and questions']]]]]];
   // New tags in the menus (Nov 2026): address -> the day the tag comes off. A release adds a line here.
-  const NEW_UNTIL = { '/profiles?kind=city': '2026-12-23', '/profiles?kind=battle': '2026-12-23', '/journeys': '2026-12-23', '/religions': '2026-12-22', '/discover': '2026-12-21', '/past-games': '2026-12-16', '/profiles?kind=life': '2026-12-23', '/profiles?kind=work': '2026-12-23', '/encyclopedia/quotations': '2026-12-12', '/today': '2026-12-12', '/now': '2026-12-10', '/advent': '2026-12-08', '/today-in-history/#birthday': '2026-12-01' };
+  const NEW_UNTIL = { '/city/': '2026-12-23', '/battle/': '2026-12-23', '/journeys': '2026-12-23', '/religions': '2026-12-22', '/discover': '2026-12-21', '/past-games': '2026-12-16', '/life/': '2026-12-23', '/work/': '2026-12-23', '/encyclopedia/quotations': '2026-12-12', '/today': '2026-12-12', '/now': '2026-12-10', '/advent': '2026-12-08', '/today-in-history/#birthday': '2026-12-01' };
   const newTag = h => NEW_UNTIL[h] && Date.now() < Date.parse(NEW_UNTIL[h]) ? '<i class="new-tag">New</i>' : '';
   const inMenu = m => m[2].some(c => c[1].some(x => x[0] === activePage));
   const navItem = (x, cls) => `<a href="${x[1]}"${cls ? ` class="${cls}"` : ''}${x[0] ? activeStyle(x[0]) : ''}>${x[2]}${newTag(x[1])}</a>`;
@@ -772,7 +772,7 @@ function initNav(activePage) {
     <div class="nav-group-wrap" id="nav-${m[0]}-wrap">
       <button class="nav-parent-btn${inMenu(m) ? ' active-group' : ''}" id="nav-${m[0]}-btn" aria-haspopup="true" aria-expanded="false">${m[1]} ▾</button>
       <div class="nav-group-menu nav-mega" id="nav-${m[0]}-menu">
-        ${m[2].map(c => `<div class="nav-col">${c[0] ? `<span class="nav-col-h">${c[0]}</span>` : ''}${c[1].map(x => `<a href="${x[1]}"${activeStyle(x[0])}><b>${x[2]}${newTag(x[1])}${x[4] ? '<i class="start-tag">Start here</i>' : ''}</b><span>${x[3]}</span></a>`).join('')}${m[0] === 'play' ? surprise : ''}${m[0] === 'more' ? '' : `<a class="nav-all" href="/research#hub-${m[0]}">Everything in ${m[1]} &rarr;</a>`}</div>`).join('\n        ')}
+        ${m[2].map(c => `<div class="nav-col">${c[0] ? `<span class="nav-col-h">${c[0]}</span>` : ''}${c[1].map(x => `<a href="${x[1]}"${activeStyle(x[0])}><b>${x[2]}${newTag(x[1])}${x[4] ? '<i class="start-tag">Start here</i>' : ''}</b><span>${x[3]}</span></a>`).join('')}${m[0] === 'play' ? surprise : ''}${m[0] === 'more' ? '' : `<a class="nav-all" href="/explore/${m[0]}">Everything in ${m[1]} &rarr;</a>`}</div>`).join('\n        ')}
       </div>
     </div>`;
   const ddSec = (label, open, links) => `<details class="nav-dd-sec"${open ? ' open' : ''}><summary class="nav-dd-sum">${label}</summary><div class="nav-dd-list">${links}</div></details>`;

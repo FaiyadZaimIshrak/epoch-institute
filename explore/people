@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>People in History: Lives, Ruling Houses, Quotations and Speeches</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="The people of the past, from every side: lives told in full, everyone by century and region, the ruling houses with their family trees, the peoples and their.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="People in History: Lives, Ruling Houses, Quotations and Speeches">
+<meta property="og:description" content="Profiles, encyclopedia, states, atlas, country histories, centuries, explorer, reading paths, quiz and open data.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the-epoch-institute.org/explore/people">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/explore/people">
+<link rel="stylesheet" href="/css/research.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+#research { min-height: auto; justify-content: flex-start; padding-top: 110px; }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Explore Everything","item":"https://the-epoch-institute.org/research"},{"@type":"ListItem","position":3,"name":"People in History","item":"https://the-epoch-institute.org/explore/people"}]},{"@type":"CollectionPage","name":"People in History: Lives, Ruling Houses, Quotations and Speeches","description":"The people of the past, from every side: lives told in full, everyone by century and region, the ruling houses with their family trees, the peoples and their.","url":"https://the-epoch-institute.org/explore/people","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
+<!-- Google tag (gtag.js) -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+<main id="main" data-no-toc>
+
+<section id="research">
+  <span class="hero-ornament"></span>
+  <h1 class="research-title">People in History</h1>
+  <p class="research-subtitle">The people of the past, from every side: lives told in full, everyone by century and region, the ruling houses with their family trees, the peoples and their social ladders, and what was said, in quotations and great speeches.</p>
+<section class="hub-group" id="hub-people-cards" aria-label="People"><ul class="hub-grid"><li><a class="hub-card" href="/life/"><span class="hub-card-img"><img src="/images/encyclopedia/alexander-the-great.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">128 lives</span><span class="hub-card-t">Great Lives</span><span class="hub-card-d">Rulers, thinkers, prophets and rebels told in full: their early years, what they did, who opposed them and what they left.</span></span></a></li><li><a class="hub-card" href="/people/"><span class="hub-card-img"><img src="/images/encyclopedia/las-meninas.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">13,716 people</span><span class="hub-card-t">People</span><span class="hub-card-d">Rulers, thinkers, artists and explorers, century by century and region by region, with a chart of who lived when.</span></span></a></li><li><a class="hub-card" href="/encyclopedia/dynasties"><span class="hub-card-img"><img src="/images/encyclopedia/louis-xiv.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">Dynasties</span><span class="hub-card-t">Ruling Houses</span><span class="hub-card-d">The ruling houses of the encyclopedia, region by region, with their members and family trees.</span></span></a></li><li><a class="hub-card" href="/culture/"><span class="hub-card-img"><img src="/images/encyclopedia/mohenjo-daro.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">81 cultures</span><span class="hub-card-t">Cultures and Peoples</span><span class="hub-card-d">Life before and beside the states: the first farmers and city-builders, the steppe and the sea peoples, and peoples living today.</span></span></a></li><li><a class="hub-card" href="/societies/"><span class="hub-card-img"><img src="/images/encyclopedia/feudalism.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">50 societies</span><span class="hub-card-t">Social Ladders</span><span class="hub-card-d">From emperor to enslaved: how societies ranked their people, how many stood on each rung and how they rose or fell. Be born into one by chance.</span></span></a></li><li><a class="hub-card" href="/encyclopedia/quotations"><span class="hub-card-img"><img src="/images/encyclopedia/socrates.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">In their words</span><span class="hub-card-t">Quotations</span><span class="hub-card-d">What people of the past said and wrote, each quotation with its work, its translator and how the words reach us.</span></span></a></li><li><a class="hub-card" href="/speeches/"><span class="hub-card-img"><img src="/images/encyclopedia/pericles.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">129 speeches</span><span class="hub-card-t">Great Speeches</span><span class="hub-card-d">The words that moved history: the setting, the key passage, what followed, and the complete text where it is free to read.</span></span></a></li></ul></section>
+  <p class="research-subtitle">Other subjects: <a href="/explore/places">Places</a> · <a href="/explore/events">Events</a> · <a href="/explore/ideas">Ideas</a> · <a href="/explore/play">Play</a> · <a href="/research">Everything on one page</a></p>
+</section>
+
+</main>
+
+<script src="/shared-nav.js"></script>
+<script>
+initNav('research');
+</script>
+
+</body>
+</html>

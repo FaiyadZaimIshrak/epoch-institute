@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Play with History: Games, Quiz, Flashcards and Ancient Scripts</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="History to play: daily games and a daily quiz, flashcards, writing in ancient scripts, the race of rising and falling states, and a corner for children.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:title" content="Play with History: Games, Quiz, Flashcards and Ancient Scripts">
+<meta property="og:description" content="Profiles, encyclopedia, states, atlas, country histories, centuries, explorer, reading paths, quiz and open data.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://the-epoch-institute.org/explore/play">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="canonical" href="https://the-epoch-institute.org/explore/play">
+<link rel="stylesheet" href="/css/research.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+#research { min-height: auto; justify-content: flex-start; padding-top: 110px; }
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Explore Everything","item":"https://the-epoch-institute.org/research"},{"@type":"ListItem","position":3,"name":"Play with History","item":"https://the-epoch-institute.org/explore/play"}]},{"@type":"CollectionPage","name":"Play with History: Games, Quiz, Flashcards and Ancient Scripts","description":"History to play: daily games and a daily quiz, flashcards, writing in ancient scripts, the race of rising and falling states, and a corner for children.","url":"https://the-epoch-institute.org/explore/play","isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"}}]}</script>
+<!-- Google tag (gtag.js) -->
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body>
+<main id="main" data-no-toc>
+
+<section id="research">
+  <span class="hero-ornament"></span>
+  <h1 class="research-title">Play with History</h1>
+  <p class="research-subtitle">History to play: daily games and a daily quiz, flashcards, writing in ancient scripts, the race of rising and falling states, and a corner for children.</p>
+<section class="hub-group" id="hub-play-cards" aria-label="Play"><ul class="hub-grid"><li><a class="hub-card" href="/games"><span class="hub-card-img"><img src="/images/encyclopedia/pythian-games.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">Eighteen games</span><span class="hub-card-t">Games</span><span class="hub-card-d">Picture puzzles, word hunts, timelines, the ranks of past societies, a globe, a daily Connections and a daily Crossword: games with real pictures and real dates, for every age.</span></span></a></li><li><a class="hub-card" href="/quiz"><span class="hub-card-img"><img src="/images/encyclopedia/rosetta-stone.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">New every day</span><span class="hub-card-t">History Quiz</span><span class="hub-card-d">Guess the empire, person, event or place from four clues, or practise as long as you like.</span></span></a></li><li><a class="hub-card" href="/today"><span class="hub-card-img"><img src="/images/encyclopedia/astrolabe.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">Every day</span><span class="hub-card-t">Today at the Institute</span><span class="hub-card-d">The day in one place: its anniversary, the people born on it, the song of the day and the daily games.</span></span></a></li><li><a class="hub-card" href="/flashcards"><span class="hub-card-img"><img src="/images/encyclopedia/house-of-wisdom.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">11,691 cards</span><span class="hub-card-t">Flashcards</span><span class="hub-card-d">Terms, faces, capitals and dates in decks of cards: the ones you miss come back sooner, the ones you know wait longer.</span></span></a></li><li><a class="hub-card" href="/write"><span class="hub-card-img"><img src="/images/encyclopedia/rosetta-stone.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">12 languages</span><span class="hub-card-t">Write in Ancient Scripts</span><span class="hub-card-d">Cuneiform, hieroglyphs, Linear B, runes, Brahmi and more: a keyboard that shows every sign with its sound, and your writing as a picture.</span></span></a></li><li><a class="hub-card" href="/race"><span class="hub-card-img"><img src="/images/encyclopedia/charioteer-of-delphi.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">556 to race</span><span class="hub-card-t">Rise and Fall Race</span><span class="hub-card-d">Up to four states and empires race year by year: who led, when they overtook each other and how long each held on.</span></span></a></li><li><a class="hub-card" href="/kids"><span class="hub-card-img"><img src="/images/encyclopedia/great-pyramid-of-giza.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">For young explorers</span><span class="hub-card-t">Kids corner</span><span class="hub-card-d">Pyramids, knights, Vikings and explorers: picture stories, a fact of the day and games for younger readers.</span></span></a></li><li><a class="hub-card" href="/passport"><span class="hub-card-img"><img src="/images/encyclopedia/xuanzang.jpg" alt="" loading="lazy"></span><span class="hub-card-b"><span class="hub-card-k">Your stamps</span><span class="hub-card-t">My Passport</span><span class="hub-card-d">The pages you read, the centuries you visit and the games you play, with stamps to collect. Kept in your own browser.</span></span></a></li></ul></section>
+  <p class="research-subtitle">Other subjects: <a href="/explore/people">People</a> · <a href="/explore/places">Places</a> · <a href="/explore/events">Events</a> · <a href="/explore/ideas">Ideas</a> · <a href="/research">Everything on one page</a></p>
+</section>
+
+</main>
+
+<script src="/shared-nav.js"></script>
+<script>
+initNav('research');
+</script>
+
+</body>
+</html>

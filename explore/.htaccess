@@ -1,0 +1,4 @@
+# Written by scripts/tools/make-explore.js: the pages in this folder are extensionless HTML.
+<FilesMatch "^[a-z0-9-]+$">
+  ForceType text/html
+</FilesMatch>

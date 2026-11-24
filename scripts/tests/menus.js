@@ -17,7 +17,7 @@ let fails = 0; const ok = (n, c, x) => { console.log((c ? 'ok   ' : 'FAIL ') + n
     for (const id of IDS) { await p.click('#nav-' + id + '-btn'); await p.waitForTimeout(350);
       const m = await p.evaluate(id => { const n = document.getElementById('nav-' + id + '-menu'), r = n.getBoundingClientRect(), cols = [...n.querySelectorAll('.nav-col')].map(c => c.querySelectorAll('a:not(.nav-surprise):not(.nav-all)').length), all = n.querySelector('.nav-all');
         return { shown: getComputedStyle(n).display !== 'none', top: Math.round(r.top), bottom: Math.round(r.bottom), left: Math.round(r.left), right: Math.round(r.right), cols, all: all ? all.getAttribute('href') : '', vw: innerWidth, vh: innerHeight, open: [...document.querySelectorAll('.nav-group-wrap.open')].length }; }, id);
-      if (!m.shown || m.bottom > m.vh - 4 || m.left < 4 || m.right > m.vw - 4 || m.cols.some(c => c > 8 || c < 1) || m.open !== 1 || m.all !== (id === 'more' ? '' : '/research#hub-' + id)) bad.push([id, m]);
+      if (!m.shown || m.bottom > m.vh - 4 || m.left < 4 || m.right > m.vw - 4 || m.cols.some(c => c > 8 || c < 1) || m.open !== 1 || m.all !== (id === 'more' ? '' : '/explore/' + id)) bad.push([id, m]);
       if (vp.width === 1366) await p.screenshot({ path: path.join(out, 'menu-' + id + '.png') }); }
     ok(vp.width + ' x ' + vp.height + ': every panel opens alone, inside the window, with at most eight items a column and a link to its group on Explore Everything', !bad.length, bad);
     await p.context().close();
