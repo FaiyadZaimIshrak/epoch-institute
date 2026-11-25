@@ -1222,7 +1222,9 @@ var HOME_PICS = {
   "Potala Palace": {"img":"/images/encyclopedia/potala-palace.jpg","name":"Potala Palace","slug":"potala-palace","credit":"Lhasa Government, CC BY-SA 4.0"},
   "Inca religion": {"img":"/images/encyclopedia/coricancha.jpg","name":"Coricancha","slug":"coricancha","credit":"Diego Delso, CC BY-SA 4.0"},
   "Battle of Adrianople": {"img":"/images/encyclopedia/valens.jpg","name":"Valens","slug":"valens","credit":"АНО \"Международный нумизматический клуб, CC BY-SA 4.0"},
-  "Battle of the Somme": {"img":"/images/encyclopedia/battle-of-the-somme.jpg","name":"Battle of the Somme","slug":"battle-of-the-somme","credit":"Ivor Castle, Public domain"}
+  "Battle of the Somme": {"img":"/images/encyclopedia/battle-of-the-somme.jpg","name":"Battle of the Somme","slug":"battle-of-the-somme","credit":"Ivor Castle, Public domain"},
+  "Battle of Kulikovo": {"img":"/images/encyclopedia/battle-of-kulikovo.jpg","name":"Battle of Kulikovo","slug":"battle-of-kulikovo","credit":"Adolphe Yvon, Public domain"},
+  "Battle of Chacabuco": {"img":"/images/encyclopedia/battle-of-chacabuco.jpg","name":"Battle of Chacabuco","slug":"battle-of-chacabuco","credit":"Pedro Subercaseaux, Public domain"}
 };
 
 var HOME_ENTRIES = [

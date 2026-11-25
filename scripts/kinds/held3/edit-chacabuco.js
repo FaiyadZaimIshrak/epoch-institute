@@ -1,0 +1,11 @@
+// The editor's changes to the Chacabuco draft (24 Nov 2026): the sources section tells what is disputed, not how the
+// tellings are worded; two praise phrases; a fact told twice.
+const fs = require('fs'), f = 'out/battle-of-chacabuco.json'; let t = fs.readFileSync(f, 'utf8');
+const R = [
+  ['Through San Martín\'s careful planning, the royalist forces in Chile were misled into defending against threats that did not exist, and the crossing went unchallenged.', 'San Martín\'s planning misled the royalist forces in Chile into defending against threats that did not exist, and the crossing went unchallenged.'],
+  ['Other numbers differ too. The size of the Army of the Andes runs from 3,500 to 6,000, the crossing is dated from 17 or 19 January and said to have taken 21 or 25 days, and the entry into Santiago falls on 13 or 14 February. Soler\'s road is called narrow and arduous in one telling and gentler than O\'Higgins\'s in another. Patriot losses are 120 dead of wounds or 120 wounded. One account has every royalist killed or taken, though it also has Maroto escape, and the other has 1,600 soldiers embark for Peru.', 'The figures are disputed as well. Estimates of the Army of the Andes run from 3,500 to 6,000 men, the crossing is dated from 17 or 19 January and given 21 or 25 days, and the entry into Santiago falls on 13 or 14 February. It is not agreed whether 120 patriots were wounded or died of their wounds, nor how many royalists got away: Maroto escaped, and 1,600 soldiers are said to have embarked for Peru.'],
+  ['in which San Martín is remembered as a key figure', 'in which San Martín was one of the leaders'],
+  ['The victory was known in Mendoza within four days and in Buenos Aires within twelve, and the flag taken from the Chiloé regiment was carried there with his report by Major Manuel Escalada on 26 February.', 'The flag taken from the Chiloé regiment was carried to Buenos Aires with San Martín\'s report by Major Manuel Escalada on 26 February.'],
+];
+for (const [a, b] of R) { if (t.split(a).length !== 2) throw new Error(a.slice(0, 60)); t = t.replace(a, () => b); }
+const j = JSON.parse(t); fs.writeFileSync(f, t); console.log(Object.entries(j.sections).map(([k, v]) => k + ' ' + v.replace(/<[^>]+>/g, '').length).join(', '));

@@ -8657,5 +8657,15 @@ var SECTION_IMAGES = {
   "Battle of the Somme": {
     background:{slug:"german-general-staff",name:"German General Staff",img:"/images/encyclopedia/german-general-staff.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Generalstabsgeb%C3%A4ude_(Berlin).jpg"},
     legacy:{slug:"david-lloyd-george",name:"David Lloyd George",img:"/images/encyclopedia/david-lloyd-george.jpg",artist:"Harris & Ewing",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:David_Lloyd_George.jpg"}
+  },
+  "Battle of Kulikovo": {
+    background:{slug:"jani-beg",name:"Jani Beg",img:"/images/encyclopedia/jani-beg.jpg",artist:"1405-1409",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jani_Beg_Khan_enthroned,_in_Timurid_genealogy_1405-1409_(Topkapi_Sarayi_M%C3%BCzesi,_H2152)_f.38b.jpg"},
+    aftermath:{slug:"tokhtamysh",name:"Tokhtamysh",img:"/images/encyclopedia/tokhtamysh.jpg",artist:"1436 painter",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Battle_between_Timur_and_Toqtamish_Khan_in_1391._Zafarnama_of_1436_(Toqtamish_detail).jpg"},
+    sources:{slug:"sergius-of-radonezh",name:"Sergius of Radonezh",img:"/images/encyclopedia/sergius-of-radonezh.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Sergius_of_Radonezh_vita_icon_(17_c.,_Yaroslavl_museum)_2.jpg"}
+  },
+  "Battle of Chacabuco": {
+    background:{slug:"jose-de-san-martin",name:"José de San Martín",img:"/images/encyclopedia/jose-de-san-martin.jpg",artist:"The exact author is disputed. Some sources attribute it to Jean Baptiste Madou, others to the art teacher of San Martin's …",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jos%C3%A9_de_San_Mart%C3%ADn_(retrato,_c.1828).jpg"},
+    forces:{slug:"army-of-the-andes",name:"Army of the Andes",img:"/images/encyclopedia/army-of-the-andes.jpg",artist:"José Bouchet",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ejercito_de_los_Andes.jpg"},
+    legacy:{slug:"battle-of-maipu",name:"Battle of Maipú",img:"/images/encyclopedia/battle-of-maipu.jpg",artist:"Johann Moritz Rugendas",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:BatallaDeMaipu.jpg"}
   }
 };

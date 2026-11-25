@@ -1302,4 +1302,6 @@ const SEARCH_PROFILES=[
 ["Serer religion","/religion/serer-religion","Religion"],
 ["Battle of Adrianople","/battle/battle-of-adrianople","Battle"],
 ["Battle of the Somme","/battle/battle-of-the-somme","Battle"],
+["Battle of Kulikovo","/battle/battle-of-kulikovo","Battle"],
+["Battle of Chacabuco","/battle/battle-of-chacabuco","Battle"],
 ];

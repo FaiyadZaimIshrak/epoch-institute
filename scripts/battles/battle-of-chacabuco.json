@@ -1,0 +1,183 @@
+{
+ "slug": "battle-of-chacabuco",
+ "name": "Battle of Chacabuco",
+ "article": "held3/wp/battle-of-chacabuco",
+ "field": {
+  "north": 0,
+  "edges": [
+   {"name": "to the houses of Chacabuco →", "at": [88, 58]}
+  ]
+ },
+ "note": "The accounts differ. This plan follows the Spanish account headed 'Otras fuentes' (O'Higgins's two charges, Las Margaritas, Zapiola's cavalry) throughout, and the divisions' roles from the opening of the Batalla section. The other account (San Martín going in front beside O'Higgins and a division from Soler arriving to envelop the left flank and the rear) is not drawn, so Soler's division is shown only hurrying to flank the enemy. West and east come from the statement that Soler attacked from the west and O'Higgins from the east; the patriots are placed at the top and the royalists below them, which the accounts do not state. The hill Los Halcones, the stream Las Margaritas and the hill of Victoria are placed roughly; the accounts do not say exactly where they lay. The royalist artillery, the royalist third battalion and San Martín's own party are not placed in the accounts and are left off.",
+ "terrain": [
+  {
+   "k": "hill",
+   "name": "Los Halcones",
+   "at": [[58, 4], [84, 4], [90, 14], [80, 22], [62, 21], [56, 12]],
+   "lab": [86, 6],
+   "quote": "avanzar hacia el cerro Los Halcones y desplegar allí sus fuerzas"
+  },
+  {
+   "k": "hill",
+   "name": "Cerro de Victoria",
+   "at": [[8, 52], [20, 49], [36, 50], [42, 56], [30, 59], [12, 58]],
+   "lab": [24, 55],
+   "quote": "delante del cerro de Victoria, cerca de la Hacienda de Chacabuco"
+  },
+  {
+   "k": "stream",
+   "name": "Las Margaritas",
+   "at": [[52, 31], [66, 31], [80, 30], [93, 30]],
+   "lab": [86, 33],
+   "quote": "los granaderos tropezaron con el profundo cauce de Las Margaritas"
+  }
+ ],
+ "sides": [
+  {"id": "p", "name": "Army of the Andes"},
+  {"id": "r", "name": "Royalists"}
+ ],
+ "units": [
+  {
+   "id": "soler",
+   "side": "p",
+   "k": "infantry",
+   "name": "Soler's division",
+   "short": "Soler",
+   "leader": "Miguel Estanislao Soler",
+   "w": 12,
+   "quote": "La 1.ª División o ala derecha al mando de Miguel Estanislao Soler que debía atacar por el oeste"
+  },
+  {
+   "id": "oh",
+   "side": "p",
+   "k": "infantry",
+   "name": "O'Higgins's division",
+   "short": "O'Higgins",
+   "leader": "Bernardo O'Higgins",
+   "w": 10,
+   "quote": "La 2.ª División o ala izquierda al mando de Bernardo O'Higgins debía atacar por el este"
+  },
+  {
+   "id": "zap",
+   "side": "p",
+   "k": "cavalry",
+   "name": "Zapiola's cavalry",
+   "short": "Zapiola",
+   "leader": "José Matías Zapiola",
+   "w": 6,
+   "quote": "apoyada por la caballería del coronel José Matías Zapiola"
+  },
+  {
+   "id": "tal",
+   "side": "r",
+   "k": "infantry",
+   "name": "Talavera battalion",
+   "short": "Talavera",
+   "w": 10,
+   "quote": "lanzándolas sobre el ala derecha enemiga (Batallón Talavera)"
+  },
+  {
+   "id": "chi",
+   "side": "r",
+   "k": "infantry",
+   "name": "Chiloé battalion",
+   "short": "Chiloé",
+   "w": 12,
+   "quote": "la derecha del grueso del batallón Chiloé"
+  }
+ ],
+ "phases": [
+  {
+   "title": "Two divisions to attack from west and east",
+   "when": "Before dawn, 12 February 1817",
+   "text": "The patriot troops were split in two for a pincer. Soler's division was to attack from the west and O'Higgins's from the east. The royalists stood in front of the hill of Victoria, near the Chacabuco ranch.",
+   "quote": "La 1.ª División o ala derecha al mando de Miguel Estanislao Soler que debía atacar por el oeste",
+   "at": {
+    "soler": [24, 10, 180],
+    "oh": [70, 10, 180],
+    "zap": [80, 10, 180],
+    "chi": [42, 38, 0],
+    "tal": [56, 38, 0]
+   }
+  },
+  {
+   "title": "O'Higgins faces the royalist main body",
+   "text": "O'Higgins came by the shorter, steeper road and met the royalist advance parties, then found himself face to face with the main body. He moved on to the hill Los Halcones and deployed his troops there.",
+   "quote": "decidió avanzar hacia el cerro Los Halcones y desplegar allí sus fuerzas",
+   "at": {
+    "oh": [68, 16, 180],
+    "zap": [79, 16, 180]
+   }
+  },
+  {
+   "title": "O'Higgins charges the Talavera battalion",
+   "when": "11:45",
+   "text": "Without a reply to his messages, O'Higgins ordered his infantry to charge with the bayonet in two columns. They went at the royalist right wing, the Talavera battalion, with Zapiola's cavalry in support.",
+   "quote": "lanzándolas sobre el ala derecha enemiga (Batallón Talavera) apoyada por la caballería del coronel José Matías Zapiola",
+   "at": {
+    "oh": [62, 25, 180],
+    "zap": [76, 25, 180]
+   },
+   "hits": [["oh", "tal"]]
+  },
+  {
+   "title": "The charge stops at Las Margaritas",
+   "text": "The grenadiers met the deep bed of Las Margaritas, which they had not seen, and could not cross in attack formation. After a volley they fell back to the hill Los Halcones and re-formed.",
+   "quote": "retrocedieron tras una andanada de fuego enemigo, sin sufrir muchas bajas, hasta el cerro de los Halcones, donde se reorganizaron",
+   "at": {
+    "oh": [68, 16, 180],
+    "zap": [79, 16, 180]
+   },
+   "how": {"oh": "retreat", "zap": "retreat"},
+   "hits": [["tal", "oh"]]
+  },
+  {
+   "title": "Soler hurries to flank the enemy",
+   "text": "Other accounts say O'Higgins's charge was thrown back with heavy losses, so that Soler had to hurry to flank the enemy if the battle was not to be lost. His division moved towards the royalist left.",
+   "quote": "siendo necesario que Soler se apresurase para flanquear al enemigo",
+   "at": {
+    "soler": [26, 22, 180]
+   }
+  },
+  {
+   "title": "A second assault on the flank and the centre",
+   "text": "O'Higgins and his adviser sent the troops in again. This time the cavalry went against the royalist right flank and the infantry against the centre.",
+   "quote": "dirigiendo ahora la caballería contra el flanco derecho y la infantería contra el centro",
+   "at": {
+    "oh": [44, 24, 180],
+    "zap": [62, 26, 180]
+   },
+   "hits": [["oh", "chi"], ["zap", "tal"]]
+  },
+  {
+   "title": "A cavalry platoon breaks the royalist line",
+   "text": "A platoon of cavalry broke the royalist line between the far left of the Talavera battalion and the right of the main body of the Chiloé battalion. The infantry, almost victorious, came up to help the cavalry.",
+   "quote": "Un pelotón de caballería rompía la línea realista entre la extrema izquierda del Talavera y la derecha del grueso del batallón Chiloé",
+   "at": {
+    "zap": [53, 32, 180]
+   },
+   "hits": [["zap", "tal", -0.1], ["zap", "chi", 0.1], ["oh", "chi"]]
+  },
+  {
+   "title": "Zapiola breaks the Talavera square and passes the wing",
+   "text": "Zapiola broke the square formed by the Talavera men and went beyond the royalist right wing. A second charge on the royalist infantry and cavalry then scattered them.",
+   "quote": "Zapiola, después de romper el cuadro formado por los talaveras, rebasó el ala derecha realista",
+   "at": {
+    "zap": [70, 42, 180]
+   },
+   "hits": [["zap", "tal"], ["oh", "chi"]]
+  },
+  {
+   "title": "The royalists flee towards the houses of Chacabuco",
+   "when": "The fighting ended at 14:00",
+   "text": "The remains of the royalist army fled in disorder towards the houses of Chacabuco, a few kilometres away, leaving a third of their strength on the field. The battle ended at two in the afternoon.",
+   "quote": "Los restos del ejército realista huyeron a la desbandada hacia las casas de Chacabuco",
+   "at": {
+    "chi": [46, 50, 180],
+    "tal": [60, 50, 180]
+   },
+   "how": {"chi": "rout", "tal": "rout"},
+   "state": {"chi": "routed", "tal": "routed"}
+  }
+ ]
+}

@@ -1,4 +1,274 @@
 {
  "slug": "battle-of-sekigahara",
- "hold": "The saved article tells the movements of the battle but gives no order of battle: where each contingent stood would have to be placed by judgement, and it sets the two mountains in directions that do not agree with each other. The plan waits for a fuller source."
+ "name": "Battle of Sekigahara",
+ "article": "held3/wp/battle-of-sekigahara",
+  "alias": {"Kose-yama":"小関山","Ishihara":"石原峠","Ishihara pass":"石原峠","Urakusai":"織田有楽斎"},
+ "field": {
+  "north": null
+ },
+ "note": "Follows one account throughout, the Sekigahara gunki taisei of 1713, as summarised in the Japanese article; the Naifukō gunki and the Sekihara shimatsuki differ on the order of battle (for example Shimazu behind Ishida, the start at about 8 am against about 10 am in the Naifukō gunki) and on the course of the fighting. The account places the Western Army by named ground and by its neighbours, and says it faced south-east, so the Eastern Army is drawn on the opposite side. It gives the Eastern contingents only by the enemy each attacked, so their starting places are drawn opposite their targets, not stated. Where Kose-yama, the Ishihara pass and Mount Matsuo lay relative to each other is not given; they are placed beside their units. Not drawn: the Mori, Shishido, Chosokabe and Nabeshima troops at Kurihara-yama and the Kikkawa, Fukuhara, Natsuka and Ankokuji troops on Mount Nangu (the account does not say where they lay relative to the rest), Ishida's vanguard before Koike village, and the shot Ieyasu fired at Kobayakawa's troops, whose source of fire the account does not place. Konishi and Oda Nobutaka are drawn as one block as the account lists them together; the account does not tell what became of them.",
+ "terrain": [
+  {
+   "k": "hill",
+   "name": "Kose-yama",
+   "at": [[5, 5], [20, 4], [22, 14], [19, 20], [5, 19]],
+   "lab": [11, 21],
+   "quote": "石田隊は小関山に本陣を置き"
+  },
+  {
+   "k": "ridge",
+   "name": "Ridge",
+   "unnamed": true,
+   "at": [[8, 33], [22, 31], [27, 38], [25, 44], [10, 44]],
+   "lab": [14, 47],
+   "quote": "宇喜多隊は石原峠を背後に南東の方角に向け山の尾根の先"
+  },
+  {
+   "k": "point",
+   "name": "Ishihara pass",
+   "at": [14, 38],
+   "lab": [14, 41],
+   "quote": "宇喜多隊は石原峠を背後に南東の方角に向け山の尾根の先"
+  },
+  {
+   "k": "hill",
+   "name": "Mount Matsuo",
+   "at": [[60, 49], [74, 46], [90, 48], [92, 56], [76, 60], [60, 58]],
+   "lab": [82, 58],
+   "quote": "松尾山に小早川"
+  }
+ ],
+ "sides": [
+  {"id": "w", "name": "Western Army"},
+  {"id": "e", "name": "Eastern Army"}
+ ],
+ "units": [
+  {
+   "id": "ishida",
+   "side": "w",
+   "k": "infantry",
+   "name": "Ishida's troops",
+   "short": "Ishida",
+   "w": 10,
+   "quote": "石田隊は小関山に本陣を置き"
+  },
+  {
+   "id": "shimazu",
+   "side": "w",
+   "k": "infantry",
+   "name": "Shimazu's troops",
+   "short": "Shimazu",
+   "w": 6,
+   "quote": "宇喜多隊の左に小西・島津・織田信高"
+  },
+  {
+   "id": "konishi",
+   "side": "w",
+   "k": "infantry",
+   "name": "Konishi and Oda Nobutaka",
+   "short": "Konishi",
+   "w": 6,
+   "quote": "宇喜多隊の左に小西・島津・織田信高"
+  },
+  {
+   "id": "ukita",
+   "side": "w",
+   "k": "infantry",
+   "name": "Ukita's troops",
+   "short": "Ukita",
+   "w": 10,
+   "quote": "宇喜多隊は石原峠を背後に南東の方角に向け山の尾根の先"
+  },
+  {
+   "id": "toda",
+   "side": "w",
+   "k": "infantry",
+   "name": "Toda and Hiratsuka",
+   "short": "Toda",
+   "w": 6,
+   "quote": "西軍側から見てその右に戸田・平塚ら"
+  },
+  {
+   "id": "otani",
+   "side": "w",
+   "k": "infantry",
+   "name": "Otani's troops",
+   "short": "Otani",
+   "w": 7,
+   "quote": "さらにその右、松尾山の麓に大谷・朽木・小川・脇坂・赤座直保ら"
+  },
+  {
+   "id": "defect",
+   "side": "w",
+   "k": "infantry",
+   "name": "Wakisaka, Ogawa and others",
+   "short": "Wakisaka",
+   "w": 6,
+   "quote": "さらにその右、松尾山の麓に大谷・朽木・小川・脇坂・赤座直保ら"
+  },
+  {
+   "id": "koba",
+   "side": "w",
+   "k": "infantry",
+   "name": "Kobayakawa's troops",
+   "short": "Kobayakawa",
+   "w": 8,
+   "quote": "松尾山に小早川"
+  },
+  {
+   "id": "fuku",
+   "side": "e",
+   "k": "infantry",
+   "name": "Fukushima's troops",
+   "short": "Fukushima",
+   "w": 10,
+   "quote": "先陣の福島隊は宇喜多隊へ向かい"
+  },
+  {
+   "id": "ii",
+   "side": "e",
+   "k": "infantry",
+   "name": "Ii and Matsudaira",
+   "short": "Ii",
+   "w": 8,
+   "quote": "井伊・松平隊は福島隊を出し抜いて島津隊と交戦"
+  },
+  {
+   "id": "wave",
+   "side": "e",
+   "k": "infantry",
+   "name": "Hosokawa, Kuroda, Kato, Tanaka",
+   "short": "Hosokawa",
+   "w": 10,
+   "quote": "石田隊には細川・黒田・加藤・田中・生駒一正・竹中重門の各隊が殺到し"
+  },
+  {
+   "id": "oto",
+   "side": "e",
+   "k": "infantry",
+   "name": "Oda Urakusai and Tōdō",
+   "short": "Oda, Tōdō",
+   "w": 8,
+   "quote": "大谷隊には織田有楽斎長孝父子・藤堂隊が向かう"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The Western Army stands on its ground",
+   "text": "Ukita's troops stood on the end of a mountain ridge with the Ishihara pass behind them, facing south-east. Konishi and Shimazu stood to their left, Toda and Hiratsuka to their right, and Otani and others at the foot of Mount Matsuo, with Kobayakawa on the mountain. Ishida had his headquarters on Kose-yama.",
+   "quote": "宇喜多隊は石原峠を背後に南東の方角に向け山の尾根の先",
+   "at": {
+    "ishida": [14, 11, 90],
+    "shimazu": [32, 18, 90],
+    "konishi": [32, 27, 90],
+    "ukita": [32, 36, 90],
+    "toda": [32, 46, 90],
+    "otani": [36, 54, 90],
+    "defect": [48, 54, 90],
+    "koba": [68, 54, 270],
+    "fuku": [66, 35, 270],
+    "ii": [66, 23, 270],
+    "wave": [66, 10, 270],
+    "oto": [66, 45, 270]
+  }
+  },
+  {
+   "title": "Fukushima's vanguard goes for Ukita",
+   "when": "About 8 am",
+   "text": "The Eastern vanguard under Fukushima moved against Ukita's troops. The fighting that began at about 8 am had not been decided by the middle of the morning.",
+   "quote": "先陣の福島隊は宇喜多隊へ向かい",
+   "at": {
+    "fuku": [42, 34, 270]
+   },
+   "hits": [["fuku", "ukita"]]
+  },
+  {
+   "title": "Ii and Matsudaira overtake Fukushima",
+   "text": "The troops of Ii and Matsudaira went ahead of Fukushima's men instead of following them, and engaged Shimazu's troops, who stood to the left of Ukita's on the Western side.",
+   "quote": "井伊・松平隊は福島隊を出し抜いて島津隊と交戦",
+   "at": {
+    "ii": [42, 19, 270]
+   },
+   "hits": [["ii", "shimazu"]]
+  },
+  {
+   "title": "The second wave rushes Ishida's troops",
+   "text": "The troops of Hosokawa, Kuroda, Kato, Tanaka, Ikoma and Takenaka rushed against Ishida's troops, the first of the Eastern contingents to come up against his position on Kose-yama.",
+   "quote": "石田隊には細川・黒田・加藤・田中・生駒一正・竹中重門の各隊が殺到し",
+   "at": {
+    "wave": [24, 10, 270]
+   },
+   "hits": [["wave", "ishida"]]
+  },
+  {
+   "title": "Oda and Todo move on Otani's troops",
+   "text": "Oda Urakusai and his son, with Tōdō's troops, went against Otani's troops at the foot of Mount Matsuo, to the right of Ukita and Toda on the Western line.",
+   "quote": "大谷隊には織田有楽斎長孝父子・藤堂隊が向かう",
+   "at": {
+    "oto": [40, 44, 270]
+   },
+   "hits": [["oto", "otani"]]
+  },
+  {
+   "title": "Wakisaka, Ogawa, Kutsuki and Akaza attack Otani",
+   "text": "Wakisaka, who had been in touch with Tōdō, and the troops of Ogawa, Kutsuki and Akaza turned on Otani's troops beside them.",
+   "quote": "小川・朽木・赤座の各隊が大谷隊に攻めかかる",
+   "at": {
+    "defect": [41, 54, 270]
+   },
+   "hits": []
+  },
+  {
+   "title": "Kobayakawa follows them",
+   "text": "Kobayakawa's troops, which had not moved, came down from Mount Matsuo after the others and joined the attack on Otani.",
+   "quote": "小早川隊もこれに続く",
+   "at": {
+    "koba": [54, 54, 270]
+   },
+   "hits": []
+  },
+  {
+   "title": "Otani falls and Ukita's troops break",
+   "text": "Otani killed himself and Hiratsuka and Toda were killed. With Otani's troops gone from the foot of Mount Matsuo, Ukita's troops broke and fled from their ridge.",
+   "quote": "吉継は切腹、平塚・戸田は討ち死し、宇喜多隊は敗走",
+   "at": {
+    "ukita": [16, 40, 90]
+   },
+   "how": {"ukita": "rout"},
+   "state": {
+    "otani": "destroyed",
+    "toda": "destroyed",
+    "ukita": "routed"
+   },
+   "hits": [["oto", "otani"]]
+  },
+  {
+   "title": "Ishida's troops hold against Oda and Todo",
+   "text": "Oda's and Tōdō's troops broke through Otani's troops and turned on Ishida's. Ishida's troops held out against them for a time.",
+   "quote": "石田隊は大谷隊を突破した織田・藤堂隊をも相手にしてしばらく持ちこたえる",
+   "at": {
+    "oto": [20, 24, 270]
+   },
+   "hits": [["oto", "ishida", -0.15]]
+  },
+  {
+   "title": "Ishida's troops are beaten",
+   "text": "All of Ishida's men but those of Gamo were killed, and the rest fled towards Mount Ibuki, after they had held on against two Eastern attacks in turn.",
+   "quote": "蒲生以外諸士が討ち死にし伊吹山方面へ敗走",
+   "at": {
+    "ishida": [8, 8, 90]
+   },
+   "how": {"ishida": "rout"},
+   "state": {"ishida": "routed"}
+  },
+  {
+   "title": "Shimazu's troops break through the enemy",
+   "text": "With the whole Western line in flight, Shimazu's troops had their retreat cut off. They tried to break through the enemy, lost Toyohisa, and left the field reduced to about fifty men.",
+   "quote": "島津隊は敵中突破を試み、豊久を失い、わずか50名ばかりに兵力を減じながらも戦場を脱出",
+   "at": {
+    "shimazu": [72, 20, 90]
+   },
+   "state": {"shimazu": "gone"}
+  }
+ ]
 }

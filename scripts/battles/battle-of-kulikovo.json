@@ -1,0 +1,182 @@
+{
+ "slug": "battle-of-kulikovo",
+ "name": "Battle of Kulikovo",
+ "article": "held3/wp/battle-of-kulikovo",
+  "alias": {"Semyon Obolensky":"Симеона Оболенского","Timofey Velyaminov":"Тимофей Вельяминов","Andrei Olgerdovich":"Андрей Ольгердович","Vasily of Yaroslavl":"Василия Ярославского"},
+ "field": {
+  "north": null,
+  "edges": [
+   {"name": "to the Krasivaya Mecha →", "at": [90, 58]}
+  ]
+ },
+ "note": "The plan follows the Russian account, which takes its order of battle from the Tale of the Rout of Mamai (16th century); the accounts warn that this telling may reflect the practice of the 16th century. The accounts differ on several points: the ambush regiment stood beside the left-hand regiment by one reading, up the Don by the Tale and struck from the right by the Zadonshchina; the Horde's centre was hired Genoese infantry by one version, while another denies that infantry fought at all; and Dmitry Olgerdovich's regiment is part of the right hand by one account and a sixth regiment in reserve by another. The compass directions and the true shape of the field are not given, so the Russians are drawn on the left and the Horde on the right, and the Nepryadva is placed along the lower edge so that the left-hand regiment's flight and the ambush's strike meet there. The Horde's own order is not given beyond its facing the Russian centre across the field, so it is one block. Dmitry Olgerdovich's regiment, the Grand Prince's own place in the front rank and Mamai on his hill are left off.",
+ "terrain": [
+  {
+   "k": "river",
+   "name": "Don",
+   "at": [[3, 6], [4, 22], [3, 40], [4, 56]],
+   "lab": [7, 14],
+   "quote": "русские войска перешли на правый берег Дона и уничтожили за собой мосты"
+  },
+  {
+   "k": "river",
+   "name": "Nepryadva",
+   "at": [[8, 59], [34, 58], [62, 59], [88, 58]],
+   "lab": [60, 56],
+   "quote": "он не удержался, оторвался от большого полка и побежал к Непрядве"
+  },
+  {
+   "k": "wood",
+   "name": "Oak grove",
+   "at": [[7, 39], [19, 38], [21, 45], [19, 52], [8, 51]],
+   "lab": [14, 55],
+   "quote": "В дубраву вверх по Дону был поставлен засадный полк"
+  }
+ ],
+ "sides": [
+  {"id": "r", "name": "Russian army under Dmitry of Moscow"},
+  {"id": "h", "name": "Mamai's Horde"}
+ ],
+ "units": [
+  {
+   "id": "sentry",
+   "side": "r",
+   "k": "cavalry",
+   "name": "Sentry regiment",
+   "short": "Sentry",
+   "leader": "Semyon Obolensky",
+   "w": 8,
+   "quote": "Впереди перед большим полком стал сторожевой полк князей Симеона Оболенского и Иоанна Тарусского"
+  },
+  {
+   "id": "large",
+   "side": "r",
+   "k": "infantry",
+   "name": "Large regiment",
+   "short": "Large",
+   "leader": "Timofey Velyaminov",
+   "w": 14,
+   "quote": "Большой полк и весь двор московского князя встали в центре"
+  },
+  {
+   "id": "rightH",
+   "side": "r",
+   "k": "infantry",
+   "name": "Right Hand regiment",
+   "short": "Right",
+   "leader": "Andrei Olgerdovich",
+   "w": 10,
+   "quote": "полк правой руки под командованием литовского князя Андрея Ольгердовича"
+  },
+  {
+   "id": "leftH",
+   "side": "r",
+   "k": "infantry",
+   "name": "Left Hand regiment",
+   "short": "Left",
+   "leader": "Vasily of Yaroslavl",
+   "w": 10,
+   "quote": "полк левой руки князей Василия Ярославского и Феодора Моложского"
+  },
+  {
+   "id": "ambush",
+   "side": "r",
+   "k": "cavalry",
+   "name": "Ambush regiment",
+   "short": "Ambush",
+   "leader": "Vladimir Andreyevich",
+   "w": 8,
+   "quote": "засадный полк во главе с Владимиром Андреевичем и Дмитрием Михайловичем Боброком-Волынским"
+  },
+  {
+   "id": "horde",
+   "side": "h",
+   "k": "cavalry",
+   "name": "Horde army",
+   "short": "Horde",
+   "w": 18,
+   "quote": "Сила велика татарская борзо с шоломяни грядуще"
+  }
+ ],
+ "phases": [
+  {
+   "title": "The Russian regiments take their places",
+   "when": "Evening of 7 September",
+   "text": "The Large regiment and the Grand Prince's court stood in the centre, with the Right Hand and Left Hand regiments on the flanks and the sentry regiment in front. The ambush regiment waited hidden in an oak grove up the Don.",
+   "quote": "Большой полк и весь двор московского князя встали в центре.",
+   "at": {
+    "sentry": [52, 31, 90],
+    "large": [34, 31, 90],
+    "rightH": [34, 15, 90],
+    "leftH": [34, 47, 90],
+    "ambush": [13, 45, 90],
+    "horde": [72, 31, 270]
+   },
+   "state": {"ambush": "hidden"}
+  },
+  {
+   "title": "The sentry regiment fights the Tatar vanguard",
+   "text": "After small skirmishes of the advanced detachments, the sentry regiment fought the Tatar vanguard in front of the Large regiment.",
+   "quote": "Далее последовал бой сторожевого полка с татарским авангардом",
+   "at": {
+    "sentry": [56, 31, 90],
+    "horde": [67, 31, 270]
+   },
+   "hits": [["sentry", "horde"], ["horde", "sentry", -0.3]]
+  },
+  {
+   "title": "The main forces meet in the centre",
+   "text": "The Tatar force came down from one hill and stopped, with no room to spread out, while the Grand Prince's army advanced against it from the other. The fighting in the centre was long.",
+   "quote": "А князь велики такоже с великою своею силою русскою з другого шоломяни поиде противу им",
+   "at": {
+    "large": [44, 31, 90],
+    "horde": [62, 31, 270]
+   },
+   "hits": [["large", "horde"], ["horde", "large", -0.3]]
+  },
+  {
+   "title": "The Right Hand regiment attacks the Tatars",
+   "text": "On the right Prince Andrei Olgerdovich fell on the Tatars more than once and killed many, but his men did not dare to pursue far while the Large regiment stood unmoving.",
+   "quote": "На правой стране князь Андрей Ольгердович не единою татар нападши и многих избил",
+   "at": {
+    "rightH": [46, 14, 90]
+   },
+   "hits": [["rightH", "horde"]]
+  },
+  {
+   "title": "The Tatars break the Left Hand regiment",
+   "text": "The Tatars struck mainly at the Left Hand regiment. It could not hold, broke away from the Large regiment and ran towards the Nepryadva, with the Tatars in pursuit.",
+   "quote": "Основной удар татары направили на русский полк левой руки, он не удержался, оторвался от большого полка и побежал к Непрядве, татары преследовали его",
+   "at": {
+    "leftH": [26, 56, 180],
+    "horde": [54, 46, 225]
+   },
+   "how": {"leftH": "rout"},
+   "state": {"leftH": "routed"},
+   "hits": [["horde", "leftH"]]
+  },
+  {
+   "title": "The ambush regiment strikes the Tatar rear",
+   "text": "When the Tatars broke through to the river and turned their backs to the ambush regiment, Bobrok ordered it in. Its cavalry struck the main Tatar force from behind while the regiments of Andrei and Dmitry Olgerdovich attacked.",
+   "quote": "Удар конницы из засады с тыла на основные силы золотоордынцев стал решающим.",
+   "at": {
+    "ambush": [38, 44, 90],
+    "rightH": [50, 14, 90]
+   },
+   "state": {"ambush": "shown"},
+   "hits": [["ambush", "horde"], ["rightH", "horde"]]
+  },
+  {
+   "title": "The Horde flees and the ambush regiment pursues",
+   "text": "The Tatars fell into confusion and ran. With no reserve to cover their retreat, the whole force left the field, and the ambush regiment chased them as far as the Krasivaya Mecha.",
+   "quote": "Засадный полк преследовал татар до реки Красивой Мечи 50 вёрст",
+   "at": {
+    "horde": [88, 44, 90],
+    "ambush": [76, 44, 90]
+   },
+   "how": {"horde": "rout"},
+   "state": {"horde": "routed"},
+   "hits": [["ambush", "horde"]]
+  }
+ ]
+}

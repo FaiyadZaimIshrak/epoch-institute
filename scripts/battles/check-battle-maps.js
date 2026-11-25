@@ -26,8 +26,11 @@ for (const f of fs.readdirSync(dir).filter(x => x.endsWith('.json')).sort()) {
   n++;
   if (sc.skip || sc.hold) { skipped++; const why = sc.skip || sc.hold; console.log('== ' + slug + ': ' + (sc.skip ? 'SKIP' : 'HOLD') + ' (' + why + ')'); if (String(why).length < 30) { console.log('  the reason is a full sentence'); bad++; } continue; }
   const af = path.join(wp, (sc.article || slug) + '.txt'); if (!fs.existsSync(af)) { console.log('== ' + slug + '\n  no article ' + af); bad++; continue; }
-  const art = norm(fs.readFileSync(af, 'utf8'));
-  const quote = (q, what) => { if (!q || String(q).split(/\s+/).length < 5) E.push(what + ': a quotation of at least five words is needed'); else if (!art.includes(norm(q))) E.push(what + ': the quotation is not in the article: "' + String(q).slice(0, 70) + '"'); };
+  // A plan drawn from an article in another language may name its English forms: "alias": {"Kose-yama": "小関山"} (the
+  // article's own words for a name the texts use). A quotation in Chinese or Japanese has no spaces: six characters.
+  const art0 = norm(fs.readFileSync(af, 'utf8')), al = Object.entries(sc.alias || {}).filter(([k, v]) => art0.includes(norm(v))).map(([k]) => norm(k)).join(' | ');
+  const art = art0 + ' | ' + al, cjk = q => /[぀-ヿ一-鿿]/.test(q) && String(q).replace(/\s/g, '').length >= 6;
+  const quote = (q, what) => { if (!q || (String(q).split(/\s+/).length < 5 && !cjk(q))) E.push(what + ': a quotation of at least five words is needed'); else if (!art.includes(norm(q))) E.push(what + ': the quotation is not in the article: "' + String(q).slice(0, 70) + '"'); };
   const inField = (p, m) => p[0] >= m && p[0] <= W - m && p[1] >= m && p[1] <= H - m;
   if (sc.slug !== slug) E.push('slug is not the file name');
   if (!sc.name) E.push('no name');

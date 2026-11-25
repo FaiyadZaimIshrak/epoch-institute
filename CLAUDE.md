@@ -3768,6 +3768,26 @@ then declutter. Answers: about 100 each; all sections; menus by subject plus hub
   as it was travelled, not one crossing). 1,302 profiles: 105 battles, 112 works, 44 ideologies, 53 religions. Nine link
   exclusions (excl1.tsv). Still held: Sekigahara (no plan), Talas, Kulikovo, Bannockburn, Changping, Fei River, Chacabuco
   and Stamford Bridge, and the journeys of Benjamin of Tudela, Ibn Jubayr and the Emin Pasha relief expedition.
+- **The held items tried once more (25 Nov 2026; scripts/kinds/held3/: JOB-BATTLE.md, JOB-JOURNEY.md, wp/, out/, the
+  editor's edit-*.js):** each with its first article joined to second ones, also from other language editions (the
+  Japanese, Spanish, Russian, Chinese and French Wikipedia; fetch-articles.js <list> <dir> <lang>), read by the writer
+  in that language and quoted in it.
+  - **Written:** Sekigahara's plan (the Western line as the Sekigahara gunki taisei of 1713 places it, the Eastern
+    contingents by the enemy each attacked: the Japanese article's summary of that one account, said in the note),
+    Chacabuco (the Spanish article places both divisions and the royalist battalions by wing) and Kulikovo (the Russian
+    article gives the regiments' places after the Tale of the Rout of Mamai; the Horde is one body), both with profiles;
+    the journeys of Ibn Jubayr (two legs; Mecca and Medina are named without an order and not drawn) and the Emin Pasha
+    relief expedition (Fort Bodo and Usambiro have no article to take a point from and are told in their neighbours'
+    texts). 1,304 profiles, 107 battles, 68 journeys.
+  - **Still held, and why a further article will not help:** Talas, Stamford Bridge and Bannockburn (the site or the
+    order of battle is unknown or disputed in every source), Changping (the English and Chinese articles put the armies
+    on opposite banks), Fei River (both armies are placed, but nothing says how either was drawn up: two blocks are no
+    plan), Benjamin of Tudela (a list of towns with no date and nothing that happened in them).
+  - **A new plan needs make-battle-maps.js BEFORE regen-profiles.ps1** (the builder runs the tool only after the
+    profiles were regenerated, so the three pages went out of the first chain without their fields), and a new
+    profile its poster (make-posters.js profiles --only=<words>) before the strict crawl.
+  - **check-battle-maps.js:** a plan may carry "alias": {English name: the article's own words for it} for names the
+    texts write in English and the article in another script; a Chinese or Japanese quotation needs six characters.
 - **Which Battle Is This?** (/games#battle, 24 Nov 2026; the 19th game): one battle a day for everyone (UTC; #1 = 27 Nov
   2026; before that day the page shows #1), shown as its own field (battle-map.js, data/battles/<slug>.json) with the
   names taken off; eight battles to choose among; five answers. Each wrong answer puts a kind of name back: the ground,
