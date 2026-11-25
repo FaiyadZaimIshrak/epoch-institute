@@ -1224,7 +1224,8 @@ var HOME_PICS = {
   "Battle of Adrianople": {"img":"/images/encyclopedia/valens.jpg","name":"Valens","slug":"valens","credit":"АНО \"Международный нумизматический клуб, CC BY-SA 4.0"},
   "Battle of the Somme": {"img":"/images/encyclopedia/battle-of-the-somme.jpg","name":"Battle of the Somme","slug":"battle-of-the-somme","credit":"Ivor Castle, Public domain"},
   "Battle of Kulikovo": {"img":"/images/encyclopedia/battle-of-kulikovo.jpg","name":"Battle of Kulikovo","slug":"battle-of-kulikovo","credit":"Adolphe Yvon, Public domain"},
-  "Battle of Chacabuco": {"img":"/images/encyclopedia/battle-of-chacabuco.jpg","name":"Battle of Chacabuco","slug":"battle-of-chacabuco","credit":"Pedro Subercaseaux, Public domain"}
+  "Battle of Chacabuco": {"img":"/images/encyclopedia/battle-of-chacabuco.jpg","name":"Battle of Chacabuco","slug":"battle-of-chacabuco","credit":"Pedro Subercaseaux, Public domain"},
+  "Battle of the Kalka River": {"img":"/images/encyclopedia/battle-of-the-kalka-river.jpg","name":"Battle of the Kalka River","slug":"battle-of-the-kalka-river","credit":"Sayf al-Vâhidî. Hérât. Afghanistan, Public domain"}
 };
 
 var HOME_ENTRIES = [

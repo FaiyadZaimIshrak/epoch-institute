@@ -3785,6 +3785,13 @@ then declutter. Answers: about 100 each; all sections; menus by subject plus hub
     order of battle is unknown or disputed in every source), Changping (the English and Chinese articles put the armies
     on opposite banks), Fei River (both armies are placed, but nothing says how either was drawn up: two blocks are no
     plan), Benjamin of Tudela (a list of towns with no date and nothing that happened in them).
+  - **The Battle of the Kalka River (25 Nov 2026; the user asked for it; scripts/kinds/held4/):** never a candidate
+    before. Its English article does not place the Mongols; the Russian one gives the order of crossing, the Kievan
+    camp on the west bank, the Mongol advance guard, main body and right wing. The plan and the profile follow the
+    Russian telling throughout and name the other in "How We Know" (edit-plan.js, edit-prof.js: the editor's changes;
+    Lutsk and Kursk stand in the centre, where the Hypatian Chronicle puts their princes). "Kalka" alone is the town in
+    Haryana and "Galicians" the people of Spain: both excluded on the profile. Subutai's banner has no portrait (a
+    later imagined woodcut). 1,305 profiles, 108 battles.
   - **A new plan needs make-battle-maps.js BEFORE regen-profiles.ps1** (the builder runs the tool only after the
     profiles were regenerated, so the three pages went out of the first chain without their fields), and a new
     profile its poster (make-posters.js profiles --only=<words>) before the strict crawl.

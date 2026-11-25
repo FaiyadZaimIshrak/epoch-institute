@@ -8667,5 +8667,12 @@ var SECTION_IMAGES = {
     background:{slug:"jose-de-san-martin",name:"José de San Martín",img:"/images/encyclopedia/jose-de-san-martin.jpg",artist:"The exact author is disputed. Some sources attribute it to Jean Baptiste Madou, others to the art teacher of San Martin's …",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Jos%C3%A9_de_San_Mart%C3%ADn_(retrato,_c.1828).jpg"},
     forces:{slug:"army-of-the-andes",name:"Army of the Andes",img:"/images/encyclopedia/army-of-the-andes.jpg",artist:"José Bouchet",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Ejercito_de_los_Andes.jpg"},
     legacy:{slug:"battle-of-maipu",name:"Battle of Maipú",img:"/images/encyclopedia/battle-of-maipu.jpg",artist:"Johann Moritz Rugendas",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:BatallaDeMaipu.jpg"}
+  },
+  "Battle of the Kalka River": {
+    background:{slug:"genghis-khan",name:"Genghis Khan",img:"/images/encyclopedia/genghis-khan.jpg",artist:"Unknown author",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:YuanEmperorAlbumGenghisPortrait.jpg"},
+    forces:{slug:"primary-chronicle",name:"Primary Chronicle",img:"/images/encyclopedia/primary-chronicle.jpg",artist:"from the Middle Ages, unknown",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:14_2_List_of_Radzivill_Chron.jpg"},
+    aftermath:{slug:"vasilko-konstantinovich",name:"Vasilko Konstantinovich",img:"/images/encyclopedia/vasilko-konstantinovich.jpg",artist:"Anonymous Russian manuscript illuminators, 1560-1570s …",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%BA%D0%BE_%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%B8%D0%BD%D0%BE%D0%B2%D0%B8%D1%87_%D0%B8%D0%B4%D1%91%D1%82_%D0%BA_%D0%9A%D0%B0%D0%BB%D0%BA%D0%B5,_1223_%D0%B3.png"},
+    sources:{slug:"novgorod-first-chronicle",name:"Novgorod First Chronicle",img:"/images/encyclopedia/novgorod-first-chronicle.jpg",artist:"Nikolay Omonov",licence:"CC BY-SA 4.0",source:"https://commons.wikimedia.org/wiki/File:Novgorod_First_Chronicle,_Synod_manuscript_01.jpg"},
+    legacy:{slug:"batu-khan",name:"Batu Khan",img:"/images/encyclopedia/batu-khan.jpg",artist:"Rashid al-Din Hamadani",licence:"Public domain",source:"https://commons.wikimedia.org/wiki/File:Batu_Khan_on_the_Throne_by_Rashid_al-Din_(cropped).jpg"}
   }
 };

@@ -1,0 +1,135 @@
+{
+ "slug": "battle-of-the-kalka-river",
+ "name": "Battle of the Kalka River",
+ "article": "held4/wp/battle-of-the-kalka-river",
+ "field": {"north": null},
+ "alias": {"Volhynians": "волынской дружиной", "Volhynian": "волынский отряд", "Galicians": "галичан", "Chernigovians": "черниговцы", "Lutsk": "Луцкий", "Oleg": "Олег Курский", "Tsugir": "Тсугира", "Teshi": "Теши"},
+ "note": "This plan follows the Russian account throughout. The English account differs: it has the Mongols halt and form up on the Kalka, a gap opened in the Rus' line for the fleeing Cumans, smoke bombs, and wings that closed round the Rus', and it puts the Kievan camp on a hill by the Dnieper. None of that is drawn. The accounts do not say which way the river ran or where the Mongol main body stood, so the river is drawn north to south, the Rus' approach from the west and the Mongols east of it, as the crossing implies. Only the Mongol vanguard, main body and right wing are drawn; the account does not place their left. The Volhynian, Galician, Chernigov, Lutsk and Kursk hosts are shown as foot or horse by judgement of the drawing, since the account does not say how they fought. The Lutsk and Kursk hosts are drawn in the centre, where the account puts their princes. The Smolensk host and the flight to the Dnieper are left off. The account says the Kievan host built its camp on the west bank but not where, so the camp is drawn on its side of the river.",
+ "terrain": [
+  {
+   "k": "river",
+   "name": "Kalka",
+   "at": [[50, 4], [48, 20], [52, 32], [49, 46], [50, 58]],
+   "lab": [57, 6],
+   "quote": "Утром 31 мая отряды союзников начали переправляться через реку."
+  },
+  {
+   "k": "fort",
+   "name": "Kievan camp", "unnamed": true,
+   "at": [12, 31],
+   "lab": [12, 38],
+   "quote": "Киевская рать осталась на западном берегу реки и начала строительство укреплённого лагеря."
+  }
+ ],
+ "sides": [
+  {"id": "r", "name": "Rus' princes and Cumans"},
+  {"id": "m", "name": "Mongols"}
+ ],
+ "units": [
+  {"id": "cum", "side": "r", "k": "horse-archers", "name": "Cuman horsemen", "short": "Cumans", "w": 8, "quote": "Первыми её форсировали отряды половецкой конницы вместе с волынской дружиной."},
+  {"id": "vol", "side": "r", "k": "infantry", "name": "Volhynian host", "short": "Volhynia", "w": 8, "quote": "Первыми её форсировали отряды половецкой конницы вместе с волынской дружиной."},
+  {"id": "gal", "side": "r", "k": "infantry", "name": "Galician host", "short": "Galicia", "w": 9, "quote": "Затем начали переправу галичане и черниговцы."},
+  {"id": "che", "side": "r", "k": "infantry", "name": "Chernigov host", "short": "Chernigov", "w": 9, "quote": "Затем начали переправу галичане и черниговцы."},
+  {"id": "kie", "side": "r", "k": "camp", "name": "Kievan host and camp", "short": "Kiev", "w": 8, "quote": "Киевская рать осталась на западном берегу реки и начала строительство укреплённого лагеря."},
+  {"id": "luts", "side": "r", "k": "infantry", "name": "Lutsk host", "short": "Lutsk", "w": 5, "quote": "событиях в центре сражения, где действовал Даниил, его двоюродный дядя, князь луцкий Мстислав Ярославич Немой, и Олег Курский"},
+  {"id": "kur", "side": "r", "k": "infantry", "name": "Kursk host", "short": "Kursk", "w": 5, "quote": "Помочь им попытались сначала Мстислав Луцкий, а потом и Олег Курский"},
+  {"id": "mvan", "side": "m", "k": "horse-archers", "name": "Mongol advance guard", "short": "Vanguard", "w": 8, "quote": "Увидев передовые отряды монгольского войска"},
+  {"id": "mmain", "side": "m", "k": "cavalry", "name": "Mongol main body", "short": "Main body", "w": 12, "quote": "он отдал приказ основной части своего войска перейти в наступление", "leader": "Subutai", "leaderEntry": "subutai"},
+  {"id": "mright", "side": "m", "k": "cavalry", "name": "Mongol right wing", "short": "Right", "w": 9, "quote": "Быстрее других добилось успеха монгольское правое крыло, крыло атаки."},
+  {"id": "msiege", "side": "m", "k": "cavalry", "name": "Besiegers of the camp", "short": "Besiegers", "w": 6, "quote": "Субэдэй организовал осаду киевского лагеря силами ханов Тсугира и Теши"}
+ ],
+ "phases": [
+  {
+   "title": "The allies begin to cross the river",
+   "when": "Morning of 31 May 1223",
+   "text": "The Cuman horse and the Volhynians crossed first, then the Galicians and Chernigovians began to cross. The Kievan host stayed on the west bank and started to build a fortified camp. The Mongol advance guard, main body and right wing waited beyond.",
+   "quote": "Утром 31 мая отряды союзников начали переправляться через реку. Первыми её форсировали отряды половецкой конницы вместе с волынской дружиной.",
+   "at": {
+    "cum": [60, 24, 90],
+    "vol": [60, 40, 90],
+    "gal": [41, 38, 90],
+    "che": [41, 22, 90],
+    "kie": [14, 31, 90],
+    "mvan": [78, 32, 270],
+    "mmain": [90, 38, 270],
+    "mright": [86, 18, 270]
+   }
+  },
+  {
+   "title": "Cumans and Volhynians meet the advance guard",
+   "text": "The Cumans and the Volhynian host saw the Mongol advance guard and engaged it. The fighting went well for the Rus' at first.",
+   "quote": "Увидев передовые отряды монгольского войска, половцы и волынский отряд вступили в бой. Вначале сражение развивалось удачно для русских.",
+   "at": {
+    "cum": [68, 24, 90],
+    "vol": [68, 40, 90]
+   },
+   "hits": [["cum", "mvan"], ["vol", "mvan"]]
+  },
+  {
+   "title": "The advance guard falls back and the Rus' lose their order",
+   "text": "The Mongol advance guard began to retreat and the Rus' chased it. They lost their formation and ran into the main force of the Mongols.",
+   "quote": "Монгольский авангард начал отступление, русские бросились в погоню, потеряли строй и столкнулись с главными силами монголов.",
+   "at": {
+    "mvan": [84, 31, 270],
+    "cum": [74, 24, 90],
+    "vol": [74, 42, 90]
+   },
+   "how": {"mvan": "retreat"},
+   "hits": [["cum", "mmain"], ["vol", "mmain"]]
+  },
+  {
+   "title": "Subutai sends in the main body and the Cumans break",
+   "text": "Subutai saw that the Rus' princes following the Cumans had fallen well behind and ordered the main body to attack. The Cumans could not withstand the pressure and ran.",
+   "quote": "Когда Субэдэй увидел, что двигавшиеся за половцами силы русских князей значительно отстали, он отдал приказ основной части своего войска перейти в наступление.",
+   "at": {
+    "mmain": [68, 36, 270],
+    "cum": [58, 22, 270]
+   },
+   "how": {"cum": "rout"},
+   "state": {"cum": "routed"},
+   "hits": [["mmain", "cum"], ["mmain", "vol"]]
+  },
+  {
+   "title": "The Mongol right wing drives the Cumans into Chernigov",
+   "text": "The Mongol right wing was quickest to succeed. The Cumans ran to the crossing and crushed and disordered the Chernigov regiments, which were already ready to march.",
+   "quote": "Половцы побежали к переправе, смяв и расстроив полки Мстислава Черниговского, уже готовые к выступлению.",
+   "at": {
+    "mright": [62, 16, 270],
+    "che": [44, 22, 90]
+   },
+   "hits": [["mright", "che"]]
+  },
+  {
+   "title": "Mongols attack the Galicians and the Cumans on their flanks",
+   "text": "With the Cumans and the Chernigov regiments in disorder at the crossing, the Mongols then attacked the Galicians and those Cuman detachments that still stood on their flanks.",
+   "quote": "Затем монголы атаковали галичан и те отряды половцев, что ещё оставались на их флангах.",
+   "at": {
+    "mright": [64, 34, 270],
+    "gal": [44, 38, 90]
+   },
+   "hits": [["mright", "gal"], ["mmain", "vol", 0.2]]
+  },
+  {
+   "title": "Lutsk and Kursk try to help and are beaten",
+   "text": "Mstislav of Lutsk tried to help first and then Oleg of Kursk, but their hosts were crushed and beaten by the Mongols. Mstislav of Kiev watched the defeat from his camp and made no move to help.",
+   "quote": "Помочь им попытались сначала Мстислав Луцкий, а потом и Олег Курский, но и их дружины были смяты и разбиты монголами.",
+   "at": {
+    "luts": [56, 37, 90],
+    "kur": [56, 31, 90]
+   },
+   "state": {"luts": "routed", "kur": "routed"},
+   "how": {"luts": "rout", "kur": "rout"},
+   "hits": [["mmain", "luts"], ["mright", "kur"]]
+  },
+  {
+   "title": "Subutai besieges the Kievan camp and pursues the rest",
+   "text": "Having beaten the main Rus' and Cuman forces, Subutai set Tsugir and Teshi to besiege the Kievan camp. He went after the survivors with the main part of his army.",
+   "quote": "Разбив основные силы русских и половцев, Субэдэй организовал осаду киевского лагеря силами ханов Тсугира и Теши, а сам с основной частью бросился преследовать уцелевших русских",
+   "at": {
+    "msiege": [26, 31, 270],
+    "mmain": [40, 31, 90]
+   },
+   "hits": [["msiege", "kie"]]
+  }
+ ]
+}

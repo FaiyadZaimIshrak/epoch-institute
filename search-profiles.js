@@ -1304,4 +1304,5 @@ const SEARCH_PROFILES=[
 ["Battle of the Somme","/battle/battle-of-the-somme","Battle"],
 ["Battle of Kulikovo","/battle/battle-of-kulikovo","Battle"],
 ["Battle of Chacabuco","/battle/battle-of-chacabuco","Battle"],
+["Battle of the Kalka River","/battle/battle-of-the-kalka-river","Battle"],
 ];

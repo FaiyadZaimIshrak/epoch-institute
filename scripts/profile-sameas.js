@@ -138,6 +138,7 @@ var PROFILE_SAMEAS = {
   "Battle of the Catalaunian Plains": ["https://en.wikipedia.org/wiki/Battle_of_the_Catalaunian_Plains", "https://www.wikidata.org/wiki/Q139808"],
   "Battle of the Granicus": ["https://en.wikipedia.org/wiki/Battle_of_the_Granicus", "https://www.wikidata.org/wiki/Q192938"],
   "Battle of the Hydaspes": ["https://en.wikipedia.org/wiki/Battle_of_the_Hydaspes", "https://www.wikidata.org/wiki/Q213074"],
+  "Battle of the Kalka River": ["https://en.wikipedia.org/wiki/Battle_of_the_Kalka_River", "https://www.wikidata.org/wiki/Q570204"],
   "Battle of the Little Bighorn": ["https://en.wikipedia.org/wiki/Battle_of_the_Little_Bighorn", "https://www.wikidata.org/wiki/Q205422"],
   "Battle of the Nile": ["https://en.wikipedia.org/wiki/Battle_of_the_Nile", "https://www.wikidata.org/wiki/Q243979"],
   "Battle of the Plains of Abraham": ["https://en.wikipedia.org/wiki/Battle_of_the_Plains_of_Abraham", "https://www.wikidata.org/wiki/Q311726"],
