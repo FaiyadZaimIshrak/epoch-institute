@@ -3887,7 +3887,13 @@ then declutter. Answers: about 100 each; all sections; menus by subject plus hub
     scripts/tests/pages-recover.js. The generated pages still have none (the service worker asks again for them).
   - **Kids corner:** "Stories of the peoples" also lists the 30 stories of the faiths and the 31 of the movements,
     each behind a fold (details.kc-tales-more); the build:kids-tales markers now hold the lists themselves.
-- **Proposed and not built** (the plan's order): posters for essays and months; references and section pictures for the
+- **Posters for essays and months** (make-posters.js kinds `essays` and `months`; essay-<slug>.jpg, month-<name>.jpg):
+  an essay's own picture and the home pictures of the profiles it lists (none of a hidden profile); a month's poster
+  takes the first pictures of its built page's events: no maps, no picture on more than two months, none of MONSKIP (a
+  present-day leader, Stalin). All 26 looked at on contact sheets. The month pages name theirs only in a full build;
+  both kinds are in the image sitemap. Re-draw `essays` after an essay is added, `months` after a full build that
+  changed the month pages.
+- **Proposed and not built** (the plan's order): references and section pictures for the
   profiles without; pictures for the 495 well-known entries; longer-entry waves chosen from a new Search Console export
   (positions 4-12 first); hubs for treaties and capitals if the export shows them; an .ics reminder for the daily
   games; passport stamps per subject hub. The owner's: a new export, sending the newsletter, the feedback files.

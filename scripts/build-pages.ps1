@@ -1932,7 +1932,8 @@ for ($monI = 1; $monI -le 12; $monI++) {
   [void]$sb.Append('<section class="day-cal-wrap" aria-label="The days of ' + $monName + '">' + (MonthCal $monI '') + '<p><a class="enc-random-link" href="/today-in-history/">All days of the year &rarr;</a></p></section>' + "`n</div>`n</main>`n")
   $monTitle = "$monName in History: Events, Births, Deaths and Festivals — The Epoch Institute"
   $monDesc = [EpochBuild.W]::Summary("$monName in history: " + ((@($monLead | Sort-Object @{ e = { $_.k } } | ForEach-Object { [string]$_.ev['title'] + ' (' + (DayLabel $_.k) + ' ' + (MonYear ([double]$_.ev['year'])) + ')' })) -join '; ') + '; and the people, festivals and songs of the month.', 155)
-  Emit $monPath (Page @{ title = $monTitle; desc = $monDesc; path = $monPath; type = 'website'; ld = ($monCrumb[1] + ',{"@type":"CollectionPage","name":' + (Js $monTitle) + ',"description":' + (Js $monDesc) + ',"url":' + (Js ($SITE + $monPath)) + '}'); nav = 'today'; body = $sb.ToString() })
+  $monOg = Poster ('month-' + $monName.ToLowerInvariant())
+  Emit $monPath (Page @{ title = $monTitle; desc = $monDesc; path = $monPath; type = 'website'; img = $(if ($monOg) { $monOg } else { Poster 'default' }); imgW = 1200; imgH = 630; ld = ($monCrumb[1] + ',{"@type":"CollectionPage","name":' + (Js $monTitle) + ',"description":' + (Js $monDesc) + ',"url":' + (Js ($SITE + $monPath)) + '}'); nav = 'today'; body = $sb.ToString() })
 }
 if (-not $SkipEntries) { Say 'month pages: 12' }
 
@@ -5230,7 +5231,7 @@ foreach ($sg in $SONGS) { $og = Poster ('song-' + [string]$sg['slug']); if ($og)
 foreach ($p in @($SMNEW.Keys)) {
   $pk = $null
   if ($p -match '^/countries/([a-z0-9-]+)$') { $pk = 'country-' + $Matches[1] } elseif ($p -match '^/centuries/([a-z0-9-]+)$') { $pk = 'century-' + $Matches[1] }
-  elseif ($p -match '^/today-in-history/([a-z]+-\d+)$') { $pk = 'day-' + $Matches[1] } elseif ($p -match '^/paths/([a-z0-9-]+)$') { $pk = 'path-' + $Matches[1] }
+  elseif ($p -match '^/today-in-history/([a-z]+-\d+)$') { $pk = 'day-' + $Matches[1] } elseif ($p -match '^/today-in-history/([a-z]+)$') { $pk = 'month-' + $Matches[1] } elseif ($p -match '^/essays/([a-z0-9-]+)$') { $pk = 'essay-' + $Matches[1] } elseif ($p -match '^/paths/([a-z0-9-]+)$') { $pk = 'path-' + $Matches[1] }
   elseif ($p -match '^/speeches/([a-z0-9-]+)$') { $pk = 'speech-' + $Matches[1] }
   if ($pk -and -not $IMGOF.ContainsKey($p)) { $og = Poster $pk; if ($og) { $IMGOF[$p] = $og } }
 }

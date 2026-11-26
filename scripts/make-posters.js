@@ -75,7 +75,7 @@ const yr = y => y < 0 ? (-y) + ' BCE' : y + ' CE';
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 // ── jobs ─────────────────────────────────────────────────────────────────────────────────────────────────────────
-const JOBS = { profiles: [], days: [], countries: [], centuries: [], speeches: [], songs: [], paths: [], societies: [], pages: [] };
+const JOBS = { profiles: [], days: [], countries: [], centuries: [], speeches: [], songs: [], paths: [], societies: [], essays: [], months: [], pages: [] };
 
 // profiles kept out of the home page's featured rotation (scripts/home-pictures.tsv "hide") get no emblem on the poster
 const HIDDEN = {}; read('scripts/home-pictures.tsv').split(/\r?\n/).forEach(l => { const c = l.split('\t'); if (c[2] && /\bhide\b/.test(c[2])) HIDDEN[c[0]] = 1; });
@@ -200,6 +200,31 @@ SOCS.forEach(d => {
   const pics = all.slice(0, all.length >= 6 ? 6 : all.length >= 4 ? 4 : all.length >= 2 ? 2 : 1).map(src => ({ src, top: 25 }));
   JOBS.societies.push({ kind: 'mosaic', file: 'society-' + d.slug + '.jpg', kicker: 'Social ladder · ' + d.period.replace(/\s*\(.*\)\s*$/, ''), title: 'Social Hierarchy of ' + d.of, tease: (d.title || '').split(/:\s*/)[1] || '',
     pics, chips: d.tiers.slice(0, 6).map(socChip), url: 'the-epoch-institute.org/societies/' + d.slug, credit: 'Pictures: Wikimedia Commons, credited on the page' });
+});
+// the essays of the Research Series (essay-<slug>.jpg, 26 Nov 2026): the essay's own picture, then the home pictures of
+// the profiles it lists, an even number so the mosaic has no hole; title and subtitle from the source's header
+const evenPics = a => a.slice(0, a.length >= 6 ? 6 : a.length >= 4 ? 4 : a.length >= 2 ? 2 : 1);
+const PROFBYSLUG = {}; EMPIRES.forEach(e => { PROFBYSLUG[ctx.toSlug(e.name)] = e; });
+fs.readdirSync(path.join(ROOT, 'scripts', 'essays')).filter(f => /^\d\d-[a-z0-9-]+\.html$/.test(f)).sort().forEach(f => {
+  const hd = {}; (/^<!--([\s\S]*?)-->/.exec(read('scripts/essays/' + f)) || ['', ''])[1].split(/\r?\n/).forEach(l => { const k = /^([a-z]+):\s*(.*)$/.exec(l.trim()); if (k) hd[k[1]] = k[2]; });
+  const slug = f.slice(3, -5), no = +f.slice(0, 2), seen = {}, all = [];
+  const push = s => { const p = s && picOf(s, 25); if (p && !seen[p.src]) { seen[p.src] = 1; all.push({ src: p.src, top: 25 }); } };
+  push(String(hd.picture || '').split('|')[0]);
+  String(hd.profiles || '').split(',').map(s => s.trim()).filter(Boolean).forEach(s => { const e = PROFBYSLUG[s], hp = e && !HIDDEN[e.name] && HOME_PICS[e.name]; if (hp && hp.slug) push(hp.slug); });
+  JOBS.essays.push({ kind: 'mosaic', file: 'essay-' + slug + '.jpg', kicker: 'Research Series · Essay ' + no, title: hd.title, tease: hd.subtitle || '', pics: evenPics(all),
+    url: 'the-epoch-institute.org/essays/' + slug, credit: 'Pictures: Wikimedia Commons, credited on the site' });
+});
+// the months in history (month-<name>.jpg): the first pictures of the built page's best-known events, full size; no maps,
+// no picture on more than two months' posters (Napoleon and Washington led most of them), and not those of MONSKIP
+// (looked at on contact sheets: a present-day leader, Stalin)
+const MONSKIP = { 'barack-obama': 1, 'joseph-stalin': 1 }, MONUSED = {};
+MONTHS.forEach(mo => {
+  const slug = mo.toLowerCase(); if (!exists('/today-in-history/' + slug)) return;
+  const html = read('today-in-history/' + slug), seen = {}, all = [];
+  (html.match(/src="\/images\/encyclopedia\/thumbs\/[a-z0-9-]+\.jpg"/g) || []).forEach(s => { const sl = s.slice(s.lastIndexOf('/') + 1, -5), p = picOf(sl, 25), cs = ENC[sl] && ENC[sl].credit && ENC[sl].credit.source || '';
+    if (p && !seen[p.src] && !MONSKIP[sl] && !isChart(cs) && (MONUSED[sl] || 0) < 2 && all.length < 6) { seen[p.src] = 1; MONUSED[sl] = (MONUSED[sl] || 0) + 1; all.push({ src: p.src, top: 25 }); } });
+  JOBS.months.push({ kind: 'mosaic', file: 'month-' + slug + '.jpg', kicker: 'This month in history', title: mo + ' in History', tease: 'The best-known events of the month, its festivals and songs, and the people born and died in it, day by day.',
+    pics: evenPics(all), chips: ['Events', 'Festivals', 'Born and died', 'Calendar'], url: 'the-epoch-institute.org/today-in-history/' + slug, credit: 'Pictures: Wikimedia Commons, credited on the page' });
 });
 // the main sections
 const fmt = n => Number(n).toLocaleString('en-GB');
