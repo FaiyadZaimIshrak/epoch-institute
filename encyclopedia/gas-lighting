@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Gas lighting (1792): Production of artificial light</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Gas lighting is the production of artificial light by burning a fuel gas, principally coal gas in the period when it was widespread.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/encyclopedia/gas-lighting">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gas lighting (1792): Production of artificial light">
+<meta property="og:description" content="Gas lighting is the production of artificial light by burning a fuel gas, principally coal gas in the period when it was widespread.">
+<meta property="og:url" content="https://the-epoch-institute.org/encyclopedia/gas-lighting">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/encyclopedia/gas-lighting.jpg">
+<meta property="og:image:width" content="330">
+<meta property="og:image:height" content="440">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/encyclopedia/gas-lighting.jpg">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"G","item":"https://the-epoch-institute.org/encyclopedia/browse/g-3"},{"@type":"ListItem","position":4,"name":"Gas lighting"}]},{"@type":"Article","headline":"Gas lighting","description":"Gas lighting is the production of artificial light by burning a fuel gas, principally coal gas in the period when it was widespread.","url":"https://the-epoch-institute.org/encyclopedia/gas-lighting","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/gas-lighting","inLanguage":"en-GB","dateModified":"2026-11-26","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"CreativeWork","name":"Gas lighting"},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/encyclopedia/gas-lighting.jpg","contentUrl":"https://the-epoch-institute.org/images/encyclopedia/gas-lighting.jpg","width":330,"height":440,"license":"https://creativecommons.org/licenses/by-sa/4.0/","acquireLicensePage":"https://commons.wikimedia.org/wiki/File:Wrocław,_kościół_pw._śś._Piotra_i_Pawła_DSCF0144.jpg","creditText":"Aw58","creator":{"@type":"Person","name":"Aw58"},"copyrightNotice":"Aw58"}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body data-nav="encyclopedia">
+
+<main id="main" class="enc-page ref-page">
+<div class="enc-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/encyclopedia/">Encyclopedia</a></li><li><a href="/encyclopedia/browse/g-3">G</a></li><li aria-current="page">Gas lighting</li></ol></nav>
+<article class="enc-article">
+<header><p class="enc-kicker"><a href="/inventions?focus=gas-lighting">Inventions &amp; Discoveries</a> · Energy and power</p><h1 class="enc-title">Gas lighting</h1><p class="enc-meta"><span class="dates"><a href="/years/1792">1792</a></span> · <a href="/centuries/18th-century">18th century</a></p></header>
+<div class="enc-body"><p class="enc-desc">Gas lighting is the production of artificial light by burning a fuel gas, principally <a class="enc-link" href="/encyclopedia/coal">coal</a> gas in the period when it was widespread. William Murdoch first lit his own house in Redruth, <a class="enc-link" href="/encyclopedia/cornwall">Cornwall</a>, in 1792, lit the main building of the Soho Foundry in 1798 and the outside in a public display in 1802. Friedrich Winzer patented coal-gas lighting in 1804, and gas street lighting reached Salford in 1806 and <a class="enc-link" href="/encyclopedia/paris">Paris</a> in 1820. It spread through European and North American cities, and electric lighting displaced it from the late 19th century.</p><figure class="enc-fig"><img src="/images/encyclopedia/gas-lighting.jpg" alt="Gas lighting" width="330" height="440" fetchpriority="high"><figcaption>Image: Aw58 · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Wrocław,_kościół_pw._śś._Piotra_i_Pawła_DSCF0144.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure></div>
+<section class="inv-entry"><h2 class="enc-section-title">On the inventions tree</h2><dl class="inv-entry-facts"><div><dt>First known</dt><dd>1792</dd></div><div><dt>Where</dt><dd>Redruth, Cornwall, England</dd></div><div><dt>Credited to</dt><dd>William Murdoch</dd></div></dl><p class="inv-entry-note"><span class="inv-k">Also arose independently</span>Paris, France (1801)</p><p class="inv-entry-note"><span class="inv-k">Note</span>Chinese records dating back 1,700 years indicate natural gas carried by bamboo pipes for lighting and heating in homes.</p><div class="inv-entry-rel"><span class="inv-k">Built on</span><a class="inv-chip" href="/encyclopedia/coal">Coal<span>25,000–23,000 BCE</span></a></div><p class="enc-article-foot"><a class="enc-random-link" href="/inventions?focus=gas-lighting">See it on the inventions tree &rarr;</a></p></section>
+<section class="meanwhile" data-y="1792" aria-label="Meanwhile in the world"></section>
+<section><h2 class="enc-section-title">See also</h2><ul class="enc-seealso"><li><a href="/encyclopedia/paris"><img src="/images/encyclopedia/thumbs/paris.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Paris</span><span class="tp">Place</span></span></a></li><li><a href="/encyclopedia/coal"><img src="/images/encyclopedia/thumbs/coal.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Coal</span><span class="tp">Term</span></span></a></li><li><a href="/encyclopedia/cornwall"><img src="/images/encyclopedia/thumbs/cornwall.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Cornwall</span><span class="tp">Place</span></span></a></li><li><a href="/encyclopedia/irineu-evangelista-de-sousa-viscount-of-maua"><img src="/images/encyclopedia/thumbs/irineu-evangelista-de-sousa-viscount-of-maua.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Irineu Evangelista de Sousa, Viscount of Mauá</span><span class="tp">Person</span></span></a></li></ul></section>
+<nav class="ref-prevnext" aria-label="Neighbouring entries"><a class="prev" rel="prev" href="/encyclopedia/gardar-greenland"><span class="lbl">&larr; Previous entry</span><span class="nm">Garðar, Greenland</span></a><a class="next" rel="next" href="/encyclopedia/gascony"><span class="lbl">Next entry &rarr;</span><span class="nm">Gascony</span></a></nav>
+<details class="ref-cite"><summary>Cite this entry</summary><dl><dt>APA</dt><dd><span>The Epoch Institute. (2026). Gas lighting. In <i>The Epoch Institute Encyclopedia</i>. https://the-epoch-institute.org/encyclopedia/gas-lighting</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>MLA</dt><dd><span>&#8220;Gas lighting.&#8221; <i>The Epoch Institute Encyclopedia</i>, The Epoch Institute, 2026, https://the-epoch-institute.org/encyclopedia/gas-lighting. Accessed <span data-today></span>.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Chicago</dt><dd><span>The Epoch Institute. &#8220;Gas lighting.&#8221; <i>The Epoch Institute Encyclopedia</i>. 2026. https://the-epoch-institute.org/encyclopedia/gas-lighting.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Harvard</dt><dd><span>The Epoch Institute (2026) &#8216;Gas lighting&#8217;, <i>The Epoch Institute Encyclopedia</i>. Available at: https://the-epoch-institute.org/encyclopedia/gas-lighting (Accessed: <span data-today></span>).</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd></dl></details>
+<p class="ref-updated"><span>Last reviewed October 2026</span><a class="enc-random-link" href="/encyclopedia/" data-random="entry">Random entry &#8635;</a></p>
+</article>
+</div>
+</main>
+
+<script src="/shared-nav.js" defer></script>
+<script src="/enc-page.js" defer></script>
+</body>
+</html>

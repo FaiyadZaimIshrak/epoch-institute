@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>3D printing (1980) — Encyclopedia — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="3D printing, or additive manufacturing, builds a three-dimensional object from a digital model by depositing, joining or solidifying material layer by…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/encyclopedia/3d-printing">
+<meta property="og:type" content="article">
+<meta property="og:title" content="3D printing (1980) — Encyclopedia — The Epoch Institute">
+<meta property="og:description" content="3D printing, or additive manufacturing, builds a three-dimensional object from a digital model by depositing, joining or solidifying material layer by…">
+<meta property="og:url" content="https://the-epoch-institute.org/encyclopedia/3d-printing">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"0–9","item":"https://the-epoch-institute.org/encyclopedia/browse/0-9"},{"@type":"ListItem","position":4,"name":"3D printing"}]},{"@type":"Article","headline":"3D printing","description":"3D printing, or additive manufacturing, builds a three-dimensional object from a digital model by depositing, joining or solidifying material layer by…","url":"https://the-epoch-institute.org/encyclopedia/3d-printing","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/3d-printing","inLanguage":"en-GB","dateModified":"2026-11-26","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"CreativeWork","name":"3D printing","alternateName":["Additive manufacturing"]}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body data-nav="encyclopedia">
+
+<main id="main" class="enc-page ref-page">
+<div class="enc-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/encyclopedia/">Encyclopedia</a></li><li><a href="/encyclopedia/browse/0-9">0–9</a></li><li aria-current="page">3D printing</li></ol></nav>
+<article class="enc-article">
+<header><p class="enc-kicker"><a href="/inventions?focus=3d-printing">Inventions &amp; Discoveries</a> · Tools and materials</p><h1 class="enc-title">3D printing</h1><p class="enc-meta"><span class="dates"><a href="/years/1980">1980</a></span> · <a href="/centuries/20th-century">20th century</a> · Also known as Additive manufacturing</p></header>
+<div class="enc-body"><p class="enc-desc">3D <a class="enc-link" href="/encyclopedia/printing-press">printing</a>, or additive manufacturing, builds a three-dimensional object from a digital model by depositing, joining or solidifying material layer by layer under computer control. Processes were first developed in the 1980s as rapid prototyping. In April 1980 Hideo Kodama of the <a class="enc-link" href="/encyclopedia/nagoya">Nagoya</a> Municipal Industrial Research Institute invented two methods of making plastic models with photo-hardening polymer; his patent was published on 10 November 1981 but the project ended. In 1984 Chuck Hull filed a patent for stereolithography, and 3D Systems released the SLA-1. S. Scott Crump developed fused deposition modelling in 1988.</p></div>
+<section class="inv-entry"><h2 class="enc-section-title">On the inventions tree</h2><dl class="inv-entry-facts"><div><dt>First known</dt><dd>1980</dd></div><div><dt>Where</dt><dd>Nagoya, Japan</dd></div><div><dt>Credited to</dt><dd>Hideo Kodama · Chuck Hull · S. Scott Crump</dd></div></dl><p class="inv-entry-note"><span class="inv-k">Also arose independently</span>United States (1984); France (1984)</p><p class="inv-entry-note"><span class="inv-k">Note</span>Murray Leinster described the idea in a story of 1945. Johannes F Gottwald received a US patent in 1971 for a 'Liquid Metal Recorder' that appears to be the first patent describing 3D printing with rapid prototyping. Bill Masters's filing of 2 July 1984 is on record as the first 3D printing patent, and French inventors filed for stereolithography on 16 July 1984.</p><p class="enc-article-foot"><a class="enc-random-link" href="/inventions?focus=3d-printing">See it on the inventions tree &rarr;</a></p></section>
+<section class="meanwhile" data-y="1980" aria-label="Meanwhile in the world"></section>
+<section><h2 class="enc-section-title">See also</h2><ul class="enc-seealso"><li><a href="/encyclopedia/printing-press"><img src="/images/encyclopedia/thumbs/printing-press.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Printing press</span><span class="tp">Term</span></span></a></li><li><a href="/encyclopedia/nagoya"><img src="/images/encyclopedia/thumbs/nagoya.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Nagoya</span><span class="tp">Place</span></span></a></li></ul></section>
+<nav class="ref-prevnext" aria-label="Neighbouring entries"><a class="prev" rel="prev" href="/encyclopedia/2nd-king-edward-viis-own-gurkha-rifles"><span class="lbl">&larr; Previous entry</span><span class="nm">2nd King Edward VII's Own Gurkha Rifles</span></a><a class="next" rel="next" href="/encyclopedia/4-2-kiloyear-event"><span class="lbl">Next entry &rarr;</span><span class="nm">4.2-kiloyear event</span></a></nav>
+<details class="ref-cite"><summary>Cite this entry</summary><dl><dt>APA</dt><dd><span>The Epoch Institute. (2026). 3D printing. In <i>The Epoch Institute Encyclopedia</i>. https://the-epoch-institute.org/encyclopedia/3d-printing</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>MLA</dt><dd><span>&#8220;3D printing.&#8221; <i>The Epoch Institute Encyclopedia</i>, The Epoch Institute, 2026, https://the-epoch-institute.org/encyclopedia/3d-printing. Accessed <span data-today></span>.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Chicago</dt><dd><span>The Epoch Institute. &#8220;3D printing.&#8221; <i>The Epoch Institute Encyclopedia</i>. 2026. https://the-epoch-institute.org/encyclopedia/3d-printing.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Harvard</dt><dd><span>The Epoch Institute (2026) &#8216;3D printing&#8217;, <i>The Epoch Institute Encyclopedia</i>. Available at: https://the-epoch-institute.org/encyclopedia/3d-printing (Accessed: <span data-today></span>).</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd></dl></details>
+<p class="ref-updated"><span>Last reviewed October 2026</span><a class="enc-random-link" href="/encyclopedia/" data-random="entry">Random entry &#8635;</a></p>
+</article>
+</div>
+</main>
+
+<script src="/shared-nav.js" defer></script>
+<script src="/enc-page.js" defer></script>
+</body>
+</html>

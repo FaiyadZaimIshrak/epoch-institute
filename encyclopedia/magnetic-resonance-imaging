@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Magnetic resonance imaging (1973): Medical imaging technique</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="Magnetic resonance imaging (MRI) is a medical imaging technique that uses strong magnetic fields, field gradients and radio waves to form pictures of the…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/encyclopedia/magnetic-resonance-imaging">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Magnetic resonance imaging (1973): Medical imaging technique">
+<meta property="og:description" content="Magnetic resonance imaging (MRI) is a medical imaging technique that uses strong magnetic fields, field gradients and radio waves to form pictures of the…">
+<meta property="og:url" content="https://the-epoch-institute.org/encyclopedia/magnetic-resonance-imaging">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/og/default.jpg">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"M","item":"https://the-epoch-institute.org/encyclopedia/browse/m-2"},{"@type":"ListItem","position":4,"name":"Magnetic resonance imaging"}]},{"@type":"Article","headline":"Magnetic resonance imaging","description":"Magnetic resonance imaging (MRI) is a medical imaging technique that uses strong magnetic fields, field gradients and radio waves to form pictures of the…","url":"https://the-epoch-institute.org/encyclopedia/magnetic-resonance-imaging","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/magnetic-resonance-imaging","inLanguage":"en-GB","dateModified":"2026-11-26","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"CreativeWork","name":"Magnetic resonance imaging","alternateName":["MRI","NMRI","Nuclear magnetic resonance imaging"]}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body data-nav="encyclopedia">
+
+<main id="main" class="enc-page ref-page">
+<div class="enc-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/encyclopedia/">Encyclopedia</a></li><li><a href="/encyclopedia/browse/m-2">M</a></li><li aria-current="page">Magnetic resonance imaging</li></ol></nav>
+<article class="enc-article">
+<header><p class="enc-kicker"><a href="/inventions?focus=magnetic-resonance-imaging">Inventions &amp; Discoveries</a> · Medicine and health</p><h1 class="enc-title">Magnetic resonance imaging</h1><p class="enc-meta"><span class="dates"><a href="/years/1973">1973</a></span> · <a href="/centuries/20th-century">20th century</a> · Also known as MRI, NMRI, Nuclear magnetic resonance imaging</p></header>
+<div class="enc-body"><p class="enc-desc">Magnetic resonance imaging (MRI) is a medical imaging technique that uses strong magnetic fields, field gradients and radio waves to form pictures of the organs, without <a class="enc-link" href="/encyclopedia/x-ray">X-rays</a> or ionising radiation. It applies nuclear magnetic resonance, invented in the 1940s and 1950s to study physical systems. In the early 1970s Carlton Hazlewood, Donald Chang and Raymond Damadian showed that NMR relaxation times could help detect cancer, and in 1973 Paul Lauterbur proposed a magnetic field gradient to make a two-dimensional NMR image. Peter Mansfield and Lauterbur received the 2003 <a class="enc-link" href="/encyclopedia/nobel-prize">Nobel Prize</a> in Physiology or Medicine.</p></div>
+<section class="inv-entry"><h2 class="enc-section-title">On the inventions tree</h2><dl class="inv-entry-facts"><div><dt>First known</dt><dd>1973</dd></div><div><dt>Where</dt><dd>Stony Brook University</dd></div><div><dt>Credited to</dt><dd>Paul Lauterbur · Raymond Damadian · Peter Mansfield · Carlton Hazlewood · Donald Chang</dd></div></dl><p class="inv-entry-note"><span class="inv-k">Note</span>Raymond Damadian filed a patent in late 1972 for a full-body NMR machine to detect cancer, and built one of the first scanners. The 1973 gradient method of Lauterbur is credited with the first two-dimensional image.</p><p class="enc-article-foot"><a class="enc-random-link" href="/inventions?focus=magnetic-resonance-imaging">See it on the inventions tree &rarr;</a></p></section>
+<section class="meanwhile" data-y="1973" aria-label="Meanwhile in the world"></section>
+<section><h2 class="enc-section-title">See also</h2><ul class="enc-seealso"><li><a href="/encyclopedia/nobel-prize"><img src="/images/encyclopedia/thumbs/nobel-prize.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Nobel Prize</span><span class="tp">Institution</span></span></a></li><li><a href="/encyclopedia/x-ray"><img src="/images/encyclopedia/thumbs/x-ray.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">X-ray</span><span class="tp">Term</span></span></a></li><li><a href="/encyclopedia/quantum-mechanics"><img src="/images/encyclopedia/thumbs/quantum-mechanics.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Quantum mechanics</span><span class="tp">Religion / idea</span></span></a></li></ul></section>
+<nav class="ref-prevnext" aria-label="Neighbouring entries"><a class="prev" rel="prev" href="/encyclopedia/magnetic-compass"><span class="lbl">&larr; Previous entry</span><span class="nm">Magnetic compass</span></a><a class="next" rel="next" href="/encyclopedia/magnetic-tape"><span class="lbl">Next entry &rarr;</span><span class="nm">Magnetic tape</span></a></nav>
+<details class="ref-cite"><summary>Cite this entry</summary><dl><dt>APA</dt><dd><span>The Epoch Institute. (2026). Magnetic resonance imaging. In <i>The Epoch Institute Encyclopedia</i>. https://the-epoch-institute.org/encyclopedia/magnetic-resonance-imaging</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>MLA</dt><dd><span>&#8220;Magnetic resonance imaging.&#8221; <i>The Epoch Institute Encyclopedia</i>, The Epoch Institute, 2026, https://the-epoch-institute.org/encyclopedia/magnetic-resonance-imaging. Accessed <span data-today></span>.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Chicago</dt><dd><span>The Epoch Institute. &#8220;Magnetic resonance imaging.&#8221; <i>The Epoch Institute Encyclopedia</i>. 2026. https://the-epoch-institute.org/encyclopedia/magnetic-resonance-imaging.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Harvard</dt><dd><span>The Epoch Institute (2026) &#8216;Magnetic resonance imaging&#8217;, <i>The Epoch Institute Encyclopedia</i>. Available at: https://the-epoch-institute.org/encyclopedia/magnetic-resonance-imaging (Accessed: <span data-today></span>).</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd></dl></details>
+<p class="ref-updated"><span>Last reviewed October 2026</span><a class="enc-random-link" href="/encyclopedia/" data-random="entry">Random entry &#8635;</a></p>
+</article>
+</div>
+</main>
+
+<script src="/shared-nav.js" defer></script>
+<script src="/enc-page.js" defer></script>
+</body>
+</html>

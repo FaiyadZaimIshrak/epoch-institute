@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Zipper (1893) — Encyclopedia — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="A zipper is a device for binding together two edges of fabric or other flexible material, with a slider that meshes or separates two rows of interlocking…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/encyclopedia/zipper">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Zipper (1893) — Encyclopedia — The Epoch Institute">
+<meta property="og:description" content="A zipper is a device for binding together two edges of fabric or other flexible material, with a slider that meshes or separates two rows of interlocking…">
+<meta property="og:url" content="https://the-epoch-institute.org/encyclopedia/zipper">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/encyclopedia/zipper.jpg">
+<meta property="og:image:width" content="330">
+<meta property="og:image:height" content="247">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/encyclopedia/zipper.jpg">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"Z","item":"https://the-epoch-institute.org/encyclopedia/browse/z-3"},{"@type":"ListItem","position":4,"name":"Zipper"}]},{"@type":"Article","headline":"Zipper","description":"A zipper is a device for binding together two edges of fabric or other flexible material, with a slider that meshes or separates two rows of interlocking…","url":"https://the-epoch-institute.org/encyclopedia/zipper","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/zipper","inLanguage":"en-GB","dateModified":"2026-11-26","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"CreativeWork","name":"Zipper","alternateName":["Zip fastener","Clasp locker"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/encyclopedia/zipper.jpg","contentUrl":"https://the-epoch-institute.org/images/encyclopedia/zipper.jpg","width":330,"height":247,"license":"https://creativecommons.org/licenses/by-sa/4.0/","acquireLicensePage":"https://commons.wikimedia.org/wiki/File:Coil_plastic_and_metal_zippers.jpg","creditText":"Woodbine9","creator":{"@type":"Person","name":"Woodbine9"},"copyrightNotice":"Woodbine9"}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body data-nav="encyclopedia">
+
+<main id="main" class="enc-page ref-page">
+<div class="enc-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/encyclopedia/">Encyclopedia</a></li><li><a href="/encyclopedia/browse/z-3">Z</a></li><li aria-current="page">Zipper</li></ol></nav>
+<article class="enc-article">
+<header><p class="enc-kicker"><a href="/inventions?focus=zipper">Inventions &amp; Discoveries</a> · Tools and materials</p><h1 class="enc-title">Zipper</h1><p class="enc-meta"><span class="dates"><a href="/years/1893">1893</a></span> · <a href="/centuries/19th-century">19th century</a> · Also known as Zip fastener, Clasp locker</p></header>
+<div class="enc-body"><p class="enc-desc">A zipper is a device for binding together two edges of fabric or other flexible material, with a slider that meshes or separates two rows of interlocking teeth. <a class="enc-link" href="/encyclopedia/elias-howe">Elias Howe</a> received a patent in 1851 for an improvement in fastenings for garments, more like a drawstring than a true slide fastener. In 1893 Whitcomb L. Judson patented a shoe fastening, his clasp locker, shown at the Chicago World's Fair. Gideon Sundbäck, a Swedish-American engineer, redesigned it and the zipper first went on sale in 1913; his Separable Fastener patent was issued in 1917. The name comes from a brand of galoshes in 1923.</p><figure class="enc-fig"><img src="/images/encyclopedia/zipper.jpg" alt="Zipper" width="330" height="247" fetchpriority="high"><figcaption>Image: Woodbine9 · CC BY-SA 4.0 · <a href="https://commons.wikimedia.org/wiki/File:Coil_plastic_and_metal_zippers.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure></div>
+<section class="inv-entry"><h2 class="enc-section-title">On the inventions tree</h2><dl class="inv-entry-facts"><div><dt>First known</dt><dd>1893</dd></div><div><dt>Where</dt><dd>Chicago, United States</dd></div><div><dt>Credited to</dt><dd>Whitcomb L. Judson · Gideon Sundbäck · <a href="/empire/united-states">United States</a></dd></div></dl><p class="inv-entry-note"><span class="inv-k">Note</span>Elias Howe patented an 'Improvement in Fastenings for Garments' in 1851, but it was more like an elaborate drawstring than a slide fastener. Judson's device was not used in clothing.</p><p class="enc-article-foot"><a class="enc-random-link" href="/inventions?focus=zipper">See it on the inventions tree &rarr;</a></p></section>
+<section class="meanwhile" data-y="1893" aria-label="Meanwhile in the world"></section>
+<section><h2 class="enc-section-title">See also</h2><ul class="enc-seealso"><li><a href="/encyclopedia/elias-howe"><img src="/images/encyclopedia/thumbs/elias-howe.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Elias Howe</span><span class="tp">Person</span></span></a></li></ul></section>
+<nav class="ref-prevnext" aria-label="Neighbouring entries"><a class="prev" rel="prev" href="/encyclopedia/zipoetes-i-of-bithynia"><span class="lbl">&larr; Previous entry</span><span class="nm">Zipoetes I of Bithynia</span></a><a class="next" rel="next" href="/encyclopedia/zipporah"><span class="lbl">Next entry &rarr;</span><span class="nm">Zipporah</span></a></nav>
+<details class="ref-cite"><summary>Cite this entry</summary><dl><dt>APA</dt><dd><span>The Epoch Institute. (2026). Zipper. In <i>The Epoch Institute Encyclopedia</i>. https://the-epoch-institute.org/encyclopedia/zipper</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>MLA</dt><dd><span>&#8220;Zipper.&#8221; <i>The Epoch Institute Encyclopedia</i>, The Epoch Institute, 2026, https://the-epoch-institute.org/encyclopedia/zipper. Accessed <span data-today></span>.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Chicago</dt><dd><span>The Epoch Institute. &#8220;Zipper.&#8221; <i>The Epoch Institute Encyclopedia</i>. 2026. https://the-epoch-institute.org/encyclopedia/zipper.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Harvard</dt><dd><span>The Epoch Institute (2026) &#8216;Zipper&#8217;, <i>The Epoch Institute Encyclopedia</i>. Available at: https://the-epoch-institute.org/encyclopedia/zipper (Accessed: <span data-today></span>).</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd></dl></details>
+<p class="ref-updated"><span>Last reviewed October 2026</span><a class="enc-random-link" href="/encyclopedia/" data-random="entry">Random entry &#8635;</a></p>
+</article>
+</div>
+</main>
+
+<script src="/shared-nav.js" defer></script>
+<script src="/enc-page.js" defer></script>
+</body>
+</html>

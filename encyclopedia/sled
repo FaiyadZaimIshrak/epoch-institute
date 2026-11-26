@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>(function(){try{var t=localStorage.getItem('epoch-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)t='light';if(t==='light')document.documentElement.setAttribute('data-theme','light');else if(t==='dark')document.documentElement.setAttribute('data-theme','dark');var s=localStorage.getItem('epoch-skin');if(!s){var d=new Date(),m=d.getUTCMonth();if(m===11||(m===0&&d.getUTCDate()<7))s='winter'}if(s&&s!=='classic')document.documentElement.setAttribute('data-skin',s);if(localStorage.getItem('epoch-kids')==='1')document.documentElement.setAttribute('data-kids','1');if(document.documentElement.getAttribute('data-kids')==='1')['nunito-normal-latin','baloo-2-latin'].forEach(function(f){var l=document.createElement('link');l.rel='preload';l.as='font';l.type='font/woff2';l.crossOrigin='anonymous';l.href='/fonts/'+f+'.woff2';document.head.appendChild(l)});}catch(e){}})()</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4efe4" media="(prefers-color-scheme: light)">
+<link rel="alternate" type="application/rss+xml" title="The Epoch Institute — Research Series" href="/feed.xml">
+<title>Sled — Encyclopedia — The Epoch Institute</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="description" content="A sled, sledge or sleigh is a vehicle that slides across a surface, usually of ice or snow, built with a smooth underside or a body supported by runners…">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://the-epoch-institute.org/encyclopedia/sled">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Sled — Encyclopedia — The Epoch Institute">
+<meta property="og:description" content="A sled, sledge or sleigh is a vehicle that slides across a surface, usually of ice or snow, built with a smooth underside or a body supported by runners…">
+<meta property="og:url" content="https://the-epoch-institute.org/encyclopedia/sled">
+<meta property="og:site_name" content="The Epoch Institute">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://the-epoch-institute.org/images/encyclopedia/sled.jpg">
+<meta property="og:image:width" content="330">
+<meta property="og:image:height" content="247">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@Epoch_Institute">
+<meta name="twitter:image" content="https://the-epoch-institute.org/images/encyclopedia/sled.jpg">
+<link rel="stylesheet" href="/css/pages.css">
+<link rel="preload" href="/fonts/crimson-pro-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/cinzel-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://the-epoch-institute.org/"},{"@type":"ListItem","position":2,"name":"Encyclopedia","item":"https://the-epoch-institute.org/encyclopedia/"},{"@type":"ListItem","position":3,"name":"S","item":"https://the-epoch-institute.org/encyclopedia/browse/s-20"},{"@type":"ListItem","position":4,"name":"Sled"}]},{"@type":"Article","headline":"Sled","description":"A sled, sledge or sleigh is a vehicle that slides across a surface, usually of ice or snow, built with a smooth underside or a body supported by runners…","url":"https://the-epoch-institute.org/encyclopedia/sled","mainEntityOfPage":"https://the-epoch-institute.org/encyclopedia/sled","inLanguage":"en-GB","dateModified":"2026-11-26","author":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"publisher":{"@type":"Organization","name":"The Epoch Institute","url":"https://the-epoch-institute.org/","logo":{"@type":"ImageObject","url":"https://the-epoch-institute.org/logo.png","width":512,"height":512}},"isPartOf":{"@type":"WebSite","name":"The Epoch Institute","url":"https://the-epoch-institute.org/"},"about":{"@type":"CreativeWork","name":"Sled","alternateName":["Sledge","Sleigh"]},"image":{"@type":"ImageObject","url":"https://the-epoch-institute.org/images/encyclopedia/sled.jpg","contentUrl":"https://the-epoch-institute.org/images/encyclopedia/sled.jpg","width":330,"height":247,"license":"https://creativecommons.org/licenses/by-sa/2.5/","acquireLicensePage":"https://commons.wikimedia.org/wiki/File:Sleigh_from_dutch_slee.jpg","creditText":"Pieter Delicaat","creator":{"@type":"Person","name":"Pieter Delicaat"},"copyrightNotice":"Pieter Delicaat"}}]}</script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}(function(){var g='denied';try{if(localStorage.getItem('epoch-consent')==='yes'&&document.documentElement.getAttribute('data-kids')!=='1')g='granted'}catch(e){}gtag('consent','default',{analytics_storage:g,ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'})})();gtag('js',new Date());gtag('config','G-B163TLDMP4');addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-B163TLDMP4';document.head.appendChild(s)},{timeout:4000})})</script>
+</head>
+<body data-nav="encyclopedia">
+
+<main id="main" class="enc-page ref-page">
+<div class="enc-wrap">
+<nav class="ref-crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/encyclopedia/">Encyclopedia</a></li><li><a href="/encyclopedia/browse/s-20">S</a></li><li aria-current="page">Sled</li></ol></nav>
+<article class="enc-article">
+<header><p class="enc-kicker"><a href="/inventions?focus=sled">Inventions &amp; Discoveries</a> · Transport and navigation</p><h1 class="enc-title">Sled</h1><p class="enc-meta">Also known as Sledge, Sleigh</p></header>
+<div class="enc-body"><p class="enc-desc">A sled, sledge or sleigh is a vehicle that slides across a surface, usually of ice or snow, built with a smooth underside or a body supported by runners that reduce friction. Evidence of sledges or skids used for transport has been dated to before 10,000 BCE in <a class="enc-link" href="/encyclopedia/north-america">North America</a>, by 3,200 BCE in <a class="enc-link" href="/encyclopedia/sumer">Sumer</a>, and in Ancient <a class="enc-link" href="/encyclopedia/egypt">Egypt</a>. Sleds and sledges were found in the <a class="enc-link" href="/encyclopedia/oseberg-ship">Oseberg ship</a> excavation, and a sledge was prized because, unlike wheeled vehicles, it was exempt from tolls. Closed winter sleds called vozoks carried the royalty, <a class="enc-link" href="/encyclopedia/bishop">bishops</a> and boyars of Muscovy, and man-hauled sledges were the tradition of British polar expeditions.</p><figure class="enc-fig"><img src="/images/encyclopedia/sled.jpg" alt="Sled" width="330" height="247" fetchpriority="high"><figcaption>Image: Pieter Delicaat · CC BY-SA 2.5 · <a href="https://commons.wikimedia.org/wiki/File:Sleigh_from_dutch_slee.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></figcaption></figure></div>
+<section class="inv-entry"><h2 class="enc-section-title">On the inventions tree</h2><dl class="inv-entry-facts"><div><dt>First known</dt><dd>before 10,000 BCE</dd></div><div><dt>Where</dt><dd>North America</dd></div></dl><p class="enc-article-foot"><a class="enc-random-link" href="/inventions?focus=sled">See it on the inventions tree &rarr;</a></p></section>
+<section><h2 class="enc-section-title">See also</h2><ul class="enc-seealso"><li><a href="/encyclopedia/egypt"><img src="/images/encyclopedia/thumbs/egypt.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Egypt</span><span class="tp">Place</span></span></a></li><li><a href="/encyclopedia/bishop"><img src="/images/encyclopedia/thumbs/bishop.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Bishop</span><span class="tp">Institution</span></span></a></li><li><a href="/encyclopedia/north-america"><img src="/images/encyclopedia/thumbs/north-america.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">North America</span><span class="tp">Place</span></span></a></li><li><a href="/encyclopedia/sumer"><img src="/images/encyclopedia/thumbs/sumer.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Sumer</span><span class="tp">Place</span></span></a></li><li><a href="/encyclopedia/oseberg-ship"><img src="/images/encyclopedia/thumbs/oseberg-ship.jpg" alt="" loading="lazy" width="44" height="44"><span><span class="nm">Oseberg ship</span><span class="tp">Work / monument</span></span></a></li></ul></section>
+<nav class="ref-prevnext" aria-label="Neighbouring entries"><a class="prev" rel="prev" href="/encyclopedia/slavs"><span class="lbl">&larr; Previous entry</span><span class="nm">Slavs</span></a><a class="next" rel="next" href="/encyclopedia/slide-rule"><span class="lbl">Next entry &rarr;</span><span class="nm">Slide rule</span></a></nav>
+<details class="ref-cite"><summary>Cite this entry</summary><dl><dt>APA</dt><dd><span>The Epoch Institute. (2026). Sled. In <i>The Epoch Institute Encyclopedia</i>. https://the-epoch-institute.org/encyclopedia/sled</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>MLA</dt><dd><span>&#8220;Sled.&#8221; <i>The Epoch Institute Encyclopedia</i>, The Epoch Institute, 2026, https://the-epoch-institute.org/encyclopedia/sled. Accessed <span data-today></span>.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Chicago</dt><dd><span>The Epoch Institute. &#8220;Sled.&#8221; <i>The Epoch Institute Encyclopedia</i>. 2026. https://the-epoch-institute.org/encyclopedia/sled.</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd><dt>Harvard</dt><dd><span>The Epoch Institute (2026) &#8216;Sled&#8217;, <i>The Epoch Institute Encyclopedia</i>. Available at: https://the-epoch-institute.org/encyclopedia/sled (Accessed: <span data-today></span>).</span> <button type="button" class="ref-copy" data-copy>Copy</button></dd></dl></details>
+<p class="ref-updated"><span>Last reviewed October 2026</span><a class="enc-random-link" href="/encyclopedia/" data-random="entry">Random entry &#8635;</a></p>
+</article>
+</div>
+</main>
+
+<script src="/shared-nav.js" defer></script>
+<script src="/enc-page.js" defer></script>
+</body>
+</html>

@@ -23,7 +23,7 @@ const HOWTO = {
     'Hover over or tap the chart for any year’s standings; Share sends a picture of the race.'],
   inventions: ['Each card is an invention, placed in its lane by its first date; hover over or tap one to light up what it built on and what it led to.',
     'Drag to move along the tree; hold Ctrl and scroll, or use + and −, to zoom; the strip above jumps to an age.',
-    'Use Trace the road to… to follow one invention back, or switch to By civilisation or List.'],
+    'Pick a road above the tree to walk it step by step, use Trace the road to… for any invention, or switch to By civilisation or List.'],
   faiths: ['Choose a faith.',
     'Press Play, or move the century slider, to watch where it spread; drag the globe to turn it.',
     'Compare with lays a second faith over the first; tap a glow, a route or a mark to read its note.'],

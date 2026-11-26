@@ -530,7 +530,7 @@ function searchThumb(r) {
   if (r.src === 's' && SEARCH_STATES[r.i][4]) return '/images/states/thumbs/' + SEARCH_STATES[r.i][0] + '.jpg';
   return '';
 }
-var SEARCH_INDEX_SRC = '/search-index.js?v=46cbaf6ef9';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
+var SEARCH_INDEX_SRC = '/search-index.js?v=357f845494';   // also loaded by quiz.js for answer suggestions (the builder stamps both versions)
 var SEARCH_PAGES_SRC = '/search-pages.js?v=e18621069d';
 var SEARCH_PROFILES_SRC = '/search-profiles.js?v=2';   // the profiles of every kind, for pages without shared-data.js
 // everything the search needs, loaded once; then cb()
@@ -763,7 +763,7 @@ function initNav(activePage) {
         ['contributors', '/contributors', 'Write for Us', 'Take part in the Institute'], ['', '/#newsletter-section', 'Newsletter', 'A weekly letter of history'],
         ['support', '/support', 'Support the Institute', 'Keep the Institute free'], ['contact', '/contact', 'Contact', 'Corrections, ideas and questions']]]]]];
   // New tags in the menus (Nov 2026): address -> the day the tag comes off. A release adds a line here.
-  const NEW_UNTIL = { '/city/': '2026-12-23', '/battle/': '2026-12-23', '/journeys': '2026-12-23', '/religions': '2026-12-22', '/discover': '2026-12-21', '/past-games': '2026-12-16', '/life/': '2026-12-23', '/work/': '2026-12-23', '/encyclopedia/quotations': '2026-12-12', '/today': '2026-12-12', '/now': '2026-12-10', '/advent': '2026-12-08', '/today-in-history/#birthday': '2026-12-01' };
+  const NEW_UNTIL = { '/inventions': '2026-12-17', '/city/': '2026-12-23', '/battle/': '2026-12-23', '/journeys': '2026-12-23', '/religions': '2026-12-22', '/discover': '2026-12-21', '/past-games': '2026-12-16', '/life/': '2026-12-23', '/work/': '2026-12-23', '/encyclopedia/quotations': '2026-12-12', '/today': '2026-12-12', '/now': '2026-12-10', '/advent': '2026-12-08', '/today-in-history/#birthday': '2026-12-01' };
   const newTag = h => NEW_UNTIL[h] && Date.now() < Date.parse(NEW_UNTIL[h]) ? '<i class="new-tag">New</i>' : '';
   const inMenu = m => m[2].some(c => c[1].some(x => x[0] === activePage));
   const navItem = (x, cls) => `<a href="${x[1]}"${cls ? ` class="${cls}"` : ''}${x[0] ? activeStyle(x[0]) : ''}>${x[2]}${newTag(x[1])}</a>`;

@@ -2335,6 +2335,33 @@ credited to no state).
   everyday words (wine, cheese, coffee, loom, screw, crane, kite, pencil, junk, horseshoe, sewing needle), lower case
   only for words that are also surnames (canning, braille), either case for technical terms. Left out: the windcatcher
   (no date in the article), the sanitary sewer and faience (no early dated evidence), the dhow (no firm first evidence).
+- Wave inv2 (26 Nov 2026; the user: "expand the innovations section and try making the invention tree better and more
+  engaging"): 161 more nodes, 452 in all (146 new entries; 15 nodes on entries that existed). 173 candidates across all
+  lanes, one saved article each, fifteen Sonnet writers with INVENTIONS-GUIDE.md and the wave's JOB.md; 6 writers' skips
+  (no datable first appearance: treadwheel, igloo, truss bridge, fertilizer, pigeon post, Damascus steel) and 6 by the
+  editor (lock and key, cataract surgery, caesarean section, carrack, kayak, scythe: a round or traditional date, or a
+  date the article only calls possible). The editor read every row and text: places and credits the articles do not
+  state were emptied, "also" lines that are no independent origin dropped. A copy-edit pass took every "the article
+  says" out of 65 notes and texts. 18 plain links join old and new cards (gear to the mechanical clock, parchment to the
+  codex, the V-2 to Sputnik). The working folder is outside the repository (%LOCALAPPDATA%\epoch-tools\inv2: cands.txt,
+  JOB.md, out/, edits.json, links-add.js, mklinks.js, picks). Two traps: a candidate whose subject has an entry under
+  another slug (HMS Dreadnought: hms-dreadnought-1906) passes prepare by slug and name, so compare names with brackets
+  removed before the merge; and `git checkout -- <file>` rewrites a text file with CRLF here (core.autocrlf), which
+  broke apply-added-entries.ps1 on encyclopedia-links.js: put the line endings back.
+- Play features (inventions.js?v=5; scripts/tests/inventions-play.js, 23 checks):
+  - **Walk a road** (S.walk {to, list, at}; startWalk, walkStep, walkBar, endWalk): the ancestors of an invention in
+    date order, one step at a time; only what has been reached is lit; Back, Play (3.2 s a step), Next, arrow keys,
+    Escape. Entered from the roads row (#inv-roads, ROADS: end points with four or more steps, no weapon in Kids
+    mode), the panel ("Walk it step by step"), Today's invention, or ?road=<slug>. On phones the bar is fixed at the
+    foot, the sheet stays shut and the list shows only the steps reached.
+  - **Opened marks:** localStorage epoch-inv-seen; a gold dot on an opened card, "You have opened N of M", and
+    Surprise me (#inv-lucky: an invention not yet opened).
+  - **Play with the tree** (section#play under the tree): Today's invention (by the UTC day, pictured, never a
+    weapon; ?invday=yyyy-mm-dd previews) and the quiz "What did it take?": five questions a day, "which of these did
+    X build on?" or "which grew out of X?", one linked card and three that are not in X's line and stand on the right
+    side of its date; the first round of a day is the same for everyone and kept (epoch-inv-quiz {d, s, b}), further
+    rounds are practice. The wording is "On the tree, …": the answer is a line of the tree, not a claim beyond it.
+  - window.epochInventions gained walk, step, walkList, seen, todays, quiz, quizMake.
 - Wiring: Explore menu ("Inventions Tree: what led to what, and who made it first"), phone menu and footer; Research
   Hub ("Through time"); search (SEARCH_PAGES); sitemap; llms.txt; poster page-inventions.jpg (make-posters.js page
   "inventions"); deploy.sh PAGES and DATA (data/inventions.json); split-css HAND; .htaccess (extensionless page).
@@ -3911,6 +3938,19 @@ then declutter. Answers: about 100 each; all sections; menus by subject plus hub
 - **Proposed and not built** (the plan's order): references and section pictures for the
   profiles without; pictures for the 495 well-known entries; longer-entry waves chosen from a new Search Console export
   (positions 4-12 first); hubs for treaties and capitals if the export shows them; passport stamps per subject hub. The owner's: a new export, sending the newsletter, the feedback files.
+- **The export of 25 Nov (a three-month total: 24 Aug to 23 Nov; 8,574 clicks) and what it steered:** clicks are back
+  at about 345 a day after the dip of 6 to 15 November; the average position has not moved (8 to 9); phones have a
+  sixth of the impressions and nearly half the clicks. A three-month export cannot be compared per day with a 28-day
+  one (gsc-compare.js prints such a table all the same: do not read it): ask the owner for 28-day exports. The
+  longer-text campaign is in fact finished (23,294 done), so the entries Google shows without a longer text were almost
+  all entries with NO confirmed article: 169 of them. resolve-titles.js searched each, the editor read every candidate
+  against its entry (the work folder %LOCALAPPDATA%\epoch-tools\gsc-nov25: join.txt, picks.tsv, verify.js, confirm.js,
+  rows.js): 66 have an article of their own (entry-wikidata-manual.tsv, "editor" rows of entry-wikidata.tsv), 43 got the
+  longer text (wave w85, three writers; 22 articles too thin), all 66 a Sources section. The other 103 lead only to a
+  broader article, a namesake or nothing. Left open: the ledger now lists about 740 more confirmed entries without a
+  longer text (entries added since 17 Nov, the 60 country entries among them): `more-list.js fetch` and `wave` take
+  them; babito-dynasty and babiito-dynasty are one subject (fold-entry.js); the item of Udayana (king) is held by the
+  entry vasavadatta, which looks like a wrong match.
 - A quoted heredoc in Git Bash turned `'\\n'` into a line break once more (a patch of kids-stories-merge.js): such
   scripts are written with the Write tool.
 

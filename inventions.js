@@ -30,7 +30,7 @@
   var fold = function (s) { return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); };
   var fam = function (cat) { return FAM[cat] || 'knowing'; };
   var N = [], CATS = [], CATL = {}, CIVS = [], BYSLUG = {}, LAY = null;
-  var S = { view: 'tree', sel: -1, hov: -1, road: false, only: false, civ: '', hide: {}, k: 1, tx: 0, ty: 0, active: false, phone: false, moved: false };
+  var S = { view: 'tree', sel: -1, hov: -1, walk: null, road: false, only: false, civ: '', hide: {}, k: 1, tx: 0, ty: 0, active: false, phone: false, moved: false };
   var E = {};   // the page's elements
   var MQ = window.matchMedia ? matchMedia('(max-width: 700px)') : { matches: false, addListener: function () {} };
 
@@ -57,6 +57,7 @@
   function ancestors(i) { return walk(i, 'built', {}); }
   function descendants(i) { return walk(i, 'led', {}); }
   function litSet() {   // what is lit: the hovered or chosen card's lineage (only its road when traced), else a civilisation's
+    if (S.walk && S.hov < 0) { var w = {}; for (var k = 0; k <= S.walk.at; k++) w[S.walk.list[k]] = 1; return w; }
     var i = S.hov >= 0 ? S.hov : S.sel, on = null;
     if (i >= 0) { on = ancestors(i); if (!(S.road && i === S.sel && S.hov < 0)) { var d = descendants(i); Object.keys(d).forEach(function (j) { on[j] = 1; }); } on[i] = 1; }
     else if (S.civ) { on = {}; N.forEach(function (n) { if (n.civ.some(function (c) { return c[0] === S.civ; })) on[n.i] = 1; }); }
@@ -211,9 +212,9 @@
     var s = stageSize(); if (k) S.k = k; var lw = labW();
     S.tx = lw + (freeW() - lw) / 2 - (n.x + CW / 2) * S.k; S.ty = s.h / 2 - (n.ly + CH / 2) * S.k; clamp(); apply();
   }
-  function fitYears(a, b) {   // the span a..b across the stage, all lanes from the top
+  function fitYears(a, b, kmin) {   // the span a..b across the stage, all lanes from the top
     var s = stageSize(), fw = freeW(), x0 = LAY.X(Math.max(BANDS[0], a)), x1 = LAY.X(Math.min(2000, b)) + CW;
-    S.k = Math.max(KMIN, Math.min(1, fitK(x1 - x0 + 30, function (lw) { return fw - lw - 30; }), Math.max(0.72, s.h / LAY.h)));
+    S.k = Math.max(kmin || KMIN, Math.min(1, fitK(x1 - x0 + 30, function (lw) { return fw - lw - 30; }), Math.max(0.72, s.h / LAY.h)));
     S.tx = labW() + 10 - x0 * S.k; S.ty = 0; clamp(); apply();
   }
   function fitSet(set, n) {   // the cards of a lineage in view; a road too long to read at once is followed from its end, n
@@ -230,6 +231,7 @@
     var on = litSet();
     if (S.phone) {
       if (!E.vcards) return;
+      paintSeen();
       E.vlist.classList.toggle('inv-lit', !!on); E.vlist.classList.toggle('inv-only', !!(on && S.only && S.sel >= 0));
       Object.keys(E.vcards).forEach(function (j) { var c = E.vcards[j]; c.classList.toggle('on', !!(on && on[j])); c.classList.toggle('sel', +j === S.sel); });
       // headings with nothing left under them go when only the line is shown
@@ -238,6 +240,7 @@
       return;
     }
     if (!E.cards) return;
+    paintSeen();
     E.world.classList.toggle('inv-lit', !!on);
     Object.keys(E.cards).forEach(function (j) { var c = E.cards[j]; c.classList.toggle('on', !!(on && on[j])); c.classList.toggle('sel', +j === S.sel); });
     E.paths.forEach(function (p) { p.classList.toggle('on', !!(on && on[p.getAttribute('data-a')] && on[p.getAttribute('data-b')])); });
@@ -265,12 +268,14 @@
       (up.length ? '<div class="inv-p-r"><span class="inv-k">Built on</span>' + up.map(chip).join('') + '</div>' : '') +
       (down.length ? '<div class="inv-p-r"><span class="inv-k">Led to</span>' + down.map(chip).join('') + '</div>' : '') +
       '<p class="inv-p-go">' + (anc ? '<button type="button" class="inv-road">' + (S.road ? 'Show what it led to as well' : 'Trace the road to it (' + anc + ' step' + (anc === 1 ? '' : 's') + ')') + '</button>' : '') +
+      (anc >= 2 && !S.walk ? '<button type="button" class="inv-road inv-walk-b">Walk it step by step</button>' : '') +
       (S.phone && (up.length || down.length) ? '<button type="button" class="inv-only-b" aria-pressed="' + S.only + '">' + (S.only ? 'Show every invention' : 'Only its line') + '</button>' : '') +
       '<a href="/encyclopedia/' + esc(n.slug) + '">Read the entry &rarr;</a></p>';
     E.panel.hidden = false;
   }
   function select(i, opts) {
-    opts = opts || {}; S.sel = i; if (!opts.keepRoad) S.road = !!opts.road; if (i < 0) S.only = false;
+    opts = opts || {}; if (S.walk) leaveWalk(); S.sel = i; if (!opts.keepRoad) S.road = !!opts.road; if (i < 0) S.only = false;
+    if (i >= 0) markSeen(i);
     if (i >= 0 && S.view !== 'tree') setView('tree');
     if (i >= 0 && !shown(N[i])) { delete S.hide[N[i].cat]; buildCats(); draw(); }
     panel(); light();
@@ -374,10 +379,11 @@
   // ── the address ───────────────────────────────────────────────────────────────────────────────────────────────────
   function save() {
     var q = new URLSearchParams();
-    if (S.sel >= 0) q.set('focus', N[S.sel].slug);
+    if (S.walk) q.set('road', N[S.walk.to].slug); else if (S.sel >= 0) q.set('focus', N[S.sel].slug);
     if (S.view !== 'tree') q.set('view', S.view);
     if (S.civ) q.set('civ', S.civ);
     var off = Object.keys(S.hide); if (off.length && !(off.length === 1 && off[0] === 'weapons' && kids())) q.set('hide', off.join(','));
+    var day = new URLSearchParams(location.search).get('invday'); if (day) q.set('invday', day);
     var s = q.toString(); history.replaceState(null, '', location.pathname + (s ? '?' + s : '') + location.hash);
   }
 
@@ -459,10 +465,11 @@
     E.strip.addEventListener('pointermove', function (e) { if (!sd) return; S.tx = sd.tx - (e.clientX - sd.x) / sd.w * LAY.w * S.k; clamp(); apply(); });
     function sup() { sd = null; E.strip.classList.remove('inv-dragging'); }
     E.strip.addEventListener('pointerup', sup); E.strip.addEventListener('pointercancel', sup);
-    E.strip.addEventListener('click', function (e) { var a = e.target.closest('.inv-age'); if (!a) return; var g = AGES.filter(function (x) { return x[0] === a.getAttribute('data-age'); })[0]; if (g) fitYears(g[2], g[3]); });
+    E.strip.addEventListener('click', function (e) { var a = e.target.closest('.inv-age'); if (!a) return; var g = AGES.filter(function (x) { return x[0] === a.getAttribute('data-age'); })[0]; if (g) fitYears(g[2], g[3], 0.4); });   // an age opens at its start, never smaller than its cards can be told apart
     E.panel.addEventListener('click', function (e) {
       var g = e.target.closest('[data-go]'); if (g) { select(+g.getAttribute('data-go'), { go: true }); return; }
       if (e.target.closest('.inv-x')) { select(-1); return; }
+      if (e.target.closest('.inv-walk-b')) { startWalk(S.sel); return; }
       if (e.target.closest('.inv-road')) { S.road = !S.road; select(S.sel, { go: true, keepRoad: true }); return; }
       if (e.target.closest('.inv-only-b')) { S.only = !S.only; panel(); light(); if (S.only) vScrollTo(S.sel); }
     });
@@ -499,6 +506,166 @@
     if (MQ.addEventListener) MQ.addEventListener('change', onMq); else MQ.addListener(onMq);
     document.addEventListener('epoch:kids', function () { if (kids()) S.hide.weapons = 1; else delete S.hide.weapons; buildCats(); draw(); save(); });
   }
+  // ── walking a road, step by step (26 Nov 2026): the ancestors of an invention in date order, one at a time; what has
+  // been reached is lit, the rest dimmed. Entered from the panel, the roads row, Today's invention or ?road=<slug>. ──
+  var ROADS = ['world-wide-web', 'smartphone', 'aeroplane', 'apollo-11', 'printing-press', 'vaccination', 'steam-locomotive', 'penicillin', 'telescope', 'electric-light', 'mobile-phone', 'skyscraper'];
+  var playT = null;
+  function walkList(i) {
+    return Object.keys(ancestors(i)).map(Number).filter(function (j) { return shown(N[j]); }).sort(function (a, b) { return N[a].y - N[b].y || a - b; }).concat([i]);
+  }
+  function stopPlay() { if (playT) { clearInterval(playT); playT = null; } }
+  function startWalk(i, now) {
+    if (S.view !== 'tree') setView('tree');
+    if (!shown(N[i])) { delete S.hide[N[i].cat]; buildCats(); draw(); }
+    var list = walkList(i);
+    if (list.length < 3) { select(i, { go: true, road: true }); return; }
+    stopPlay(); S.walk = { to: i, list: list, at: 0 }; S.road = false; S.only = true;
+    walkStep(0, now);
+    if (!now && E.app.scrollIntoView && !S.phone) { var r = E.app.getBoundingClientRect(); if (r.top < 60 || r.top > innerHeight * 0.5) window.scrollTo({ top: r.top + scrollY - 76, behavior: 'instant' }); }
+  }
+  function walkStep(k, now) {
+    var w = S.walk; if (!w) return;
+    w.at = Math.max(0, Math.min(w.list.length - 1, k));
+    var i = w.list[w.at];
+    S.sel = i; S.hov = -1; markSeen(i);
+    if (S.phone) { E.panel.hidden = true; light(); vScrollTo(i, now); } else { panel(); light(); centreOn(N[i], Math.max(S.k, 0.85)); }
+    walkBar(); save();
+    if (w.at === w.list.length - 1) stopPlay();
+  }
+  function walkBar() {
+    var w = S.walk; if (!w || !E.walk) return;
+    var n = N[w.list[w.at]], t = N[w.to], len = w.list.length, inRoad = {}; w.list.forEach(function (j) { inRoad[j] = 1; });
+    var from = n.built.filter(function (j) { return inRoad[j]; }).map(function (j) { return N[j].label; });
+    var why = w.at === len - 1 ? 'The end of the road: ' + (len - 1) + ' earlier step' + (len === 2 ? '' : 's') + ', from ' + N[w.list[0]].date + ' to ' + t.date + '.'
+      : from.length ? 'Built on ' + from.join(', ') + '.' : 'One of the places where this road begins.';
+    E.walk.innerHTML = '<div class="inv-walk-h"><span class="inv-walk-to">The road to <strong>' + esc(t.label) + '</strong></span><span class="inv-walk-n">Step ' + (w.at + 1) + ' of ' + len + '</span>' +
+      '<button type="button" class="inv-walk-x" data-w="x" aria-label="Leave the road">&times;</button></div>' +
+      '<div class="inv-walk-p" aria-hidden="true"><i style="width:' + Math.round((w.at + 1) / len * 100) + '%"></i></div>' +
+      '<p class="inv-walk-t"><strong>' + esc(n.label) + '</strong> <span>' + esc(n.date) + (n.place ? ' · ' + esc(n.place) : '') + '</span></p>' +
+      '<p class="inv-walk-s">' + esc(why) + '</p>' +
+      '<div class="inv-walk-c"><button type="button" data-w="back"' + (w.at ? '' : ' disabled') + '>&lsaquo; Back</button>' +
+      '<button type="button" data-w="play" aria-pressed="' + !!playT + '"' + (w.at === len - 1 ? ' disabled' : '') + '>' + (playT ? 'Pause' : 'Play') + '</button>' +
+      '<button type="button" data-w="next"' + (w.at === len - 1 ? ' disabled' : '') + '>Next &rsaquo;</button>' +
+      (w.at === len - 1 ? '<a href="/encyclopedia/' + esc(t.slug) + '">Read the entry &rarr;</a>' : '') + '</div>';
+    E.walk.hidden = false; E.app.classList.add('inv-walking');
+    E.status.textContent = 'The road to ' + t.label + ', step ' + (w.at + 1) + ' of ' + len + ': ' + n.label + ', ' + n.date;
+  }
+  function leaveWalk() { stopPlay(); S.walk = null; S.only = false; if (E.walk) E.walk.hidden = true; E.app.classList.remove('inv-walking'); }
+  function endWalk() { var t = S.walk && S.walk.to; leaveWalk(); if (t != null) select(t, { go: true, road: true }); }
+  function buildRoads() {
+    if (!E.roads) return;
+    var k = kids(), h = ROADS.map(function (s) { return BYSLUG[s]; }).filter(function (n) { return n && !(k && n.cat === 'weapons') && walkList(n.i).length >= 4; }).slice(0, 9)
+      .map(function (n) { return '<button type="button" class="inv-road-b inv-f-' + fam(n.cat) + '" data-road="' + esc(n.slug) + '">' + esc(n.label) + '<span>' + (walkList(n.i).length - 1) + ' steps</span></button>'; }).join('');
+    E.roads.innerHTML = '<span class="inv-k">Walk the road to</span>' + h;
+  }
+
+  // ── what this browser has opened: a mark on the card, a count, and Surprise me (an invention not yet opened) ──
+  var SEEN = {}, seenC = null, seenV = null;
+  try { SEEN = JSON.parse(localStorage.getItem('epoch-inv-seen') || '{}') || {}; } catch (e) { SEEN = {}; }
+  function seenCount() { var c = 0; N.forEach(function (n) { if (SEEN[n.slug]) c++; }); return c; }
+  function seenLine() { if (!E.seen) return; var c = seenCount(); E.seen.textContent = c ? 'You have opened ' + c + ' of ' + N.length + '.' : ''; }
+  function markSeen(i) {
+    var n = N[i]; if (!n || SEEN[n.slug]) return; SEEN[n.slug] = 1;
+    try { localStorage.setItem('epoch-inv-seen', JSON.stringify(SEEN)); } catch (e) {}
+    var c = E.cards && E.cards[i]; if (c) c.classList.add('seen'); c = E.vcards && E.vcards[i]; if (c) c.classList.add('seen'); seenLine();
+  }
+  function paintSeen() {   // after a redraw: the cards are new elements
+    if (E.cards && E.cards !== seenC) { seenC = E.cards; Object.keys(seenC).forEach(function (j) { if (SEEN[N[j].slug]) seenC[j].classList.add('seen'); }); }
+    if (E.vcards && E.vcards !== seenV) { seenV = E.vcards; Object.keys(seenV).forEach(function (j) { if (SEEN[N[j].slug]) seenV[j].classList.add('seen'); }); }
+  }
+  function lucky() {
+    var pool = N.filter(function (n) { return shown(n) && !SEEN[n.slug]; }); if (!pool.length) pool = N.filter(shown); if (!pool.length) return;
+    select(pool[Math.floor(Math.random() * pool.length)].i, { go: true });
+  }
+
+  // ── Today's invention and the quiz (the section under the tree). Both read only the tree's own data. ──
+  function rng(seed) { var a = seed >>> 0; return function () { a = (a + 0x6D2B79F5) | 0; var t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+  function dayNo() { var q = new URLSearchParams(location.search).get('invday'), d = q && /^\d{4}-\d\d-\d\d$/.test(q) ? Date.parse(q + 'T00:00:00Z') : Date.now(); return Math.floor(d / 86400000); }
+  function gentle(n) { return !(kids() && n.cat === 'weapons'); }
+  function todays() { var pool = N.filter(function (n) { return n.img && n.first && n.cat !== 'weapons'; }); return pool.length ? pool[(dayNo() * 37) % pool.length] : null; }
+  function buildToday() {
+    if (!E.today) return; var n = todays(); if (!n) return;
+    var steps = walkList(n.i).length - 1;
+    E.today.innerHTML = '<h3 class="inv-play-h">Today&rsquo;s invention</h3><div class="inv-today-b"><img src="' + esc(n.img.replace('/thumbs/', '/')) + '" alt="" width="112" height="112" loading="lazy">' +
+      '<div><p class="inv-today-k">' + laneTag(n.cat) + '</p><p class="inv-today-n">' + esc(n.label) + '</p><p class="inv-today-d">' + esc(n.date) + (n.place ? ' · ' + esc(n.place) : '') + '</p></div></div>' +
+      '<p class="inv-today-f">' + esc(n.first) + '</p>' +
+      '<p class="inv-play-go"><button type="button" class="inv-road" data-go="' + n.i + '">See it on the tree</button>' + (steps >= 2 ? '<button type="button" class="inv-road" data-road="' + esc(n.slug) + '">Walk the road to it (' + steps + ' steps)</button>' : '') + '</p>';
+  }
+  var QN = 5, Q = null;
+  function quizStore() { try { return JSON.parse(localStorage.getItem('epoch-inv-quiz') || '{}') || {}; } catch (e) { return {}; } }
+  function quizSave(o) { try { localStorage.setItem('epoch-inv-quiz', JSON.stringify(o)); } catch (e) {} }
+  function quizMake(r) {   // five questions: "which of these did X build on?" or "which grew out of X?", one linked card and three that are not in its line
+    var pool = N.filter(gentle), used = {}, out = [];
+    for (var t = 0; t < 600 && out.length < QN; t++) {
+      var n = pool[Math.floor(r() * pool.length)]; if (used[n.i]) continue;
+      var type = r() < 0.5 ? 'built' : 'led', rel = n[type].filter(function (j) { return gentle(N[j]); });
+      if (!rel.length) { type = type === 'built' ? 'led' : 'built'; rel = n[type].filter(function (j) { return gentle(N[j]); }); if (!rel.length) continue; }
+      var right = rel[Math.floor(r() * rel.length)], line = type === 'built' ? ancestors(n.i) : descendants(n.i), rb = bandOf(N[right].y);
+      var cands = pool.filter(function (m) { return m.i !== n.i && !line[m.i] && (type === 'built' ? m.y < n.y : m.y > n.y) && !used['o' + m.i]; })
+        .map(function (m) { return [m.i, Math.abs(bandOf(m.y) - rb) + (fam(m.cat) === fam(N[right].cat) ? 0 : 1.5) + r() * 3]; }).sort(function (a, b) { return a[1] - b[1]; }).slice(0, 3).map(function (x) { return x[0]; });
+      if (cands.length < 3) continue;
+      var opts = [right].concat(cands); for (var k = opts.length - 1; k > 0; k--) { var s = Math.floor(r() * (k + 1)), tmp = opts[k]; opts[k] = opts[s]; opts[s] = tmp; }
+      used[n.i] = 1; opts.forEach(function (o) { used['o' + o] = 1; });
+      out.push({ n: n.i, type: type, right: right, opts: opts });
+    }
+    return out;
+  }
+  function quizStart(daily) {
+    var d = dayNo(); Q = { daily: !!daily, day: d, qs: quizMake(daily ? rng(d * 2654435761) : rng(Math.floor(Math.random() * 4294967296))), at: 0, marks: [], picked: -1 };
+    quizDraw();
+  }
+  function quizDots() { var h = ''; for (var k = 0; k < Q.qs.length; k++) h += '<i class="' + (k < Q.marks.length ? (Q.marks[k] ? 'ok' : 'no') : k === Q.at ? 'now' : '') + '"></i>'; return '<span class="inv-quiz-dots" aria-hidden="true">' + h + '</span>'; }
+  function quizDraw() {
+    if (!E.quiz || !Q) return;
+    var head = '<h3 class="inv-play-h">What did it take? ' + (Q.daily ? '<span>Today&rsquo;s five</span>' : '<span>A practice round</span>') + '</h3>';
+    if (!Q.qs.length) { E.quiz.innerHTML = head + '<p class="inv-quiz-q">No questions could be made.</p>'; return; }
+    if (Q.at >= Q.qs.length) {
+      var score = Q.marks.filter(Boolean).length, st = quizStore();
+      if (Q.daily && st.d !== Q.day) { st.d = Q.day; st.s = score; }
+      if (!(st.b >= score)) st.b = score; quizSave(st);
+      var text = 'Inventions Tree, What did it take? ' + score + '/' + Q.qs.length + ' ' + Q.marks.map(function (m) { return m ? '🟩' : '🟥'; }).join('');
+      E.quiz.innerHTML = head + '<p class="inv-quiz-end"><strong>' + score + ' of ' + Q.qs.length + '</strong> ' + quizDots() + '</p><p class="inv-quiz-why">' + (score === Q.qs.length ? 'Every link found.' : 'Each answer is a line on the tree above: tap a card there to see what it built on.') + (st.b != null ? ' Your best: ' + st.b + ' of ' + QN + '.' : '') + '</p>' +
+        '<p class="inv-play-go"><button type="button" class="inv-road" data-quiz="again">Play another round</button><button type="button" class="inv-road" data-share-text="' + esc(text) + '" data-share-url="https://the-epoch-institute.org/inventions#play">Share</button></p>';
+      return;
+    }
+    var q = Q.qs[Q.at], n = N[q.n], done = Q.picked >= 0, r = N[q.right];
+    E.quiz.innerHTML = head + '<p class="inv-quiz-k">Question ' + (Q.at + 1) + ' of ' + Q.qs.length + ' ' + quizDots() + '</p>' +
+      '<p class="inv-quiz-q">On the tree, which of these ' + (q.type === 'built' ? 'did <strong>' + esc(n.label) + '</strong> (' + esc(n.date) + ') build on?' : 'grew out of <strong>' + esc(n.label) + '</strong> (' + esc(n.date) + ')?') + '</p>' +
+      '<div class="inv-quiz-o">' + q.opts.map(function (o) { var m = N[o]; return '<button type="button" class="inv-quiz-b' + (done ? (o === q.right ? ' ok' : o === Q.picked ? ' no' : '') : '') + '" data-quiz-o="' + o + '"' + (done ? ' disabled' : '') + '>' + esc(m.label) + (done ? '<span>' + esc(m.date) + '</span>' : '') + '</button>'; }).join('') + '</div>' +
+      (done ? '<p class="inv-quiz-why" role="status">' + (Q.picked === q.right ? 'Yes. ' : 'Not that one. ') + (q.type === 'built' ? esc(n.label) + ' built on ' + esc(r.label) + ' (' + esc(r.date) + ').' : esc(r.label) + ' (' + esc(r.date) + ') built on ' + esc(n.label) + '.') + '</p>' +
+        '<p class="inv-play-go"><button type="button" class="inv-road" data-quiz="next">' + (Q.at === Q.qs.length - 1 ? 'See the score' : 'Next question') + '</button><button type="button" class="inv-road" data-go="' + (q.type === 'built' ? n.i : r.i) + '" data-go-road="1">Show it on the tree</button></p>' : '');
+  }
+  function quizInit() {
+    if (!E.quiz) return; var st = quizStore(), d = dayNo();
+    if (st.d === d) {
+      E.quiz.innerHTML = '<h3 class="inv-play-h">What did it take? <span>Today&rsquo;s five</span></h3><p class="inv-quiz-end"><strong>' + st.s + ' of ' + QN + '</strong> today</p><p class="inv-quiz-why">A new five tomorrow.' + (st.b != null ? ' Your best: ' + st.b + ' of ' + QN + '.' : '') + '</p><p class="inv-play-go"><button type="button" class="inv-road" data-quiz="again">Play a practice round</button></p>';
+    } else quizStart(true);
+  }
+  function wirePlay() {
+    if (E.walk) E.walk.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-w]'), w = S.walk; if (!b || !w) return; var a = b.getAttribute('data-w');
+      if (a === 'x') endWalk();
+      else if (a === 'back') { stopPlay(); walkStep(w.at - 1); }
+      else if (a === 'next') { stopPlay(); walkStep(w.at + 1); }
+      else if (a === 'play') { if (playT) stopPlay(); else playT = setInterval(function () { if (!S.walk) { stopPlay(); return; } walkStep(S.walk.at + 1); }, 3200); walkBar(); }
+    });
+    document.addEventListener('keydown', function (e) {
+      if (!S.walk || e.target.closest('input, select, textarea')) return;
+      if (e.key === 'Escape') endWalk(); else if (e.key === 'ArrowRight' && !E.stage.contains(e.target)) { stopPlay(); walkStep(S.walk.at + 1); } else if (e.key === 'ArrowLeft' && !E.stage.contains(e.target)) { stopPlay(); walkStep(S.walk.at - 1); }
+    });
+    function roadClick(e) { var b = e.target.closest('[data-road]'); if (!b) return false; var n = BYSLUG[b.getAttribute('data-road')]; if (n) startWalk(n.i); return true; }
+    if (E.roads) E.roads.addEventListener('click', roadClick);
+    if (E.play) E.play.addEventListener('click', function (e) {
+      if (roadClick(e)) return;
+      var g = e.target.closest('[data-go]'); if (g) { select(+g.getAttribute('data-go'), { go: true, road: !!g.getAttribute('data-go-road') }); if (!S.phone) { var r = E.app.getBoundingClientRect(); window.scrollTo({ top: r.top + scrollY - 76, behavior: 'instant' }); } return; }
+      var o = e.target.closest('[data-quiz-o]'); if (o && Q && Q.picked < 0) { var q = Q.qs[Q.at]; Q.picked = +o.getAttribute('data-quiz-o'); Q.marks.push(Q.picked === q.right); quizDraw(); var nx = E.quiz.querySelector('[data-quiz="next"]'); if (nx) nx.focus(); return; }
+      var a = e.target.closest('[data-quiz]'); if (!a) return;
+      if (a.getAttribute('data-quiz') === 'next') { Q.at++; Q.picked = -1; quizDraw(); } else quizStart(false);
+    });
+    if (E.lucky) E.lucky.addEventListener('click', lucky);
+    document.addEventListener('epoch:kids', function () { buildRoads(); buildToday(); if (S.walk && !gentle(N[S.walk.to])) leaveWalk(); });
+  }
+
   var hintT;
   function hint(t, ms) { E.hint.textContent = t; E.hint.hidden = false; clearTimeout(hintT); hintT = setTimeout(function () { E.hint.hidden = true; }, ms || 1600); }
 
@@ -506,7 +673,8 @@
   function init() {
     E = { app: $('.inv-app'), zoom: $('.inv-zoom'), stage: $('#inv-stage'), world: $('#inv-world'), lanes: $('#inv-lanes'), axis: $('#inv-axis'), panel: $('#inv-panel'), box: $('#inv-box'), strip: $('#inv-strip'),
       vwrap: $('#inv-vwrap'), vbar: $('#inv-vbar'), vages: $('#inv-vages'), vlanes: $('#inv-vlanes'), vlist: $('#inv-vlist'),
-      civv: $('#inv-civview'), listv: $('#inv-listview'), cats: $('#inv-cats'), catn: $('#inv-cat-n'), civ: $('#inv-civ'), q: $('#inv-q'), sugg: $('#inv-sugg'), status: $('#inv-status'), hint: $('#inv-hint') };
+      civv: $('#inv-civview'), listv: $('#inv-listview'), cats: $('#inv-cats'), catn: $('#inv-cat-n'), civ: $('#inv-civ'), q: $('#inv-q'), sugg: $('#inv-sugg'), status: $('#inv-status'), hint: $('#inv-hint'),
+      walk: $('#inv-walk'), roads: $('#inv-roads'), seen: $('#inv-seen'), lucky: $('#inv-lucky'), play: $('#inv-play'), today: $('#inv-today'), quiz: $('#inv-quiz') };
     if (!E.stage) return;
     S.phone = MQ.matches;
     load(function () {
@@ -514,17 +682,20 @@
       (q.get('hide') || '').split(',').forEach(function (c) { if (CATL[c]) S.hide[c] = 1; });
       if (!q.get('hide') && kids()) S.hide.weapons = 1;
       if (q.get('civ') && CIVS.some(function (c) { return c.name === q.get('civ'); })) S.civ = q.get('civ');
-      buildCats(); buildCivs(); wire();
+      buildCats(); buildCivs(); wire(); wirePlay();
       var v = q.get('view'); S.view = v === 'civ' || v === 'list' ? v : 'tree';
       setView(S.view); draw();
-      var f = BYSLUG[q.get('focus') || ''];
-      if (f) select(f.i, { go: true, now: true });
+      var f = BYSLUG[q.get('focus') || ''], rd = BYSLUG[q.get('road') || ''];
+      buildRoads(); buildToday(); quizInit(); seenLine();
+      if (rd && gentle(rd)) startWalk(rd.i, true);
+      else if (f) select(f.i, { go: true, now: true });
       else if (!S.phone && LAY) { var s = stageSize(); S.k = Math.max(0.72, Math.min(1, s.h / LAY.h)); S.tx = labW(); S.ty = 0; clamp(); apply(); }   // every lane in view where the screen allows, never too small to read
       E.status.textContent = N.length + ' inventions and discoveries in ' + CATS.length + ' lanes';
       document.documentElement.classList.add('inv-ready');
     });
     window.epochInventions = { nodes: function () { return N; }, cats: function () { return CATS; }, civs: function () { return CIVS; }, state: S, layout: function () { return LAY; },
-      ancestors: ancestors, descendants: descendants, select: function (slug, road) { var n = BYSLUG[slug]; if (n) select(n.i, { go: true, road: !!road }); return !!n; }, setView: setView, fitYears: fitYears,
+      ancestors: ancestors, descendants: descendants, walk: function (slug) { var n = BYSLUG[slug]; if (n) startWalk(n.i, true); return S.walk; }, step: function (k) { walkStep(k, true); return S.walk; }, walkList: walkList, seen: function () { return SEEN; }, todays: todays,
+      quiz: function () { return Q; }, quizMake: function (seed) { return quizMake(rng(seed)); }, select: function (slug, road) { var n = BYSLUG[slug]; if (n) select(n.i, { go: true, road: !!road }); return !!n; }, setView: setView, fitYears: fitYears,
       ages: AGES, families: FAMS, fam: fam, strip: function () { return E.win ? { left: parseFloat(E.win.style.left), width: parseFloat(E.win.style.width) } : null; } };
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
