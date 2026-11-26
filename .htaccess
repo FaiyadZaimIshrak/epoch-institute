@@ -51,6 +51,7 @@ AddType font/woff2 .woff2
   RewriteRule ^encyclopedia/lady-hyegyong$ /encyclopedia/lady-hyegyeong [R=301,L]
   RewriteRule ^encyclopedia/hu-shi$ /encyclopedia/hu-shih [R=301,L]
   RewriteRule ^encyclopedia/francis-i$ /encyclopedia/francis-i-of-france [R=301,L]
+  RewriteRule ^encyclopedia/babito-dynasty$ /encyclopedia/babiito-dynasty [R=301,L]
   # profiles taken off the site: the old address goes to the entry (scripts/kinds/remove-profile.js)
   RewriteRule ^battle/battle-of-red-cliffs$ /encyclopedia/battle-of-red-cliffs [R=301,L]
   RewriteRule ^battle/battle-of-tours$ /encyclopedia/battle-of-tours [R=301,L]

@@ -3947,10 +3947,23 @@ then declutter. Answers: about 100 each; all sections; menus by subject plus hub
   against its entry (the work folder %LOCALAPPDATA%\epoch-tools\gsc-nov25: join.txt, picks.tsv, verify.js, confirm.js,
   rows.js): 66 have an article of their own (entry-wikidata-manual.tsv, "editor" rows of entry-wikidata.tsv), 43 got the
   longer text (wave w85, three writers; 22 articles too thin), all 66 a Sources section. The other 103 lead only to a
-  broader article, a namesake or nothing. Left open: the ledger now lists about 740 more confirmed entries without a
-  longer text (entries added since 17 Nov, the 60 country entries among them): `more-list.js fetch` and `wave` take
-  them; babito-dynasty and babiito-dynasty are one subject (fold-entry.js); the item of Udayana (king) is held by the
-  entry vasavadatta, which looks like a wrong match.
+  broader article, a namesake or nothing.
+- **Wave w86 (26-27 Nov 2026; the user: "newsletter done.. do the rest"):** the 741 confirmed entries the ledger had
+  gained since 17 Nov (the country entries of wave ms1, well-known people, events and ideas): 713 with an article long
+  enough, 36 batches, 711 written (267,000 words), 2 writers' skips; the ledger is at 24,048 done and nothing open.
+  The session runs at most twenty writers at once: start the rest as reports come in. What went wrong and how it was
+  mended:
+  - five writers printed the article's version where it differs from the entry (Nostradamus's quatrain counts,
+    Gorky's death, who set the Easter rule, the first Somoza year): each was sent back by SendMessage to print
+    neither. The prompt now says so in one line ("Where an article disagrees with the entry, print NEITHER version").
+  - 76 texts ran to 430-600 words (the checker lists the count and does not flag it). A trimming agent wrote a
+    script that deleted low-scoring sentences unread, which broke the sense in 27 of them ("Peter did so after the
+    arrest" with the prediction cut). Three readers then read all 76 in full and repaired them from the saved
+    articles. NEVER let a trim be done by score: say in the brief that every cut is read, or better, give the
+    writers the hard cap ("Keep each text to 260-420 words") from the start, as the last batches had.
+  - the wave folder's helpers\lengths.js counts the words of every text: run it before gathering.
+- babito-dynasty was folded into babiito-dynasty (fold-entry.js; three profiles rescanned). The item of Udayana
+  (king) stays with the entry vasavadatta as the editor's "redirect" row of an earlier round.
 - A quoted heredoc in Git Bash turned `'\\n'` into a line break once more (a patch of kids-stories-merge.js): such
   scripts are written with the Write tool.
 

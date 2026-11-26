@@ -16520,7 +16520,6 @@ var SEARCH_INDEX = [
 [0,"Kabalega","person","Chwa II Kabalega|Kabarega",5],
 [0,"Kibiro","place","",4,1],
 [0,"Lake Albert","place","",4],
-[0,"Babito dynasty","group","Bito dynasty",3],
 [0,"Treaty of Kiganda","event","",3],
 [0,"Great Lakes Twa","group","",3,1],
 [0,"Kainji Dam","work","",3,1],
