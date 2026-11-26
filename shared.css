@@ -5649,6 +5649,10 @@ a.blog-card { display: block; color: inherit; text-decoration: none; }
 .home-continue-card .hc-n { font-family: var(--font-text); font-size: 16px; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .home-continue-card .hc-t { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
 .home-continue-clear { background: none; border: 0; cursor: pointer; }
+.home-continue-card.hc-path { border-color: rgba(var(--gold-rgb), 0.6); }
+.home-continue-card.hc-path .hc-n { color: var(--gold-light); }
+.home-continue-run[hidden] { display: none; }
+@media (max-width: 600px) { .home-continue-acts { flex-wrap: wrap; gap: 6px 14px; } }
 .home-continue-acts { display: inline-flex; align-items: baseline; gap: 18px; }
 .tih-strip-pic { display: block; position: relative; border-radius: 4px; overflow: hidden; border: 0.5px solid var(--border); text-decoration: none; }
 /* the caption names the day's anniversary event; it sits on the picture, so its colours are fixed in both themes */
@@ -7034,6 +7038,13 @@ html.dc-ql-on { overflow: hidden; }
 .kc-tales { list-style: none; margin: 0 0 8px; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
 .kc-tales a { display: flex; align-items: center; gap: 12px; min-height: 72px; padding: 8px 12px 8px 8px; border: 2px solid var(--border); border-radius: 18px; background: var(--surface); color: var(--text); text-decoration: none; font-family: var(--font-ui); font-weight: 700; font-size: 16px; line-height: 1.3; }
 .kc-tales a:hover { border-color: var(--gold); }
+.kc-tales-more { margin: 10px 0 0; }
+.kc-tales-more > summary { display: inline-block; cursor: pointer; padding: 10px 18px; border: 2px solid var(--border); border-radius: 999px; font-family: var(--font-ui); font-weight: 700; color: var(--text); list-style: none; }
+.kc-tales-more > summary::-webkit-details-marker { display: none; }
+.kc-tales-more > summary::after { content: " +"; color: var(--gold); }
+.kc-tales-more[open] > summary::after { content: " \2212"; }
+.kc-tales-more > summary:hover { border-color: var(--gold); }
+.kc-tales-more > .kc-tales { margin-top: 10px; }
 .kc-tales img { flex: none; width: 56px; height: 56px; border-radius: 12px; object-fit: cover; object-position: center 25%; }
 .kc-tale-ph { flex: none; width: 56px; height: 56px; border-radius: 12px; background: rgba(var(--kd-pop2-rgb), 0.25); }
 .kc-ladder { padding: 16px 16px 18px; border: 2px solid var(--border); border-radius: var(--border-radius-lg); background: var(--surface); }
@@ -7224,6 +7235,8 @@ kbd { opacity: 1; color: var(--muted); }
 .qz-how p a { text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgba(var(--gold-rgb), 0.55); text-underline-offset: 3px; }
 .atl-none a { text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgba(var(--gold-rgb), 0.55); text-underline-offset: 3px; }
 .essay-kicker a { text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgba(var(--gold-rgb), 0.55); text-underline-offset: 3px; }
+.ref-note a { color: var(--gold-light); text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgba(var(--gold-rgb), 0.55); text-underline-offset: 3px; }
+.ref-note a:hover { color: var(--gold); }
 .gl-list dt a { text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgba(var(--gold-rgb), 0.55); text-underline-offset: 3px; }
 .inv-list a { text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgba(var(--gold-rgb), 0.55); text-underline-offset: 3px; }
 .st-ties li > span > a { text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgba(var(--gold-rgb), 0.55); text-underline-offset: 3px; }

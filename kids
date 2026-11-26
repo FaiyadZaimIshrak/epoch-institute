@@ -94,9 +94,9 @@
   </div>
 
   <h2 class="kd-h2" id="stories">Stories of the peoples</h2>
-  <p class="kd-sub">Short picture stories of peoples and cultures from all over the world, from the first farmers to peoples who live on today. Each story opens their page, and you can ask the page to read it to you.</p>
-  <ul class="kc-tales">
+  <p class="kd-sub">Short picture stories of peoples and cultures from all over the world, from the first farmers to peoples who live on today. Each story opens their page, and you can ask the page to read it to you. Under them are the stories of the faiths and of the movements that set out to change their world.</p>
   <!-- build:kids-tales -->
+<ul class="kc-tales">
 <li><a href="/culture/aboriginal-australians"><img src="/images/encyclopedia/thumbs/aboriginal-tasmanians.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Aboriginal Australians</span></a></li>
 <li><a href="/culture/jomon-culture"><img src="/images/encyclopedia/thumbs/lacquerware.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Jōmon</span></a></li>
 <li><a href="/culture/natufians"><img src="/images/encyclopedia/thumbs/mount-carmel.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Natufians</span></a></li>
@@ -162,8 +162,75 @@
 <li><a href="/culture/kalinago"><img src="/images/encyclopedia/thumbs/kalina-people.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Kalinago</span></a></li>
 <li><a href="/culture/maori"><img src="/images/encyclopedia/thumbs/lapita-pottery.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Māori</span></a></li>
 <li><a href="/culture/lakota-people"><img src="/images/encyclopedia/thumbs/mississippi-river.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Lakota</span></a></li>
+</ul>
+<details class="kc-tales-more"><summary>Stories of the faiths</summary>
+<ul class="kc-tales">
+<li><a href="/religion/mesopotamian-religion"><img src="/images/encyclopedia/thumbs/cuneiform.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Mesopotamian religion</span></a></li>
+<li><a href="/religion/ancient-egyptian-religion"><img src="/images/encyclopedia/thumbs/narmer.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of ancient Egyptian religion</span></a></li>
+<li><a href="/religion/canaanite-religion"><img src="/images/encyclopedia/thumbs/ebla.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Canaanite religion</span></a></li>
+<li><a href="/religion/hinduism"><img src="/images/encyclopedia/thumbs/vedas.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Hinduism</span></a></li>
+<li><a href="/religion/ancient-greek-religion"><img src="/images/encyclopedia/thumbs/hesiod.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of ancient Greek religion</span></a></li>
+<li><a href="/religion/chinese-folk-religion"><img src="/images/encyclopedia/thumbs/guan-yu.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Chinese folk religion</span></a></li>
+<li><a href="/religion/mesoamerican-religion"><img src="/images/encyclopedia/thumbs/pyramid-of-the-sun.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Mesoamerican religion</span></a></li>
+<li><a href="/religion/zoroastrianism"><img src="/images/encyclopedia/thumbs/mithra.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Zoroastrianism</span></a></li>
+<li><a href="/religion/judaism"><img src="/images/encyclopedia/thumbs/moses.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Judaism</span></a></li>
+<li><a href="/religion/celtic-religion"><img src="/images/encyclopedia/thumbs/hill-of-tara.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Celtic religion</span></a></li>
+<li><a href="/religion/roman-religion"><img src="/images/encyclopedia/thumbs/numa-pompilius.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Roman religion</span></a></li>
+<li><a href="/religion/buddhism"><img src="/images/encyclopedia/thumbs/bodh-gaya.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Buddhism</span></a></li>
+<li><a href="/religion/confucianism"><img src="/images/encyclopedia/thumbs/confucius.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Confucianism</span></a></li>
+<li><a href="/religion/jainism"><img src="/images/encyclopedia/thumbs/mahavira.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Jainism</span></a></li>
+<li><a href="/religion/daoism"><img src="/images/encyclopedia/thumbs/daodejing.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Daoism</span></a></li>
+<li><a href="/religion/tengrism"><img src="/images/encyclopedia/thumbs/xiongnu-empire.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Tengrism</span></a></li>
+<li><a href="/religion/shinto"><img src="/images/encyclopedia/thumbs/nihon-shoki.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Shinto</span></a></li>
+<li><a href="/religion/bon"><img src="/images/encyclopedia/thumbs/mount-kailash.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Bon</span></a></li>
+<li><a href="/religion/christianity"><img src="/images/encyclopedia/thumbs/jesus.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Christianity</span></a></li>
+<li><a href="/religion/mithraism"><img src="/images/encyclopedia/thumbs/mount-nemrut.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Mithraism</span></a></li>
+<li><a href="/religion/manichaeism"><img src="/images/encyclopedia/thumbs/shapur-i.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Manichaeism</span></a></li>
+<li><a href="/religion/norse-religion"><img src="/images/encyclopedia/thumbs/woden.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Norse religion</span></a></li>
+<li><a href="/religion/slavic-paganism"><img src="/images/encyclopedia/thumbs/svantevit.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Slavic paganism</span></a></li>
+<li><a href="/religion/islam"><img src="/images/encyclopedia/thumbs/mecca.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Islam</span></a></li>
+<li><a href="/religion/yoruba-religion"><img src="/images/encyclopedia/thumbs/oduduwa.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Yoruba religion</span></a></li>
+<li><a href="/religion/druze-faith"><img src="/images/encyclopedia/thumbs/druze.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Druze faith</span></a></li>
+<li><a href="/religion/yazidism"><img src="/images/encyclopedia/thumbs/yazidis.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Yazidism</span></a></li>
+<li><a href="/religion/sikhism"><img src="/images/encyclopedia/thumbs/amritsar.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Sikhism</span></a></li>
+<li><a href="/religion/haitian-vodou"><img src="/images/encyclopedia/thumbs/code-noir.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Haitian Vodou</span></a></li>
+<li><a href="/religion/bahai-faith"><img src="/images/encyclopedia/thumbs/shiraz.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Bahá’í Faith</span></a></li>
+</ul></details>
+<details class="kc-tales-more"><summary>Stories of the movements</summary>
+<ul class="kc-tales">
+<li><a href="/movement/bhakti-movement"><img src="/images/encyclopedia/thumbs/bhagavad-gita.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Bhakti movement</span></a></li>
+<li><a href="/movement/renaissance-humanism"><img src="/images/encyclopedia/thumbs/petrarch.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Renaissance humanism</span></a></li>
+<li><a href="/movement/protestant-reformation"><img src="/images/encyclopedia/thumbs/albert-of-brandenburg.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Protestant Reformation</span></a></li>
+<li><a href="/movement/scientific-revolution"><img src="/images/encyclopedia/thumbs/claudius-ptolemy.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Scientific Revolution</span></a></li>
+<li><a href="/movement/counter-reformation"><img src="/images/encyclopedia/thumbs/martin-luther.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Counter-Reformation</span></a></li>
+<li><a href="/movement/enlightenment"><img src="/images/encyclopedia/thumbs/john-locke.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Enlightenment</span></a></li>
+<li><a href="/movement/abolitionism"><img src="/images/encyclopedia/thumbs/zong-massacre.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of abolitionism</span></a></li>
+<li><a href="/movement/romanticism"><img src="/images/encyclopedia/thumbs/johann-wolfgang-von-goethe.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Romanticism</span></a></li>
+<li><a href="/movement/labour-movement"><img src="/images/encyclopedia/thumbs/industrial-revolution.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the labour movement</span></a></li>
+<li><a href="/movement/luddites"><img src="/images/encyclopedia/thumbs/napoleonic-wars.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Luddites</span></a></li>
+<li><a href="/movement/decembrist-revolt"><img src="/images/encyclopedia/thumbs/alexander-i-of-russia.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Decembrist revolt</span></a></li>
+<li><a href="/movement/nahda"><img src="/images/encyclopedia/thumbs/muhammad-ali-of-egypt.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Nahda</span></a></li>
+<li><a href="/movement/chartism"><img src="/images/encyclopedia/thumbs/chartism.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Chartism</span></a></li>
+<li><a href="/movement/tanzimat"><img src="/images/encyclopedia/thumbs/mahmud-ii.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Tanzimat</span></a></li>
+<li><a href="/movement/womens-suffrage-movement"><img src="/images/encyclopedia/thumbs/mary-wollstonecraft.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the women’s suffrage movement</span></a></li>
+<li><a href="/movement/meiji-restoration"><img src="/images/encyclopedia/thumbs/tokugawa-shogunate.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Meiji Restoration</span></a></li>
+<li><a href="/movement/self-strengthening-movement"><img src="/images/encyclopedia/thumbs/first-opium-war.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Self-Strengthening Movement</span></a></li>
+<li><a href="/movement/environmental-movement"><img src="/images/encyclopedia/thumbs/william-wordsworth.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the environmental movement</span></a></li>
+<li><a href="/movement/modernism"><img src="/images/encyclopedia/thumbs/charles-darwin.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Modernism</span></a></li>
+<li><a href="/movement/impressionism"><img src="/images/encyclopedia/thumbs/napoleon-iii.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Impressionism</span></a></li>
+<li><a href="/movement/indian-independence-movement"><img src="/images/encyclopedia/thumbs/dadabhai-naoroji.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Indian independence movement</span></a></li>
+<li><a href="/movement/pan-africanism"><img src="/images/encyclopedia/thumbs/battle-of-adwa.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Pan-Africanism</span></a></li>
+<li><a href="/movement/harlem-renaissance"><img src="/images/encyclopedia/thumbs/great-migration-african-american.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Harlem Renaissance</span></a></li>
+<li><a href="/movement/bauhaus"><img src="/images/encyclopedia/thumbs/walter-gropius.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Bauhaus</span></a></li>
+<li><a href="/movement/may-fourth-movement"><img src="/images/encyclopedia/thumbs/yuan-shikai.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the May Fourth Movement</span></a></li>
+<li><a href="/movement/negritude"><img src="/images/encyclopedia/thumbs/toussaint-louverture.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Négritude</span></a></li>
+<li><a href="/movement/anti-apartheid-movement"><img src="/images/encyclopedia/thumbs/apartheid.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the anti-apartheid movement</span></a></li>
+<li><a href="/movement/civil-rights-movement"><img src="/images/encyclopedia/thumbs/jim-crow-laws.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the civil rights movement</span></a></li>
+<li><a href="/movement/non-aligned-movement"><img src="/images/encyclopedia/thumbs/bandung-conference.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Non-Aligned Movement</span></a></li>
+<li><a href="/movement/solidarity"><img src="/images/encyclopedia/thumbs/prague-spring.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of Solidarity</span></a></li>
+<li><a href="/movement/velvet-revolution"><img src="/images/encyclopedia/thumbs/alexander-dubcek.jpg" alt="" loading="lazy" width="56" height="56"><span>The story of the Velvet Revolution</span></a></li>
+</ul></details>
 <!-- /build:kids-tales -->
-  </ul>
 
   <h2 class="kd-h2" id="themes">Explore by theme</h2>
   <p class="kd-sub">Pick a door to step inside. Every picture opens a page with the whole story.</p>

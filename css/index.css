@@ -1483,6 +1483,12 @@ html[data-kids="1"] .page-useful { display: none; }
 .home-continue-card .hc-n { font-family: var(--font-text); font-size: 16px; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .home-continue-card .hc-t { font-family: var(--font-ui); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
 .home-continue-clear { background: none; border: 0; cursor: pointer; }
+.home-continue-card.hc-path { border-color: rgba(var(--gold-rgb), 0.6); }
+.home-continue-card.hc-path .hc-n { color: var(--gold-light); }
+.home-continue-run[hidden] { display: none; }
+@media (max-width: 600px) {
+.home-continue-acts { flex-wrap: wrap; gap: 6px 14px; }
+}
 .home-continue-acts { display: inline-flex; align-items: baseline; gap: 18px; }
 .tih-strip-pic { display: block; position: relative; border-radius: 4px; overflow: hidden; border: 0.5px solid var(--border); text-decoration: none; }
 .tih-strip-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 34px 16px 14px; background: linear-gradient(rgba(8, 9, 12, 0), rgba(8, 9, 12, 0.9)); color: #f4efe4; font-family: var(--font-display); font-size: 16px; line-height: 1.3; }

@@ -78,6 +78,7 @@
 
 <script src="/shared-data.js"></script>
 <script src="/shared-nav.js"></script>
+<script>/*recover*/(function(){var k="epoch-again",n=0;try{n=+sessionStorage.getItem(k)||0}catch(e){}if(typeof EMPIRES==="undefined"||typeof initNav!=="function"){if(n<2){try{sessionStorage.setItem(k,n+1)}catch(e){return}setTimeout(function(){location.reload()},700*(n+1))}}else if(n){try{sessionStorage.removeItem(k)}catch(e){}}})();</script>
 <script src="/home-data.js?v=44"></script>
 <script src="/quiz.js?v=6"></script>
 <script>

@@ -88,7 +88,10 @@ for (const [kind, [title0, h, what, holds]] of Object.entries(KINDS)) {
     '<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">' + esc(h) + '</h1><p class="ref-lede">' + n + ' ' + esc(what) + ', region by region and oldest first. Each profile gives ' + esc(holds) + '. To see them as cards, on a timeline or with filters, open <a href="/profiles?kind=' + (kind === 'polity' ? 'polity' : kind) + '">All Profiles</a>.</p></header>\n' +
     SURPRISE + mapOf(kind, list, h) +
     (regions.length > 1 ? '<nav class="ref-letters hs-regions" aria-label="Regions">' + regions.map(r => '<a href="#' + regSlug(r) + '">' + esc(r) + '</a>').join('') + '</nav>\n' : '') +
-    groups.join('\n') + '\n</div>\n' + SURJS;
+    groups.join('\n') + '\n' +
+    // every index links the others in the page itself: the menus are drawn in script, and four of these pages had no
+    // static link from anywhere (the SEO audit of 26 Nov 2026)
+    '<p class="ref-note kx-others">Other profiles: ' + Object.entries(KINDS).filter(o => o[0] !== kind).map(o => '<a href="/' + SD.PROFILE_KINDS[o[0]].path + '/">' + esc(o[1][1]) + '</a>').join(' · ') + '.</p>\n</div>\n' + SURJS;
   const page = head + '</head>\n<body data-nav="profiles">\n\n\n' + main + tail, f = path.join(R, K.path, 'index');
   if (CHECK) { if (!fs.existsSync(f) || fs.readFileSync(f, 'utf8') !== page) { console.log('out of date: /' + K.path + '/'); bad++; } continue; }
   if (!fs.existsSync(f) || fs.readFileSync(f, 'utf8') !== page) { fs.writeFileSync(f, page); written++; }

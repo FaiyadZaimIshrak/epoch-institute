@@ -3407,6 +3407,8 @@ kbd { opacity: 1; color: var(--muted); }
 [data-theme="light"] .soc-loc { color: var(--text); }
 [data-theme="light"] .tab.active { color: var(--bg); }
 .essay-kicker a { text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgba(var(--gold-rgb), 0.55); text-underline-offset: 3px; }
+.ref-note a { color: var(--gold-light); text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgba(var(--gold-rgb), 0.55); text-underline-offset: 3px; }
+.ref-note a:hover { color: var(--gold); }
 .gl-list dt a { text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgba(var(--gold-rgb), 0.55); text-underline-offset: 3px; }
 .inv-list a { text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgba(var(--gold-rgb), 0.55); text-underline-offset: 3px; }
 .st-ties li > span > a { text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgba(var(--gold-rgb), 0.55); text-underline-offset: 3px; }

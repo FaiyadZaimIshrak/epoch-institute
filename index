@@ -106,7 +106,7 @@
 <section class="home-section" id="home-continue" aria-labelledby="continue-title" hidden>
   <div class="home-section-hd">
     <h2 class="home-section-title" id="continue-title">Continue where you left off</h2>
-    <span class="home-continue-acts"><a class="home-section-more" href="/passport">My Passport &rarr;</a><button type="button" class="home-section-more home-continue-clear" id="home-continue-clear">Clear</button></span>
+    <span class="home-continue-acts"><a class="home-section-more home-continue-run" id="home-continue-run" href="/today" hidden>Today at the Institute &rarr;</a><a class="home-section-more" href="/passport">My Passport &rarr;</a><button type="button" class="home-section-more home-continue-clear" id="home-continue-clear">Clear</button></span>
   </div>
   <div class="home-continue-row" id="home-continue-row"></div>
 </section>
@@ -462,11 +462,23 @@ initNav('home');
 (function () {
   function get(k) { try { return JSON.parse(localStorage.getItem(k) || 'null'); } catch (e) { return null; } }
   var recent = get('epoch-recent') || [];
-  if (Array.isArray(recent) && recent.length >= 2) {
+  // the reading path being followed (shared-nav.js epoch-path): its next stop not yet read comes first
+  var jp = get('epoch-path'), seen = get('epoch-seen') || [], pathCard = '';
+  if (jp && jp.s && Array.isArray(jp.steps) && Array.isArray(seen)) {
+    var nx = -1; jp.steps.forEach(function (s, i) { if (nx < 0 && s && seen.indexOf(String(s[0]).replace(/\/+$/, '')) < 0) nx = i; });
+    if (nx >= 0) pathCard = '<a class="home-continue-card hc-path" id="home-continue-path" href="' + escHtml(jp.steps[nx][0]) + '" data-i="' + nx + '"><span class="hc-n">' + (nx ? 'Next stop: ' : 'First stop: ') + escHtml(jp.steps[nx][1]) + '</span><span class="hc-t">' + escHtml(jp.t || 'Reading path') + ' &middot; stop ' + (nx + 1) + ' of ' + jp.steps.length + '</span></a>';
+  }
+  // the run of days with a visit (epoch-visits, as /today counts it), from the second day on
+  var visits = get('epoch-visits') || [], today = Math.floor(Date.now() / 864e5), run = 0;
+  if (Array.isArray(visits)) { var d = today; if (visits.indexOf(d) < 0) d--; while (visits.indexOf(d) >= 0) { run++; d--; } if (visits.indexOf(today) < 0 && run) run++; }
+  if (Array.isArray(recent) && recent.length >= 2 || pathCard) {
     var row = document.getElementById('home-continue-row');
-    row.innerHTML = recent.slice(0, 6).map(function (r) {
+    row.innerHTML = pathCard + (Array.isArray(recent) && recent.length >= 2 ? recent.slice(0, pathCard ? 5 : 6).map(function (r) {
       return '<a class="home-continue-card" href="' + escHtml(r.u) + '"><span class="hc-n">' + escHtml(r.n) + '</span><span class="hc-t">' + escHtml(r.t) + '</span></a>';
-    }).join('');
+    }).join('') : '');
+    var pc = document.getElementById('home-continue-path');
+    if (pc) pc.addEventListener('click', function () { jp.i = +pc.getAttribute('data-i'); try { localStorage.setItem('epoch-path', JSON.stringify(jp)); } catch (e) {} });
+    if (run > 1) { var rn = document.getElementById('home-continue-run'); rn.textContent = run + ' days in a row →'; rn.hidden = false; }
     document.getElementById('home-continue').hidden = false;
     document.getElementById('home-continue-clear').addEventListener('click', function () {
       try { localStorage.removeItem('epoch-recent'); } catch (e) {}

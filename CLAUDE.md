@@ -3859,6 +3859,41 @@ then declutter. Answers: about 100 each; all sections; menus by subject plus hub
   - **API for tests** (root._bf): go, seek, time, total, starts, phase, playing, camera(on), view. A slowed phone (4x)
     spends 6-8 ms of script a frame on the fullest fields (about 600 marks). scripts/tests/battle-maps.js (18 checks).
 
+## Full check of 26 Nov 2026 (the user: "run a full check … find the lackings … what more can be done to increase visitors and retention")
+- **The check** (outputs in %LOCALAPPDATA%\epoch-tools\fullcheck): seo-audit, snippet-audit, title-audit, escape-check,
+  crawl-static --strict, look-contrast, completeness, crawl-browser (desktop, phone, Kids, dark: 175 pages each),
+  layout-audit, a11y-audit in three modes, link-colour-audit. Nothing failing but what is listed here:
+  - links in a `.ref-note` were the browser's blue on /encyclopedia/wars and /encyclopedia/quotations (2.08:1, dark):
+    `.ref-note a` in the "WCAG 2.2 AA" block;
+  - /empire/, /religion/, /language/ and /government/ had no link in any page's own markup: every kind index now ends
+    with "Other profiles: …" (make-kind-indexes.js, p.kx-others);
+  - the Secularism entry's description equalled the ideology's teaser (a "w" fix);
+  - nine works of entry-sources.json carried stray dots from Wikipedia's templates ("Kamal S. . Salibi").
+  - Left: /centuries/ bar and the map nodes (a11y, as before); layout-audit's 1,630 lines are LEVEL notes of the
+    footer's unequal columns, /race's screen-reader label, France's folded timeline and the Write keys.
+- **What is lacking** (completeness.js, 26 Nov): 1,348 entries of weight 4+ without the longer text; 495 of weight 5+
+  without a picture; 303 people and 70 events undated; 1,478 states without a picture; 128 profiles without references
+  (cities 43, battles 33, works 26); 17 profiles with no section picture; 39 songs without a performance, 32 without
+  their public-domain words. Only a third of the entries with a confirmed article have the longer text. The only
+  Search Console export is of 14 Nov: nothing since is measured.
+- **Retention, built:**
+  - **Home, "Continue where you left off":** the next unread stop of the reading path being followed (epoch-path,
+    epoch-seen) is the first card (a.hc-path#home-continue-path; opening it moves the path on), shown even without
+    recent pages; from the second day in a row "N days in a row →" (a#home-continue-run, to /today; epoch-visits, counted
+    as /today counts it). scripts/tests/home-continue.js.
+  - **A script that does not arrive, on the other hand pages:** scripts/tools/page-recover.js [--check] writes a
+    one-line snippet after the shared-nav.js tag of profiles, explorer, quiz, faiths, passport, search, compare and
+    race: with EMPIRES or initNav missing the page loads itself again, at most twice (sessionStorage epoch-again).
+    scripts/tests/pages-recover.js. The generated pages still have none (the service worker asks again for them).
+  - **Kids corner:** "Stories of the peoples" also lists the 30 stories of the faiths and the 31 of the movements,
+    each behind a fold (details.kc-tales-more); the build:kids-tales markers now hold the lists themselves.
+- **Proposed and not built** (the plan's order): posters for essays and months; references and section pictures for the
+  profiles without; pictures for the 495 well-known entries; longer-entry waves chosen from a new Search Console export
+  (positions 4-12 first); hubs for treaties and capitals if the export shows them; an .ics reminder for the daily
+  games; passport stamps per subject hub. The owner's: a new export, sending the newsletter, the feedback files.
+- A quoted heredoc in Git Bash turned `'\\n'` into a line break once more (a patch of kids-stories-merge.js): such
+  scripts are written with the Write tool.
+
 ## Connections map and the states register
 - `data/polities.json` — register of every state (incl. the modern Levant: Israel, the State of Palestine, Jordan, Lebanon, Syria — added by hand Oct 2026, successor links to the mandates): nodes {id, n name, t type, b broad region, s/e years, a aka, m mode, c capital, mo modern countries, p profile url} and links {s, t, r relation, f/u years}. Successions stored one way (successor-of). Built from regional research files by the scratchpad states/merge.ps1 (dedupe, relation resolution, validation report).
 - `connections` page + `connections-map.js` (no D3; radial layout, timeline, year slider, outliers). Empire pages include a lazy-loaded mini map (section #connections).
