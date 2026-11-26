@@ -73,6 +73,7 @@ const body = `</head>
 <section class="now-sec td-keep" id="td-keep" aria-labelledby="td-keep-t" hidden>
   <h2 class="ref-sec-title" id="td-keep-t">Come back tomorrow</h2>
   <p class="now-note" id="td-install" hidden></p>
+  <p class="now-note" id="td-cal" hidden></p>
   <div id="td-nl"></div>
 </section>
 </div>

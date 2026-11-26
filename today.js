@@ -80,6 +80,25 @@
         inst.querySelector('button').addEventListener('click', function () { try { ev.prompt(); } catch (e) {} if (typeof gaEvent === 'function') gaEvent('install_prompt', { source: '/today' }); inst.hidden = true; });
       });
     }
+    // a daily reminder without an account (26 Nov 2026): a calendar file made here, one event a day at 08:00 by the
+    // reader's own clock, linking this page; nothing is sent anywhere. Not in in-app browsers (a download goes nowhere).
+    var cal = $('td-cal');
+    if (cal && visits.length >= 2 && !window.EPOCH_INAPP) {
+      cal.innerHTML = 'Or let your calendar remind you. <a class="td-install-b td-cal-b" download="epoch-today.ics" href="#">Add a daily reminder</a>';
+      var cb = cal.querySelector('a'), set = function () { cb.href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(icsText(new Date())); };
+      cb.addEventListener('pointerdown', set); cb.addEventListener('focus', set); set();
+      cb.addEventListener('click', function () { if (typeof gaEvent === 'function') gaEvent('calendar_reminder', { source: '/today' }); });
+      cal.hidden = false; shown();
+    }
   }
-  window.epochToday = { rows: rows, done: done, run: run, state: S };
+  // the calendar file: a floating local time (no time zone), so 08:00 is the reader's 08:00 wherever they are
+  function icsText(now) {
+    var p2 = function (n) { return (n < 10 ? '0' : '') + n; }, t = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+    var stamp = now.getUTCFullYear() + p2(now.getUTCMonth() + 1) + p2(now.getUTCDate()) + 'T' + p2(now.getUTCHours()) + p2(now.getUTCMinutes()) + p2(now.getUTCSeconds()) + 'Z';
+    return ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//The Epoch Institute//Today//EN', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH', 'BEGIN:VEVENT',
+      'UID:today-reminder@the-epoch-institute.org', 'DTSTAMP:' + stamp, 'DTSTART:' + t.getFullYear() + p2(t.getMonth() + 1) + p2(t.getDate()) + 'T080000', 'DURATION:PT10M', 'RRULE:FREQ=DAILY',
+      'SUMMARY:Today at the Institute', 'DESCRIPTION:Today in history\\, the song of the day and the daily games: https://the-epoch-institute.org/today',
+      'URL:https://the-epoch-institute.org/today', 'TRANSP:TRANSPARENT', 'END:VEVENT', 'END:VCALENDAR'].join('\r\n') + '\r\n';
+  }
+  window.epochToday = { rows: rows, done: done, run: run, state: S, ics: icsText };
 })();

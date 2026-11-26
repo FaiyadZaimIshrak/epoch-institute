@@ -41,7 +41,13 @@ let fails = 0; const ok = (n, c, x) => { console.log((c ? 'ok   ' : 'FAIL ') + n
     p = await open('/today', false, true); await p.evaluate(() => window.dispatchEvent(new Event('beforeinstallprompt'))); k = await keep(p);
     ok(W + 'a returning reader is offered the home screen when the browser allows it', k.shown && k.inst && k.btn && k.wide <= 0, k); await p.context().close();
     p = await open('/today', true, true); await p.evaluate(() => window.dispatchEvent(new Event('beforeinstallprompt'))); k = await keep(p);
-    ok(W + 'Kids mode: neither', !k.shown && !k.form && !k.inst, k); await p.context().close();
+    ok(W + 'Kids mode: neither', !k.shown && !k.form && !k.inst, k);
+    const kc = await p.evaluate(() => !document.getElementById('td-cal').hidden); ok(W + 'Kids mode: no calendar reminder', !kc); await p.context().close();
+    // the calendar reminder: from the second day, a file with one daily event at 08:00 linking /today
+    p = await open('/today'); let c = await p.evaluate(() => !document.getElementById('td-cal').hidden); ok(W + 'a first visit: no calendar reminder', !c); await p.context().close();
+    p = await open('/today', false, true); c = await p.evaluate(() => { const a = document.querySelector('#td-cal a'), t = a ? decodeURIComponent(a.href.split(',')[1] || '') : ''; return { shown: !document.getElementById('td-cal').hidden, dl: a && a.getAttribute('download'), t, own: window.epochToday.ics(new Date(2026, 11, 31, 22, 0, 0)), wide: document.documentElement.scrollWidth - innerWidth }; });
+    ok(W + 'a returning reader gets a calendar file: a daily event at 08:00 that links Today', c.shown && c.dl === 'epoch-today.ics' && /^BEGIN:VCALENDAR\r\n/.test(c.t) && /RRULE:FREQ=DAILY\r\n/.test(c.t) && /DTSTART:\d{8}T080000\r\n/.test(c.t) && /URL:https:\/\/the-epoch-institute\.org\/today\r\n/.test(c.t) && /END:VCALENDAR\r\n$/.test(c.t) && c.wide <= 0, c.t.slice(0, 200));
+    ok(W + 'the first reminder is the next day, across a year’s end', /DTSTART:20270101T080000/.test(c.own), c.own.slice(0, 300)); await p.context().close();
   }
   ok('no script errors', errs.length === 0, errs.slice(0, 3));
   await b.close(); srv.close(); console.log(fails ? fails + ' FAILED' : 'all passed'); process.exit(fails ? 1 : 0);

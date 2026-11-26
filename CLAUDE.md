@@ -3897,10 +3897,20 @@ then declutter. Answers: about 100 each; all sections; menus by subject plus hub
   where article-refs.js found no book list, the works the profile's article cites (SECTION_SOURCES), numbered and
   chosen by eye: only works about the subject itself, "-" where none is (12 of the 46 that had cited works). 94
   profiles still have none.
+- **A daily calendar reminder on /today** (p#td-cal in "Come back tomorrow", today.js icsText; from the second day with
+  a visit, never in Kids mode or an in-app browser): a link that downloads epoch-today.ics, made in the browser: one
+  event a day at 08:00 by the reader's own clock (a floating time), linking /today. Nothing is sent anywhere; with
+  consent the event calendar_reminder (/privacy says so). window.epochToday.ics(date); tests/today-page.js.
+- **Pictures for the well-known entries without one (26 Nov 2026):** of the 495, 363 have no confirmed Wikipedia
+  article (no row in entry-wikidata.tsv: peoples, ideas and places such as Arabs, Berbers, Amun, Akkad), so
+  pictures.js cannot look for them; 32 were looked at in R3 and 6 are under "nopicture". The 94 tried gave 33 pictures,
+  all flags of country entries of wave ms1: 31 had their img in added-entries.json and never reached the applied entry
+  (the gap of R3 again: "pictures" rows now), Georgia and Taiwan were new. The rest offered only maps, logos, party
+  flags, modern busts or a generic flag: left without. Confirming articles for the 363 (entry-wikidata.js --report,
+  entry-wikidata-manual.tsv) would open sources, pictures and longer texts for them: not started.
 - **Proposed and not built** (the plan's order): references and section pictures for the
   profiles without; pictures for the 495 well-known entries; longer-entry waves chosen from a new Search Console export
-  (positions 4-12 first); hubs for treaties and capitals if the export shows them; an .ics reminder for the daily
-  games; passport stamps per subject hub. The owner's: a new export, sending the newsletter, the feedback files.
+  (positions 4-12 first); hubs for treaties and capitals if the export shows them; passport stamps per subject hub. The owner's: a new export, sending the newsletter, the feedback files.
 - A quoted heredoc in Git Bash turned `'\\n'` into a line break once more (a patch of kids-stories-merge.js): such
   scripts are written with the Write tool.
 

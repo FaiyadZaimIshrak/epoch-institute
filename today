@@ -77,6 +77,7 @@
 <section class="now-sec td-keep" id="td-keep" aria-labelledby="td-keep-t" hidden>
   <h2 class="ref-sec-title" id="td-keep-t">Come back tomorrow</h2>
   <p class="now-note" id="td-install" hidden></p>
+  <p class="now-note" id="td-cal" hidden></p>
   <div id="td-nl"></div>
 </section>
 </div>
@@ -85,7 +86,7 @@
 <script src="/shared-nav.js"></script>
 <script>initNav('today');</script>
 <script>var TODAY_DAYS_V = '49cefdb1ff', NOW_SRC = '/data/now.json?v=0dac3cba33';</script>
-<script src="/today.js?v=2f613b7d0d"></script>
+<script src="/today.js?v=fb886d11f8"></script>
 <script src="/now.js?v=c2dd4fc8be"></script>
 </body>
 </html>
