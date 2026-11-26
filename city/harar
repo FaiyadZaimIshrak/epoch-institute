@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#growth">Growth &amp; Great Ages</a></li><li><a href="#rulers">Who Ruled It</a></li><li><a href="#life">Life in the City</a></li><li><a href="#crises">Sieges &amp; Disasters</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#growth">Growth &amp; Great Ages</a></li><li><a href="#rulers">Who Ruled It</a></li><li><a href="#life">Life in the City</a></li><li><a href="#crises">Sieges &amp; Disasters</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -123,6 +123,14 @@
       <div class="ty" data-ty="harar"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Harar is first mentioned in a chronicle of Amda Seyon I, sending three governors to support Salih","o":["1216","1941","1332","1568"],"a":2,"w":"1332: Harar is first mentioned in a chronicle of Amda Seyon I, sending three governors to support Salih."},{"p":"Which came first?","q":"","o":["Sultan Abu Bakr ibn Muhammad makes Harar the capital of the Adal Sultanate","Abadir Umar ar-Rida founds the city according to the Fath Madinat Harar"],"a":1,"w":"1520: Sultan Abu Bakr ibn Muhammad makes Harar the capital of the Adal Sultanate · 1216: Abadir Umar ar-Rida founds the city according to the Fath Madinat Harar."},{"p":"In which year?","q":"The Nigeria Regiment captures Harar from the Italians","o":["1936","1332","1216","1941"],"a":3,"w":"1941: The Nigeria Regiment captures Harar from the Italians."},{"p":"Which came first?","q":"","o":["Sultan Abu Bakr ibn Muhammad makes Harar the capital of the Adal Sultanate","Nur ibn Mujahid dies of plague after famines and the building of the city wall"],"a":0,"w":"1520: Sultan Abu Bakr ibn Muhammad makes Harar the capital of the Adal Sultanate · 1568: Nur ibn Mujahid dies of plague after famines and the building of the city wall."},{"p":"In which year?","q":"Nur ibn Mujahid dies of plague after famines and the building of the city wall","o":["1216","1568","1520","1936"],"a":1,"w":"1568: Nur ibn Mujahid dies of plague after famines and the building of the city wall."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Timothy Insoll, First Footsteps in the Archaeology of Harar, Ethiopia (Equinox Publishing Limited, 2017)</li>
+        <li>Avishai Ben-Dror, Emirate, Egyptian, Ethiopian: Colonial Experiences in Late Nineteenth-Century Harar (Syracuse University Press, 2018)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other citys</p>

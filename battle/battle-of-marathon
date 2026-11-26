@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#how-it-was-fought">How it was fought</a></li><li><a href="#background">Background</a></li><li><a href="#forces">The Two Sides</a></li><li><a href="#course">How It Went</a></li><li><a href="#aftermath">Aftermath</a></li><li><a href="#sources">How We Know</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#how-it-was-fought">How it was fought</a></li><li><a href="#background">Background</a></li><li><a href="#forces">The Two Sides</a></li><li><a href="#course">How It Went</a></li><li><a href="#aftermath">Aftermath</a></li><li><a href="#sources">How We Know</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -129,6 +129,13 @@
       <div class="ty" data-ty="battle-of-marathon"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The Persian fleet turns back from Athens after the Athenian army returns by forced march","o":["494 BCE","490 BCE","499 BCE","480 BCE"],"a":1,"w":"490 BCE: The Persian fleet turns back from Athens after the Athenian army returns by forced march."},{"p":"In which year?","q":"Xerxes I begins the second Persian invasion of Greece","o":["480 BCE","499 BCE","486 BCE","490 BCE"],"a":0,"w":"480 BCE: Xerxes I begins the second Persian invasion of Greece."},{"p":"In which year?","q":"The Persians land at Marathon and the Athenians block the two exits from the plain","o":["494 BCE","499 BCE","490 BCE","486 BCE"],"a":2,"w":"490 BCE: The Persians land at Marathon and the Athenians block the two exits from the plain."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Nick Sekunda, Marathon, 490 BC: The First Persian Invasion of Greece (Praeger, 2002)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other battles</p>

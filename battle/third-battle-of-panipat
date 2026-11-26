@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#how-it-was-fought">How it was fought</a></li><li><a href="#background">Background</a></li><li><a href="#forces">The Two Sides</a></li><li><a href="#course">How It Went</a></li><li><a href="#aftermath">Aftermath</a></li><li><a href="#sources">How We Know</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#how-it-was-fought">How it was fought</a></li><li><a href="#background">Background</a></li><li><a href="#forces">The Two Sides</a></li><li><a href="#course">How It Went</a></li><li><a href="#aftermath">Aftermath</a></li><li><a href="#sources">How We Know</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -121,6 +121,14 @@
       </div>
 
     <p class="profile-summary" id="summary"><em>The Third Battle of Panipat, fought on 14 January 1761, pitted the <a class="enc-link" href="/encyclopedia/maratha-empire">Maratha Empire</a> against the <a class="enc-link" href="/encyclopedia/durrani-empire">Durrani Empire</a> and its Indian allies. The Afghan side won. An eyewitness chronicle reports about 40,000 Maratha prisoners killed the next day, and some 22,000 women and children were driven off as slaves.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Casi Raja Pundit, An Account Of The Last Battle of Panipat (Oxford University Press, 1926)</li>
+        <li>Shejwalkar, Trimbak S., Panipat 1761 (Deccan College, 1946)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other battles</p>

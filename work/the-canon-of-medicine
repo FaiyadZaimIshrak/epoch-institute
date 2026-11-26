@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -121,6 +121,13 @@
       <div class="ty" data-ty="the-canon-of-medicine"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The earliest printed edition of the Latin Canon appears, covering only book three","o":["1052","1472","1025","1715"],"a":1,"w":"1472: The earliest printed edition of the Latin Canon appears, covering only book three."},{"p":"Which came first?","q":"","o":["Latin editions, fourteen of them in the 16th century, continue until this year","The earliest printed edition of the Latin Canon appears, covering only book three"],"a":1,"w":"1608: Latin editions, fourteen of them in the 16th century, continue until this year · 1472: The earliest printed edition of the Latin Canon appears, covering only book three."},{"p":"In which year?","q":"The date of the earliest known copy of volume 5, now in the Aga Khan Museum in Toronto","o":["1715","1052","1608","1472"],"a":1,"w":"1052: The date of the earliest known copy of volume 5, now in the Aga Khan Museum in Toronto."},{"p":"Which came first?","q":"","o":["The Canon is still taught as background literature at Padua","Ibn Sina completes the Canon in Hamadan"],"a":1,"w":"1715: The Canon is still taught as background literature at Padua · 1025: Ibn Sina completes the Canon in Hamadan."},{"p":"In which year?","q":"Latin editions, fourteen of them in the 16th century, continue until this year","o":["1052","1472","1608","1025"],"a":2,"w":"1608: Latin editions, fourteen of them in the 16th century, continue until this year."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Nancy Siraisi, Avicenna in Renaissance Italy : the Canon and medical teaching in Italian universities after 1500 (Princeton University Press, 1987)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other great works</p>

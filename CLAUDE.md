@@ -3893,6 +3893,10 @@ then declutter. Answers: about 100 each; all sections; menus by subject plus hub
   present-day leader, Stalin). All 26 looked at on contact sheets. The month pages name theirs only in a full build;
   both kinds are in the image sitemap. Re-draw `essays` after an essay is added, `months` after a full build that
   changed the month pages.
+- **References for 34 more profiles** (scripts/kinds/refs-from-sections.js list | write <picks.tsv>; refs2/picks.tsv):
+  where article-refs.js found no book list, the works the profile's article cites (SECTION_SOURCES), numbered and
+  chosen by eye: only works about the subject itself, "-" where none is (12 of the 46 that had cited works). 94
+  profiles still have none.
 - **Proposed and not built** (the plan's order): references and section pictures for the
   profiles without; pictures for the 495 well-known entries; longer-entry waves chosen from a new Search Console export
   (positions 4-12 first); hubs for treaties and capitals if the export shows them; an .ics reminder for the daily

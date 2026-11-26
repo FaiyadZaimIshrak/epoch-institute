@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -124,6 +124,17 @@
       <div class="ty" data-ty="the-prince"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Paul IV places The Prince and the Discourses on Livy on the Index, nearly stopping their publication in Catholic areas except France","o":["1740","1576","1516","1559"],"a":3,"w":"1559: Paul IV places The Prince and the Discourses on Livy on the Index, nearly stopping their publication in Catholic areas except France."},{"p":"Which came first?","q":"","o":["The Prince is printed, five years after Machiavelli's death, with the permission of Pope Clement VII","Paul IV places The Prince and the Discourses on Livy on the Index, nearly stopping their publication in Catholic areas except France"],"a":0,"w":"1532: The Prince is printed, five years after Machiavelli's death, with the permission of Pope Clement VII · 1559: Paul IV places The Prince and the Discourses on Livy on the Index, nearly stopping their publication in Catholic areas except France."},{"p":"In which year?","q":"Machiavelli writes a version of the treatise, under the Latin title De Principatibus","o":["1576","1513","1559","1532"],"a":1,"w":"1513: Machiavelli writes a version of the treatise, under the Latin title De Principatibus."},{"p":"Which came first?","q":"","o":["Innocent Gentillet publishes his Discourse against Machiavelli in Geneva","Giuliano di Lorenzo de' Medici, for whom the book was first intended, dies"],"a":1,"w":"1576: Innocent Gentillet publishes his Discourse against Machiavelli in Geneva · 1516: Giuliano di Lorenzo de' Medici, for whom the book was first intended, dies."},{"p":"In which year?","q":"Innocent Gentillet publishes his Discourse against Machiavelli in Geneva","o":["1532","1576","1740","1516"],"a":1,"w":"1576: Innocent Gentillet publishes his Discourse against Machiavelli in Geneva."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Erica Benner, Machiavelli's Prince: A New Reading (Oxford University Press, 2013)</li>
+        <li>Maurizio Viroli, Redeeming the Prince: The Meaning of Machiavelli's Masterpiece (Princeton University Press, 2015)</li>
+        <li>William B. Parsons, Machiavelli's Gospel: The Critique of Christianity in the Prince (Boydell &amp; Brewer, 2016)</li>
+        <li>Leo Strauss, Thoughts on Machiavelli (University of Chicago Press, 2014)</li>
+        <li>Harvey C. Mansfield, Machiavelli's Virtue (University of Chicago Press, 1998)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other great works</p>

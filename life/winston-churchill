@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#early">Early Life</a></li><li><a href="#rise">Rise</a></li><li><a href="#deeds">What They Did</a></li><li><a href="#opponents">Opponents &amp; Critics</a></li><li><a href="#last">Last Years</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#early">Early Life</a></li><li><a href="#rise">Rise</a></li><li><a href="#deeds">What They Did</a></li><li><a href="#opponents">Opponents &amp; Critics</a></li><li><a href="#last">Last Years</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -123,6 +123,16 @@
       <div class="ty" data-ty="winston-churchill"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"As Chancellor of the Exchequer he returns sterling to the gold standard","o":["1925","1915","1874","1951"],"a":0,"w":"1925: As Chancellor of the Exchequer he returns sterling to the gold standard."},{"p":"Which came first?","q":"","o":["Winston Churchill is born at Blenheim Palace in Oxfordshire","He becomes prime minister and resolves to fight on after the fall of France"],"a":0,"w":"1874: Winston Churchill is born at Blenheim Palace in Oxfordshire · 1940: He becomes prime minister and resolves to fight on after the fall of France."},{"p":"In which year?","q":"He returns as prime minister, serving until his resignation in 1955","o":["1965","1951","1900","1925"],"a":1,"w":"1951: He returns as prime minister, serving until his resignation in 1955."},{"p":"Which came first?","q":"","o":["Churchill dies in London and is given a state funeral","Winston Churchill is born at Blenheim Palace in Oxfordshire"],"a":1,"w":"1965: Churchill dies in London and is given a state funeral · 1874: Winston Churchill is born at Blenheim Palace in Oxfordshire."},{"p":"In which year?","q":"Winston Churchill is born at Blenheim Palace in Oxfordshire","o":["1900","1874","1965","1915"],"a":1,"w":"1874: Winston Churchill is born at Blenheim Palace in Oxfordshire."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Roy Jenkins, Churchill (Macmillan Press, 2001)</li>
+        <li>Geoffrey Best, Churchill: A Study in Greatness (Hambledon and Continuum, 2001)</li>
+        <li>Robert Rhodes James, Churchill: A Study in Failure 1900–1939 (Weidenfeld &amp; Nicolson, 1970)</li>
+        <li>Robert Blake (ed.), Churchill: A Major New Reassessment of His Life in Peace and War (Oxford University Press, 1993)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other lifes</p>

@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -122,6 +122,14 @@
       <div class="ty" data-ty="panchatantra"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"John of Capua's Latin Directorium Humanae Vitae is printed","o":["1924","1997","1570","1480"],"a":3,"w":"1480: John of Capua's Latin Directorium Humanae Vitae is printed."},{"p":"Which came first?","q":"","o":["Patrick Olivelle's translation, based on Edgerton's reconstruction, is published by Oxford University Press","Franklin Edgerton publishes his reconstruction of the original Sanskrit text"],"a":1,"w":"1997: Patrick Olivelle's translation, based on Edgerton's reconstruction, is published by Oxford University Press · 1924: Franklin Edgerton publishes his reconstruction of the original Sanskrit text."},{"p":"In which year?","q":"Franklin Edgerton publishes his reconstruction of the original Sanskrit text","o":["1997","1924","1480","1570"],"a":1,"w":"1924: Franklin Edgerton publishes his reconstruction of the original Sanskrit text."},{"p":"Which came first?","q":"","o":["Franklin Edgerton publishes his reconstruction of the original Sanskrit text","John of Capua's Latin Directorium Humanae Vitae is printed"],"a":1,"w":"1924: Franklin Edgerton publishes his reconstruction of the original Sanskrit text · 1480: John of Capua's Latin Directorium Humanae Vitae is printed."},{"p":"In which year?","q":"Patrick Olivelle's translation, based on Edgerton's reconstruction, is published by Oxford University Press","o":["1924","1570","1997","1480"],"a":2,"w":"1997: Patrick Olivelle's translation, based on Edgerton's reconstruction, is published by Oxford University Press."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Arthur W. (transl) Ryder, The Panchatantra (University of Chicago Press, 1925)</li>
+        <li>Patrick Olivelle, Pañcatantra: The Book of India's Folk Wisdom (Oxford University Press, 2009)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other great works</p>

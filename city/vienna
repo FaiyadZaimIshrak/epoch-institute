@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#growth">Growth &amp; Great Ages</a></li><li><a href="#rulers">Who Ruled It</a></li><li><a href="#life">Life in the City</a></li><li><a href="#crises">Sieges &amp; Disasters</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#growth">Growth &amp; Great Ages</a></li><li><a href="#rulers">Who Ruled It</a></li><li><a href="#life">Life in the City</a></li><li><a href="#crises">Sieges &amp; Disasters</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -124,6 +124,13 @@
       <div class="ty" data-ty="vienna"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Nazi Germany annexes Austria and Hitler speaks at the Heldenplatz","o":["1955","1155","1221","1938"],"a":3,"w":"1938: Nazi Germany annexes Austria and Hitler speaks at the Heldenplatz."},{"p":"Which came first?","q":"","o":["An army led by John III Sobieski defeats the Ottoman army besieging the city","Henry II of Austria makes Vienna his capital"],"a":1,"w":"1683: An army led by John III Sobieski defeats the Ottoman army besieging the city · 1155: Henry II of Austria makes Vienna his capital."},{"p":"In which year?","q":"The first Ottoman siege of Vienna fails","o":["1221","1938","1155","1529"],"a":3,"w":"1529: The first Ottoman siege of Vienna fails."},{"p":"Which came first?","q":"","o":["The Austrian State Treaty ends the four-power occupation","The Congress of Vienna meets to redraw the political map of Europe"],"a":1,"w":"1955: The Austrian State Treaty ends the four-power occupation · 1814: The Congress of Vienna meets to redraw the political map of Europe."},{"p":"In which year?","q":"Henry II of Austria makes Vienna his capital","o":["1814","1155","1955","1529"],"a":1,"w":"1155: Henry II of Austria makes Vienna his capital."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>John Philip Spielman, The city &amp; the crown: Vienna and the imperial court, 1600–1740 (Purdue University Press, 1993)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other citys</p>

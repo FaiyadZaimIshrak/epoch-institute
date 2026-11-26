@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#growth">Growth &amp; Great Ages</a></li><li><a href="#rulers">Who Ruled It</a></li><li><a href="#life">Life in the City</a></li><li><a href="#crises">Sieges &amp; Disasters</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#growth">Growth &amp; Great Ages</a></li><li><a href="#rulers">Who Ruled It</a></li><li><a href="#life">Life in the City</a></li><li><a href="#crises">Sieges &amp; Disasters</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -123,6 +123,14 @@
       <div class="ty" data-ty="susa"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Shapur II destroys the city after a rebellion of its Christians","o":["339","647 BCE","1218","540 BCE"],"a":0,"w":"339: Shapur II destroys the city after a rebellion of its Christians."},{"p":"Which came first?","q":"","o":["Shapur II destroys the city after a rebellion of its Christians","Cyrus the Great takes Susa, which becomes part of the Achaemenid Empire"],"a":1,"w":"339: Shapur II destroys the city after a rebellion of its Christians · 540 BCE: Cyrus the Great takes Susa, which becomes part of the Achaemenid Empire."},{"p":"In which year?","q":"An Arab army under Abu Musa al-Ash'ari captures Susa","o":["642","540 BCE","647 BCE","1218"],"a":0,"w":"642: An Arab army under Abu Musa al-Ash'ari captures Susa."},{"p":"Which came first?","q":"","o":["Cyrus the Great takes Susa, which becomes part of the Achaemenid Empire","An Arab army under Abu Musa al-Ash'ari captures Susa"],"a":0,"w":"540 BCE: Cyrus the Great takes Susa, which becomes part of the Achaemenid Empire · 642: An Arab army under Abu Musa al-Ash'ari captures Susa."},{"p":"In which year?","q":"Ashurbanipal of Assyria levels the city","o":["647 BCE","540 BCE","1218","642"],"a":0,"w":"647 BCE: Ashurbanipal of Assyria levels the city."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Daniel T. Potts, The archaeology of Elam: Formation and transformation of an ancient Iranian state (Cambridge University Press, 1999)</li>
+        <li>Prudence Harper, The Royal City of Susa: Ancient Near Eastern Treasures in the Louvre (The Metropolitan Museum of Art, 1992)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other citys</p>

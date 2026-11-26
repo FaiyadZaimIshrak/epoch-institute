@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#how-it-was-fought">How it was fought</a></li><li><a href="#background">Background</a></li><li><a href="#forces">The Two Sides</a></li><li><a href="#course">How It Went</a></li><li><a href="#aftermath">Aftermath</a></li><li><a href="#sources">How We Know</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#how-it-was-fought">How it was fought</a></li><li><a href="#background">Background</a></li><li><a href="#forces">The Two Sides</a></li><li><a href="#course">How It Went</a></li><li><a href="#aftermath">Aftermath</a></li><li><a href="#sources">How We Know</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -118,6 +118,14 @@
       </div>
 
     <p class="profile-summary" id="summary"><em>On 25–26 June 1876 Lakota, Northern <a class="enc-link" href="/encyclopedia/cheyenne">Cheyenne</a> and Arapaho fighters defeated the 7th Cavalry on the Little Bighorn, killing <a class="enc-link" href="/encyclopedia/george-armstrong-custer">Custer</a> and every man in the five companies with him. The <a class="enc-link" href="/encyclopedia/united-states">United States</a> still won the Great Sioux War, and took the <a class="enc-link" href="/encyclopedia/black-hills">Black Hills</a>.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Nathaniel Philbrick, The Last Stand: Custer, Sitting Bull, and the Battle of the Little Bighorn (Viking, 2010)</li>
+        <li>Douglas D. Scott, They Died With Custer: Soldiers' Bones from the Battle of the Little Bighorn (University of Oklahoma Press, 2013)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other battles</p>

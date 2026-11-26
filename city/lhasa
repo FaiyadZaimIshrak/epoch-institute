@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#growth">Growth &amp; Great Ages</a></li><li><a href="#rulers">Who Ruled It</a></li><li><a href="#life">Life in the City</a></li><li><a href="#crises">Sieges &amp; Disasters</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#growth">Growth &amp; Great Ages</a></li><li><a href="#rulers">Who Ruled It</a></li><li><a href="#life">Life in the City</a></li><li><a href="#crises">Sieges &amp; Disasters</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -123,6 +123,14 @@
       <div class="ty" data-ty="lhasa"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The armies of the Qing dynasty enter Lhasa","o":["1965","1642","1959","1720"],"a":3,"w":"1720: The armies of the Qing dynasty enter Lhasa."},{"p":"Which came first?","q":"","o":["The Tibet Autonomous Region is established and Lhasa becomes its capital","A British expedition under Francis Younghusband captures and briefly occupies the city"],"a":1,"w":"1965: The Tibet Autonomous Region is established and Lhasa becomes its capital · 1904: A British expedition under Francis Younghusband captures and briefly occupies the city."},{"p":"In which year?","q":"A British expedition under Francis Younghusband captures and briefly occupies the city","o":["1904","1965","1720","1645"],"a":0,"w":"1904: A British expedition under Francis Younghusband captures and briefly occupies the city."},{"p":"Which came first?","q":"","o":["The armies of the Qing dynasty enter Lhasa","A British expedition under Francis Younghusband captures and briefly occupies the city"],"a":0,"w":"1720: The armies of the Qing dynasty enter Lhasa · 1904: A British expedition under Francis Younghusband captures and briefly occupies the city."},{"p":"In which year?","q":"Reconstruction of the Potala Palace begins on Red Hill","o":["1645","1720","1642","641"],"a":0,"w":"1645: Reconstruction of the Potala Palace begins on Red Hill."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Robert Barnett, Lhasa: Streets with Memories (Columbia University Press, 2013)</li>
+        <li>David G. Atwill, Islamic Shangri-La:Inter-Asian Relations and Lhasa's Muslim Communities, 1600 to 1960 (University of California Press, 2018)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other citys</p>

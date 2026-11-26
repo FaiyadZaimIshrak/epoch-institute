@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#how-it-was-fought">How it was fought</a></li><li><a href="#background">Background</a></li><li><a href="#forces">The Two Sides</a></li><li><a href="#course">How It Went</a></li><li><a href="#aftermath">Aftermath</a></li><li><a href="#sources">How We Know</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#how-it-was-fought">How it was fought</a></li><li><a href="#background">Background</a></li><li><a href="#forces">The Two Sides</a></li><li><a href="#course">How It Went</a></li><li><a href="#aftermath">Aftermath</a></li><li><a href="#sources">How We Know</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -119,6 +119,16 @@
       </div>
 
     <p class="profile-summary" id="summary"><em>From 13 March to 7 May 1954 the <a class="enc-link" href="/encyclopedia/viet-minh">Viet Minh</a> under Giáp besieged and overran the French camp at Điện Biên Phủ. The defeat shocked <a class="enc-link" href="/encyclopedia/france">France</a>, and the <a class="enc-link" href="/encyclopedia/geneva">Geneva</a> Accords then partitioned <a class="enc-link" href="/encyclopedia/vietnam">Vietnam</a> temporarily at the 17th parallel.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Phillip Davidson, Vietnam at War: The History, 1946–1975 (Oxford University Press, 1988)</li>
+        <li>Kevin Boylan, Valley of the Shadow: The Siege of Dien Bien Phu (Osprey Press, 2018)</li>
+        <li>Martin Windrow, Dien Bien Phu 1954: The French Defeat that Lured America Into Vietnam (Osprey, 2021)</li>
+        <li>Anthony Tucker-Jones, Dien Bien Phu : the first Indochina War, 1946-1954 (Barnsley, South Yorkshire : Pen &amp; Sword Military, 2017)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other battles</p>

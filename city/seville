@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#growth">Growth &amp; Great Ages</a></li><li><a href="#rulers">Who Ruled It</a></li><li><a href="#life">Life in the City</a></li><li><a href="#crises">Sieges &amp; Disasters</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#growth">Growth &amp; Great Ages</a></li><li><a href="#rulers">Who Ruled It</a></li><li><a href="#life">Life in the City</a></li><li><a href="#crises">Sieges &amp; Disasters</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -121,6 +121,13 @@
       <div class="ty" data-ty="seville"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Seville becomes the seat of the Andalusi part of the Almohad empire, a twin capital with Marrakesh","o":["1023","1248","1163","1503"],"a":2,"w":"1163: Seville becomes the seat of the Andalusi part of the Almohad empire, a twin capital with Marrakesh."},{"p":"Which came first?","q":"","o":["Seville is taken for the Umayyad Caliphate and serves as the seat of the governor of al-Andalus until 716","The Ibero-American Exposition opens"],"a":0,"w":"712: Seville is taken for the Umayyad Caliphate and serves as the seat of the governor of al-Andalus until 716 · 1929: The Ibero-American Exposition opens."},{"p":"In which year?","q":"A taifa kingdom ruled by the Abbadid dynasty emerges with its capital at Seville","o":["1023","712","1503","1649"],"a":0,"w":"1023: A taifa kingdom ruled by the Abbadid dynasty emerges with its capital at Seville."},{"p":"Which came first?","q":"","o":["The city surrenders to Ferdinand III of Castile after fifteen months of siege","The Ibero-American Exposition opens"],"a":0,"w":"1248: The city surrenders to Ferdinand III of Castile after fifteen months of siege · 1929: The Ibero-American Exposition opens."},{"p":"In which year?","q":"The Casa de Contratación is placed at Seville, which becomes the port of the Indies trade","o":["712","1929","1503","1023"],"a":2,"w":"1503: The Casa de Contratación is placed at Seville, which becomes the port of the Indies trade."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Elizabeth Nash, Seville, Cordoba, and Granada: A Cultural History (Oxford University Press, 2005)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other citys</p>

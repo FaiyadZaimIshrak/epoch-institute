@@ -79,7 +79,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#empire-stats-panel">Historical analysis</a></li><li><a href="#timeline">Rise &amp; fall</a></li><li><a href="#foundation">Foundation</a></li><li><a href="#socioeconomy">Socioeconomy</a></li><li><a href="#military">Military</a></li><li><a href="#governance">Governance &amp; Law</a></li><li><a href="#impact">Global &amp; Regional Impact</a></li><li><a href="#decline">Decline &amp; Fall</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <div id="empire-stats-panel" data-empire="Awadh State"></div>
@@ -128,6 +128,13 @@
       <div class="ty" data-ty="awadh-state"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Saadat Ali Khan I is appointed Subahdar of Oudh Subah and subdues the Shaikhzadas of Lucknow and Raja Mohan Singh of Tiloi","o":["1819","1722","1801","1774"],"a":1,"w":"1722: Saadat Ali Khan I is appointed Subahdar of Oudh Subah and subdues the Shaikhzadas of Lucknow and Raja Mohan Singh of Tiloi."},{"p":"Which came first?","q":"","o":["Saadat Ali Khan I is appointed Subahdar of Oudh Subah and subdues the Shaikhzadas of Lucknow and Raja Mohan Singh of Tiloi","The East India Company defeats Shuja-ud-Daula and Mir Kasim at the Battle of Buxar"],"a":0,"w":"1722: Saadat Ali Khan I is appointed Subahdar of Oudh Subah and subdues the Shaikhzadas of Lucknow and Raja Mohan Singh of Tiloi · 1764: The East India Company defeats Shuja-ud-Daula and Mir Kasim at the Battle of Buxar."},{"p":"Which city was a capital of the Awadh State?","q":"","o":["Bandar Aceh Darussalam","Ayodhya","Brunei Town","Kota Batu"],"a":1,"w":"Capital: Ayodhya, then Faizabad (from 1740); the Company's Residents sat at Lucknow."},{"p":"Who founded the Awadh State?","q":"","o":["Saadat Ali Khan I","Ali Mughayat Syah","Muhammad Shah","Alauddin Riayat Shah II"],"a":0,"w":"Founder: Saadat Ali Khan I, appointed Subahdar of Oudh in 1722."},{"p":"Which state came after the Awadh State?","q":"","o":["British North Borneo","Dutch East Indies","Philippines","North Western Provinces"],"a":3,"w":"Succeeded by: North Western Provinces and Oudh (British India)."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>J. R. I. Cole, Roots of North Indian Shīʾism in Iran and Iraq: Religion and State in Awadh, 1722-1859 (University of California Press, 1989)</li>
+      </ul>
+    </div>
 
     <section class="mini-connections" id="connections" aria-labelledby="mini-cx-title" hidden>
       <p class="profile-references-title" id="mini-cx-title">Connections</p>

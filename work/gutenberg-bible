@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -122,6 +122,13 @@
       <div class="ty" data-ty="gutenberg-bible"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The first Gutenberg Bible reaches North America; it is now in the New York Public Library","o":["2013","1847","1978","1456"],"a":1,"w":"1847: The first Gutenberg Bible reaches North America; it is now in the New York Public Library."},{"p":"Which came first?","q":"","o":["The copy with the earliest visible print date is marked 15 August","The first Gutenberg Bible reaches North America; it is now in the New York Public Library"],"a":0,"w":"1456: The copy with the earliest visible print date is marked 15 August · 1847: The first Gutenberg Bible reaches North America; it is now in the New York Public Library."},{"p":"In which year?","q":"The 31-line Indulgence, the first precisely datable print by Gutenberg, certainly exists by 22 October","o":["1456","1454","1455","1921"],"a":1,"w":"1454: The 31-line Indulgence, the first precisely datable print by Gutenberg, certainly exists by 22 October."},{"p":"Which came first?","q":"","o":["A copy stolen from Moscow State University in 2009 is recovered in an FSB sting operation","The New York dealer Gabriel Wells dismantles a damaged copy and sells its leaves as the Noble Fragments"],"a":1,"w":"2013: A copy stolen from Moscow State University in 2009 is recovered in an FSB sting operation · 1921: The New York dealer Gabriel Wells dismantles a damaged copy and sells its leaves as the Noble Fragments."},{"p":"In which year?","q":"The New York dealer Gabriel Wells dismantles a damaged copy and sells its leaves as the Noble Fragments","o":["1454","1921","1455","1978"],"a":1,"w":"1921: The New York dealer Gabriel Wells dismantles a damaged copy and sells its leaves as the Noble Fragments."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>John Man, Gutenberg: How One Man Remade the World with Words (John Wiley and Sons, Inc., 2002)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other great works</p>

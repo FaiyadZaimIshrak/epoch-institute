@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#how-it-was-fought">How it was fought</a></li><li><a href="#background">Background</a></li><li><a href="#forces">The Two Sides</a></li><li><a href="#course">How It Went</a></li><li><a href="#aftermath">Aftermath</a></li><li><a href="#sources">How We Know</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#how-it-was-fought">How it was fought</a></li><li><a href="#background">Background</a></li><li><a href="#forces">The Two Sides</a></li><li><a href="#course">How It Went</a></li><li><a href="#aftermath">Aftermath</a></li><li><a href="#sources">How We Know</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -117,6 +117,14 @@
       </div>
 
     <p class="profile-summary" id="summary"><em>From 5 May 1942 British and Allied forces took Diego-Suarez and then the rest of <a class="enc-link" href="/encyclopedia/vichy">Vichy</a> French <a class="enc-link" href="/encyclopedia/madagascar">Madagascar</a>, to keep its ports from the Japanese navy. About 6,000 of the 8,000 defenders were Malagasy <a class="enc-link" href="/encyclopedia/tirailleurs">tirailleurs</a>, and an armistice was signed on 6 November.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Leonard Charles Frederick Turner, War in the Southern Oceans: 1939–1945 (Oxford University Press, 1961)</li>
+        <li>John Grehan, Churchill's Secret Invasion : Britain's First Large Scale Combined Offensive 1942 (Pen &amp; Sword Military, 2013)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other battles</p>

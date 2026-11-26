@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -123,6 +123,13 @@
       <div class="ty" data-ty="notre-dame-de-paris"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Napoleon crowned himself Emperor of the French in the cathedral on 2 December","o":["1163","1804","1844","1431"],"a":1,"w":"1804: Napoleon crowned himself Emperor of the French in the cathedral on 2 December."},{"p":"Which came first?","q":"","o":["Construction began with the laying of the cornerstone in the presence of King Louis VII and Pope Alexander III","Jean-Baptiste Lassus and Eugène Viollet-le-Duc were appointed to a restoration that lasted until 1864"],"a":0,"w":"1163: Construction began with the laying of the cornerstone in the presence of King Louis VII and Pope Alexander III · 1844: Jean-Baptiste Lassus and Eugène Viollet-le-Duc were appointed to a restoration that lasted until 1864."},{"p":"In which year?","q":"Construction began with the laying of the cornerstone in the presence of King Louis VII and Pope Alexander III","o":["1163","2019","2024","1793"],"a":0,"w":"1163: Construction began with the laying of the cornerstone in the presence of King Louis VII and Pope Alexander III."},{"p":"Which came first?","q":"","o":["Jean-Baptiste Lassus and Eugène Viollet-le-Duc were appointed to a restoration that lasted until 1864","A fire destroyed the flèche and the roof timbers"],"a":0,"w":"1844: Jean-Baptiste Lassus and Eugène Viollet-le-Duc were appointed to a restoration that lasted until 1864 · 2019: A fire destroyed the flèche and the roof timbers."},{"p":"In which year?","q":"The ten-year-old Henry VI of England was crowned king of France in the cathedral","o":["1431","1844","2024","1793"],"a":0,"w":"1431: The ten-year-old Henry VI of England was crowned king of France in the cathedral."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Dany Sandron, Notre-Dame Cathedral: nine centuries of history (The Pennsylvania State University Press, 2020)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other great works</p>

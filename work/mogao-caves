@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -120,6 +120,13 @@
       <div class="ty" data-ty="mogao-caves"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Wang Yuanlu found the walled-up cave full of manuscripts","o":["1987","1900","366","1944"],"a":1,"w":"1900: Wang Yuanlu found the walled-up cave full of manuscripts."},{"p":"Which came first?","q":"","o":["Wang Yuanlu found the walled-up cave full of manuscripts","The monk Le Zun is said to have had a vision of a thousand Buddhas and begun the first cave"],"a":1,"w":"1900: Wang Yuanlu found the walled-up cave full of manuscripts · 366: The monk Le Zun is said to have had a vision of a thousand Buddhas and begun the first cave."},{"p":"In which year?","q":"Dunhuang came under Tibetan control, which lasted until 848","o":["1944","787","695","1900"],"a":1,"w":"787: Dunhuang came under Tibetan control, which lasted until 848."},{"p":"Which came first?","q":"","o":["Dunhuang came under Tibetan control, which lasted until 848","The Research Institute of Dunhuang Art, later the Dunhuang Academy, was set up at the site"],"a":0,"w":"787: Dunhuang came under Tibetan control, which lasted until 848 · 1944: The Research Institute of Dunhuang Art, later the Dunhuang Academy, was set up at the site."},{"p":"In which year?","q":"The monk Le Zun is said to have had a vision of a thousand Buddhas and begun the first cave","o":["1900","787","366","1907"],"a":2,"w":"366: The monk Le Zun is said to have had a vision of a thousand Buddhas and begun the first cave."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Gertraud Taenzer, The Dunhuang Region during Tibetan Rule (787-848): A Study of the Secular Manuscripts Discovered in the Mogao Caves (Harrassowitz, O, 2014)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other great works</p>

@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#how-it-was-fought">How it was fought</a></li><li><a href="#background">Background</a></li><li><a href="#forces">The Two Sides</a></li><li><a href="#course">How It Went</a></li><li><a href="#aftermath">Aftermath</a></li><li><a href="#sources">How We Know</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#how-it-was-fought">How it was fought</a></li><li><a href="#background">Background</a></li><li><a href="#forces">The Two Sides</a></li><li><a href="#course">How It Went</a></li><li><a href="#aftermath">Aftermath</a></li><li><a href="#sources">How We Know</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -121,6 +121,14 @@
       </div>
 
     <p class="profile-summary" id="summary"><em>On 3 September 1260 the <a class="enc-link" href="/encyclopedia/bahri-mamluks">Bahri Mamluks</a> of <a class="enc-link" href="/encyclopedia/egypt">Egypt</a> under <a class="enc-link" href="/encyclopedia/qutuz">Qutuz</a> met a Mongol force under <a class="enc-link" href="/encyclopedia/kitbuqa">Kitbuqa</a> at Ain Jalut and drove it back, killing Kitbuqa. The <a class="enc-link" href="/encyclopedia/mamluk">Mamluks</a> then took <a class="enc-link" href="/encyclopedia/damascus">Damascus</a> and <a class="enc-link" href="/encyclopedia/aleppo">Aleppo</a>, and the <a class="enc-link" href="/encyclopedia/mongols">Mongols</a> never returned to <a class="enc-link" href="/encyclopedia/syria">Syria</a>.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Reuven Amitai-Preiss, Mongols and Mamluks: The Mamluk-Ilkhanid War, 1260–1281 (Cambridge University Press, Cambridge, 1995)</li>
+        <li>Peter Thorau, The Lion of Egypt : Sultan Baybars I and the Near East in the thirteenth century (Longman, 1995)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other battles</p>

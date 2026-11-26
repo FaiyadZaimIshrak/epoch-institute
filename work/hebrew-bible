@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -117,6 +117,15 @@
       </div>
 
     <p class="profile-summary" id="summary"><em>The Hebrew Bible, or Tanakh, is the canonical collection of <a class="enc-link" href="/encyclopedia/hebrew">Hebrew</a> scriptures in three parts: <a class="enc-link" href="/encyclopedia/torah">Torah</a>, Nevi'im and Ketuvim. Tradition ascribes the Torah to <a class="enc-link" href="/encyclopedia/moses">Moses</a>; scholars see composition in stages, with the Masoretic Text authoritative in <a class="enc-link" href="/encyclopedia/judaism">Judaism</a>.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>David M. Carr, The Hebrew Bible: A Contemporary Introduction to the Christian Old Testament and the Jewish Tanakh (Wiley Blackwell, 2021)</li>
+        <li>Christine Hayes, Introduction to the Bible (Yale University Press, 2012)</li>
+        <li>Emanuel Tov, Hebrew Bible, Greek Bible, and Quran (Mohr Siebeck, 2008)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other great works</p>

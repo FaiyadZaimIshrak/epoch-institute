@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#growth">Growth &amp; Great Ages</a></li><li><a href="#rulers">Who Ruled It</a></li><li><a href="#life">Life in the City</a></li><li><a href="#crises">Sieges &amp; Disasters</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#growth">Growth &amp; Great Ages</a></li><li><a href="#rulers">Who Ruled It</a></li><li><a href="#life">Life in the City</a></li><li><a href="#crises">Sieges &amp; Disasters</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -124,6 +124,15 @@
       <div class="ty" data-ty="taxila"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"The White Huns and Alchon Huns sweep over Gandhara and devastate the city's monasteries and stupas","o":["326 BCE","470","516 BCE","630"],"a":1,"w":"470: The White Huns and Alchon Huns sweep over Gandhara and devastate the city's monasteries and stupas."},{"p":"Which came first?","q":"","o":["The White Huns and Alchon Huns sweep over Gandhara and devastate the city's monasteries and stupas","Darius I campaigns in the region, and Taxila may by then have grown significantly"],"a":1,"w":"470: The White Huns and Alchon Huns sweep over Gandhara and devastate the city's monasteries and stupas · 516 BCE: Darius I campaigns in the region, and Taxila may by then have grown significantly."},{"p":"In which year?","q":"King Taxiles surrenders to Alexander the Great without a battle","o":["630","516 BCE","470","326 BCE"],"a":3,"w":"326 BCE: King Taxiles surrenders to Alexander the Great without a battle."},{"p":"Which came first?","q":"","o":["The White Huns and Alchon Huns sweep over Gandhara and devastate the city's monasteries and stupas","Xuanzang finds Taxila desolate and half ruined"],"a":0,"w":"470: The White Huns and Alchon Huns sweep over Gandhara and devastate the city's monasteries and stupas · 630: Xuanzang finds Taxila desolate and half ruined."},{"p":"In which year?","q":"Darius I campaigns in the region, and Taxila may by then have grown significantly","o":["516 BCE","470","326 BCE","630"],"a":0,"w":"516 BCE: Darius I campaigns in the region, and Taxila may by then have grown significantly."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>John Marshall, Taxila: Structural remains – Volume 1 (University Press, 1951)</li>
+        <li>John Marshall, A guide to Taxila (Cambridge University Press, 2013)</li>
+        <li>Bridget Allchin, The rise of civilization in India and Pakistan (Cambridge University Press, 1988)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other citys</p>

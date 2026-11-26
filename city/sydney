@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#growth">Growth &amp; Great Ages</a></li><li><a href="#rulers">Who Ruled It</a></li><li><a href="#life">Life in the City</a></li><li><a href="#crises">Sieges &amp; Disasters</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#growth">Growth &amp; Great Ages</a></li><li><a href="#rulers">Who Ruled It</a></li><li><a href="#life">Life in the City</a></li><li><a href="#crises">Sieges &amp; Disasters</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -123,6 +123,13 @@
       <div class="ty" data-ty="sydney"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Federation makes Sydney the capital of the State of New South Wales","o":["1842","1788","1770","1901"],"a":3,"w":"1901: Federation makes Sydney the capital of the State of New South Wales."},{"p":"Which came first?","q":"","o":["The Sydney Harbour Bridge opens","Federation makes Sydney the capital of the State of New South Wales"],"a":1,"w":"1932: The Sydney Harbour Bridge opens · 1901: Federation makes Sydney the capital of the State of New South Wales."},{"p":"In which year?","q":"Sydney is declared a city","o":["1789","1842","1851","1788"],"a":1,"w":"1842: Sydney is declared a city."},{"p":"Which came first?","q":"","o":["Gold is found in New South Wales and Victoria","Federation makes Sydney the capital of the State of New South Wales"],"a":0,"w":"1851: Gold is found in New South Wales and Victoria · 1901: Federation makes Sydney the capital of the State of New South Wales."},{"p":"In which year?","q":"Smallpox kills about half the Aboriginal population of the Sydney region","o":["1932","1851","1808","1789"],"a":3,"w":"1789: Smallpox kills about half the Aboriginal population of the Sydney region."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Jack Egan, Buried Alive, Sydney 1788–92 (Allen and Unwin, 1999)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other citys</p>

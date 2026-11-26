@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#early">Early Life</a></li><li><a href="#rise">Rise</a></li><li><a href="#deeds">What They Did</a></li><li><a href="#opponents">Opponents &amp; Critics</a></li><li><a href="#last">Last Years</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#early">Early Life</a></li><li><a href="#rise">Rise</a></li><li><a href="#deeds">What They Did</a></li><li><a href="#opponents">Opponents &amp; Critics</a></li><li><a href="#last">Last Years</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -123,6 +123,13 @@
       <div class="ty" data-ty="toyotomi-hideyoshi"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Nobunaga dies in the Honno-ji incident; Hideyoshi defeats the assassin Akechi Mitsuhide at the Battle of Yamazaki","o":["1590","1582","1558","1585"],"a":1,"w":"1582: Nobunaga dies in the Honno-ji incident; Hideyoshi defeats the assassin Akechi Mitsuhide at the Battle of Yamazaki."},{"p":"Which came first?","q":"","o":["Hideyoshi is born in Nakamura, Owari Province, according to tradition, the son of an ashigaru","The Siege of Odawara against the Later Hojo; the following year the Kunohe rebellion completes the unification"],"a":0,"w":"1537: Hideyoshi is born in Nakamura, Owari Province, according to tradition, the son of an ashigaru · 1590: The Siege of Odawara against the Later Hojo; the following year the Kunohe rebellion completes the unification."},{"p":"In which year?","q":"He becomes kampaku and conquers Shikoku; Osaka Castle's main enclosure is finished","o":["1573","1592","1585","1590"],"a":2,"w":"1585: He becomes kampaku and conquers Shikoku; Osaka Castle's main enclosure is finished."},{"p":"Which came first?","q":"","o":["Hideyoshi is born in Nakamura, Owari Province, according to tradition, the son of an ashigaru","Nobunaga appoints him daimyo of three districts in northern Omi Province, where he builds Nagahama Castle"],"a":0,"w":"1537: Hideyoshi is born in Nakamura, Owari Province, according to tradition, the son of an ashigaru · 1573: Nobunaga appoints him daimyo of three districts in northern Omi Province, where he builds Nagahama Castle."},{"p":"In which year?","q":"The Siege of Odawara against the Later Hojo; the following year the Kunohe rebellion completes the unification","o":["1573","1558","1590","1592"],"a":2,"w":"1590: The Siege of Odawara against the Later Hojo; the following year the Kunohe rebellion completes the unification."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Stephen Turnbull, Toyotomi Hideyoshi (Osprey Publishing, 2010)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other lifes</p>

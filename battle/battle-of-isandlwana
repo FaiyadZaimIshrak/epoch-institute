@@ -75,7 +75,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#how-it-was-fought">How it was fought</a></li><li><a href="#background">Background</a></li><li><a href="#forces">The Two Sides</a></li><li><a href="#course">How It Went</a></li><li><a href="#aftermath">Aftermath</a></li><li><a href="#sources">How We Know</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#how-it-was-fought">How it was fought</a></li><li><a href="#background">Background</a></li><li><a href="#forces">The Two Sides</a></li><li><a href="#course">How It Went</a></li><li><a href="#aftermath">Aftermath</a></li><li><a href="#sources">How We Know</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -120,6 +120,15 @@
       </div>
 
     <p class="profile-summary" id="summary"><em>At Isandlwana on 22 January 1879 a <a class="enc-link" href="/encyclopedia/zulu-kingdom">Zulu</a> army of some 20,000 overran the British camp left behind by <a class="enc-link" href="/encyclopedia/frederic-thesiger-2nd-baron-chelmsford">Lord Chelmsford</a>, killing over 1,300 troops. The Zulu dead are put at 1,000 to 3,000. It was the British Army's worst defeat by an indigenous foe and brought a second, larger invasion.</em></p>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Ian Knight, Isandlwana 1879: The Great Zulu Victory (Osprey, 2002)</li>
+        <li>John Laband, Historical Dictionary of the Zulu Wars (Scarecrow Press, 2009)</li>
+        <li>Paul Singer Thompson, Black soldiers of the queen: the Natal native contingent in the Anglo-Zulu War (University of Alabama Press, 2006)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other battles</p>

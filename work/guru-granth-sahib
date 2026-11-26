@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#origins">Origins</a></li><li><a href="#content">What It Is</a></li><li><a href="#making">How It Was Made</a></li><li><a href="#reception">Reception</a></li><li><a href="#survival">Survival &amp; Rediscovery</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -123,6 +123,16 @@
       <div class="ty" data-ty="guru-granth-sahib"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Max Arthur Macauliffe's six volume translation appears from Oxford University Press","o":["1708","1909","1704","1604"],"a":1,"w":"1909: Max Arthur Macauliffe's six volume translation appears from Oxford University Press."},{"p":"Which came first?","q":"","o":["Ernest Trumpp publishes the first philological study and a major but incomplete English translation","Guru Gobind Singh affirms the scripture as his successor shortly before his death"],"a":1,"w":"1877: Ernest Trumpp publishes the first philological study and a major but incomplete English translation · 1708: Guru Gobind Singh affirms the scripture as his successor shortly before his death."},{"p":"In which year?","q":"The first printed copy of the Guru Granth Sahib is made","o":["1604","1909","1864","1708"],"a":2,"w":"1864: The first printed copy of the Guru Granth Sahib is made."},{"p":"Which came first?","q":"","o":["Gopal Singh publishes the first complete English translation","Max Arthur Macauliffe's six volume translation appears from Oxford University Press"],"a":1,"w":"1960: Gopal Singh publishes the first complete English translation · 1909: Max Arthur Macauliffe's six volume translation appears from Oxford University Press."},{"p":"In which year?","q":"Guru Gobind Singh affirms the scripture as his successor shortly before his death","o":["1604","1960","1704","1708"],"a":3,"w":"1708: Guru Gobind Singh affirms the scripture as his successor shortly before his death."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>Gurinder Singh Mann, The Making of Sikh Scripture (Oxford University Press, 2001)</li>
+        <li>Pashaura Singh, The Guru Granth Sahib: Canon, Meaning and Authority (Oxford University Press, 2003)</li>
+        <li>Christopher Shackle, Teachings of the Sikh Gurus: Selections from the Sikh Scriptures (Routledge, 2013)</li>
+        <li>Ernest Trumpp, The Ādi Granth or the Holy Scriptures of the Sikhs (Munshiram Manoharlal Publishers, 2004)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other great works</p>

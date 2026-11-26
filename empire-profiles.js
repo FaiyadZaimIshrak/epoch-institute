@@ -12334,7 +12334,7 @@ const EMPIRE_PROFILES = {
     decline: "<p>In 1801, under pressure from Lord Wellesley, Saadat Ali Khan II ceded the whole of Rohilkhand, the Lower Doab and the sarkar of Gorakhpur in lieu of the annual tribute. The cession halved the state, left it surrounded by British territory and useless as a buffer, and bound it to a government serving its people; the British later cited failure to meet this demand to justify annexation. Oudh became a British protectorate in May 1816, and further areas were ceded through the early 1800s.</p><p>On 7 February 1856 Lord Dalhousie deposed Wajid Ali Shah and annexed Oudh under the Doctrine of Lapse on the grounds of alleged internal misrule. In the Indian Rebellion of 1857, from 5 July 1857 to 3 March 1858, Begum Hazrat Mahal proclaimed her son Birjis Qadr Wali of Awadh and ruled as regent; the British reestablished their rule over the next eighteen months, and rebels fought on until 1859. Oudh was merged into the North-Western Provinces and Oudh, later the United Provinces, which became Uttar Pradesh in 1950.</p>",
     summary: "Oudh grew from a Mughal subah, consolidated by Saadat Ali Khan I from 1722, into a wealthy independent kingdom of the Doab with its capital at Faizabad. After the Battle of Buxar in 1764 the East India Company drew ever more land and money from it, made it a protectorate in 1816 and annexed it in 1856.",
     references: [
-
+    "J. R. I. Cole, Roots of North Indian Shīʾism in Iran and Iraq: Religion and State in Awadh, 1722-1859 (University of California Press, 1989)"
     ]
   },
   "Chola Empire": {
@@ -14108,7 +14108,11 @@ const EMPIRE_PROFILES = {
     legacy: "<p>Douglass has been called \"the most important leader of the movement for African-American civil rights in the 19th century\". Abolitionists of his time described him as a living counterexample to the claim that enslaved people lacked the intellectual capacity to function as independent citizens. His three autobiographies, the Narrative (1845), My Bondage and My Freedom (1855) and Life and Times of Frederick Douglass (1881, revised 1892), promoted the cause of abolition, and Charles H. T. Lesch describes his political thought as \"natural rights from below\", drawn from the experience of the enslaved. He supported equal rights for women, immigrants and the poor, and in 1869 defended Chinese immigration when many fellow Republicans opposed it.</p><p>Roy Finkenbine calls him \"the most influential African American of the nineteenth century\", who made a career of agitating the American conscience; less than a month before his death Douglass advised a young man: \"Agitate! Agitate! Agitate!\" David W. Blight writes that he very much wished to see himself as a founder and defender of the \"Second American Republic\" that came out of the Civil War; Blight's biography won the Pulitzer Prize for History in 2019.</p><p>A statue unveiled in Rochester in 1899 made him the first African American so memorialised in the country. His home at Cedar Hill is the Frederick Douglass National Historic Site, the Episcopal Church remembers him on 20 February, and schools, bridges, stamps and Rochester's airport bear his name.</p>",
     summary: "Frederick Douglass (c. 1818–1895) escaped slavery in Maryland in 1838 and became a national leader of the abolitionist movement through his speeches, his newspaper the North Star and his autobiographies. He supported women's suffrage, recruited black soldiers in the Civil War and later held federal offices and served as minister to Haiti.",
     references: [
-
+    "William S. McFeely, Frederick Douglass (W.W. Norton & Co., 1991)",
+    "Dickson J. Preston, Young Frederick Douglass: The Maryland Years (Johns Hopkins University Press, 1980)",
+    "Maurice S. Lee (ed.), The Cambridge Companion to Frederick Douglass (Cambridge University Press, 2009)",
+    "John W. Blassingame (ed.), The Frederick Douglass Papers: Series One—Speeches, Debates, and Interviews (Yale University Press, 1979)",
+    "David B. Chesebrough, Frederick Douglass: Oratory from Slavery (Greenwood Publishing Group, 1998)"
     ]
   },
   "Mustafa Kemal Atatürk": {
@@ -14171,7 +14175,10 @@ const EMPIRE_PROFILES = {
     legacy: "<p>Churchill is regarded as one of the 20th century's most significant figures and remains popular in the United Kingdom, generally seen as a victorious wartime leader who helped defend liberal democracy against fascism. Historians rank him among the greatest British prime ministers, and in a 2002 BBC poll he was voted the greatest-ever Briton. Memorials include his statue in Parliament Square, the Churchill War Rooms and Churchill College, Cambridge. He was the first of only eight people granted honorary citizenship of the United States.</p><p>Before the Second World War his two changes of party bred widespread \"mistrust and dislike\", and some saw him as driven more by ambition than by principle; Robert Rhodes James found him \"refreshingly innocent and straightforward\". Biographers have called him \"fundamentally conservative\" and \"liberal in outlook\". Paul Addison describes the reformer as a \"benevolent paternalist\", and Jenkins credited him with \"a substantial record as a social reformer\". He was a staunch imperialist with a \"romanticised view\" of the Empire, and he has sometimes been criticised for his comments on race and for wartime decisions such as area bombing; Addison argues that he would never have tried \"to stoke up racial animosity against immigrants\".</p><p>He was a prolific writer of history, biography and memoir, including the four-volume A History of the English-Speaking Peoples, and an amateur painter of hundreds of canvases.</p>",
     summary: "Winston Churchill, born at Blenheim Palace in 1874, was a soldier and war correspondent, a Liberal and Conservative minister and twice prime minister. He led Britain through the Second World War from 1940, and is honoured as a wartime leader while criticised for his imperialism, his views on race and decisions from Iraq to the Bengal famine.",
     references: [
-
+    "Roy Jenkins, Churchill (Macmillan Press, 2001)",
+    "Geoffrey Best, Churchill: A Study in Greatness (Hambledon and Continuum, 2001)",
+    "Robert Rhodes James, Churchill: A Study in Failure 1900–1939 (Weidenfeld & Nicolson, 1970)",
+    "Robert Blake (ed.), Churchill: A Major New Reassessment of His Life in Peace and War (Oxford University Press, 1993)"
     ]
   },
   "Jawaharlal Nehru": {
@@ -14418,7 +14425,9 @@ const EMPIRE_PROFILES = {
     legacy: "<p>For Jews the Hebrew Bible is the scripture of their religion and, scholars argue, a foundation of their identity. David Goodblatt argued that it underpinned Jewish nationalism in the Second Temple period, and Adrian Hastings held that the study of sacred texts helped the Jews preserve national identity after the loss of their political entity in the 1st century CE. The Bible also helped preserve Hebrew, which, unlike Phoenician and Edomite, survived even as Aramaic replaced other regional languages. The five scrolls are read aloud in many synagogues on set occasions: the Song of Songs at Passover, Ruth at Shavuot, Lamentations on Tisha B'Av, Ecclesiastes at Sukkot and Esther at Purim.</p><p>Christianity has long asserted a close relationship between the Hebrew Bible and the New Testament, and its books are included in the Old Testament of the Christian Bible. The Septuagint was influential on early Christianity, and the translations used by Roman Catholic and Eastern Orthodox churches are based on it. In Islam, the Tawrat is often identified with the Pentateuch and also with the other books of the Hebrew Bible. Hastings contended that the model of ancient Israel in the Hebrew Bible set the original concept of nationhood. Scholars have also questioned the historicity of the patriarchs, the Exodus and the conquest, though Avraham Faust notes that some traditions align with archaeology from the 9th century BCE onward.</p>",
     summary: "The Hebrew Bible, or Tanakh, is the canonical collection of Hebrew scriptures in three parts: Torah, Nevi'im and Ketuvim. Tradition ascribes the Torah to Moses; scholars see composition in stages, with the Masoretic Text authoritative in Judaism.",
     references: [
-
+    "David M. Carr, The Hebrew Bible: A Contemporary Introduction to the Christian Old Testament and the Jewish Tanakh (Wiley Blackwell, 2021)",
+    "Christine Hayes, Introduction to the Bible (Yale University Press, 2012)",
+    "Emanuel Tov, Hebrew Bible, Greek Bible, and Quran (Mohr Siebeck, 2008)"
     ]
   },
   "New Testament": {
@@ -14528,7 +14537,10 @@ const EMPIRE_PROFILES = {
     legacy: "<p>The scripture is the focal point of every gurdwara, seated on a raised platform called a takht while the congregation sits on the floor. Sikhs cover their heads and remove their shoes in its presence, and it is carried on the head, under a canopy, with a chaur (fan whisk) waved over it. A granthi cares for it and recites from it. In major gurdwaras such as the Golden Temple it is treated as a living person: at dawn the prakash ritual brings it from its bedroom in a palanquin and a page is opened at random, the first complete verse on the left page being the mukhwak of the day; at night the sukhasan ritual puts it to rest.</p><p>Official copies are produced in Amritsar by the Shiromani Gurdwara Parbandhak Committee (SGPC), which the Akal Takht names as the only authorised publisher. On 9 May 1998 a hukamnama banned private publishing, and in 2007 the state of Punjab made it illegal for private firms to copy the scripture. In September 2023 the SGPC announced printing at Tracy, California, for Sikhs in North America.</p><p>Three stanzas read from it were used in a United Nations video released on 30 March 2021. Pearl S. Buck, winner of the Nobel Prize in Literature in 1938, wrote that its scriptures \"speak to persons of any religion or of none\".</p>",
     summary: "The Guru Granth Sahib is the central scripture of Sikhism, which Sikhs regard as their eternal Guru. Guru Arjan compiled it in 1604 as the Adi Granth, and Guru Gobind Singh added the hymns of Guru Tegh Bahadur. It runs to 1,430 pages of hymns set in rāgas.",
     references: [
-
+    "Gurinder Singh Mann, The Making of Sikh Scripture (Oxford University Press, 2001)",
+    "Pashaura Singh, The Guru Granth Sahib: Canon, Meaning and Authority (Oxford University Press, 2003)",
+    "Christopher Shackle, Teachings of the Sikh Gurus: Selections from the Sikh Scriptures (Routledge, 2013)",
+    "Ernest Trumpp, The Ādi Granth or the Holy Scriptures of the Sikhs (Munshiram Manoharlal Publishers, 2004)"
     ]
   },
   "Talmud": {
@@ -14917,7 +14929,8 @@ const EMPIRE_PROFILES = {
     legacy: "<p>The battle has been described by numerous academic and popular historians as epochal: the first time a Mongol advance met a major defeat and a permanent halt. It was the first of two defeats the Mongols suffered in trying to invade Egypt and the Levant, the other being the Battle of Marj al-Saffar in 1303. Beside Ain Jalut the Mongols were beaten at the second Battle of Homs, Elbistan and Marj al-Saffar; in five battles with the Mamluks they won only at Wadi al-Khaznadar, and they never returned to Syria. Baybars and his successors went on to capture the last of the Crusader states in the Holy Land by 1291.</p><p>The defeat also coincided with the end of the unified Mongol empire, since the war between Hulegu and Berke was the first open war among the Mongols. In later memory the name has been taken up in modern politics: one of the three original brigades of the Palestine Liberation Army was named Ain Jalut, and in July 1970 Yasser Arafat referred to the battle, saying that the Mongols who had swept away the Abbasid caliphate were defeated at Ain Jalut, in the same region where he said his people were then fighting the Zionists.</p>",
     summary: "On 3 September 1260 the Bahri Mamluks of Egypt under Qutuz met a Mongol force under Kitbuqa at Ain Jalut and drove it back, killing Kitbuqa. The Mamluks then took Damascus and Aleppo, and the Mongols never returned to Syria.",
     references: [
-
+    "Reuven Amitai-Preiss, Mongols and Mamluks: The Mamluk-Ilkhanid War, 1260–1281 (Cambridge University Press, Cambridge, 1995)",
+    "Peter Thorau, The Lion of Egypt : Sultan Baybars I and the Near East in the thirteenth century (Longman, 1995)"
     ]
   },
   "Battle of Badr": {
@@ -15051,7 +15064,7 @@ const EMPIRE_PROFILES = {
     legacy: "<p>For the Persian empire the defeat barely touched its vast resources, but for the Greeks it was the first time they had beaten the Persians. It showed that resistance was possible, that the Persians could be beaten, and that Athens could win without Sparta, which was regarded as the major military power. Militarily, it was the first time a hoplite phalanx faced mainly lightly armed troops, and it revealed how effective hoplites could be, although the phalanx remained vulnerable to cavalry.</p><p>In later centuries the battle came to be seen as a defining moment for the young Athenian democracy and the start of a golden age. John Stuart Mill held that Marathon was more important, even as an event in British history, than the Battle of Hastings. Aeschylus, who fought there, is said to have thought it his greatest achievement, for his gravestone names Marathon and not his plays.</p><p>Legends gathered round it: Pan, who was said to have frightened the Persians, the phantom of Theseus, a rustic with a plough who was honoured as a hero, and a vow to sacrifice as many goats as there were Persians slain, so that 500 were offered yearly. The runner who dies after announcing the victory is first told by Plutarch in the 1st century CE, citing Heracleides of Pontus. Michel Bréal proposed a marathon race for the first modern Olympics in 1896, and its distance was fixed at 42.195 kilometres.</p>",
     summary: "At Marathon in 490 BCE the Athenians and Plataeans attacked a Persian force sent by Darius I, broke its wings and drove it to the ships. Herodotus counted 6,400 Persian and 192 Athenian dead. The first Persian invasion of Greece ended, and a second came in 480 BCE.",
     references: [
-
+    "Nick Sekunda, Marathon, 490 BC: The First Persian Invasion of Greece (Praeger, 2002)"
     ]
   },
   "Battle of Plassey": {
@@ -15143,7 +15156,8 @@ const EMPIRE_PROFILES = {
     legacy: "<p>The Marathas never fully recovered from Panipat but remained the largest empire in the Indian subcontinent and retook Delhi ten years later. The result was a temporary halt to their advance in the north and about ten years of destabilisation. Madhavrao is credited with reviving their power, and in 1771 Mahadji Shinde led an army into the north to restore Maratha supremacy. After Madhavrao's early death, at 28, the chiefs fell into infighting, and the East India Company annexed their lands in 1819.</p><p>For the Punjab, the Durrani victory ended Maratha plans to take it and left the Durranis and the Sikhs as the two main powers. The Sikhs harassed Ahmad Shah's march home, and the Jats under Suraj Mal, who stayed out of the battle, are said to have helped the Marathas who escaped. The Rohillas were rewarded with grants, and the Mughal empire, still nominal, officially ended in 1857.</p><p>Ahmad Shah praised the Marathas' valour in a letter to Madho Singh of Jaipur, and the battle is also remembered as a scene of valour on both sides. It has been the subject of a poem by Kipling, a Bengali poem by Kaykobad, a play by Munier Choudhury, a Marathi novel by Vishwas Patil and a 2019 film that has several major historical inaccuracies.</p>",
     summary: "The Third Battle of Panipat, fought on 14 January 1761, pitted the Maratha Empire against the Durrani Empire and its Indian allies. The Afghan side won. An eyewitness chronicle reports about 40,000 Maratha prisoners killed the next day, and some 22,000 women and children were driven off as slaves.",
     references: [
-
+    "Casi Raja Pundit, An Account Of The Last Battle of Panipat (Oxford University Press, 1926)",
+    "Shejwalkar, Trimbak S., Panipat 1761 (Deccan College, 1946)"
     ]
   },
   "Battle of Actium": {
@@ -15293,7 +15307,10 @@ const EMPIRE_PROFILES = {
     legacy: "<p>Điện Biên Phủ was the decisive battle of the First Indochina War, and the loss of the garrison meant that roughly one tenth of French Union manpower in Indochina had been lost. The defeat did not significantly alter the strategic situation, but brought a profound psychological shock to France. The Catroux commission concluded that the fall was, in strictly military terms, a very serious failure that did not upset the balance of forces, and took on the aspect of definitive defeat through its effect on a French public tired of an unpopular war.</p><p>Outside Indochina the political significance was far-reaching. The Algerian National Liberation Front viewed it as an epoch-changing moment, and Ferhat Abbas, post-colonial Algeria's first president, called it \"the 'Valmy' of the colonised peoples\". Colonel William F. Long wrote twelve years later that Dien Bien Phu had become shorthand for a defeat of the West by the East. The United States, which was underwriting 80% of French expenditure in Indochina, had avoided overt intervention, though it covertly supplied pilots and aircraft.</p><p>In 1968 the North Vietnamese Army under Giáp besieged the US base at Khe Sanh, but there were differences: the Marines held the high ground, the supply base was 45 km away and Khe Sanh received 18,000 tons of air resupply in 77 days against 4,000 tons in 167 days at Điện Biên Phủ. Today the site is a popular tourist attraction with a modern museum, preserved French positions and memorials. The battle is the subject of Pierre Schoendoerffer's 1992 film Dien Bien Phu.</p>",
     summary: "From 13 March to 7 May 1954 the Viet Minh under Giáp besieged and overran the French camp at Điện Biên Phủ. The defeat shocked France, and the Geneva Accords then partitioned Vietnam temporarily at the 17th parallel.",
     references: [
-
+    "Phillip Davidson, Vietnam at War: The History, 1946–1975 (Oxford University Press, 1988)",
+    "Kevin Boylan, Valley of the Shadow: The Siege of Dien Bien Phu (Osprey Press, 2018)",
+    "Martin Windrow, Dien Bien Phu 1954: The French Defeat that Lured America Into Vietnam (Osprey, 2021)",
+    "Anthony Tucker-Jones, Dien Bien Phu : the first Indochina War, 1946-1954 (Barnsley, South Yorkshire : Pen & Sword Military, 2017)"
     ]
   },
   "Battle of Grunwald": {
@@ -15334,7 +15351,9 @@ const EMPIRE_PROFILES = {
     legacy: "<p>The British Army had suffered its worst defeat against an indigenous foe armed with vastly inferior technology. In none of the other engagements of the war did the British again fight the main Zulu army in their typical line, the Thin Red Line, in open field. They entrenched or formed very close order, such as the square, and ammunition boxes were thereafter unscrewed in advance. Chelmsford blamed Durnford for the defeat, although there is no evidence that he had ordered a proper camp to be made; Garnet Wolseley wrote that the blame was thrown on Durnford to screen Chelmsford.</p><p>After the second invasion, Chelmsford defeated the Zulu in several engagements, the last at Ulundi, and Cetshwayo was captured. Some historians hold that Ulundi was a token victory, driven by his need to salvage some success. Bartle Frere was recalled in August 1880 and the policy of Confederation was abandoned. By the time Cetshwayo was allowed to return home, the Zulu Kingdom had ceased to exist as an independent entity.</p><p>Melvill and Coghill received posthumous Victoria Crosses in 1907, after long campaigning by Mrs Melvill, and Wolseley had objected to the idea of officers escaping on horseback while their men on foot were killed. The legend of the lone soldier in the cave inspired Richard Thomas Moynan's 1883 painting The Last of the 24th. The battle is the subject of Johnny Clegg and Juluka's song Impi, the 1979 film Zulu Dawn and the opening scene of the 1964 film Zulu.</p>",
     summary: "At Isandlwana on 22 January 1879 a Zulu army of some 20,000 overran the British camp left behind by Lord Chelmsford, killing over 1,300 troops. The Zulu dead are put at 1,000 to 3,000. It was the British Army's worst defeat by an indigenous foe and brought a second, larger invasion.",
     references: [
-
+    "Ian Knight, Isandlwana 1879: The Great Zulu Victory (Osprey, 2002)",
+    "John Laband, Historical Dictionary of the Zulu Wars (Scarecrow Press, 2009)",
+    "Paul Singer Thompson, Black soldiers of the queen: the Natal native contingent in the Anglo-Zulu War (University of Alabama Press, 2006)"
     ]
   },
   "Battle of Issus": {
@@ -15527,7 +15546,8 @@ const EMPIRE_PROFILES = {
     legacy: "<p>With Madagascar in Allied hands, military and naval installations were established across the island. Its deep-water ports were vital for control of the passage to India and the Persian corridor and were now beyond the reach of the Axis. In the makeshift Allied planning of the early years of the war the invasion held a prominent strategic place, and it was the first large-scale Allied operation to combine sea, land and air forces.</p><p>The island was placed under Free French control. General Paul Legentilhomme was appointed High Commissioner for Madagascar in December 1942, only to replace British administration. Like many colonies, Madagascar sought independence from the French Empire after the war. In 1947 the island experienced the Malagasy Uprising, a costly revolution that was crushed in 1948, and on 26 June 1960 the Malagasy Republic proclaimed its independence from France, about twelve years later.</p><p>Campaign service in Madagascar did not qualify for the Africa Star; it was covered by the 1939–1945 Star.</p>",
     summary: "From 5 May 1942 British and Allied forces took Diego-Suarez and then the rest of Vichy French Madagascar, to keep its ports from the Japanese navy. About 6,000 of the 8,000 defenders were Malagasy tirailleurs, and an armistice was signed on 6 November.",
     references: [
-
+    "Leonard Charles Frederick Turner, War in the Southern Oceans: 1939–1945 (Oxford University Press, 1961)",
+    "John Grehan, Churchill's Secret Invasion : Britain's First Large Scale Combined Offensive 1942 (Pen & Sword Military, 2013)"
     ]
   },
   "Battle of Magnesia": {
@@ -15975,7 +15995,8 @@ const EMPIRE_PROFILES = {
     legacy: "<p>Within weeks Congress added 2,500 men to the Army and enlarged cavalry companies. The Sioux were pressed to cede the Black Hills, which they never accepted as legitimate. The Supreme Court's 1980 decision in United States v. Sioux Nation of Indians acknowledged that the United States took the Hills without just compensation, and the Sioux refused the money offered and still insist on their right to the land. The Crow, who mourned in their own way, saw an end to Lakota raids; Plenty Coups recalled that his people could finally sleep without fear.</p><p>In the United States Custer became a hero. His widow Elizabeth Bacon Custer lived until 1933 and defended his name in three books, Captain Frederick Whittaker's 1876 book idealised him, and Wild West shows spread the image. After 1934, when Glory Hunter appeared, and her death, historians turned to criticism of his decisions. Reno's conduct was examined at the 1879 inquiry, which found him without fault, and Benteen was blamed by some for not riding to Custer. A national cemetery was created in 1879, the site was named for Custer in 1946, and in 1991 Congress renamed it Little Bighorn Battlefield National Monument. An Indian Memorial by Colleen Cutschall, 'Peace Through Unity', stands near Last Stand Hill, and red granite markers for Native warriors have been added since 1999.</p>",
     summary: "On 25–26 June 1876 Lakota, Northern Cheyenne and Arapaho fighters defeated the 7th Cavalry on the Little Bighorn, killing Custer and every man in the five companies with him. The United States still won the Great Sioux War, and took the Black Hills.",
     references: [
-
+    "Nathaniel Philbrick, The Last Stand: Custer, Sitting Bull, and the Battle of the Little Bighorn (Viking, 2010)",
+    "Douglas D. Scott, They Died With Custer: Soldiers' Bones from the Battle of the Little Bighorn (University of Oklahoma Press, 2013)"
     ]
   },
   "Battle of the Nile": {
@@ -16335,7 +16356,7 @@ const EMPIRE_PROFILES = {
     legacy: "<p>Hemu's march from Bengal had briefly put Delhi and Agra in his hands, and the battle was fought to take them back. The Mughals, who had regained the two cities in July 1555, held them after Panipat, and Adil Shah was himself defeated and killed within months.</p><p>The captured elephants left a mark on Mughal warfare. Their destructive rampages so impressed the Mughals that elephants soon became an integral part of Mughal military strategy. Hemu is also commemorated at Panipat: a memorial was erected at the spot where he was beheaded, and it is now known as Hemu's Samadhi Sthal.</p><p>Akbar, 13 years old at the time of the battle and kept eight miles from the fighting, is said to have taken the title of Ghazi after it. The battle was fought not far from the site of the First Battle of Panipat of 1526.</p>",
     summary: "On 5 November 1556 the Mughal army of the young Akbar and Bairam Khan defeated Hemchandra Vikramaditya at Panipat, a month after he had taken Delhi. A chance arrow struck Hemu down as he seemed close to winning, his army fled, and he was captured and beheaded.",
     references: [
-
+    "Jadunath Sarkar, Military History of India (Orient Longmans, 1960)"
     ]
   },
   "Siege of Baghdad (1258)": {
@@ -16409,7 +16430,7 @@ const EMPIRE_PROFILES = {
     legacy: "<p>The Congress of Vienna met from September 1814 to June 1815 and redrew the political map of Europe, and the social life around it moved Prince de Ligne to say that the congress dances but does not progress. The Ringstrasse and its buildings, the Baroque palaces and gardens and the historic centre remain the city's architectural ensemble, and the centre was designated a UNESCO World Heritage Site in 2001.</p><p>Between the wars the city's Social Democrats ran the municipality from 1919 to 1934, in the period called Red Vienna. In 1921 Vienna became a state of its own, separate from Lower Austria. Over 60,000 apartments were built in municipal housing blocks between 1925 and 1934, among them the Karl-Marx-Hof, and these Gemeindebauten still serve as affordable housing. In 1938 the city was enlarged by 91 municipalities to 1,224 km², and the enlargement was reversed in 1954.</p><p>After the war the four powers divided Vienna into sectors from September 1945, with the First District an international zone whose control passed monthly among them. The Austrian State Treaty was signed in May 1955 and came into force on 27 July 1955, and by October all soldiers had left. In the 1970s Vienna became an official seat of the United Nations, and the Vienna International Centre was built. Vienna is today the capital of Austria and a state in its own right.</p>",
     summary: "Vienna grew from the Roman camp of Vindobona into the seat of the Babenbergs and then the Habsburgs. It withstood Ottoman sieges in 1529 and 1683, hosted the Congress of Vienna, and is today the capital of Austria.",
     references: [
-
+    "John Philip Spielman, The city & the crown: Vienna and the imperial court, 1600–1740 (Purdue University Press, 1993)"
     ]
   },
   "Madrid": {
@@ -16433,7 +16454,7 @@ const EMPIRE_PROFILES = {
     legacy: "<p>After 1755 the Marquis of Pombal, minister of Joseph I, chose to demolish what remained of the medieval lower town and rebuild it on a rectangular plan with two great squares, the Praça do Rossio and the Praça do Comércio. The Baixa Pombalina is one of the first examples of earthquake-resistant construction: its buildings had a wood-lattice framework, the Pombaline cage, and inter-terrace walls higher than the roof timbers to check the spread of fires. The earthquake shocked Europe, and Voltaire wrote a long poem on it and mentioned it in Candide.</p><p>The Belém Tower and the Jerónimos Monastery, both Manueline, are listed as World Heritage Sites. The Alfama, whose name comes from the Arabic al-hamma, survived the earthquake with little damage because of its narrow streets. Lisbon has many examples of azulejo tile art, dating from the 15th century, and the Portuguese pavement, the calçada portuguesa, was born there in the mid-1800s.</p><p>During the Second World War Lisbon was one of the few neutral, open Atlantic ports of Europe, and more than 100,000 refugees fled Nazi Germany through it. The Carnation Revolution of 25 April 1974 ended the Estado Novo. Lisbon is today the capital and most populous city of Portugal, with about 658,000 people in the city and about 3.35 million in its metropolitan area.</p>",
     summary: "Lisbon, on the Tagus estuary, was an Iron Age port, the Roman Olisipo and the Muslim al-Us̲h̲būna before Afonso I conquered it in 1147. It became Portugal's capital in the 13th century, sent out the voyages of discovery, and was rebuilt after the earthquake of 1755.",
     references: [
-
+    "Malcolm Jack, Lisbon, City of the Sea: A History (Bloomsbury Publishing, 2019)"
     ]
   },
   "Amsterdam": {
@@ -16511,7 +16532,7 @@ const EMPIRE_PROFILES = {
     legacy: "<p>Naples left its mark in art, learning and music. The University of Naples Federico II, founded in 1224, is regarded as the oldest state-funded secular university in the world, and L'Orientale, founded in 1732 by the Jesuit Matteo Ripa, is the oldest European institution for Oriental studies. Caravaggio's arrival in 1606 was a critical factor in the Neapolitan school of painting. The city was also a centre of the Enlightenment, and its song tradition produced pieces such as 'O sole mio and Funiculì, Funiculà.</p><p>The city's buildings record its successive rulers: the Castel dell'Ovo, the Castel Nuovo built under Charles I, Castel Sant'Elmo completed in 1329, the Royal Palace and the Piazza del Plebiscito begun by Joachim Murat and finished under Ferdinand IV. The rebuilding of the church of Santa Chiara, destroyed in an American bombing raid, became the symbol of the city's rebirth after the Second World War. Beneath the city lie tunnels and cisterns dug out of the soft tuff on which much of it is built.</p><p>Naples is today the capital of Campania and the largest city in southern Italy, the third largest in Italy after Rome and Milan, with 905,050 residents within its boundaries. Its population had peaked at 1,226,594 in 1971. Its historic centre was listed by UNESCO in 1995, and the rectangular grid of the Greek foundation can still be traced in it.</p>",
     summary: "Naples, on the Gulf of Naples in southern Italy, began as the Greek colony of Parthenope and was refounded as Neapolis. It passed from Rome to Byzantine, Norman, Angevin, Aragonese, Spanish and Bourbon rulers and was the capital of the Kingdom of Naples until 1861.",
     references: [
-
+    "Cordelia Warr, Art and Architecture in Naples, 1266–1713: New Approaches (John Wiley & Sons, 2010)"
     ]
   },
   "Milan": {
@@ -16536,7 +16557,7 @@ const EMPIRE_PROFILES = {
     legacy: "<p>The Alcázar, the cathedral and the General Archive of the Indies form a UNESCO World Heritage Site in the old town. The Alcázar began in the 10th century as a governor's palace, was enlarged under the Abbadids and rebuilt in Mudéjar style under Pedro I in the 1360s. The cathedral incorporates the minaret of the Almohad mosque as its bell tower, the Giralda, raised to about 95 metres by a Renaissance belfry. The Archive, designed by Juan Herrera in 1572 for the merchants' guild, became the archive of the Indies in 1785 and holds documents on the Spanish Empire in the Americas and the Philippines. The Royal Tobacco Factory, built between 1728 and 1771, is now the seat of the university's rectorate.</p><p>The Ibero-American Exposition of 1929 left the María Luisa Park and the Plaza de España, and Expo '92 left a technology park on the island of La Cartuja. The city is also known for its operas: a study of 2012 counted 153 set there, among them Mozart's The Marriage of Figaro, Rossini's The Barber of Seville and Bizet's Carmen. Seville is today the capital of Andalusia, with a municipal population of about 688,714 and a river port that is the only one in Spain.</p>",
     summary: "Seville, on the lower Guadalquivir in south-western Spain, grew from a Tartessian settlement into Roman Hispalis, an Abbadid and Almohad capital and, after 1503, the port of the Spanish Empire's American trade. Silting and plague ended its monopoly, and it is now the capital of Andalusia.",
     references: [
-
+    "Elizabeth Nash, Seville, Cordoba, and Granada: A Cultural History (Oxford University Press, 2005)"
     ]
   },
   "Granada": {
@@ -16792,7 +16813,8 @@ const EMPIRE_PROFILES = {
     legacy: "<p>Susa appears in the earliest Sumerian records, among the places obedient to Inanna in Enmerkar and the Lord of Aratta. As Shushan it is named in the Hebrew Bible in Ezra, Nehemiah, Daniel and above all the Book of Esther, which is the basis of the Jewish holiday of Purim and is set in Susa. The king Ahasuerus of that book may refer to Xerxes I. Susa is also the setting of Aeschylus's The Persians of 472 BCE, the oldest surviving play in the history of theatre.</p><p>The site was examined in 1836 by Henry Rawlinson, and Marcel-Auguste Dieulafoy and Jane Dieulafoy began the first French excavations in 1885. Jacques de Morgan excavated from 1897 to 1911 and found the stele of Naram-Sin, Babylonian boundary stones, the stele bearing the Code of Hammurabi and thousands of inscribed bricks, many of which went to the Louvre. His finds showed Susa to be the most important centre of Elamite civilisation. He and his successor Roland de Mecquenem used destructive methods that damaged much of the later historical layers. Roman Ghirshman and his wife excavated the hectare-sized Ville Royale down to bare earth from 1946 to 1967, and the pottery found at its levels gave Susa a stratigraphy.</p><p>The ancient centre is unoccupied today, and the town of Shush lies west and north of the ruins. UNESCO inscribed Susa on the World Heritage List in July 2015.</p>",
     summary: "Susa was settled by 4200 BCE in the lower Zagros and became the capital of Elam, then a capital of the Achaemenid Empire under Darius. Seleucid, Parthian, Sasanian and Arab rulers held it, and the Mongols razed it in 1218.",
     references: [
-
+    "Daniel T. Potts, The archaeology of Elam: Formation and transformation of an ancient Iranian state (Cambridge University Press, 1999)",
+    "Prudence Harper, The Royal City of Susa: Ancient Near Eastern Treasures in the Louvre (The Metropolitan Museum of Art, 1992)"
     ]
   },
   "Ctesiphon": {
@@ -16896,7 +16918,7 @@ const EMPIRE_PROFILES = {
     legacy: "<p>Xuanzang found most of the old historic buildings destroyed, with only their foundation walls left. He singled out an old stupa that was said to be the first of the 84,000 stupas built by Ashoka; its foundation had sunk into the ground so that only the ornamental top of the dome was visible, and that in a precarious state. Pataliputra later appears in distant sources: in 1559 the Italian Caius Julius Solinus briefly mentions in a fanciful book of world geography a powerful Indian kingdom of Prasia with its capital at Palibotra.</p><p>The location of the site was first identified in modern times in 1892 by Laurence Waddell, in Discovery of the Exact Site of Asoka's Classic Capital. Extensive excavations have been made near modern Patna. Early in the 20th century they revealed large fortification walls with reinforcing wooden trusses. Parts of the ancient city have been excavated at Kumhrar, Bulandi Bagh and Agam Kuan, but much of it still lies buried beneath modern Patna. Ashoka's Major Rock Edict No. 5 at Girnar names Pataliputra, and it is recorded in the Buddhist and Jain texts and in the Greek accounts of Megasthenes.</p>",
     summary: "Pataliputra, beside modern Patna on the Ganges, grew from the village of Pataligrama into the capital of the Nanda, Maurya and Gupta empires and was one of the largest cities in the world under Ashoka. It declined from the 300s, lay in ruins by 637, and later became Patna.",
     references: [
-
+    "B. P. Sinha, Pāṭaliputra Excavation, 1955-56 (Directorate of Archaeology and Museums, Bihar, 1970)"
     ]
   },
   "Kolkata": {
@@ -16977,7 +16999,9 @@ const EMPIRE_PROFILES = {
     legacy: "<p>The site of Taxila was rediscovered in the mid-19th century. Pliny's distances had pointed to a place on the Haro river, but Alexander Cunningham noted that Chinese pilgrims, Xuanzang in particular, gave a journey of three days from the Indus, not two, and his explorations in 1863–64 at Shah-dheri convinced him that he had found it. Sir John Marshall excavated there over twenty years from 1913.</p><p>The ruins include four major cities of different periods, at three sites: Hathial and Bhir Mound, which date from the late 2nd millennium BCE to the 6th century BCE and from the 6th century BCE, Sirkap, built in the 2nd century BCE by the Greco-Bactrian kings, and Sirsukh, built by the Kushans. The area also holds Buddhist monuments, among them the Dharmarajika stupa, the Jaulian monastery and the Mohra Muradu monastery. UNESCO designated Taxila a World Heritage Site in 1980, citing the four settlements, which reveal the pattern of urban evolution on the Indian subcontinent over more than five centuries. The serial site has 18 components in all.</p><p>Taxila Museum holds one of the most significant collections of Buddhist stone sculpture in Gandharan art, from the first to the seventh centuries, much of it from Marshall's excavations. The modern city of Taxila, in the Rawalpindi District of Punjab, had a population of 136,900 in the 2023 census.</p>",
     summary: "Taxila, in the Rawalpindi District of Punjab, Pakistan, was possibly founded around 1000 BCE and became a capital of Gandhara. Alexander, the Mauryans, the Indo-Greeks and the Kushans held it, and it was known for its teachers. The Huns devastated it in the 5th century.",
     references: [
-
+    "John Marshall, Taxila: Structural remains – Volume 1 (University Press, 1951)",
+    "John Marshall, A guide to Taxila (Cambridge University Press, 2013)",
+    "Bridget Allchin, The rise of civilization in India and Pakistan (Cambridge University Press, 1988)"
     ]
   },
   "Mohenjo-daro": {
@@ -17044,7 +17068,7 @@ const EMPIRE_PROFILES = {
     legacy: "<p>Manila’s galleon trade has been called the first to connect Asia with the Spanish Americas across the Pacific, and the city, with Mexico City and Madrid, has been counted among the world’s original set of global cities. The Philippine Revolution grew in the city: José Rizal’s novel Noli Me Tangere was published in 1886, Andrés Bonifacio founded the Katipunan in Tondo, and Rizal was executed at Bagumbayan on 30 December 1896.</p><p>The war destroyed almost all of Manila’s pre-war and Spanish colonial architecture. Some buildings were rebuilt, among them the Old Legislative Building, now the National Museum of Fine Arts, and many historic churches and buildings in Intramuros were damaged beyond repair. San Agustin Church, within Intramuros, is a UNESCO World Heritage Site. The writer Nick Joaquin described Manila as a city of layers, the Manila of the rajahs, the conquistadors, the viceroys and the Commonwealth, each destroyed and buried before the next rose on the same site.</p><p>The Burnham Plan was never completed, and the move of the government to Quezon City in 1948 ended any plan for the government centre at Luneta. Metro Manila was created as a unit in 1975, with four cities and thirteen towns. The city proper had 1,902,590 inhabitants at the census of 2024, and the Pasig River still divides it into northern and southern parts.</p>",
     summary: "Manila, on Manila Bay in the Philippines, was a Tagalog settlement by the 13th century and the Spanish capital of the East Indies from 1571, the western end of the galleon trade to Acapulco. Held by Britain from 1762 to 1764 and by the United States from 1898, it was largely destroyed in 1945 and rebuilt as the capital of the Philippines.",
     references: [
-
+    "Cristina Evangelista Torres, The Americanization of Manila, 1898-1921 (UP Press, 2010)"
     ]
   },
   "Malacca": {
@@ -17184,7 +17208,8 @@ const EMPIRE_PROFILES = {
     legacy: "<p>Lhasa remains the chief city of Tibetan Buddhism. The Jokhang is for most Tibetans the most sacred and important temple in Tibet and a key centre of pilgrimage for centuries; it is presently controlled by the Gelug school. The Potala Palace was the chief residence of the Dalai Lama. After the 14th Dalai Lama fled to India during the uprising of 1959 the government converted it into a museum, and it was restored between 1989 and 1994. The Potala, the Jokhang and Norbulingka are part of a UNESCO World Heritage Site, and the Potala was inscribed in 1994. UNESCO has expressed concern about the deterioration of Lhasa's traditional cityscape.</p><p>The Lhasa Zhol Pillar below the Potala dates to about 764 CE and carries what may be the oldest known example of Tibetan writing, with the account of a Tibetan general's campaigns against China, including the brief capture of Chang'an in 763. A Monument to the Peaceful Liberation of Tibet was unveiled in Potala Square in May 2002 to mark the 51st anniversary of the Seventeen Point Agreement, with an inscription describing the development of Tibet over fifty years.</p><p>Lhasa is the capital of the Tibet Autonomous Region. The 2010 census counted 429,104 Tibetans, 76.70 percent of the population, and 121,065 Han Chinese, 21.64 percent. A 2011 book estimated that up to two thirds of the city's residents are non-Tibetan, while the government states that Chengguan District is 63 percent ethnic Tibetan.</p>",
     summary: "Lhasa, on the Kyi River of the Tibetan Plateau, became the capital of the Tibetan Empire under Songtsen Gampo in the 7th century. The 5th Dalai Lama made it the capital of his government in 1642, and since 1965 it has been the capital of the Tibet Autonomous Region.",
     references: [
-
+    "Robert Barnett, Lhasa: Streets with Memories (Columbia University Press, 2013)",
+    "David G. Atwill, Islamic Shangri-La:Inter-Asian Relations and Lhasa's Muslim Communities, 1600 to 1960 (University of California Press, 2018)"
     ]
   },
   "Karakorum": {
@@ -17339,7 +17364,8 @@ const EMPIRE_PROFILES = {
     legacy: "<p>Harar is called the City of Saints in Arabic. UNESCO, in listing Harar Jugol as a World Heritage Site in 2006, considered it the fourth holiest city of Islam and counted 82 mosques, three dating from the 10th century, and 102 shrines. Its inscription rests on a 16th-century wall, its Harari urban fabric and its traditions, though plastering of houses, metal doors in place of wooden ones and television antennas have gradually affected the authenticity of the historic fabric.</p><p>Arthur Rimbaud lived in the city during the Egyptian period and returned in 1888 to trade in coffee, musk and skins until a fatal illness forced him back to France. A house said to have been his residence is now a museum. According to Burton, Harar was the birthplace of the khat plant, and the original domesticated coffee plant is also said to have come from there. The Harari language, long used in the city's government and archives, was encouraged in official use after the early 1990s.</p><p>Harar is the capital of the Harari Region. The 2007 census counted 99,368 people in the city, of whom 40.55% were Amhara, 28.14% Oromo and 11.83% Harari, and 48.54% reported that they were Muslim and 44.56% Christian. The Harari were a majority inside the walled city under the emirs but are now under 15% there.</p>",
     summary: "Harar is a walled hilltop city in eastern Ethiopia, founded according to tradition about 1216 and made capital of the Adal Sultanate in 1520. Its emirs ruled until Menelik II conquered it in 1887. Its old city is a World Heritage Site.",
     references: [
-
+    "Timothy Insoll, First Footsteps in the Archaeology of Harar, Ethiopia (Equinox Publishing Limited, 2017)",
+    "Avishai Ben-Dror, Emirate, Egyptian, Ethiopian: Colonial Experiences in Late Nineteenth-Century Harar (Syracuse University Press, 2018)"
     ]
   },
   "Khartoum": {
@@ -17375,7 +17401,8 @@ const EMPIRE_PROFILES = {
     legacy: "<p>After the end of the dynasty the area continued to be occupied, and in the Postclassic period villagers took stone from the monumental buildings to make house platforms. Only a few farming hamlets stood in the valley when the Spanish arrived in the 16th century. The first mention after the Spanish conquest is a letter of 8 March 1576 from Diego García de Palacio to Philip II. Jean-Frédéric Waldeck drew the ruins for a month in the early 19th century, Colonel Juan Galindo led an expedition there in 1834, and John Lloyd Stephens and Frederick Catherwood visited and published a description with drawings in 1841. Alfred Maudslay later visited, and expeditions sponsored by the Peabody Museum of Harvard University worked there, among them the excavation of the Hieroglyphic Stairway in 1892 and 1893. The Carnegie Institution also sponsored work in conjunction with the government of Honduras.</p><p>The Copán River had gradually changed course and cut away the eastern part of the Acropolis, leaving a cross-section 37 metres high at its tallest and 300 metres long. The Carnegie Institution diverted the river southwards in the 1930s to protect the site. UNESCO declared Copán a World Heritage Site in 1980, and the Honduran government designated it a cultural monument in 1982. The monument covers 66 hectares, and looting remains a threat to it. A life-size copy of the Rosalila building stands at the site museum.</p>",
     summary: "Copán, in the Copán valley of western Honduras, was refounded in 426 CE as the capital of a Maya kingdom that grew into a regional power. Its king was beheaded by Quiriguá in 738, the dynasty ended in the early 9th century and the ceremonial centre was abandoned by the early 10th century.",
     references: [
-
+    "Simon Martin, Chronicle of the Maya Kings and Queens: Deciphering the Dynasties of the Ancient Maya (Thames & Hudson, 2000)",
+    "Robert J. Sharer, The Ancient Maya (Stanford University Press, 2006)"
     ]
   },
   "Lima": {
@@ -17513,7 +17540,7 @@ const EMPIRE_PROFILES = {
     legacy: "<p>The British settlement took the land of the Eora, Darug and Dharawal. In January 1938, as the city celebrated 150 years of European settlement, a congress of Aboriginal people declared 26 January a Day of Mourning for the seizure of their country. The Darug, Dharawal and Eora are named as the traditional custodians of the land today, and 28 clans are known within Greater Sydney.</p><p>The city kept the buildings of its colonial governors and architects: Greenway's Hyde Park Barracks and St James's Church, the sandstone Town Hall, General Post Office and Queen Victoria Building, and St Andrew's Cathedral, the oldest in Australia. The Sydney Harbour Bridge, begun in 1924, took 1,400 men eight years to build and cost £4.2 million; sixteen workers died. The Opera House, designed by Jørn Utzon, opened in 1973 after disputes over its cost and is now a World Heritage Site. In the early 1970s trade unions and residents imposed green bans on development in historic areas such as The Rocks.</p><p>Sydney is the capital of New South Wales and the largest city in Australia. It was home to 5,231,150 people in the census of 2021, over 40 per cent born overseas. Migration from the 1980s came increasingly from Asia, the Middle East and Africa, and China and India overtook England as the largest source countries.</p>",
     summary: "Sydney was founded in 1788 as a British penal colony at Sydney Cove, on the land of the Eora, Darug and Dharawal peoples, whom smallpox and frontier violence greatly reduced. It became a city in 1842 and the capital of New South Wales in 1901, and is now Australia's largest city.",
     references: [
-
+    "Jack Egan, Buried Alive, Sydney 1788–92 (Allen and Unwin, 1999)"
     ]
   },
   "Honolulu": {
@@ -17578,7 +17605,11 @@ const EMPIRE_PROFILES = {
     legacy: "<p>The Prince is the most remembered of Machiavelli's works and the one most responsible for the later pejorative use of the word Machiavellian; it even contributed to the modern negative connotations of politics and politician in Western countries. It is sometimes claimed to be one of the first works of modern philosophy, one in which practical effect counts for more than any abstract ideal, and its worldview came into direct conflict with the dominant Catholic and scholastic doctrines of the time on politics and ethics.</p><p>Jean Bodin, Francis Bacon, Spinoza, Rousseau, Hume, Edward Gibbon and Adam Smith are among those who noted the importance of his realism, and he is thought to have influenced Montaigne, Descartes, Hobbes, Locke and Montesquieu. On the English stage he appears in the prologue of Christopher Marlowe's The Jew of Malta, and Shakespeare's Othello, Macbeth and Richard III have characters of the type called the stage Machiavel. Seventeenth-century English republicanism was strongly influenced by his thought, as were, it is often proposed, most of the Founding Fathers of the American Revolution. Frederick the Great of Prussia criticised him in an Anti-Machiavel published in 1740, and in the 20th century Benito Mussolini wrote a discourse on the book while Joseph Stalin annotated his own copy.</p>",
     summary: "The Prince is Machiavelli's short treatise of advice to new rulers, written from 1513 after the Medici had banished him and printed in 1532. Its break with the classical ideal regime, and its approval of cruelty and deceit where needed, drew condemnation and shaped the word Machiavellian.",
     references: [
-
+    "Erica Benner, Machiavelli's Prince: A New Reading (Oxford University Press, 2013)",
+    "Maurizio Viroli, Redeeming the Prince: The Meaning of Machiavelli's Masterpiece (Princeton University Press, 2015)",
+    "William B. Parsons, Machiavelli's Gospel: The Critique of Christianity in the Prince (Boydell & Brewer, 2016)",
+    "Leo Strauss, Thoughts on Machiavelli (University of Chicago Press, 2014)",
+    "Harvey C. Mansfield, Machiavelli's Virtue (University of Chicago Press, 1998)"
     ]
   },
   "The Canterbury Tales": {
@@ -17621,7 +17652,7 @@ const EMPIRE_PROFILES = {
     legacy: "<p>Victor Hugo wrote the novel Notre-Dame de Paris, published in English as The Hunchback of Notre-Dame, in 1831 to save the cathedral; it was an enormous success and raised awareness of its decay. Notre-Dame hosted the funerals of many presidents of the French Republic, and on 26 August 1944 a special Mass celebrated the liberation of Paris. In 1805 Pope Pius VII gave it the status of a minor basilica. Since 1905, like the other cathedrals of France, it has been owned by the French government, with the exclusive right of use granted to the Catholic Church. It is widely recognised as a symbol of both Paris and the French nation.</p><p>After the fire of 15 April 2019 President Emmanuel Macron promised that it would be restored. Heritage academics and professionals criticised a plan to build a new flèche quickly, and over 1,170 experts signed an open letter against exempting the cathedral from heritage law. A new flèche was put in place on 16 December 2023, and the cathedral reopened on 7 December 2024. Controversy continued over a plan to replace six undamaged 19th-century windows by Viollet-le-Duc with designs by Claire Tabouret; preservationists opposed it, and 140,000 people signed a petition to keep the old windows.</p>",
     summary: "Notre-Dame de Paris, begun in 1163 under Bishop Maurice de Sully and largely complete by 1260, is a Gothic cathedral known for its rib vaults, flying buttresses and rose windows. It was damaged in the Revolution, restored by Viollet-le-Duc, burned in 2019 and reopened in 2024.",
     references: [
-
+    "Dany Sandron, Notre-Dame Cathedral: nine centuries of history (The Pennsylvania State University Press, 2020)"
     ]
   },
   "St. Peter's Basilica": {
@@ -17673,7 +17704,9 @@ const EMPIRE_PROFILES = {
     legacy: "<p>The palace remained a stage for the state after the monarchy ended. During the Franco-Prussian War it was occupied by the German general staff, and the German Empire was proclaimed in the Hall of Mirrors on 18 January 1871. In March 1871 the government of the Third Republic moved in, with the National Assembly meeting in the Opera, and the military operation that suppressed the Paris Commune was directed from Versailles. The Treaty of Versailles, ending the First World War, was signed in the Hall of Mirrors in June 1919. In 1783 the last two of the three treaties of the Peace of Paris, ending the American Revolutionary War, were signed at the palace.</p><p>Since the 1875 Constitution the Senate and National Assembly have met in joint session at Versailles to amend the French Constitution, as in 1999, 2000, 2003 and 2024. The palace is owned by the French state and since 1995 has been run as a Public Establishment supervised by the Ministry of Culture. The gardens of Le Nôtre became the epitome of the French formal garden style and were widely imitated. The palace is considered one of the masterpieces of French classical architecture, and it exerted major influence across Europe in the 18th and 19th centuries in architecture and the decorative arts.</p>",
     summary: "The Palace of Versailles grew from Louis XIII's hunting lodge of 1623 into the vast residence Louis XIV built, and the court lived there from 1682 to 1789. After the Revolution it became a history museum and a venue of state, and it has been restored since 1892.",
     references: [
-
+    "Colin Jones, Versailles (Basic Books, 2018)",
+    "Guy Walton, Louis XIV's Versailles (University of Chicago Press, 1986)",
+    "Robert W. Berger, A Royal Passion: Louis XIV as Patron of Architecture (Cambridge University Press, 1994)"
     ]
   },
   "Hadrian's Wall": {
@@ -17767,7 +17800,7 @@ const EMPIRE_PROFILES = {
     legacy: "<p>The Gutenberg Bible marked the start of what is called the Gutenberg Revolution and of the age of printed books in the West, and it had a profound effect on the history of the printed book. In a legal paper written after its completion Gutenberg called the work Das Werk der Bücher, the work of the books. He had introduced the printing press to Europe and made printing with movable type efficient enough for the mass production of entire books.</p><p>It also influenced later editions of the Bible. It provided the model for several, among them the 36-line Bible, Mentelin's Latin Bible and the first and third Eggestein Bibles. The third Eggestein Bible was set from the copy now in Cambridge University Library. It also influenced the Clementine edition of the Vulgate commissioned by the Papacy in the late sixteenth century. The 36-line Bible, said to be the second printed Bible, is sometimes also called a Gutenberg Bible but may be the work of another printer.</p><p>Many book-lovers have commented on the standards of its production, some describing it as one of the most beautiful books ever printed. A library's possession of a copy has been equated to keeping a trophy book. Keio University in Tokyo has made digital reproductions of Gutenberg Bibles.</p>",
     summary: "The Gutenberg Bible is Johannes Gutenberg's printed Latin Vulgate of the 1450s, made at Mainz with mass-produced metal type. Of a print run put at between 160 and 185 copies, 49 survive in at least substantial portion, and it marked the start of the age of printed books in the West.",
     references: [
-
+    "John Man, Gutenberg: How One Man Remade the World with Words (John Wiley and Sons, Inc., 2002)"
     ]
   },
   "Mosque–Cathedral of Córdoba": {
@@ -18007,7 +18040,7 @@ const EMPIRE_PROFILES = {
     legacy: "<p>The Canon was used as a standard medical textbook through the 18th century in Europe, and its Latin translation greatly influenced the development of medieval medicine. Its rules for testing new drugs, its description of strokes, its long chapter on the nervous system and its treatment of fevers have all been studied by later readers.</p><p>Modern authors have examined particular passages. The information in Book 3 is described as representing some of Avicenna's most important contributions to several fields, including atherosclerosis, pulsology, migraines, cataracts, vasovagal syncope and neuroscience. In its account of stroke, based on humoral medicine, the descriptions are still similar to the modern understanding of the condition. Book 3 lists fifteen kinds of headache and names conditions from epilepsy and paralysis to melancholia and insomnia, with treatments in three steps: a change of lifestyle, simple medicines and compound medicines, with surgery or other non-drug methods in some cases. Sarton singled out its thoughts on the contagious nature of phthisis and its descriptions of skin and nervous ailments.</p>",
     summary: "The Canon of Medicine is Ibn Sina's five-book encyclopedia of medicine, completed in Hamadan in 1025. Translated into Latin, it entered European scholastic medicine and served as a standard textbook in universities into the early modern period.",
     references: [
-
+    "Nancy Siraisi, Avicenna in Renaissance Italy : the Canon and medical teaching in Italian universities after 1500 (Princeton University Press, 1987)"
     ]
   },
   "Süleymaniye Mosque": {
@@ -18185,7 +18218,8 @@ const EMPIRE_PROFILES = {
     legacy: "<p>It is called certainly the most frequently translated literary product of India. There is a version in nearly every major language of India and, according to Olivelle, 200 versions in more than 50 languages elsewhere; an older estimate by Jacob gave 112 versions in at least 38 languages. In Indonesia it is Tantri Kamandaka, with 360 fables; in Laos it is Nandaka-prakarana and in Thailand Nang Tantrai. Its stories are also the source of several in the Arabian Nights, and of many Western nursery rhymes and ballads. Folk tale motifs in Boccaccio, La Fontaine and the Brothers Grimm have been linked to it.</p><p>Some stories resemble Aesop's Fables: The Ass in the Panther's Skin, The Broken Pot beside The Milkmaid and Her Pail, and The Gold-Giving Snake beside The Man and the Serpent. Max Muller held that animal fables had their principal source in India, but this single-origin hypothesis is now generally discarded in favour of the view that fable motifs arose independently in many cultures, and the relation to Mesopotamian and Greek fables is hotly debated. In modern times Theodor Benfey used it as the basis of comparative literature. Arthur Ryder's translation of 1925 remains popular, and in the 1990s Chandra Rajan's Penguin version and Patrick Olivelle's Oxford version of 1997 appeared.</p>",
     summary: "The Panchatantra is an ancient Indian collection of animal fables in Sanskrit, in five treatises, by an unknown author, probably composed around 300 CE. Carried through Pahlavi, Arabic and Hebrew, it reached Europe and Southeast Asia and has been called the most frequently translated literary product of India.",
     references: [
-
+    "Arthur W. (transl) Ryder, The Panchatantra (University of Chicago Press, 1925)",
+    "Patrick Olivelle, Pañcatantra: The Book of India's Folk Wisdom (Oxford University Press, 2009)"
     ]
   },
   "The Art of War": {
@@ -18277,7 +18311,7 @@ const EMPIRE_PROFILES = {
     legacy: "<p>The Mogao Caves are the best known of the Chinese Buddhist grottoes and, with the Longmen and Yungang Grottoes, one of three famous ancient Buddhist sculptural sites in China. They became a UNESCO World Heritage Site in 1987, and from 1988 to 1995 a further 248 caves were found north of the 487 known since the early 1900s. They are described as one of the largest repositories of Buddhist art in the world, documenting the changing styles of Buddhist art in China for nearly a thousand years.</p><p>The Library Cave documents, dated from 406 to 1002, include the Diamond Sutra of 868, the earliest dated printed book, as well as Christian Jingjiao documents, the Dunhuang Go Manual, music scores and a star map. Most are in Chinese, with others in Tibetan, Uighur, Sanskrit, Avestan, Sogdian and Khotanese, and they record Buddhism's development in China and the lives of ordinary people. The International Dunhuang Programme coordinates scholarship on them and makes them available digitally. The Dunhuang Academy began exploring digital conservation in 1993 and has photographed 120 caves since 2010. Zhang Daqian's copies of the murals, exhibited in 1943, brought their art wide attention within China.</p>",
     summary: "The Mogao Caves near Dunhuang are a system of Buddhist cave temples begun in 366 CE and added to until the 14th century. Their murals and sculptures record a thousand years of Buddhist art, and a sealed cave found in 1900 held manuscripts that were later dispersed to Beijing, London, Paris and elsewhere.",
     references: [
-
+    "Gertraud Taenzer, The Dunhuang Region during Tibetan Rule (787-848): A Study of the Secular Manuscripts Discovered in the Mogao Caves (Harrassowitz, O, 2014)"
     ]
   },
   "Himeji Castle": {
@@ -18594,7 +18628,7 @@ const EMPIRE_PROFILES = {
     legacy: "<p>Menelik is generally considered the founder of modern Ethiopia. His borders, set by treaties with Britain, France and Italy, his ministries, schools, bank and railway, and the extension of the empire to its greatest historical extent shaped the state that followed him. His successors came from his own family: his grandson Iyasu, his daughter Zewditu, and Ras Tafari Makonnen, the future Haile Selassie.</p><p>Adwa gave him an international reputation. He was praised as a symbol of African resistance to colonialism, and the Adwa Victory Day is celebrated every March in Ethiopia; the victory is also said to have inspired Pan-African movements around the world. A Serb legend, recounted by the anthropologist Mary E. Durham, made Menelik a kinsman of the Montenegrin royal house on the strength of a similarity of names.</p><p>The other side of his memory comes from the peoples of the south. Allo writes that the Oromo are ambivalent toward Adwa because of its association with Menelik. He was a controversial figure for much of his reign.</p>",
     summary: "Menelik II (1844–1913) escaped from captivity under Tewodros II, became king of Shewa in 1866 and emperor in 1889. His southern conquests extended the empire, his army defeated Italy at Adwa in 1896, and critics among the Oromo and others charge him with atrocities.",
     references: [
-
+    "Bahru Zewde, A History of Modern Ethiopia 1855-1991 (Addis Ababa University Press, 2001)"
     ]
   },
   "Usman dan Fodio": {
@@ -18757,7 +18791,7 @@ const EMPIRE_PROFILES = {
     legacy: "<p>After Hideyoshi's death the Council of Five Elders was unable to keep Tokugawa Ieyasu's ambitions in check. Kato Kiyomasa and Fukushima Masanori, who had served in Korea, returned to find Ishida Mitsunari in power, held in contempt by them, and sided with Ieyasu. Hideyori lost the power his father had held, and Ieyasu's Eastern Army defeated Mitsunari's Western Army at the Battle of Sekigahara in 1600. Appointed shogun in 1603, Ieyasu attacked Osaka Castle in 1614 and 1615, forcing Hideyori and his mother Yodo-dono to commit suicide, which ended the Toyotomi clan. Historians generally attribute the weakening of the regime mainly to the loss of all his adult heirs, which left only the five-year-old Hideyori.</p><p>Hideyoshi changed Japanese society through a rigid class structure, restrictions on travel and surveys of land and production; the land surveys formed the basis for systematic taxation. Ieyasu left in place the majority of his decrees and built his shogunate upon them. Hideyoshi also influenced material culture. During the Korean campaigns large quantities of prized ceramic ware were confiscated and many Korean artisans were forcibly relocated to Japan. Politically he set up a system that balanced the most powerful daimyo, with a council of the most influential lords and a regent in command.</p><p>Osaka Castle, the sword hunt and the temples he built and restored in Kyoto remained. By 1915 he had been posthumously raised to Senior First Rank. In a letter to his wife he wrote that he was ready for a long siege and wished to return in triumph and leave a great name behind him.</p>",
     summary: "Toyotomi Hideyoshi (1537–1598), a peasant's son, rose through Oda Nobunaga's service, avenged him in 1582 and completed the unification of Japan by 1591. He disarmed the peasantry and surveyed the land, then invaded Korea in 1592; after his death Tokugawa Ieyasu displaced his heir.",
     references: [
-
+    "Stephen Turnbull, Toyotomi Hideyoshi (Osprey Publishing, 2010)"
     ]
   },
   "Murasaki Shikibu": {

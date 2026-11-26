@@ -76,7 +76,7 @@
 
     <nav class="empire-toc" aria-label="On this page">
       <p class="empire-toc-title">On this page</p>
-      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#early">Early Life</a></li><li><a href="#rise">Rise</a></li><li><a href="#deeds">What They Did</a></li><li><a href="#opponents">Opponents &amp; Critics</a></li><li><a href="#last">Last Years</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li></ul>
+      <ul><li><a href="#at-a-glance">At a glance</a></li><li><a href="#timeline">Timeline</a></li><li><a href="#early">Early Life</a></li><li><a href="#rise">Rise</a></li><li><a href="#deeds">What They Did</a></li><li><a href="#opponents">Opponents &amp; Critics</a></li><li><a href="#last">Last Years</a></li><li><a href="#legacy">Legacy</a></li><li><a href="#summary">Summary</a></li><li><a href="#test-yourself">Test yourself</a></li><li><a href="#detail-references">References</a></li></ul>
     </nav>
 
     <section class="rise-fall" id="timeline" aria-labelledby="timeline-title">
@@ -121,6 +121,17 @@
       <div class="ty" data-ty="frederick-douglass"><p class="ty-loading">The questions open here once the page has loaded.</p></div>
       <script type="application/json" class="ty-data">[{"p":"In which year?","q":"Publishes Narrative of the Life of Frederick Douglass, an American Slave and sails for a lecture tour of Ireland and Britain","o":["1848","1838","1895","1845"],"a":3,"w":"1845: Publishes Narrative of the Life of Frederick Douglass, an American Slave and sails for a lecture tour of Ireland and Britain."},{"p":"Which came first?","q":"","o":["Publishes the broadside Men of Color to Arms! and confers with Abraham Lincoln on the treatment of black soldiers","Escapes from Baltimore by train in a sailor's uniform, reaches New York in less than 24 hours and marries Anna Murray"],"a":1,"w":"1863: Publishes the broadside Men of Color to Arms! and confers with Abraham Lincoln on the treatment of black soldiers · 1838: Escapes from Baltimore by train in a sailor's uniform, reaches New York in less than 24 hours and marries Anna Murray."},{"p":"In which year?","q":"Becomes United States Marshal for the District of Columbia, the first person of colour named to the post","o":["1877","1848","1895","1838"],"a":0,"w":"1877: Becomes United States Marshal for the District of Columbia, the first person of colour named to the post."},{"p":"Which came first?","q":"","o":["Returns to the United States, his freedom bought by British supporters, and starts the North Star in Rochester","Becomes United States Marshal for the District of Columbia, the first person of colour named to the post"],"a":0,"w":"1847: Returns to the United States, his freedom bought by British supporters, and starts the North Star in Rochester · 1877: Becomes United States Marshal for the District of Columbia, the first person of colour named to the post."},{"p":"In which year?","q":"Returns to the United States, his freedom bought by British supporters, and starts the North Star in Rochester","o":["1863","1848","1847","1877"],"a":2,"w":"1847: Returns to the United States, his freedom bought by British supporters, and starts the North Star in Rochester."}]</script>
     </section>
+
+    <div id="detail-references" class="profile-references">
+      <p class="profile-references-title">References</p>
+      <ul class="profile-references-list">
+        <li>William S. McFeely, Frederick Douglass (W.W. Norton &amp; Co., 1991)</li>
+        <li>Dickson J. Preston, Young Frederick Douglass: The Maryland Years (Johns Hopkins University Press, 1980)</li>
+        <li>Maurice S. Lee (ed.), The Cambridge Companion to Frederick Douglass (Cambridge University Press, 2009)</li>
+        <li>John W. Blassingame (ed.), The Frederick Douglass Papers: Series One—Speeches, Debates, and Interviews (Yale University Press, 1979)</li>
+        <li>David B. Chesebrough, Frederick Douglass: Oratory from Slavery (Greenwood Publishing Group, 1998)</li>
+      </ul>
+    </div>
 
     <section class="related-empires" aria-labelledby="related-title">
       <p class="profile-references-title" id="related-title">Other lifes</p>
