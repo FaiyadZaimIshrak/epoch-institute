@@ -157,6 +157,74 @@ public static class G {
     }
     return sb.ToString();
   }
+  // ── globe views (27 Nov 2026: every small map is a globe, none flat). The orthographic projection centred on
+  // (lng0, lat0): a point of the unit sphere -> [x, y, c]; x to the right, y up, c > 0 on the near side. ──
+  public static double[] Ortho(double lng, double lat, double lng0, double lat0) {
+    double l = (lng - lng0) * Math.PI / 180, p = lat * Math.PI / 180, p0 = lat0 * Math.PI / 180, cp = Math.Cos(p);
+    return new[] { cp * Math.Sin(l), Math.Cos(p0) * Math.Sin(p) - Math.Sin(p0) * cp * Math.Cos(l), Math.Sin(p0) * Math.Sin(p) + Math.Cos(p0) * cp * Math.Cos(l) };
+  }
+  // a point on a globe of radius R drawn round (ox, oy): [x, y, visible 1/0]
+  public static double[] OnGlobe(double lng, double lat, double lng0, double lat0, double R, double ox, double oy) {
+    var q = Ortho(lng, lat, lng0, lat0); return new[] { ox + R * q[0], oy - R * q[1], q[2] > 0 ? 1.0 : 0.0, q[2] };
+  }
+  // a ring of the Equal Earth plane -> the same ring in degrees [lng, lat, ...]
+  public static double[] ToLL(double[] r) {
+    int n = r.Length / 2; var d = new double[r.Length];
+    for (int i = 0; i < n; i++) { var g = Inv(r[2 * i], r[2 * i + 1]); d[2 * i] = g[0]; d[2 * i + 1] = g[1]; }
+    return d;
+  }
+  // one ring in degrees -> its near-side part on the globe, closed along the limb where it runs over the edge; null when
+  // none of it faces the reader
+  public static double[] OrthoRing(double[] ll, double lng0, double lat0, double R, double ox, double oy) {
+    int n = ll.Length / 2; if (n < 3) return null;
+    var x = new double[n]; var y = new double[n]; var c = new double[n]; int vis = 0;
+    for (int i = 0; i < n; i++) { var q = Ortho(ll[2 * i], ll[2 * i + 1], lng0, lat0); x[i] = q[0]; y[i] = q[1]; c[i] = q[2]; if (q[2] >= 0) vis++; }
+    if (vis == 0) return null;
+    var o = new List<double>(n * 2 + 8);
+    if (vis == n) { for (int i = 0; i < n; i++) { o.Add(ox + R * x[i]); o.Add(oy - R * y[i]); } }
+    else {
+      bool haveExit = false, haveFirst = false; double exitA = 0, firstA = 0;
+      int m = (ll[0] == ll[2 * n - 2] && ll[1] == ll[2 * n - 1]) ? n - 1 : n;   // distinct points
+      for (int i = 0; i < m; i++) {
+        int j = (i + 1) % m; bool a = c[i] >= 0, b = c[j] >= 0;
+        if (a) { o.Add(ox + R * x[i]); o.Add(oy - R * y[i]); }
+        if (a == b) continue;
+        double t = c[i] / (c[i] - c[j]), qx = x[i] + t * (x[j] - x[i]), qy = y[i] + t * (y[j] - y[i]), len = Math.Sqrt(qx * qx + qy * qy);
+        if (len < 1e-12) continue; qx /= len; qy /= len; double ang = Math.Atan2(qy, qx);
+        if (a) { o.Add(ox + R * qx); o.Add(oy - R * qy); haveExit = true; exitA = ang; }
+        else { if (haveExit) { Arc(o, exitA, ang, R, ox, oy); haveExit = false; } else if (!haveFirst) { haveFirst = true; firstA = ang; } o.Add(ox + R * qx); o.Add(oy - R * qy); }
+      }
+      if (haveExit && haveFirst) Arc(o, exitA, firstA, R, ox, oy);
+      if (o.Count < 6) return null;
+    }
+    if (o[0] != o[o.Count - 2] || o[1] != o[o.Count - 1]) { o.Add(o[0]); o.Add(o[1]); }
+    return o.ToArray();
+  }
+  static void Arc(List<double> o, double a0, double a1, double R, double ox, double oy) {   // the shorter way round the limb, a point every 3 degrees
+    double d = a1 - a0; while (d > Math.PI) d -= 2 * Math.PI; while (d < -Math.PI) d += 2 * Math.PI;
+    int k = (int)Math.Floor(Math.Abs(d) / (3 * Math.PI / 180));
+    for (int i = 1; i <= k; i++) { double a = a0 + d * i / (k + 1); o.Add(ox + R * Math.Cos(a)); o.Add(oy - R * Math.Sin(a)); }
+  }
+  public static List<double[]> OrthoRings(List<double[]> ringsLL, double lng0, double lat0, double R, double ox, double oy) {
+    var l = new List<double[]>(); foreach (var r in ringsLL) { var p = OrthoRing(r, lng0, lat0, R, ox, oy); if (p != null) l.Add(p); } return l;
+  }
+  // the land of a globe view as path data (clip: a rectangle of the drawing, or null)
+  public static string GlobeLand(List<double[]> ringsLL, double lng0, double lat0, double R, double ox, double oy, double tol, int dec, double[] clip, double scale) {
+    return PathData(OrthoRings(ringsLL, lng0, lat0, R, ox, oy), null, tol, dec, clip, scale);
+  }
+  // meridians and parallels every `step` degrees on the near side (and inside clip, when given)
+  public static string GlobeGraticule(double step, double lng0, double lat0, double R, double ox, double oy, int dec, double[] clip, double scale) {
+    var sb = new StringBuilder();
+    for (double lat = -90 + step; lat < 90 - 1e-9; lat += step) { bool pen = false; for (double lng = -180; lng <= 180 + 1e-9; lng += 2) pen = GPt(sb, lng, lat, lng0, lat0, R, ox, oy, dec, clip, scale, pen); }
+    for (double lng = -180; lng < 180 - 1e-9; lng += step) { bool pen = false; for (double lat = -88; lat <= 88 + 1e-9; lat += 2) pen = GPt(sb, lng, lat, lng0, lat0, R, ox, oy, dec, clip, scale, pen); }
+    return sb.ToString();
+  }
+  static bool GPt(StringBuilder sb, double lng, double lat, double lng0, double lat0, double R, double ox, double oy, int dec, double[] clip, double scale, bool pen) {
+    var q = Ortho(lng, lat, lng0, lat0); if (q[2] < 0) return false;
+    double X = ox + R * q[0], Y = oy - R * q[1];
+    if (clip != null && (X < clip[0] || X > clip[2] || Y < clip[1] || Y > clip[3])) return false;
+    sb.Append(pen ? 'L' : 'M').Append(Num(X * scale, dec)).Append(' ').Append(Num(Y * scale, dec)); return true;
+  }
   // outline of the map (the sphere's edge between two latitudes)
   public static string Outline(double latMin, double latMax, int dec, double scale) {
     var sb = new StringBuilder(); bool first = true;

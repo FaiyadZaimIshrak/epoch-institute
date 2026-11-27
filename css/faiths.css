@@ -1010,10 +1010,6 @@ html[data-kids="1"] .page-useful { display: none; }
 .page-useful { display: none; }
 }
 .path-tagline { font-family: var(--font-text); font-size: 20px; font-style: italic; color: var(--muted); margin: 0 0 10px; }
-.atl-viewtog { display: inline-flex; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
-.atl-viewtog button { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--muted); background: none; border: 0; padding: 7px 14px; min-height: 36px; cursor: pointer; }
-.atl-viewtog button + button { border-left: 1px solid var(--border); }
-.atl-viewtog button[aria-pressed="true"] { color: var(--gold); background: rgba(var(--gold-rgb), 0.1); }
 @keyframes atl-pulse { 50% { stroke-opacity: 0.25; } }
 .l-p, .l-s { font-family: var(--font-ui); paint-order: stroke; stroke: var(--bg); stroke-width: 0.3em; stroke-linejoin: round; pointer-events: none; }
 .l-p { fill: var(--gold-light); font-weight: 600; }

@@ -3967,6 +3967,37 @@ then declutter. Answers: about 100 each; all sections; menus by subject plus hub
 - A quoted heredoc in Git Bash turned `'\\n'` into a line break once more (a patch of kids-stories-merge.js): such
   scripts are written with the Write tool.
 
+## Every map is a globe (27 Nov 2026; the user: "All maps in the spherical or globe format, no flat maps")
+This replaces what the sections above say of flat maps, maps/world.svg, MapSvg, the Flat map switches and the Equal
+Earth inverse in enc-page.js. Not maps of the world, and unchanged: the connections map (a network), battle fields
+(plans of one field), the timeline.
+- **The projection:** scripts/lib/geo.cs Ortho, OnGlobe, ToLL, OrthoRing (a ring's near side, closed along the limb by the
+  shorter arc), OrthoRings, GlobeLand, GlobeGraticule. build-pages.ps1 "Globes" block: $RINGSLL (the land in degrees),
+  $STATELL (every state in degrees, approximate places with their spiral), $STATEW (on the world map).
+- **Shared pictures, maps/globes/*.svg** (GlobeFile; 10000 x 10000, the sphere's radius 4900, fixed gold colours and a
+  shaded sphere, as world.svg was): west (115 W) and east (65 E), home (20 E, 16 N: where home-globe.js starts) and a grid
+  of 48 (g<lng 000-330><n60|n30|00|s30>). 51 files, 2 MB; deployed with maps/. maps/world.svg and maps/basemap.js are
+  still written (pages kept in readers' browsers name them) and used by no page.
+- **World maps are two hemispheres** (MapWorld, W2XY; svg.map-world.map-globes, viewBox 0 0 20400 10000, the western disc
+  round 5000, the eastern round 15400): century and year pages, the countries index's bubbles, the kind indexes of
+  cities, battles and lives (make-kind-indexes.js EE is the same rule in JS). A point belongs to the hemisphere whose
+  middle it is nearer; the split runs at 25 W and 155 E.
+- **Locators are one globe** (MapGlobe with GlobeNear's grid globe, GXY): an entry's "On the map", a person's
+  birthplace, a state's locator (ties only to states on the near side, clear of the rim), the worksheets' numbered map
+  (the globe nearest the middle of the twelve best-known states; numbers only within about 65 degrees of its middle),
+  the home page's still picture (the turning globe replaces it as before).
+- **A country's map** is a globe turned to the country's label point and drawn close (R 159.155 units, the old plane's
+  scale at its middle): its own sphere, meridians and parallels (.map-sphere, .map-grat; 5, 10 or 30 degrees by the
+  view's width), the land cut to the view, the country lit. svg.map-cty carries data-globe="lng,lat,R": enc-page.js
+  turns a click back into a place with the orthographic inverse. $CINFO.view stays the Equal Earth box the atlas's
+  ?c= data is made from.
+- **The three globe pages have no flat view:** atlas.js (mode is always 'globe'; the page no longer loads basemap.js;
+  the hidden SVG and the flat code remain, never reached), faith-map.js (view always 'globe'), journeys.js. Where the
+  globe cannot be loaded each says so and offers "try again"; the atlas's list, a journey's stops and a century in
+  words stay readable. ?view=flat and the stored epoch-atlas-view, epoch-faith-view, epoch-journey-view are ignored.
+- **Posters** of countries and centuries copy the page's map, so they are globes too: re-draw them after a build.
+- scripts/tests/globes.js (the built pages: no flat picture, dots on their discs, every globe file there, no flat view).
+
 ## Connections map and the states register
 - `data/polities.json` — register of every state (incl. the modern Levant: Israel, the State of Palestine, Jordan, Lebanon, Syria — added by hand Oct 2026, successor links to the mandates): nodes {id, n name, t type, b broad region, s/e years, a aka, m mode, c capital, mo modern countries, p profile url} and links {s, t, r relation, f/u years}. Successions stored one way (successor-of). Built from regional research files by the scratchpad states/merge.ps1 (dedupe, relation resolution, validation report).
 - `connections` page + `connections-map.js` (no D3; radial layout, timeline, year slider, outliers). Empire pages include a lazy-loaded mini map (section #connections).

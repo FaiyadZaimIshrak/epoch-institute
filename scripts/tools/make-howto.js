@@ -7,7 +7,7 @@
 const fs = require('fs'), path = require('path'), R = path.join(__dirname, '..', '..');
 const HOWTO = {
   atlas: ['Drag the year slider, or press ▶, to move through five thousand years: each dot is a state at its capital or seat, and gold dots have a full profile.',
-    'Drag the globe to turn it, or switch to the flat map; the region buttons jump to a part of the world.',
+    'Drag the globe to turn it, scroll or pinch to zoom; the region buttons jump to a part of the world.',
     'Press What was here? and tap any place to list the states, people and songs found near it.'],
   timeline: ['Each bar is one state, from its founding to its end; gold bars have a full profile.',
     'Drag sideways to travel through time; pinch, or hold Ctrl and scroll, to zoom; the era buttons jump to an age.',

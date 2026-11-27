@@ -1059,10 +1059,6 @@ html[data-kids="1"] .page-useful { display: none; }
 #atl-globe:active { cursor: grabbing; }
 #atl-globe:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
 #atl-globe[hidden], #atl-svg[hidden] { display: none; }
-.atl-viewtog { display: inline-flex; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
-.atl-viewtog button { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--muted); background: none; border: 0; padding: 7px 14px; min-height: 36px; cursor: pointer; }
-.atl-viewtog button + button { border-left: 1px solid var(--border); }
-.atl-viewtog button[aria-pressed="true"] { color: var(--gold); background: rgba(var(--gold-rgb), 0.1); }
 #atl-svg:active { cursor: grabbing; }
 #atl-svg:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
 .atl-edge { fill: rgba(var(--gold-rgb), 0.03); stroke: rgba(var(--gold-rgb), 0.3); stroke-width: 1px; vector-effect: non-scaling-stroke; }

@@ -43,19 +43,19 @@ if (!oldTitle || !oldDesc) throw new Error('title or description of the template
 const regSlug = r => SD.toSlug(r.replace(/&/g, 'and'));
 const thumb = e => { const f = path.join(R, 'logos', 'thumbs', e.name + '.png'); return fs.existsSync(f) ? '<img src="/logos/thumbs/' + encodeURIComponent(e.name).replace(/'/g, '%27') + '.png" alt="" loading="lazy" width="44" height="44">' : '<span class="ph ph-place" aria-hidden="true"></span>'; };
 // A world map of dots for the kinds whose profiles have a place: a city's and a battle's own entry (entry-coords.tsv),
-// a life's birthplace (entry-places.tsv). Equal Earth in the atlas's plane (atlas.js EE.fwd; maps/world.svg is 10000 x 4393).
+// a life's birthplace (entry-places.tsv). The world as two globes, as build-pages.ps1 W2XY draws it (maps/globes/west.svg centred
+// on 115 W, east.svg on 65 E; each disc has a radius of 4900 in a square of 10000, the eastern one 10400 further right).
 const LINKS = new Function(read('encyclopedia-links.js') + ';return ENC_LINKS')();
 const COORD = {}, BORN = {};
 for (const l of read('scripts/entry-coords.tsv').split(/\r?\n/)) { const p = l.split('\t'); if (p.length >= 3 && !l.startsWith('#') && p[1] !== '' && isFinite(+p[1]) && isFinite(+p[2])) COORD[p[0]] = [+p[1], +p[2]]; }
 for (const l of read('scripts/entry-places.tsv').split(/\r?\n/)) { const p = l.split('\t'); if (p[1] === 'b' && p[4] && p[5] && isFinite(+p[4]) && isFinite(+p[5])) BORN[p[0]] = [+p[4], +p[5]]; }
-const EE = (() => { const D = Math.PI / 180, A1 = 1.340264, A2 = -0.081106, A3 = 0.000893, A4 = 0.003796, M = Math.sqrt(3) / 2, PW = 1000;
-  const raw = (lng, lat) => { const l = Math.asin(M * Math.sin(lat * D)), l2 = l * l, l6 = l2 * l2 * l2; return [lng * D * Math.cos(l) / (M * (A1 + 3 * A2 * l2 + l6 * (7 * A3 + 9 * A4 * l2))), l * (A1 + A2 * l2 + l6 * (A3 + A4 * l2))]; };
-  const S = PW / (2 * Math.PI / (M * A1)), PH = 2 * raw(0, 90)[1] * S; return (lng, lat) => { const r = raw(lng, lat); return [Math.round((PW / 2 + r[0] * S) * 10), Math.round((PH / 2 - r[1] * S) * 10)]; }; })();
+const EE = (lng, lat) => { const D = Math.PI / 180, east = Math.cos((lng - 65) * D) >= 0, l = (lng - (east ? 65 : -115)) * D, p = lat * D;
+  return [Math.round((east ? 15400 : 5000) + 4900 * Math.cos(p) * Math.sin(l)), Math.round(5000 - 4900 * Math.sin(p))]; };
 const MAPS = { city: [COORD, 'Where the cities stand', 'each dot is a city: choose one to open its profile'], battle: [COORD, 'Where the battles were fought', 'each dot is a battle: choose one to open its profile'], life: [BORN, 'Where they were born', 'each dot is a birthplace, as Wikidata records it: choose one to open the life'] };
 const mapOf = (kind, list, h) => { const M = MAPS[kind]; if (!M) return ''; const pts = [];
-  for (const e of list) { const s = LINKS.self[e.name], c = s && M[0][s]; if (!c) continue; const q = EE(c[1], c[0]); if (q[1] < 0 || q[1] > 4393) continue; pts.push([e, q]); }
+  for (const e of list) { const s = LINKS.self[e.name], c = s && M[0][s]; if (!c) continue; const q = EE(c[1], c[0]); pts.push([e, q]); }
   if (pts.length < list.length / 2) return '';
-  return '<figure class="cen-map kx-map"><svg class="map map-world" viewBox="0 0 10000 4393" role="group" aria-label="World map: ' + esc(M[1].toLowerCase()) + '"><image href="/maps/world.svg" x="0" y="0" width="10000" height="4393"/>' +
+  return '<figure class="cen-map kx-map"><svg class="map map-world map-globes" viewBox="0 0 20400 10000" role="group" aria-label="The world as two globes: ' + esc(M[1].toLowerCase()) + '"><image href="/maps/globes/west.svg" x="0" y="0" width="10000" height="10000"/><image href="/maps/globes/east.svg" x="10400" y="0" width="10000" height="10000"/>' +
     '<path class="map-dot-bg" d="' + pts.map(p => 'M' + p[1][0] + ' ' + p[1][1] + 'h0').join('') + '"/>' +
     pts.map(p => '<a href="' + SD.profileUrl(p[0]) + '"><title>' + esc(p[0].name) + '</title><path class="map-dot-p" d="M' + p[1][0] + ' ' + p[1][1] + 'h0"/></a>').join('') +
     '</svg><figcaption>' + esc(M[1]) + ': ' + pts.length + ' of the ' + list.length + ' ' + esc(h.toLowerCase()) + '; ' + esc(M[2]) + '.</figcaption></figure>\n'; };

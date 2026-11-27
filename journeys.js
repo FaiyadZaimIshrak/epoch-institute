@@ -2,7 +2,7 @@
 // The page holds every journey as an article (article.jr-j: legs, ol.jr-stops, li[data-ll="lat,lng"][data-by][data-y]),
 // written by scripts/tools/make-journeys.js: this script shows one of them (?j=<slug>, &s=<stop>) beside a globe
 // (d3-geo orthographic on a canvas over maps/globe-land.js, both loaded here; JR_GLOBE_SRC on the page holds the land's
-// ?v=) or, where the globe cannot be drawn or the reader chooses it, a flat map (an SVG over /maps/world.svg in the
+// ?v=). The globe is the only view since 27 Nov 2026; the flat map code below is never reached. The plane was the
 // atlas's Equal Earth plane). Play walks the stops; a leg by sea is dashed. window.epochJourneys for tests.
 (function () {
   'use strict';
@@ -16,7 +16,6 @@
     return { slug: a.id, el: a, title: $('h2', a).textContent, stops: stops, kids: a.getAttribute('data-kids') !== '0' };
   });
   var S = { j: null, i: 0, view: 'globe', playing: false, timer: 0 };
-  try { if (localStorage.getItem('epoch-journey-view') === 'flat') S.view = 'flat'; } catch (e) {}
 
   // ---- the globe ----
   var G = null, lib = null;
@@ -147,7 +146,6 @@
     while (flat.firstChild) flat.removeChild(flat.firstChild);
     flat.setAttribute('viewBox', [vx, vy, w, h].map(function (n) { return n.toFixed(0); }).join(' '));
     var el = function (n, a, par) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); (par || flat).appendChild(e); return e; };
-    el('image', { href: '/maps/world.svg', x: 0, y: 0, width: W, height: H, preserveAspectRatio: 'none' });
     for (var i = 1; i < st.length; i++) {   // a leg across the edge of the map leaves at one side and comes in at the other
       var a = pts[i - 1], b = pts[i], cross = Math.abs(st[i].lng - st[i - 1].lng) > 180, cls = 'jr-fl' + (i <= S.i ? ' is-done' : '') + (st[i].sea ? ' is-sea' : '');
       if (!cross) el('path', { 'class': cls, d: 'M' + a[0].toFixed(0) + ' ' + a[1].toFixed(0) + 'L' + b[0].toFixed(0) + ' ' + b[1].toFixed(0), 'stroke-width': (i <= S.i ? 2.4 : 1.2) * u, 'stroke-dasharray': st[i].sea ? (6 * u) + ' ' + (5 * u) : '' });
@@ -167,7 +165,11 @@
     cv.hidden = v !== 'globe'; if (v === 'globe') flat.setAttribute('hidden', ''); else flat.removeAttribute('hidden');   // an SVG element has no .hidden property
     $$('.jr-zoom').forEach(function (b) { b.hidden = v !== 'globe'; });
     if (!S.j) return;
-    if (v === 'flat') drawFlat(); else { msg.hidden = false; startGlobe().then(function () { msg.hidden = true; if (S.view === 'globe') { size(); glide(S.i, true); } }).catch(function () { msg.hidden = true; var b = $('.jr-views [data-v="globe"]'); b.disabled = true; b.title = 'The globe could not be loaded'; setView('flat', true); }); }
+    msg.hidden = false; msg.textContent = 'Loading the globe\u2026';
+    startGlobe().then(function () { msg.hidden = true; size(); glide(S.i, true); }).catch(function () {   // no d3 or no land: say so and offer to try again; the stops are listed beside the globe all the same
+      msg.textContent = 'The globe could not be loaded. '; var b = document.createElement('button'); b.type = 'button'; b.className = 'jr-retry'; b.textContent = 'Try again'; msg.appendChild(b);
+      b.addEventListener('click', function () { setView('globe', true); });
+    });
   }
   function paintNow() {
     var st = S.j.stops, s = st[S.i];

@@ -42,25 +42,25 @@
   if (location.hash === '#answers') { var wk = document.querySelector('.ws-key'); if (wk) wk.open = true; }
 
   // country pages: a tap or click on the map opens the atlas's "What was here?" at that spot (/atlas?at=lat,lng). The map
-  // is drawn in the atlas's own plane (Equal Earth, tenths of a unit), so its inverse gives the place (atlas.js EE.inv)
+  // is a globe turned to the country (data-globe: the middle's longitude and latitude, the sphere's radius; the middle
+  // of the globe is at 5000, 5000), so the orthographic inverse gives the place
   (function () {
-    var maps = document.querySelectorAll('svg.map-cty'); if (!maps.length) return;
-    var D2R = Math.PI / 180, A1 = 1.340264, A2 = -0.081106, A3 = 0.000893, A4 = 0.003796, M = Math.sqrt(3) / 2, PW = 1000;
-    function raw(lat) { var l = Math.asin(M * Math.sin(lat * D2R)), l2 = l * l, l6 = l2 * l2 * l2; return l * (A1 + A2 * l2 + l6 * (A3 + A4 * l2)); }
-    var XMAX = Math.PI / (M * A1), S = PW / (2 * XMAX), PH = 2 * raw(90) * S;
-    function inv(x10, y10) {
-      var x = (x10 / 10 - PW / 2) / S, y = (PH / 2 - y10 / 10) / S, l = y;
-      for (var i = 0; i < 12; i++) { var l2 = l * l, l6 = l2 * l2 * l2, f = l * (A1 + A2 * l2 + l6 * (A3 + A4 * l2)) - y; l -= f / (A1 + 3 * A2 * l2 + l6 * (7 * A3 + 9 * A4 * l2)); if (Math.abs(f) < 1e-12) break; }
-      var k2 = l * l, k6 = k2 * k2 * k2;
-      return [M * x * (A1 + 3 * A2 * k2 + k6 * (7 * A3 + 9 * A4 * k2)) / Math.cos(l) / D2R, Math.asin(Math.max(-1, Math.min(1, Math.sin(l) / M))) / D2R];
-    }
+    var maps = document.querySelectorAll('svg.map-cty[data-globe]'); if (!maps.length) return;
+    var D2R = Math.PI / 180;
     Array.prototype.forEach.call(maps, function (svg) {
+      var g = svg.getAttribute('data-globe').split(',').map(Number), l0 = g[0] * D2R, p0 = g[1] * D2R, R = g[2];
+      if (!(R > 0)) return;
       svg.classList.add('map-here');
       svg.addEventListener('click', function (ev) {
         var m = svg.getScreenCTM(); if (!m || !svg.createSVGPoint) return;
-        var pt = svg.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY; var p = pt.matrixTransform(m.inverse()), ll = inv(p.x, p.y);
-        if (!isFinite(ll[0]) || !isFinite(ll[1]) || Math.abs(ll[0]) > 180) return;
-        location.href = '/atlas?at=' + ll[1].toFixed(2) + ',' + ll[0].toFixed(2);
+        var pt = svg.createSVGPoint(); pt.x = ev.clientX; pt.y = ev.clientY; var p = pt.matrixTransform(m.inverse());
+        var x = (p.x - 5000) / R, y = (5000 - p.y) / R, rho = Math.sqrt(x * x + y * y); if (rho > 1) return;   // off the globe
+        var c = Math.asin(rho), sc = Math.sin(c), cc = Math.cos(c);
+        var lat = rho < 1e-9 ? p0 : Math.asin(cc * Math.sin(p0) + y * sc * Math.cos(p0) / rho);
+        var lng = l0 + (rho < 1e-9 ? 0 : Math.atan2(x * sc, rho * Math.cos(p0) * cc - y * Math.sin(p0) * sc));
+        lat /= D2R; lng /= D2R; while (lng > 180) lng -= 360; while (lng < -180) lng += 360;
+        if (!isFinite(lat) || !isFinite(lng)) return;
+        location.href = '/atlas?at=' + lat.toFixed(2) + ',' + lng.toFixed(2);
       });
     });
   })();

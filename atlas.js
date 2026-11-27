@@ -1,11 +1,12 @@
-// atlas.js - the Atlas (/atlas): every state of the register in a chosen year, on a globe (default) or an
-// Equal Earth map. Data: maps/atlas-data.js (ATLAS), maps/basemap.js (ATLAS_BASE) and, for the globe,
-// maps/globe-land.js (ATLAS_GLOBE, loaded with d3 7 only when the globe is shown) - all written by
-// scripts/build-pages.ps1. Address: ?year=1250, ?focus=<state id>, ?c=<country slug>, ?view=globe|flat.
+// atlas.js - the Atlas (/atlas): every state of the register in a chosen year, on a globe. Data: maps/atlas-data.js
+// (ATLAS) and maps/globe-land.js (ATLAS_GLOBE, loaded with d3-geo) - written by scripts/build-pages.ps1. Address:
+// ?year=1250, ?focus=<state id>, ?c=<country slug>, ?at=<lat>,<lng>. Since 27 Nov 2026 the globe is the only view (the
+// user: "no flat maps"): the mode is always 'globe', the flat map's code below is never reached and its SVG stays
+// hidden; maps/basemap.js is no longer loaded. If the globe cannot be loaded the page says so and offers to try again.
 (function () {
   'use strict';
-  var A = window.ATLAS, B = window.ATLAS_BASE, svg = document.getElementById('atl-svg');
-  if (!A || !B || !svg) return;
+  var A = window.ATLAS, B = window.ATLAS_BASE || { edge: '', grat: '', land: '' }, svg = document.getElementById('atl-svg');
+  if (!A || !svg) return;
   var NS = 'http://www.w3.org/2000/svg', W = A.w, H = A.h, MINY = A.first, MAXY = A.year;
   function $(id) { return document.getElementById(id); }
   var world = $('atl-world'), dotsS = $('atl-dots-s'), dotsP = $('atl-dots-p'), labelsG = $('atl-labels'), ring = $('atl-ring');
@@ -41,8 +42,7 @@
 
   // ── the two views: 'globe' (default) and 'flat'. The globe loads d3 and its land on first use. ──
   var stored = null; try { stored = localStorage.getItem('epoch-atlas-view'); } catch (e) {}
-  var mode = q.get('view') === 'flat' ? 'flat' : q.get('view') === 'globe' ? 'globe' : (stored === 'flat' ? 'flat' : 'globe');
-  if (!canvas || !canvas.getContext) mode = 'flat';
+  var mode = 'globe';   // the only view
   function isG() { return mode === 'globe'; }
 
   // ── flat view: translate(tx, ty) scale(k) on the world group; the viewBox stays the whole map ──
@@ -836,7 +836,7 @@
   function paintToggle() {
     if (btnG) btnG.setAttribute('aria-pressed', String(isG()));
     if (btnF) btnF.setAttribute('aria-pressed', String(!isG()));
-    $('atl-note-globe').hidden = !isG(); $('atl-note-flat').hidden = isG();
+    var ng = $('atl-note-globe'), nf = $('atl-note-flat'); if (ng) ng.hidden = !isG(); if (nf) nf.hidden = isG();
   }
   function setMode(m) {
     if (m === mode) return;
@@ -845,7 +845,7 @@
     try { localStorage.setItem('epoch-atlas-view', m); } catch (e) {}
     if (m === 'globe') {
       GL.load(function (ok) {
-        if (!ok) { mode = 'flat'; paintToggle(); return; }
+        if (!ok) { globeFailed(function () { setMode('globe'); }); return; }
         svg.setAttribute('hidden', ''); canvas.removeAttribute('hidden'); paintToggle();   // an SVG element has no .hidden property
         GL.resize(); render(true);
       });
@@ -886,11 +886,20 @@
   // a place in the address: its panel before the first paint, so nothing moves when the map is ready
   var at0 = /^(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)$/.exec(q.get('at') || '');
   if (at0 && hereBox && !q.get('focus') && !q.get('c') && Math.abs(+at0[1]) <= 90 && Math.abs(+at0[2]) <= 180) here(+at0[2], +at0[1], false, true);
-  if (isG()) {
+  // the globe could not be loaded (d3-geo or the outlines did not arrive): say so on the map and offer to try again
+  function globeFailed(again) {
+    var p = $('atl-fail'); if (!p) { p = document.createElement('p'); p.id = 'atl-fail'; p.className = 'atl-none'; p.setAttribute('role', 'status'); mapBox.appendChild(p); }
+    p.hidden = false; p.textContent = 'The globe could not be loaded. Check the connection, then ';
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'atl-here-me'; b.textContent = 'try again'; p.appendChild(b); p.appendChild(document.createTextNode('. The states of the chosen year are listed below.'));
+    b.addEventListener('click', function () { p.hidden = true; again(); });
+    renderList();
+  }
+  function startGlobe() {
     GL.load(function (ok) {
-      if (!ok) { mode = 'flat'; begin(); return; }
+      if (!ok) { globeFailed(startGlobe); return; }
       svg.setAttribute('hidden', ''); canvas.removeAttribute('hidden');
       GL.resize(); begin();
     });
-  } else begin();
+  }
+  startGlobe();
 })();

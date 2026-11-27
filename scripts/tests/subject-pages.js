@@ -14,11 +14,11 @@ for (const k of kinds) { const K = SD.PROFILE_KINDS[k], f = K.path + '/index'; i
   for (const g of p.split('<section class="ref-group"').slice(1)) { const a = [...g.matchAll(/<li><a href="(\/[a-z]+\/[a-z0-9-]+)">/g)].map(m => by[m[1]]); if (!a.every((x, i) => !i || a[i - 1] <= x)) order.push(k); }
   const title = (p.match(/<title>([^<]*)<\/title>/) || [])[1] || '', desc = (p.match(/<meta name="description" content="([^"]*)"/) || [])[1] || '';
   if (!title.includes(String(list.length)) || title.length > 70 || desc.length < 70 || desc.length > 160 || !p.includes('rel="canonical" href="https://the-epoch-institute.org/' + K.path + '/"') || (p.match(/<h1/g) || []).length !== 1 || !p.includes('/enc-page.js') || !p.includes('id="kx-surprise"')) heads.push(k);
-  const dots = [...p.matchAll(/<a href="(\/[a-z]+\/[a-z0-9-]+)"><title>[^<]+<\/title><path class="map-dot-p" d="M(\d+) (\d+)h0"\/><\/a>/g)]; if (dots.length) maps[k] = [dots.length, dots.every(d => links.includes(d[1]) && +d[2] <= 10000 && +d[3] <= 4393)]; }
+  const dots = [...p.matchAll(/<a href="(\/[a-z]+\/[a-z0-9-]+)"><title>[^<]+<\/title><path class="map-dot-p" d="M(\d+) (\d+)h0"\/><\/a>/g)]; if (dots.length) maps[k] = [dots.length, dots.every(d => links.includes(d[1]) && Math.min(Math.hypot(+d[2] - 5000, +d[3] - 5000), Math.hypot(+d[2] - 15400, +d[3] - 5000)) <= 4905)]; }
 ok('an index page for every kind, listing each of its profiles once', !bad.length, bad);
 ok('each region runs oldest first', !order.length, order);
 ok('title with the count, description, canonical, one h1, the header script, Surprise me', !heads.length, heads);
-ok('cities, battles and lives have a map of linked dots inside the plane', ['city', 'battle', 'life'].every(k => maps[k] && maps[k][0] > 60 && maps[k][1]), maps);
+ok('cities, battles and lives have a map of linked dots on the two globes', ['city', 'battle', 'life'].every(k => maps[k] && maps[k][0] > 60 && maps[k][1]), maps);
 const hub = read('research'), subj = ['people', 'places', 'events', 'ideas', 'play'], sb = [];
 for (const s of subj) { const f = 'explore/' + s; if (!fs.existsSync(path.join(R, f))) { sb.push('no ' + f); continue; } const p = read(f);
   const i = hub.indexOf('<section class="hub-group" id="hub-' + s + '"'), g = hub.slice(i, hub.indexOf('</section>', i)), cards = [...g.matchAll(/class="hub-card" href="([^"]+)"/g)].map(m => m[1]), mine = [...p.matchAll(/class="hub-card" href="([^"]+)"/g)].map(m => m[1]);

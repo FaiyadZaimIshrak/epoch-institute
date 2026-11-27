@@ -1633,7 +1633,11 @@ svg.map-here { cursor: crosshair; }
 .st-locator > a:hover .map { opacity: 0.9; }
 .st-locator figcaption { font-family: var(--font-ui); font-size: 12px; line-height: 1.45; color: var(--muted); margin: 6px 2px 2px; }
 .st-locator figcaption a { color: var(--gold); font-weight: 600; text-decoration: none; white-space: nowrap; }
-.enc-loc { max-width: 520px; }
+.enc-loc { max-width: 320px; }
+.map-sphere { fill: rgba(var(--gold-rgb), 0.05); stroke: rgba(var(--gold-rgb), 0.5); stroke-width: 1.2px; vector-effect: non-scaling-stroke; }
+.map-grat { fill: none; stroke: rgba(var(--gold-rgb), 0.22); stroke-width: 0.6px; vector-effect: non-scaling-stroke; }
+.st-locator .map-globe { max-width: 320px; margin: 0 auto; }
+.ws-mapfig .ws-map.map-globe { max-width: 460px; margin: 0 auto; border: 0; background: none; }
 .enc-q { margin: 0 0 16px; padding: 4px 0 4px 16px; border-left: 3px solid var(--gold); }
 .enc-q p { margin: 0 0 6px; font-size: 19px; line-height: 1.55; font-style: italic; }
 .enc-q footer { font-family: var(--font-ui); font-size: 13px; line-height: 1.45; color: var(--muted); }
@@ -1819,10 +1823,6 @@ html[data-kids="1"] .page-useful { display: none; }
 .wn-counts .n { font-weight: 700; color: var(--gold); }
 .paths-wrap > .ref-crumbs { max-width: 860px; margin-left: auto; margin-right: auto; }
 .path-tagline { font-family: var(--font-text); font-size: 20px; font-style: italic; color: var(--muted); margin: 0 0 10px; }
-.atl-viewtog { display: inline-flex; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
-.atl-viewtog button { font-family: var(--font-ui); font-size: 13px; font-weight: 600; color: var(--muted); background: none; border: 0; padding: 7px 14px; min-height: 36px; cursor: pointer; }
-.atl-viewtog button + button { border-left: 1px solid var(--border); }
-.atl-viewtog button[aria-pressed="true"] { color: var(--gold); background: rgba(var(--gold-rgb), 0.1); }
 .home-map canvas:not([hidden]) { display: block; width: 100%; }
 @keyframes atl-pulse { 50% { stroke-opacity: 0.25; } }
 .l-p, .l-s { font-family: var(--font-ui); paint-order: stroke; stroke: var(--bg); stroke-width: 0.3em; stroke-linejoin: round; pointer-events: none; }

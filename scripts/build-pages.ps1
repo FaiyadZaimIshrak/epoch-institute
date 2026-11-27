@@ -762,6 +762,49 @@ foreach ($id in @($GEOD.Keys | Sort-Object)) {
   if ($ap) { $k0 = [string][Math]::Round($pxy[0]) + ',' + [Math]::Round($pxy[1]); $kk = [int]$apN[$k0]; $apN[$k0] = $kk + 1; if ($kk) { $rr = 0.55 * [Math]::Sqrt($kk); $an = $kk * 2.39996; $pxy = @(($pxy[0] + $rr * [Math]::Cos($an)), ($pxy[1] + $rr * [Math]::Sin($an))) } }
   $STATEXY[$id] = @([double]$pxy[0], [double]$pxy[1], $ap, [int]$g[2])   # x, y, approximate, source (scripts/fetch-geo.ps1)
 }
+# ── Globes (27 Nov 2026; the user: "All maps in the spherical or globe format, no flat maps"). Every small map is an
+# orthographic view: the land of a view is a shared picture (maps/globes/<name>.svg, 10000 x 10000, the sphere's radius
+# 4900), the dots are projected here onto the same disc (in units of a tenth of that: a disc of radius 490 in a square of
+# 1000, written by Fx in tenths as before). World maps are two hemispheres side by side (west.svg centred on 115 W,
+# east.svg on 65 E: no present-day country but Iceland's rim and a few Pacific islands is cut); a locator takes the
+# globe of a grid of 48 centres (every 30 degrees of longitude; 30 S, 0, 30 N, 60 N) nearest its point. ──
+$RINGSLL = New-Object 'System.Collections.Generic.List[double[]]'; foreach ($d in $RINGS) { $RINGSLL.Add([EpochGeo.G]::ToLL($d)) }
+if (-not (Test-Path "$Repo\maps\globes")) { [void](New-Item -ItemType Directory -Path "$Repo\maps\globes") }
+$GLOBEN = 0
+function GlobeFile([string]$name, [double]$lng0, [double]$lat0) {
+  $svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10000 10000" width="1000" height="1000">' +
+    '<defs><radialGradient id="s" cx=".36" cy=".3" r=".8"><stop offset="0" stop-color="#d9c48a" stop-opacity=".17"/><stop offset=".55" stop-color="#9a8552" stop-opacity=".06"/><stop offset="1" stop-color="#3a2f14" stop-opacity=".22"/></radialGradient></defs>' +
+    '<circle cx="5000" cy="5000" r="4900" fill="url(#s)"/>' +
+    '<path d="' + [EpochGeo.G]::GlobeGraticule(30, $lng0, $lat0, 4900, 5000, 5000, 0, $null, 1) + '" fill="none" stroke="#9a8552" stroke-opacity=".24" stroke-width="9"/>' +
+    '<path d="' + [EpochGeo.G]::GlobeLand($RINGSLL, $lng0, $lat0, 4900, 5000, 5000, 7, 0, $null, 1) + '" fill="#b39a5a" fill-opacity=".22" stroke="#b39a5a" stroke-opacity=".62" stroke-width="13" stroke-linejoin="round"/>' +
+    '<circle cx="5000" cy="5000" r="4900" fill="none" stroke="#b39a5a" stroke-opacity=".6" stroke-width="16"/></svg>' + "`n"
+  if ([EpochBuild.W]::WriteIfChanged("$Repo\maps\globes\$name.svg", $svg)) { $script:NWRITE++ }; $script:GLOBEN++
+}
+GlobeFile 'west' -115 0; GlobeFile 'east' 65 0; GlobeFile 'home' 20 16
+foreach ($glo in 0..11) { foreach ($gla in @(-30, 0, 30, 60)) { $gl2 = $glo * 30; GlobeFile ('g' + $gl2.ToString('000') + $(if ($gla -gt 0) { 'n' + $gla } elseif ($gla -lt 0) { 's' + (-$gla) } else { '00' })) $(if ($gl2 -gt 180) { $gl2 - 360 } else { $gl2 }) $gla } }
+# the grid globe nearest a point: @(name, lng0, lat0)
+function GlobeNear([double]$lng, [double]$lat) {
+  $gla = if ($lat -ge 45) { 60 } elseif ($lat -ge 15) { 30 } elseif ($lat -ge -15) { 0 } else { -30 }
+  $glo = [int]([Math]::Floor($lng / 30 + 0.5) * 30); if ($glo -lt 0) { $glo += 360 }; if ($glo -ge 360) { $glo -= 360 }
+  return @(('g' + $glo.ToString('000') + $(if ($gla -gt 0) { 'n' + $gla } elseif ($gla -lt 0) { 's' + (-$gla) } else { '00' })), [double]$(if ($glo -gt 180) { $glo - 360 } else { $glo }), [double]$gla)
+}
+function GXY($g, [double]$lng, [double]$lat) { return [EpochGeo.G]::OnGlobe($lng, $lat, [double]$g[1], [double]$g[2], 490, 500, 500) }   # x, y, on the near side 1/0, its cosine
+# a point on the two-hemisphere world map (2040 x 1000: the western disc round 500, the eastern round 1540)
+function W2XY([double]$lng, [double]$lat) {
+  $dl = ($lng - 65) * [Math]::PI / 180
+  if ([Math]::Cos($dl) -ge 0) { $q = [EpochGeo.G]::OnGlobe($lng, $lat, 65, 0, 490, 1540, 500) } else { $q = [EpochGeo.G]::OnGlobe($lng, $lat, -115, 0, 490, 500, 500) }
+  return @([double]$q[0], [double]$q[1])
+}
+# every state's place in degrees (back from the plane, so approximate places keep their spiral) and on the world map
+$STATELL = @{}; $STATEW = @{}
+foreach ($id in $STATEXY.Keys) { $sq = $STATEXY[$id]; $sl = [EpochGeo.G]::Inv([double]$sq[0], [double]$sq[1]); $STATELL[$id] = @([double]$sl[0], [double]$sl[1]); $sw = W2XY $sl[0] $sl[1]; $STATEW[$id] = @([double]$sw[0], [double]$sw[1], $sq[2], $sq[3]) }
+function SvgRole([string]$inner) { if ($inner -match '<a ') { 'group' } else { 'img' } }
+function MapGlobe($g, [string]$inner, [string]$label, [string]$cls) {   # one globe: $g = @(name, lng0, lat0)
+  return '<svg class="map map-globe' + $(if ($cls) { ' ' + $cls } else { '' }) + '" viewBox="0 0 10000 10000" role="' + (SvgRole $inner) + '" aria-label="' + (Hx $label) + '"><image href="/maps/globes/' + $g[0] + '.svg" x="0" y="0" width="10000" height="10000"/>' + $inner + '</svg>'
+}
+function MapWorld([string]$inner, [string]$label, [string]$cls) {   # the world as two hemispheres
+  return '<svg class="map map-world map-globes' + $(if ($cls) { ' ' + $cls } else { '' }) + '" viewBox="0 0 20400 10000" role="' + (SvgRole $inner) + '" aria-label="' + (Hx $label) + '"><image href="/maps/globes/west.svg" x="0" y="0" width="10000" height="10000"/><image href="/maps/globes/east.svg" x="10400" y="0" width="10000" height="10000"/>' + $inner + '</svg>'
+}
 function Fx([double]$v) { [string][long][Math]::Round($v * 10) }   # maps are written in tenths of a plane unit
 function Fd([double]$v) { $v.ToString('0.##', [Globalization.CultureInfo]::InvariantCulture) }   # degrees, 2 dp
 function Alive($n, [double]$y) { $s = $n['s']; $e = $n['e']; ($null -ne $s) -and ([double]$s -le $y) -and (($null -eq $e) -or ([double]$e -ge $y)) }
@@ -771,16 +814,6 @@ function DotPath([string]$cls, $pts) {   # pts: a list of points (@(, $p) for on
   if ($null -ne $pts) { foreach ($q in $pts) { if ($null -ne $q) { [void]$sbD.Append('M').Append((Fx $q[0])).Append(' ').Append((Fx $q[1])).Append('h0') } } }
   if (-not $sbD.Length) { return '' }
   return '<path class="' + $cls + '" d="' + $sbD.ToString() + '"/>'
-}
-# a map of the rectangle $view (x, y, w, h in plane units): over the shared world picture, or with its own outlines
-function MapSvg($view, [string]$inner, [string]$label, [string]$cls, [switch]$Outlines, $Hi) {   # Hi: @(rings, boxes) of a country to light up
-  $vb = (Fx $view[0]) + ' ' + (Fx $view[1]) + ' ' + (Fx $view[2]) + ' ' + (Fx $view[3])
-  if ($Outlines) {
-    $clip = [double[]]@(($view[0] - $view[2] * 0.03), ($view[1] - $view[3] * 0.03), ($view[0] + $view[2] * 1.03), ($view[1] + $view[3] * 1.03))
-    $bg = '<path class="map-land" d="' + [EpochGeo.G]::PathData($RINGS, $BOXES, ($view[2] / 700), 0, $clip, 10) + '"/>'
-    if ($Hi) { $bg += '<path class="map-land-hi" d="' + [EpochGeo.G]::PathData($Hi[0], $Hi[1], ($view[2] / 700), 0, $clip, 10) + '"/>' }
-  } else { $bg = '<image href="/maps/world.svg" x="0" y="0" width="10000" height="' + (Fx $MAPH) + '"/>' }
-  return '<svg class="map' + $(if ($cls) { ' ' + $cls } else { '' }) + '" viewBox="' + $vb + '" role="' + $(if ($inner -match '<a ') { 'group' } else { 'img' }) + '" aria-label="' + (Hx $label) + '">' + $bg + $inner + '</svg>'
 }
 function FitView($pts, [double]$minW, [double]$aspect, [double]$pad) {   # rectangle around points, at least minW wide, w/h = aspect
   $x0 = 1e9; $y0 = 1e9; $x1 = -1e9; $y1 = -1e9
@@ -1211,12 +1244,11 @@ $ECOORD = @{}
 if (Test-Path "$Repo\scripts\entry-coords.tsv") { foreach ($l in [IO.File]::ReadAllLines("$Repo\scripts\entry-coords.tsv", $U8)) { if ($l -and $l[0] -ne '#') { $cf = $l.Split("`t"); $ECOORD[$cf[0]] = @([double]::Parse($cf[1], $INV), [double]::Parse($cf[2], $INV)) } } }
 function EntryLocator($e) {
   $ll = $ECOORD[$e.slug]; if (-not $ll -or $ll[0] -lt -57) { return '' }
-  $pxy = [EpochGeo.G]::P($ll[1], $ll[0]); $vw = 90; $view = [double[]]@(($pxy[0] - $vw / 2), ($pxy[1] - $vw * 0.3), $vw, ($vw * 0.6))
-  if ($view[1] -lt 0) { $view[1] = 0 }; if ($view[0] -lt 0) { $view[0] = 0 }; if ($view[0] + $vw -gt 1000) { $view[0] = 1000 - $vw }
+  $elg = GlobeNear $ll[1] $ll[0]; $pxy = GXY $elg $ll[1] $ll[0]
   $inner = (DotPath 'map-dot-halo' @(, $pxy)) + (DotPath 'map-dot-me' @(, $pxy))
   $yr = if ($EAT.ContainsKey($e.slug)) { '&amp;year=' + $EAT[$e.slug] } else { '' }
   $href = '/atlas?at=' + (Fd $ll[0]) + ',' + (Fd $ll[1]) + $yr
-  return '<section class="enc-where"><h2 class="enc-section-title">On the map</h2><figure class="st-locator enc-loc"><a href="' + $href + '" aria-label="' + (Hx "$($e.name) on the atlas") + '">' + (MapSvg $view $inner "Map: where $($e.name) lies" 'map-loc') + '</a><figcaption>' +
+  return '<section class="enc-where"><h2 class="enc-section-title">On the map</h2><figure class="st-locator enc-loc"><a href="' + $href + '" aria-label="' + (Hx "$($e.name) on the atlas") + '">' + (MapGlobe $elg $inner "Globe: where $($e.name) lies" 'map-loc') + '</a><figcaption>' +
     (Fd $ll[0]).TrimStart('-') + '&#176;' + $(if ($ll[0] -lt 0) { 'S' } else { 'N' }) + ', ' + (Fd $ll[1]).TrimStart('-') + '&#176;' + $(if ($ll[1] -lt 0) { 'W' } else { 'E' }) +
     ' (Wikidata). <a href="' + $href + '">What was here' + $(if ($yr) { ' in ' + (Hx (ScaleLbl $EAT[$e.slug])) } else { '' }) + '? &rarr;</a></figcaption></figure></section>' + "`n"
 }
@@ -1245,13 +1277,12 @@ function PersonPlaces($e) {
   if ($pdot) {
     $plat = [double]::Parse($pdot[4], $INV); $plng = [double]::Parse($pdot[5], $INV)
     if ($plat -ge -57) {
-      $pxy = [EpochGeo.G]::P($plng, $plat); $vw = 90; $view = [double[]]@(($pxy[0] - $vw / 2), ($pxy[1] - $vw * 0.3), $vw, ($vw * 0.6))
-      if ($view[1] -lt 0) { $view[1] = 0 }; if ($view[0] -lt 0) { $view[0] = 0 }; if ($view[0] + $vw -gt 1000) { $view[0] = 1000 - $vw }
+      $elg = GlobeNear $plng $plat; $pxy = GXY $elg $plng $plat
       $inner = (DotPath 'map-dot-halo' @(, $pxy)) + (DotPath 'map-dot-me' @(, $pxy))
       $yr = if ($EAT.ContainsKey($e.slug)) { '&amp;year=' + $EAT[$e.slug] } else { '' }
       $href = '/atlas?at=' + (Fd $plat) + ',' + (Fd $plng) + $yr
       $what = if ($pdot[1] -eq 'b') { 'the birthplace' } else { 'the place of death' }
-      $fig = '<figure class="st-locator enc-loc"><a href="' + $href + '" aria-label="' + (Hx "$($pdot[3]) on the atlas") + '">' + (MapSvg $view $inner "Map: $what of $($e.name)" 'map-loc') + '</a><figcaption>The dot marks ' + $what + '. <a href="' + $href + '">What was here' + $(if ($yr) { ' in ' + (Hx (ScaleLbl $EAT[$e.slug])) } else { '' }) + '? &rarr;</a></figcaption></figure>'
+      $fig = '<figure class="st-locator enc-loc"><a href="' + $href + '" aria-label="' + (Hx "$($pdot[3]) on the atlas") + '">' + (MapGlobe $elg $inner "Globe: $what of $($e.name)" 'map-loc') + '</a><figcaption>The dot marks ' + $what + '. <a href="' + $href + '">What was here' + $(if ($yr) { ' in ' + (Hx (ScaleLbl $EAT[$e.slug])) } else { '' }) + '? &rarr;</a></figcaption></figure>'
     }
   }
   return '<section class="enc-where enc-born"><h2 class="enc-section-title">Born and died</h2><p class="enc-born-p">' + $txt + '<span class="enc-born-src">Places as Wikidata records them.</span></p>' + $fig + "</section>`n"
@@ -1594,13 +1625,14 @@ function Rich([string]$t) {   # state texts: [[e:slug|text]] encyclopedia entry,
 }
 # locator map in a state page's sidebar: the state in gold, the states it was connected with as small dots
 function StateLocator($n) {
-  $id = [string]$n['id']; $p = $STATEXY[$id]; if (-not $p) { return '' }
-  $vw = 64; $view = [double[]]@(($p[0] - $vw / 2), ($p[1] - $vw * 0.4), $vw, ($vw * 0.8))
+  $id = [string]$n['id']; $p0 = $STATEXY[$id]; if (-not $p0) { return '' }
+  $sll = $STATELL[$id]; $slg = GlobeNear $sll[0] $sll[1]; $sgp = GXY $slg $sll[0] $sll[1]; $p = @([double]$sgp[0], [double]$sgp[1], $p0[2], $p0[3])
   $ties = New-Object System.Collections.Generic.List[string]; $near = New-Object System.Collections.Generic.List[object]; $seenT = @{}
   foreach ($l in $ADJ[$id]) {
     $oid = if ([string]$l['s'] -eq $id) { [string]$l['t'] } else { [string]$l['s'] }
     if ($seenT.ContainsKey($oid)) { continue }; $seenT[$oid] = 1
-    $q = $STATEXY[$oid]; if (-not $q -or $q[2]) { continue }
+    $q0 = $STATEXY[$oid]; if (-not $q0 -or $q0[2]) { continue }
+    $qll = $STATELL[$oid]; $q = GXY $slg $qll[0] $qll[1]; if ($q[3] -lt 0.12) { continue }   # over the globe's edge, or on its rim
     $near.Add($q); $ties.Add('M' + (Fx $p[0]) + ' ' + (Fx $p[1]) + 'L' + (Fx $q[0]) + ' ' + (Fx $q[1]))
   }
   $inner = $(if ($ties.Count -and -not $p[2]) { '<path class="map-tie" d="' + ($ties -join '') + '"/>' } else { '' }) + (DotPath 'map-dot-n' $near) + (DotPath 'map-dot-halo' @(, $p)) + (DotPath $(if ($p[2]) { 'map-dot-ap' } else { 'map-dot-me' }) @(, $p))
@@ -1610,7 +1642,7 @@ function StateLocator($n) {
     { $_ -in 0, 3 } { if ($capName) { 'The dot marks ' + (Hx $capName) + '.' } else { 'The dot marks its capital.' } }
     1 { 'The dot marks its recorded location.' } default { 'The dot marks its capital.' } }
   $href = '/atlas?year=' + $mid + '&amp;focus=' + $id
-  return '<figure class="st-locator"><a href="' + $href + '" aria-label="' + (Hx "$name on the atlas") + '">' + (MapSvg $view $inner "Map: where $name lay" 'map-loc') + '</a><figcaption>' + $cap + ' <a href="' + $href + '">On the atlas &rarr;</a></figcaption></figure>'
+  return '<figure class="st-locator"><a href="' + $href + '" aria-label="' + (Hx "$name on the atlas") + '">' + (MapGlobe $slg $inner "Globe: where $name lay" 'map-loc') + '</a><figcaption>' + $cap + ' <a href="' + $href + '">On the atlas &rarr;</a></figcaption></figure>'
 }
 $nState = 0; $redirects = New-Object System.Collections.Generic.List[string]
 $REGIONS = [ordered]@{}; foreach ($rg in $REGION.Keys) { $REGIONS[$rg] = New-Object System.Collections.Generic.List[object] }
@@ -2090,17 +2122,39 @@ foreach ($m in @($CPAGE.Keys | Sort-Object)) {
   $ct = $CTRY[$m]; $cont = if ($ct) { [string]$ct['ct'] } else { '' }
   $CINFO[$m] = @{ slug = $slug; n = $CLIST.Count; p = $profs.Count; cont = $cont; first = $first; lp = $(if ($ct) { $ct['lp'] } else { $null }) }
   # map: the country's main outline, widened to the states placed around it
-  $pts = @($CLIST | ForEach-Object { , $STATEXY[[string]$_['id']] } | Where-Object { $_ -and -not $_[2] })   # "," keeps each point whole
+  # map: a globe turned to the country (its label point at the middle), drawn close: the country's main outline, widened
+  # to the states placed around it; the land, the meridians and parallels are the page's own, cut to the view
   $mapHtml = ''
   if ($ct) {
-    $bb = @([double]$ct['bb'][0], [double]$ct['bb'][1], [double]$ct['bb'][2], [double]$ct['bb'][3]); $mx = [Math]::Max($bb[2] - $bb[0], $bb[3] - $bb[1])
-    $box = New-Object System.Collections.Generic.List[object]; $box.Add(@($bb[0], $bb[1])); $box.Add(@($bb[2], $bb[3]))
-    foreach ($p in $pts) { if ($p[0] -ge $bb[0] - $mx * 0.5 -and $p[0] -le $bb[2] + $mx * 0.5 -and $p[1] -ge $bb[1] - $mx * 0.5 -and $p[1] -le $bb[3] + $mx * 0.5) { $box.Add($p) } }
-    $view = FitView $box 16 1.5 0.08; $CINFO[$m]['view'] = $view
-    $pp = @($profs | ForEach-Object { , $STATEXY[[string]$_['id']] } | Where-Object { $_ -and -not $_[2] })
-    $nAp = @($CLIST | Where-Object { $q = $STATEXY[[string]$_['id']]; -not $q -or $q[2] }).Count
-    $hiRings = $CRING[[string]$ct['n']]   # the country itself, lit up; the dots get a dark halo to stand out on it
-    $mapHtml = '<figure class="cty-map">' + (MapSvg $view ((DotPath 'map-dot-bg' $pts) + (DotPath 'map-dot-s' $pts) + (DotPath 'map-dot-p' $pp)) "Map of the states of $(TheCountry $m), with $(TheCountry $m) highlighted" 'map-cty' -Outlines -Hi $hiRings) +
+    # the atlas's own box for the country (?c=): on the Equal Earth plane, as before
+    $pbb = @([double]$ct['bb'][0], [double]$ct['bb'][1], [double]$ct['bb'][2], [double]$ct['bb'][3]); $pmx = [Math]::Max($pbb[2] - $pbb[0], $pbb[3] - $pbb[1])
+    $pbox = New-Object System.Collections.Generic.List[object]; $pbox.Add(@($pbb[0], $pbb[1])); $pbox.Add(@($pbb[2], $pbb[3]))
+    foreach ($cn in $CLIST) { $p = $STATEXY[[string]$cn['id']]; if (-not $p -or $p[2]) { continue }; if ($p[0] -ge $pbb[0] - $pmx * 0.5 -and $p[0] -le $pbb[2] + $pmx * 0.5 -and $p[1] -ge $pbb[1] - $pmx * 0.5 -and $p[1] -le $pbb[3] + $pmx * 0.5) { $pbox.Add($p) } }
+    $CINFO[$m]['view'] = FitView $pbox 16 1.5 0.08
+    $clab = @([double]$ct['lab'][0], [double]$ct['lab'][1]); $cR = 159.155   # a radian is 159 units: the scale of the old plane at its middle
+    $hiAll = $CRING[[string]$ct['n']]; $hiLL = New-Object 'System.Collections.Generic.List[double[]]'; $mainLL = New-Object 'System.Collections.Generic.List[double[]]'
+    $bb = @([double]$ct['bb'][0], [double]$ct['bb'][1], [double]$ct['bb'][2], [double]$ct['bb'][3])
+    for ($hi = 0; $hi -lt $hiAll[0].Count; $hi++) { $hll = [EpochGeo.G]::ToLL($hiAll[0][$hi]); $hiLL.Add($hll); $hb = $hiAll[1][$hi]; if ($hb[0] -ge $bb[0] - 0.01 -and $hb[1] -ge $bb[1] - 0.01 -and $hb[2] -le $bb[2] + 0.01 -and $hb[3] -le $bb[3] + 0.01) { $mainLL.Add($hll) } }
+    $box = New-Object System.Collections.Generic.List[object]
+    foreach ($mr in [EpochGeo.G]::OrthoRings($mainLL, $clab[0], $clab[1], $cR, 500, 500)) { $mb = [EpochGeo.G]::Bbox($mr); $box.Add(@($mb[0], $mb[1])); $box.Add(@($mb[2], $mb[3])) }
+    if (-not $box.Count) { $box.Add(@(495.0, 495.0)); $box.Add(@(505.0, 505.0)) }
+    $b0 = FitView $box 1 1 0; $mx = [Math]::Max($b0[2], $b0[3]); $bb = @($b0[0], $b0[1], ($b0[0] + $b0[2]), ($b0[1] + $b0[3]))
+    $pts = New-Object System.Collections.Generic.List[object]; $pp = New-Object System.Collections.Generic.List[object]; $nAp = 0
+    foreach ($cn in $CLIST) {
+      $cq = $STATEXY[[string]$cn['id']]; if (-not $cq -or $cq[2]) { $nAp++; continue }
+      $cll = $STATELL[[string]$cn['id']]; $cp = [EpochGeo.G]::OnGlobe($cll[0], $cll[1], $clab[0], $clab[1], $cR, 500, 500); if ($cp[3] -le 0.05) { continue }
+      $pts.Add($cp); if ($cn['p']) { $pp.Add($cp) }
+      if ($cp[0] -ge $bb[0] - $mx * 0.5 -and $cp[0] -le $bb[2] + $mx * 0.5 -and $cp[1] -ge $bb[1] - $mx * 0.5 -and $cp[1] -le $bb[3] + $mx * 0.5) { $box.Add($cp) }
+    }
+    $gview = FitView $box 16 1.5 0.08
+    $clip = [double[]]@(($gview[0] - $gview[2] * 0.03), ($gview[1] - $gview[3] * 0.03), ($gview[0] + $gview[2] * 1.03), ($gview[1] + $gview[3] * 1.03))
+    $gstep = if ($gview[2] -gt 150) { 30 } elseif ($gview[2] -gt 45) { 10 } else { 5 }
+    $cbg = '<circle class="map-sphere" cx="5000" cy="5000" r="' + (Fx $cR) + '"/><path class="map-grat" d="' + [EpochGeo.G]::GlobeGraticule($gstep, $clab[0], $clab[1], $cR, 500, 500, 0, $clip, 10) + '"/>' +
+      '<path class="map-land" d="' + [EpochGeo.G]::GlobeLand($RINGSLL, $clab[0], $clab[1], $cR, 500, 500, ($gview[2] / 700), 0, $clip, 10) + '"/>' +
+      '<path class="map-land-hi" d="' + [EpochGeo.G]::GlobeLand($hiLL, $clab[0], $clab[1], $cR, 500, 500, ($gview[2] / 700), 0, $clip, 10) + '"/>'
+    $cin = (DotPath 'map-dot-bg' $pts) + (DotPath 'map-dot-s' $pts) + (DotPath 'map-dot-p' $pp)
+    $mapSvg = '<svg class="map map-cty" viewBox="' + (Fx $gview[0]) + ' ' + (Fx $gview[1]) + ' ' + (Fx $gview[2]) + ' ' + (Fx $gview[3]) + '" data-globe="' + (Fd $clab[0]) + ',' + (Fd $clab[1]) + ',' + (Fx $cR) + '" role="img" aria-label="' + (Hx "Globe turned to $(TheCountry $m): its states, with $(TheCountry $m) highlighted") + '">' + $cbg + $cin + '</svg>'
+    $mapHtml = '<figure class="cty-map">' + $mapSvg +
       '<figcaption><span class="map-key"><i class="k-p"></i>Profile</span><span class="map-key"><i class="k-s"></i>State (capital or seat)</span>' + $(if ($nAp) { '<span>' + $nAp + ' without a known seat not shown</span>' } else { '' }) + '<span class="cty-here">What was here? Tap or click the map to see the states seated near that spot.</span><a href="/atlas?c=' + $slug + '">Open in the atlas &rarr;</a></figcaption></figure>'
   }
   $crumb = Crumbs @(@('Home', '/'), @('Countries', '/countries/'), @($m, $null))
@@ -2145,14 +2199,14 @@ foreach ($m in @($CPAGE.Keys | Sort-Object)) {
 $CONTS = @('Africa', 'Asia', 'Europe', 'North America', 'South America', 'Oceania')
 $bub = New-Object Text.StringBuilder
 foreach ($m in @($CINFO.Keys | Sort-Object @{ e = { $CINFO[$_].n }; Descending = $true })) {
-  $ci = $CINFO[$m]; if (-not $ci.lp) { continue }; $r = (2.2 + [Math]::Sqrt($ci.n) * 0.85) * 10
-  [void]$bub.Append('<a href="/countries/' + $ci.slug + '"><circle cx="' + (Fx ([double]$ci.lp[0])) + '" cy="' + (Fx ([double]$ci.lp[1])) + '" r="' + [Math]::Round($r) + '"><title>' + (Hx $m) + ': ' + $ci.n + ' states</title></circle></a>')
+  $ci = $CINFO[$m]; if (-not $ci.lp) { continue }; $r = (2.2 + [Math]::Sqrt($ci.n) * 0.85) * 20; $bll = [EpochGeo.G]::Inv([double]$ci.lp[0], [double]$ci.lp[1]); $bxy = W2XY $bll[0] $bll[1]
+  [void]$bub.Append('<a href="/countries/' + $ci.slug + '"><circle cx="' + (Fx $bxy[0]) + '" cy="' + (Fx $bxy[1]) + '" r="' + [Math]::Round($r) + '"><title>' + (Hx $m) + ': ' + $ci.n + ' states</title></circle></a>')
 }
 $crumb = Crumbs @(@('Home', '/'), @('Countries', $null))
 $sb = New-Object Text.StringBuilder(40000)
 [void]$sb.Append('<main id="main" class="cty-page ref-page">' + "`n<div class=`"cty-wrap`">`n" + $crumb[0] + "`n")
 [void]$sb.Append('<header class="ref-head"><span class="hero-ornament"></span><h1 class="research-title">Country Histories</h1><p class="ref-lede">The history of ' + $CPAGE.Count + ' present-day countries, told through the states that lay on their soil: kingdoms, empires, sultanates, republics and colonies, from the first cities to today. The larger the circle, the more states.</p></header>' + "`n")
-[void]$sb.Append('<figure class="cty-bubbles">' + (MapSvg ([double[]]@(0, 0, 1000, $MAPH)) ('<g class="map-bub">' + $bub.ToString() + '</g>') 'World map: the number of historical states in each present-day country' 'map-world') + "</figure>`n")
+[void]$sb.Append('<figure class="cty-bubbles">' + (MapWorld ('<g class="map-bub">' + $bub.ToString() + '</g>') 'The world as two globes: the number of historical states in each present-day country' '') + "</figure>`n")
 foreach ($cont in $CONTS + @('')) {
   $lst = @($CINFO.Keys | Where-Object { $(if ($cont) { $CINFO[$_].cont -eq $cont } else { $CONTS -notcontains $CINFO[$_].cont }) } | Sort-Object)
   if (-not $lst.Count) { continue }
@@ -2307,7 +2361,7 @@ $TIHC = @{}   # century -> Today in History events [day key, event]
 foreach ($k in $DAYS) { foreach ($ev in $HIST[$k]) { $c = CentOf $ev['year']; if (-not $c) { continue }; if (-not $TIHC.ContainsKey($c)) { $TIHC[$c] = New-Object System.Collections.Generic.List[object] }; $TIHC[$c].Add(@($k, $ev)) } }
 function WorldDots([double]$y) {   # the states alive in year y: small dots, profiles in gold
   $s = New-Object System.Collections.Generic.List[object]; $p = New-Object System.Collections.Generic.List[object]
-  foreach ($n in $POL['nodes']) { if (-not (Alive $n $y)) { continue }; $q = $STATEXY[[string]$n['id']]; if (-not $q -or $q[2]) { continue }; if ($n['p']) { $p.Add($q) } else { $s.Add($q) } }
+  foreach ($n in $POL['nodes']) { if (-not (Alive $n $y)) { continue }; $q = $STATEW[[string]$n['id']]; if (-not $q -or $q[2]) { continue }; if ($n['p']) { $p.Add($q) } else { $s.Add($q) } }
   return @(((DotPath 'map-dot-s' $s) + (DotPath 'map-dot-p' $p)), ($s.Count + $p.Count))
 }
 $CENTINFO = @{}
@@ -2327,7 +2381,7 @@ for ($ci = 0; $ci -lt $CENTPAGES.Count; $ci++) {
   [void]$sb.Append('<header class="ref-head cen-head"><p class="cty-kicker">History by century · ' + (Hx ($dec.Substring(0, 1).ToUpperInvariant() + $dec.Substring(1))) + '</p><h1 class="research-title">The ' + (Hx $ct) + '</h1><p class="ref-lede">' + $lede + "</p></header>`n")
   $bar = '<nav class="ref-letters ref-centuries" aria-label="Centuries">' + (($CENTPAGES | ForEach-Object { '<a href="/centuries/' + (CenturySlug $_) + '"' + $(if ($_ -eq $c) { ' aria-current="page"' } else { '' }) + '>' + (Hx ($_ -replace ' century', ' c.')) + '</a>' }) -join '') + '</nav>'
   [void]$sb.Append($bar + "`n")
-  [void]$sb.Append('<figure class="cen-map">' + (MapSvg ([double[]]@(0, 0, 1000, $MAPH)) $wd[0] "World map: states that existed in $midLbl" 'map-world') +
+  [void]$sb.Append('<figure class="cen-map">' + (MapWorld $wd[0] "The world as two globes: states that existed in $midLbl" '') +
     '<figcaption><span class="map-key"><i class="k-p"></i>Profile</span><span class="map-key"><i class="k-s"></i>State</span><span>' + $wd[1] + ' states with a known seat in ' + (Hx $midLbl) + '</span><a href="/atlas?year=' + $mid + '">See ' + (Hx $midLbl) + ' in the atlas &rarr;</a></figcaption></figure>' + "`n")
   if ($pw.Count) {
     [void]$sb.Append('<section><h2 class="ref-sec-title">Great powers</h2><p class="cty-note">Profiles of the ' + (Hx $c) + ', ranked by their military, territorial, economic and historical weight in the Institute&#8217;s analysis and by how strong they were in these hundred years.</p><ul class="pcards">')
@@ -3526,16 +3580,19 @@ foreach ($sh in $SHEETS) {
     $cand = @($cand | Where-Object { $q = $STATEXY[[string]$_['id']]; $q -and -not $q[2] } | Select-Object -First 60)
     $mapT = $null
     if ($cand.Count -ge 4) {
-      # the view fits the best-known twelve; the numbers go to the best-ranked states inside it that keep apart
-      $v0 = FitView @($cand | Select-Object -First 12 | ForEach-Object { $STATEXY[[string]$_['id']] }) 240 1.9 0.16
-      if ($v0[0] -lt 0) { $v0[0] = 0 }; if ($v0[1] -lt 0) { $v0[1] = 0 }; if ($v0[0] + $v0[2] -gt 1000) { $v0[0] = [Math]::Max(0, 1000 - $v0[2]) }; if ($v0[1] + $v0[3] -gt $MAPH) { $v0[1] = [Math]::Max(0, $MAPH - $v0[3]) }
-      $dmin = $v0[2] * 0.045; $pick = New-Object Collections.Generic.List[object]
-      foreach ($n in $cand) { $q = $STATEXY[[string]$n['id']]; if ($q[0] -lt $v0[0] + $dmin / 2 -or $q[0] -gt $v0[0] + $v0[2] - $dmin / 2 -or $q[1] -lt $v0[1] + $dmin / 2 -or $q[1] -gt $v0[1] + $v0[3] - $dmin / 2) { continue }; $ok = $true; foreach ($o in $pick) { $qo = $STATEXY[[string]$o['id']]; if ([Math]::Sqrt(($q[0] - $qo[0]) * ($q[0] - $qo[0]) + ($q[1] - $qo[1]) * ($q[1] - $qo[1])) -lt $dmin) { $ok = $false; break } }; if ($ok) { $pick.Add($n); if ($pick.Count -ge 8) { break } } }
+      # a globe turned to the middle of the best-known twelve (the nearest of the grid's globes); the numbers go to the
+      # best-ranked states on its near side, clear of the rim, that keep apart
+      $wvx = 0.0; $wvy = 0.0; $wvz = 0.0
+      foreach ($n in @($cand | Select-Object -First 12)) { $wl = $STATELL[[string]$n['id']]; $wla = $wl[1] * [Math]::PI / 180; $wlo = $wl[0] * [Math]::PI / 180; $wvx += [Math]::Cos($wla) * [Math]::Cos($wlo); $wvy += [Math]::Cos($wla) * [Math]::Sin($wlo); $wvz += [Math]::Sin($wla) }
+      $wsg = GlobeNear ([Math]::Atan2($wvy, $wvx) * 180 / [Math]::PI) ([Math]::Atan2($wvz, [Math]::Sqrt($wvx * $wvx + $wvy * $wvy)) * 180 / [Math]::PI)
+      $v0 = [double[]]@(0, 0, 1000, 1000); $WSXY = @{}
+      $dmin = $v0[2] * 0.06; $pick = New-Object Collections.Generic.List[object]
+      foreach ($n in $cand) { $wl = $STATELL[[string]$n['id']]; $q = GXY $wsg $wl[0] $wl[1]; if ($q[3] -lt 0.42) { continue }; $ok = $true; foreach ($o in $pick) { $qo = $WSXY[[string]$o['id']]; if ([Math]::Sqrt(($q[0] - $qo[0]) * ($q[0] - $qo[0]) + ($q[1] - $qo[1]) * ($q[1] - $qo[1])) -lt $dmin) { $ok = $false; break } }; if ($ok) { $WSXY[[string]$n['id']] = $q; $pick.Add($n); if ($pick.Count -ge 8) { break } } }
       if ($pick.Count -ge 4) {
-        $r0 = $v0[2] * 0.017; $pins = New-Object Text.StringBuilder; $i = 0
-        foreach ($n in $pick) { $i++; $q = $STATEXY[[string]$n['id']]; [void]$pins.Append('<g><circle cx="' + (Fx $q[0]) + '" cy="' + (Fx $q[1]) + '" r="' + (Fx $r0) + '"/><text x="' + (Fx $q[0]) + '" y="' + (Fx ($q[1] + $r0 * 0.42)) + '" font-size="' + (Fx ($r0 * 1.2)) + '">' + $i + '</text></g>') }
+        $r0 = $v0[2] * 0.024; $pins = New-Object Text.StringBuilder; $i = 0
+        foreach ($n in $pick) { $i++; $q = $WSXY[[string]$n['id']]; [void]$pins.Append('<g><circle cx="' + (Fx $q[0]) + '" cy="' + (Fx $q[1]) + '" r="' + (Fx $r0) + '"/><text x="' + (Fx $q[0]) + '" y="' + (Fx ($q[1] + $r0 * 0.42)) + '" font-size="' + (Fx ($r0 * 1.2)) + '">' + $i + '</text></g>') }
         $bank = WsShuffle $pick.ToArray() ($sh.slug + '-map')
-        $mapT = @(('<figure class="ws-mapfig">' + (MapSvg $v0 ('<g class="ws-pins">' + $pins.ToString() + '</g>') ('Map: ' + $pick.Count + ' numbered states of the world in ' + (Yr $ii.mid)) 'map-world ws-map') + '<figcaption>The world in ' + (Hx (Yr $ii.mid)) + '</figcaption></figure>' +
+        $mapT = @(('<figure class="ws-mapfig">' + (MapGlobe $wsg ('<g class="ws-pins">' + $pins.ToString() + '</g>') ('Globe: ' + $pick.Count + ' numbered states of the world in ' + (Yr $ii.mid)) 'ws-map') + '<figcaption>The world in ' + (Hx (Yr $ii.mid)) + '</figcaption></figure>' +
           '<p class="ws-bank"><b>Word bank:</b> ' + (($bank | ForEach-Object { Hx ([string]$_['n']) }) -join ' &middot; ') + '</p><ol class="ws-blanks">' + (($pick | ForEach-Object { '<li><span class="ws-line1"></span></li>' }) -join '') + '</ol>'),
           ('<ol class="ws-key-list">' + (($pick | ForEach-Object { '<li>' + (Hx ([string]$_['n'])) + ' <span>' + (Hx (Span $_)) + '</span></li>' }) -join '') + '</ol>'))
       }
@@ -3640,7 +3697,7 @@ $nN = $POL['nodes'].Count
 $aS = New-Object 'double[]' $nN; $aE = New-Object 'double[]' $nN; $aX = New-Object 'double[]' $nN; $aYv = New-Object 'double[]' $nN; $aPl = New-Object 'bool[]' $nN; $aPr = New-Object 'bool[]' $nN
 for ($i = 0; $i -lt $nN; $i++) {
   $n = $POL['nodes'][$i]; $aS[$i] = if ($null -eq $n['s']) { [double]::NaN } else { [double]$n['s'] }; $aE[$i] = if ($null -eq $n['e']) { [double]::NaN } else { [double]$n['e'] }
-  $q = $STATEXY[[string]$n['id']]; if ($q -and -not $q[2]) { $aPl[$i] = $true; $aX[$i] = [double]$q[0]; $aYv[$i] = [double]$q[1] }; $aPr[$i] = [bool]$n['p']
+  $q = $STATEW[[string]$n['id']]; if ($q -and -not $q[2]) { $aPl[$i] = $true; $aX[$i] = [double]$q[0]; $aYv[$i] = [double]$q[1] }; $aPr[$i] = [bool]$n['p']
 }
 # a day event's description with its gold links, as the day pages wrote it to data/days (also in -SkipEntries builds)
 $DAYJ = @{}
@@ -3712,7 +3769,7 @@ for ($yi = 0; $yi -lt $YEARLIST.Count; $yi++) {
     }
     [void]$sb.Append("</ol></section>`n")
   }
-  [void]$sb.Append('<figure class="cen-map yr-map">' + (MapSvg ([double[]]@(0, 0, 1000, $MAPH)) ([string]$yd[0]) "World map: states that existed in $label" 'map-world') +
+  [void]$sb.Append('<figure class="cen-map yr-map">' + (MapWorld ([string]$yd[0]) "The world as two globes: states that existed in $label" '') +
     '<figcaption><span class="map-key"><i class="k-p"></i>Profile</span><span class="map-key"><i class="k-s"></i>State</span><span>' + $yd[1] + ' states with a known seat in ' + (Hx $label) + '</span><a href="/atlas?year=' + $yv + '">Open the atlas at ' + (Hx $label) + ' &rarr;</a></figcaption></figure>' + "`n")
   if ($yb.gl.Count) {
     [void]$sb.Append('<section><h2 class="ref-sec-title">In the profiles</h2><ul class="yr-prof">')
@@ -4781,7 +4838,9 @@ Say "home page: $($hnL.Count) numbers for Today's Number"
 $cnF = "$Repo\connections"; $cnT = [IO.File]::ReadAllText($cnF, $U8)
 $cnT2 = [regex]::Replace($cnT, 'Connections Map of [\d,]+ States', 'Connections Map of ' + @($POL['nodes']).Count.ToString('N0', $INV) + ' States')
 if ([EpochBuild.W]::WriteIfChanged($cnF, $cnT2)) { $NWRITE++ }
-$hm = WorldDots 1000
+$hmS = New-Object System.Collections.Generic.List[object]; $hmP = New-Object System.Collections.Generic.List[object]; $hmG = @('home', 20.0, 16.0); $hmN = 0
+foreach ($n in $POL['nodes']) { if (-not (Alive $n 1000)) { continue }; $q0 = $STATEXY[[string]$n['id']]; if (-not $q0 -or $q0[2]) { continue }; $hmN++; $hl = $STATELL[[string]$n['id']]; $q = GXY $hmG $hl[0] $hl[1]; if ($q[3] -le 0.02) { continue }; if ($n['p']) { $hmP.Add($q) } else { $hmS.Add($q) } }
+$hm = @(((DotPath 'map-dot-s' $hmS) + (DotPath 'map-dot-p' $hmP)), $hmN)
 # the hero globe's points: the states of 1000 CE as [lng100, lat100, profile] triplets (the page spins them client-side)
 $hg = New-Object Text.StringBuilder
 foreach ($n in $POL['nodes']) {
@@ -4791,7 +4850,7 @@ foreach ($n in $POL['nodes']) {
   if ($hg.Length) { [void]$hg.Append(',') }
   [void]$hg.Append([int][Math]::Round($ll[0] * 100)).Append(',').Append([int][Math]::Round($ll[1] * 100)).Append(',').Append($(if ($n['p']) { 1 } else { 0 }))
 }
-SetBlock "$Repo\index" 'home-map' ('<figure class="home-map"><a href="/atlas?year=1000" aria-label="Open the atlas at the year 1000">' + (MapSvg ([double[]]@(0, 20, 1000, ($MAPH - 20))) $hm[0] 'World map: the states that existed in the year 1000' 'map-world') + '<canvas id="home-globe" aria-hidden="true" hidden></canvas>' + '</a><figcaption>The world in 1000 CE: <b>' + $hm[1] + ' recorded states</b>. <a href="/atlas?year=1000">Travel through time in the atlas &rarr;</a></figcaption>' +
+SetBlock "$Repo\index" 'home-map' ('<figure class="home-map"><a href="/atlas?year=1000" aria-label="Open the atlas at the year 1000">' + (MapGlobe $hmG $hm[0] 'Globe: the states that existed in the year 1000' 'map-world') + '<canvas id="home-globe" aria-hidden="true" hidden></canvas>' + '</a><figcaption>The world in 1000 CE: <b>' + $hm[1] + ' recorded states</b>. <a href="/atlas?year=1000">Travel through time in the atlas &rarr;</a></figcaption>' +
   '<script>var HOME_GLOBE=[' + $hg.ToString() + '];var HOME_GLOBE_SRC="/maps/globe-land.js?v=' + $GLOBEV + '";</script></figure>')
 SetBlockIf "$Repo\index" 'home-centuries' ('<ol class="cen-bars cen-bars-home">' + (($CENTPAGES | ForEach-Object { $ii = $CENTINFO[$_]; '<li><a href="/centuries/' + $ii.slug + '" title="' + (Hx (CentTitle $_)) + ': ' + $ii.alive + ' states"><span class="cen-bar" style="height:' + ([Math]::Max(2, $ii.alive / $maxA * 100)).ToString('0.0', $INV) + '%"></span><span class="cen-lbl">' + (Hx (($_ -replace ' century', '') -replace ' BCE', ' BC')) + '</span></a></li>' }) -join '') + '</ol>')
 SetBlockIf "$Repo\index" 'home-countries' ('<ul class="cty-chips">' + ((@($CINFO.Keys | Sort-Object @{ e = { $CINFO[$_].n }; Descending = $true } | Select-Object -First 18) | ForEach-Object { '<li><a href="/countries/' + $CINFO[$_].slug + '">' + (Hx $_) + ' <span>' + $CINFO[$_].n + '</span></a></li>' }) -join '') + '<li><a class="cty-all" href="/countries/">All ' + $CPAGE.Count + ' countries &rarr;</a></li></ul>')

@@ -142,7 +142,7 @@ fs.readdirSync(path.join(ROOT, 'centuries')).filter(f => /^[a-z0-9-]+$/.test(f) 
     if (e && !seen[u] && powers.length < 4) { seen[u] = 1; const lg = '/logos/thumbs/' + e.name + '.png'; if (exists(lg)) powers.push(encodeURI(lg)); }
   });
   JOBS.centuries.push({ kind: 'century', file: 'century-' + slug + '.jpg', title: text(grab(html, /<h1[^>]*>(.*?)<\/h1>/)).replace(/\bcentury\b/, 'Century'), kicker: text(grab(html, /<p class="cty-kicker">(.*?)<\/p>/)),
-    sub, stats, powers, map: grab(html, /(<svg class="map map-world"[\s\S]*?<\/svg>)/), url: 'the-epoch-institute.org/centuries/' + slug });
+    sub, stats, powers, map: grab(html, /(<svg class="map map-world[^"]*"[\s\S]*?<\/svg>)/), url: 'the-epoch-institute.org/centuries/' + slug });
 });
 
 SPEECHES.forEach(s => {

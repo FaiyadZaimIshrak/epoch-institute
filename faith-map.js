@@ -5,7 +5,7 @@
 //   first use. Drag to turn it (a flick lets it coast), pinch or + and - to zoom (the wheel once it has been clicked, or
 //   with Ctrl), arrow keys; hover or tap a glow, a mark or a route for its note. It turns to each century's spread
 //   until the reader turns it by hand ("Follow the spread" brings that back). Falls back to the flat map without d3.
-// - the flat world map: an SVG over maps/world.svg that glides to fit each century.
+// - (until 27 Nov 2026 also a flat map; its code below is never reached: the globe is the only view.)
 // A century slider with Play, the century's caption, and the same century in words. On /faiths a second faith can be
 // laid over the first (compare). Data: data/faiths/<slug>.json, built by scripts/build-pages.ps1 from
 // scripts/faiths.tsv (it writes FAITHS_V and GLOBE_V). The profile pages load this file without ?v= (a 10-minute cache,
@@ -82,15 +82,15 @@ var FaithMap = (function () {
     host.innerHTML =
       '<div class="fm">' +
         '<div class="fm-top"><p class="fm-when" aria-live="polite"><b class="fm-cent"></b><span class="fm-years"></span></p>' +
-          '<div class="fm-ctl"><div class="atl-viewtog fm-views" role="group" aria-label="View"><button type="button" data-v="globe" aria-pressed="false">&#9679; Globe</button><button type="button" data-v="flat" aria-pressed="false">&#9645; Flat map</button></div>' +
+          '<div class="fm-ctl">' +
           '<button type="button" class="fm-play" aria-pressed="false"><span class="fm-play-i" aria-hidden="true"></span><span class="fm-play-t">Play</span></button></div></div>' +
-        '<div class="fm-map"><svg class="fm-svg" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="Map"></svg>' +
-          '<canvas class="fm-globe" tabindex="0" role="img" aria-label="Globe" hidden></canvas>' +
+        '<div class="fm-map"><svg class="fm-svg" viewBox="0 0 ' + W + ' ' + H + '" hidden aria-hidden="true"></svg>' +
+          '<canvas class="fm-globe" tabindex="0" role="img" aria-label="Globe"></canvas>' +
           '<div class="atl-zoom fm-zoom" hidden><button type="button" data-z="1.5" aria-label="Zoom in">+</button><button type="button" data-z="0.6667" aria-label="Zoom out">&minus;</button></div>' +
           '<button type="button" class="fm-refollow" hidden><svg viewBox="0 0 20 20" width="15" height="15" aria-hidden="true"><circle cx="10" cy="10" r="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 1v4M10 15v4M1 10h4M15 10h4" stroke="currentColor" stroke-width="1.8"/></svg>Follow the spread</button>' +
           '<p class="fm-wheel" hidden>Click the globe, then scroll to zoom</p>' +
           '<div class="atl-tip fm-tip" hidden></div>' +
-          '<p class="fm-msg">Loading the map…</p></div>' +
+          '<p class="fm-msg">Loading the globe…</p></div>' +
         '<div class="fm-slide"><input type="range" class="fm-range" min="0" max="0" step="1" value="0" aria-label="Century"><div class="fm-ends"><span class="fm-from"></span><span class="fm-to"></span></div></div>' +
         '<p class="fm-note"></p><p class="fm-pick" hidden></p>' +
         '<ul class="fm-legend" aria-label="Key">' +
@@ -112,12 +112,10 @@ var FaithMap = (function () {
     defs.innerHTML = ['a', 'b'].map(function (w) {
       return '<radialGradient id="' + id + '-' + w + '"><stop offset="0" class="fm-stop-' + w + '" stop-opacity="0.85"/><stop offset="0.45" class="fm-stop-' + w + '" stop-opacity="0.55"/><stop offset="1" class="fm-stop-' + w + '" stop-opacity="0"/></radialGradient>';
     }).join('');
-    el('image', { href: '/maps/world.svg', x: 0, y: 0, width: W, height: H, preserveAspectRatio: 'none' }, svg);
     var gAreas = el('g', { 'class': 'fm-areas' }, svg), gRoutes = el('g', { 'class': 'fm-routes' }, svg), gMarks = el('g', { 'class': 'fm-marks' }, svg);
     var st = { layers: [], cents: [], i: 0, playing: false, timer: 0, box: null, goal: null, raf: 0, failed: false, onChange: opt.onChange || null };
     var scaled = [];   // marks and arrowheads: drawn in screen pixels whatever the zoom
-    var view = opt.view === 'flat' || opt.view === 'globe' ? opt.view : storedView() === 'flat' ? 'flat' : 'globe';
-    if (!cv.getContext) view = 'flat';
+    var view = 'globe';   // the only view since 27 Nov 2026 ("no flat maps"): the flat map's code below is never reached, its SVG stays hidden
 
     function pick(html) { var p = $('.fm-pick'); p.hidden = false; p.innerHTML = html; }
     function build(d, w) {
@@ -240,9 +238,10 @@ var FaithMap = (function () {
           colours(); wire();
         }
         if (view === 'globe') setView('globe');
-      }).catch(function () {   // no d3 or no land: the flat map, and no globe to choose
-        var b = $('.fm-views [data-v="globe"]'); b.disabled = true; b.title = 'The globe could not be loaded';
-        if (view === 'globe') setView('flat');
+      }).catch(function () {   // no d3 or no land: say so, and offer to try again (the century in words stays readable)
+        st.failed = true; msgEl.hidden = false; msgEl.textContent = 'The globe could not be loaded. ';
+        var b = document.createElement('button'); b.type = 'button'; b.className = 'fm-retry'; b.textContent = 'Try again'; msgEl.appendChild(b);
+        b.addEventListener('click', function () { st.failed = false; msgEl.textContent = 'Loading the globe\u2026'; startGlobe(); });
       });
     }
     function size() {
