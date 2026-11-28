@@ -82,7 +82,7 @@ ${J.map(x => '<a href="#' + x.slug + '" data-j="' + x.slug + '" data-era="' + x.
 </nav>
 <div class="jr-stage">
 <div class="jr-map">
-<div class="jr-box"><canvas id="jr-globe" tabindex="0" role="img" aria-label="Globe: the route of the journey. The stops are listed beside it."></canvas><svg id="jr-flat" hidden aria-hidden="true"></svg><p id="jr-msg" class="jr-msg" hidden>Loading the globe&#8230;</p></div>
+<div class="jr-box"><canvas id="jr-globe" tabindex="0" role="img" aria-label="Globe: the route of the journey. The stops are listed beside it."></canvas><p id="jr-msg" class="jr-msg" hidden>Loading the globe&#8230;</p></div>
 <div class="jr-ctl"><button type="button" id="jr-prev" aria-label="The stop before">&#8249; Back</button><button type="button" id="jr-play" aria-pressed="false">Play the journey</button><button type="button" id="jr-next" aria-label="The next stop">Next &#8250;</button><span class="jr-zooms"><button type="button" class="jr-zoom" data-z="out" aria-label="Zoom out">&#8722;</button><button type="button" class="jr-zoom" data-z="in" aria-label="Zoom in">+</button></span></div>
 <div id="jr-now" class="jr-now" aria-live="polite"></div>
 <p class="jr-how">Drag to turn the globe; pinch, or click it and scroll, to zoom. Tap a dot, or a stop in the list. A dashed line is a passage by sea.</p>

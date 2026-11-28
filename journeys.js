@@ -2,14 +2,14 @@
 // The page holds every journey as an article (article.jr-j: legs, ol.jr-stops, li[data-ll="lat,lng"][data-by][data-y]),
 // written by scripts/tools/make-journeys.js: this script shows one of them (?j=<slug>, &s=<stop>) beside a globe
 // (d3-geo orthographic on a canvas over maps/globe-land.js, both loaded here; JR_GLOBE_SRC on the page holds the land's
-// ?v=). The globe is the only view since 27 Nov 2026; the flat map code below is never reached. The plane was the
+// ?v=). The globe is the only view since 27 Nov 2026 (the flat map and its code are gone; the plane was the
 // atlas's Equal Earth plane). Play walks the stops; a leg by sea is dashed. window.epochJourneys for tests.
 (function () {
   'use strict';
   var root = document.querySelector('.jr-page'); if (!root) return;
   var $ = function (s, r) { return (r || root).querySelector(s); }, $$ = function (s, r) { return [].slice.call((r || root).querySelectorAll(s)); };
   var D2R = Math.PI / 180, reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var arts = $$('.jr-j'), cv = $('#jr-globe'), flat = $('#jr-flat'), nowEl = $('#jr-now'), msg = $('#jr-msg');
+  var arts = $$('.jr-j'), cv = $('#jr-globe'), nowEl = $('#jr-now'), msg = $('#jr-msg');
   var J = arts.map(function (a) {
     var stops = $$('.jr-stops > li', a).map(function (li, i) { var ll = li.getAttribute('data-ll').split(','); li.setAttribute('data-i', i);
       return { li: li, lat: +ll[0], lng: +ll[1], sea: li.getAttribute('data-by') === 'sea', place: $('.jr-place', li).textContent, date: ($('.jr-date', li) || {}).textContent || '', text: ($('p', li) || {}).textContent || '', href: ($('.jr-place a', li) || {}).href || '' }; });
@@ -122,7 +122,7 @@
       if (k === 'ArrowRight' || k === 'ArrowDown') { go(S.i + 1, true); e.preventDefault(); } else if (k === 'ArrowLeft' || k === 'ArrowUp') { go(S.i - 1, true); e.preventDefault(); }
       else if (k === '+' || k === '=') { G.k = Math.min(12, G.k * 1.3); kick(); } else if (k === '-') { G.k = Math.max(0.8, G.k / 1.3); kick(); } else if (k === ' ') { play(!S.playing); e.preventDefault(); } });
     window.addEventListener('resize', kick);
-    new MutationObserver(function () { colours(); kick(); if (S.view === 'flat') drawFlat(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme', 'data-kids', 'data-skin'] });
+    new MutationObserver(function () { colours(); kick(); }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme', 'data-kids', 'data-skin'] });
   }
   function startGlobe() {
     return globeLib().then(function (l) {
@@ -132,37 +132,12 @@
     });
   }
 
-  // ---- the flat map: the atlas's Equal Earth plane (10000 x 4393), the whole route at once ----
-  var EE = (function () { var A1 = 1.340264, A2 = -0.081106, A3 = 0.000893, A4 = 0.003796, M = Math.sqrt(3) / 2, PW = 1000;
-    function raw(lng, lat) { var l = Math.asin(M * Math.sin(lat * D2R)), l2 = l * l, l6 = l2 * l2 * l2; return [lng * D2R * Math.cos(l) / (M * (A1 + 3 * A2 * l2 + l6 * (7 * A3 + 9 * A4 * l2))), l * (A1 + A2 * l2 + l6 * (A3 + A4 * l2))]; }
-    var XMAX = Math.PI / (M * A1), SC = PW / (2 * XMAX), PH = 2 * raw(0, 90)[1] * SC;
-    return function (lng, lat) { var r = raw(lng, lat); return [(PW / 2 + r[0] * SC) * 10, (PH / 2 - r[1] * SC) * 10]; }; })();
-  function drawFlat() {
-    var NS = 'http://www.w3.org/2000/svg', st = S.j.stops, W = 10000, H = 4393, pts = st.map(function (s) { return EE(s.lng, Math.max(-57, s.lat)); });
-    var xs = pts.map(function (p) { return p[0]; }), ys = pts.map(function (p) { return p[1]; }), x0 = Math.min.apply(0, xs), x1 = Math.max.apply(0, xs), y0 = Math.min.apply(0, ys), y1 = Math.max.apply(0, ys);
-    var w = Math.max(x1 - x0, 1400), h = Math.max(y1 - y0, 800), ar = (flat.clientWidth || 600) / (flat.clientHeight || 420);
-    w *= 1.25; h *= 1.3; if (w / h < ar) w = h * ar; else h = w / ar; if (w > W) { w = W; h = Math.min(H, w / ar); }
-    var vx = Math.max(0, Math.min(W - w, (x0 + x1) / 2 - w / 2)), vy = Math.max(0, Math.min(H - h, (y0 + y1) / 2 - h / 2)), u = w / (flat.clientWidth || 600);   // u: plane units per pixel
-    while (flat.firstChild) flat.removeChild(flat.firstChild);
-    flat.setAttribute('viewBox', [vx, vy, w, h].map(function (n) { return n.toFixed(0); }).join(' '));
-    var el = function (n, a, par) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); (par || flat).appendChild(e); return e; };
-    for (var i = 1; i < st.length; i++) {   // a leg across the edge of the map leaves at one side and comes in at the other
-      var a = pts[i - 1], b = pts[i], cross = Math.abs(st[i].lng - st[i - 1].lng) > 180, cls = 'jr-fl' + (i <= S.i ? ' is-done' : '') + (st[i].sea ? ' is-sea' : '');
-      if (!cross) el('path', { 'class': cls, d: 'M' + a[0].toFixed(0) + ' ' + a[1].toFixed(0) + 'L' + b[0].toFixed(0) + ' ' + b[1].toFixed(0), 'stroke-width': (i <= S.i ? 2.4 : 1.2) * u, 'stroke-dasharray': st[i].sea ? (6 * u) + ' ' + (5 * u) : '' });
-      else { var my = (a[1] + b[1]) / 2, ea = a[0] > W / 2 ? W : 0; [[a, [ea, my]], [[W - ea, my], b]].forEach(function (s) { el('path', { 'class': cls, d: 'M' + s[0][0].toFixed(0) + ' ' + s[0][1].toFixed(0) + 'L' + s[1][0].toFixed(0) + ' ' + s[1][1].toFixed(0), 'stroke-width': (i <= S.i ? 2.4 : 1.2) * u, 'stroke-dasharray': st[i].sea ? (6 * u) + ' ' + (5 * u) : '' }); }); }
-    }
-    pts.forEach(function (p, k) { var c = el('circle', { 'class': 'jr-fd' + (k <= S.i ? ' is-done' : '') + (k === S.i ? ' is-now' : ''), cx: p[0].toFixed(0), cy: p[1].toFixed(0), r: (k === S.i ? 6 : 4) * u, 'stroke-width': 1.3 * u, 'data-i': k });
-      el('title', {}, c).textContent = st[k].place; });
-    var p = pts[S.i], right = p[0] + 14 * u + st[S.i].place.length * 7.5 * u < vx + w;
-    el('text', { 'class': 'jr-ft', x: (p[0] + (right ? 12 : -12) * u).toFixed(0), y: (p[1] - 10 * u).toFixed(0), 'font-size': 13 * u, 'stroke-width': 3.5 * u, 'text-anchor': right ? 'start' : 'end' }).textContent = st[S.i].place;
-  }
-  flat.addEventListener('click', function (e) { var c = e.target.closest ? e.target.closest('circle[data-i]') : null; if (c) go(+c.getAttribute('data-i'), true); });
 
   // ---- the page ----
   function setView(v, keep) {
     S.view = v; if (!keep) { try { localStorage.setItem('epoch-journey-view', v); } catch (e) {} }
     $$('.jr-views button').forEach(function (b) { var on = b.getAttribute('data-v') === v; b.classList.toggle('is-on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); });
-    cv.hidden = v !== 'globe'; if (v === 'globe') flat.setAttribute('hidden', ''); else flat.removeAttribute('hidden');   // an SVG element has no .hidden property
+    cv.hidden = false;
     $$('.jr-zoom').forEach(function (b) { b.hidden = v !== 'globe'; });
     if (!S.j) return;
     msg.hidden = false; msg.textContent = 'Loading the globe\u2026';
@@ -182,7 +157,7 @@
   function go(i, user) {
     if (!S.j) return; var n = S.j.stops.length; i = Math.max(0, Math.min(n - 1, i)); if (user && S.playing) play(false);
     var step = i === S.i + 1; S.i = i; paintNow(); address();
-    if (S.view === 'flat') drawFlat(); else if (G) { G.grow = step && !reduce ? { t0: performance.now() + (user ? 0 : 0), ms: 900 } : null; glide(i); }
+    if (G) { G.grow = step && !reduce ? { t0: performance.now() + (user ? 0 : 0), ms: 900 } : null; glide(i); }
     if (user) { var li = S.j.stops[i].li, r = li.getBoundingClientRect(), box = li.closest('.jr-list'); if (box && box.scrollHeight > box.clientHeight + 4) { var br = box.getBoundingClientRect(); if (r.top < br.top || r.bottom > br.bottom) box.scrollTop += r.top - br.top - box.clientHeight / 3; } }
   }
   function play(on) {

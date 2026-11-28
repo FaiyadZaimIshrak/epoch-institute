@@ -1,19 +1,16 @@
 // atlas.js - the Atlas (/atlas): every state of the register in a chosen year, on a globe. Data: maps/atlas-data.js
 // (ATLAS) and maps/globe-land.js (ATLAS_GLOBE, loaded with d3-geo) - written by scripts/build-pages.ps1. Address:
 // ?year=1250, ?focus=<state id>, ?c=<country slug>, ?at=<lat>,<lng>. Since 27 Nov 2026 the globe is the only view (the
-// user: "no flat maps"): the mode is always 'globe', the flat map's code below is never reached and its SVG stays
-// hidden; maps/basemap.js is no longer loaded. If the globe cannot be loaded the page says so and offers to try again.
+// user: "no flat maps"); the flat map's code, its SVG and maps/basemap.js went on 28 Nov. If the globe cannot be loaded the page says so and offers to try again.
 (function () {
   'use strict';
-  var A = window.ATLAS, B = window.ATLAS_BASE || { edge: '', grat: '', land: '' }, svg = document.getElementById('atl-svg');
-  if (!A || !svg) return;
-  var NS = 'http://www.w3.org/2000/svg', W = A.w, H = A.h, MINY = A.first, MAXY = A.year;
+  var A = window.ATLAS;
+  if (!A) return;
+  var MINY = A.first, MAXY = A.year;
   function $(id) { return document.getElementById(id); }
-  var world = $('atl-world'), dotsS = $('atl-dots-s'), dotsP = $('atl-dots-p'), labelsG = $('atl-labels'), ring = $('atl-ring');
   var tip = $('atl-tip'), mapBox = $('atl-map'), slider = $('atl-year'), yearOut = $('atl-year-out'), countOut = $('atl-count');
   var canvas = $('atl-globe');
-  svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
-  $('atl-edge').setAttribute('d', B.edge); $('atl-grat').setAttribute('d', B.grat); $('atl-land').setAttribute('d', B.land);
+  if (!canvas) return;
 
   var D2R = Math.PI / 180;
   var rows = A.rows.map(function (r) {
@@ -40,157 +37,41 @@
   $('atl-prof').addEventListener('change', function (e) { profOnly = e.target.checked; render(true); });
   function shown(r) { return r.s <= year && r.e >= year && (!profOnly || (r.f & 1)) && (kind < 0 || r.k === kind); }
 
-  // ── the two views: 'globe' (default) and 'flat'. The globe loads d3 and its land on first use. ──
-  var stored = null; try { stored = localStorage.getItem('epoch-atlas-view'); } catch (e) {}
-  var mode = 'globe';   // the only view
-  function isG() { return mode === 'globe'; }
-
-  // ── flat view: translate(tx, ty) scale(k) on the world group; the viewBox stays the whole map ──
-  var k = 1, tx = 0, ty = 0, KMAX = 48;
-  function ppu() { return svg.getBoundingClientRect().width / W; }   // screen pixels per map unit at k = 1
-  function clampView() {
-    k = Math.max(1, Math.min(KMAX, k));
-    tx = Math.min(0, Math.max(W - W * k, tx)); ty = Math.min(0, Math.max(H - H * k, ty));
-  }
-  function applyView() {
-    clampView();
-    world.setAttribute('transform', 'translate(' + tx.toFixed(1) + ' ' + ty.toFixed(1) + ') scale(' + k.toFixed(4) + ')');
-    sizeDots(); scheduleLabels();
-  }
-  function toMap(clientX, clientY) { var b = svg.getBoundingClientRect(); return { x: (clientX - b.left) * W / b.width, y: (clientY - b.top) * H / b.height }; }
-  function zoomAt(f, px2, py2) { var wx = (px2 - tx) / k, wy = (py2 - ty) / k; k = Math.max(1, Math.min(KMAX, k * f)); tx = px2 - wx * k; ty = py2 - wy * k; applyView(); }
-  var anim = null;
-  function animateTo(k2, tx2, ty2, now) {   // now: no glide (the page opening on a place)
-    var k0 = k, x0 = tx, y0 = ty, t0 = performance.now(), dur = reduced() || now ? 0 : 450;
-    cancelAnimationFrame(anim);
-    (function frame(now) {
-      var t = dur ? Math.min(1, (now - t0) / dur) : 1, e = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
-      k = k0 + (k2 - k0) * e; tx = x0 + (tx2 - x0) * e; ty = y0 + (ty2 - y0) * e; applyView();
-      if (t < 1) anim = requestAnimationFrame(frame);
-    })(t0);
-  }
-  function fitBox(x, y, w, h, now) { var k2 = Math.max(1, Math.min(KMAX, Math.min(W / w, H / h))); animateTo(k2, -x * k2 + (W - w * k2) / 2, -y * k2 + (H - h * k2) / 2, now); }
-  function centreOn(x, y, k2, now) { animateTo(k2, W / 2 - x * k2, H / 2 - y * k2, now); }
-
-  // flat wheel, drag, pinch
-  svg.addEventListener('wheel', function (e) { e.preventDefault(); var p = toMap(e.clientX, e.clientY); zoomAt(Math.pow(1.0018, -e.deltaY * (e.deltaMode === 1 ? 30 : 1)), p.x, p.y); }, { passive: false });
-  var pointers = {}, drag = null, moved = false;
-  svg.addEventListener('pointerdown', function (e) {
-    pointers[e.pointerId] = { x: e.clientX, y: e.clientY }; svg.setPointerCapture(e.pointerId); moved = false;
-    var ids = Object.keys(pointers);
-    pressStart(e, ids.length);
-    if (ids.length === 1) drag = { x: e.clientX, y: e.clientY, tx: tx, ty: ty };
-    else if (ids.length === 2) {   // two fingers: zoom and pan around the point between them
-      var a = pointers[ids[0]], b = pointers[ids[1]], m = toMap((a.x + b.x) / 2, (a.y + b.y) / 2);
-      drag = { pinch: Math.hypot(a.x - b.x, a.y - b.y) || 1, k: k, wx: (m.x - tx) / k, wy: (m.y - ty) / k };
-    }
-  });
-  svg.addEventListener('pointermove', function (e) {
-    if (pointers[e.pointerId]) pointers[e.pointerId] = { x: e.clientX, y: e.clientY };
-    var ids = Object.keys(pointers);
-    if (drag && ids.length === 1 && !drag.pinch) {
-      var dx = e.clientX - drag.x, dy = e.clientY - drag.y;
-      if (Math.abs(dx) + Math.abs(dy) > 4) { moved = true; pressEnd(); }
-      if (moved) { var s = W / svg.getBoundingClientRect().width; tx = drag.tx + dx * s; ty = drag.ty + dy * s; applyView(); hideTip(); }
-    } else if (drag && drag.pinch && ids.length === 2) {
-      var a = pointers[ids[0]], b = pointers[ids[1]], d = Math.hypot(a.x - b.x, a.y - b.y), m = toMap((a.x + b.x) / 2, (a.y + b.y) / 2); moved = true;
-      k = Math.max(1, Math.min(KMAX, drag.k * d / drag.pinch)); tx = m.x - drag.wx * k; ty = m.y - drag.wy * k; applyView(); hideTip(true);
-    } else if (e.pointerType === 'mouse' && !ids.length) hover(e);
-  });
-  function endPointer(e) {
-    var had = !!pointers[e.pointerId]; delete pointers[e.pointerId];
-    var held = pressEnd();
-    if (!Object.keys(pointers).length) {
-      if (had && !moved && drag && !drag.pinch && !held) tap(e);
-      drag = null;
-    } else drag = null;
-  }
-  svg.addEventListener('pointerup', endPointer); svg.addEventListener('pointercancel', function (e) { delete pointers[e.pointerId]; drag = null; pressEnd(); });
-  svg.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse' && !pinned) hideTip(); });
-  $('atl-zin').addEventListener('click', function () { if (isG()) GL.zoomBy(1.8); else zoomAt(1.8, W / 2, H / 2); });
-  $('atl-zout').addEventListener('click', function () { if (isG()) GL.zoomBy(1 / 1.8); else zoomAt(1 / 1.8, W / 2, H / 2); });
-  $('atl-zreset').addEventListener('click', function () { if (isG()) GL.reset(); else animateTo(1, 0, 0); });
-  svg.addEventListener('keydown', function (e) {
-    var step = W * 0.08;
-    if (e.key === '+' || e.key === '=') zoomAt(1.5, W / 2, H / 2); else if (e.key === '-') zoomAt(1 / 1.5, W / 2, H / 2);
-    else if (e.key === 'ArrowLeft') { tx += step; applyView(); } else if (e.key === 'ArrowRight') { tx -= step; applyView(); }
-    else if (e.key === 'ArrowUp') { ty += step; applyView(); } else if (e.key === 'ArrowDown') { ty -= step; applyView(); } else return;
-    e.preventDefault();
-  });
+  // ── the globe is the only view (27 Nov 2026: no flat maps); it loads d3-geo and its land when the page starts ──
+  $('atl-zin').addEventListener('click', function () { GL.zoomBy(1.8); });
+  $('atl-zout').addEventListener('click', function () { GL.zoomBy(1 / 1.8); });
+  $('atl-zreset').addEventListener('click', function () { GL.reset(); });
   // the buttons are in the page already (written by the builder), so the map does not move down when they arrive
   var presets = $('atl-presets'), given = presets.querySelectorAll('button');
   A.presets.forEach(function (p, i) {
     var b = given[i] || presets.appendChild(document.createElement('button')); b.type = 'button'; b.textContent = p[0];
     b.addEventListener('click', function () {
-      if (isG()) { var g = A.presetsLL[i]; GL.rotateTo(g[0], g[1], i === 0 ? 1 : GL.kFor(g[2])); return; }
-      if (p[0] === 'World') animateTo(1, 0, 0); else fitBox(p[1], p[2], p[3], p[4]);
+      var g = A.presetsLL[i]; GL.rotateTo(g[0], g[1], i === 0 ? 1 : GL.kFor(g[2]));
     });
   });
   for (var gi = A.presets.length; gi < given.length; gi++) given[gi].remove();
-  window.addEventListener('resize', function () { if (isG()) { GL.resize(); } else { sizeDots(); scheduleLabels(); } });
+  window.addEventListener('resize', function () { GL.resize(); });
 
-  // ── flat dots ──
   var visible = [];
-  function px(n) { return n * Math.max(0.55, Math.min(1, mapBox.getBoundingClientRect().width / 900)); }   // smaller dots on a small map
-  function dotR(r) { return px((r.f & 1) ? 4.4 : 2.7) / (ppu() * k); }
-  function sizeDots() {
-    var u = ppu() * k, rp = px(4.4) / u, rs = px(2.7) / u, sw = px(1.2) / u;
-    visible.forEach(function (r) { if (!r.el) return; r.el.setAttribute('r', ((r.f & 1) ? rp : rs).toFixed(3)); if (r.f & 2) r.el.setAttribute('stroke-width', sw.toFixed(3)); });
-    if (focused) { ring.setAttribute('r', (px(11) / u).toFixed(3)); ring.setAttribute('stroke-width', (2 / u).toFixed(3)); }
-    if (hereDot) hereDot.setAttribute('r', (px(5) / u).toFixed(3));
-  }
   function render(listNow) {
     var next = [];
     rows.forEach(function (r) {
-      if (shown(r)) {
-        if (!isG() && !r.el) {
-          r.el = document.createElementNS(NS, 'circle'); r.el.setAttribute('cx', r.x); r.el.setAttribute('cy', r.y);
-          r.el.setAttribute('class', (r.f & 1) ? 'd-p' : (r.f & 2) ? 'd-a' : 'd-s'); r.el.setAttribute('r', dotR(r).toFixed(3));
-          if (r.f & 2) r.el.setAttribute('stroke-width', (px(1.2) / (ppu() * k)).toFixed(3));
-          ((r.f & 1) ? dotsP : dotsS).appendChild(r.el);
-        }
-        next.push(r);
-      } else if (r.el) { r.el.remove(); r.el = null; }
+      if (shown(r)) next.push(r);
     });
     visible = next;
     var np = 0; visible.forEach(function (r) { if (r.f & 1) np++; });
     yearOut.textContent = fmtYear(year);
     countOut.textContent = visible.length.toLocaleString('en-GB') + (visible.length === 1 ? ' state' : ' states') + (np ? ' · ' + np + ' with a profile' : '');
     if (pinned && !shown(pinned)) hideTip(true);
-    if (isG()) GL.draw(); else scheduleLabels();
+    GL.draw();
     if (listNow) renderList(); else scheduleList();
     hereNow();
   }
 
-  // ── flat labels: profiles from 2.2x, every state from 7x; no overlaps ──
-  var labelTimer = null;
-  function scheduleLabels() { if (labelTimer) return; labelTimer = requestAnimationFrame(function () { labelTimer = null; drawLabels(); }); }
-  function drawLabels() {
-    while (labelsG.firstChild) labelsG.removeChild(labelsG.firstChild);
-    if (isG() || k < 2.2) return;
-    var u = ppu(), b = svg.getBoundingClientRect(), placed = [], fs = 11.5 / (u * k), out = 0;
-    var cand = visible.filter(function (r) { return (r.f & 1) || k >= 7; })
-      .sort(function (a, c) { return ((c.f & 1) - (a.f & 1)) || ((Math.min(c.e, MAXY) - c.s) - (Math.min(a.e, MAXY) - a.s)); });
-    for (var i = 0; i < cand.length && out < 140; i++) {
-      var r = cand[i], sx = (r.x * k + tx) * u, sy = (r.y * k + ty) * u, w = r.n.length * 6.3 + 8;
-      if (sx < -10 || sy < -10 || sx > b.width + 10 || sy > b.height + 10) continue;
-      var box = { x0: sx + 5, y0: sy - 8, x1: sx + 5 + w, y1: sy + 6 }, hit = false;
-      for (var j = 0; j < placed.length && !hit; j++) { var p = placed[j]; hit = !(box.x1 < p.x0 || box.x0 > p.x1 || box.y1 < p.y0 || box.y0 > p.y1); }
-      if (hit) continue;
-      placed.push(box); out++;
-      var t = document.createElementNS(NS, 'text'); t.setAttribute('x', (r.x + 6 / (u * k)).toFixed(1)); t.setAttribute('y', (r.y + 4 / (u * k)).toFixed(1));
-      t.setAttribute('font-size', fs.toFixed(2)); t.setAttribute('class', (r.f & 1) ? 'l-p' : 'l-s'); t.textContent = r.n; labelsG.appendChild(t);
-    }
-  }
-
-  // ── tooltip: nearest dot to the pointer (either view) ──
+  // ── tooltip: nearest dot to the pointer ──
   var pinned = null, focused = null, hoverRaf = null;
   function nearest(clientX, clientY, maxPx) {
-    if (isG()) return GL.nearest(clientX, clientY, maxPx);
-    var b = svg.getBoundingClientRect(), u = b.width / W, best = null, bd = maxPx * maxPx;
-    var px2 = clientX - b.left, py2 = clientY - b.top;
-    visible.forEach(function (r) { var dx = (r.x * k + tx) * u - px2, dy = (r.y * k + ty) * u - py2, d = dx * dx + dy * dy - ((r.f & 1) ? 6 : 0); if (d < bd) { bd = d; best = r; } });
-    return best;
+    return GL.nearest(clientX, clientY, maxPx);
   }
   function hover(e) {
     if (hoverRaf || picking) return;
@@ -198,7 +79,7 @@
     hoverRaf = requestAnimationFrame(function () {
       hoverRaf = null; if (pinned) return;
       var r = nearest(cx, cy, 14); if (r) showTip(r, false); else hideTip();
-      (isG() ? canvas : svg).style.cursor = r ? 'pointer' : '';
+      canvas.style.cursor = r ? 'pointer' : '';
     });
   }
   function tap(e) {
@@ -210,9 +91,7 @@
   }
   function tipAnchor(r) {   // screen position of a state's dot, relative to the map box
     var mb = mapBox.getBoundingClientRect();
-    if (isG()) { var p = GL.pointOf(r); return p ? { x: p[0] + GL.rect().left - mb.left, y: p[1] + GL.rect().top - mb.top } : null; }
-    var b = svg.getBoundingClientRect(), u = b.width / W;
-    return { x: (r.x * k + tx) * u + (b.left - mb.left), y: (r.y * k + ty) * u + (b.top - mb.top) };
+    var p = GL.pointOf(r); return p ? { x: p[0] + GL.rect().left - mb.left, y: p[1] + GL.rect().top - mb.top } : null;
   }
   function showTip(r, pin) {
     var at = tipAnchor(r); if (!at) { if (pin) hideTip(true); return; }
@@ -273,7 +152,7 @@
     b.addEventListener('click', function (e) { e.preventDefault(); stop(); setYear(parseInt(b.getAttribute('data-year'), 10)); renderList(); });
   });
   var urlTimer = null;
-  function scheduleUrl() { clearTimeout(urlTimer); urlTimer = setTimeout(function () { if (!timer) history.replaceState(null, '', '/atlas?year=' + year + (mode === 'flat' ? '&view=flat' : '') + (HERE && !HERE.mine ? '&at=' + HERE.lat.toFixed(2) + ',' + HERE.lng.toFixed(2) : '')); }, 500); }   // never the reader's own location
+  function scheduleUrl() { clearTimeout(urlTimer); urlTimer = setTimeout(function () { if (!timer) history.replaceState(null, '', '/atlas?year=' + year + (HERE && !HERE.mine ? '&at=' + HERE.lat.toFixed(2) + ',' + HERE.lng.toFixed(2) : '')); }, 500); }   // never the reader's own location
 
   // ── the list of states shown (also the accessible view of the map) ──
   var listTimer = null, listEl = $('atl-list');
@@ -314,13 +193,7 @@
     if (profOnly && !(r.f & 1)) { profOnly = false; $('atl-prof').checked = false; render(true); }
     if (kind >= 0 && r.k !== kind) { kind = -1; kindSel.value = ''; render(true); }
     focused = r;
-    if (isG()) {
-      GL.rotateTo(r.lng, r.lat, Math.max(GL.k, 4), function () { showTip(r, true); GL.draw(); }, now);
-      return;
-    }
-    ring.setAttribute('cx', r.x); ring.setAttribute('cy', r.y); ring.style.display = '';
-    centreOn(r.x, r.y, Math.max(k, 6), now);
-    setTimeout(function () { if (r.el) showTip(r, true); sizeDots(); }, 480);
+    GL.rotateTo(r.lng, r.lat, Math.max(GL.k, 4), function () { showTip(r, true); GL.draw(); }, now);
   }
 
   // ════ the globe: d3 orthographic on a canvas; land from maps/globe-land.js ════
@@ -419,7 +292,6 @@
       if (!ready || drawRaf) return;
       drawRaf = requestAnimationFrame(function () {
         drawRaf = null;
-        if (!isG()) return;
         apply();
         if (baseDirty) drawBase();
         var c = colours();
@@ -614,7 +486,7 @@
   // 250 km, oldest first, those placed only by their present-day country apart, and that country's history. Seats,
   // not borders: a state's lands may have reached far wider. The address keeps ?at=<lat>,<lng>. ════
   var HERE = null, HERE_KM = 250, HERE_MAX = 60, picking = false, press = null, hereRows = [];
-  var hereBox = $('atl-here'), hereBtn = $('atl-here-btn'), hereG = null, hereDot = null;
+  var hereBox = $('atl-here'), hereBtn = $('atl-here-btn');
   var EE = (function () {   // Equal Earth, as scripts/lib/geo.cs, in the atlas's tenths of a unit (north pole at y = 0)
     var A1 = 1.340264, A2 = -0.081106, A3 = 0.000893, A4 = 0.003796, M = Math.sqrt(3) / 2, PW = 1000;
     function raw(lng, lat) {
@@ -702,9 +574,7 @@
   function pressEnd() { if (!press) return false; clearTimeout(press.t); var f = press.fired; press = null; return f; }
   mapBox.addEventListener('contextmenu', function (e) { if (e.pointerType !== 'mouse' && press) e.preventDefault(); });
   function pickAt(clientX, clientY) {
-    var ll;
-    if (isG()) ll = GL.lngLatAt(clientX, clientY);
-    else { var m = toMap(clientX, clientY); ll = EE.inv((m.x - tx) / k, (m.y - ty) / k); if (Math.abs(ll[0]) > 180 || ll[1] < -58) ll = null; }
+    var ll = GL.lngLatAt(clientX, clientY);
     if (ll) here(ll[0], ll[1], false);
   }
   function here(lng, lat, mine, quiet) {   // quiet: the page opening on a place (no scrolling to the panel)
@@ -797,23 +667,8 @@
     for (var i = 0; i < items.length; i++) { var r = hereRows[i]; if (r) items[i].classList.toggle('is-now', r.s <= year && r.e >= year); }
     if (yr) yr.textContent = fmtYear(year);
   }
-  function markHere() {
-    if (isG()) { GL.draw(); return; }
-    if (!hereG) { hereG = document.createElementNS(NS, 'g'); hereG.setAttribute('class', 'atl-here-mark'); world.appendChild(hereG); }
-    hereG.textContent = ''; hereDot = null;
-    if (!HERE) return;
-    // the 250 km circle, point by point (destinations from the place), projected like the map
-    var d = '', dd = HERE_KM / 6371, p1 = HERE.lat * D2R, l1 = HERE.lng * D2R;
-    for (var i = 0; i <= 72; i++) {
-      var th = i / 72 * 2 * Math.PI, p2 = Math.asin(Math.sin(p1) * Math.cos(dd) + Math.cos(p1) * Math.sin(dd) * Math.cos(th));
-      var l2 = l1 + Math.atan2(Math.sin(th) * Math.sin(dd) * Math.cos(p1), Math.cos(dd) - Math.sin(p1) * Math.sin(p2)), q2 = EE.fwd(l2 / D2R, p2 / D2R);
-      d += (i ? 'L' : 'M') + q2[0].toFixed(1) + ' ' + q2[1].toFixed(1);
-    }
-    var c = document.createElementNS(NS, 'path'); c.setAttribute('d', d + 'Z'); c.setAttribute('class', 'atl-here-c'); hereG.appendChild(c);
-    var q = EE.fwd(HERE.lng, HERE.lat); hereDot = document.createElementNS(NS, 'circle'); hereDot.setAttribute('cx', q[0].toFixed(1)); hereDot.setAttribute('cy', q[1].toFixed(1)); hereDot.setAttribute('class', 'atl-here-p'); hereG.appendChild(hereDot);
-    sizeDots();
-  }
-  function hereClose() { HERE = null; hereBox.hidden = true; hereRows = []; markHere(); if (isG()) GL.draw(); scheduleUrl(); }
+  function markHere() { GL.draw(); }
+  function hereClose() { HERE = null; hereBox.hidden = true; hereRows = []; markHere(); scheduleUrl(); }
   if (hereBox) $('atl-here-x').addEventListener('click', hereClose);
   if (hereBox) $('atl-here-list').addEventListener('click', function (e) { var b = e.target.closest('[data-id]'); if (b && byId[b.getAttribute('data-id')]) { stop(); focusOn(byId[b.getAttribute('data-id')], true); renderList(); mapBox.scrollIntoView({ behavior: reduced() ? 'auto' : 'smooth', block: 'nearest' }); } });
   var meBtn = $('atl-here-me');
@@ -825,60 +680,30 @@
         msg.textContent = ''; setPicking(false);
         var lng = pos.coords.longitude, lat = pos.coords.latitude;
         here(lng, lat, true);
-        if (isG()) GL.rotateTo(lng, lat, Math.max(GL.k, 4)); else { var q = EE.fwd(lng, lat); centreOn(q[0], q[1], Math.max(k, 6)); }
+        GL.rotateTo(lng, lat, Math.max(GL.k, 4));
       }, function () { msg.textContent = 'Your location is not available: allow it in the browser, or tap a place on the map instead.'; }, { timeout: 12000, maximumAge: 600000 });
     });
   }
-  window.epochAtlas = { here: here, pickAt: pickAt, EE: EE, km: km, state: function () { return { HERE: HERE, year: year, mode: mode, hereRows: hereRows }; } };
+  window.epochAtlas = { here: here, pickAt: pickAt, EE: EE, km: km, state: function () { return { HERE: HERE, year: year, mode: 'globe', hereRows: hereRows }; } };
 
-  // ── the view toggle ──
-  var btnG = $('atl-v-globe'), btnF = $('atl-v-flat');
-  function paintToggle() {
-    if (btnG) btnG.setAttribute('aria-pressed', String(isG()));
-    if (btnF) btnF.setAttribute('aria-pressed', String(!isG()));
-    var ng = $('atl-note-globe'), nf = $('atl-note-flat'); if (ng) ng.hidden = !isG(); if (nf) nf.hidden = isG();
-  }
-  function setMode(m) {
-    if (m === mode) return;
-    hideTip(true);
-    mode = m;
-    try { localStorage.setItem('epoch-atlas-view', m); } catch (e) {}
-    if (m === 'globe') {
-      GL.load(function (ok) {
-        if (!ok) { globeFailed(function () { setMode('globe'); }); return; }
-        svg.setAttribute('hidden', ''); canvas.removeAttribute('hidden'); paintToggle();   // an SVG element has no .hidden property
-        GL.resize(); render(true);
-      });
-    } else {
-      canvas.setAttribute('hidden', ''); svg.removeAttribute('hidden'); paintToggle();
-      if (focused) { ring.setAttribute('cx', focused.x); ring.setAttribute('cy', focused.y); ring.style.display = ''; }
-      render(true); applyView(); markHere();
-    }
-    scheduleUrl();
-  }
-  if (btnG) btnG.addEventListener('click', function () { setMode('globe'); });
-  if (btnF) btnF.addEventListener('click', function () { setMode('flat'); });
 
   // ── start ──
   slider.value = year;
   function begin() {
-    paintToggle();
     render(true);
-    if (!isG()) applyView();
     var f = q.get('focus'), c = q.get('c'), at = /^(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)$/.exec(q.get('at') || '');
     if (f && byId[f]) { var r0 = byId[f]; if (!q.get('year')) setYear(Math.round((r0.s + Math.min(r0.e, MAXY)) / 2), true); focusOn(r0, true, true); renderList(); }
     else if (c && A.countries[c]) {
       var cv = A.countries[c];
-      if (isG() && A.countriesLL && A.countriesLL[c]) { var g = A.countriesLL[c]; GL.rotateTo(g[0], g[1], GL.kFor(Math.max(g[2] * 0.55, 7)), null, true); }   // the flat ?c box carries wide context; frame the country itself
-      else fitBox(cv[1], cv[2], cv[3], cv[4], true);
+      if (A.countriesLL && A.countriesLL[c]) { var g = A.countriesLL[c]; GL.rotateTo(g[0], g[1], GL.kFor(Math.max(g[2] * 0.55, 7)), null, true); }   // frame the country itself
       $('atl-place').textContent = ' · in the world; map centred on present-day ' + cv[0];
     }
     else if (at && hereBox && Math.abs(+at[1]) <= 90 && Math.abs(+at[2]) <= 180) {   // a place shared from What was here?
       var la = +at[1], ln = +at[2];   // (the panel is in place already: below)
-      if (isG()) GL.rotateTo(ln, la, Math.max(GL.k, 3), null, true); else { var qq = EE.fwd(ln, la); centreOn(qq[0], qq[1], 4, true); }
+      GL.rotateTo(ln, la, Math.max(GL.k, 3), null, true);
     }
     // arriving from a state, country or profile page: once the turn has landed, that country's border breathes gold
-    if (isG()) {
+    {
       var sel = (f && byId[f]) ? GL.countryAt(byId[f].lng, byId[f].lat) : (c && A.countries[c]) ? GL.ringsFor(c) : [];
       if (sel.length) setTimeout(function () { GL.highlight(sel); }, 800);
     }
@@ -897,7 +722,7 @@
   function startGlobe() {
     GL.load(function (ok) {
       if (!ok) { globeFailed(startGlobe); return; }
-      svg.setAttribute('hidden', ''); canvas.removeAttribute('hidden');
+      canvas.removeAttribute('hidden');
       GL.resize(); begin();
     });
   }

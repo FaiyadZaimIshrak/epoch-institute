@@ -214,9 +214,9 @@ public static class G {
   }
   // meridians and parallels every `step` degrees on the near side (and inside clip, when given)
   public static string GlobeGraticule(double step, double lng0, double lat0, double R, double ox, double oy, int dec, double[] clip, double scale) {
-    var sb = new StringBuilder();
-    for (double lat = -90 + step; lat < 90 - 1e-9; lat += step) { bool pen = false; for (double lng = -180; lng <= 180 + 1e-9; lng += 2) pen = GPt(sb, lng, lat, lng0, lat0, R, ox, oy, dec, clip, scale, pen); }
-    for (double lng = -180; lng < 180 - 1e-9; lng += step) { bool pen = false; for (double lat = -88; lat <= 88 + 1e-9; lat += 2) pen = GPt(sb, lng, lat, lng0, lat0, R, ox, oy, dec, clip, scale, pen); }
+    var sb = new StringBuilder(); double ds = Math.Min(2, step / 20);   // a close view (a small country) needs fine steps, or a line stops short of the view's edge
+    for (double lat = -90 + step; lat < 90 - 1e-9; lat += step) { bool pen = false; for (double lng = -180; lng <= 180 + 1e-9; lng += ds) pen = GPt(sb, lng, lat, lng0, lat0, R, ox, oy, dec, clip, scale, pen); }
+    for (double lng = -180; lng < 180 - 1e-9; lng += step) { bool pen = false; for (double lat = -88; lat <= 88 + 1e-9; lat += ds) pen = GPt(sb, lng, lat, lng0, lat0, R, ox, oy, dec, clip, scale, pen); }
     return sb.ToString();
   }
   static bool GPt(StringBuilder sb, double lng, double lat, double lng0, double lat0, double R, double ox, double oy, int dec, double[] clip, double scale, bool pen) {

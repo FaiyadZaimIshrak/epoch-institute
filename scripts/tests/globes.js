@@ -40,9 +40,9 @@ ok('the globe pictures: two hemispheres, the home page\'s and a grid of 48', glo
 const home = read('index');
 ok('the home page\'s still picture is a globe', /<svg class="map map-globe map-world" viewBox="0 0 10000 10000"[^>]*><image href="\/maps\/globes\/home\.svg"/.test(home));
 const atlas = read('atlas'), aj = read('atlas.js'), fj = read('faith-map.js'), jj = read('journeys.js'), jp = read('journeys');
-ok('the atlas has no flat view and does not load the flat outlines', !/Flat map|atl-v-flat|basemap\.js/.test(atlas) && /var mode = 'globe';/.test(aj) && !/mode = 'flat'/.test(aj) && /<canvas id="atl-globe"[^>]*(?<!hidden)><\/canvas>/.test(atlas) && /<svg id="atl-svg"[^>]* hidden/.test(atlas));
+ok('the atlas has no flat view and does not load the flat outlines', !/Flat map|atl-v-flat|basemap\.js/.test(atlas) && !/isG\(|atl-svg|ATLAS_BASE|applyView/.test(aj) && /<canvas id="atl-globe"[^>]*(?<!hidden)><\/canvas>/.test(atlas) && !/atl-svg/.test(atlas) && !fs.existsSync(path.join(R, 'maps', 'basemap.js')));
 ok('the faith maps have no flat view', !/Flat map|world\.svg/.test(fj) && /var view = 'globe';/.test(fj) && !/setView\('flat'/.test(fj));
-ok('the journeys have no flat view', !/Flat map/.test(jp) && !/jr-views/.test(jp) && !/setView\('flat'/.test(jj) && !/S\.view = 'flat'/.test(jj));
+ok('the journeys have no flat view', !/Flat map/.test(jp) && !/jr-views/.test(jp) && !/drawFlat|jr-flat/.test(jj) && !/jr-flat/.test(jp));
 ok('the kind indexes and the builder draw no flat map', !/world\.svg|4393/.test(read('scripts/tools/make-kind-indexes.js')) && !/MapSvg|<image href="\/maps\/world\.svg"/.test(read('scripts/build-pages.ps1').replace(/^\s*#.*$/gm, '').replace(/\$world = [\s\S]*?WriteIfChanged\("\$Repo\\maps\\world\.svg"/, '')));
 ok('the globes are deployed with the maps', /\bmaps\b/.test(read('scripts/deploy.sh')));
 console.log(fails ? fails + ' FAILED' : 'all passed'); process.exit(fails ? 1 : 0);

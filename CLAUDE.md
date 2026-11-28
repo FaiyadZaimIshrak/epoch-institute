@@ -3976,8 +3976,8 @@ Earth inverse in enc-page.js. Not maps of the world, and unchanged: the connecti
   $STATELL (every state in degrees, approximate places with their spiral), $STATEW (on the world map).
 - **Shared pictures, maps/globes/*.svg** (GlobeFile; 10000 x 10000, the sphere's radius 4900, fixed gold colours and a
   shaded sphere, as world.svg was): west (115 W) and east (65 E), home (20 E, 16 N: where home-globe.js starts) and a grid
-  of 48 (g<lng 000-330><n60|n30|00|s30>). 51 files, 2 MB; deployed with maps/. maps/world.svg and maps/basemap.js are
-  still written (pages kept in readers' browsers name them) and used by no page.
+  of 48 (g<lng 000-330><n60|n30|00|s30>). 51 files, 2 MB; deployed with maps/. maps/world.svg is still written
+  (pages kept in readers' browsers name it) and used by no page: drop it after December.
 - **World maps are two hemispheres** (MapWorld, W2XY; svg.map-world.map-globes, viewBox 0 0 20400 10000, the western disc
   round 5000, the eastern round 15400): century and year pages, the countries index's bubbles, the kind indexes of
   cities, battles and lives (make-kind-indexes.js EE is the same rule in JS). A point belongs to the hemisphere whose
@@ -3991,8 +3991,11 @@ Earth inverse in enc-page.js. Not maps of the world, and unchanged: the connecti
   view's width), the land cut to the view, the country lit. svg.map-cty carries data-globe="lng,lat,R": enc-page.js
   turns a click back into a place with the orthographic inverse. $CINFO.view stays the Equal Earth box the atlas's
   ?c= data is made from.
-- **The three globe pages have no flat view:** atlas.js (mode is always 'globe'; the page no longer loads basemap.js;
-  the hidden SVG and the flat code remain, never reached), faith-map.js (view always 'globe'), journeys.js. Where the
+- **The three globe pages have no flat view:** atlas.js and journeys.js lost the flat map's code and SVG on 28 Nov (atlas.js
+  60 to 48 KB, atlas.js?v=12; EE stays for window.epochAtlas) and maps/basemap.js is no longer written or deployed;
+  faith-map.js keeps its flat code unreached (view always 'globe': its areas and marks are built once for both
+  views, so the cut needs care). On a close view GlobeGraticule samples a line every twentieth of its step (a small
+  country's meridians stopped short of the map's edge). Where the
   globe cannot be loaded each says so and offers "try again"; the atlas's list, a journey's stops and a century in
   words stay readable. ?view=flat and the stored epoch-atlas-view, epoch-faith-view, epoch-journey-view are ignored.
 - **Posters** of countries and centuries copy the page's map, so they are globes too: re-draw them after a build.

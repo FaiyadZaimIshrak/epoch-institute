@@ -38,7 +38,7 @@ let fails = 0; const ok = (n, c, x) => { console.log((c ? 'ok   ' : 'FAIL ') + n
     await p.evaluate(() => document.querySelectorAll('.jr-j.is-on .jr-stops > li')[8].click()); await p.waitForTimeout(1300); s = await st();
     ok(V + 'a stop of the list is chosen by a tap, and the address keeps it', s.s.i === 8 && s.place === 'Guam' && /[?&]s=9\b/.test(await p.evaluate(() => location.search)), [s.s.i, s.place]);
     await p.screenshot({ path: path.join(out, 'journeys-' + vp.width + '-globe.png') });
-    ok(V + 'the globe is the only view', await p.evaluate(() => !document.querySelector('.jr-views') && document.querySelector('#jr-flat').hasAttribute('hidden') && !document.querySelector('#jr-globe').hidden));
+    ok(V + 'the globe is the only view', await p.evaluate(() => !document.querySelector('.jr-views') && !document.querySelector('#jr-flat') && !document.querySelector('#jr-globe').hidden));
     const er = await p.evaluate(() => ({ ages: document.querySelectorAll('.jr-eras button').length, on: [...document.querySelectorAll('.jr-eras button.is-on')].map(b => b.getAttribute('data-era')).join(), offered: [...document.querySelectorAll('.jr-pick a')].filter(a => a.offsetParent).map(a => a.getAttribute('data-era')), all: document.querySelectorAll('.jr-pick a').length, h: Math.round(document.querySelector('.jr-pick').getBoundingClientRect().height) }));
     ok(V + 'the picker offers one age at a time (Magellan: 1500 to 1699), and stays low', er.ages === 5 && er.on === '1' && er.offered.length >= 3 && er.offered.every(e => e === '1') && er.all >= 60 && er.h < (vp.width < 700 ? 90 : 240), er);
     await p.click('.jr-eras button[data-era="0"]'); await p.waitForTimeout(300);

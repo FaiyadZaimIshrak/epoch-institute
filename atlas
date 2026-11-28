@@ -74,17 +74,6 @@
   </div>
   <div class="atl-map" id="atl-map">
     <canvas id="atl-globe" tabindex="0" role="img" aria-label="Globe of the states that existed in the chosen year. Drag to turn it; use the list below the map for the same states as links."></canvas>
-    <svg id="atl-svg" viewBox="0 0 10000 4393" hidden aria-hidden="true">
-      <g id="atl-world">
-        <path id="atl-edge" class="atl-edge"/>
-        <path id="atl-grat" class="atl-grat"/>
-        <path id="atl-land" class="atl-land"/>
-        <g id="atl-dots-s"></g>
-        <g id="atl-dots-p"></g>
-        <circle id="atl-ring" class="atl-ring" r="0" style="display:none"/>
-        <g id="atl-labels"></g>
-      </g>
-    </svg>
     <div class="atl-zoom"><button type="button" id="atl-zin" aria-label="Zoom in">+</button><button type="button" id="atl-zout" aria-label="Zoom out">&minus;</button><button type="button" id="atl-zreset" aria-label="Show the whole world">&#8634;</button></div>
     <div class="atl-tip" id="atl-tip" role="status" hidden></div>
     <p class="atl-here-hint" id="atl-here-hint" hidden>Tap or click a place to see which states had their seat near it. <button type="button" class="atl-here-me" id="atl-here-me">Use my location</button> <span id="atl-here-msg" role="status"></span></p>
@@ -121,7 +110,7 @@
 <script src="/shared-nav.js"></script>
 <script src="/maps/atlas-data.js?v=bba1c9e163"></script>
 <script>var ATLAS_GLOBE_SRC = '/maps/globe-land.js?v=a9637d50b2', ATLAS_YEARS_SRC = '/data/years.json?v=ff53bfd305', ATLAS_BORN_SRC = '/data/born-near.json?v=25dab7a1ee', ATLAS_SONGS_SRC = '/data/songs-by-country.json?v=903d9adb51';</script>
-<script src="/atlas.js?v=11"></script>
+<script src="/atlas.js?v=12"></script>
 <script>initNav('atlas');</script>
 </body>
 </html>
